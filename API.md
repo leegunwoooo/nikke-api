@@ -23,8 +23,8 @@
 - [GET /api/cubes](#get-apicubes) — 하모니 큐브 목록
 - [GET /api/cubes/:id](#get-apicubesid) — 큐브 상세 (레벨별 스탯·스킬)
 - [GET /api/user](#get-apiuser) — 유저 프로필 조회 (공유 링크)
-- [GET /api/user/nikke](#get-apiusernikke) — 유저 보유 니케 목록 (경량)
-- [GET /api/user/nikke/:key](#get-apiusernikkekey) — 유저 보유 니케 단일 상세 (정확한 이름/id)
+- [GET /api/user/:oid/nikke](#get-apiuseroidnikke) — 유저 보유 니케 목록 (경량)
+- [GET /api/user/:oid/nikke/:key](#get-apiuseroidnikkekey) — 유저 보유 니케 단일 상세 (정확한 이름/id)
 - [GET /api/cdn](#get-apicdn) — CDN 경로 → URL 변환
 - [공통: 필드 선택 `?fields=`](#공통-필드-선택-fields)
 - [공통: 캐시 헤더](#공통-캐시-헤더)
@@ -443,9 +443,10 @@ BlablaLink 공유 프로필 링크로 유저 프로필을 조회합니다. 서�
 ```
 GET /api/user?openid=<base64 openid>
 GET /api/user?url=<공유 URL 전체>
+GET /api/user/<openid>                          # 경로로도 가능
 ```
 
-보유 니케 목록·개별 상세는 [GET /api/user/nikke](#get-apiusernikke)를 사용하세요.
+보유 니케 목록·개별 상세는 [GET /api/user/:oid/nikke](#get-apiuseroidnikke)를 사용하세요.
 
 ### 응답
 
@@ -507,22 +508,22 @@ GET /api/user?url=<공유 URL 전체>
 | 서버 조회 계정 미설정 | 503 `{"error": "blabla credentials not configured"}` |
 | 업스트림 실패 (토큰 만료, 권한 없음 등) | 502 `{"error": "...", "code": ...}` |
 
-## GET /api/user/nikke
+## GET /api/user/:oid/nikke
 
 공유 프로필의 보유 니케 **목록**을 조회합니다 — `/api/user`보다 가볍고 상세 호출도 하지 않습니다.
 
-### 쿼리 파라미터
-
 | 파라미터 | 설명 |
 |----------|------|
-| `openid` / `url` | `/api/user`와 동일 |
-| `q` | 선택. 필터 전용 — 니케 이름(전 언어 부분 일치)·캐릭터 id·resourceId·nameCode. 상세가 필요하면 [GET /api/user/nikke/:key](#get-apiusernikkekey) 사용 |
+| `:oid` (path) | 공유 링크의 openid 값 또는 URL 전체 |
+| `q` | 선택. 필터 전용 — 니케 이름(전 언어 부분 일치)·캐릭터 id·resourceId·nameCode. 상세가 필요하면 [GET /api/user/:oid/nikke/:key](#get-apiuseroidnikkekey) 사용 |
 
 ```
-GET /api/user/nikke?openid=...              # 보유 전체 목록
-GET /api/user/nikke?openid=...&q=아니스      # 아니스 계열만 필터 (목록 형태 유지)
-GET /api/user/nikke?openid=...&q=201601     # id/nameCode로 필터
+GET /api/user/<openid>/nikke              # 보유 전체 목록
+GET /api/user/<openid>/nikke?q=아니스      # 아니스 계열만 필터 (목록 형태 유지)
+GET /api/user/<openid>/nikke?q=201601     # id/nameCode로 필터
 ```
+
+구형 쿼리 형태 `GET /api/user/nikke?openid=...`도 동일하게 동작합니다.
 
 응답 항목 (전투력 내림차순):
 
@@ -541,7 +542,7 @@ GET /api/user/nikke?openid=...&q=201601     # id/nameCode로 필터
 }
 ```
 
-## GET /api/user/nikke/:key
+## GET /api/user/:oid/nikke/:key
 
 보유 니케 **한 명**의 상세를 조회합니다 — 장비·옵션·큐브·소장품·스킬 레벨까지 포함. 목록에서 고른 니케를 `:key`로 지정합니다.
 
@@ -551,9 +552,11 @@ GET /api/user/nikke?openid=...&q=201601     # id/nameCode로 필터
 | 숫자 | 캐릭터 id · resourceId · nameCode 중 일치 |
 
 ```
-GET /api/user/nikke/아니스 : 스타?openid=...   # 정확한 이름
-GET /api/user/nikke/3017?openid=...           # 캐릭터 id
+GET /api/user/<openid>/nikke/아니스%20%3A%20스타   # 정확한 이름 (URL 인코딩)
+GET /api/user/<openid>/nikke/3017                # 캐릭터 id
 ```
+
+구형 쿼리 형태 `GET /api/user/nikke/:key?openid=...`도 동일하게 동작합니다.
 
 응답 항목 형태:
 

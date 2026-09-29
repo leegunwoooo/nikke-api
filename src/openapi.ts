@@ -223,7 +223,9 @@ export const openapi = {
       get: {
         tags: ["user"],
         summary: "유저 프로필 + 전진기지",
-        description: "BlablaLink 공유 링크로 조회. 보유 니케는 /api/user/nikke에서 조회.",
+        description:
+          "BlablaLink 공유 링크로 조회. 보유 니케는 /api/user/{oid}/nikke에서 조회. " +
+          "openid는 쿼리 대신 경로로도 가능: /api/user/{oid}",
         parameters: [
           {
             name: "openid",
@@ -241,19 +243,20 @@ export const openapi = {
         },
       },
     },
-    "/api/user/nikke": {
+    "/api/user/{oid}/nikke": {
       get: {
         tags: ["user"],
         summary: "유저 보유 니케 목록",
         description:
-          "항상 경량 목록(이름·레벨·전투력·돌파·코어만). q는 필터 전용 — 상세는 /api/user/nikke/{key}에서 조회.",
+          "항상 경량 목록(이름·레벨·전투력·돌파·코어만). q는 필터 전용 — 상세는 /api/user/{oid}/nikke/{key}에서 조회. " +
+          "oid 대신 ?openid= 또는 ?url=도 사용 가능 (/api/user/nikke?openid=...)",
         parameters: [
           {
-            name: "openid",
-            in: "query",
+            name: "oid",
+            in: "path",
             required: true,
             schema: { type: "string" },
-            description: "공유 링크의 base64 openid 또는 URL 전체",
+            description: "공유 링크의 base64 openid",
           },
           {
             name: "q",
@@ -284,7 +287,7 @@ export const openapi = {
         },
       },
     },
-    "/api/user/nikke/{key}": {
+    "/api/user/{oid}/nikke/{key}": {
       get: {
         tags: ["user"],
         summary: "유저 보유 니케 단일 상세",
@@ -292,19 +295,19 @@ export const openapi = {
           "key = 정확한 니케 이름(전 언어)·id·resourceId·nameCode. 스킬 레벨·장비+옵션 수치·큐브·소장품·코스튬·호감도 포함.",
         parameters: [
           {
+            name: "oid",
+            in: "path",
+            required: true,
+            schema: { type: "string" },
+            description: "공유 링크의 base64 openid",
+          },
+          {
             name: "key",
             in: "path",
             required: true,
             schema: { type: "string" },
             description: "정확한 이름(부분 일치 안 됨) 또는 숫자 id",
             example: "아니스 : 스타",
-          },
-          {
-            name: "openid",
-            in: "query",
-            required: true,
-            schema: { type: "string" },
-            description: "공유 링크의 base64 openid 또는 URL 전체",
           },
         ],
         responses: {

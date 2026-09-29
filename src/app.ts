@@ -345,11 +345,11 @@ app.get("/", (c) =>
       "GET /api/tables": "list raw table files",
       "GET /api/tables/:file": "raw synced table JSON",
       "GET /api/cdn?path=": "resolve a Blablalink CDN resource path to its URL",
-      "GET /api/user?openid=":
-        "shared-profile lookup (blablalink user link or raw openid)",
-      "GET /api/user/nikke?openid=&q=":
-        "owned-nikke list on a shared profile (q filters; always lightweight)",
-      "GET /api/user/nikke/:key?openid=":
+      "GET /api/user/:oid":
+        "shared-profile lookup (oid = blablalink openid, or ?openid=/?url=)",
+      "GET /api/user/:oid/nikke?q=":
+        "owned-nikke list (q filters; always lightweight)",
+      "GET /api/user/:oid/nikke/:key":
         "single owned-nikke detail (key = exact name/id/nameCode)",
     },
     fields:
@@ -499,8 +499,15 @@ app.get("/api/tables/:file", async (c) => {
   }
 });
 
-app.get("/api/user", async (c) => {
-  const q = c.req.query("openid") ?? c.req.query("url") ?? "";
+app.get("/api/user", userProfile);
+app.get("/api/user/:oid", userProfile);
+app.get("/api/user/:oid/nikke", userNikkeList);
+app.get("/api/user/:oid/nikke/:key", userNikkeDetail);
+app.get("/api/user/nikke", userNikkeList);
+app.get("/api/user/nikke/:key", userNikkeDetail);
+
+async function userProfile(c: Context) {
+  const q = openidInput(c);
   const target = decodeOpenid(q);
   if (!target) return c.json({ error: "invalid openid" }, 400);
   try {
@@ -589,12 +596,16 @@ app.get("/api/user", async (c) => {
     const status = msg.includes("not configured") ? 503 : 502;
     return c.json({ error: msg }, status);
   }
-});
+}
 
-// shared helper for the two user-nikke routes: resolve the profile target
+// openid may come from the path (/api/user/:oid/...) or ?openid=/?url=
+const openidInput = (c: Context) =>
+  c.req.param("oid") ?? c.req.query("openid") ?? c.req.query("url") ?? "";
+
+// shared helper for the user-nikke routes: resolve the profile target
 // and fetch the owned-character list (never the per-character details)
 async function loadOwnedNikkes(c: Context) {
-  const q = c.req.query("openid") ?? c.req.query("url") ?? "";
+  const q = openidInput(c);
   const target = decodeOpenid(q);
   if (!target) return { error: c.json({ error: "invalid openid" }, 400) };
   const info = await playerInfo<{ area_id?: string }>(target.intlOpenId);
@@ -616,7 +627,7 @@ const ownedNikkeSummary = (charRef: any) => (ch: any) => ({
 
 // lightweight per-nikke list on a shared profile — q only filters, never
 // triggers the detail call
-app.get("/api/user/nikke", async (c) => {
+async function userNikkeList(c: Context) {
   try {
     const res = await loadOwnedNikkes(c);
     if ("error" in res) return res.error;
@@ -632,14 +643,14 @@ app.get("/api/user/nikke", async (c) => {
     const status = msg.includes("not configured") ? 503 : 502;
     return c.json({ error: msg }, status);
   }
-});
+}
 
 // single owned nikke detail — key is exact name / id / resourceId / nameCode
-app.get("/api/user/nikke/:key", async (c) => {
+async function userNikkeDetail(c: Context) {
   try {
     const res = await loadOwnedNikkes(c);
     if ("error" in res) return res.error;
-    const key = c.req.param("key");
+    const key = c.req.param("key") ?? "";
     const { charRef, normalizeNikke } = await loadProfileLookups();
     const nq = norm(key);
     const ch = res.owned.find((ch) => {
@@ -668,7 +679,7 @@ app.get("/api/user/nikke/:key", async (c) => {
     const status = msg.includes("not configured") ? 503 : 502;
     return c.json({ error: msg }, status);
   }
-});
+}
 
 app.get("/api/cdn", (c) => {
   const p = c.req.query("path");

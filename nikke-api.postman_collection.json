@@ -139,6 +139,18 @@
           "request": {
             "method": "GET",
             "url": {
+              "raw": "{{baseUrl}}/api/user/{{openid}}",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "user", "{{openid}}"],
+              "description": "openid를 경로로. ?openid= 또는 ?url=<공유 URL 전체>도 가능"
+            }
+          }
+        },
+        {
+          "name": "유저 프로필 (쿼리 형태)",
+          "request": {
+            "method": "GET",
+            "url": {
               "raw": "{{baseUrl}}/api/user?openid={{openid}}",
               "host": ["{{baseUrl}}"],
               "path": ["api", "user"],
@@ -149,27 +161,14 @@
           }
         },
         {
-          "name": "유저 프로필 (URL 통째로)",
-          "request": {
-            "method": "GET",
-            "url": {
-              "raw": "{{baseUrl}}/api/user?url=https://www.blablalink.com/user?openid={{openid}}",
-              "host": ["{{baseUrl}}"],
-              "path": ["api", "user"],
-              "query": [{ "key": "url", "value": "https://www.blablalink.com/user?openid={{openid}}" }]
-            }
-          }
-        },
-        {
           "name": "보유 니케 목록 (경량)",
           "request": {
             "method": "GET",
             "url": {
-              "raw": "{{baseUrl}}/api/user/nikke?openid={{openid}}",
+              "raw": "{{baseUrl}}/api/user/{{openid}}/nikke",
               "host": ["{{baseUrl}}"],
-              "path": ["api", "user", "nikke"],
+              "path": ["api", "user", "{{openid}}", "nikke"],
               "query": [
-                { "key": "openid", "value": "{{openid}}" },
                 { "key": "q", "value": "", "disabled": true, "description": "필터 — 이름 부분 일치/id/nameCode" }
               ]
             }
@@ -180,13 +179,10 @@
           "request": {
             "method": "GET",
             "url": {
-              "raw": "{{baseUrl}}/api/user/nikke/아니스 : 스타?openid={{openid}}",
+              "raw": "{{baseUrl}}/api/user/{{openid}}/nikke/아니스%20%3A%20스타",
               "host": ["{{baseUrl}}"],
-              "path": ["api", "user", "nikke", "아니스 : 스타"],
-              "query": [
-                { "key": "openid", "value": "{{openid}}" }
-              ],
-              "description": "path = 정확한 이름(전 언어) 또는 캐릭터 id/resourceId/nameCode"
+              "path": ["api", "user", "{{openid}}", "nikke", "아니스%20%3A%20스타"],
+              "description": "마지막 path = 정확한 이름(URL 인코딩) 또는 캐릭터 id/resourceId/nameCode"
             }
           }
         }
