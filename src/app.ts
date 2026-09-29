@@ -2,12 +2,14 @@ import { Hono } from "hono";
 import { cors } from "hono/cors";
 import { readFile, readdir } from "node:fs/promises";
 import path from "node:path";
+import { cacheHeaders } from "./cache.js";
 import { cdnUrl } from "./cdn.js";
+import { fieldsOf, pickFields } from "./fields.js";
 import { decodeOpenid, gameApi, playerInfo } from "./blabla.js";
 import { openapi } from "./openapi.js";
 import type { Nikke } from "./types.js";
 
-const DIST = path.resolve("data/dist");
+const DIST = path.resolve(process.env.NIKKE_DATA_DIR ?? "data/dist");
 
 interface CharacterData {
   count: number;
@@ -39,6 +41,33 @@ async function withDetail(n: Nikke): Promise<unknown> {
   const details = await getDetail(n.id);
   return details ? { ...n, details } : n;
 }
+
+interface SceneIndexEntry {
+  groupId: string;
+  name?: string;
+  lines: number;
+  category?: string;
+  nikke?: string;
+}
+
+interface FavoriteIndexEntry {
+  id: number;
+  rare?: string;
+  name: Record<string, string>;
+  weaponType?: string;
+}
+
+// index files are immutable per deployment — parse once, reuse across requests
+function lazyIndex<T>(file: string): () => Promise<T[]> {
+  let cached: Promise<T[]> | undefined;
+  return () =>
+    (cached ??= readFile(path.join(DIST, file), "utf8")
+      .then((raw) => JSON.parse(raw) as T[])
+      .catch(() => []));
+}
+
+const getScenes = lazyIndex<SceneIndexEntry>("scenes.json");
+const getFavorites = lazyIndex<FavoriteIndexEntry>("favorites.json");
 
 const norm = (s: string) => s.toLowerCase().replace(/[\s:_\-·]/g, "");
 
@@ -294,6 +323,7 @@ function findByName(q: string): Nikke[] {
 
 const app = new Hono();
 app.use("*", cors());
+app.use("*", cacheHeaders(characterData.syncedAt));
 
 app.get("/", (c) =>
   c.json({
@@ -319,6 +349,8 @@ app.get("/", (c) =>
       "GET /api/user/nikke?openid=&q=":
         "per-nikke lookup on a shared profile (q = name/id/nameCode; omit for owned list)",
     },
+    fields:
+      "?fields=a,b.c on nikkes, favorites and the scene index trims each object to those (dot) paths",
   }),
 );
 
@@ -333,19 +365,20 @@ app.get("/api/nikkes", (c) => {
   if (corporation) list = list.filter((x) => n(x.corporation) === n(corporation));
   if (weapon) list = list.filter((x) => n(x.weapon.type ?? undefined) === n(weapon));
   if (rarity) list = list.filter((x) => n(x.rarity) === n(rarity));
-  return c.json({ count: list.length, characters: list });
+  return c.json({ count: list.length, characters: pickFields(list, fieldsOf(c)) });
 });
 
 app.get("/api/nikkes/:id", async (c) => {
   const key = c.req.param("id");
+  const fields = fieldsOf(c);
   if (/^\d+$/.test(key)) {
     const n = Number(key);
     const hit = byId.get(n) ?? byResourceId.get(n);
-    if (hit) return c.json(await withDetail(hit));
+    if (hit) return c.json(pickFields(await withDetail(hit), fields));
   }
   const hits = findByName(key);
-  if (hits.length === 1) return c.json(await withDetail(hits[0]));
-  if (hits.length > 1) return c.json({ count: hits.length, characters: hits });
+  if (hits.length === 1) return c.json(pickFields(await withDetail(hits[0]), fields));
+  if (hits.length > 1) return c.json({ count: hits.length, characters: pickFields(hits, fields) });
   return c.json({ error: "not found" }, 404);
 });
 
@@ -363,24 +396,21 @@ app.get("/api/meta/filters", (c) => {
 
 app.get("/api/scenes", async (c) => {
   const { q, category, nikke, limit, offset } = c.req.query();
-  try {
-    let list: {
-      groupId: string;
-      name?: string;
-      lines: number;
-      category?: string;
-      nikke?: string;
-    }[] = JSON.parse(await readFile(path.join(DIST, "scenes.json"), "utf8"));
-    if (category) list = list.filter((s) => s.category === category);
-    if (nikke) list = list.filter((s) => s.nikke?.includes(nikke));
-    if (q) list = list.filter((s) => s.groupId.includes(q) || s.name?.includes(q));
-    const total = list.length;
-    const off = Math.max(0, Number(offset) || 0);
-    const lim = Math.min(Math.max(0, Number(limit) || 0), 500) || total;
-    return c.json({ count: total, offset: off, scenes: list.slice(off, off + lim) });
-  } catch {
-    return c.json({ count: 0, scenes: [] });
+  let list = await getScenes();
+  if (category) list = list.filter((s) => s.category === category);
+  if (nikke) {
+    const nn = norm(nikke);
+    list = list.filter((s) => s.nikke != null && norm(s.nikke).includes(nn));
   }
+  if (q) list = list.filter((s) => s.groupId.includes(q) || s.name?.includes(q));
+  const total = list.length;
+  const off = Math.max(0, Number(offset) || 0);
+  const lim = Math.min(Math.max(0, Number(limit) || 0), 500) || total;
+  return c.json({
+    count: total,
+    offset: off,
+    scenes: pickFields(list.slice(off, off + lim), fieldsOf(c)),
+  });
 });
 
 app.get("/api/scenes/:groupId", async (c) => {
@@ -396,33 +426,27 @@ app.get("/api/scenes/:groupId", async (c) => {
 
 app.get("/api/favorites", async (c) => {
   const { q, rare } = c.req.query();
-  try {
-    let list: {
-      id: number;
-      rare?: string;
-      name: Record<string, string>;
-      weaponType?: string;
-    }[] = JSON.parse(await readFile(path.join(DIST, "favorites.json"), "utf8"));
-    if (rare) list = list.filter((x) => x.rare?.toLowerCase() === rare.toLowerCase());
-    if (q) {
-      const nq = norm(q);
-      list = list.filter((x) => Object.values(x.name).some((n) => norm(n).includes(nq)));
-    }
-    return c.json({ count: list.length, favorites: list });
-  } catch {
-    return c.json({ count: 0, favorites: [] });
+  let list = await getFavorites();
+  if (rare) list = list.filter((x) => x.rare?.toLowerCase() === rare.toLowerCase());
+  if (q) {
+    const nq = norm(q);
+    list = list.filter((x) => Object.values(x.name).some((n) => norm(n).includes(nq)));
   }
+  return c.json({ count: list.length, favorites: pickFields(list, fieldsOf(c)) });
 });
 
 app.get("/api/favorites/:id", async (c) => {
   const id = c.req.param("id");
   if (!/^\d+$/.test(id)) return c.json({ error: "invalid id" }, 400);
+  let body: string;
   try {
-    const body = await readFile(path.join(DIST, "favorites", `${id}.json`), "utf8");
-    return c.body(body, 200, { "Content-Type": "application/json" });
+    body = await readFile(path.join(DIST, "favorites", `${id}.json`), "utf8");
   } catch {
     return c.json({ error: "not found" }, 404);
   }
+  const fields = fieldsOf(c);
+  if (fields) return c.json(pickFields(JSON.parse(body), fields));
+  return c.body(body, 200, { "Content-Type": "application/json" });
 });
 
 app.get("/api/cubes", async (c) => {
@@ -453,8 +477,12 @@ app.get("/api/cubes/:id", async (c) => {
 });
 
 app.get("/api/tables", async (c) => {
-  const files = await readdir(path.join(DIST, "tables"));
-  return c.json({ files });
+  try {
+    const files = await readdir(path.join(DIST, "tables"));
+    return c.json({ files });
+  } catch {
+    return c.json({ files: [] });
+  }
 });
 
 app.get("/api/tables/:file", async (c) => {

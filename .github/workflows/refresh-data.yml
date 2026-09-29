@@ -34,11 +34,13 @@ jobs:
           restore-keys: |
             data-fingerprint-
 
-      # 대표 목록 파일들의 해시로 데이터 변경 여부 판정.
-      # roledata/scene_detail만 바뀌는 경우는 놓칠 수 있어 일요일엔 무조건 배포.
+      # 대표 목록 파일 + 캐릭터별 ko roledata 해시로 데이터 변경 여부 판정.
+      # scene_detail만 바뀌는 경우는 놓칠 수 있어 일요일엔 무조건 배포.
+      # 기본 파일을 못 받으면(CDN 장애) 스크립트가 실패해 잘못된 배포/지문 저장을 막음.
       - name: Compute CDN fingerprint
         id: fp
         run: |
+          set -o pipefail
           NEW=$(npx tsx scripts/fingerprint.ts | tail -1)
           OLD=$(cat .cache-fingerprint 2>/dev/null || echo "none")
           echo "new=$NEW" >> "$GITHUB_OUTPUT"

@@ -104,6 +104,8 @@ GET /api/user/nikke?openid=<openid>&q=아니스       # 아니스 계열만 상�
 | `GET /api/meta/filters` | 사용 가능한 필터 값 목록 |
 | `GET /api/cdn?path=` | CDN 리소스 경로 → URL 변환 |
 
+공통으로 `?fields=id,name.ko`처럼 필요한 필드만 골라 받을 수 있고, 응답에는 `Cache-Control`/`ETag`가 붙습니다.
+
 ## API 문서
 
 - **인터랙티브 문서 (브라우저에서 바로 테스트) → [/docs](https://nikke-api-gunwoos-projects.vercel.app/docs)**
