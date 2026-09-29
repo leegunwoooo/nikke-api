@@ -248,7 +248,7 @@ export const openapi = {
         tags: ["user"],
         summary: "유저 보유 니케 목록",
         description:
-          "항상 경량 목록(이름·레벨·전투력·돌파·코어만). q는 필터 전용 — 상세는 /api/user/{oid}/nikke/{key}에서 조회. " +
+          "항상 경량 목록(이름·레벨·전투력·돌파·코어만). /api/nikkes와 동일한 필터 지원 — 상세는 /api/user/{oid}/nikke/{key}에서 조회. " +
           "oid 대신 ?openid= 또는 ?url=도 사용 가능 (/api/user/nikke?openid=...)",
         parameters: [
           {
@@ -262,9 +262,17 @@ export const openapi = {
             name: "q",
             in: "query",
             schema: { type: "string" },
-            description: "필터 — 니케 이름(전 언어 부분 일치)·id·resourceId·nameCode",
+            description: "니케 이름(전 언어 부분 일치)·id·resourceId·nameCode",
             example: "아니스",
           },
+          ...(["element", "class", "burst", "corporation", "weapon", "rarity"] as const).map(
+            (name) => ({
+              name,
+              in: "query" as const,
+              schema: { type: "string" },
+              description: `/api/nikkes와 동일한 ${name} 필터 (AND 결합)`,
+            }),
+          ),
         ],
         responses: {
           "200": {
@@ -292,7 +300,8 @@ export const openapi = {
         tags: ["user"],
         summary: "유저 보유 니케 단일 상세",
         description:
-          "key = 정확한 니케 이름(전 언어)·id·resourceId·nameCode. 스킬 레벨·장비+옵션 수치·큐브·소장품·코스튬·호감도 포함.",
+          "key = 니케 이름(전 언어 부분 일치)·id·resourceId·nameCode — /api/nikkes/{id}와 같은 방식. " +
+          "단일 매칭 시 상세(스킬 레벨·장비+옵션 수치·큐브·소장품·코스튬·호감도), 복수 매칭 시 경량 목록 반환.",
         parameters: [
           {
             name: "oid",
@@ -306,7 +315,7 @@ export const openapi = {
             in: "path",
             required: true,
             schema: { type: "string" },
-            description: "정확한 이름(부분 일치 안 됨) 또는 숫자 id",
+            description: "이름(부분 일치) 또는 숫자 id",
             example: "아니스 : 스타",
           },
         ],

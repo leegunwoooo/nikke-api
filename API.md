@@ -515,12 +515,14 @@ GET /api/user/<openid>                          # 경로로도 가능
 | 파라미터 | 설명 |
 |----------|------|
 | `:oid` (path) | 공유 링크의 openid 값 또는 URL 전체 |
-| `q` | 선택. 필터 전용 — 니케 이름(전 언어 부분 일치)·캐릭터 id·resourceId·nameCode. 상세가 필요하면 [GET /api/user/:oid/nikke/:key](#get-apiuseroidnikkekey) 사용 |
+| `q` | 선택. 이름(전 언어 부분 일치)·캐릭터 id·resourceId·nameCode |
+| `element` `class` `burst` `corporation` `weapon` `rarity` | 선택. [GET /api/nikkes](#get-apinikkes)와 동일한 필터 — AND 결합. 상세가 필요하면 [GET /api/user/:oid/nikke/:key](#get-apiuseroidnikkekey) 사용 |
 
 ```
 GET /api/user/<openid>/nikke              # 보유 전체 목록
 GET /api/user/<openid>/nikke?q=아니스      # 아니스 계열만 필터 (목록 형태 유지)
 GET /api/user/<openid>/nikke?q=201601     # id/nameCode로 필터
+GET /api/user/<openid>/nikke?element=Iron&burst=III  # 도감과 동일한 속성 필터
 ```
 
 구형 쿼리 형태 `GET /api/user/nikke?openid=...`도 동일하게 동작합니다.
@@ -544,15 +546,17 @@ GET /api/user/<openid>/nikke?q=201601     # id/nameCode로 필터
 
 ## GET /api/user/:oid/nikke/:key
 
-보유 니케 **한 명**의 상세를 조회합니다 — 장비·옵션·큐브·소장품·스킬 레벨까지 포함. 목록에서 고른 니케를 `:key`로 지정합니다.
+보유 니케 **한 명**의 상세를 조회합니다 — 장비·옵션·큐브·소장품·스킬 레벨까지 포함. 매칭 방식은 [GET /api/nikkes/:id](#get-apinikkesid)와 동일합니다.
 
 | `:key` | 매칭 방식 |
 |--------|----------|
-| 니케 이름 | **정확 일치**(전 언어, 대소문자·공백·`:` 무시) — `아니스 : 스타`는 되지만 `아니스`는 안 됨 |
+| 니케 이름 | 부분 일치(전 언어, 대소문자·공백·`:` 무시) — `아니스`로 조회하면 보유한 아니스 계열 전부 매칭 |
 | 숫자 | 캐릭터 id · resourceId · nameCode 중 일치 |
 
+매칭이 정확히 1명이면 상세 객체를, 복수면 목록(`{count, nikkes[]}`)을 반환합니다.
+
 ```
-GET /api/user/<openid>/nikke/아니스%20%3A%20스타   # 정확한 이름 (URL 인코딩)
+GET /api/user/<openid>/nikke/아니스%20%3A%20스타   # 이름 (URL 인코딩)
 GET /api/user/<openid>/nikke/3017                # 캐릭터 id
 ```
 

@@ -627,17 +627,30 @@ const ownedNikkeSummary = (charRef: any) => (ch: any) => ({
   core: ch.core ?? 0,
 });
 
-// lightweight per-nikke list on a shared profile — q only filters, never
+// lightweight per-nikke list on a shared profile — same filters as
+// /api/nikkes (q + element/class/burst/corporation/weapon/rarity), never
 // triggers the detail call
 async function userNikkeList(c: Context) {
   try {
     const res = await loadOwnedNikkes(c);
     if ("error" in res) return res.error;
-    const query = c.req.query("q") ?? "";
+    const { q, element, class: cls, burst, corporation, weapon, rarity } = c.req.query();
     const { charRef, matchesNikke } = await loadProfileLookups();
+    const n = (v?: string | null) => v?.toLowerCase();
     const nikkes = res.owned
-      .filter((ch) => matchesNikke(query, ch))
+      .filter((ch) => matchesNikke(q ?? "", ch))
       .map(ownedNikkeSummary(charRef))
+      .filter((x) => {
+        const ch = x.character;
+        return (
+          (!element || n(ch?.element) === n(element)) &&
+          (!cls || n(ch?.class) === n(cls)) &&
+          (!burst || n(ch?.burst) === n(burst)) &&
+          (!corporation || n(ch?.corporation) === n(corporation)) &&
+          (!rarity || n(ch?.rarity) === n(rarity))
+        );
+      })
+      .filter((x) => !weapon || n(byId.get(x.character?.id ?? 0)?.weapon?.type) === n(weapon))
       .sort((a, b) => b.combat - a.combat);
     return c.json({ count: nikkes.length, nikkes });
   } catch (e) {
@@ -647,24 +660,22 @@ async function userNikkeList(c: Context) {
   }
 }
 
-// single owned nikke detail — key is exact name / id / resourceId / nameCode
+// single owned nikke detail — key is name / id / resourceId / nameCode,
+// matched like /api/nikkes/:id (fuzzy name); multiple hits return the list
 async function userNikkeDetail(c: Context) {
   try {
     const res = await loadOwnedNikkes(c);
     if ("error" in res) return res.error;
     const key = c.req.param("key") ?? "";
-    const { charRef, normalizeNikke } = await loadProfileLookups();
-    const nq = norm(key);
-    const ch = res.owned.find((ch) => {
-      if (/^\d+$/.test(key)) {
-        const n = Number(key);
-        const ref = charRef(ch.name_code) as any;
-        return ch.name_code === n || ref?.id === n || ref?.resourceId === n;
-      }
-      const ref = charRef(ch.name_code) as any;
-      return !!ref?.name && Object.values(ref.name as object).some((nm) => norm(nm) === nq);
-    });
-    if (!ch) return c.json({ error: "not found" }, 404);
+    const { charRef, normalizeNikke, matchesNikke } = await loadProfileLookups();
+    const hits = res.owned.filter((ch) => matchesNikke(key, ch));
+    if (hits.length === 0) return c.json({ error: "not found" }, 404);
+    if (hits.length > 1)
+      return c.json({
+        count: hits.length,
+        nikkes: hits.map(ownedNikkeSummary(charRef)).sort((a, b) => b.combat - a.combat),
+      });
+    const ch = hits[0];
     const details = await gameApi("Game", "GetUserCharacterDetails", {
       ...res.body,
       name_codes: [ch.name_code],
