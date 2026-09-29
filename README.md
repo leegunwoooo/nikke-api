@@ -104,7 +104,41 @@ GET /api/user/nikke?openid=<openid>&q=아니스       # 아니스 계열만 상�
 | `GET /api/meta/filters` | 사용 가능한 필터 값 목록 |
 | `GET /api/cdn?path=` | CDN 리소스 경로 → URL 변환 |
 
-공통으로 `?fields=id,name.ko`처럼 필요한 필드만 골라 받을 수 있고, 응답에는 `Cache-Control`/`ETag`가 붙습니다.
+## 공통 기능
+
+### 필드 선택 — `?fields=`
+
+응답이 큰 엔드포인트에서 필요한 필드만 골라 받을 수 있습니다. 콤마로 여러 개 지정하고, 점(`.`)으로 중첩 필드를 파고듭니다.
+
+**지원 엔드포인트**: `/api/nikkes`, `/api/nikkes/:id`, `/api/favorites`, `/api/favorites/:id`, `/api/scenes`(목록)
+
+```
+GET /api/nikkes?fields=id,name.ko,images.icon
+GET /api/nikkes/201601?fields=name,details.skills,details.squad.name
+GET /api/favorites?fields=id,name.ko,images.icon
+GET /api/scenes?category=attractive&fields=groupId,name,nikke
+```
+
+**응답 예시** — `GET /api/nikkes?q=라피&fields=id,name.ko`:
+
+```json
+{
+  "count": 2,
+  "characters": [
+    { "id": 220401, "name": { "ko": "라피 : 레드 후드" } },
+    { "id": 201301, "name": { "ko": "라피" } }
+  ]
+}
+```
+
+- 목록 응답은 `count` 등 래퍼 필드는 그대로 두고 항목(`characters[]`, `scenes[]` 등)만 잘라냅니다
+- 존재하지 않는 필드를 넣어도 에러가 아니라 그냥 빠집니다
+- 배열 안쪽의 필드는 지정할 수 없습니다 (예: `details.voices.text`는 안 됨 — 배열 통째로만 선택 가능)
+- 미지정 시 전체 응답 그대로 (기존과 동일)
+
+### 캐시
+
+모든 200 응답에 `Cache-Control: public, max-age=3600, s-maxage=86400`과 `ETag`가 붙습니다. `If-None-Match`로 재요청하면 304로 응답 본문을 생략합니다 — 데이터는 배포 시에만 바뀌므로 캐시해도 안전합니다.
 
 ## API 문서
 
