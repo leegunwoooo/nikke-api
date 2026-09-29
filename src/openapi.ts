@@ -231,7 +231,6 @@ export const openapi = {
             required: true,
             schema: { type: "string" },
             description: "공유 링크의 base64 openid 또는 URL 전체",
-            example: "MjkwODAtNjk1NTExMjA3MDczMzcyNTYwMg==",
           },
         ],
         responses: {

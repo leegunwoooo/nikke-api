@@ -6,7 +6,7 @@
   },
   "variable": [
     { "key": "baseUrl", "value": "https://nikke-api-gunwoos-projects.vercel.app" },
-    { "key": "openid", "value": "MjkwODAtNjk1NTExMjA3MDczMzcyNTYwMg==" }
+    { "key": "openid", "value": "" }
   ],
   "item": [
     {

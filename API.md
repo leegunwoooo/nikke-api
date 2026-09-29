@@ -440,8 +440,8 @@ BlablaLink 공유 프로필 링크로 유저 프로필을 조회합니다. 서�
 | `url` | `openid`와 동일 — 전체 URL |
 
 ```
-GET /api/user?openid=MjkwODAtNjk1NTExMjA3MDczMzcyNTYwMg==
-GET /api/user?url=https://www.blablalink.com/user?openid=MjkwODAt...
+GET /api/user?openid=<base64 openid>
+GET /api/user?url=<공유 URL 전체>
 ```
 
 보유 니케 목록·개별 상세는 [GET /api/user/nikke](#get-apiusernikke)를 사용하세요.
