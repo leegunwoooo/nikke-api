@@ -93,6 +93,7 @@ BlablaLink 공유 링크(`https://www.blablalink.com/user?openid=...`)로 유저
 | `GET /api/cubes` | 하모니 큐브 목록 — `?q=` |
 | `GET /api/cubes/:id` | 큐브 상세 — 레벨별 스탯, 큐브 스킬 |
 | `GET /api/user?openid=` | 유저 프로필 조회 — BlablaLink 공유 링크 또는 openid |
+| `GET /api/user/nikke?openid=&q=` | 유저 보유 니케 목록/개별 상세 — `q` 생략 시 경량 목록 |
 | `GET /api/tables` / `GET /api/tables/:file` | 원본 테이블 목록/조회 |
 | `GET /api/meta/filters` | 사용 가능한 필터 값 목록 |
 | `GET /api/cdn?path=` | CDN 리소스 경로 → URL 변환 |

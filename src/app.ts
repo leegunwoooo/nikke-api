@@ -143,6 +143,121 @@ const CORP_NAMES: Record<number, string> = {
   7: "ABNORMAL",
 };
 
+// shared lookup context for user-profile normalization
+async function loadProfileLookups() {
+  const [ncMap, favNames, cubeNames, { equipItemMap, equipOptionMap }, stages, recycles] =
+    await Promise.all([
+      loadNameCodeMap(),
+      loadFavNames(),
+      loadCubeNames(),
+      loadEquipMaps(),
+      loadStageMap(),
+      loadRecycleMap(),
+    ]);
+  const charInfo = (n: Nikke, image?: string) => ({
+    id: n.id,
+    resourceId: n.resourceId,
+    name: n.name,
+    rarity: n.rarity,
+    class: n.class,
+    burst: n.burst,
+    corporation: n.corporation,
+    element: n.element,
+    image: image ?? n.images.icon,
+  });
+  const charRef = (nameCode?: number | null) => {
+    if (!nameCode) return null;
+    const rid = ncMap?.[String(nameCode)];
+    const n = rid != null ? byResourceId.get(rid) : undefined;
+    return n ? { nameCode, ...charInfo(n) } : { nameCode };
+  };
+  // avatar/icon ids are a different namespace (character_avatar_map: id -> resource+costume)
+  const avatarRef = (iconId?: number | null) => {
+    if (!iconId) return null;
+    const a = avatarMap?.[String(iconId)];
+    const n = a ? byResourceId.get(a.resourceId) : undefined;
+    if (!n || !a) return { nameCode: iconId };
+    const costume = a.costumeIndex > 0 ? n.costumes[a.costumeIndex - 1] : undefined;
+    return { iconId, costumeIndex: a.costumeIndex, ...charInfo(n, costume?.images.icon) };
+  };
+  const cubeRef = (tid?: number, lv?: number) =>
+    !tid ? null : { id: tid, level: lv ?? 0, name: cubeNames.get(tid)?.name ?? null };
+  const favRef = (tid?: number, lv?: number) =>
+    !tid ? null : { id: tid, level: lv ?? 0, name: favNames.get(tid) ?? null };
+  const costumeRef = (tid?: number | null) => {
+    if (!tid) return null;
+    const hit = costumeOwner.get(tid);
+    if (!hit) return { id: tid };
+    return {
+      id: tid,
+      skinIndex: hit.costume.skinIndex,
+      character: charInfo(hit.nikke, hit.costume.images.icon),
+    };
+  };
+  const stageRef = (stageId?: number) => {
+    if (!stageId) return null;
+    const s = stages.get(stageId);
+    return s ? { stageId, chapter: s.chapter, mode: s.mode, stage: s.name } : { stageId };
+  };
+  const optionRef = (effectById: Map<string, any>) => (oid?: number) => {
+    if (!oid) return null;
+    const o = equipOptionMap?.[String(oid)];
+    const fd = effectById.get(String(oid))?.function_details?.[0];
+    const value =
+      fd?.function_value != null
+        ? {
+            type: fd.function_type ?? null,
+            value: fd.function_value_type === "Percent" ? fd.function_value / 100 : fd.function_value,
+            unit: fd.function_value_type === "Percent" ? "%" : null,
+          }
+        : null;
+    return o ? { id: oid, name: o.name, rank: o.rank, value } : { id: oid, value };
+  };
+  const equipRef = (effectById: Map<string, any>) => {
+    const opt = optionRef(effectById);
+    return (d: Record<string, any>, slot: string) => {
+      const tid = d[`${slot}_equip_tid`];
+      if (!tid) return null;
+      const item = equipItemMap?.[String(tid)];
+      return {
+        tid,
+        name: item?.name ?? null,
+        class: item?.class ?? null,
+        rare: item?.rare ?? null,
+        icon: item?.icon ?? null,
+        tier: d[`${slot}_equip_tier`] ?? 0,
+        level: d[`${slot}_equip_lv`] ?? 0,
+        corporation: CORP_NAMES[d[`${slot}_equip_corporation_type`]] ?? null,
+        options: [1, 2, 3].map((i) => opt(d[`${slot}_equip_option${i}_id`])).filter(Boolean),
+      };
+    };
+  };
+  const normalizeNikke = (ch: any, d: any, effectById: Map<string, any>) => {
+    const eq = equipRef(effectById);
+    return {
+      character: charRef(ch.name_code),
+      level: ch.lv ?? d.lv ?? 0,
+      combat: ch.combat ?? d.combat ?? 0,
+      arenaCombat: d.arena_combat ?? 0,
+      grade: ch.grade ?? d.grade ?? 0,
+      core: ch.core ?? d.core ?? 0,
+      costume: costumeRef(d.costume_tid || ch.costume_id),
+      skills: { skill1: d.skill1_lv ?? 0, skill2: d.skill2_lv ?? 0, burst: d.ulti_skill_lv ?? 0 },
+      attractiveLevel: d.attractive_lv ?? 0,
+      favoriteItem: favRef(d.favorite_item_tid, d.favorite_item_lv),
+      cube: cubeRef(d.harmony_cube_tid, d.harmony_cube_lv),
+      arenaCube: cubeRef(d.arena_harmony_cube_tid, d.arena_harmony_cube_lv),
+      equipment: {
+        head: eq(d, "head"),
+        torso: eq(d, "torso"),
+        arm: eq(d, "arm"),
+        leg: eq(d, "leg"),
+      },
+    };
+  };
+  return { charRef, avatarRef, cubeRef, favRef, costumeRef, stageRef, normalizeNikke, recycles };
+}
+
 function findByName(q: string): Nikke[] {
   const nq = norm(q);
   const matches = characters.filter((c) => Object.values(c.name).some((n) => norm(n).includes(nq)));
@@ -178,6 +293,8 @@ app.get("/", (c) =>
       "GET /api/cdn?path=": "resolve a Blablalink CDN resource path to its URL",
       "GET /api/user?openid=":
         "shared-profile lookup (blablalink user link or raw openid)",
+      "GET /api/user/nikke?openid=&q=":
+        "per-nikke lookup on a shared profile (q = name/id/nameCode; omit for owned list)",
     },
   }),
 );
@@ -351,99 +468,12 @@ app.get("/api/user", async (c) => {
       ? await gameApi("Game", "GetUserCharacterDetails", { ...body, name_codes: codes })
       : { code: -1, data: null };
 
-    const [ncMap, favNames, cubeNames, { equipItemMap, equipOptionMap }, stages, recycles] =
-      await Promise.all([
-        loadNameCodeMap(),
-        loadFavNames(),
-        loadCubeNames(),
-        loadEquipMaps(),
-        loadStageMap(),
-        loadRecycleMap(),
-      ]);
-    const charInfo = (n: Nikke, image?: string) => ({
-      id: n.id,
-      resourceId: n.resourceId,
-      name: n.name,
-      rarity: n.rarity,
-      class: n.class,
-      burst: n.burst,
-      corporation: n.corporation,
-      element: n.element,
-      image: image ?? n.images.icon,
-    });
-    const charRef = (nameCode?: number | null) => {
-      if (!nameCode) return null;
-      const rid = ncMap?.[String(nameCode)];
-      const n = rid != null ? byResourceId.get(rid) : undefined;
-      return n ? { nameCode, ...charInfo(n) } : { nameCode };
-    };
-    // avatar/icon ids are a different namespace (character_avatar_map: id -> resource+costume)
-    const avatarRef = (iconId?: number | null) => {
-      if (!iconId) return null;
-      const a = avatarMap?.[String(iconId)];
-      const n = a ? byResourceId.get(a.resourceId) : undefined;
-      if (!n || !a) return { nameCode: iconId };
-      const costume = a.costumeIndex > 0 ? n.costumes[a.costumeIndex - 1] : undefined;
-      return { iconId, costumeIndex: a.costumeIndex, ...charInfo(n, costume?.images.icon) };
-    };
-    const cubeRef = (tid?: number, lv?: number) =>
-      !tid ? null : { id: tid, level: lv ?? 0, name: cubeNames.get(tid)?.name ?? null };
-    const favRef = (tid?: number, lv?: number) =>
-      !tid ? null : { id: tid, level: lv ?? 0, name: favNames.get(tid) ?? null };
-    const costumeRef = (tid?: number | null) => {
-      if (!tid) return null;
-      const hit = costumeOwner.get(tid);
-      if (!hit) return { id: tid };
-      return {
-        id: tid,
-        skinIndex: hit.costume.skinIndex,
-        character: charInfo(hit.nikke, hit.costume.images.icon),
-      };
-    };
+    const { charRef, avatarRef, stageRef, normalizeNikke, recycles } =
+      await loadProfileLookups();
     // state_effects entries carry the resolved numeric value per option id
     const effectById = new Map<string, any>(
       (((details.data as any)?.state_effects ?? []) as any[]).map((e: any) => [String(e.id), e]),
     );
-    const optionRef = (oid?: number) => {
-      if (!oid) return null;
-      const o = equipOptionMap?.[String(oid)];
-      const fd = effectById.get(String(oid))?.function_details?.[0];
-      const value =
-        fd?.function_value != null
-          ? {
-              type: fd.function_type ?? null,
-              value:
-                fd.function_value_type === "Percent"
-                  ? fd.function_value / 100
-                  : fd.function_value,
-              unit: fd.function_value_type === "Percent" ? "%" : null,
-            }
-          : null;
-      return o
-        ? { id: oid, name: o.name, rank: o.rank, value }
-        : { id: oid, value };
-    };
-    const equipRef = (d: Record<string, any>, slot: string) => {
-      const tid = d[`${slot}_equip_tid`];
-      if (!tid) return null;
-      const item = equipItemMap?.[String(tid)];
-      return {
-        tid,
-        name: item?.name ?? null,
-        class: item?.class ?? null,
-        rare: item?.rare ?? null,
-        icon: item?.icon ?? null,
-        tier: d[`${slot}_equip_tier`] ?? 0,
-        level: d[`${slot}_equip_lv`] ?? 0,
-        corporation: CORP_NAMES[d[`${slot}_equip_corporation_type`]] ?? null,
-        options: [1, 2, 3].map((i) => optionRef(d[`${slot}_equip_option${i}_id`])).filter(Boolean),
-      };
-    };
-    const stageRef = (stageId?: number) => {
-      if (!stageId) return null;
-      const s = stages.get(stageId);
-      return s ? { stageId, chapter: s.chapter, mode: s.mode, stage: s.name } : { stageId };
-    };
 
     const bi = (basic.data as any)?.basic_info ?? {};
     const op = (outpost.data as any)?.outpost_info ?? {};
@@ -452,29 +482,7 @@ app.get("/api/user", async (c) => {
     );
     const nikkes = (
       ((chars.data as any)?.characters ?? []) as any[]
-    ).map((ch) => {
-      const d = detailByCode.get(ch.name_code) ?? {};
-      return {
-        character: charRef(ch.name_code),
-        level: ch.lv ?? d.lv ?? 0,
-        combat: ch.combat ?? d.combat ?? 0,
-        arenaCombat: d.arena_combat ?? 0,
-        grade: ch.grade ?? d.grade ?? 0,
-        core: ch.core ?? d.core ?? 0,
-        costume: costumeRef(d.costume_tid || ch.costume_id),
-        skills: { skill1: d.skill1_lv ?? 0, skill2: d.skill2_lv ?? 0, burst: d.ulti_skill_lv ?? 0 },
-        attractiveLevel: d.attractive_lv ?? 0,
-        favoriteItem: favRef(d.favorite_item_tid, d.favorite_item_lv),
-        cube: cubeRef(d.harmony_cube_tid, d.harmony_cube_lv),
-        arenaCube: cubeRef(d.arena_harmony_cube_tid, d.arena_harmony_cube_lv),
-        equipment: {
-          head: equipRef(d, "head"),
-          torso: equipRef(d, "torso"),
-          arm: equipRef(d, "arm"),
-          leg: equipRef(d, "leg"),
-        },
-      };
-    });
+    ).map((ch) => normalizeNikke(ch, detailByCode.get(ch.name_code) ?? {}, effectById));
     nikkes.sort((a, b) => b.combat - a.combat);
 
     const corporations: Record<string, number> = {};
@@ -544,6 +552,70 @@ app.get("/api/user", async (c) => {
       },
       nikkes,
     });
+  } catch (e) {
+    const msg = e instanceof Error ? e.message : String(e);
+    const status = msg.includes("not configured") ? 503 : 502;
+    return c.json({ error: msg }, status);
+  }
+});
+
+// lightweight per-nikke lookup on a shared profile — skips the full
+// profile/outpost calls and only asks upstream for matching name_codes
+app.get("/api/user/nikke", async (c) => {
+  const q = c.req.query("openid") ?? c.req.query("url") ?? "";
+  const target = decodeOpenid(q);
+  if (!target) return c.json({ error: "invalid openid" }, 400);
+  const query = c.req.query("q") ?? "";
+  try {
+    const info = await playerInfo<{ area_id?: string }>(target.intlOpenId);
+    if (info.code !== 0 || !info.data)
+      return c.json({ error: info.msg ?? "lookup failed", code: info.code }, 502);
+    const body = { intl_open_id: target.intlOpenId, nikke_area_id: Number(info.data.area_id ?? 0) };
+    const chars = await gameApi("Game", "GetUserCharacters", body);
+    const owned = ((chars.data as any)?.characters ?? []) as any[];
+    const { charRef, normalizeNikke } = await loadProfileLookups();
+
+    const matches = (ch: any) => {
+      if (!query) return true;
+      const ref = charRef(ch.name_code) as any;
+      if (/^\d+$/.test(query)) {
+        const n = Number(query);
+        return ch.name_code === n || ref?.id === n || ref?.resourceId === n;
+      }
+      const nq = norm(query);
+      return ref?.name && Object.values(ref.name as object).some((nm) => norm(nm).includes(nq));
+    };
+    const matched = owned.filter(matches);
+    if (query && !matched.length) return c.json({ count: 0, nikkes: [] });
+
+    // list mode (no q): cheap — skip the detail call entirely
+    if (!query) {
+      const nikkes = matched
+        .map((ch) => ({
+          character: charRef(ch.name_code),
+          level: ch.lv ?? 0,
+          combat: ch.combat ?? 0,
+          grade: ch.grade ?? 0,
+          core: ch.core ?? 0,
+        }))
+        .sort((a, b) => b.combat - a.combat);
+      return c.json({ count: nikkes.length, nikkes });
+    }
+
+    const codes = matched.map((x) => x.name_code).filter(Boolean);
+    const details = codes.length
+      ? await gameApi("Game", "GetUserCharacterDetails", { ...body, name_codes: codes })
+      : { code: -1, data: null };
+    const detailByCode = new Map<number, any>(
+      ((details.data as any)?.character_details ?? []).map((x: any) => [x.name_code, x]),
+    );
+    const effectById = new Map<string, any>(
+      (((details.data as any)?.state_effects ?? []) as any[]).map((e: any) => [String(e.id), e]),
+    );
+    const nikkes = matched
+      .map((ch) => normalizeNikke(ch, detailByCode.get(ch.name_code) ?? {}, effectById))
+      .sort((a, b) => b.combat - a.combat);
+    return c.json({ count: nikkes.length, nikkes });
   } catch (e) {
     const msg = e instanceof Error ? e.message : String(e);
     const status = msg.includes("not configured") ? 503 : 502;

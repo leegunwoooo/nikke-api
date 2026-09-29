@@ -23,6 +23,7 @@
 - [GET /api/cubes](#get-apicubes) — 하모니 큐브 목록
 - [GET /api/cubes/:id](#get-apicubesid) — 큐브 상세 (레벨별 스탯·스킬)
 - [GET /api/user](#get-apiuser) — 유저 프로필 조회 (공유 링크)
+- [GET /api/user/nikke](#get-apiusernikke) — 유저 보유 니케 개별/목록 조회
 - [GET /api/cdn](#get-apicdn) — CDN 경로 → URL 변환
 - [에러 응답](#에러-응답)
 
@@ -545,6 +546,25 @@ GET /api/user?url=https://www.blablalink.com/user?openid=MjkwODAt...
 | `openid` 형식 오류 | 400 `{"error": "invalid openid"}` |
 | 서버 조회 계정 미설정 | 503 `{"error": "blabla credentials not configured"}` |
 | 업스트림 실패 (토큰 만료, 권한 없음 등) | 502 `{"error": "...", "code": ...}` |
+
+## GET /api/user/nikke
+
+공유 프로필의 보유 니케만 조회합니다 — `/api/user`보다 가볍습니다 (프로필·전진기지 호출 생략).
+
+### 쿼리 파라미터
+
+| 파라미터 | 설명 |
+|----------|------|
+| `openid` / `url` | `/api/user`와 동일 |
+| `q` | 선택. 니케 이름(전 언어 부분 일치)·캐릭터 id·resourceId·nameCode. **생략 시 보유 니케 전체 목록**(레벨·전투력·코어·돌파만, 상세 호출 생략) |
+
+```
+GET /api/user/nikke?openid=...&q=라피        # 라피·라피: 레드 후드 등 이름 매칭 전부 상세
+GET /api/user/nikke?openid=...&q=201601     # id/nameCode로 단일 조회
+GET /api/user/nikke?openid=...              # 보유 목록 (경량)
+```
+
+`q` 지정 시 응답의 `nikkes[]`는 `/api/user`의 것과 동일한 정규화 형태입니다 (스킬 레벨·장비·큐브·소장품·호감도 포함). 이름이 여러 니케에 매칭되면(스킨 캐릭터 등) 전부 반환됩니다.
 
 ## GET /api/cdn
 
