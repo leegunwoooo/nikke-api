@@ -499,12 +499,14 @@ app.get("/api/tables/:file", async (c) => {
   }
 });
 
+// static /api/user/nikke must be registered before /api/user/:oid — the
+// param route would otherwise swallow it as oid="nikke"
 app.get("/api/user", userProfile);
+app.get("/api/user/nikke", userNikkeList);
+app.get("/api/user/nikke/:key", userNikkeDetail);
 app.get("/api/user/:oid", userProfile);
 app.get("/api/user/:oid/nikke", userNikkeList);
 app.get("/api/user/:oid/nikke/:key", userNikkeDetail);
-app.get("/api/user/nikke", userNikkeList);
-app.get("/api/user/nikke/:key", userNikkeDetail);
 
 async function userProfile(c: Context) {
   const q = openidInput(c);
