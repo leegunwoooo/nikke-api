@@ -436,13 +436,13 @@ BlablaLink 공유 프로필 링크로 유저 프로필을 조회합니다. 서�
 |----------|------|
 | `openid` | 공유 링크의 base64 openid 값, 또는 공유 URL 전체 (`https://www.blablalink.com/user?openid=...` 통째로 넣어도 됨) |
 | `url` | `openid`와 동일 — 전체 URL |
-| `q` | 선택. 니케 이름(전 언어 부분 일치)·id·resourceId·nameCode — 지정 시 `nikkes`가 매칭 항목만으로 필터링되고 상세 조회도 매칭분에만 수행 |
 
 ```
 GET /api/user?openid=MjkwODAtNjk1NTExMjA3MDczMzcyNTYwMg==
 GET /api/user?url=https://www.blablalink.com/user?openid=MjkwODAt...
-GET /api/user?openid=...&q=아니스   # 아니스 계열 니케만 상세 반환
 ```
+
+보유 니케 목록·개별 상세는 [GET /api/user/nikke](#get-apiusernikke)를 사용하세요.
 
 ### 응답
 
@@ -482,7 +482,50 @@ GET /api/user?openid=...&q=아니스   # 아니스 계열 니케만 상세 반�
     "tacticAcademy": { "class": 13000, "lesson": 13003 },
     "recycleRoom": [ { "tid": 1001, "type": "Personal", "subType": "Personal", "level": 91, "exp": 0 }, ... ],
     "memorials": [ { "category": "HandWriting", "count": 88 }, ... ]
-  },
+  }
+}
+```
+
+| 필드 | 설명 |
+|------|------|
+| `profile.icon` | 대표 아이콘 — `iconId`가 캐릭터/코스튬으로 해석되면 이름·이미지 포함 |
+| `profile.campaign.*` | 캠페인 진행도 — `stageId`를 stage_list로 해석해 `chapter`/`mode`/`stage`("40-35 STAGE" 등) 제공 |
+
+**참고**
+
+- 대상이 BlablaLink에서 프로필 공유 링크를 만들 수 있는 상태여야 조회됩니다.
+- 대상의 공개 설정에 따라 일부 섹션이 비어 있거나 거부될 수 있습니다.
+
+**에러**
+
+| 상황 | 상태 |
+|------|------|
+| `openid` 형식 오류 | 400 `{"error": "invalid openid"}` |
+| 서버 조회 계정 미설정 | 503 `{"error": "blabla credentials not configured"}` |
+| 업스트림 실패 (토큰 만료, 권한 없음 등) | 502 `{"error": "...", "code": ...}` |
+
+## GET /api/user/nikke
+
+공유 프로필의 보유 니케만 조회합니다 — `/api/user`보다 가볍습니다 (프로필·전진기지 호출 생략).
+
+### 쿼리 파라미터
+
+| 파라미터 | 설명 |
+|----------|------|
+| `openid` / `url` | `/api/user`와 동일 |
+| `q` | 선택. 니케 이름(전 언어 부분 일치)·캐릭터 id·resourceId·nameCode. **생략 시 보유 니케 전체 목록**(레벨·전투력·코어·돌파만, 상세 호출 생략) |
+
+```
+GET /api/user/nikke?openid=...&q=라피        # 라피·라피: 레드 후드 등 이름 매칭 전부 상세
+GET /api/user/nikke?openid=...&q=201601     # id/nameCode로 단일 조회
+GET /api/user/nikke?openid=...              # 보유 목록 (경량)
+```
+
+`q` 지정 시 `nikkes[]` 항목 형태 (전투력 내림차순):
+
+```json
+{
+  "count": 3,
   "nikkes": [
     {
       "character": { "nameCode": 1021, "id": 220401, "name": { "ko": "...", ... }, "image": "..." },
@@ -527,46 +570,14 @@ GET /api/user?openid=...&q=아니스   # 아니스 계열 니케만 상세 반�
 
 | 필드 | 설명 |
 |------|------|
-| `profile.icon` | 대표 아이콘 — `iconId`가 캐릭터/코스튬으로 해석되면 이름·이미지 포함 |
-| `profile.campaign.*` | 캠페인 진행도 — `stageId`를 stage_list로 해석해 `chapter`/`mode`/`stage`("40-35 STAGE" 등) 제공 |
-| `nikkes[]` | 보유 니케 — 전투력 내림차순. 미장착 `cube`/`favoriteItem`/`costume`/`equipment` 부위는 `null` |
-| `nikkes[].costume` | 착용 코스튬 — `id`, `skinIndex`, 해당 코스튬 아이콘 포함 캐릭터 정보 |
+| `nikkes[].costume` | 착용 코스튬 — `id`, `skinIndex`, 해당 코스튬 아이콘 포함 캐릭터 정보. 미착용 시 `null` |
 | `nikkes[].equipment.*` | 부위별 장비 — `name`(4개 언어)·`class`·`rare`·`icon`은 `ItemEquipTable`에서 해석 |
 | `nikkes[].equipment.*.corporation` | 기업 장비 여부 (`ELYSION` 등, 비기업 장비는 `null`) |
 | `nikkes[].equipment.*.options[]` | 장비 옵션 — `id`, 옵션 종류 `name`(4개 언어), `rank`(같은 종류 내 등급), `value`({type, value, unit}) — 실제 수치는 업스트림 `state_effects`에서 해석 |
 
-**참고**
-
-- 대상이 BlablaLink에서 프로필 공유 링크를 만들 수 있는 상태여야 조회됩니다.
-- 대상의 공개 설정에 따라 일부 섹션이 비어 있거나 거부될 수 있습니다.
-- 니케 장비 `tid`/옵션 `id`는 내부 아이템 코드입니다 (원본 테이블은 `/api/tables/ItemEquipTable_ko.json` 참고).
-
-**에러**
-
-| 상황 | 상태 |
-|------|------|
-| `openid` 형식 오류 | 400 `{"error": "invalid openid"}` |
-| 서버 조회 계정 미설정 | 503 `{"error": "blabla credentials not configured"}` |
-| 업스트림 실패 (토큰 만료, 권한 없음 등) | 502 `{"error": "...", "code": ...}` |
-
-## GET /api/user/nikke
-
-공유 프로필의 보유 니케만 조회합니다 — `/api/user`보다 가볍습니다 (프로필·전진기지 호출 생략).
-
-### 쿼리 파라미터
-
-| 파라미터 | 설명 |
-|----------|------|
-| `openid` / `url` | `/api/user`와 동일 |
-| `q` | 선택. 니케 이름(전 언어 부분 일치)·캐릭터 id·resourceId·nameCode. **생략 시 보유 니케 전체 목록**(레벨·전투력·코어·돌파만, 상세 호출 생략) |
-
-```
-GET /api/user/nikke?openid=...&q=라피        # 라피·라피: 레드 후드 등 이름 매칭 전부 상세
-GET /api/user/nikke?openid=...&q=201601     # id/nameCode로 단일 조회
-GET /api/user/nikke?openid=...              # 보유 목록 (경량)
-```
-
-`q` 지정 시 응답의 `nikkes[]`는 `/api/user`의 것과 동일한 정규화 형태입니다 (스킬 레벨·장비·큐브·소장품·호감도 포함). 이름이 여러 니케에 매칭되면(스킨 캐릭터 등) 전부 반환됩니다.
+- 이름이 여러 니케에 매칭되면(스킨 캐릭터 등) 전부 반환됩니다.
+- `q`가 매칭되지 않으면 `{ "count": 0, "nikkes": [] }`.
+- 장비 `tid`/옵션 `id`는 내부 아이템 코드입니다 (원본 테이블은 `/api/tables/ItemEquipTable_ko.json` 참고).
 
 ## GET /api/cdn
 

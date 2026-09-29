@@ -476,34 +476,14 @@ app.get("/api/user", async (c) => {
       return c.json({ error: info.msg ?? "lookup failed", code: info.code }, 502);
     const areaId = Number(info.data.area_id ?? 0);
     const body = { intl_open_id: target.intlOpenId, nikke_area_id: areaId };
-    const query = c.req.query("q") ?? "";
-    const [basic, outpost, chars, lookups] = await Promise.all([
+    const [basic, outpost, { charRef, avatarRef, stageRef, recycles }] = await Promise.all([
       gameApi("Game", "GetUserProfileBasicInfo", body),
       gameApi("Game", "GetUserProfileOutpostInfo", body),
-      gameApi("Game", "GetUserCharacters", body),
       loadProfileLookups(),
     ]);
-    const { charRef, avatarRef, stageRef, normalizeNikke, matchesNikke, recycles } = lookups;
-    const owned = ((chars.data as any)?.characters ?? []) as any[];
-    const matched = owned.filter((ch) => matchesNikke(query, ch));
-    const codes = matched.map((x) => x.name_code).filter(Boolean);
-    const details = codes.length
-      ? await gameApi("Game", "GetUserCharacterDetails", { ...body, name_codes: codes })
-      : { code: -1, data: null };
-    // state_effects entries carry the resolved numeric value per option id
-    const effectById = new Map<string, any>(
-      (((details.data as any)?.state_effects ?? []) as any[]).map((e: any) => [String(e.id), e]),
-    );
 
     const bi = (basic.data as any)?.basic_info ?? {};
     const op = (outpost.data as any)?.outpost_info ?? {};
-    const detailByCode = new Map<number, any>(
-      ((details.data as any)?.character_details ?? []).map((x: any) => [x.name_code, x]),
-    );
-    const nikkes = matched.map((ch) =>
-      normalizeNikke(ch, detailByCode.get(ch.name_code) ?? {}, effectById),
-    );
-    nikkes.sort((a, b) => b.combat - a.combat);
 
     const corporations: Record<string, number> = {};
     for (const x of bi.corporation_character_counts ?? []) {
@@ -570,7 +550,6 @@ app.get("/api/user", async (c) => {
         memorials: op.memorial_counts ?? [],
         isHidden: !!op.is_hide,
       },
-      nikkes,
     });
   } catch (e) {
     const msg = e instanceof Error ? e.message : String(e);
