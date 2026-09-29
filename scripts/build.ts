@@ -344,10 +344,6 @@ async function main() {
     const r = rid ?? (code ? speakerResources.get(code) : undefined);
     return r ? images(r, 0).icon : undefined;
   };
-  const speakerNikke = (code: string | undefined, rid: number | undefined) => {
-    const r = rid ?? (code ? speakerResources.get(code) : undefined);
-    return charRef(r) ?? undefined;
-  };
   // per-chapter voice maps: d_main_NN -> set of speech ids that have voice audio
   const voiceMaps = new Map<string, Set<string>>();
   for (const f of rawFiles.filter((f) => f.startsWith("voice_map_"))) {
@@ -385,7 +381,6 @@ async function main() {
       text: r.quest_name,
       window: r.value?.speech_window,
       speakerIcon: speakerIcon(r.value?.speaker, undefined),
-      speakerNikke: speakerNikke(r.value?.speaker, undefined),
       voice: voiceUrl(gid, r.value?.id),
     }));
     await writeFile(
@@ -410,7 +405,6 @@ async function main() {
       background: r.set_background,
       bgm: r.play_bgm,
       speakerIcon: speakerIcon(r.speaker, r.speaker_detail?.resource_id),
-      speakerNikke: speakerNikke(r.speaker, r.speaker_detail?.resource_id),
       voice: voiceUrl(gid, r.id),
     }));
     await writeFile(
