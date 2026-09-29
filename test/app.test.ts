@@ -53,6 +53,24 @@ test("favorites + tables", async () => {
   assert.equal((await get("/api/tables/..%2Fcharacters.json")).status, 400);
 });
 
+test("?fields on cubes list/detail and scene detail", async () => {
+  const cubes = await json("/api/cubes?fields=id,name.ko");
+  assert.equal(cubes.count, 2);
+  assert.deepEqual(cubes.cubes[0], { id: 1, name: { ko: "테스트 큐브" } });
+
+  const cube = await json("/api/cubes/1?fields=id,stats");
+  assert.equal(cube.id, 1);
+  assert.equal(cube.stats.length, 1);
+  assert.equal(cube.name, undefined);
+
+  const scene = await json("/api/scenes/d_main_01_01?fields=groupId");
+  assert.equal(scene.groupId, "d_main_01_01");
+  assert.equal(scene.lines, undefined);
+  // without fields the raw file is streamed as-is
+  const full = await json("/api/scenes/d_main_01_01");
+  assert.equal(full.lines.length, 1);
+});
+
 test("?lang flattens localized objects", async () => {
   const one = await json("/api/nikkes/1?lang=ko");
   assert.equal(one.name, "라피");

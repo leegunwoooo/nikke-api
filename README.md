@@ -117,13 +117,16 @@ GET /api/user/<blablaid>/nikke/아니스               # 부분 일치 → 매�
 
 응답이 큰 엔드포인트에서 필요한 필드만 골라 받을 수 있습니다. 콤마로 여러 개 지정하고, 점(`.`)으로 중첩 필드를 파고듭니다.
 
-**지원 엔드포인트**: `/api/nikkes`, `/api/nikkes/:id`, `/api/favorites`, `/api/favorites/:id`, `/api/scenes`(목록)
+**지원 엔드포인트**: `/api/nikkes`, `/api/nikkes/:id`, `/api/favorites`, `/api/favorites/:id`, `/api/scenes`, `/api/scenes/:groupId`, `/api/cubes`, `/api/cubes/:id`, `/api/user/:blablaid/nikke`, `/api/user/:blablaid/nikke/:key` (구형 `?blablaid=`·`?openid=` 쿼리 경로도 동일하게 적용)
 
 ```
 GET /api/nikkes?fields=id,name.ko,images.icon
 GET /api/nikkes/201601?fields=name,details.skills,details.squad.name
 GET /api/favorites?fields=id,name.ko,images.icon
 GET /api/scenes?category=attractive&fields=groupId,name,nikke
+GET /api/scenes/d_ex_armory_01?fields=groupId,lines
+GET /api/cubes/1000301?fields=id,name,stats
+GET /api/user/<blablaid>/nikke?fields=character.name,combat
 ```
 
 **응답 예시** — `GET /api/nikkes?q=라피&fields=id,name.ko`:

@@ -368,3 +368,26 @@ for (const p of Object.values(openapi.paths) as any[]) {
     (op.parameters ??= []).push(langParam);
   }
 }
+
+// ?fields is supported only on the endpoints that apply pickFields
+const fieldsParam = {
+  name: "fields",
+  in: "query" as const,
+  schema: { type: "string", example: "id,name.ko" },
+  description: "응답 필드 선택 — 콤마 구분, 점(.)으로 중첩. 목록은 각 항목에 적용",
+};
+for (const p of [
+  "/api/nikkes",
+  "/api/nikkes/{id}",
+  "/api/scenes",
+  "/api/scenes/{groupId}",
+  "/api/favorites",
+  "/api/favorites/{id}",
+  "/api/cubes",
+  "/api/cubes/{id}",
+  "/api/user/{blablaid}/nikke",
+  "/api/user/{blablaid}/nikke/{key}",
+]) {
+  const op = (openapi.paths as Record<string, any>)[p]?.get;
+  if (op) (op.parameters ??= []).push(fieldsParam);
+}

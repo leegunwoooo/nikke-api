@@ -430,12 +430,15 @@ app.get("/api/scenes", async (c) => {
 app.get("/api/scenes/:groupId", async (c) => {
   const gid = c.req.param("groupId");
   if (!/^[\w-]+$/.test(gid)) return c.json({ error: "invalid groupId" }, 400);
+  let body: string;
   try {
-    const body = await readFile(path.join(DIST, "scenes", `${gid}.json`), "utf8");
-    return c.body(body, 200, { "Content-Type": "application/json" });
+    body = await readFile(path.join(DIST, "scenes", `${gid}.json`), "utf8");
   } catch {
     return c.json({ error: "not found" }, 404);
   }
+  const fields = fieldsOf(c);
+  if (fields) return c.json(pickFields(JSON.parse(body), fields));
+  return c.body(body, 200, { "Content-Type": "application/json" });
 });
 
 app.get("/api/favorites", async (c) => {
@@ -473,7 +476,7 @@ app.get("/api/cubes", async (c) => {
       const nq = norm(q);
       list = list.filter((x) => Object.values(x.name).some((n) => norm(n).includes(nq)));
     }
-    return c.json({ count: list.length, cubes: list });
+    return c.json({ count: list.length, cubes: pickFields(list, fieldsOf(c)) });
   } catch {
     return c.json({ count: 0, cubes: [] });
   }
@@ -482,12 +485,15 @@ app.get("/api/cubes", async (c) => {
 app.get("/api/cubes/:id", async (c) => {
   const id = c.req.param("id");
   if (!/^\d+$/.test(id)) return c.json({ error: "invalid id" }, 400);
+  let body: string;
   try {
-    const body = await readFile(path.join(DIST, "cubes", `${id}.json`), "utf8");
-    return c.body(body, 200, { "Content-Type": "application/json" });
+    body = await readFile(path.join(DIST, "cubes", `${id}.json`), "utf8");
   } catch {
     return c.json({ error: "not found" }, 404);
   }
+  const fields = fieldsOf(c);
+  if (fields) return c.json(pickFields(JSON.parse(body), fields));
+  return c.body(body, 200, { "Content-Type": "application/json" });
 });
 
 app.get("/api/tables", async (c) => {
@@ -668,7 +674,7 @@ async function userNikkeList(c: Context) {
       })
       .filter((x) => !weapon || n(byId.get(x.character?.id ?? 0)?.weapon?.type) === n(weapon))
       .sort((a, b) => b.combat - a.combat);
-    return c.json({ count: nikkes.length, nikkes });
+    return c.json({ count: nikkes.length, nikkes: pickFields(nikkes, fieldsOf(c)) });
   } catch (e) {
     const msg = e instanceof Error ? e.message : String(e);
     const status = msg.includes("not configured") ? 503 : 502;
@@ -684,12 +690,16 @@ async function userNikkeDetail(c: Context) {
     if ("error" in res) return res.error;
     const key = c.req.param("key") ?? "";
     const { charRef, normalizeNikke, matchesNikke } = await loadProfileLookups();
+    const fields = fieldsOf(c);
     const hits = res.owned.filter((ch) => matchesNikke(key, ch));
     if (hits.length === 0) return c.json({ error: "not found" }, 404);
     if (hits.length > 1)
       return c.json({
         count: hits.length,
-        nikkes: hits.map(ownedNikkeSummary(charRef)).sort((a, b) => b.combat - a.combat),
+        nikkes: pickFields(
+          hits.map(ownedNikkeSummary(charRef)).sort((a, b) => b.combat - a.combat),
+          fields,
+        ),
       });
     const ch = hits[0];
     const details = await gameApi("Game", "GetUserCharacterDetails", {
@@ -702,7 +712,9 @@ async function userNikkeDetail(c: Context) {
     const effectById = new Map<string, any>(
       (((details.data as any)?.state_effects ?? []) as any[]).map((e: any) => [String(e.id), e]),
     );
-    return c.json(normalizeNikke(ch, detailByCode.get(ch.name_code) ?? {}, effectById));
+    return c.json(
+      pickFields(normalizeNikke(ch, detailByCode.get(ch.name_code) ?? {}, effectById), fields),
+    );
   } catch (e) {
     const msg = e instanceof Error ? e.message : String(e);
     const status = msg.includes("not configured") ? 503 : 502;

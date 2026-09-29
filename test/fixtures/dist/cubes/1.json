@@ -1,0 +1,7 @@
+{
+  "id": 1,
+  "name": { "ko": "테스트 큐브", "en": "Test Cube" },
+  "rare": "SSR",
+  "stats": [{ "level": 1, "atk": 10 }],
+  "skills": [{ "name": { "ko": "스킬" } }]
+}

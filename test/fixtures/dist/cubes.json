@@ -1,0 +1,4 @@
+[
+  { "id": 1, "name": { "ko": "테스트 큐브", "en": "Test Cube" }, "rare": "SSR" },
+  { "id": 2, "name": { "ko": "다른 큐브", "en": "Other Cube" }, "rare": "SR" }
+]

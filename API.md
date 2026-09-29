@@ -48,6 +48,7 @@
 | `corporation` | 소속 | `MISSILIS`, `ELYSION`, `TETRA`, `PILGRIM`, `ABNORMAL` |
 | `weapon` | 무기 종류 | `RL`, `SMG`, `SG`, `SR`, `AR`, `MG` |
 | `rarity` | 레어도 | `SSR`, `SR`, `R` |
+| `fields` | 응답 필드 선택 (각 항목에 적용) | `?fields=id,name.ko` |
 
 모든 필터는 AND로 결합되며 대소문자를 구분하지 않습니다.
 
@@ -250,6 +251,7 @@ GET /api/tables/CharacterLevelTable.json
 | `nikke` | 호감도 씬 대상 니케 이름 부분 일치 | `?nikke=아니스` |
 | `limit` | 반환 개수 제한 (최대 500) | `?limit=50` |
 | `offset` | 시작 위치 (페이지네이션) | `?offset=50` |
+| `fields` | 응답 필드 선택 (각 항목에 적용) | `?fields=groupId,name` |
 
 ```
 GET /api/scenes?category=attractive&nikke=아니스
@@ -286,10 +288,11 @@ GET /api/scenes?category=main&limit=20&offset=0
 
 ## GET /api/scenes/:groupId
 
-해당 씬의 대본을 반환합니다 (한국어).
+해당 씬의 대본을 반환합니다 (한국어). `?fields=`로 씬 객체를 잘라낼 수 있습니다 (예: `?fields=groupId,name`).
 
 ```
 GET /api/scenes/d_main_01_01_s
+GET /api/scenes/d_main_01_01_s?fields=name,lines
 ```
 
 ```json
@@ -335,6 +338,7 @@ GET /api/scenes/d_main_01_01_s
 |----------|------|------|
 | `q` | 이름 부분 일치 (전 언어) | `?q=기차` |
 | `rare` | 레어 필터 | `R` / `SR` / `SSR` |
+| `fields` | 응답 필드 선택 (각 항목에 적용) | `?fields=id,name.ko` |
 
 ```json
 {
@@ -384,6 +388,7 @@ GET /api/scenes/d_main_01_01_s
 | 파라미터 | 설명 | 예시 |
 |----------|------|------|
 | `q` | 이름 부분 일치 (전 언어) | `?q=어설트` |
+| `fields` | 응답 필드 선택 (각 항목에 적용) | `?fields=id,name.ko` |
 
 ```json
 {
@@ -396,7 +401,7 @@ GET /api/scenes/d_main_01_01_s
 
 ## GET /api/cubes/:id
 
-큐브 상세를 반환합니다.
+큐브 상세를 반환합니다. `?fields=` 지원 (예: `?fields=id,name,stats`).
 
 ```json
 {
@@ -517,6 +522,7 @@ GET /api/user/<blablaid>                          # 경로로도 가능
 | `:blablaid` (path) | BlablaLink 공유 ID(base64 openid) 또는 URL 전체 |
 | `q` | 선택. 이름(전 언어 부분 일치)·캐릭터 id·resourceId·nameCode |
 | `element` `class` `burst` `corporation` `weapon` `rarity` | 선택. [GET /api/nikkes](#get-apinikkes)와 동일한 필터 — AND 결합. 상세가 필요하면 [GET /api/user/:blablaid/nikke/:key](#get-apiuserblablaidnikkekey) 사용 |
+| `fields` | 선택. 응답 필드 선택 (`nikkes[]` 각 항목에 적용) |
 
 ```
 GET /api/user/<blablaid>/nikke              # 보유 전체 목록
@@ -553,7 +559,7 @@ GET /api/user/<blablaid>/nikke?element=Iron&burst=III  # 도감과 동일한 속
 | 니케 이름 | 부분 일치(전 언어, 대소문자·공백·`:` 무시) — `아니스`로 조회하면 보유한 아니스 계열 전부 매칭 |
 | 숫자 | 캐릭터 id · resourceId · nameCode 중 일치 |
 
-매칭이 정확히 1명이면 상세 객체를, 복수면 목록(`{count, nikkes[]}`)을 반환합니다.
+매칭이 정확히 1명이면 상세 객체를, 복수면 목록(`{count, nikkes[]}`)을 반환합니다. `?fields=`로 상세 객체(또는 목록 항목)를 선택적으로 잘라낼 수 있습니다.
 
 ```
 GET /api/user/<blablaid>/nikke/아니스%20%3A%20스타   # 이름 (URL 인코딩)
@@ -636,11 +642,27 @@ GET /api/cdn?path=character/ko/nikke_list_v2.json
 
 ## 공통: 필드 선택 `?fields=`
 
-`/api/nikkes`, `/api/nikkes/:id`, `/api/scenes`(목록), `/api/favorites`, `/api/favorites/:id`는 `?fields=`로 응답 객체를 필요한 필드만 남길 수 있습니다. 콤마로 구분하며, 점(`.`)으로 중첩 필드를 지정합니다. 목록 응답은 각 항목에 적용되고 `count` 등 래퍼 필드는 유지됩니다.
+다음 엔드포인트는 `?fields=`로 응답 객체를 필요한 필드만 남길 수 있습니다. 콤마로 구분하며, 점(`.`)으로 중첩 필드를 지정합니다. 목록 응답은 각 항목에 적용되고 `count` 등 래퍼 필드는 유지됩니다.
+
+| 엔드포인트 | 적용 대상 |
+|-----------|----------|
+| `/api/nikkes` | `characters[]` 각 항목 |
+| `/api/nikkes/:id` | 상세 객체 (복수 매칭 시 `characters[]` 각 항목) |
+| `/api/scenes` | `scenes[]` 각 항목 |
+| `/api/scenes/:groupId` | 씬 객체 (`groupId`·`lines` 등) |
+| `/api/favorites` | `favorites[]` 각 항목 |
+| `/api/favorites/:id` | 상세 객체 |
+| `/api/cubes` | `cubes[]` 각 항목 |
+| `/api/cubes/:id` | 상세 객체 |
+| `/api/user/:blablaid/nikke` | `nikkes[]` 각 항목 (구형 `?blablaid=` 경로도 동일) |
+| `/api/user/:blablaid/nikke/:key` | 상세 객체 (복수 매칭 시 `nikkes[]` 각 항목) |
 
 ```
 GET /api/nikkes?fields=id,name.ko,element
 GET /api/nikkes/라피?fields=id,details.skills
+GET /api/scenes/d_ex_armory_01?fields=groupId,lines
+GET /api/cubes?fields=id,name.ko
+GET /api/user/<blablaid>/nikke/라피?fields=character,level,equipment
 ```
 
 ```json
