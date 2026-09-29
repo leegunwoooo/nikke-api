@@ -163,8 +163,10 @@ async function syncFavorites(): Promise<number> {
 async function syncCubes(): Promise<number> {
   const tids: number[] = [];
   for (let tid = 1000300; tid <= 1000399; tid++) {
-    const res = await fetch(cdnUrl(`equip/ko/cube_${tid}.json`), { method: "HEAD" });
-    if (res.ok) tids.push(tid);
+    try {
+      const res = await fetchWithRetry(cdnUrl(`equip/ko/cube_${tid}.json`), { method: "HEAD" });
+      if (res.ok) tids.push(tid);
+    } catch { /* skip unreachable tid */ }
   }
   const queue: [string, string][] = [];
   for (const tid of tids) {
@@ -183,10 +185,23 @@ async function syncCubes(): Promise<number> {
   return done;
 }
 
+async function fetchWithRetry(url: string, init?: RequestInit, tries = 3): Promise<Response> {
+  let lastErr: unknown;
+  for (let i = 0; i < tries; i++) {
+    try {
+      return await fetch(url, init);
+    } catch (e) {
+      lastErr = e;
+      await new Promise((r) => setTimeout(r, 1000 * (i + 1)));
+    }
+  }
+  throw lastErr;
+}
+
 async function download(pathTemplate: string, outName: string): Promise<boolean> {
   const url = cdnUrl(pathTemplate);
   try {
-    const res = await fetch(url);
+    const res = await fetchWithRetry(url);
     if (!res.ok) {
       console.log(`${res.status}  ${pathTemplate}`);
       return false;
