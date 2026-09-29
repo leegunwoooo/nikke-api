@@ -1,4 +1,5 @@
 import { Hono } from "hono";
+import type { Context } from "hono";
 import { cors } from "hono/cors";
 import { readFile, readdir } from "node:fs/promises";
 import path from "node:path";
@@ -347,7 +348,9 @@ app.get("/", (c) =>
       "GET /api/user?openid=":
         "shared-profile lookup (blablalink user link or raw openid)",
       "GET /api/user/nikke?openid=&q=":
-        "per-nikke lookup on a shared profile (q = name/id/nameCode; omit for owned list)",
+        "owned-nikke list on a shared profile (q filters; always lightweight)",
+      "GET /api/user/nikke/:key?openid=":
+        "single owned-nikke detail (key = exact name/id/nameCode)",
     },
     fields:
       "?fields=a,b.c on nikkes, favorites and the scene index trims each object to those (dot) paths",
@@ -588,60 +591,78 @@ app.get("/api/user", async (c) => {
   }
 });
 
-// lightweight per-nikke lookup on a shared profile — skips the full
-// profile/outpost calls and only asks upstream for matching name_codes
-app.get("/api/user/nikke", async (c) => {
+// shared helper for the two user-nikke routes: resolve the profile target
+// and fetch the owned-character list (never the per-character details)
+async function loadOwnedNikkes(c: Context) {
   const q = c.req.query("openid") ?? c.req.query("url") ?? "";
   const target = decodeOpenid(q);
-  if (!target) return c.json({ error: "invalid openid" }, 400);
-  const query = c.req.query("q") ?? "";
+  if (!target) return { error: c.json({ error: "invalid openid" }, 400) };
+  const info = await playerInfo<{ area_id?: string }>(target.intlOpenId);
+  if (info.code !== 0 || !info.data)
+    return { error: c.json({ error: info.msg ?? "lookup failed", code: info.code }, 502) };
+  const body = { intl_open_id: target.intlOpenId, nikke_area_id: Number(info.data.area_id ?? 0) };
+  const chars = await gameApi("Game", "GetUserCharacters", body);
+  const owned = ((chars.data as any)?.characters ?? []) as any[];
+  return { body, owned };
+}
+
+const ownedNikkeSummary = (charRef: any) => (ch: any) => ({
+  character: charRef(ch.name_code),
+  level: ch.lv ?? 0,
+  combat: ch.combat ?? 0,
+  grade: ch.grade ?? 0,
+  core: ch.core ?? 0,
+});
+
+// lightweight per-nikke list on a shared profile — q only filters, never
+// triggers the detail call
+app.get("/api/user/nikke", async (c) => {
   try {
-    const info = await playerInfo<{ area_id?: string }>(target.intlOpenId);
-    if (info.code !== 0 || !info.data)
-      return c.json({ error: info.msg ?? "lookup failed", code: info.code }, 502);
-    const body = { intl_open_id: target.intlOpenId, nikke_area_id: Number(info.data.area_id ?? 0) };
-    const chars = await gameApi("Game", "GetUserCharacters", body);
-    const owned = ((chars.data as any)?.characters ?? []) as any[];
-    const { charRef, normalizeNikke, matchesNikke } = await loadProfileLookups();
-    const matched = owned.filter((ch) => matchesNikke(query, ch));
-    if (query && !matched.length) return c.json({ count: 0, nikkes: [] });
+    const res = await loadOwnedNikkes(c);
+    if ("error" in res) return res.error;
+    const query = c.req.query("q") ?? "";
+    const { charRef, matchesNikke } = await loadProfileLookups();
+    const nikkes = res.owned
+      .filter((ch) => matchesNikke(query, ch))
+      .map(ownedNikkeSummary(charRef))
+      .sort((a, b) => b.combat - a.combat);
+    return c.json({ count: nikkes.length, nikkes });
+  } catch (e) {
+    const msg = e instanceof Error ? e.message : String(e);
+    const status = msg.includes("not configured") ? 503 : 502;
+    return c.json({ error: msg }, status);
+  }
+});
 
-    // list mode (no q): cheap — skip the detail call entirely
-    if (!query) {
-      const nikkes = matched
-        .map((ch) => ({
-          character: charRef(ch.name_code),
-          level: ch.lv ?? 0,
-          combat: ch.combat ?? 0,
-          grade: ch.grade ?? 0,
-          core: ch.core ?? 0,
-        }))
-        .sort((a, b) => b.combat - a.combat);
-      return c.json({
-        count: nikkes.length,
-        ...(nikkes.length === 1 ? { nikke: nikkes[0] } : {}),
-        nikkes,
-      });
-    }
-
-    const codes = matched.map((x) => x.name_code).filter(Boolean);
-    const details = codes.length
-      ? await gameApi("Game", "GetUserCharacterDetails", { ...body, name_codes: codes })
-      : { code: -1, data: null };
+// single owned nikke detail — key is exact name / id / resourceId / nameCode
+app.get("/api/user/nikke/:key", async (c) => {
+  try {
+    const res = await loadOwnedNikkes(c);
+    if ("error" in res) return res.error;
+    const key = c.req.param("key");
+    const { charRef, normalizeNikke } = await loadProfileLookups();
+    const nq = norm(key);
+    const ch = res.owned.find((ch) => {
+      if (/^\d+$/.test(key)) {
+        const n = Number(key);
+        const ref = charRef(ch.name_code) as any;
+        return ch.name_code === n || ref?.id === n || ref?.resourceId === n;
+      }
+      const ref = charRef(ch.name_code) as any;
+      return !!ref?.name && Object.values(ref.name as object).some((nm) => norm(nm) === nq);
+    });
+    if (!ch) return c.json({ error: "not found" }, 404);
+    const details = await gameApi("Game", "GetUserCharacterDetails", {
+      ...res.body,
+      name_codes: [ch.name_code],
+    });
     const detailByCode = new Map<number, any>(
       ((details.data as any)?.character_details ?? []).map((x: any) => [x.name_code, x]),
     );
     const effectById = new Map<string, any>(
       (((details.data as any)?.state_effects ?? []) as any[]).map((e: any) => [String(e.id), e]),
     );
-    const nikkes = matched
-      .map((ch) => normalizeNikke(ch, detailByCode.get(ch.name_code) ?? {}, effectById))
-      .sort((a, b) => b.combat - a.combat);
-    return c.json({
-      count: nikkes.length,
-      ...(nikkes.length === 1 ? { nikke: nikkes[0] } : {}),
-      nikkes,
-    });
+    return c.json(normalizeNikke(ch, detailByCode.get(ch.name_code) ?? {}, effectById));
   } catch (e) {
     const msg = e instanceof Error ? e.message : String(e);
     const status = msg.includes("not configured") ? 503 : 502;

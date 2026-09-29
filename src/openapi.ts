@@ -244,10 +244,9 @@ export const openapi = {
     "/api/user/nikke": {
       get: {
         tags: ["user"],
-        summary: "유저 보유 니케 목록 / 개별 상세",
+        summary: "유저 보유 니케 목록",
         description:
-          "q 생략 시 경량 목록(상세 호출 생략). q 지정 시 매칭 니케의 스킬·장비·큐브·소장품 상세 반환. " +
-          "정확히 1명 매칭되면 `nikke` 단일 객체도 포함.",
+          "항상 경량 목록(이름·레벨·전투력·돌파·코어만). q는 필터 전용 — 상세는 /api/user/nikke/{key}에서 조회.",
         parameters: [
           {
             name: "openid",
@@ -260,29 +259,60 @@ export const openapi = {
             name: "q",
             in: "query",
             schema: { type: "string" },
-            description: "니케 이름(전 언어 부분 일치)·id·resourceId·nameCode",
+            description: "필터 — 니케 이름(전 언어 부분 일치)·id·resourceId·nameCode",
             example: "아니스",
           },
         ],
         responses: {
           "200": {
-            description: "보유 니케",
+            description: "보유 니케 목록",
             content: {
               "application/json": {
                 schema: {
                   type: "object",
                   properties: {
                     count: { type: "integer" },
-                    nikke: {
-                      ...ownedNikkeDetail,
-                      description: "정확히 1명 매칭(q 지정) 시에만 존재하는 단일 객체",
-                    },
-                    nikkes: { type: "array", items: ownedNikkeDetail },
+                    nikkes: { type: "array", items: ownedNikkeSummary },
                   },
                 },
               },
             },
           },
+          "400": { description: "openid 형식 오류" },
+          "503": { description: "서버 조회 계정 미설정" },
+          "502": { description: "업스트림 실패" },
+        },
+      },
+    },
+    "/api/user/nikke/{key}": {
+      get: {
+        tags: ["user"],
+        summary: "유저 보유 니케 단일 상세",
+        description:
+          "key = 정확한 니케 이름(전 언어)·id·resourceId·nameCode. 스킬 레벨·장비+옵션 수치·큐브·소장품·코스튬·호감도 포함.",
+        parameters: [
+          {
+            name: "key",
+            in: "path",
+            required: true,
+            schema: { type: "string" },
+            description: "정확한 이름(부분 일치 안 됨) 또는 숫자 id",
+            example: "아니스 : 스타",
+          },
+          {
+            name: "openid",
+            in: "query",
+            required: true,
+            schema: { type: "string" },
+            description: "공유 링크의 base64 openid 또는 URL 전체",
+          },
+        ],
+        responses: {
+          "200": {
+            description: "보유 니케 상세",
+            content: { "application/json": { schema: ownedNikkeDetail } },
+          },
+          "404": { description: "해당 니케 미보유 또는 없음" },
           "400": { description: "openid 형식 오류" },
           "503": { description: "서버 조회 계정 미설정" },
           "502": { description: "업스트림 실패" },

@@ -23,7 +23,8 @@
 - [GET /api/cubes](#get-apicubes) — 하모니 큐브 목록
 - [GET /api/cubes/:id](#get-apicubesid) — 큐브 상세 (레벨별 스탯·스킬)
 - [GET /api/user](#get-apiuser) — 유저 프로필 조회 (공유 링크)
-- [GET /api/user/nikke](#get-apiusernikke) — 유저 보유 니케 개별/목록 조회
+- [GET /api/user/nikke](#get-apiusernikke) — 유저 보유 니케 목록 (경량)
+- [GET /api/user/nikke/:key](#get-apiusernikkekey) — 유저 보유 니케 단일 상세 (정확한 이름/id)
 - [GET /api/cdn](#get-apicdn) — CDN 경로 → URL 변환
 - [공통: 필드 선택 `?fields=`](#공통-필드-선택-fields)
 - [공통: 캐시 헤더](#공통-캐시-헤더)
@@ -508,78 +509,103 @@ GET /api/user?url=<공유 URL 전체>
 
 ## GET /api/user/nikke
 
-공유 프로필의 보유 니케만 조회합니다 — `/api/user`보다 가볍습니다 (프로필·전진기지 호출 생략).
+공유 프로필의 보유 니케 **목록**을 조회합니다 — `/api/user`보다 가볍고 상세 호출도 하지 않습니다.
 
 ### 쿼리 파라미터
 
 | 파라미터 | 설명 |
 |----------|------|
 | `openid` / `url` | `/api/user`와 동일 |
-| `q` | 선택. 니케 이름(전 언어 부분 일치)·캐릭터 id·resourceId·nameCode. **생략 시 보유 니케 전체 목록**(레벨·전투력·코어·돌파만, 상세 호출 생략) |
+| `q` | 선택. 필터 전용 — 니케 이름(전 언어 부분 일치)·캐릭터 id·resourceId·nameCode. 상세가 필요하면 [GET /api/user/nikke/:key](#get-apiusernikkekey) 사용 |
 
 ```
-GET /api/user/nikke?openid=...&q=라피        # 라피·라피: 레드 후드 등 이름 매칭 전부 상세
-GET /api/user/nikke?openid=...&q=201601     # id/nameCode로 단일 조회
-GET /api/user/nikke?openid=...              # 보유 목록 (경량)
+GET /api/user/nikke?openid=...              # 보유 전체 목록
+GET /api/user/nikke?openid=...&q=아니스      # 아니스 계열만 필터 (목록 형태 유지)
+GET /api/user/nikke?openid=...&q=201601     # id/nameCode로 필터
 ```
 
-`q` 지정 시 `nikkes[]` 항목 형태 (전투력 내림차순):
+응답 항목 (전투력 내림차순):
 
 ```json
 {
   "count": 3,
   "nikkes": [
     {
-      "character": { "nameCode": 1021, "id": 220401, "name": { "ko": "...", ... }, "image": "..." },
-      "level": 1,
-      "combat": 65721,
-      "arenaCombat": 67169,
-      "grade": 2,
-      "core": 0,
-      "costume": null,
-      "skills": { "skill1": 7, "skill2": 10, "burst": 10 },
-      "attractiveLevel": 30,
-      "favoriteItem": { "id": 201701, "level": 2, "name": { "ko": "...", ... } },
-      "cube": { "id": 1000311, "level": 3, "name": { "ko": "...", ... } },
-      "arenaCube": null,
-      "equipment": {
-        "head": {
-          "tid": 3121001,
-          "name": { "ko": "ν 매터 바이저", "en": "V Matter Visor", ... },
-          "class": "Attacker",
-          "rare": "T10",
-          "icon": "https://.../icn_equipment_head_attacker_t9_3.webp",
-          "tier": 10,
-          "level": 5,
-          "corporation": null,
-          "options": [
-            {
-              "id": 7000514,
-              "name": { "ko": "[우월코드 대미지 증가]", ... },
-              "rank": 4,
-              "value": { "type": "StatAtk", "value": 10.52, "unit": "%" }
-            }
-          ]
-        },
-        "torso": { "...": "..." },
-        "arm":   { "...": "..." },
-        "leg":   { "...": "..." }
-      }
+      "character": { "nameCode": 5169, "id": 3017, "name": { "ko": "아니스 : 스타", ... }, "image": "..." },
+      "level": 248,
+      "combat": 71153,
+      "grade": 0,
+      "core": 0
     }
   ]
 }
 ```
 
+## GET /api/user/nikke/:key
+
+보유 니케 **한 명**의 상세를 조회합니다 — 장비·옵션·큐브·소장품·스킬 레벨까지 포함. 목록에서 고른 니케를 `:key`로 지정합니다.
+
+| `:key` | 매칭 방식 |
+|--------|----------|
+| 니케 이름 | **정확 일치**(전 언어, 대소문자·공백·`:` 무시) — `아니스 : 스타`는 되지만 `아니스`는 안 됨 |
+| 숫자 | 캐릭터 id · resourceId · nameCode 중 일치 |
+
+```
+GET /api/user/nikke/아니스 : 스타?openid=...   # 정확한 이름
+GET /api/user/nikke/3017?openid=...           # 캐릭터 id
+```
+
+응답 항목 형태:
+
+```json
+{
+  "character": { "nameCode": 1021, "id": 220401, "name": { "ko": "...", ... }, "image": "..." },
+  "level": 1,
+  "combat": 65721,
+  "arenaCombat": 67169,
+  "grade": 2,
+  "core": 0,
+  "costume": null,
+  "skills": { "skill1": 7, "skill2": 10, "burst": 10 },
+  "attractiveLevel": 30,
+  "favoriteItem": { "id": 201701, "level": 2, "name": { "ko": "...", ... } },
+  "cube": { "id": 1000311, "level": 3, "name": { "ko": "...", ... } },
+  "arenaCube": null,
+  "equipment": {
+    "head": {
+      "tid": 3121001,
+      "name": { "ko": "ν 매터 바이저", "en": "V Matter Visor", ... },
+      "class": "Attacker",
+      "rare": "T10",
+      "icon": "https://.../icn_equipment_head_attacker_t9_3.webp",
+      "tier": 10,
+      "level": 5,
+      "corporation": null,
+      "options": [
+        {
+          "id": 7000514,
+          "name": { "ko": "[우월코드 대미지 증가]", ... },
+          "rank": 4,
+          "value": { "type": "StatAtk", "value": 10.52, "unit": "%" }
+        }
+      ]
+    },
+    "torso": { "...": "..." },
+    "arm":   { "...": "..." },
+    "leg":   { "...": "..." }
+  }
+}
+```
+
 | 필드 | 설명 |
 |------|------|
-| `nikkes[].costume` | 착용 코스튬 — `id`, `skinIndex`, 해당 코스튬 아이콘 포함 캐릭터 정보. 미착용 시 `null` |
-| `nikkes[].equipment.*` | 부위별 장비 — `name`(4개 언어)·`class`·`rare`·`icon`은 `ItemEquipTable`에서 해석 |
-| `nikkes[].equipment.*.corporation` | 기업 장비 여부 (`ELYSION` 등, 비기업 장비는 `null`) |
-| `nikkes[].equipment.*.options[]` | 장비 옵션 — `id`, 옵션 종류 `name`(4개 언어), `rank`(같은 종류 내 등급), `value`({type, value, unit}) — 실제 수치는 업스트림 `state_effects`에서 해석 |
+| `costume` | 착용 코스튬 — `id`, `skinIndex`, `name`(4개 언어), 해당 코스튬 아이콘 포함 캐릭터 정보. 미착용 시 `null` |
+| `equipment.*` | 부위별 장비 — `name`(4개 언어)·`class`·`rare`·`icon`은 `ItemEquipTable`에서 해석 |
+| `equipment.*.corporation` | 기업 장비 여부 (`ELYSION` 등, 비기업 장비는 `null`) |
+| `equipment.*.options[]` | 장비 옵션 — `id`, 옵션 종류 `name`(4개 언어), `rank`(같은 종류 내 등급), `value`({type, value, unit}) — 실제 수치는 업스트림 `state_effects`에서 해석 |
 
-- 이름이 여러 니케에 매칭되면(스킨 캐릭터 등) 전부 반환됩니다.
-- **정확히 1명 매칭 시** `nikke` 단일 객체가 `nikkes`와 함께 포함됩니다 (배열 꺼내기 생략 가능).
-- `q`가 매칭되지 않으면 `{ "count": 0, "nikkes": [] }`.
+- `key`가 매칭되지 않으면 404 `{"error": "not found"}`.
+- 이름은 부분 일치가 아닌 **정확 일치**입니다 — `라피`는 base 캐릭터만, 스킨 캐릭터는 `라피 : 레드 후드`로 지정.
 - 장비 `tid`/옵션 `id`는 내부 아이템 코드입니다 (원본 테이블은 `/api/tables/ItemEquipTable_ko.json` 참고).
 
 ## GET /api/cdn

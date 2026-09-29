@@ -168,22 +168,25 @@
               "raw": "{{baseUrl}}/api/user/nikke?openid={{openid}}",
               "host": ["{{baseUrl}}"],
               "path": ["api", "user", "nikke"],
-              "query": [{ "key": "openid", "value": "{{openid}}" }]
+              "query": [
+                { "key": "openid", "value": "{{openid}}" },
+                { "key": "q", "value": "", "disabled": true, "description": "필터 — 이름 부분 일치/id/nameCode" }
+              ]
             }
           }
         },
         {
-          "name": "보유 니케 상세 (q=아니스)",
+          "name": "보유 니케 상세 (정확한 이름/id)",
           "request": {
             "method": "GET",
             "url": {
-              "raw": "{{baseUrl}}/api/user/nikke?openid={{openid}}&q=아니스",
+              "raw": "{{baseUrl}}/api/user/nikke/아니스 : 스타?openid={{openid}}",
               "host": ["{{baseUrl}}"],
-              "path": ["api", "user", "nikke"],
+              "path": ["api", "user", "nikke", "아니스 : 스타"],
               "query": [
-                { "key": "openid", "value": "{{openid}}" },
-                { "key": "q", "value": "아니스", "description": "이름(4개 언어)/id/resourceId/nameCode" }
-              ]
+                { "key": "openid", "value": "{{openid}}" }
+              ],
+              "description": "path = 정확한 이름(전 언어) 또는 캐릭터 id/resourceId/nameCode"
             }
           }
         }
