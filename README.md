@@ -74,19 +74,19 @@ BlablaLink 공유 링크(`https://www.blablalink.com/user?openid=...`)로 유저
 |------|------|
 | 프로필 (`/api/user`) | 닉네임, 레벨, 대표 아이콘(캐릭터 이름·이미지로 해석), 팀 전투력, 캠페인/타워 진행도(스테이지명으로 해석), 기업별 보유 수, 오버클럭 기록, 대표 스쿼드 |
 | 전진기지 (`/api/user`) | 인프라 코어, 싱크로 레벨, 리사이클 룸 연구, 메모리얼 수집 수 |
-| 보유 니케 (`/api/user/:oid/nikke`) | 전투력순 목록 — 니케 이름/이미지, 레벨, 코어·돌파. `/api/nikkes`와 동일한 필터 지원 (`q`·`element`·`class`·`burst`·`corporation`·`weapon`·`rarity`) |
-| 니케 상세 (`/api/user/:oid/nikke/:key`) | 이름(부분 일치) 또는 id로 지정 — `/api/nikkes/:id`와 같은 방식. 단일 매칭 시 스킬 레벨, 호감도, 착용 코스튬(이름 포함), 장비(부위별 이름·티어·옵션 수치), 큐브·소장품 반환. 복수 매칭 시 목록 반환 |
+| 보유 니케 (`/api/user/<blablaid>/nikke`) | 전투력순 목록 — 니케 이름/이미지, 레벨, 코어·돌파. `/api/nikkes`와 동일한 필터 지원 (`q`·`element`·`class`·`burst`·`corporation`·`weapon`·`rarity`) |
+| 니케 상세 (`/api/user/<blablaid>/nikke/:key`) | 이름(부분 일치) 또는 id로 지정 — `/api/nikkes/:id`와 같은 방식. 단일 매칭 시 스킬 레벨, 호감도, 착용 코스튬(이름 포함), 장비(부위별 이름·티어·옵션 수치), 큐브·소장품 반환. 복수 매칭 시 목록 반환 |
 
 ```
-GET /api/user/<openid>                          # 프로필·전진기지 (또는 ?openid=)
-GET /api/user/<openid>/nikke                    # 보유 목록 (경량)
-GET /api/user/<openid>/nikke?q=아니스            # 아니스 계열 필터 (목록)
-GET /api/user/<openid>/nikke?element=Iron&burst=III   # 속성·버스트 필터 (도감과 동일)
-GET /api/user/<openid>/nikke/아니스 : 스타         # 단일 상세 (장비·큐브 등)
-GET /api/user/<openid>/nikke/아니스               # 부분 일치 → 매칭 목록 반환
+GET /api/user/<blablaid>                          # 프로필·전진기지 (또는 ?blablaid=)
+GET /api/user/<blablaid>/nikke                    # 보유 목록 (경량)
+GET /api/user/<blablaid>/nikke?q=아니스            # 아니스 계열 필터 (목록)
+GET /api/user/<blablaid>/nikke?element=Iron&burst=III   # 속성·버스트 필터 (도감과 동일)
+GET /api/user/<blablaid>/nikke/아니스 : 스타         # 단일 상세 (장비·큐브 등)
+GET /api/user/<blablaid>/nikke/아니스               # 부분 일치 → 매칭 목록 반환
 ```
 
-`<openid>`는 공유 링크의 openid 값(또는 링크 전체)입니다. 이름에 공백·콜론이 있으면 URL 인코딩이 필요합니다. 구형 `?openid=` 쿼리 형태도 그대로 동작합니다.
+`<blablaid>`는 BlablaLink 공유 링크의 openid 값입니다. 이름에 공백·콜론이 있으면 URL 인코딩이 필요합니다. `?blablaid=` 쿼리 형태와 구형 `?openid=`·`?url=`도 그대로 동작합니다.
 
 ### 원본 테이블 — 81종
 
@@ -104,9 +104,9 @@ GET /api/user/<openid>/nikke/아니스               # 부분 일치 → 매칭 
 | `GET /api/favorites/:id` | 소장품 상세 — 레벨별 스탯, 컬렉션·전용 스킬 |
 | `GET /api/cubes` | 하모니 큐브 목록 — `?q=` |
 | `GET /api/cubes/:id` | 큐브 상세 — 레벨별 스탯, 큐브 스킬 |
-| `GET /api/user/<openid>` | 유저 프로필·전진기지 조회 — BlablaLink 공유 링크 openid (`?openid=`도 가능) |
-| `GET /api/user/<openid>/nikke` | 유저 보유 니케 목록 — `/api/nikkes`와 동일한 필터 (`q`·`element`·`class`·`burst`·`corporation`·`weapon`·`rarity`), 경량 |
-| `GET /api/user/<openid>/nikke/<key>` | 보유 니케 상세 — `<key>`는 이름(부분 일치) 또는 id. 단일 매칭 시 상세, 복수 매칭 시 목록 |
+| `GET /api/user/<blablaid>` | 유저 프로필·전진기지 조회 — BlablaLink 공유 ID (`?blablaid=`도 가능) |
+| `GET /api/user/<blablaid>/nikke` | 유저 보유 니케 목록 — `/api/nikkes`와 동일한 필터 (`q`·`element`·`class`·`burst`·`corporation`·`weapon`·`rarity`), 경량 |
+| `GET /api/user/<blablaid>/nikke/<key>` | 보유 니케 상세 — `<key>`는 이름(부분 일치) 또는 id. 단일 매칭 시 상세, 복수 매칭 시 목록 |
 | `GET /api/tables` / `GET /api/tables/:file` | 원본 테이블 목록/조회 |
 | `GET /api/meta/filters` | 사용 가능한 필터 값 목록 |
 | `GET /api/cdn?path=` | CDN 리소스 경로 → URL 변환 |

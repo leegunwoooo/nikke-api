@@ -345,12 +345,12 @@ app.get("/", (c) =>
       "GET /api/tables": "list raw table files",
       "GET /api/tables/:file": "raw synced table JSON",
       "GET /api/cdn?path=": "resolve a Blablalink CDN resource path to its URL",
-      "GET /api/user/:oid":
-        "shared-profile lookup (oid = blablalink openid, or ?openid=/?url=)",
-      "GET /api/user/:oid/nikke?q=":
-        "owned-nikke list (q filters; always lightweight)",
-      "GET /api/user/:oid/nikke/:key":
-        "single owned-nikke detail (key = exact name/id/nameCode)",
+      "GET /api/user/:blablaid":
+        "shared-profile lookup (blablaid = blablalink openid, or ?blablaid=/?url=)",
+      "GET /api/user/:blablaid/nikke?q=":
+        "owned-nikke list (same filters as /api/nikkes)",
+      "GET /api/user/:blablaid/nikke/:key":
+        "single owned-nikke detail (key = name/id/nameCode)",
     },
     fields:
       "?fields=a,b.c on nikkes, favorites and the scene index trims each object to those (dot) paths",
@@ -499,19 +499,19 @@ app.get("/api/tables/:file", async (c) => {
   }
 });
 
-// static /api/user/nikke must be registered before /api/user/:oid — the
-// param route would otherwise swallow it as oid="nikke"
+// static /api/user/nikke must be registered before /api/user/:blablaid — the
+// param route would otherwise swallow it as blablaid="nikke"
 app.get("/api/user", userProfile);
 app.get("/api/user/nikke", userNikkeList);
 app.get("/api/user/nikke/:key", userNikkeDetail);
-app.get("/api/user/:oid", userProfile);
-app.get("/api/user/:oid/nikke", userNikkeList);
-app.get("/api/user/:oid/nikke/:key", userNikkeDetail);
+app.get("/api/user/:blablaid", userProfile);
+app.get("/api/user/:blablaid/nikke", userNikkeList);
+app.get("/api/user/:blablaid/nikke/:key", userNikkeDetail);
 
 async function userProfile(c: Context) {
   const q = openidInput(c);
   const target = decodeOpenid(q);
-  if (!target) return c.json({ error: "invalid openid" }, 400);
+  if (!target) return c.json({ error: "invalid blablaid" }, 400);
   try {
     const info = await playerInfo<{ area_id?: string }>(target.intlOpenId);
     if (info.code !== 0 || !info.data)
@@ -600,16 +600,21 @@ async function userProfile(c: Context) {
   }
 }
 
-// openid may come from the path (/api/user/:oid/...) or ?openid=/?url=
+// the target's blablalink openid may come from the path
+// (/api/user/:blablaid/...) or ?blablaid= — ?openid=/?url= kept for compat
 const openidInput = (c: Context) =>
-  c.req.param("oid") ?? c.req.query("openid") ?? c.req.query("url") ?? "";
+  c.req.param("blablaid") ??
+  c.req.query("blablaid") ??
+  c.req.query("openid") ??
+  c.req.query("url") ??
+  "";
 
 // shared helper for the user-nikke routes: resolve the profile target
 // and fetch the owned-character list (never the per-character details)
 async function loadOwnedNikkes(c: Context) {
   const q = openidInput(c);
   const target = decodeOpenid(q);
-  if (!target) return { error: c.json({ error: "invalid openid" }, 400) };
+  if (!target) return { error: c.json({ error: "invalid blablaid" }, 400) };
   const info = await playerInfo<{ area_id?: string }>(target.intlOpenId);
   if (info.code !== 0 || !info.data)
     return { error: c.json({ error: info.msg ?? "lookup failed", code: info.code }, 502) };

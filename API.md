@@ -23,8 +23,8 @@
 - [GET /api/cubes](#get-apicubes) — 하모니 큐브 목록
 - [GET /api/cubes/:id](#get-apicubesid) — 큐브 상세 (레벨별 스탯·스킬)
 - [GET /api/user](#get-apiuser) — 유저 프로필 조회 (공유 링크)
-- [GET /api/user/:oid/nikke](#get-apiuseroidnikke) — 유저 보유 니케 목록 (경량)
-- [GET /api/user/:oid/nikke/:key](#get-apiuseroidnikkekey) — 유저 보유 니케 상세 (이름 부분 일치/id)
+- [GET /api/user/:blablaid/nikke](#get-apiuserblablaidnikke) — 유저 보유 니케 목록 (경량)
+- [GET /api/user/:blablaid/nikke/:key](#get-apiuserblablaidnikkekey) — 유저 보유 니케 상세 (이름 부분 일치/id)
 - [GET /api/cdn](#get-apicdn) — CDN 경로 → URL 변환
 - [공통: 필드 선택 `?fields=`](#공통-필드-선택-fields)
 - [공통: 캐시 헤더](#공통-캐시-헤더)
@@ -436,16 +436,16 @@ BlablaLink 공유 프로필 링크로 유저 프로필을 조회합니다. 서�
 
 | 파라미터 | 설명 |
 |----------|------|
-| `openid` | 공유 링크의 base64 openid 값, 또는 공유 URL 전체 (`https://www.blablalink.com/user?openid=...` 통째로 넣어도 됨) |
-| `url` | `openid`와 동일 — 전체 URL |
+| `blablaid` | BlablaLink 공유 ID (base64 openid), 또는 공유 URL 전체 (`https://www.blablalink.com/user?openid=...` 통째로 넣어도 됨) |
+| `url` | `blablaid`와 동일 — 전체 URL. 구형 `openid`도 동작 |
 
 ```
-GET /api/user?openid=<base64 openid>
+GET /api/user?blablaid=<base64 openid>
 GET /api/user?url=<공유 URL 전체>
-GET /api/user/<openid>                          # 경로로도 가능
+GET /api/user/<blablaid>                          # 경로로도 가능
 ```
 
-보유 니케 목록·개별 상세는 [GET /api/user/:oid/nikke](#get-apiuseroidnikke)를 사용하세요.
+보유 니케 목록·개별 상세는 [GET /api/user/:blablaid/nikke](#get-apiuserblablaidnikke)를 사용하세요.
 
 ### 응답
 
@@ -503,28 +503,28 @@ GET /api/user/<openid>                          # 경로로도 가능
 
 | 상황 | 상태 |
 |------|------|
-| `openid` 형식 오류 | 400 `{"error": "invalid openid"}` |
+| `blablaid` 형식 오류 | 400 `{"error": "invalid blablaid"}` |
 | 서버 조회 계정 미설정 | 503 `{"error": "blabla credentials not configured"}` |
 | 업스트림 실패 (토큰 만료, 권한 없음 등) | 502 `{"error": "...", "code": ...}` |
 
-## GET /api/user/:oid/nikke
+## GET /api/user/:blablaid/nikke
 
 공유 프로필의 보유 니케 **목록**을 조회합니다 — `/api/user`보다 가볍고 상세 호출도 하지 않습니다.
 
 | 파라미터 | 설명 |
 |----------|------|
-| `:oid` (path) | 공유 링크의 openid 값 또는 URL 전체 |
+| `:blablaid` (path) | BlablaLink 공유 ID(base64 openid) 또는 URL 전체 |
 | `q` | 선택. 이름(전 언어 부분 일치)·캐릭터 id·resourceId·nameCode |
-| `element` `class` `burst` `corporation` `weapon` `rarity` | 선택. [GET /api/nikkes](#get-apinikkes)와 동일한 필터 — AND 결합. 상세가 필요하면 [GET /api/user/:oid/nikke/:key](#get-apiuseroidnikkekey) 사용 |
+| `element` `class` `burst` `corporation` `weapon` `rarity` | 선택. [GET /api/nikkes](#get-apinikkes)와 동일한 필터 — AND 결합. 상세가 필요하면 [GET /api/user/:blablaid/nikke/:key](#get-apiuserblablaidnikkekey) 사용 |
 
 ```
-GET /api/user/<openid>/nikke              # 보유 전체 목록
-GET /api/user/<openid>/nikke?q=아니스      # 아니스 계열만 필터 (목록 형태 유지)
-GET /api/user/<openid>/nikke?q=201601     # id/nameCode로 필터
-GET /api/user/<openid>/nikke?element=Iron&burst=III  # 도감과 동일한 속성 필터
+GET /api/user/<blablaid>/nikke              # 보유 전체 목록
+GET /api/user/<blablaid>/nikke?q=아니스      # 아니스 계열만 필터 (목록 형태 유지)
+GET /api/user/<blablaid>/nikke?q=201601     # id/nameCode로 필터
+GET /api/user/<blablaid>/nikke?element=Iron&burst=III  # 도감과 동일한 속성 필터
 ```
 
-구형 쿼리 형태 `GET /api/user/nikke?openid=...`도 동일하게 동작합니다.
+구형 쿼리 형태 `GET /api/user/nikke?blablaid=...`·`?openid=`도 동일하게 동작합니다.
 
 응답 항목 (전투력 내림차순):
 
@@ -543,7 +543,7 @@ GET /api/user/<openid>/nikke?element=Iron&burst=III  # 도감과 동일한 속�
 }
 ```
 
-## GET /api/user/:oid/nikke/:key
+## GET /api/user/:blablaid/nikke/:key
 
 보유 니케 **한 명**의 상세를 조회합니다 — 장비·옵션·큐브·소장품·스킬 레벨까지 포함. 매칭 방식은 [GET /api/nikkes/:id](#get-apinikkesid)와 동일합니다.
 
@@ -555,11 +555,11 @@ GET /api/user/<openid>/nikke?element=Iron&burst=III  # 도감과 동일한 속�
 매칭이 정확히 1명이면 상세 객체를, 복수면 목록(`{count, nikkes[]}`)을 반환합니다.
 
 ```
-GET /api/user/<openid>/nikke/아니스%20%3A%20스타   # 이름 (URL 인코딩)
-GET /api/user/<openid>/nikke/3017                # 캐릭터 id
+GET /api/user/<blablaid>/nikke/아니스%20%3A%20스타   # 이름 (URL 인코딩)
+GET /api/user/<blablaid>/nikke/3017                # 캐릭터 id
 ```
 
-구형 쿼리 형태 `GET /api/user/nikke/:key?openid=...`도 동일하게 동작합니다.
+구형 쿼리 형태 `GET /api/user/nikke/:key?blablaid=...`·`?openid=`도 동일하게 동작합니다.
 
 응답 항목 형태:
 

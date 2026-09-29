@@ -6,7 +6,7 @@
   },
   "variable": [
     { "key": "baseUrl", "value": "https://nikke-api-gunwoos-projects.vercel.app" },
-    { "key": "openid", "value": "" }
+    { "key": "blablaid", "value": "" }
   ],
   "item": [
     {
@@ -139,10 +139,10 @@
           "request": {
             "method": "GET",
             "url": {
-              "raw": "{{baseUrl}}/api/user/{{openid}}",
+              "raw": "{{baseUrl}}/api/user/{{blablaid}}",
               "host": ["{{baseUrl}}"],
-              "path": ["api", "user", "{{openid}}"],
-              "description": "openid를 경로로. ?openid= 또는 ?url=<공유 URL 전체>도 가능"
+              "path": ["api", "user", "{{blablaid}}"],
+              "description": "blablaid를 경로로. ?blablaid= 또는 ?url=<공유 URL 전체>도 가능"
             }
           }
         },
@@ -151,11 +151,11 @@
           "request": {
             "method": "GET",
             "url": {
-              "raw": "{{baseUrl}}/api/user?openid={{openid}}",
+              "raw": "{{baseUrl}}/api/user?openid={{blablaid}}",
               "host": ["{{baseUrl}}"],
               "path": ["api", "user"],
               "query": [
-                { "key": "openid", "value": "{{openid}}", "description": "공유 링크의 openid 또는 전체 URL" }
+                { "key": "blablaid", "value": "{{blablaid}}", "description": "BlablaLink 공유 ID 또는 전체 URL" }
               ]
             }
           }
@@ -165,9 +165,9 @@
           "request": {
             "method": "GET",
             "url": {
-              "raw": "{{baseUrl}}/api/user/{{openid}}/nikke",
+              "raw": "{{baseUrl}}/api/user/{{blablaid}}/nikke",
               "host": ["{{baseUrl}}"],
-              "path": ["api", "user", "{{openid}}", "nikke"],
+              "path": ["api", "user", "{{blablaid}}", "nikke"],
               "query": [
                 { "key": "q", "value": "", "disabled": true, "description": "필터 — 이름 부분 일치/id/nameCode" }
               ]
@@ -179,9 +179,9 @@
           "request": {
             "method": "GET",
             "url": {
-              "raw": "{{baseUrl}}/api/user/{{openid}}/nikke/아니스%20%3A%20스타",
+              "raw": "{{baseUrl}}/api/user/{{blablaid}}/nikke/아니스%20%3A%20스타",
               "host": ["{{baseUrl}}"],
-              "path": ["api", "user", "{{openid}}", "nikke", "아니스%20%3A%20스타"],
+              "path": ["api", "user", "{{blablaid}}", "nikke", "아니스%20%3A%20스타"],
               "description": "마지막 path = 이름(부분 일치, URL 인코딩) 또는 캐릭터 id/resourceId/nameCode — 단일 매칭 시 상세, 복수면 목록"
             }
           }

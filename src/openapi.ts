@@ -224,39 +224,39 @@ export const openapi = {
         tags: ["user"],
         summary: "유저 프로필 + 전진기지",
         description:
-          "BlablaLink 공유 링크로 조회. 보유 니케는 /api/user/{oid}/nikke에서 조회. " +
-          "openid는 쿼리 대신 경로로도 가능: /api/user/{oid}",
+          "BlablaLink 공유 링크로 조회. 보유 니케는 /api/user/{blablaid}/nikke에서 조회. " +
+          "blablaid는 쿼리 대신 경로로도 가능: /api/user/{blablaid}",
         parameters: [
           {
-            name: "openid",
+            name: "blablaid",
             in: "query",
             required: true,
             schema: { type: "string" },
-            description: "공유 링크의 base64 openid 또는 URL 전체",
+            description: "BlablaLink 공유 ID(base64 openid) 또는 공유 URL 전체 — 구형 ?openid=/?url=도 동작",
           },
         ],
         responses: {
           "200": { description: "프로필+전진기지" },
-          "400": { description: "openid 형식 오류" },
+          "400": { description: "blablaid 형식 오류" },
           "503": { description: "서버 조회 계정 미설정" },
           "502": { description: "업스트림 실패" },
         },
       },
     },
-    "/api/user/{oid}/nikke": {
+    "/api/user/{blablaid}/nikke": {
       get: {
         tags: ["user"],
         summary: "유저 보유 니케 목록",
         description:
-          "항상 경량 목록(이름·레벨·전투력·돌파·코어만). /api/nikkes와 동일한 필터 지원 — 상세는 /api/user/{oid}/nikke/{key}에서 조회. " +
-          "oid 대신 ?openid= 또는 ?url=도 사용 가능 (/api/user/nikke?openid=...)",
+          "항상 경량 목록(이름·레벨·전투력·돌파·코어만). /api/nikkes와 동일한 필터 지원 — 상세는 /api/user/{blablaid}/nikke/{key}에서 조회. " +
+          "blablaid 대신 ?blablaid=도 가능 (/api/user/nikke?blablaid=...)",
         parameters: [
           {
-            name: "oid",
+            name: "blablaid",
             in: "path",
             required: true,
             schema: { type: "string" },
-            description: "공유 링크의 base64 openid",
+            description: "BlablaLink 공유 ID (base64 openid)",
           },
           {
             name: "q",
@@ -289,13 +289,13 @@ export const openapi = {
               },
             },
           },
-          "400": { description: "openid 형식 오류" },
+          "400": { description: "blablaid 형식 오류" },
           "503": { description: "서버 조회 계정 미설정" },
           "502": { description: "업스트림 실패" },
         },
       },
     },
-    "/api/user/{oid}/nikke/{key}": {
+    "/api/user/{blablaid}/nikke/{key}": {
       get: {
         tags: ["user"],
         summary: "유저 보유 니케 단일 상세",
@@ -304,11 +304,11 @@ export const openapi = {
           "단일 매칭 시 상세(스킬 레벨·장비+옵션 수치·큐브·소장품·코스튬·호감도), 복수 매칭 시 경량 목록 반환.",
         parameters: [
           {
-            name: "oid",
+            name: "blablaid",
             in: "path",
             required: true,
             schema: { type: "string" },
-            description: "공유 링크의 base64 openid",
+            description: "BlablaLink 공유 ID (base64 openid)",
           },
           {
             name: "key",
@@ -325,7 +325,7 @@ export const openapi = {
             content: { "application/json": { schema: ownedNikkeDetail } },
           },
           "404": { description: "해당 니케 미보유 또는 없음" },
-          "400": { description: "openid 형식 오류" },
+          "400": { description: "blablaid 형식 오류" },
           "503": { description: "서버 조회 계정 미설정" },
           "502": { description: "업스트림 실패" },
         },
