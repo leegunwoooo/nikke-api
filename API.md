@@ -48,15 +48,20 @@
 | `corporation` | 소속 | `MISSILIS`, `ELYSION`, `TETRA`, `PILGRIM`, `ABNORMAL` |
 | `weapon` | 무기 종류 | `RL`, `SMG`, `SG`, `SR`, `AR`, `MG` |
 | `rarity` | 레어도 | `SSR`, `SR`, `R` |
+| `limit` | 반환 개수 제한 (최대 500, 미지정 시 전체) | `?limit=50` |
+| `offset` | 시작 위치 (페이지네이션) | `?offset=50` |
 | `fields` | 응답 필드 선택 (각 항목에 적용) | `?fields=id,name.ko` |
 
 모든 필터는 AND로 결합되며 대소문자를 구분하지 않습니다.
+
+**페이지네이션**: 필터가 먼저 적용된 뒤 `offset`/`limit`으로 잘립니다. `count`는 잘라내기 전 필터링된 전체 개수이고, `offset`은 실제 적용된 시작 위치가 응답에 포함됩니다. `offset`이 범위를 넘으면 빈 배열이 반환됩니다.
 
 ### 요청 예시
 
 ```
 GET /api/nikkes?q=아니스
 GET /api/nikkes?element=Electronic&rarity=SSR
+GET /api/nikkes?limit=20&offset=40
 ```
 
 ### 응답
@@ -64,6 +69,7 @@ GET /api/nikkes?element=Electronic&rarity=SSR
 ```json
 {
   "count": 3,
+  "offset": 0,
   "characters": [
     {
       "id": 301201,

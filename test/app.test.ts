@@ -53,6 +53,30 @@ test("favorites + tables", async () => {
   assert.equal((await get("/api/tables/..%2Fcharacters.json")).status, 400);
 });
 
+test("/api/nikkes pagination", async () => {
+  const all = await json("/api/nikkes");
+  assert.equal(all.count, 3);
+  assert.equal(all.characters.length, 3);
+  assert.equal(all.offset, 0);
+
+  const page = await json("/api/nikkes?limit=2&offset=2");
+  assert.equal(page.count, 3); // count is the filtered total, not the page size
+  assert.equal(page.offset, 2);
+  assert.equal(page.characters.length, 1);
+
+  const beyond = await json("/api/nikkes?offset=99");
+  assert.equal(beyond.count, 3);
+  assert.equal(beyond.characters.length, 0);
+
+  // filters apply before slicing
+  const filtered = await json("/api/nikkes?class=defender&limit=1");
+  assert.equal(filtered.count, 2);
+  assert.equal(filtered.characters.length, 1);
+
+  // junk values fall back safely
+  assert.equal((await json("/api/nikkes?limit=abc&offset=-5")).characters.length, 3);
+});
+
 test("?fields on cubes list/detail and scene detail", async () => {
   const cubes = await json("/api/cubes?fields=id,name.ko");
   assert.equal(cubes.count, 2);

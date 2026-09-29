@@ -96,7 +96,7 @@ GET /api/user/<blablaid>/nikke/아니스               # 부분 일치 → 매�
 
 | 엔드포인트 | 설명 |
 |------------|------|
-| `GET /api/nikkes` | 캐릭터 목록 — `?q=` 이름 검색(전 언어 부분 일치), `?element=` `?class=` `?burst=` `?corporation=` `?weapon=` `?rarity=` 필터 (AND 결합) |
+| `GET /api/nikkes` | 캐릭터 목록 — `?q=` 이름 검색(전 언어 부분 일치), `?element=` `?class=` `?burst=` `?corporation=` `?weapon=` `?rarity=` 필터 (AND 결합), `?limit=`/`?offset=` 페이지네이션 (미지정 시 전체, 최대 500 — `count`는 잘라내기 전 전체 개수) |
 | `GET /api/nikkes/:id` | 캐릭터 상세 — 스킬/스탯/배경/CV/보이스 등 `details` 포함. `:id`는 캐릭터 ID·resourceId·이름(부분 일치) 모두 가능 |
 | `GET /api/scenes` | 씬 목록 — `?category=` `?nikke=` `?q=` `?limit=` `?offset=` |
 | `GET /api/scenes/:groupId` | 씬 대본 — 대사별 화자/아이콘/보이스 |

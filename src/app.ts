@@ -344,7 +344,8 @@ app.get("/", (c) =>
     source: "Unofficial — data © SHIFT UP / Level Infinite",
     syncedAt: characterData.syncedAt,
     endpoints: {
-      "GET /api/nikkes": "list; filters: q, element, class, burst, corporation, weapon, rarity",
+      "GET /api/nikkes":
+        "list; filters: q, element, class, burst, corporation, weapon, rarity; limit/offset pagination",
       "GET /api/nikkes/:id": "detail by id / resourceId / name (fuzzy)",
       "GET /api/meta/filters": "available filter values",
       "GET /api/scenes": "story scene index (ko)",
@@ -364,12 +365,13 @@ app.get("/", (c) =>
         "single owned-nikke detail (key = name/id/nameCode)",
     },
     fields:
-      "?fields=a,b.c on nikkes, favorites and the scene index trims each object to those (dot) paths",
+      "?fields=a,b.c on nikkes, favorites, cubes, scene detail and user-nikke routes trims each object to those (dot) paths",
+    lang: "?lang=ko|en|ja|zh-TW flattens localized objects to a single string",
   }),
 );
 
 app.get("/api/nikkes", (c) => {
-  const { q, element, class: cls, burst, corporation, weapon, rarity } = c.req.query();
+  const { q, element, class: cls, burst, corporation, weapon, rarity, limit, offset } = c.req.query();
   let list = characters;
   if (q) list = findByName(q);
   const n = (v?: string) => v?.toLowerCase();
@@ -379,7 +381,14 @@ app.get("/api/nikkes", (c) => {
   if (corporation) list = list.filter((x) => n(x.corporation) === n(corporation));
   if (weapon) list = list.filter((x) => n(x.weapon.type ?? undefined) === n(weapon));
   if (rarity) list = list.filter((x) => n(x.rarity) === n(rarity));
-  return c.json({ count: list.length, characters: pickFields(list, fieldsOf(c)) });
+  const total = list.length;
+  const off = Math.max(0, Number(offset) || 0);
+  const lim = Math.min(Math.max(0, Number(limit) || 0), 500) || total;
+  return c.json({
+    count: total,
+    offset: off,
+    characters: pickFields(list.slice(off, off + lim), fieldsOf(c)),
+  });
 });
 
 app.get("/api/nikkes/:id", async (c) => {
