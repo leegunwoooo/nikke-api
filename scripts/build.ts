@@ -476,6 +476,7 @@ async function main() {
     return {
       kind,
       slot: kind === "item" ? entry.skill_change_slot : undefined,
+      unlocksAt: kind === "item" ? entry.skill_change_slot : undefined,
       id: info.id,
       groupId: info.group_id,
       icon: skillIcon(info.icon),
@@ -515,7 +516,9 @@ async function main() {
     const skills = [
       ...(first.collection_skill_group_data ?? []).map((e: any) => favSkill("collection", e, files)),
       ...(first.favoriteitem_skill_group_data ?? []).map((e: any) => favSkill("item", e, files)),
-    ].filter(Boolean);
+    ]
+      .filter(Boolean)
+      .sort((a: any, b: any) => (a.unlocksAt ?? 0) - (b.unlocksAt ?? 0));
     const item = {
       id,
       nameCode: first.name_code,

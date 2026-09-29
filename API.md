@@ -371,7 +371,7 @@ GET /api/scenes/d_main_01_01_s
 | 필드 | 설명 |
 |------|------|
 | `stats[]` | 레벨별 스탯 — `level`, `atk`, `def`, `hp`, `power`, `grade`, `collectionSkillLevel`(컬렉션 스킬 레벨), `itemSkillLevel`(소장품 스킬 레벨) |
-| `skills[].kind` | `collection` = 수집 효과 스킬, `item` = 소장품 전용 스킬 (`slot` = 돌파 슬롯) |
+| `skills[].kind` | `collection` = 수집 효과 스킬, `item` = 소장품 전용 스킬 (`slot`/`unlocksAt` = 강화 단계 — SSR 전용품 1·2·3단계에서 각각 해금) |
 | `skills[].descriptions` | 최대 레벨 기준 렌더링된 설명 (언어별) |
 | `skills[].descriptionTemplate` / `skills[].values` | 원본 템플릿 + 레벨별 수치 배열 |
 | `skills[].infoLabel` | 연계 스킬 종류 표기 (예: "버스트 스킬", "스킬2") |
