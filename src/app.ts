@@ -255,7 +255,28 @@ async function loadProfileLookups() {
       },
     };
   };
-  return { charRef, avatarRef, cubeRef, favRef, costumeRef, stageRef, normalizeNikke, recycles };
+  // does an owned-character row match a name/id/nameCode query?
+  const matchesNikke = (query: string, ch: any) => {
+    if (!query) return true;
+    const ref = charRef(ch.name_code) as any;
+    if (/^\d+$/.test(query)) {
+      const n = Number(query);
+      return ch.name_code === n || ref?.id === n || ref?.resourceId === n;
+    }
+    const nq = norm(query);
+    return !!ref?.name && Object.values(ref.name as object).some((nm) => norm(nm).includes(nq));
+  };
+  return {
+    charRef,
+    avatarRef,
+    cubeRef,
+    favRef,
+    costumeRef,
+    stageRef,
+    normalizeNikke,
+    matchesNikke,
+    recycles,
+  };
 }
 
 function findByName(q: string): Nikke[] {
@@ -455,21 +476,20 @@ app.get("/api/user", async (c) => {
       return c.json({ error: info.msg ?? "lookup failed", code: info.code }, 502);
     const areaId = Number(info.data.area_id ?? 0);
     const body = { intl_open_id: target.intlOpenId, nikke_area_id: areaId };
-    const [basic, outpost, chars] = await Promise.all([
+    const query = c.req.query("q") ?? "";
+    const [basic, outpost, chars, lookups] = await Promise.all([
       gameApi("Game", "GetUserProfileBasicInfo", body),
       gameApi("Game", "GetUserProfileOutpostInfo", body),
       gameApi("Game", "GetUserCharacters", body),
+      loadProfileLookups(),
     ]);
-    const codes =
-      ((chars.data as { characters?: { name_code?: number }[] } | null)?.characters ?? [])
-        .map((x) => x.name_code)
-        .filter((x): x is number => !!x);
+    const { charRef, avatarRef, stageRef, normalizeNikke, matchesNikke, recycles } = lookups;
+    const owned = ((chars.data as any)?.characters ?? []) as any[];
+    const matched = owned.filter((ch) => matchesNikke(query, ch));
+    const codes = matched.map((x) => x.name_code).filter(Boolean);
     const details = codes.length
       ? await gameApi("Game", "GetUserCharacterDetails", { ...body, name_codes: codes })
       : { code: -1, data: null };
-
-    const { charRef, avatarRef, stageRef, normalizeNikke, recycles } =
-      await loadProfileLookups();
     // state_effects entries carry the resolved numeric value per option id
     const effectById = new Map<string, any>(
       (((details.data as any)?.state_effects ?? []) as any[]).map((e: any) => [String(e.id), e]),
@@ -480,9 +500,9 @@ app.get("/api/user", async (c) => {
     const detailByCode = new Map<number, any>(
       ((details.data as any)?.character_details ?? []).map((x: any) => [x.name_code, x]),
     );
-    const nikkes = (
-      ((chars.data as any)?.characters ?? []) as any[]
-    ).map((ch) => normalizeNikke(ch, detailByCode.get(ch.name_code) ?? {}, effectById));
+    const nikkes = matched.map((ch) =>
+      normalizeNikke(ch, detailByCode.get(ch.name_code) ?? {}, effectById),
+    );
     nikkes.sort((a, b) => b.combat - a.combat);
 
     const corporations: Record<string, number> = {};
@@ -573,19 +593,8 @@ app.get("/api/user/nikke", async (c) => {
     const body = { intl_open_id: target.intlOpenId, nikke_area_id: Number(info.data.area_id ?? 0) };
     const chars = await gameApi("Game", "GetUserCharacters", body);
     const owned = ((chars.data as any)?.characters ?? []) as any[];
-    const { charRef, normalizeNikke } = await loadProfileLookups();
-
-    const matches = (ch: any) => {
-      if (!query) return true;
-      const ref = charRef(ch.name_code) as any;
-      if (/^\d+$/.test(query)) {
-        const n = Number(query);
-        return ch.name_code === n || ref?.id === n || ref?.resourceId === n;
-      }
-      const nq = norm(query);
-      return ref?.name && Object.values(ref.name as object).some((nm) => norm(nm).includes(nq));
-    };
-    const matched = owned.filter(matches);
+    const { charRef, normalizeNikke, matchesNikke } = await loadProfileLookups();
+    const matched = owned.filter((ch) => matchesNikke(query, ch));
     if (query && !matched.length) return c.json({ count: 0, nikkes: [] });
 
     // list mode (no q): cheap — skip the detail call entirely

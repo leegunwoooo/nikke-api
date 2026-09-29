@@ -436,10 +436,12 @@ BlablaLink 공유 프로필 링크로 유저 프로필을 조회합니다. 서�
 |----------|------|
 | `openid` | 공유 링크의 base64 openid 값, 또는 공유 URL 전체 (`https://www.blablalink.com/user?openid=...` 통째로 넣어도 됨) |
 | `url` | `openid`와 동일 — 전체 URL |
+| `q` | 선택. 니케 이름(전 언어 부분 일치)·id·resourceId·nameCode — 지정 시 `nikkes`가 매칭 항목만으로 필터링되고 상세 조회도 매칭분에만 수행 |
 
 ```
 GET /api/user?openid=MjkwODAtNjk1NTExMjA3MDczMzcyNTYwMg==
 GET /api/user?url=https://www.blablalink.com/user?openid=MjkwODAt...
+GET /api/user?openid=...&q=아니스   # 아니스 계열 니케만 상세 반환
 ```
 
 ### 응답
