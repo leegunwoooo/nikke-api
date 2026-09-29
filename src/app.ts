@@ -192,6 +192,7 @@ async function loadProfileLookups() {
     return {
       id: tid,
       skinIndex: hit.costume.skinIndex,
+      name: hit.costume.name ?? null,
       character: charInfo(hit.nikke, hit.costume.images.icon),
     };
   };

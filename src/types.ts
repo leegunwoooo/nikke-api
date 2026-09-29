@@ -46,7 +46,15 @@ export interface Nikke {
   corporation: string;
   element: string | null;
   weapon: { type: string | null; attackType: string | null; ammo: number | null };
-  costumes: { id: number; skinIndex: number; images: ImageSet }[];
+  costumes: {
+    id: number;
+    skinIndex: number;
+    images: ImageSet;
+    name?: Localized<string>;
+    description?: Localized<string>;
+    grade?: string;
+    shopType?: string;
+  }[];
   images: ImageSet;
   icons: { grade: string; class: string; element?: string };
   skillIcons: { skill1?: string; skill2?: string; burst?: string };
@@ -126,6 +134,15 @@ export interface RawRoleData {
   character_level_attack_list?: number[];
   character_level_defence_list?: number[];
   character_level_hp_list?: number[];
+  character_costume_list?: {
+    id: number;
+    costume_index: number;
+    costume_name_locale?: string;
+    costume_description_locale?: string;
+    costume_grade_id?: string;
+    costume_shop_type?: string;
+    is_hidden?: boolean;
+  }[];
 }
 
 export type Localized<T> = Partial<Record<Locale, T>>;

@@ -4,6 +4,7 @@ import { cdnUrl } from "../src/cdn.js";
 import type {
   Burst,
   Locale,
+  Localized,
   Nikke,
   NikkeDetail,
   RawNikke,
@@ -125,6 +126,69 @@ async function main() {
 
   const characters = [...byId.values()].sort((a, b) => a.id - b.id);
   const byRes = new Map(characters.map((c) => [c.resourceId, c]));
+
+  // --- costume names/descriptions from roledata character_costume_list ---
+  // nikke_list costumes[] only carry {id, costume_index}; names live in roledata
+  const rawFiles = await readdir(RAW);
+  const costumeInfo = new Map<
+    number,
+    {
+      resourceId: number;
+      costumeIndex: number;
+      name: Localized<string>;
+      description: Localized<string>;
+      grade?: string;
+      shopType?: string;
+    }
+  >();
+  for (const f of rawFiles) {
+    const m = f.match(/^roledata_(\d+)_(.+)\.json$/);
+    if (!m) continue;
+    const role = await readJson<RawRoleData>(f);
+    for (const cs of role?.character_costume_list ?? []) {
+      let e = costumeInfo.get(cs.id);
+      if (!e) {
+        e = {
+          resourceId: Number(m[1]),
+          costumeIndex: cs.costume_index,
+          name: {},
+          description: {},
+        };
+        costumeInfo.set(cs.id, e);
+      }
+      const l = m[2] as Locale;
+      if (cs.costume_name_locale) e.name[l] = cs.costume_name_locale;
+      if (cs.costume_description_locale) e.description[l] = cs.costume_description_locale;
+      e.grade ??= cs.costume_grade_id;
+      e.shopType ??= cs.costume_shop_type;
+    }
+  }
+  for (const n of characters) {
+    for (const c of n.costumes) {
+      const info = costumeInfo.get(c.id);
+      if (info) {
+        c.name = info.name;
+        c.description = info.description;
+        c.grade = info.grade;
+        c.shopType = info.shopType;
+      }
+    }
+  }
+  const costumeMap = Object.fromEntries(
+    [...costumeInfo.entries()].map(([id, e]) => [
+      id,
+      {
+        resourceId: e.resourceId,
+        costumeIndex: e.costumeIndex,
+        name: e.name,
+        description: e.description,
+        grade: e.grade,
+      },
+    ]),
+  );
+  await writeFile(path.join(OUT, "costume_map.json"), JSON.stringify(costumeMap));
+  console.log(`costume_map.json: ${costumeInfo.size} costumes`);
+
   const charRef = (resourceId?: number) => {
     const n = resourceId != null ? byRes.get(resourceId) : undefined;
     return n
@@ -232,7 +296,6 @@ async function main() {
   await writeFile(path.join(OUT, "equip_option_map.json"), JSON.stringify(equipOptionMap));
 
   // --- copy remaining tables verbatim ---
-  const rawFiles = await readdir(RAW);
   const skip = (f: string) =>
     f.startsWith("nikke_list_") ||
     f.startsWith("roledata_") ||
