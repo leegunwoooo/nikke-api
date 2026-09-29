@@ -143,6 +143,18 @@ GET /api/scenes?category=attractive&fields=groupId,name,nikke
 - 배열 안쪽의 필드는 지정할 수 없습니다 (예: `details.voices.text`는 안 됨 — 배열 통째로만 선택 가능)
 - 미지정 시 전체 응답 그대로 (기존과 동일)
 
+### 언어 선택 — `?lang=`
+
+모든 JSON 응답에 붙일 수 있습니다. `name`·`description`·`descriptions` 등 `{ko,en,ja,zh-TW}` 형태의 다국어 객체가 지정한 언어의 문자열 하나로 평탄화됩니다.
+
+```
+GET /api/nikkes?lang=ko        → "name": "라피"
+GET /api/nikkes?lang=en        → "name": "Rapi"
+GET /api/favorites/200101?lang=ja
+```
+
+지원 값: `ko`·`en`·`ja`·`zh-TW`. 그 외 값이나 미지정 시 기존 4개 언어 객체 그대로 반환. 해당 언어가 없는 필드는 `ko`→`en`→첫 번째 값 순으로 폴백합니다.
+
 ### 캐시
 
 모든 200 응답에 `Cache-Control: public, max-age=3600, s-maxage=86400`과 `ETag`가 붙습니다. `If-None-Match`로 재요청하면 304로 응답 본문을 생략합니다 — 데이터는 배포 시에만 바뀌므로 캐시해도 안전합니다.

@@ -28,3 +28,23 @@ export function pickFields<T>(value: T, fields?: string[]): T {
   if (!fields) return value;
   return (Array.isArray(value) ? value.map((v) => pickOne(v, fields)) : pickOne(value, fields)) as T;
 }
+
+export const LOCALES = new Set(["ko", "en", "ja", "zh-TW"]);
+
+const isLocalized = (o: Record<string, unknown>) => {
+  const keys = Object.keys(o);
+  return keys.length > 0 && keys.every((k) => LOCALES.has(k));
+};
+
+/** flatten {ko,en,ja,zh-TW} objects to a single string for `?lang=` */
+export function localize(value: unknown, lang: string): unknown {
+  if (Array.isArray(value)) return value.map((v) => localize(v, lang));
+  if (value && typeof value === "object") {
+    const o = value as Record<string, unknown>;
+    if (isLocalized(o)) return o[lang] ?? o.ko ?? o.en ?? Object.values(o)[0];
+    const out: Record<string, unknown> = {};
+    for (const [k, v] of Object.entries(o)) out[k] = localize(v, lang);
+    return out;
+  }
+  return value;
+}

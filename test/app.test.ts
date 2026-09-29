@@ -53,6 +53,16 @@ test("favorites + tables", async () => {
   assert.equal((await get("/api/tables/..%2Fcharacters.json")).status, 400);
 });
 
+test("?lang flattens localized objects", async () => {
+  const one = await json("/api/nikkes/1?lang=ko");
+  assert.equal(one.name, "라피");
+  const en = await json("/api/nikkes/1?lang=en");
+  assert.equal(en.name, "Rapi");
+  // unsupported/unknown lang values pass through untouched
+  const none = await json("/api/nikkes/1?lang=fr");
+  assert.equal(none.name.ko, "라피");
+});
+
 test("cache headers + conditional GET", async () => {
   const res = await get("/api/nikkes/1");
   const etag = res.headers.get("ETag");

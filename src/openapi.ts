@@ -354,4 +354,17 @@ export const openapi = {
       },
     },
   },
+} as const;
+
+// ?lang applies to every endpoint — inject it as a shared query param
+const langParam = {
+  name: "lang",
+  in: "query" as const,
+  schema: { type: "string", enum: ["ko", "en", "ja", "zh-TW"] },
+  description: "다국어 객체({ko,en,ja,zh-TW})를 지정 언어 문자열 하나로 평탄화",
 };
+for (const p of Object.values(openapi.paths) as any[]) {
+  for (const op of Object.values(p) as any[]) {
+    (op.parameters ??= []).push(langParam);
+  }
+}

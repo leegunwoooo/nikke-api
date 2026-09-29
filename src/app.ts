@@ -5,7 +5,7 @@ import { readFile, readdir } from "node:fs/promises";
 import path from "node:path";
 import { cacheHeaders } from "./cache.js";
 import { cdnUrl } from "./cdn.js";
-import { fieldsOf, pickFields } from "./fields.js";
+import { fieldsOf, LOCALES, localize, pickFields } from "./fields.js";
 import { decodeOpenid, gameApi, playerInfo } from "./blabla.js";
 import { openapi } from "./openapi.js";
 import type { Nikke } from "./types.js";
@@ -325,6 +325,17 @@ function findByName(q: string): Nikke[] {
 const app = new Hono();
 app.use("*", cors());
 app.use("*", cacheHeaders(characterData.syncedAt));
+
+// ?lang=ko|en|ja|zh-TW flattens {ko,en,ja,zh-TW} objects into single strings
+// on every JSON response
+app.use("*", async (c, next) => {
+  const lang = c.req.query("lang");
+  if (!lang || !LOCALES.has(lang)) return next();
+  const orig = c.json.bind(c);
+  c.json = ((obj: unknown, ...rest: unknown[]) =>
+    orig(localize(obj, lang), ...(rest as []))) as typeof c.json;
+  await next();
+});
 
 app.get("/", (c) =>
   c.json({

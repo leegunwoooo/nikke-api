@@ -27,6 +27,7 @@
 - [GET /api/user/:blablaid/nikke/:key](#get-apiuserblablaidnikkekey) — 유저 보유 니케 상세 (이름 부분 일치/id)
 - [GET /api/cdn](#get-apicdn) — CDN 경로 → URL 변환
 - [공통: 필드 선택 `?fields=`](#공통-필드-선택-fields)
+- [공통: 언어 선택 `?lang=`](#공통-언어-선택-lang)
 - [공통: 캐시 헤더](#공통-캐시-헤더)
 - [에러 응답](#에러-응답)
 
@@ -644,6 +645,24 @@ GET /api/nikkes/라피?fields=id,details.skills
 
 ```json
 { "count": 202, "characters": [{ "id": 1, "name": { "ko": "..." }, "element": "Fire" }] }
+```
+
+---
+
+## 공통: 언어 선택 `?lang=`
+
+모든 JSON 응답에 적용됩니다. `name`·`description`·`descriptions` 등 `{ko,en,ja,zh-TW}` 형태의 다국어 객체가 지정 언어 문자열 하나로 평탄화됩니다.
+
+| 값 | 결과 |
+|----|------|
+| `ko` / `en` / `ja` / `zh-TW` | `"name": {ko:"라피",en:"Rapi",...}` → `"name": "라피"` |
+| 미지정 또는 지원 외 값 | 4개 언어 객체 그대로 |
+
+해당 언어 값이 없는 필드는 `ko`→`en`→첫 번째 값 순으로 폴백합니다. `?fields=`와 함께 사용하면 먼저 필드를 자른 뒤 평탄화됩니다.
+
+```
+GET /api/nikkes?q=라피&lang=ko
+GET /api/favorites/200101?lang=en
 ```
 
 ---
