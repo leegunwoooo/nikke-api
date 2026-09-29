@@ -182,7 +182,7 @@
               "raw": "{{baseUrl}}/api/user/{{openid}}/nikke/아니스%20%3A%20스타",
               "host": ["{{baseUrl}}"],
               "path": ["api", "user", "{{openid}}", "nikke", "아니스%20%3A%20스타"],
-              "description": "마지막 path = 정확한 이름(URL 인코딩) 또는 캐릭터 id/resourceId/nameCode"
+              "description": "마지막 path = 이름(부분 일치, URL 인코딩) 또는 캐릭터 id/resourceId/nameCode — 단일 매칭 시 상세, 복수면 목록"
             }
           }
         }

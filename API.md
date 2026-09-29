@@ -24,7 +24,7 @@
 - [GET /api/cubes/:id](#get-apicubesid) — 큐브 상세 (레벨별 스탯·스킬)
 - [GET /api/user](#get-apiuser) — 유저 프로필 조회 (공유 링크)
 - [GET /api/user/:oid/nikke](#get-apiuseroidnikke) — 유저 보유 니케 목록 (경량)
-- [GET /api/user/:oid/nikke/:key](#get-apiuseroidnikkekey) — 유저 보유 니케 단일 상세 (정확한 이름/id)
+- [GET /api/user/:oid/nikke/:key](#get-apiuseroidnikkekey) — 유저 보유 니케 상세 (이름 부분 일치/id)
 - [GET /api/cdn](#get-apicdn) — CDN 경로 → URL 변환
 - [공통: 필드 선택 `?fields=`](#공통-필드-선택-fields)
 - [공통: 캐시 헤더](#공통-캐시-헤더)
