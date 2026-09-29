@@ -576,6 +576,7 @@ GET /api/user/nikke?openid=...              # 보유 목록 (경량)
 | `nikkes[].equipment.*.options[]` | 장비 옵션 — `id`, 옵션 종류 `name`(4개 언어), `rank`(같은 종류 내 등급), `value`({type, value, unit}) — 실제 수치는 업스트림 `state_effects`에서 해석 |
 
 - 이름이 여러 니케에 매칭되면(스킨 캐릭터 등) 전부 반환됩니다.
+- **정확히 1명 매칭 시** `nikke` 단일 객체가 `nikkes`와 함께 포함됩니다 (배열 꺼내기 생략 가능).
 - `q`가 매칭되지 않으면 `{ "count": 0, "nikkes": [] }`.
 - 장비 `tid`/옵션 `id`는 내부 아이템 코드입니다 (원본 테이블은 `/api/tables/ItemEquipTable_ko.json` 참고).
 

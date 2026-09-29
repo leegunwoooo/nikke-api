@@ -4,6 +4,7 @@ import { readFile, readdir } from "node:fs/promises";
 import path from "node:path";
 import { cdnUrl } from "./cdn.js";
 import { decodeOpenid, gameApi, playerInfo } from "./blabla.js";
+import { openapi } from "./openapi.js";
 import type { Nikke } from "./types.js";
 
 const DIST = path.resolve("data/dist");
@@ -587,7 +588,11 @@ app.get("/api/user/nikke", async (c) => {
           core: ch.core ?? 0,
         }))
         .sort((a, b) => b.combat - a.combat);
-      return c.json({ count: nikkes.length, nikkes });
+      return c.json({
+        count: nikkes.length,
+        ...(nikkes.length === 1 ? { nikke: nikkes[0] } : {}),
+        nikkes,
+      });
     }
 
     const codes = matched.map((x) => x.name_code).filter(Boolean);
@@ -603,7 +608,11 @@ app.get("/api/user/nikke", async (c) => {
     const nikkes = matched
       .map((ch) => normalizeNikke(ch, detailByCode.get(ch.name_code) ?? {}, effectById))
       .sort((a, b) => b.combat - a.combat);
-    return c.json({ count: nikkes.length, nikkes });
+    return c.json({
+      count: nikkes.length,
+      ...(nikkes.length === 1 ? { nikke: nikkes[0] } : {}),
+      nikkes,
+    });
   } catch (e) {
     const msg = e instanceof Error ? e.message : String(e);
     const status = msg.includes("not configured") ? 503 : 502;
@@ -616,5 +625,17 @@ app.get("/api/cdn", (c) => {
   if (!p || p.includes("..")) return c.json({ error: "path required" }, 400);
   return c.json({ path: p, url: cdnUrl(p) });
 });
+
+app.get("/openapi.json", (c) => c.json(openapi));
+
+app.get("/docs", (c) =>
+  c.html(`<!doctype html>
+<html><head><title>nikke-api docs</title><meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/></head>
+<body>
+<script id="api-reference" data-url="/openapi.json"></script>
+<script src="https://cdn.jsdelivr.net/npm/@scalar/api-reference"></script>
+</body></html>`),
+);
 
 export default app;

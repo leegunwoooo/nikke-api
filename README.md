@@ -106,7 +106,8 @@ GET /api/user/nikke?openid=<openid>&q=아니스       # 아니스 계열만 상�
 
 ## API 문서
 
-**요청/응답 형식 전체 문서 → [API.md](API.md)**
+- **인터랙티브 문서 (브라우저에서 바로 테스트) → [/docs](https://nikke-api-gunwoos-projects.vercel.app/docs)**
+- 요청/응답 형식 전체 문서 → [API.md](API.md)
 
 ## 문의
 
