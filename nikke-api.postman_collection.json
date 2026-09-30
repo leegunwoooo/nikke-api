@@ -470,6 +470,174 @@
       ]
     },
     {
+      "name": "Equips",
+      "item": [
+        {
+          "name": "장비 목록",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{baseUrl}}/api/equips?limit=20",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "equips"
+              ],
+              "query": [
+                {
+                  "key": "q",
+                  "value": "",
+                  "disabled": true,
+                  "description": "장비 이름 (전 언어 부분 일치)"
+                },
+                {
+                  "key": "class",
+                  "value": "",
+                  "disabled": true,
+                  "description": "All|Attacker|Defender|Supporter"
+                },
+                {
+                  "key": "rare",
+                  "value": "",
+                  "disabled": true,
+                  "description": "T1~T10"
+                },
+                {
+                  "key": "slot",
+                  "value": "",
+                  "disabled": true,
+                  "description": "head|arm|leg"
+                },
+                {
+                  "key": "limit",
+                  "value": "20"
+                },
+                {
+                  "key": "offset",
+                  "value": "0",
+                  "disabled": true
+                },
+                {
+                  "key": "lang",
+                  "value": "ko",
+                  "disabled": true
+                },
+                {
+                  "key": "fields",
+                  "value": "id,name.ko,icon",
+                  "disabled": true
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "장비 옵션 목록",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{baseUrl}}/api/equips/options?limit=20",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "equips",
+                "options"
+              ],
+              "query": [
+                {
+                  "key": "q",
+                  "value": "",
+                  "disabled": true
+                },
+                {
+                  "key": "groupId",
+                  "value": "",
+                  "disabled": true
+                },
+                {
+                  "key": "rank",
+                  "value": "",
+                  "disabled": true
+                },
+                {
+                  "key": "limit",
+                  "value": "20"
+                },
+                {
+                  "key": "offset",
+                  "value": "0",
+                  "disabled": true
+                },
+                {
+                  "key": "lang",
+                  "value": "ko",
+                  "disabled": true
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "장비 옵션 상세",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{baseUrl}}/api/equips/options/7000501",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "equips",
+                "options",
+                "7000501"
+              ],
+              "query": [
+                {
+                  "key": "lang",
+                  "value": "ko",
+                  "disabled": true
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "장비 상세",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{baseUrl}}/api/equips/3110101",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "equips",
+                "3110101"
+              ],
+              "query": [
+                {
+                  "key": "lang",
+                  "value": "ko",
+                  "disabled": true
+                },
+                {
+                  "key": "fields",
+                  "value": "",
+                  "disabled": true
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
       "name": "Favorites",
       "item": [
         {

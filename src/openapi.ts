@@ -238,6 +238,51 @@ export const openapi = {
         responses: { "200": { description: "코스튬 상세" }, "400": { description: "id 형식 오류" }, "404": { description: "없음" } },
       },
     },
+    "/api/equips": {
+      get: {
+        tags: ["equips"],
+        summary: "장비 아이템 목록",
+        parameters: [
+          { name: "q", in: "query", schema: { type: "string" }, description: "장비 이름 검색 (전 언어 부분 일치)" },
+          { name: "class", in: "query", schema: { type: "string" }, description: "장착 클래스 (All/Attacker/Defender/Supporter)" },
+          { name: "rare", in: "query", schema: { type: "string" }, description: "등급 (T7~T10 등)" },
+          { name: "slot", in: "query", schema: { type: "string", enum: ["head", "arm", "leg"] } },
+          { name: "limit", in: "query", schema: { type: "integer", maximum: 500 }, description: "최대 500, 미지정 시 전체" },
+          { name: "offset", in: "query", schema: { type: "integer", default: 0 } },
+        ],
+        responses: { "200": { description: "장비 목록 — count는 잘라내기 전 전체 개수" } },
+      },
+    },
+    "/api/equips/options": {
+      get: {
+        tags: ["equips"],
+        summary: "장비 옵션 목록",
+        parameters: [
+          { name: "q", in: "query", schema: { type: "string" }, description: "옵션 이름 검색" },
+          { name: "groupId", in: "query", schema: { type: "integer" }, description: "옵션 그룹 ID" },
+          { name: "rank", in: "query", schema: { type: "integer" }, description: "옵션 등급" },
+          { name: "limit", in: "query", schema: { type: "integer", maximum: 500 } },
+          { name: "offset", in: "query", schema: { type: "integer", default: 0 } },
+        ],
+        responses: { "200": { description: "옵션 목록" }, "400": { description: "groupId/rank 형식 오류" } },
+      },
+    },
+    "/api/equips/options/{id}": {
+      get: {
+        tags: ["equips"],
+        summary: "장비 옵션 상세",
+        parameters: [{ name: "id", in: "path", required: true, schema: { type: "integer" }, example: 7000501 }],
+        responses: { "200": { description: "옵션 상세" }, "400": { description: "id 형식 오류" }, "404": { description: "없음" } },
+      },
+    },
+    "/api/equips/{id}": {
+      get: {
+        tags: ["equips"],
+        summary: "장비 아이템 상세",
+        parameters: [{ name: "id", in: "path", required: true, schema: { type: "integer" }, example: 3110101, description: "장비 tid" }],
+        responses: { "200": { description: "장비 상세" }, "400": { description: "id 형식 오류" }, "404": { description: "없음" } },
+      },
+    },
     "/api/favorites": {
       get: {
         tags: ["favorites"],
@@ -453,6 +498,10 @@ for (const p of [
   "/api/stages/{id}",
   "/api/costumes",
   "/api/costumes/{id}",
+  "/api/equips",
+  "/api/equips/options",
+  "/api/equips/options/{id}",
+  "/api/equips/{id}",
   "/api/favorites",
   "/api/favorites/{id}",
   "/api/cubes",

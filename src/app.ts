@@ -411,6 +411,10 @@ app.get("/", (c) =>
       "GET /api/stages/:id": "stage detail (id)",
       "GET /api/costumes": "costume list; filters: q, grade, nikke; limit/offset",
       "GET /api/costumes/:id": "costume detail (costume tid)",
+      "GET /api/equips": "equipment item list; filters: q, class, rare, slot; limit/offset",
+      "GET /api/equips/options": "equipment option list; filters: q, groupId, rank",
+      "GET /api/equips/options/:id": "equipment option detail",
+      "GET /api/equips/:id": "equipment item detail (equip tid)",
       "GET /api/favorites": "소장품(favorite item) list; filters: q, rare",
       "GET /api/favorites/:id": "소장품 detail — per-level stats, skills",
       "GET /api/cubes": "하모니 큐브 list; filter: q",
@@ -578,6 +582,81 @@ app.get("/api/costumes/:id", async (c) => {
   const co = (await getCostumeMap())[id];
   if (!co) return c.json({ error: "not found" }, 404);
   return c.json(pickFields(costumeRow(Number(id), co), fieldsOf(c)));
+});
+
+// normalized rows served by /api/equips
+const equipRow = (tid: number, item: any) => ({
+  id: tid,
+  name: item.name ?? null,
+  class: item.class ?? null,
+  rare: item.rare ?? null,
+  slot: item.slot ?? null,
+  icon: item.icon ?? null,
+});
+const optionRow = (oid: number, o: any) => ({
+  id: oid,
+  groupId: o.groupId ?? null,
+  rank: o.rank ?? null,
+  name: o.name ?? null,
+});
+const matchName = (list: any[], q: string) => {
+  const nq = norm(q);
+  return list.filter((x) => Object.values(x.name ?? {}).some((n) => norm(String(n)).includes(nq)));
+};
+
+// static /options must be registered before /:id — the param route would
+// otherwise swallow it as id="options"
+app.get("/api/equips/options", async (c) => {
+  const { q, groupId, rank, limit, offset } = c.req.query();
+  await loadEquipMaps();
+  let list = Object.entries(equipOptionMap ?? {}).map(([oid, o]) => optionRow(Number(oid), o));
+  if (groupId) {
+    const g = Number(groupId);
+    if (Number.isNaN(g)) return c.json({ error: "invalid groupId" }, 400);
+    list = list.filter((x) => x.groupId === g);
+  }
+  if (rank) {
+    const r = Number(rank);
+    if (Number.isNaN(r)) return c.json({ error: "invalid rank" }, 400);
+    list = list.filter((x) => x.rank === r);
+  }
+  if (q) list = matchName(list, q);
+  const total = list.length;
+  const off = Math.max(0, Number(offset) || 0);
+  const lim = Math.min(Math.max(0, Number(limit) || 0), 500) || total;
+  return c.json({ count: total, offset: off, options: pickFields(list.slice(off, off + lim), fieldsOf(c)) });
+});
+
+app.get("/api/equips/options/:id", async (c) => {
+  const id = c.req.param("id");
+  if (!/^\d+$/.test(id)) return c.json({ error: "invalid id" }, 400);
+  await loadEquipMaps();
+  const o = equipOptionMap?.[id];
+  if (!o) return c.json({ error: "not found" }, 404);
+  return c.json(pickFields(optionRow(Number(id), o), fieldsOf(c)));
+});
+
+app.get("/api/equips", async (c) => {
+  const { q, class: cls, rare, slot, limit, offset } = c.req.query();
+  await loadEquipMaps();
+  let list = Object.entries(equipItemMap ?? {}).map(([tid, item]) => equipRow(Number(tid), item));
+  if (cls) list = list.filter((x) => norm(x.class ?? "") === norm(cls));
+  if (rare) list = list.filter((x) => norm(x.rare ?? "") === norm(rare));
+  if (slot) list = list.filter((x) => norm(x.slot ?? "") === norm(slot));
+  if (q) list = matchName(list, q);
+  const total = list.length;
+  const off = Math.max(0, Number(offset) || 0);
+  const lim = Math.min(Math.max(0, Number(limit) || 0), 500) || total;
+  return c.json({ count: total, offset: off, equips: pickFields(list.slice(off, off + lim), fieldsOf(c)) });
+});
+
+app.get("/api/equips/:id", async (c) => {
+  const id = c.req.param("id");
+  if (!/^\d+$/.test(id)) return c.json({ error: "invalid id" }, 400);
+  await loadEquipMaps();
+  const item = equipItemMap?.[id];
+  if (!item) return c.json({ error: "not found" }, 404);
+  return c.json(pickFields(equipRow(Number(id), item), fieldsOf(c)));
 });
 
 app.get("/api/favorites", async (c) => {

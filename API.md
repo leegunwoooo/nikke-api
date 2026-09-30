@@ -22,6 +22,10 @@
 - [GET /api/stages/:id](#get-apistagesid) — 스테이지 상세
 - [GET /api/costumes](#get-apicostumes) — 코스튬 목록
 - [GET /api/costumes/:id](#get-apicostumesid) — 코스튬 상세
+- [GET /api/equips](#get-apiequips) — 장비 아이템 목록
+- [GET /api/equips/options](#get-apiequipsoptions) — 장비 옵션 목록
+- [GET /api/equips/options/:id](#get-apiequipsoptionsid) — 장비 옵션 상세
+- [GET /api/equips/:id](#get-apiequipsid) — 장비 아이템 상세
 - [GET /api/favorites](#get-apifavorites) — 소장품 목록
 - [GET /api/favorites/:id](#get-apifavoritesid) — 소장품 상세 (레벨별 스탯·스킬)
 - [GET /api/cubes](#get-apicubes) — 하모니 큐브 목록
@@ -467,6 +471,63 @@ GET /api/costumes/10012?lang=ko
 |------|------|
 | `id`가 숫자가 아님 | 400 `{"error": "invalid id"}` |
 | 해당 코스튬 없음 | 404 `{"error": "not found"}` |
+
+## GET /api/equips
+
+장비(기어) 아이템 목록을 반환합니다 — 124종.
+
+### 쿼리 파라미터
+
+| 파라미터 | 설명 | 예시 |
+|----------|------|------|
+| `q` | 장비 이름 부분 일치 (전 언어) | `?q=바이저` |
+| `class` | 장착 클래스 | `All` / `Attacker` / `Defender` / `Supporter` |
+| `rare` | 등급 | `T1` ~ `T10` |
+| `slot` | 부위 | `head` / `arm` / `leg` |
+| `limit` | 반환 개수 제한 (최대 500) | `?limit=50` |
+| `offset` | 시작 위치 | `?offset=50` |
+| `fields` | 응답 필드 선택 | `?fields=id,name.ko,icon` |
+| `lang` | 다국어 필드 평탄화 | `?lang=ko` |
+
+```json
+{
+  "count": 124,
+  "offset": 0,
+  "equips": [
+    { "id": 3110101, "name": { "ko": "...", "en": "...", "ja": "..." },
+      "class": "All", "rare": "T9", "slot": "head", "icon": "https://..." }
+  ]
+}
+```
+
+`id`는 `/api/user/...` 보유 니케의 `equipment.*.tid`와 같은 값입니다.
+
+## GET /api/equips/options
+
+장비 옵션(재련 옵션) 목록 — 150종, 12개 그룹.
+
+| 파라미터 | 설명 | 예시 |
+|----------|------|------|
+| `q` | 옵션 이름 부분 일치 | `?q=우월코드` |
+| `groupId` | 옵션 그룹 ID | `?groupId=100100` |
+| `rank` | 옵션 등급 (1~15) | `?rank=3` |
+| `limit` / `offset` / `fields` / `lang` | 목록 공통 | |
+
+**에러**: `groupId`·`rank`가 숫자가 아니면 400.
+
+## GET /api/equips/options/:id
+
+옵션 ID로 단건 조회합니다.
+
+```
+GET /api/equips/options/7000501?lang=ko
+```
+
+## GET /api/equips/:id
+
+장비 tid로 단건 조회합니다. 응답은 목록 `equips[]` 항목과 동일합니다.
+
+**에러**: `id`가 숫자가 아니면 400, 없으면 404.
 
 ## GET /api/favorites
 

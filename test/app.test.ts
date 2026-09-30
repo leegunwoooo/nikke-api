@@ -88,6 +88,33 @@ test("/api/costumes list + filters + detail", async () => {
   assert.equal((await json("/api/costumes/10012?lang=ko")).name, "테스트 코스튬");
 });
 
+test("/api/equips + /options list, filters, detail", async () => {
+  const all = await json("/api/equips");
+  assert.equal(all.count, 3);
+  assert.equal(all.equips[0].id, 3110101);
+  assert.equal(all.equips[0].slot, "head");
+  assert.equal((await json("/api/equips?class=attacker")).count, 1);
+  assert.equal((await json("/api/equips?rare=T8")).count, 1);
+  assert.equal((await json("/api/equips?slot=arm")).count, 1);
+  assert.equal((await json("/api/equips?q=visor")).count, 1);
+
+  const opts = await json("/api/equips/options");
+  assert.equal(opts.count, 3);
+  assert.equal((await json("/api/equips/options?groupId=100100")).count, 2);
+  assert.equal((await json("/api/equips/options?rank=2")).count, 1);
+  assert.equal((await json("/api/equips/options?q=atk")).count, 1);
+  assert.equal((await get("/api/equips/options?groupId=x")).status, 400);
+
+  const item = await json("/api/equips/3110201");
+  assert.equal(item.class, "Attacker");
+  const opt = await json("/api/equips/options/7000501");
+  assert.equal(opt.groupId, 100100);
+  assert.equal((await json("/api/equips/options/7000501?lang=ko")).name, "[공격력 증가]");
+  assert.equal((await get("/api/equips/999")).status, 404);
+  assert.equal((await get("/api/equips/options/999")).status, 404);
+  assert.equal((await get("/api/equips/abc")).status, 400);
+});
+
 test("favorites + tables", async () => {
   assert.equal((await json("/api/favorites?q=tele")).count, 1);
   assert.equal((await get("/api/favorites/999")).status, 404);

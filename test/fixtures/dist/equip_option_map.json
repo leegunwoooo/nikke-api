@@ -1,0 +1,5 @@
+{
+  "7000501": { "groupId": 100100, "rank": 1, "name": { "ko": "[공격력 증가]", "en": "[ATK up]" } },
+  "7000502": { "groupId": 100100, "rank": 2, "name": { "ko": "[우월코드 대미지 증가]", "en": "[Advantage Dmg up]" } },
+  "7000601": { "groupId": 100200, "rank": 1, "name": { "ko": "[명중률 증가]", "en": "[Hit Rate up]" } }
+}
