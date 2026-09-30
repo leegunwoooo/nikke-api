@@ -173,6 +173,7 @@ test("/api/equips + /options list, filters, detail", async () => {
   assert.equal((await json("/api/equips?class=attacker")).count, 1);
   assert.equal((await json("/api/equips?rare=T8")).count, 1);
   assert.equal((await json("/api/equips?slot=arm")).count, 1);
+  assert.equal((await json("/api/equips?slot=body")).count, 1); // chest gear slot is "body"
   assert.equal((await json("/api/equips?q=visor")).count, 1);
 
   const opts = await json("/api/equips/options");

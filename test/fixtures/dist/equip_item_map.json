@@ -1,5 +1,34 @@
 {
-  "3110101": { "name": { "ko": "테스트 바이저", "en": "Test Visor", "ja": "-" }, "class": "All", "rare": "T9", "slot": "head", "icon": "icon.png" },
-  "3110201": { "name": { "ko": "테스트 암가드", "en": "Test Armguard", "ja": "-" }, "class": "Attacker", "rare": "T9", "slot": "arm", "icon": "icon2.png" },
-  "3110301": { "name": { "ko": "테스트 부츠", "en": "Test Boots" }, "class": "Supporter", "rare": "T8", "slot": "leg", "icon": "icon3.png" }
+  "3110101": {
+    "name": {
+      "ko": "테스트 바이저",
+      "en": "Test Visor",
+      "ja": "-"
+    },
+    "class": "All",
+    "rare": "T9",
+    "slot": "head",
+    "icon": "icon.png"
+  },
+  "3110201": {
+    "name": {
+      "ko": "테스트 암가드",
+      "en": "Test Armguard",
+      "ja": "-"
+    },
+    "class": "Attacker",
+    "rare": "T9",
+    "slot": "arm",
+    "icon": "icon2.png"
+  },
+  "3110301": {
+    "name": {
+      "ko": "테스트 베스트",
+      "en": "Test Vest"
+    },
+    "class": "Supporter",
+    "rare": "T8",
+    "slot": "body",
+    "icon": "icon3.png"
+  }
 }

@@ -253,8 +253,9 @@ async function main() {
     name: Partial<Record<Locale, string>>;
     class?: string; rare?: string; slot?: string; icon?: string;
   }> = {};
+  // chest gear resource ids use "body" (not "torso")
   const slotOf = (rid?: string) =>
-    rid?.match(/icn_equipment_(head|torso|arm|leg)_/)?.[1];
+    rid?.match(/icn_equipment_(head|body|arm|leg)_/)?.[1];
   for (const [li, tbl] of equipTables.entries()) {
     for (const r of tbl?.records ?? []) {
       const e = (equipItemMap[r.id] ??= { name: {} });

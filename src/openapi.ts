@@ -250,7 +250,7 @@ export const openapi = {
           { name: "q", in: "query", schema: { type: "string" }, description: "장비 이름 검색 (전 언어 부분 일치)" },
           { name: "class", in: "query", schema: { type: "string" }, description: "장착 클래스 (All/Attacker/Defender/Supporter)" },
           { name: "rare", in: "query", schema: { type: "string" }, description: "등급 (T7~T10 등)" },
-          { name: "slot", in: "query", schema: { type: "string", enum: ["head", "arm", "leg"] } },
+          { name: "slot", in: "query", schema: { type: "string", enum: ["head", "body", "arm", "leg"] }, description: "부위 (몸통은 body — 리소스 id의 icn_equipment_body_*에 대응)" },
           { name: "page", in: "query", schema: { type: "integer", minimum: 1 }, description: "페이지 번호 (1부터 — offset 대신 사용, 미지정 limit 시 페이지 크기 50)" },
           { name: "limit", in: "query", schema: { type: "integer", maximum: 500 }, description: "최대 500, 미지정 시 전체" },
           { name: "offset", in: "query", schema: { type: "integer", default: 0 } },

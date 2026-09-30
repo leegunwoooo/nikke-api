@@ -243,7 +243,7 @@ GET /api/nikkes/아니스
   "costumeGrades": ["Special","Normal","Event"],
   "equipClasses": ["Attacker","Defender","Supporter","All"],
   "equipRares": ["T7","T8","T9","T10"],
-  "equipSlots": ["head","arm","leg"],
+  "equipSlots": ["head","body","arm","leg"],
   "equipOptionRanks": [1, 2, 3]
 }
 ```
@@ -503,7 +503,7 @@ GET /api/costumes/10012?lang=ko
 | `q` | 장비 이름 부분 일치 (전 언어) | `?q=바이저` |
 | `class` | 장착 클래스 | `All` / `Attacker` / `Defender` / `Supporter` |
 | `rare` | 등급 | `T1` ~ `T10` |
-| `slot` | 부위 | `head` / `arm` / `leg` |
+| `slot` | 부위 | `head` / `body` / `arm` / `leg` (몸통은 `body`) |
 | `limit` | 반환 개수 제한 (최대 500) | `?limit=50` |
 | `offset` | 시작 위치 | `?offset=50` |
 | `page` | 페이지 번호 (1부터) | `?page=2` |
