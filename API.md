@@ -475,10 +475,14 @@ GET /api/costumes?grade=Special&limit=20
 
 ## GET /api/costumes/:id
 
-코스튬 tid로 단건 조회합니다. 응답 형태는 목록의 `costumes[]` 항목과 동일합니다.
+코스튬 tid 또는 **이름**으로 조회합니다 (`/api/nikkes/:id`와 동일한 규칙). 응답 형태는 목록의 `costumes[]` 항목과 동일합니다.
+
+- 숫자: 코스튬 tid 조회
+- 그 외: 코스튬 이름 부분 일치 (전 언어, 대소문자·공백 무시) — 1건만 매칭되면 상세, 복수 매칭이면 `{count, costumes[]}` 목록
 
 ```
 GET /api/costumes/10012
+GET /api/costumes/수영복
 GET /api/costumes/10012?lang=ko
 ```
 
@@ -486,8 +490,7 @@ GET /api/costumes/10012?lang=ko
 
 | 상황 | 상태 |
 |------|------|
-| `id`가 숫자가 아님 | 400 `{"error": "invalid id"}` |
-| 해당 코스튬 없음 | 404 `{"error": "not found"}` |
+| 해당 id·이름의 코스튬 없음 | 404 `{"error": "not found"}` |
 
 ## GET /api/equips
 

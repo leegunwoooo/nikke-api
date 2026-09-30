@@ -117,6 +117,14 @@ test("/api/stages list + filters + detail", async () => {
   assert.equal((await get("/api/stages?chapter=x")).status, 400);
 });
 
+test("/api/costumes/:id accepts names too (like /api/nikkes/:id)", async () => {
+  const one = await json("/api/costumes/수영복");
+  assert.equal(one.id, 20001);
+  const many = await json("/api/costumes/코스튬");
+  assert.equal(many.count, 2);
+  assert.equal((await get("/api/costumes/없는이름")).status, 404);
+});
+
 test("/api/costumes list + filters + detail", async () => {
   const all = await json("/api/costumes");
   assert.equal(all.count, 3);
@@ -135,7 +143,7 @@ test("/api/costumes list + filters + detail", async () => {
   const d = await json("/api/costumes/10012");
   assert.equal(d.name.ko, "테스트 코스튬");
   assert.equal((await get("/api/costumes/777")).status, 404);
-  assert.equal((await get("/api/costumes/abc")).status, 400);
+  assert.equal((await get("/api/costumes/abc")).status, 404); // name lookup, no match
   // ?lang flattens localized fields
   assert.equal((await json("/api/costumes/10012?lang=ko")).name, "테스트 코스튬");
 });

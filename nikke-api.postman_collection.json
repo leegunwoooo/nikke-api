@@ -488,7 +488,8 @@
                   "disabled": true
                 }
               ]
-            }
+            },
+            "description": "tid 또는 코스튬 이름(부분 일치)로 조회 — 예: /api/costumes/수영복"
           }
         }
       ]

@@ -238,8 +238,8 @@ export const openapi = {
       get: {
         tags: ["costumes"],
         summary: "코스튬 상세 — 이름·설명·등급·소유 니케·이미지",
-        parameters: [{ name: "id", in: "path", required: true, schema: { type: "integer" }, example: 10012, description: "코스튬 tid" }],
-        responses: { "200": { description: "코스튬 상세" }, "400": { description: "id 형식 오류" }, "404": { description: "없음" } },
+        parameters: [{ name: "id", in: "path", required: true, schema: { type: "string" }, example: 10012, description: "코스튬 tid 또는 이름 (부분 일치 — 복수 매칭 시 목록 반환)" }],
+        responses: { "200": { description: "코스튬 상세 (이름 복수 매칭 시 목록)" }, "404": { description: "없음" } },
       },
     },
     "/api/equips": {

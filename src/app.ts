@@ -626,10 +626,20 @@ app.get("/api/costumes", async (c) => {
 
 app.get("/api/costumes/:id", async (c) => {
   const id = c.req.param("id");
-  if (!/^\d+$/.test(id)) return c.json({ error: "invalid id" }, 400);
-  const co = (await getCostumeMap())[id];
-  if (!co) return c.json({ error: "not found" }, 404);
-  return c.json(pickFields(costumeRow(Number(id), co), fieldsOf(c)));
+  const fields = fieldsOf(c);
+  // numeric: costume tid lookup; otherwise name match like /api/nikkes/:id
+  if (/^\d+$/.test(id)) {
+    const co = (await getCostumeMap())[id];
+    if (!co) return c.json({ error: "not found" }, 404);
+    return c.json(pickFields(costumeRow(Number(id), co), fields));
+  }
+  const nq = norm(id);
+  const hits = Object.entries(await getCostumeMap())
+    .map(([tid, co]) => costumeRow(Number(tid), co))
+    .filter((x) => Object.values(x.name ?? {}).some((n) => norm(String(n)).includes(nq)));
+  if (hits.length === 1) return c.json(pickFields(hits[0], fields));
+  if (hits.length > 1) return c.json({ count: hits.length, costumes: pickFields(hits, fields) });
+  return c.json({ error: "not found" }, 404);
 });
 
 // normalized rows served by /api/equips

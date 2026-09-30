@@ -104,7 +104,7 @@ GET /api/user/<blablaid>/nikke/아니스               # 부분 일치 → 매�
 | `GET /api/stages` | 캠페인 스테이지 목록 — `?chapter=` `?mode=` `?q=` `?limit=`/`?offset=`/`?page=` |
 | `GET /api/stages/:id` | 스테이지 상세 — 권장 전투력·시나리오 키 |
 | `GET /api/costumes` | 코스튬 목록 — `?q=` `?grade=` `?nikke=` `?limit=`/`?offset=`/`?page=` |
-| `GET /api/costumes/:id` | 코스튬 상세 — 소유 니케·이미지 포함 |
+| `GET /api/costumes/:id` | 코스튬 상세 — tid 또는 이름(부분 일치), 소유 니케·이미지 포함 |
 | `GET /api/equips` | 장비 목록 — `?q=` `?class=` `?rare=` `?slot=` `?limit=`/`?offset=`/`?page=` |
 | `GET /api/equips/options` | 장비 옵션 목록 — `?q=` `?groupId=` `?rank=` `?limit=`/`?page=` |
 | `GET /api/equips/options/:id` | 장비 옵션 상세 |
