@@ -272,7 +272,7 @@ test("/api/user responses are never edge-cached", async () => {
   assert.equal(res.headers.get("ETag"), null);
 });
 
-test("user-nikke matchers: ?id vs ?name vs unified :key", async () => {
+test("user-nikke matchers: ?id vs ?name vs unified :nameOrId", async () => {
   const { makeNikkeMatchers } = await import("../src/app.js");
   // N102: name contains digits — the old unified matcher missed it on
   // numeric queries because it only compared ids
@@ -295,7 +295,7 @@ test("user-nikke matchers: ?id vs ?name vs unified :key", async () => {
   assert.equal(m.matchesNikkeName("xyz", n102), false);
   assert.equal(m.matchesNikkeName("", n102), true); // empty = no filter
 
-  // unified :key match covers both (a numeric key also hits digit names)
+  // unified :nameOrId match covers both (a numeric key also hits digit names)
   assert.equal(m.matchesNikke("102", n102), true);
   assert.equal(m.matchesNikke("112001", n102), true);
   assert.equal(m.matchesNikke("N102", n102), true);
