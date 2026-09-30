@@ -70,6 +70,9 @@ function lazyIndex<T>(file: string): () => Promise<T[]> {
 
 const getScenes = lazyIndex<SceneIndexEntry>("scenes.json");
 const getFavorites = lazyIndex<FavoriteIndexEntry>("favorites.json");
+const getCubes = lazyIndex<{ id: number; rare?: string; name: Record<string, string> }>(
+  "cubes.json",
+);
 
 const norm = (s: string) => s.toLowerCase().replace(/[\s:_\-·]/g, "");
 
@@ -130,10 +133,7 @@ async function loadFavNames() {
 async function loadCubeNames() {
   if (!cubeNameMap) {
     cubeNameMap = new Map();
-    try {
-      const list = JSON.parse(await readFile(path.join(DIST, "cubes.json"), "utf8"));
-      for (const cu of list) cubeNameMap.set(cu.id, cu);
-    } catch { /* empty */ }
+    for (const cu of await getCubes()) cubeNameMap.set(cu.id, cu);
   }
   return cubeNameMap;
 }
@@ -183,6 +183,13 @@ const stageRow = (s: any) => ({
   name: s.name_localkey?.name ?? "",
   scenarios: { enter: s.enter_scenario ?? null, exit: s.exit_scenario ?? null },
 });
+
+// the raw table is ~4.4k rows — normalize once, not per request
+let stageRowsNorm: ReturnType<typeof stageRow>[] | null = null;
+async function getStageRows() {
+  stageRowsNorm ??= (await getStages()).map(stageRow);
+  return stageRowsNorm;
+}
 
 async function loadStageMap() {
   if (!stageMap) {
@@ -545,7 +552,7 @@ app.get("/api/scenes/:groupId", async (c) => {
 
 app.get("/api/stages", async (c) => {
   const { q, chapter, mode, limit, offset } = c.req.query();
-  let list = (await getStages()).map(stageRow);
+  let list = await getStageRows();
   if (chapter) {
     const ch = Number(chapter);
     if (Number.isNaN(ch)) return c.json({ error: "invalid chapter" }, 400);
@@ -569,9 +576,9 @@ app.get("/api/stages", async (c) => {
 app.get("/api/stages/:id", async (c) => {
   const id = c.req.param("id");
   if (!/^\d+$/.test(id)) return c.json({ error: "invalid id" }, 400);
-  const s = (await getStages()).find((x) => x.id === Number(id));
+  const s = (await getStageRows()).find((x) => x.id === Number(id));
   if (!s) return c.json({ error: "not found" }, 404);
-  return c.json(pickFields(stageRow(s), fieldsOf(c)));
+  return c.json(pickFields(s, fieldsOf(c)));
 });
 
 app.get("/api/costumes", async (c) => {
@@ -778,25 +785,19 @@ app.get("/api/favorites/:id", async (c) => {
 
 app.get("/api/cubes", async (c) => {
   const { q } = c.req.query();
-  try {
-    let list: { id: number; rare?: string; name: Record<string, string> }[] = JSON.parse(
-      await readFile(path.join(DIST, "cubes.json"), "utf8"),
-    );
-    if (q) {
-      const nq = norm(q);
-      list = list.filter((x) => Object.values(x.name).some((n) => norm(n).includes(nq)));
-    }
-    const total = list.length;
-    const pg = pageQuery(c, total);
-    return c.json({
-      count: total,
-      offset: pg.off,
-      ...(pg.page ? { page: pg.page, totalPages: Math.ceil(total / pg.lim) } : {}),
-      cubes: pickFields(list.slice(pg.off, pg.off + pg.lim), fieldsOf(c)),
-    });
-  } catch {
-    return c.json({ count: 0, cubes: [] });
+  let list = await getCubes();
+  if (q) {
+    const nq = norm(q);
+    list = list.filter((x) => Object.values(x.name).some((n) => norm(n).includes(nq)));
   }
+  const total = list.length;
+  const pg = pageQuery(c, total);
+  return c.json({
+    count: total,
+    offset: pg.off,
+    ...(pg.page ? { page: pg.page, totalPages: Math.ceil(total / pg.lim) } : {}),
+    cubes: pickFields(list.slice(pg.off, pg.off + pg.lim), fieldsOf(c)),
+  });
 });
 
 app.get("/api/cubes/:id", async (c) => {
