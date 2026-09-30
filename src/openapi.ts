@@ -319,12 +319,12 @@ export const openapi = {
         },
       },
     },
-    "/api/user/{blablaid}/nikke/{key}": {
+    "/api/user/{blablaid}/nikke/{nameOrId}": {
       get: {
         tags: ["user"],
         summary: "유저 보유 니케 단일 상세",
         description:
-          "key = 니케 이름(전 언어 부분 일치)·id·resourceId·nameCode — /api/nikkes/{id}와 같은 방식. " +
+          "nameOrId = 니케 이름(전 언어 부분 일치)·id·resourceId·nameCode — /api/nikkes/{id}와 같은 방식. " +
           "단일 매칭 시 상세(스킬 레벨·장비+옵션 수치·큐브·소장품·코스튬·호감도), 복수 매칭 시 경량 목록 반환.",
         parameters: [
           {
@@ -335,11 +335,11 @@ export const openapi = {
             description: "BlablaLink 공유 ID (base64 openid)",
           },
           {
-            name: "key",
+            name: "nameOrId",
             in: "path",
             required: true,
             schema: { type: "string" },
-            description: "이름(부분 일치) 또는 숫자 id",
+            description: "이름(부분 일치) 또는 숫자 id·resourceId·nameCode",
             example: "아니스 : 스타",
           },
         ],

@@ -24,7 +24,7 @@
 - [GET /api/cubes/:id](#get-apicubesid) — 큐브 상세 (레벨별 스탯·스킬)
 - [GET /api/user](#get-apiuser) — 유저 프로필 조회 (공유 링크)
 - [GET /api/user/:blablaid/nikke](#get-apiuserblablaidnikke) — 유저 보유 니케 목록 (경량)
-- [GET /api/user/:blablaid/nikke/:key](#get-apiuserblablaidnikkekey) — 유저 보유 니케 상세 (이름 부분 일치/id)
+- [GET /api/user/:blablaid/nikke/:nameOrId](#get-apiuserblablaidnikkenameorid) — 유저 보유 니케 상세 (이름 부분 일치/id)
 - [GET /api/cdn](#get-apicdn) — CDN 경로 → URL 변환
 - [공통: 필드 선택 `?fields=`](#공통-필드-선택-fields)
 - [공통: 언어 선택 `?lang=`](#공통-언어-선택-lang)
@@ -529,7 +529,7 @@ GET /api/user/<blablaid>                          # 경로로도 가능
 | `id` | 선택. 숫자 정확 매칭 — 캐릭터 id·resourceId·nameCode |
 | `name` | 선택. 이름 부분 일치 (전 언어, 대소문자·공백 무시 — `102`는 N102도 매칭) |
 | `q` | 선택(deprecated). `name`과 동일 — 하위 호환 별칭 |
-| `element` `class` `burst` `corporation` `weapon` `rarity` | 선택. [GET /api/nikkes](#get-apinikkes)와 동일한 필터 — AND 결합. 상세가 필요하면 [GET /api/user/:blablaid/nikke/:key](#get-apiuserblablaidnikkekey) 사용 |
+| `element` `class` `burst` `corporation` `weapon` `rarity` | 선택. [GET /api/nikkes](#get-apinikkes)와 동일한 필터 — AND 결합. 상세가 필요하면 [GET /api/user/:blablaid/nikke/:nameOrId](#get-apiuserblablaidnikkenameorid) 사용 |
 | `fields` | 선택. 응답 필드 선택 (`nikkes[]` 각 항목에 적용) |
 
 ```
@@ -559,11 +559,11 @@ GET /api/user/<blablaid>/nikke?element=Iron&burst=III  # 도감과 동일한 속
 }
 ```
 
-## GET /api/user/:blablaid/nikke/:key
+## GET /api/user/:blablaid/nikke/:nameOrId
 
 보유 니케 **한 명**의 상세를 조회합니다 — 장비·옵션·큐브·소장품·스킬 레벨까지 포함. 매칭 방식은 [GET /api/nikkes/:id](#get-apinikkesid)와 동일합니다.
 
-| `:key` | 매칭 방식 |
+| `:nameOrId` | 매칭 방식 |
 |--------|----------|
 | 니케 이름 | 부분 일치(전 언어, 대소문자·공백·`:` 무시) — `아니스`로 조회하면 보유한 아니스 계열 전부 매칭 |
 | 숫자 | 캐릭터 id · resourceId · nameCode 중 일치 **또는** 이름에 그 숫자가 포함 — `102`는 N102도 매칭 |
@@ -575,7 +575,7 @@ GET /api/user/<blablaid>/nikke/아니스%20%3A%20스타   # 이름 (URL 인코�
 GET /api/user/<blablaid>/nikke/3017                # 캐릭터 id
 ```
 
-구형 쿼리 형태 `GET /api/user/nikke/:key?blablaid=...`·`?openid=`도 동일하게 동작합니다.
+구형 쿼리 형태 `GET /api/user/nikke/:nameOrId?blablaid=...`·`?openid=`도 동일하게 동작합니다.
 
 응답 항목 형태:
 
@@ -664,7 +664,7 @@ GET /api/cdn?path=character/ko/nikke_list_v2.json
 | `/api/cubes` | `cubes[]` 각 항목 |
 | `/api/cubes/:id` | 상세 객체 |
 | `/api/user/:blablaid/nikke` | `nikkes[]` 각 항목 (구형 `?blablaid=` 경로도 동일) |
-| `/api/user/:blablaid/nikke/:key` | 상세 객체 (복수 매칭 시 `nikkes[]` 각 항목) |
+| `/api/user/:blablaid/nikke/:nameOrId` | 상세 객체 (복수 매칭 시 `nikkes[]` 각 항목) |
 
 ```
 GET /api/nikkes?fields=id,name.ko,element

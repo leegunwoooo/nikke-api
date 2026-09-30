@@ -15,7 +15,7 @@
       "description": "BlablaLink 공유 ID (base64 openid) — /api/user/* 요청에 사용"
     },
     {
-      "key": "nikkeKey",
+      "key": "nikkeNameOrId",
       "value": "아니스 : 스타",
       "description": "니케 이름(전 언어 부분 일치)·id·resourceId·nameCode"
     }
@@ -307,9 +307,9 @@
           "request": {
             "method": "GET",
             "url": {
-              "raw": "{{baseUrl}}/api/user/{{blablaid}}/nikke/{{nikkeKey}}",
+              "raw": "{{baseUrl}}/api/user/{{blablaid}}/nikke/{{nikkeNameOrId}}",
               "host": ["{{baseUrl}}"],
-              "path": ["api", "user", "{{blablaid}}", "nikke", "{{nikkeKey}}"],
+              "path": ["api", "user", "{{blablaid}}", "nikke", "{{nikkeNameOrId}}"],
               "query": [{ "key": "lang", "value": "ko", "disabled": true }]
             }
           }
@@ -319,9 +319,9 @@
           "request": {
             "method": "GET",
             "url": {
-              "raw": "{{baseUrl}}/api/user/nikke/{{nikkeKey}}?blablaid={{blablaid}}",
+              "raw": "{{baseUrl}}/api/user/nikke/{{nikkeNameOrId}}?blablaid={{blablaid}}",
               "host": ["{{baseUrl}}"],
-              "path": ["api", "user", "nikke", "{{nikkeKey}}"],
+              "path": ["api", "user", "nikke", "{{nikkeNameOrId}}"],
               "query": [
                 { "key": "blablaid", "value": "{{blablaid}}" },
                 { "key": "lang", "value": "ko", "disabled": true }

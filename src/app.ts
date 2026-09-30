@@ -175,7 +175,7 @@ const CORP_NAMES: Record<number, string> = {
   7: "ABNORMAL",
 };
 
-// owned-nikke matchers, split so ?id=/?name= (and the unified :key) can pick
+// owned-nikke matchers, split so ?id=/?name= (and the unified :nameOrId) can pick
 // the right comparison — exported for tests
 export function makeNikkeMatchers(charRef: (nameCode?: number | null) => any) {
   // digits only: name_code / character id / resourceId — never names
@@ -193,7 +193,7 @@ export function makeNikkeMatchers(charRef: (nameCode?: number | null) => any) {
     const nq = norm(query);
     return !!ref?.name && Object.values(ref.name as object).some((nm) => norm(nm).includes(nq));
   };
-  // unified match for the :key path param — id OR name
+  // unified match for the :nameOrId path param — id OR name
   const matchesNikke = (query: string, ch: any) =>
     !query ? true : matchesNikkeId(query, ch) || matchesNikkeName(query, ch);
   return { matchesNikkeId, matchesNikkeName, matchesNikke };
@@ -382,8 +382,8 @@ app.get("/", (c) =>
         "shared-profile lookup (blablaid = blablalink openid, or ?blablaid=/?url=)",
       "GET /api/user/:blablaid/nikke?q=":
         "owned-nikke list (same filters as /api/nikkes)",
-      "GET /api/user/:blablaid/nikke/:key":
-        "single owned-nikke detail (key = name/id/nameCode)",
+      "GET /api/user/:blablaid/nikke/:nameOrId":
+        "single owned-nikke detail (nameOrId = name/id/nameCode)",
     },
     fields:
       "?fields=a,b.c on nikkes, favorites, cubes, scene detail and user-nikke routes trims each object to those (dot) paths",
@@ -551,10 +551,10 @@ app.get("/api/tables/:file", async (c) => {
 // param route would otherwise swallow it as blablaid="nikke"
 app.get("/api/user", userProfile);
 app.get("/api/user/nikke", userNikkeList);
-app.get("/api/user/nikke/:key", userNikkeDetail);
+app.get("/api/user/nikke/:nameOrId", userNikkeDetail);
 app.get("/api/user/:blablaid", userProfile);
 app.get("/api/user/:blablaid/nikke", userNikkeList);
-app.get("/api/user/:blablaid/nikke/:key", userNikkeDetail);
+app.get("/api/user/:blablaid/nikke/:nameOrId", userNikkeDetail);
 
 async function userProfile(c: Context) {
   const q = openidInput(c);
@@ -713,13 +713,13 @@ async function userNikkeList(c: Context) {
   }
 }
 
-// single owned nikke detail — key is name / id / resourceId / nameCode,
+// single owned nikke detail — nameOrId is name / id / resourceId / nameCode,
 // matched like /api/nikkes/:id (fuzzy name); multiple hits return the list
 async function userNikkeDetail(c: Context) {
   try {
     const res = await loadOwnedNikkes(c);
     if ("error" in res) return res.error;
-    const key = c.req.param("key") ?? "";
+    const key = c.req.param("nameOrId") ?? "";
     const { charRef, normalizeNikke, matchesNikke } = await loadProfileLookups();
     const fields = fieldsOf(c);
     const hits = res.owned.filter((ch) => matchesNikke(key, ch));
