@@ -11,7 +11,8 @@
     "build": "tsx scripts/build.ts",
     "emit:server": "tsx scripts/emit-server.ts",
     "typecheck": "tsc -p tsconfig.check.json",
-    "build:data": "npm run sync && npm run build && npm run emit:server"
+    "build:data": "npm run sync && npm run build && npm run emit:server",
+    "fetch:data": "node scripts/fetch-dist.mjs"
   },
   "keywords": [],
   "type": "module",

@@ -1,6 +1,6 @@
 {
   "framework": null,
-  "buildCommand": "npm run build:data",
+  "buildCommand": "npm run fetch:data && npm run emit:server",
   "functions": {
     "api/index.js": {
       "includeFiles": "data/dist/**"

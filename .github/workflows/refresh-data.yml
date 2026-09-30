@@ -11,6 +11,9 @@ on:
         type: boolean
         default: false
 
+permissions:
+  contents: write # data-latest 릴리즈 artifact 업로드용
+
 jobs:
   redeploy:
     runs-on: ubuntu-latest
@@ -61,6 +64,23 @@ jobs:
           else
             echo "deploy=no" >> "$GITHUB_OUTPUT"; echo "reason=unchanged" >> "$GITHUB_OUTPUT"
           fi
+
+      # data/dist를 빌드해 data-latest 릴리즈에 올린다. Vercel 배포는
+      # scripts/fetch-dist.mjs가 이 artifact를 받아 쓰므로 CDN 재다운로드가 없다.
+      # 반드시 배포 훅보다 먼저 실행해야 새 데이터가 배포에 반영된다.
+      - name: Build data dist
+        if: steps.decide.outputs.deploy == 'yes'
+        run: npm run sync && npm run build
+
+      - name: Upload dist to data-latest release
+        if: steps.decide.outputs.deploy == 'yes'
+        run: |
+          tar -czf /tmp/dist.tar.gz -C data dist
+          gh release view data-latest >/dev/null 2>&1 || \
+            gh release create data-latest --title data-latest --notes "Rolling data bundle consumed by Vercel builds"
+          gh release upload data-latest /tmp/dist.tar.gz --clobber
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Trigger Vercel deploy hook
         if: steps.decide.outputs.deploy == 'yes'
