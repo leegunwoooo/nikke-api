@@ -415,6 +415,8 @@ app.get("/", (c) =>
       "GET /api/equips/options": "equipment option list; filters: q, groupId, rank",
       "GET /api/equips/options/:id": "equipment option detail",
       "GET /api/equips/:id": "equipment item detail (equip tid)",
+      "GET /api/avatars": "avatar icon list; filters: q, resourceId; limit/offset",
+      "GET /api/avatars/:iconId": "avatar detail (icon id)",
       "GET /api/favorites": "소장품(favorite item) list; filters: q, rare",
       "GET /api/favorites/:id": "소장품 detail — per-level stats, skills",
       "GET /api/cubes": "하모니 큐브 list; filter: q",
@@ -657,6 +659,51 @@ app.get("/api/equips/:id", async (c) => {
   const item = equipItemMap?.[id];
   if (!item) return c.json({ error: "not found" }, 404);
   return c.json(pickFields(equipRow(Number(id), item), fieldsOf(c)));
+});
+
+// normalized row served by /api/avatars — avatar_map iconId -> resource+costume
+// joined with the character list for owner + resolved icon image
+const avatarRow = (iconId: number, a: { resourceId: number; costumeIndex: number }) => {
+  const n = byResourceId.get(a.resourceId);
+  const costume = n && a.costumeIndex > 0 ? n.costumes[a.costumeIndex - 1] : undefined;
+  return {
+    iconId,
+    resourceId: a.resourceId,
+    costumeIndex: a.costumeIndex,
+    image: costume?.images.icon ?? n?.images.icon ?? null,
+    character: n ? { id: n.id, resourceId: n.resourceId, name: n.name, rarity: n.rarity } : null,
+  };
+};
+
+app.get("/api/avatars", async (c) => {
+  const { q, resourceId, orphans, limit, offset } = c.req.query();
+  await loadNameCodeMap();
+  let list = Object.entries(avatarMap ?? {}).map(([k, a]) => avatarRow(Number(k), a));
+  if (resourceId) {
+    const r = Number(resourceId);
+    if (Number.isNaN(r)) return c.json({ error: "invalid resourceId" }, 400);
+    list = list.filter((x) => x.resourceId === r);
+  }
+  if (orphans === "true") list = list.filter((x) => x.character === null);
+  if (q) {
+    const nq = norm(q);
+    list = list.filter(
+      (x) => x.character && Object.values(x.character.name).some((n) => norm(String(n)).includes(nq)),
+    );
+  }
+  const total = list.length;
+  const off = Math.max(0, Number(offset) || 0);
+  const lim = Math.min(Math.max(0, Number(limit) || 0), 500) || total;
+  return c.json({ count: total, offset: off, avatars: pickFields(list.slice(off, off + lim), fieldsOf(c)) });
+});
+
+app.get("/api/avatars/:iconId", async (c) => {
+  const id = c.req.param("iconId");
+  if (!/^\d+$/.test(id)) return c.json({ error: "invalid iconId" }, 400);
+  await loadNameCodeMap();
+  const a = avatarMap?.[id];
+  if (!a) return c.json({ error: "not found" }, 404);
+  return c.json(pickFields(avatarRow(Number(id), a), fieldsOf(c)));
 });
 
 app.get("/api/favorites", async (c) => {

@@ -283,6 +283,28 @@ export const openapi = {
         responses: { "200": { description: "장비 상세" }, "400": { description: "id 형식 오류" }, "404": { description: "없음" } },
       },
     },
+    "/api/avatars": {
+      get: {
+        tags: ["avatars"],
+        summary: "아바타 아이콘 목록",
+        parameters: [
+          { name: "q", in: "query", schema: { type: "string" }, description: "캐릭터 이름 검색 (전 언어 부분 일치)" },
+          { name: "resourceId", in: "query", schema: { type: "integer" }, description: "캐릭터 resourceId" },
+          { name: "orphans", in: "query", schema: { type: "string", enum: ["true"] }, description: "true면 캐릭터 미매칭(NPC/미출시) 아이콘만" },
+          { name: "limit", in: "query", schema: { type: "integer", maximum: 500 }, description: "최대 500, 미지정 시 전체" },
+          { name: "offset", in: "query", schema: { type: "integer", default: 0 } },
+        ],
+        responses: { "200": { description: "아바타 목록 — count는 잘라내기 전 전체 개수" } },
+      },
+    },
+    "/api/avatars/{iconId}": {
+      get: {
+        tags: ["avatars"],
+        summary: "아바타 상세 — 소유 캐릭터·아이콘 이미지",
+        parameters: [{ name: "iconId", in: "path", required: true, schema: { type: "integer" }, example: 30100, description: "아바타 아이콘 ID (profile.icon.iconId)" }],
+        responses: { "200": { description: "아바타 상세" }, "400": { description: "iconId 형식 오류" }, "404": { description: "없음" } },
+      },
+    },
     "/api/favorites": {
       get: {
         tags: ["favorites"],
@@ -502,6 +524,8 @@ for (const p of [
   "/api/equips/options",
   "/api/equips/options/{id}",
   "/api/equips/{id}",
+  "/api/avatars",
+  "/api/avatars/{iconId}",
   "/api/favorites",
   "/api/favorites/{id}",
   "/api/cubes",

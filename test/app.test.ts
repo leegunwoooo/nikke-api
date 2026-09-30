@@ -115,6 +115,30 @@ test("/api/equips + /options list, filters, detail", async () => {
   assert.equal((await get("/api/equips/abc")).status, 400);
 });
 
+test("/api/avatars list + filters + detail", async () => {
+  const all = await json("/api/avatars");
+  assert.equal(all.count, 4);
+  const base = all.avatars.find((x: any) => x.iconId === 30100);
+  assert.equal(base.character.id, 1);
+  assert.equal(base.image, "i"); // base skin icon
+  // costumeIndex resolves the costume's icon instead of the base
+  assert.equal(all.avatars.find((x: any) => x.iconId === 30101).image, "cos-i");
+  // orphan: character null, no fabricated nameCode
+  const orphan = all.avatars.find((x: any) => x.iconId === 99999);
+  assert.equal(orphan.character, null);
+  assert.equal(orphan.image, null);
+
+  assert.equal((await json("/api/avatars?orphans=true")).count, 1);
+  assert.equal((await json("/api/avatars?resourceId=10")).count, 2);
+  assert.equal((await json("/api/avatars?q=anchor")).count, 1);
+  assert.equal((await get("/api/avatars?resourceId=x")).status, 400);
+
+  const d = await json("/api/avatars/30101");
+  assert.equal(d.costumeIndex, 1);
+  assert.equal((await get("/api/avatars/555")).status, 404);
+  assert.equal((await get("/api/avatars/abc")).status, 400);
+});
+
 test("favorites + tables", async () => {
   assert.equal((await json("/api/favorites?q=tele")).count, 1);
   assert.equal((await get("/api/favorites/999")).status, 404);

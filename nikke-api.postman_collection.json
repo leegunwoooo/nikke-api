@@ -638,6 +638,85 @@
       ]
     },
     {
+      "name": "Avatars",
+      "item": [
+        {
+          "name": "아바타 목록",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{baseUrl}}/api/avatars?limit=20",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "avatars"
+              ],
+              "query": [
+                {
+                  "key": "q",
+                  "value": "",
+                  "disabled": true,
+                  "description": "캐릭터 이름 (전 언어 부분 일치)"
+                },
+                {
+                  "key": "resourceId",
+                  "value": "",
+                  "disabled": true,
+                  "description": "캐릭터 resourceId"
+                },
+                {
+                  "key": "orphans",
+                  "value": "true",
+                  "disabled": true,
+                  "description": "캐릭터 미매칭 아이콘만"
+                },
+                {
+                  "key": "limit",
+                  "value": "20"
+                },
+                {
+                  "key": "offset",
+                  "value": "0",
+                  "disabled": true
+                },
+                {
+                  "key": "fields",
+                  "value": "iconId,costumeIndex,character",
+                  "disabled": true
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "아바타 상세",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{baseUrl}}/api/avatars/50100",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "avatars",
+                "50100"
+              ],
+              "query": [
+                {
+                  "key": "fields",
+                  "value": "",
+                  "disabled": true
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
       "name": "Favorites",
       "item": [
         {

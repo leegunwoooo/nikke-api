@@ -1,0 +1,6 @@
+{
+  "30100": { "resourceId": 10, "costumeIndex": 0 },
+  "30101": { "resourceId": 10, "costumeIndex": 1 },
+  "30200": { "resourceId": 20, "costumeIndex": 0 },
+  "99999": { "resourceId": 999, "costumeIndex": 0 }
+}

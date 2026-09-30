@@ -26,6 +26,8 @@
 - [GET /api/equips/options](#get-apiequipsoptions) — 장비 옵션 목록
 - [GET /api/equips/options/:id](#get-apiequipsoptionsid) — 장비 옵션 상세
 - [GET /api/equips/:id](#get-apiequipsid) — 장비 아이템 상세
+- [GET /api/avatars](#get-apiavatars) — 아바타 아이콘 목록
+- [GET /api/avatars/:iconId](#get-apiavatarsiconid) — 아바타 상세
 - [GET /api/favorites](#get-apifavorites) — 소장품 목록
 - [GET /api/favorites/:id](#get-apifavoritesid) — 소장품 상세 (레벨별 스탯·스킬)
 - [GET /api/cubes](#get-apicubes) — 하모니 큐브 목록
@@ -528,6 +530,53 @@ GET /api/equips/options/7000501?lang=ko
 장비 tid로 단건 조회합니다. 응답은 목록 `equips[]` 항목과 동일합니다.
 
 **에러**: `id`가 숫자가 아니면 400, 없으면 404.
+
+## GET /api/avatars
+
+프로필 아바타 아이콘 목록을 반환합니다 (character_avatar_map 기준 — 388종). 유저 프로필의 `profile.icon.iconId`를 여기서 해석할 수 있습니다.
+
+### 쿼리 파라미터
+
+| 파라미터 | 설명 | 예시 |
+|----------|------|------|
+| `q` | 소유 캐릭터 이름 부분 일치 (전 언어) | `?q=라피` |
+| `resourceId` | 캐릭터 resourceId 필터 | `?resourceId=102` |
+| `orphans` | `true`면 캐릭터 미매칭 아이콘만 (NPC/미출시) | `?orphans=true` |
+| `limit` / `offset` / `fields` / `lang` | 목록 공통 | |
+
+```json
+{
+  "count": 388,
+  "offset": 0,
+  "avatars": [
+    {
+      "iconId": 50100,
+      "resourceId": 102,
+      "costumeIndex": 0,
+      "image": "https://...",
+      "character": { "id": 110201, "resourceId": 102, "name": { "ko": "...", "...": "..." }, "rarity": "SSR" }
+    }
+  ]
+}
+```
+
+| 필드 | 설명 |
+|------|------|
+| `iconId` | 아바타 아이콘 ID — 유저 프로필 `icon_id`와 같은 값 |
+| `resourceId` | 캐릭터 리소스 ID |
+| `costumeIndex` | 코스튬 인덱스 — `0`이면 기본 스킨, `/api/costumes`의 `costumeIndex`와 대응 |
+| `image` | 해석된 아이콘 URL (코스튬 인덱스가 가리키는 아이콘, 캐릭터 없으면 `null`) |
+| `character` | 소유 캐릭터 요약 — NPC/미출시 아이콘은 `null` |
+
+## GET /api/avatars/:iconId
+
+아이콘 ID로 단건 조회합니다. 응답은 목록 `avatars[]` 항목과 동일합니다.
+
+```
+GET /api/avatars/50100
+```
+
+**에러**: `iconId`가 숫자가 아니면 400, 없으면 404.
 
 ## GET /api/favorites
 
