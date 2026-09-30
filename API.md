@@ -226,7 +226,7 @@ GET /api/nikkes/아니스
 
 ## GET /api/meta/filters
 
-`/api/nikkes` 필터에 사용 가능한 값 목록을 반환합니다.
+`/api/nikkes` 필터에 사용 가능한 값 목록을 반환합니다. 스테이지·코스튬·장비 엔드포인트의 필터 값도 함께 포함됩니다.
 
 ```json
 {
@@ -235,7 +235,14 @@ GET /api/nikkes/아니스
   "bursts": ["III","II","I","All"],
   "corporations": ["MISSILIS","ELYSION","TETRA","PILGRIM","ABNORMAL"],
   "weapons": ["RL","SMG","SG","SR","AR","MG"],
-  "rarities": ["SSR","SR","R"]
+  "rarities": ["SSR","SR","R"],
+  "stageModes": ["Normal","Hard","Story"],
+  "stageChapters": [1, 2, ..., 40],
+  "costumeGrades": ["Special","Normal","Event"],
+  "equipClasses": ["Attacker","Defender","Supporter","All"],
+  "equipRares": ["T7","T8","T9","T10"],
+  "equipSlots": ["head","arm","leg"],
+  "equipOptionRanks": [1, 2, 3]
 }
 ```
 

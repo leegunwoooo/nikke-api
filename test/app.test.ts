@@ -20,6 +20,17 @@ test("nikkes list + filters", async () => {
   assert.equal((await json("/api/nikkes?class=defender")).count, 2);
 });
 
+test("/api/meta/filters covers the new endpoints' filter values", async () => {
+  const meta = await json("/api/meta/filters");
+  assert.deepEqual(meta.stageModes.sort(), ["Hard", "Normal", "Story"].sort());
+  assert.ok(meta.stageChapters.includes(1));
+  assert.ok(meta.costumeGrades.length > 0);
+  assert.ok(meta.equipClasses.length > 0);
+  assert.ok(meta.equipRares.length > 0);
+  assert.ok(meta.equipSlots.length > 0);
+  assert.ok(meta.equipOptionRanks.length > 0);
+});
+
 test("nikke detail by id / resourceId / name", async () => {
   const byId = await json("/api/nikkes/1");
   assert.equal(byId.details.background, "bg");

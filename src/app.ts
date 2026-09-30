@@ -481,8 +481,13 @@ app.get("/api/nikkes/:id", async (c) => {
   return c.json({ error: "not found" }, 404);
 });
 
-app.get("/api/meta/filters", (c) => {
+app.get("/api/meta/filters", async (c) => {
   const uniq = <T>(arr: (T | null | undefined)[]) => [...new Set(arr.filter(Boolean))] as T[];
+  const [stages, costumes, { equipItemMap: items, equipOptionMap: options }] = await Promise.all([
+    getStages(),
+    getCostumeMap(),
+    loadEquipMaps(),
+  ]);
   return c.json({
     elements: uniq(characters.map((x) => x.element)),
     classes: uniq(characters.map((x) => x.class)),
@@ -490,6 +495,15 @@ app.get("/api/meta/filters", (c) => {
     corporations: uniq(characters.map((x) => x.corporation)),
     weapons: uniq(characters.map((x) => x.weapon.type)),
     rarities: uniq(characters.map((x) => x.rarity)),
+    stageModes: uniq(stages.map((s: any) => s.chapter_mod)),
+    stageChapters: uniq(stages.map((s: any) => s.chapter_id as number)).sort((a, b) => a - b),
+    costumeGrades: uniq(Object.values(costumes).map((x: any) => x.grade)),
+    equipClasses: uniq(Object.values(items ?? {}).map((x: any) => x.class)),
+    equipRares: uniq(Object.values(items ?? {}).map((x: any) => x.rare)),
+    equipSlots: uniq(Object.values(items ?? {}).map((x: any) => x.slot)),
+    equipOptionRanks: uniq(Object.values(options ?? {}).map((x: any) => x.rank as number)).sort(
+      (a, b) => a - b,
+    ),
   });
 });
 
