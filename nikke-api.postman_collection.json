@@ -790,6 +790,12 @@
                   "key": "lang",
                   "value": "ko",
                   "disabled": true
+                },
+                {
+                  "key": "page",
+                  "value": "1",
+                  "disabled": true,
+                  "description": "1부터 — offset 대신 사용"
                 }
               ]
             }
@@ -847,6 +853,12 @@
                   "key": "lang",
                   "value": "ko",
                   "disabled": true
+                },
+                {
+                  "key": "page",
+                  "value": "1",
+                  "disabled": true,
+                  "description": "1부터 — offset 대신 사용"
                 }
               ]
             }

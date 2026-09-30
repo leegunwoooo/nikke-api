@@ -111,9 +111,9 @@ GET /api/user/<blablaid>/nikke/아니스               # 부분 일치 → 매�
 | `GET /api/equips/:id` | 장비 상세 |
 | `GET /api/avatars` | 아바타 아이콘 목록 — `?q=` `?resourceId=` `?orphans=` `?limit=`/`?offset=`/`?page=` |
 | `GET /api/avatars/:iconId` | 아바타 상세 — 소유 캐릭터·아이콘 이미지 |
-| `GET /api/favorites` | 소장품 목록 — `?q=` `?rare=` |
+| `GET /api/favorites` | 소장품 목록 — `?q=` `?rare=` `?limit=`/`?offset=`/`?page=` |
 | `GET /api/favorites/:id` | 소장품 상세 — 레벨별 스탯, 컬렉션·전용 스킬 |
-| `GET /api/cubes` | 하모니 큐브 목록 — `?q=` |
+| `GET /api/cubes` | 하모니 큐브 목록 — `?q=` `?limit=`/`?offset=`/`?page=` |
 | `GET /api/cubes/:id` | 큐브 상세 — 레벨별 스탯, 큐브 스킬 |
 | `GET /api/user/<blablaid>` | 유저 프로필·전진기지 조회 — BlablaLink 공유 ID (`?blablaid=`도 가능) |
 | `GET /api/user/<blablaid>/nikke` | 유저 보유 니케 목록 — `?id=`(id·resourceId·nameCode)·`?name=`(전 언어 부분 일치, `q` 동일)·`element`·`class`·`burst`·`corporation`·`weapon`·`rarity` 필터, 경량 |

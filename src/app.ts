@@ -738,7 +738,14 @@ app.get("/api/favorites", async (c) => {
     const nq = norm(q);
     list = list.filter((x) => Object.values(x.name).some((n) => norm(n).includes(nq)));
   }
-  return c.json({ count: list.length, favorites: pickFields(list, fieldsOf(c)) });
+  const total = list.length;
+  const pg = pageQuery(c, total);
+  return c.json({
+    count: total,
+    offset: pg.off,
+    ...(pg.page ? { page: pg.page, totalPages: Math.ceil(total / pg.lim) } : {}),
+    favorites: pickFields(list.slice(pg.off, pg.off + pg.lim), fieldsOf(c)),
+  });
 });
 
 app.get("/api/favorites/:id", async (c) => {
@@ -765,7 +772,14 @@ app.get("/api/cubes", async (c) => {
       const nq = norm(q);
       list = list.filter((x) => Object.values(x.name).some((n) => norm(n).includes(nq)));
     }
-    return c.json({ count: list.length, cubes: pickFields(list, fieldsOf(c)) });
+    const total = list.length;
+    const pg = pageQuery(c, total);
+    return c.json({
+      count: total,
+      offset: pg.off,
+      ...(pg.page ? { page: pg.page, totalPages: Math.ceil(total / pg.lim) } : {}),
+      cubes: pickFields(list.slice(pg.off, pg.off + pg.lim), fieldsOf(c)),
+    });
   } catch {
     return c.json({ count: 0, cubes: [] });
   }

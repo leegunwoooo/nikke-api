@@ -54,6 +54,8 @@ test("?page=N pages alongside ?offset=", async () => {
   assert.equal((await json("/api/costumes?limit=2&page=2")).page, 2);
   assert.equal((await json("/api/equips?limit=2&page=2")).equips.length, 1);
   assert.equal((await json("/api/avatars?limit=2&page=2")).page, 2);
+  assert.equal((await json("/api/favorites?limit=1&page=2")).page, 2);
+  assert.equal((await json("/api/cubes?limit=1&page=2")).page, 2);
 });
 
 test("?fields trims objects, including dot paths", async () => {
