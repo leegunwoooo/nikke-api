@@ -20,6 +20,8 @@
 - [GET /api/scenes/:groupId](#get-apiscenesgroupid) — 씬 대본 (한국어)
 - [GET /api/stages](#get-apistages) — 캠페인 스테이지 목록
 - [GET /api/stages/:id](#get-apistagesid) — 스테이지 상세
+- [GET /api/costumes](#get-apicostumes) — 코스튬 목록
+- [GET /api/costumes/:id](#get-apicostumesid) — 코스튬 상세
 - [GET /api/favorites](#get-apifavorites) — 소장품 목록
 - [GET /api/favorites/:id](#get-apifavoritesid) — 소장품 상세 (레벨별 스탯·스킬)
 - [GET /api/cubes](#get-apicubes) — 하모니 큐브 목록
@@ -403,6 +405,68 @@ GET /api/stages/6000001?fields=id,name,battlePower
 |------|------|
 | `id`가 숫자가 아님 | 400 `{"error": "invalid id"}` |
 | 해당 스테이지 없음 | 404 `{"error": "not found"}` |
+
+## GET /api/costumes
+
+코스튬 목록을 반환합니다 (costume_map 기준 — 182종). 각 항목에 소유 니케 정보와 이미지가 붙습니다.
+
+### 쿼리 파라미터
+
+| 파라미터 | 설명 | 예시 |
+|----------|------|------|
+| `q` | 코스튬 이름 부분 일치 (전 언어) | `?q=ocean` |
+| `grade` | 등급 필터 | `Special` / `Event` / `Normal` 등 |
+| `nikke` | 소유 니케 필터 — 이름 부분 일치 또는 id/resourceId | `?nikke=라피`, `?nikke=80` |
+| `limit` | 반환 개수 제한 (최대 500) | `?limit=50` |
+| `offset` | 시작 위치 (페이지네이션) | `?offset=50` |
+| `fields` | 응답 필드 선택 (각 항목에 적용) | `?fields=id,name.ko,grade` |
+| `lang` | 다국어 필드 평탄화 | `?lang=ko` |
+
+```
+GET /api/costumes?nikke=센티
+GET /api/costumes?grade=Special&limit=20
+```
+
+```json
+{
+  "count": 182,
+  "offset": 0,
+  "costumes": [
+    {
+      "id": 10012,
+      "name": { "ko": "오션 리페어", "en": "Ocean Repair", "ja": "...", "zh-TW": "..." },
+      "description": { "ko": "센티의 코스튬\n미션 패스에서 획득", "...": "..." },
+      "grade": "Special",
+      "costumeIndex": 2,
+      "images": { "icon": "https://...", "medium": "https://...", "full": "https://..." },
+      "character": { "id": 108001, "resourceId": 80, "name": { "ko": "센티", "...": "..." }, "rarity": "SSR" }
+    }
+  ]
+}
+```
+
+| 필드 | 설명 |
+|------|------|
+| `id` | 코스튬 tid — `/api/user/...`의 `costume.id`·`costume_tid`와 같은 값 |
+| `costumeIndex` | 아바타/스킨 인덱스 — `/api/avatars`의 `costumeIndex`와 대응 |
+| `images` | 코스튬 아이콘/중간/전신 이미지 (캐릭터 데이터에 없으면 `null`) |
+| `character` | 소유 니케 요약 — `id`/`resourceId`/`name`/`rarity`. 매칭되는 캐릭터가 없으면 `null` |
+
+## GET /api/costumes/:id
+
+코스튬 tid로 단건 조회합니다. 응답 형태는 목록의 `costumes[]` 항목과 동일합니다.
+
+```
+GET /api/costumes/10012
+GET /api/costumes/10012?lang=ko
+```
+
+**에러**
+
+| 상황 | 상태 |
+|------|------|
+| `id`가 숫자가 아님 | 400 `{"error": "invalid id"}` |
+| 해당 코스튬 없음 | 404 `{"error": "not found"}` |
 
 ## GET /api/favorites
 

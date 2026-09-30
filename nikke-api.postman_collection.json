@@ -381,6 +381,95 @@
       ]
     },
     {
+      "name": "Costumes",
+      "item": [
+        {
+          "name": "코스튬 목록",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{baseUrl}}/api/costumes?limit=20",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "costumes"
+              ],
+              "query": [
+                {
+                  "key": "q",
+                  "value": "",
+                  "disabled": true,
+                  "description": "코스튬 이름 (전 언어 부분 일치)"
+                },
+                {
+                  "key": "grade",
+                  "value": "",
+                  "disabled": true,
+                  "description": "Special|Event|Normal 등"
+                },
+                {
+                  "key": "nikke",
+                  "value": "",
+                  "disabled": true,
+                  "description": "소유 니케 이름 또는 id/resourceId"
+                },
+                {
+                  "key": "limit",
+                  "value": "20"
+                },
+                {
+                  "key": "offset",
+                  "value": "0",
+                  "disabled": true
+                },
+                {
+                  "key": "lang",
+                  "value": "ko",
+                  "disabled": true
+                },
+                {
+                  "key": "fields",
+                  "value": "id,name.ko,grade",
+                  "disabled": true
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "코스튬 상세",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{baseUrl}}/api/costumes/10012",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "costumes",
+                "10012"
+              ],
+              "query": [
+                {
+                  "key": "lang",
+                  "value": "ko",
+                  "disabled": true
+                },
+                {
+                  "key": "fields",
+                  "value": "",
+                  "disabled": true
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
       "name": "Favorites",
       "item": [
         {

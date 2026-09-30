@@ -135,6 +135,28 @@ async function loadEquipMaps() {
   return { equipItemMap, equipOptionMap };
 }
 
+let costumeMapData: Record<string, any> | null = null;
+async function getCostumeMap(): Promise<Record<string, any>> {
+  costumeMapData ??= await loadDistJson("costume_map.json", {});
+  return costumeMapData;
+}
+
+// normalized shape served by /api/costumes — costume_map tid -> costume meta
+// joined with the character list for images + owner
+const costumeRow = (tid: number, co: any) => {
+  const n = byResourceId.get(co.resourceId);
+  const owned = costumeOwner.get(tid);
+  return {
+    id: tid,
+    name: co.name ?? null,
+    description: co.description ?? null,
+    grade: co.grade ?? null,
+    costumeIndex: co.costumeIndex ?? 0,
+    images: owned?.costume.images ?? null,
+    character: n ? { id: n.id, resourceId: n.resourceId, name: n.name, rarity: n.rarity } : null,
+  };
+};
+
 let stageRows: any[] | null = null;
 async function getStages(): Promise<any[]> {
   if (!stageRows) {
@@ -387,6 +409,8 @@ app.get("/", (c) =>
       "GET /api/scenes/:groupId": "scene dialogue lines (ko)",
       "GET /api/stages": "campaign stage list; filters: q, chapter, mode; limit/offset",
       "GET /api/stages/:id": "stage detail (id)",
+      "GET /api/costumes": "costume list; filters: q, grade, nikke; limit/offset",
+      "GET /api/costumes/:id": "costume detail (costume tid)",
       "GET /api/favorites": "소장품(favorite item) list; filters: q, rare",
       "GET /api/favorites/:id": "소장품 detail — per-level stats, skills",
       "GET /api/cubes": "하모니 큐브 list; filter: q",
@@ -516,6 +540,44 @@ app.get("/api/stages/:id", async (c) => {
   const s = (await getStages()).find((x) => x.id === Number(id));
   if (!s) return c.json({ error: "not found" }, 404);
   return c.json(pickFields(stageRow(s), fieldsOf(c)));
+});
+
+app.get("/api/costumes", async (c) => {
+  const { q, grade, nikke, limit, offset } = c.req.query();
+  let list = Object.entries(await getCostumeMap()).map(([tid, co]) => costumeRow(Number(tid), co));
+  if (grade) list = list.filter((x) => norm(x.grade ?? "") === norm(grade));
+  if (nikke) {
+    const nq = norm(nikke);
+    list = list.filter((x) => {
+      const ch = x.character;
+      if (!ch) return false;
+      if (/^\d+$/.test(nikke)) {
+        const nId = Number(nikke);
+        if (ch.id === nId || ch.resourceId === nId) return true;
+      }
+      return Object.values(ch.name as object).some((n) => norm(n).includes(nq));
+    });
+  }
+  if (q) {
+    const nq = norm(q);
+    list = list.filter((x) => Object.values(x.name ?? {}).some((n) => norm(String(n)).includes(nq)));
+  }
+  const total = list.length;
+  const off = Math.max(0, Number(offset) || 0);
+  const lim = Math.min(Math.max(0, Number(limit) || 0), 500) || total;
+  return c.json({
+    count: total,
+    offset: off,
+    costumes: pickFields(list.slice(off, off + lim), fieldsOf(c)),
+  });
+});
+
+app.get("/api/costumes/:id", async (c) => {
+  const id = c.req.param("id");
+  if (!/^\d+$/.test(id)) return c.json({ error: "invalid id" }, 400);
+  const co = (await getCostumeMap())[id];
+  if (!co) return c.json({ error: "not found" }, 404);
+  return c.json(pickFields(costumeRow(Number(id), co), fieldsOf(c)));
 });
 
 app.get("/api/favorites", async (c) => {

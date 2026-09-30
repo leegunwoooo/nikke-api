@@ -65,6 +65,29 @@ test("/api/stages list + filters + detail", async () => {
   assert.equal((await get("/api/stages?chapter=x")).status, 400);
 });
 
+test("/api/costumes list + filters + detail", async () => {
+  const all = await json("/api/costumes");
+  assert.equal(all.count, 3);
+  const rapi = all.costumes.find((x: any) => x.id === 10012);
+  assert.equal(rapi.character.id, 1);
+  assert.equal(rapi.images.icon, "cos-i"); // resolved via character costumes
+  // orphan costume (resourceId without a character) → character: null
+  assert.equal(all.costumes.find((x: any) => x.id === 99999).character, null);
+
+  assert.equal((await json("/api/costumes?q=test costume")).count, 1);
+  assert.equal((await json("/api/costumes?grade=event")).count, 1);
+  assert.equal((await json("/api/costumes?nikke=앵커")).count, 1);
+  assert.equal((await json("/api/costumes?nikke=10")).count, 1); // resourceId
+  assert.equal((await json("/api/costumes?limit=1&offset=1")).costumes.length, 1);
+
+  const d = await json("/api/costumes/10012");
+  assert.equal(d.name.ko, "테스트 코스튬");
+  assert.equal((await get("/api/costumes/777")).status, 404);
+  assert.equal((await get("/api/costumes/abc")).status, 400);
+  // ?lang flattens localized fields
+  assert.equal((await json("/api/costumes/10012?lang=ko")).name, "테스트 코스튬");
+});
+
 test("favorites + tables", async () => {
   assert.equal((await json("/api/favorites?q=tele")).count, 1);
   assert.equal((await get("/api/favorites/999")).status, 404);
