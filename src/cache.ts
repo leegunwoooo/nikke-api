@@ -9,7 +9,7 @@ const CACHE_CONTROL = "public, max-age=3600, s-maxage=86400, stale-while-revalid
  */
 export function cacheHeaders(version: string): MiddlewareHandler {
   return async (c, next) => {
-    if (c.req.method !== "GET") return next();
+    if (c.req.method !== "GET" && c.req.method !== "HEAD") return next();
     const url = new URL(c.req.url);
     // /api/user/* serves live upstream data — never edge-cache it against
     // the build version or a changed profile would return stale 304s

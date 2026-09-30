@@ -335,3 +335,10 @@ test("cache headers + conditional GET", async () => {
   const missing = await get("/api/nikkes/nobody", { "If-None-Match": forged });
   assert.equal(missing.status, 404);
 });
+
+test("HEAD gets the same cache headers as GET", async () => {
+  const res = await app.request("/api/nikkes/1", { method: "HEAD" });
+  assert.equal(res.status, 200);
+  assert.match(res.headers.get("ETag") ?? "", /^W\//);
+  assert.match(res.headers.get("Cache-Control") ?? "", /s-maxage=/);
+});
