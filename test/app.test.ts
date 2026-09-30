@@ -67,6 +67,11 @@ test("?page=N pages alongside ?offset=", async () => {
   assert.equal((await json("/api/avatars?limit=2&page=2")).page, 2);
   assert.equal((await json("/api/favorites?limit=1&page=2")).page, 2);
   assert.equal((await json("/api/cubes?limit=1&page=2")).page, 2);
+  // invalid paging params are rejected instead of silently widened
+  assert.equal((await get("/api/nikkes?page=abc")).status, 400);
+  assert.equal((await get("/api/nikkes?page=0")).status, 400);
+  assert.equal((await get("/api/nikkes?limit=-1")).status, 400);
+  assert.equal((await get("/api/stages?offset=1.5")).status, 400);
 });
 
 test("?fields trims objects, including dot paths", async () => {
@@ -213,8 +218,8 @@ test("/api/nikkes pagination", async () => {
   assert.equal(filtered.count, 2);
   assert.equal(filtered.characters.length, 1);
 
-  // junk values fall back safely
-  assert.equal((await json("/api/nikkes?limit=abc&offset=-5")).characters.length, 3);
+  // junk values are rejected
+  assert.equal((await get("/api/nikkes?limit=abc&offset=-5")).status, 400);
 });
 
 test("?fields on cubes list/detail and scene detail", async () => {

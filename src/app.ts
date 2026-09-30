@@ -77,12 +77,21 @@ const getCubes = lazyIndex<{ id: number; rare?: string; name: Record<string, str
 const norm = (s: string) => s.toLowerCase().replace(/[\s:_\-·]/g, "");
 
 // ?page=N (1-based) or ?offset=N paging — page wins when both are given.
-// page without limit defaults to a 50-item page size
+// page without limit defaults to a 50-item page size. Non-integer or
+// out-of-range values are rejected so typos don't silently widen results.
 function pageQuery(c: Context, total: number) {
-  const page = Math.max(0, Number(c.req.query("page")) || 0);
-  const lim = Math.min(Math.max(0, Number(c.req.query("limit")) || 0) || (page ? 50 : total), 500);
-  const off = page ? (page - 1) * lim : Math.max(0, Number(c.req.query("offset")) || 0);
-  return { off, lim, page };
+  const num = (v?: string) => (v == null || v === "" ? undefined : Number(v));
+  const page = num(c.req.query("page"));
+  const limit = num(c.req.query("limit"));
+  const offset = num(c.req.query("offset"));
+  for (const [k, v] of Object.entries({ page, limit, offset })) {
+    if (v !== undefined && (!Number.isInteger(v) || v < 0 || (k === "page" && v < 1))) {
+      return { error: `invalid ${k}` } as const;
+    }
+  }
+  const lim = Math.min((limit ?? 0) || (page ? 50 : total), 500);
+  const off = page ? (page - 1) * lim : (offset ?? 0);
+  return { off, lim, page: page ?? 0 };
 }
 
 // --- profile normalization helpers ---
@@ -466,6 +475,7 @@ app.get("/api/nikkes", (c) => {
   if (rarity) list = list.filter((x) => n(x.rarity) === n(rarity));
   const total = list.length;
   const pg = pageQuery(c, total);
+  if ("error" in pg) return c.json({ error: pg.error }, 400);
   return c.json({
     count: total,
     offset: pg.off,
@@ -528,6 +538,7 @@ app.get("/api/scenes", async (c) => {
   }
   const total = list.length;
   const pg = pageQuery(c, total);
+  if ("error" in pg) return c.json({ error: pg.error }, 400);
   return c.json({
     count: total,
     offset: pg.off,
@@ -565,6 +576,7 @@ app.get("/api/stages", async (c) => {
   }
   const total = list.length;
   const pg = pageQuery(c, total);
+  if ("error" in pg) return c.json({ error: pg.error }, 400);
   return c.json({
     count: total,
     offset: pg.off,
@@ -603,6 +615,7 @@ app.get("/api/costumes", async (c) => {
   }
   const total = list.length;
   const pg = pageQuery(c, total);
+  if ("error" in pg) return c.json({ error: pg.error }, 400);
   return c.json({
     count: total,
     offset: pg.off,
@@ -658,6 +671,7 @@ app.get("/api/equips/options", async (c) => {
   if (q) list = matchName(list, q);
   const total = list.length;
   const pg = pageQuery(c, total);
+  if ("error" in pg) return c.json({ error: pg.error }, 400);
   return c.json({
     count: total,
     offset: pg.off,
@@ -685,6 +699,7 @@ app.get("/api/equips", async (c) => {
   if (q) list = matchName(list, q);
   const total = list.length;
   const pg = pageQuery(c, total);
+  if ("error" in pg) return c.json({ error: pg.error }, 400);
   return c.json({
     count: total,
     offset: pg.off,
@@ -734,6 +749,7 @@ app.get("/api/avatars", async (c) => {
   }
   const total = list.length;
   const pg = pageQuery(c, total);
+  if ("error" in pg) return c.json({ error: pg.error }, 400);
   return c.json({
     count: total,
     offset: pg.off,
@@ -761,6 +777,7 @@ app.get("/api/favorites", async (c) => {
   }
   const total = list.length;
   const pg = pageQuery(c, total);
+  if ("error" in pg) return c.json({ error: pg.error }, 400);
   return c.json({
     count: total,
     offset: pg.off,
@@ -792,6 +809,7 @@ app.get("/api/cubes", async (c) => {
   }
   const total = list.length;
   const pg = pageQuery(c, total);
+  if ("error" in pg) return c.json({ error: pg.error }, 400);
   return c.json({
     count: total,
     offset: pg.off,

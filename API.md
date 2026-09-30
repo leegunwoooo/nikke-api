@@ -67,7 +67,9 @@
 
 **페이지네이션**: 필터가 먼저 적용된 뒤 `offset`/`limit`으로 잘립니다. `count`는 잘라내기 전 필터링된 전체 개수이고, `offset`은 실제 적용된 시작 위치가 응답에 포함됩니다. `offset`이 범위를 넘으면 빈 배열이 반환됩니다.
 
-`?page=N`(1부터)으로도 페이지를 넘길 수 있습니다 — `offset` 대신 `(page-1) * limit`이 적용되고 응답에 `page`·`totalPages`가 추가됩니다. `limit` 없이 `page`만 주면 페이지 크기 50이 기본 적용됩니다. 페이지네이션 지원 목록(`/api/nikkes`, `/api/scenes`, `/api/stages`, `/api/costumes`, `/api/equips`, `/api/equips/options`, `/api/avatars`)에서 동일하게 동작합니다.
+`?page=N`(1부터)으로도 페이지를 넘길 수 있습니다 — `offset` 대신 `(page-1) * limit`이 적용되고 응답에 `page`·`totalPages`가 추가됩니다. `limit` 없이 `page`만 주면 페이지 크기 50이 기본 적용됩니다. 페이지네이션 지원 목록(`/api/nikkes`, `/api/scenes`, `/api/stages`, `/api/costumes`, `/api/equips`, `/api/equips/options`, `/api/avatars`, `/api/favorites`, `/api/cubes`)에서 동일하게 동작합니다.
+
+`page`·`limit`·`offset`이 정수가 아니거나 음수이면(`page`는 0 포함) `400 invalid <param>`이 반환됩니다.
 
 ### 요청 예시
 
