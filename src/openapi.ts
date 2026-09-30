@@ -1,4 +1,14 @@
 // OpenAPI 3.1 spec — served at /openapi.json, rendered by /docs (Scalar)
+import { readFileSync } from "node:fs";
+import path from "node:path";
+
+// package.json isn't guaranteed in the deployed bundle — the build bakes
+// the version into characters.json (which is shipped via includeFiles)
+const DIST = path.resolve(process.env.NIKKE_DATA_DIR ?? "data/dist");
+const pkgVersion: string = JSON.parse(
+  readFileSync(path.join(DIST, "characters.json"), "utf8"),
+).version ?? "0.0.0";
+
 const localized = {
   type: "object",
   properties: {
@@ -111,7 +121,7 @@ export const openapi = {
   openapi: "3.1.0",
   info: {
     title: "nikke-api",
-    version: "0.1.0",
+    version: pkgVersion,
     description:
       "Unofficial GODDESS OF VICTORY: NIKKE data API. BlablaLink CDN 데이터를 매일 동기화합니다. " +
       "비공식·비상업적 팬 프로젝트 — 데이터 © SHIFT UP / Level Infinite.",

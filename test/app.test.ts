@@ -113,6 +113,13 @@ test("?lang applies to file-streamed endpoints too", async () => {
   assert.equal(raw.name.ko, "테스트 큐브");
 });
 
+test("root + openapi report the built data version", async () => {
+  // build.ts bakes package.json's version into characters.json; the
+  // fixture pins it at 9.9.9-test — both endpoints must serve that
+  assert.equal((await json("/")).version, "9.9.9-test");
+  assert.equal((await json("/openapi.json")).info.version, "9.9.9-test");
+});
+
 test("/api/user responses are never edge-cached", async () => {
   const res = await get("/api/user?blablaid=not-valid");
   assert.equal(res.status, 400);

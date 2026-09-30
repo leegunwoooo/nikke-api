@@ -15,6 +15,7 @@ const DIST = path.resolve(process.env.NIKKE_DATA_DIR ?? "data/dist");
 interface CharacterData {
   count: number;
   syncedAt: string;
+  version?: string;
   characters: Nikke[];
 }
 
@@ -347,7 +348,7 @@ app.use("*", async (c, next) => {
 app.get("/", (c) =>
   c.json({
     name: "nikke-data-api",
-    version: "0.1.0",
+    version: characterData.version ?? "0.0.0",
     source: "Unofficial — data © SHIFT UP / Level Infinite",
     syncedAt: characterData.syncedAt,
     endpoints: {

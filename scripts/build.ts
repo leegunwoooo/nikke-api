@@ -16,6 +16,11 @@ import type {
 
 const RAW = path.resolve("data/raw");
 const OUT = path.resolve("data/dist");
+// package.json is only guaranteed present at build time — bake the version
+// into characters.json so the deployed function can read it from dist
+const PKG_VERSION: string = JSON.parse(
+  await readFile(path.resolve("package.json"), "utf8"),
+).version;
 const LOCALES: Locale[] = ["ko", "en", "ja", "zh-TW"];
 
 const pad = (n: number, len: number) => String(n).padStart(len, "0");
@@ -197,7 +202,7 @@ async function main() {
   };
   await writeFile(
     path.join(OUT, "characters.json"),
-    JSON.stringify({ count: characters.length, syncedAt: new Date().toISOString(), characters }),
+    JSON.stringify({ count: characters.length, syncedAt: new Date().toISOString(), version: PKG_VERSION, characters }),
   );
   console.log(`characters.json: ${characters.length} nikkes`);
 
