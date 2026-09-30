@@ -175,6 +175,30 @@ const CORP_NAMES: Record<number, string> = {
   7: "ABNORMAL",
 };
 
+// owned-nikke matchers, split so ?id=/?name= (and the unified :key) can pick
+// the right comparison — exported for tests
+export function makeNikkeMatchers(charRef: (nameCode?: number | null) => any) {
+  // digits only: name_code / character id / resourceId — never names
+  const matchesNikkeId = (query: string, ch: any) => {
+    if (!/^\d+$/.test(query)) return false;
+    const ref = charRef(ch.name_code) as any;
+    const n = Number(query);
+    return ch.name_code === n || ref?.id === n || ref?.resourceId === n;
+  };
+  // free text: partial name match across all locales — works for digit
+  // names too ("102" -> N102), which the old unified matcher missed
+  const matchesNikkeName = (query: string, ch: any) => {
+    if (!query) return true;
+    const ref = charRef(ch.name_code) as any;
+    const nq = norm(query);
+    return !!ref?.name && Object.values(ref.name as object).some((nm) => norm(nm).includes(nq));
+  };
+  // unified match for the :key path param — id OR name
+  const matchesNikke = (query: string, ch: any) =>
+    !query ? true : matchesNikkeId(query, ch) || matchesNikkeName(query, ch);
+  return { matchesNikkeId, matchesNikkeName, matchesNikke };
+}
+
 // shared lookup context for user-profile normalization
 async function loadProfileLookups() {
   const [ncMap, favNames, cubeNames, { equipItemMap, equipOptionMap }, stages, recycles] =
@@ -288,17 +312,6 @@ async function loadProfileLookups() {
       },
     };
   };
-  // does an owned-character row match a name/id/nameCode query?
-  const matchesNikke = (query: string, ch: any) => {
-    if (!query) return true;
-    const ref = charRef(ch.name_code) as any;
-    if (/^\d+$/.test(query)) {
-      const n = Number(query);
-      return ch.name_code === n || ref?.id === n || ref?.resourceId === n;
-    }
-    const nq = norm(query);
-    return !!ref?.name && Object.values(ref.name as object).some((nm) => norm(nm).includes(nq));
-  };
   return {
     charRef,
     avatarRef,
@@ -307,7 +320,7 @@ async function loadProfileLookups() {
     costumeRef,
     stageRef,
     normalizeNikke,
-    matchesNikke,
+    ...makeNikkeMatchers(charRef),
     recycles,
   };
 }
@@ -674,11 +687,11 @@ async function userNikkeList(c: Context) {
   try {
     const res = await loadOwnedNikkes(c);
     if ("error" in res) return res.error;
-    const { q, element, class: cls, burst, corporation, weapon, rarity } = c.req.query();
-    const { charRef, matchesNikke } = await loadProfileLookups();
+    const { q, id, name, element, class: cls, burst, corporation, weapon, rarity } = c.req.query();
+    const { charRef, matchesNikkeId, matchesNikkeName } = await loadProfileLookups();
     const n = (v?: string | null) => v?.toLowerCase();
     const nikkes = res.owned
-      .filter((ch) => matchesNikke(q ?? "", ch))
+      .filter((ch) => (!id || matchesNikkeId(id, ch)) && matchesNikkeName(name ?? q ?? "", ch))
       .map(ownedNikkeSummary(charRef))
       .filter((x) => {
         const ch = x.character;

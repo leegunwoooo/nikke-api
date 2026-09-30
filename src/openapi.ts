@@ -269,11 +269,25 @@ export const openapi = {
             description: "BlablaLink 공유 ID (base64 openid)",
           },
           {
+            name: "id",
+            in: "query",
+            schema: { type: "string" },
+            description: "숫자 정확 매칭 — 캐릭터 id·resourceId·nameCode",
+            example: "3017",
+          },
+          {
+            name: "name",
+            in: "query",
+            schema: { type: "string" },
+            description: "니케 이름 부분 일치 (전 언어, 대소문자·공백 무시 — '102'는 N102도 매칭)",
+            example: "아니스",
+          },
+          {
             name: "q",
             in: "query",
             schema: { type: "string" },
-            description: "니케 이름(전 언어 부분 일치)·id·resourceId·nameCode",
-            example: "아니스",
+            description: "name과 동일 (하위 호환 별칭)",
+            deprecated: true,
           },
           ...(["element", "class", "burst", "corporation", "weapon", "rarity"] as const).map(
             (name) => ({

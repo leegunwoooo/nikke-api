@@ -127,6 +127,37 @@ test("/api/user responses are never edge-cached", async () => {
   assert.equal(res.headers.get("ETag"), null);
 });
 
+test("user-nikke matchers: ?id vs ?name vs unified :key", async () => {
+  const { makeNikkeMatchers } = await import("../src/app.js");
+  // N102: name contains digits — the old unified matcher missed it on
+  // numeric queries because it only compared ids
+  const n102 = { name_code: 112001 };
+  const charRef = (code?: number | null) =>
+    code === 112001
+      ? { nameCode: 112001, id: 112001, resourceId: 5001, name: { ko: "N102", en: "N102" } }
+      : null;
+  const m = makeNikkeMatchers(charRef);
+
+  // ?id= matches only id/nameCode/resourceId — never names
+  assert.equal(m.matchesNikkeId("112001", n102), true);
+  assert.equal(m.matchesNikkeId("5001", n102), true);
+  assert.equal(m.matchesNikkeId("102", n102), false);
+  assert.equal(m.matchesNikkeId("n102", n102), false);
+
+  // ?name= matches partial names even when they're digits
+  assert.equal(m.matchesNikkeName("102", n102), true);
+  assert.equal(m.matchesNikkeName("n10", n102), true);
+  assert.equal(m.matchesNikkeName("xyz", n102), false);
+  assert.equal(m.matchesNikkeName("", n102), true); // empty = no filter
+
+  // unified :key match covers both (a numeric key also hits digit names)
+  assert.equal(m.matchesNikke("102", n102), true);
+  assert.equal(m.matchesNikke("112001", n102), true);
+  assert.equal(m.matchesNikke("N102", n102), true);
+  assert.equal(m.matchesNikke("7", n102), false);
+  assert.equal(m.matchesNikke("", n102), true);
+});
+
 test("unknown routes return JSON 404", async () => {
   const res = await get("/api/nope");
   assert.equal(res.status, 404);

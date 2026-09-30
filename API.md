@@ -526,14 +526,17 @@ GET /api/user/<blablaid>                          # 경로로도 가능
 | 파라미터 | 설명 |
 |----------|------|
 | `:blablaid` (path) | BlablaLink 공유 ID(base64 openid) 또는 URL 전체 |
-| `q` | 선택. 이름(전 언어 부분 일치)·캐릭터 id·resourceId·nameCode |
+| `id` | 선택. 숫자 정확 매칭 — 캐릭터 id·resourceId·nameCode |
+| `name` | 선택. 이름 부분 일치 (전 언어, 대소문자·공백 무시 — `102`는 N102도 매칭) |
+| `q` | 선택(deprecated). `name`과 동일 — 하위 호환 별칭 |
 | `element` `class` `burst` `corporation` `weapon` `rarity` | 선택. [GET /api/nikkes](#get-apinikkes)와 동일한 필터 — AND 결합. 상세가 필요하면 [GET /api/user/:blablaid/nikke/:key](#get-apiuserblablaidnikkekey) 사용 |
 | `fields` | 선택. 응답 필드 선택 (`nikkes[]` 각 항목에 적용) |
 
 ```
 GET /api/user/<blablaid>/nikke              # 보유 전체 목록
-GET /api/user/<blablaid>/nikke?q=아니스      # 아니스 계열만 필터 (목록 형태 유지)
-GET /api/user/<blablaid>/nikke?q=201601     # id/nameCode로 필터
+GET /api/user/<blablaid>/nikke?name=아니스   # 아니스 계열만 필터 (목록 형태 유지)
+GET /api/user/<blablaid>/nikke?id=201601    # id/nameCode로 필터
+GET /api/user/<blablaid>/nikke?name=102     # N102처럼 숫자 이름도 매칭
 GET /api/user/<blablaid>/nikke?element=Iron&burst=III  # 도감과 동일한 속성 필터
 ```
 
@@ -563,7 +566,7 @@ GET /api/user/<blablaid>/nikke?element=Iron&burst=III  # 도감과 동일한 속
 | `:key` | 매칭 방식 |
 |--------|----------|
 | 니케 이름 | 부분 일치(전 언어, 대소문자·공백·`:` 무시) — `아니스`로 조회하면 보유한 아니스 계열 전부 매칭 |
-| 숫자 | 캐릭터 id · resourceId · nameCode 중 일치 |
+| 숫자 | 캐릭터 id · resourceId · nameCode 중 일치 **또는** 이름에 그 숫자가 포함 — `102`는 N102도 매칭 |
 
 매칭이 정확히 1명이면 상세 객체를, 복수면 목록(`{count, nikkes[]}`)을 반환합니다. `?fields=`로 상세 객체(또는 목록 항목)를 선택적으로 잘라낼 수 있습니다.
 
