@@ -162,6 +162,8 @@ GET /api/favorites/200101?lang=ja
 
 모든 200 응답에 `Cache-Control: public, max-age=3600, s-maxage=86400`과 `ETag`가 붙습니다. `If-None-Match`로 재요청하면 304로 응답 본문을 생략합니다 — 데이터는 배포 시에만 바뀌므로 캐시해도 안전합니다.
 
+단 `/api/user/*`는 실시간 조회라 캐시하지 않습니다 (`Cache-Control: no-store`, ETag 없음).
+
 ## API 문서
 
 - **인터랙티브 문서 (브라우저에서 바로 테스트) → [/docs](https://nikke-api-gunwoos-projects.vercel.app/docs)**

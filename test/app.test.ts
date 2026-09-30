@@ -113,6 +113,13 @@ test("?lang applies to file-streamed endpoints too", async () => {
   assert.equal(raw.name.ko, "테스트 큐브");
 });
 
+test("/api/user responses are never edge-cached", async () => {
+  const res = await get("/api/user?blablaid=not-valid");
+  assert.equal(res.status, 400);
+  assert.equal(res.headers.get("Cache-Control"), "no-store");
+  assert.equal(res.headers.get("ETag"), null);
+});
+
 test("cache headers + conditional GET", async () => {
   const res = await get("/api/nikkes/1");
   const etag = res.headers.get("ETag");

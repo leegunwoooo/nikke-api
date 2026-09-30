@@ -702,6 +702,8 @@ GET /api/favorites/200101?lang=en
 - `Cache-Control: public, max-age=3600, s-maxage=86400, stale-while-revalidate=86400`
 - `ETag: W/"..."` — 데이터 버전(`syncedAt`) + 요청 URL 기준. `If-None-Match`로 요청하면 변경이 없을 때 `304 Not Modified`를 반환합니다.
 
+`/api/user/*` 엔드포인트는 라이브 데이터(BlablaLink 업스트림 조회)라 캐시하지 않습니다 — 항상 `Cache-Control: no-store`가 붙고 ETag도 발급되지 않습니다.
+
 ---
 
 ## 에러 응답

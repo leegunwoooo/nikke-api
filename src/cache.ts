@@ -11,6 +11,13 @@ export function cacheHeaders(version: string): MiddlewareHandler {
   return async (c, next) => {
     if (c.req.method !== "GET") return next();
     const url = new URL(c.req.url);
+    // /api/user/* serves live upstream data — never edge-cache it against
+    // the build version or a changed profile would return stale 304s
+    if (url.pathname.startsWith("/api/user")) {
+      await next();
+      c.header("Cache-Control", "no-store");
+      return;
+    }
     const tag = crypto.createHash("sha1").update(`${version}|${url.pathname}${url.search}`).digest("hex");
     const etag = `W/"${tag.slice(0, 27)}"`;
     if (c.req.header("If-None-Match") === etag) {
