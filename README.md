@@ -97,19 +97,19 @@ GET /api/user/<blablaid>/nikke/아니스               # 부분 일치 → 매�
 
 | 엔드포인트 | 설명 |
 |------------|------|
-| `GET /api/nikkes` | 캐릭터 목록 — `?q=` 이름 검색(전 언어 부분 일치), `?element=` `?class=` `?burst=` `?corporation=` `?weapon=` `?rarity=` 필터 (AND 결합), `?limit=`/`?offset=` 페이지네이션 (미지정 시 전체, 최대 500 — `count`는 잘라내기 전 전체 개수) |
+| `GET /api/nikkes` | 캐릭터 목록 — `?q=` 이름 검색(전 언어 부분 일치), `?element=` `?class=` `?burst=` `?corporation=` `?weapon=` `?rarity=` 필터 (AND 결합), `?limit=`/`?offset=`/`?page=` 페이지네이션 (미지정 시 전체, 최대 500 — `count`는 잘라내기 전 전체 개수) |
 | `GET /api/nikkes/:id` | 캐릭터 상세 — 스킬/스탯/배경/CV/보이스 등 `details` 포함. `:id`는 캐릭터 ID·resourceId·이름(부분 일치) 모두 가능 |
-| `GET /api/scenes` | 씬 목록 — `?category=` `?nikke=` `?q=` `?limit=` `?offset=` |
+| `GET /api/scenes` | 씬 목록 — `?category=` `?nikke=` `?q=` `?limit=`/`?offset=`/`?page=` |
 | `GET /api/scenes/:groupId` | 씬 대본 — 대사별 화자/아이콘/보이스 |
-| `GET /api/stages` | 캠페인 스테이지 목록 — `?chapter=` `?mode=` `?q=` `?limit=` `?offset=` |
+| `GET /api/stages` | 캠페인 스테이지 목록 — `?chapter=` `?mode=` `?q=` `?limit=`/`?offset=`/`?page=` |
 | `GET /api/stages/:id` | 스테이지 상세 — 권장 전투력·시나리오 키 |
-| `GET /api/costumes` | 코스튬 목록 — `?q=` `?grade=` `?nikke=` `?limit=` `?offset=` |
+| `GET /api/costumes` | 코스튬 목록 — `?q=` `?grade=` `?nikke=` `?limit=`/`?offset=`/`?page=` |
 | `GET /api/costumes/:id` | 코스튬 상세 — 소유 니케·이미지 포함 |
-| `GET /api/equips` | 장비 목록 — `?q=` `?class=` `?rare=` `?slot=` `?limit=` `?offset=` |
-| `GET /api/equips/options` | 장비 옵션 목록 — `?q=` `?groupId=` `?rank=` |
+| `GET /api/equips` | 장비 목록 — `?q=` `?class=` `?rare=` `?slot=` `?limit=`/`?offset=`/`?page=` |
+| `GET /api/equips/options` | 장비 옵션 목록 — `?q=` `?groupId=` `?rank=` `?limit=`/`?page=` |
 | `GET /api/equips/options/:id` | 장비 옵션 상세 |
 | `GET /api/equips/:id` | 장비 상세 |
-| `GET /api/avatars` | 아바타 아이콘 목록 — `?q=` `?resourceId=` `?orphans=` `?limit=` `?offset=` |
+| `GET /api/avatars` | 아바타 아이콘 목록 — `?q=` `?resourceId=` `?orphans=` `?limit=`/`?offset=`/`?page=` |
 | `GET /api/avatars/:iconId` | 아바타 상세 — 소유 캐릭터·아이콘 이미지 |
 | `GET /api/favorites` | 소장품 목록 — `?q=` `?rare=` |
 | `GET /api/favorites/:id` | 소장품 상세 — 레벨별 스탯, 컬렉션·전용 스킬 |

@@ -128,6 +128,12 @@
                   "description": "최대 500, 미지정 시 전체"
                 },
                 {
+                  "key": "page",
+                  "value": "1",
+                  "disabled": true,
+                  "description": "1부터 — offset 대신 사용"
+                },
+                {
                   "key": "offset",
                   "value": "0",
                   "disabled": true
@@ -264,6 +270,12 @@
                   "value": "20"
                 },
                 {
+                  "key": "page",
+                  "value": "1",
+                  "disabled": true,
+                  "description": "1부터 — offset 대신 사용"
+                },
+                {
                   "key": "offset",
                   "value": "0",
                   "disabled": true
@@ -339,6 +351,12 @@
                 {
                   "key": "limit",
                   "value": "20"
+                },
+                {
+                  "key": "page",
+                  "value": "1",
+                  "disabled": true,
+                  "description": "1부터 — offset 대신 사용"
                 },
                 {
                   "key": "offset",
@@ -418,6 +436,12 @@
                 {
                   "key": "limit",
                   "value": "20"
+                },
+                {
+                  "key": "page",
+                  "value": "1",
+                  "disabled": true,
+                  "description": "1부터 — offset 대신 사용"
                 },
                 {
                   "key": "offset",
@@ -515,6 +539,12 @@
                   "value": "20"
                 },
                 {
+                  "key": "page",
+                  "value": "1",
+                  "disabled": true,
+                  "description": "1부터 — offset 대신 사용"
+                },
+                {
                   "key": "offset",
                   "value": "0",
                   "disabled": true
@@ -566,6 +596,12 @@
                 {
                   "key": "limit",
                   "value": "20"
+                },
+                {
+                  "key": "page",
+                  "value": "1",
+                  "disabled": true,
+                  "description": "1부터 — offset 대신 사용"
                 },
                 {
                   "key": "offset",
@@ -675,6 +711,12 @@
                 {
                   "key": "limit",
                   "value": "20"
+                },
+                {
+                  "key": "page",
+                  "value": "1",
+                  "disabled": true,
+                  "description": "1부터 — offset 대신 사용"
                 },
                 {
                   "key": "offset",

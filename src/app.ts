@@ -73,6 +73,15 @@ const getFavorites = lazyIndex<FavoriteIndexEntry>("favorites.json");
 
 const norm = (s: string) => s.toLowerCase().replace(/[\s:_\-·]/g, "");
 
+// ?page=N (1-based) or ?offset=N paging — page wins when both are given.
+// page without limit defaults to a 50-item page size
+function pageQuery(c: Context, total: number) {
+  const page = Math.max(0, Number(c.req.query("page")) || 0);
+  const lim = Math.min(Math.max(0, Number(c.req.query("limit")) || 0) || (page ? 50 : total), 500);
+  const off = page ? (page - 1) * lim : Math.max(0, Number(c.req.query("offset")) || 0);
+  return { off, lim, page };
+}
+
 // --- profile normalization helpers ---
 let nameCodeMap: Record<string, number> | null = null;
 let avatarMap: Record<string, { resourceId: number; costumeIndex: number }> | null = null;
@@ -449,12 +458,12 @@ app.get("/api/nikkes", (c) => {
   if (weapon) list = list.filter((x) => n(x.weapon.type ?? undefined) === n(weapon));
   if (rarity) list = list.filter((x) => n(x.rarity) === n(rarity));
   const total = list.length;
-  const off = Math.max(0, Number(offset) || 0);
-  const lim = Math.min(Math.max(0, Number(limit) || 0), 500) || total;
+  const pg = pageQuery(c, total);
   return c.json({
     count: total,
-    offset: off,
-    characters: pickFields(list.slice(off, off + lim), fieldsOf(c)),
+    offset: pg.off,
+    ...(pg.page ? { page: pg.page, totalPages: Math.ceil(total / pg.lim) } : {}),
+    characters: pickFields(list.slice(pg.off, pg.off + pg.lim), fieldsOf(c)),
   });
 });
 
@@ -494,12 +503,12 @@ app.get("/api/scenes", async (c) => {
   }
   if (q) list = list.filter((s) => s.groupId.includes(q) || s.name?.includes(q));
   const total = list.length;
-  const off = Math.max(0, Number(offset) || 0);
-  const lim = Math.min(Math.max(0, Number(limit) || 0), 500) || total;
+  const pg = pageQuery(c, total);
   return c.json({
     count: total,
-    offset: off,
-    scenes: pickFields(list.slice(off, off + lim), fieldsOf(c)),
+    offset: pg.off,
+    ...(pg.page ? { page: pg.page, totalPages: Math.ceil(total / pg.lim) } : {}),
+    scenes: pickFields(list.slice(pg.off, pg.off + pg.lim), fieldsOf(c)),
   });
 });
 
@@ -531,12 +540,12 @@ app.get("/api/stages", async (c) => {
     list = list.filter((s) => norm(s.name).includes(nq));
   }
   const total = list.length;
-  const off = Math.max(0, Number(offset) || 0);
-  const lim = Math.min(Math.max(0, Number(limit) || 0), 500) || total;
+  const pg = pageQuery(c, total);
   return c.json({
     count: total,
-    offset: off,
-    stages: pickFields(list.slice(off, off + lim), fieldsOf(c)),
+    offset: pg.off,
+    ...(pg.page ? { page: pg.page, totalPages: Math.ceil(total / pg.lim) } : {}),
+    stages: pickFields(list.slice(pg.off, pg.off + pg.lim), fieldsOf(c)),
   });
 });
 
@@ -569,12 +578,12 @@ app.get("/api/costumes", async (c) => {
     list = list.filter((x) => Object.values(x.name ?? {}).some((n) => norm(String(n)).includes(nq)));
   }
   const total = list.length;
-  const off = Math.max(0, Number(offset) || 0);
-  const lim = Math.min(Math.max(0, Number(limit) || 0), 500) || total;
+  const pg = pageQuery(c, total);
   return c.json({
     count: total,
-    offset: off,
-    costumes: pickFields(list.slice(off, off + lim), fieldsOf(c)),
+    offset: pg.off,
+    ...(pg.page ? { page: pg.page, totalPages: Math.ceil(total / pg.lim) } : {}),
+    costumes: pickFields(list.slice(pg.off, pg.off + pg.lim), fieldsOf(c)),
   });
 });
 
@@ -624,9 +633,13 @@ app.get("/api/equips/options", async (c) => {
   }
   if (q) list = matchName(list, q);
   const total = list.length;
-  const off = Math.max(0, Number(offset) || 0);
-  const lim = Math.min(Math.max(0, Number(limit) || 0), 500) || total;
-  return c.json({ count: total, offset: off, options: pickFields(list.slice(off, off + lim), fieldsOf(c)) });
+  const pg = pageQuery(c, total);
+  return c.json({
+    count: total,
+    offset: pg.off,
+    ...(pg.page ? { page: pg.page, totalPages: Math.ceil(total / pg.lim) } : {}),
+    options: pickFields(list.slice(pg.off, pg.off + pg.lim), fieldsOf(c)),
+  });
 });
 
 app.get("/api/equips/options/:id", async (c) => {
@@ -647,9 +660,13 @@ app.get("/api/equips", async (c) => {
   if (slot) list = list.filter((x) => norm(x.slot ?? "") === norm(slot));
   if (q) list = matchName(list, q);
   const total = list.length;
-  const off = Math.max(0, Number(offset) || 0);
-  const lim = Math.min(Math.max(0, Number(limit) || 0), 500) || total;
-  return c.json({ count: total, offset: off, equips: pickFields(list.slice(off, off + lim), fieldsOf(c)) });
+  const pg = pageQuery(c, total);
+  return c.json({
+    count: total,
+    offset: pg.off,
+    ...(pg.page ? { page: pg.page, totalPages: Math.ceil(total / pg.lim) } : {}),
+    equips: pickFields(list.slice(pg.off, pg.off + pg.lim), fieldsOf(c)),
+  });
 });
 
 app.get("/api/equips/:id", async (c) => {
@@ -692,9 +709,13 @@ app.get("/api/avatars", async (c) => {
     );
   }
   const total = list.length;
-  const off = Math.max(0, Number(offset) || 0);
-  const lim = Math.min(Math.max(0, Number(limit) || 0), 500) || total;
-  return c.json({ count: total, offset: off, avatars: pickFields(list.slice(off, off + lim), fieldsOf(c)) });
+  const pg = pageQuery(c, total);
+  return c.json({
+    count: total,
+    offset: pg.off,
+    ...(pg.page ? { page: pg.page, totalPages: Math.ceil(total / pg.lim) } : {}),
+    avatars: pickFields(list.slice(pg.off, pg.off + pg.lim), fieldsOf(c)),
+  });
 });
 
 app.get("/api/avatars/:iconId", async (c) => {

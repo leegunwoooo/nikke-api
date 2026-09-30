@@ -59,12 +59,15 @@
 | `weapon` | 무기 종류 | `RL`, `SMG`, `SG`, `SR`, `AR`, `MG` |
 | `rarity` | 레어도 | `SSR`, `SR`, `R` |
 | `limit` | 반환 개수 제한 (최대 500, 미지정 시 전체) | `?limit=50` |
+| `page` | 페이지 번호 (1부터, `offset` 대신 사용 — page와 offset 동시 지정 시 page 우선) | `?page=2` |
 | `offset` | 시작 위치 (페이지네이션) | `?offset=50` |
 | `fields` | 응답 필드 선택 (각 항목에 적용) | `?fields=id,name.ko` |
 
 모든 필터는 AND로 결합되며 대소문자를 구분하지 않습니다.
 
 **페이지네이션**: 필터가 먼저 적용된 뒤 `offset`/`limit`으로 잘립니다. `count`는 잘라내기 전 필터링된 전체 개수이고, `offset`은 실제 적용된 시작 위치가 응답에 포함됩니다. `offset`이 범위를 넘으면 빈 배열이 반환됩니다.
+
+`?page=N`(1부터)으로도 페이지를 넘길 수 있습니다 — `offset` 대신 `(page-1) * limit`이 적용되고 응답에 `page`·`totalPages`가 추가됩니다. `limit` 없이 `page`만 주면 페이지 크기 50이 기본 적용됩니다. 페이지네이션 지원 목록(`/api/nikkes`, `/api/scenes`, `/api/stages`, `/api/costumes`, `/api/equips`, `/api/equips/options`, `/api/avatars`)에서 동일하게 동작합니다.
 
 ### 요청 예시
 
@@ -266,6 +269,7 @@ GET /api/tables/CharacterLevelTable.json
 | `category` | 카테고리 필터 | `main` / `event` / `sudden` / `attractive` |
 | `nikke` | 호감도 씬 대상 니케 이름 부분 일치 | `?nikke=아니스` |
 | `limit` | 반환 개수 제한 (최대 500) | `?limit=50` |
+| `page` | 페이지 번호 (1부터, `offset` 대신 사용 — page와 offset 동시 지정 시 page 우선) | `?page=2` |
 | `offset` | 시작 위치 (페이지네이션) | `?offset=50` |
 | `fields` | 응답 필드 선택 (각 항목에 적용) | `?fields=groupId,name` |
 
@@ -356,6 +360,7 @@ GET /api/scenes/d_main_01_01_s?fields=name,lines
 | `chapter` | 챕터 번호 필터 | `?chapter=12` |
 | `mode` | 난이도 필터 | `Normal` / `Hard` / `Story` |
 | `limit` | 반환 개수 제한 (최대 500) | `?limit=100` |
+| `page` | 페이지 번호 (1부터) | `?page=3` |
 | `offset` | 시작 위치 (페이지네이션) | `?offset=100` |
 | `fields` | 응답 필드 선택 (각 항목에 적용) | `?fields=id,name,battlePower` |
 
@@ -424,6 +429,7 @@ GET /api/stages/6000001?fields=id,name,battlePower
 | `grade` | 등급 필터 | `Special` / `Event` / `Normal` 등 |
 | `nikke` | 소유 니케 필터 — 이름 부분 일치 또는 id/resourceId | `?nikke=라피`, `?nikke=80` |
 | `limit` | 반환 개수 제한 (최대 500) | `?limit=50` |
+| `page` | 페이지 번호 (1부터, `offset` 대신 사용 — page와 offset 동시 지정 시 page 우선) | `?page=2` |
 | `offset` | 시작 위치 (페이지네이션) | `?offset=50` |
 | `fields` | 응답 필드 선택 (각 항목에 적용) | `?fields=id,name.ko,grade` |
 | `lang` | 다국어 필드 평탄화 | `?lang=ko` |
@@ -488,6 +494,7 @@ GET /api/costumes/10012?lang=ko
 | `slot` | 부위 | `head` / `arm` / `leg` |
 | `limit` | 반환 개수 제한 (최대 500) | `?limit=50` |
 | `offset` | 시작 위치 | `?offset=50` |
+| `page` | 페이지 번호 (1부터) | `?page=2` |
 | `fields` | 응답 필드 선택 | `?fields=id,name.ko,icon` |
 | `lang` | 다국어 필드 평탄화 | `?lang=ko` |
 

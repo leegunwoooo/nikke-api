@@ -29,6 +29,33 @@ test("nikke detail by id / resourceId / name", async () => {
   assert.equal((await get("/api/nikkes/nobody")).status, 404);
 });
 
+test("?page=N pages alongside ?offset=", async () => {
+  // page wins over offset; page 1 == offset 0
+  const p1 = await json("/api/nikkes?limit=2&page=1");
+  assert.equal(p1.page, 1);
+  assert.equal(p1.totalPages, 2);
+  assert.deepEqual(
+    p1.characters.map((x: any) => x.id),
+    (await json("/api/nikkes?limit=2")).characters.map((x: any) => x.id),
+  );
+  const p2 = await json("/api/nikkes?limit=2&page=2");
+  assert.equal(p2.page, 2);
+  assert.equal(p2.offset, 2); // (page-1) * limit
+  assert.equal(p2.characters.length, 1);
+  // page > totalPages → empty page, not an error
+  const p9 = await json("/api/nikkes?limit=2&page=9");
+  assert.equal(p9.count, 3);
+  assert.equal(p9.characters.length, 0);
+  // offset mode doesn't emit page fields
+  const off = await json("/api/nikkes?limit=2&offset=1");
+  assert.equal(off.page, undefined);
+  // page works on the other list routes too
+  assert.equal((await json("/api/stages?limit=2&page=2")).stages[0].id, 7000001);
+  assert.equal((await json("/api/costumes?limit=2&page=2")).page, 2);
+  assert.equal((await json("/api/equips?limit=2&page=2")).equips.length, 1);
+  assert.equal((await json("/api/avatars?limit=2&page=2")).page, 2);
+});
+
 test("?fields trims objects, including dot paths", async () => {
   const list = await json("/api/nikkes?fields=id,name.en");
   assert.deepEqual(list.characters[0], { id: 1, name: { en: "Rapi" } });
