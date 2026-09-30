@@ -679,7 +679,7 @@ GET /api/user/<blablaid>/nikke/라피?fields=character,level,equipment
 
 ## 공통: 언어 선택 `?lang=`
 
-모든 JSON 응답에 적용됩니다. `name`·`description`·`descriptions` 등 `{ko,en,ja,zh-TW}` 형태의 다국어 객체가 지정 언어 문자열 하나로 평탄화됩니다.
+모든 JSON 응답에 적용됩니다 — `/api/favorites/:id`·`/api/cubes/:id`·`/api/scenes/:groupId`·`/api/tables/:file`처럼 파일을 그대로 내려주는 엔드포인트도 포함입니다. `name`·`description`·`descriptions` 등 `{ko,en,ja,zh-TW}` 형태의 다국어 객체가 지정 언어 문자열 하나로 평탄화됩니다.
 
 | 값 | 결과 |
 |----|------|

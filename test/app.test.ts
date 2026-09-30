@@ -105,6 +105,14 @@ test("?lang flattens localized objects", async () => {
   assert.equal(none.name.ko, "라피");
 });
 
+test("?lang applies to file-streamed endpoints too", async () => {
+  assert.equal((await json("/api/favorites/100?lang=en")).name, "Telescope");
+  assert.equal((await json("/api/cubes/1?lang=ko")).name, "테스트 큐브");
+  // invalid lang on a streamed file still streams raw
+  const raw = await json("/api/cubes/1?lang=fr");
+  assert.equal(raw.name.ko, "테스트 큐브");
+});
+
 test("cache headers + conditional GET", async () => {
   const res = await get("/api/nikkes/1");
   const etag = res.headers.get("ETag");

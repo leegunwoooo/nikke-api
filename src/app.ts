@@ -322,6 +322,13 @@ function findByName(q: string): Nikke[] {
   });
 }
 
+// endpoints that stream raw files via c.body skip the lang middleware —
+// when a valid ?lang= is present they must go through c.json instead
+const wantsLang = (c: Context) => {
+  const l = c.req.query("lang");
+  return l != null && LOCALES.has(l);
+};
+
 const app = new Hono();
 app.use("*", cors());
 app.use("*", cacheHeaders(characterData.syncedAt));
@@ -446,7 +453,7 @@ app.get("/api/scenes/:groupId", async (c) => {
     return c.json({ error: "not found" }, 404);
   }
   const fields = fieldsOf(c);
-  if (fields) return c.json(pickFields(JSON.parse(body), fields));
+  if (fields || wantsLang(c)) return c.json(pickFields(JSON.parse(body), fields));
   return c.body(body, 200, { "Content-Type": "application/json" });
 });
 
@@ -471,7 +478,7 @@ app.get("/api/favorites/:id", async (c) => {
     return c.json({ error: "not found" }, 404);
   }
   const fields = fieldsOf(c);
-  if (fields) return c.json(pickFields(JSON.parse(body), fields));
+  if (fields || wantsLang(c)) return c.json(pickFields(JSON.parse(body), fields));
   return c.body(body, 200, { "Content-Type": "application/json" });
 });
 
@@ -501,7 +508,7 @@ app.get("/api/cubes/:id", async (c) => {
     return c.json({ error: "not found" }, 404);
   }
   const fields = fieldsOf(c);
-  if (fields) return c.json(pickFields(JSON.parse(body), fields));
+  if (fields || wantsLang(c)) return c.json(pickFields(JSON.parse(body), fields));
   return c.body(body, 200, { "Content-Type": "application/json" });
 });
 
@@ -519,6 +526,7 @@ app.get("/api/tables/:file", async (c) => {
   if (!/^[\w.-]+\.json$/.test(file)) return c.json({ error: "invalid file" }, 400);
   try {
     const body = await readFile(path.join(DIST, "tables", file), "utf8");
+    if (wantsLang(c)) return c.json(JSON.parse(body));
     return c.body(body, 200, { "Content-Type": "application/json" });
   } catch {
     return c.json({ error: "not found" }, 404);

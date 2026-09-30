@@ -148,7 +148,7 @@ GET /api/user/<blablaid>/nikke?fields=character.name,combat
 
 ### 언어 선택 — `?lang=`
 
-모든 JSON 응답에 붙일 수 있습니다. `name`·`description`·`descriptions` 등 `{ko,en,ja,zh-TW}` 형태의 다국어 객체가 지정한 언어의 문자열 하나로 평탄화됩니다.
+모든 JSON 응답에 붙일 수 있습니다 (파일 그대로 내려주는 상세 엔드포인트 포함). `name`·`description`·`descriptions` 등 `{ko,en,ja,zh-TW}` 형태의 다국어 객체가 지정한 언어의 문자열 하나로 평탄화됩니다.
 
 ```
 GET /api/nikkes?lang=ko        → "name": "라피"
