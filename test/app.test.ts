@@ -65,6 +65,13 @@ test("?fields trims objects, including dot paths", async () => {
   assert.deepEqual(fav, { stats: [1, 2] });
 });
 
+test("scenes ?q is case/space-insensitive like other lists", async () => {
+  const lower = await json("/api/scenes?q=main01");
+  const sloppy = await json("/api/scenes?q=MAIN 01");
+  assert.equal(lower.count, sloppy.count);
+  assert.ok(lower.count > 0);
+});
+
 test("scenes index, nikke filter is case/space-insensitive", async () => {
   assert.equal((await json("/api/scenes")).count, 2);
   assert.equal((await json("/api/scenes?category=main")).count, 1);

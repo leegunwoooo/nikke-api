@@ -501,7 +501,10 @@ app.get("/api/scenes", async (c) => {
     const nn = norm(nikke);
     list = list.filter((s) => s.nikke != null && norm(s.nikke).includes(nn));
   }
-  if (q) list = list.filter((s) => s.groupId.includes(q) || s.name?.includes(q));
+  if (q) {
+    const nq = norm(q);
+    list = list.filter((s) => norm(s.groupId).includes(nq) || norm(s.name ?? "").includes(nq));
+  }
   const total = list.length;
   const pg = pageQuery(c, total);
   return c.json({
