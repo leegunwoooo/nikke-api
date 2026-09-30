@@ -663,9 +663,13 @@ async function loadEquipTables() {
     const byId = new Map<number, EquipTableRecord>();
     const desc = new Map<number, Record<string, string>>();
     const [ko, en, ja] = await Promise.all(
-      ["ko", "en", "ja"].map((l) =>
-        loadDistJson<EquipTableRecord[]>(`tables/ItemEquipTable_${l}.json`, []),
-      ),
+      ["ko", "en", "ja"].map(async (l) => {
+        const t = await loadDistJson<EquipTableRecord[] | { records?: EquipTableRecord[] }>(
+          `tables/ItemEquipTable_${l}.json`,
+          [],
+        );
+        return Array.isArray(t) ? t : (t.records ?? []);
+      }),
     );
     for (const r of ko) byId.set(r.id, r);
     for (const [i, tbl] of [ko, en, ja].entries()) {
