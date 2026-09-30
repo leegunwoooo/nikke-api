@@ -642,15 +642,72 @@ app.get("/api/costumes/:id", async (c) => {
   return c.json({ error: "not found" }, 404);
 });
 
+// ItemEquipTable_{locale}.json — equip stats, option-slot rates, reroll
+// costs and the (localized) flavor text; equip_item_map only has names
+interface EquipTableRecord {
+  id: number;
+  name_localkey?: string;
+  description_localkey?: string;
+  stat?: { stat_type?: string; stat_value?: number }[];
+  option_slot?: { option_slot?: number; option_slot_success_ratio?: number }[];
+  option_cost?: number;
+  option_change_cost?: number;
+  option_lock_cost?: number;
+}
+let equipTables: {
+  byId: Map<number, EquipTableRecord>;
+  desc: Map<number, Record<string, string>>;
+} | null = null;
+async function loadEquipTables() {
+  if (!equipTables) {
+    const byId = new Map<number, EquipTableRecord>();
+    const desc = new Map<number, Record<string, string>>();
+    const [ko, en, ja] = await Promise.all(
+      ["ko", "en", "ja"].map((l) =>
+        loadDistJson<EquipTableRecord[]>(`tables/ItemEquipTable_${l}.json`, []),
+      ),
+    );
+    for (const r of ko) byId.set(r.id, r);
+    for (const [i, tbl] of [ko, en, ja].entries()) {
+      const l = ["ko", "en", "ja"][i];
+      for (const r of tbl) {
+        if (r.description_localkey) {
+          const d = desc.get(r.id) ?? {};
+          d[l] = r.description_localkey.replace(/_x000D_/g, "").trim();
+          desc.set(r.id, d);
+        }
+      }
+    }
+    equipTables = { byId, desc };
+  }
+  return equipTables;
+}
+
 // normalized rows served by /api/equips
-const equipRow = (tid: number, item: any) => ({
-  id: tid,
-  name: item.name ?? null,
-  class: item.class ?? null,
-  rare: item.rare ?? null,
-  slot: item.slot ?? null,
-  icon: item.icon ?? null,
-});
+const equipRow = (tid: number, item: any, tbl?: Awaited<ReturnType<typeof loadEquipTables>>) => {
+  const r = tbl?.byId.get(tid);
+  const stats = Object.fromEntries(
+    (r?.stat ?? []).filter((s) => s.stat_type && s.stat_type !== "None").map((s) => [s.stat_type, s.stat_value ?? 0]),
+  );
+  const optionSlots = (r?.option_slot ?? [])
+    .map((s, i) => ({ slot: i + 1, success: (s.option_slot_success_ratio ?? 0) / 10000 }))
+    .filter((s) => s.success > 0);
+  return {
+    id: tid,
+    name: item.name ?? null,
+    class: item.class ?? null,
+    rare: item.rare ?? null,
+    slot: item.slot ?? null,
+    icon: item.icon ?? null,
+    stats: Object.keys(stats).length ? stats : null,
+    optionSlots: optionSlots.length ? optionSlots : null,
+    costs:
+      r && (r.option_cost || r.option_change_cost || r.option_lock_cost)
+        ? { open: r.option_cost ?? 0, change: r.option_change_cost ?? 0, lock: r.option_lock_cost ?? 0 }
+        : null,
+    description: tbl?.desc.get(tid) ?? null,
+  };
+};
 const optionRow = (oid: number, o: any) => ({
   id: oid,
   groupId: o.groupId ?? null,
@@ -701,8 +758,8 @@ app.get("/api/equips/options/:id", async (c) => {
 
 app.get("/api/equips", async (c) => {
   const { q, class: cls, rare, slot, limit, offset } = c.req.query();
-  await loadEquipMaps();
-  let list = Object.entries(equipItemMap ?? {}).map(([tid, item]) => equipRow(Number(tid), item));
+  const [tbl] = await Promise.all([loadEquipTables(), loadEquipMaps()]);
+  let list = Object.entries(equipItemMap ?? {}).map(([tid, item]) => equipRow(Number(tid), item, tbl));
   if (cls) list = list.filter((x) => norm(x.class ?? "") === norm(cls));
   if (rare) list = list.filter((x) => norm(x.rare ?? "") === norm(rare));
   if (slot) list = list.filter((x) => norm(x.slot ?? "") === norm(slot));
@@ -721,10 +778,10 @@ app.get("/api/equips", async (c) => {
 app.get("/api/equips/:id", async (c) => {
   const id = c.req.param("id");
   if (!/^\d+$/.test(id)) return c.json({ error: "invalid id" }, 400);
-  await loadEquipMaps();
+  const [tbl] = await Promise.all([loadEquipTables(), loadEquipMaps()]);
   const item = equipItemMap?.[id];
   if (!item) return c.json({ error: "not found" }, 404);
-  return c.json(pickFields(equipRow(Number(id), item), fieldsOf(c)));
+  return c.json(pickFields(equipRow(Number(id), item, tbl), fieldsOf(c)));
 });
 
 // normalized row served by /api/avatars — avatar_map iconId -> resource+costume

@@ -148,6 +148,23 @@ test("/api/costumes list + filters + detail", async () => {
   assert.equal((await json("/api/costumes/10012?lang=ko")).name, "테스트 코스튬");
 });
 
+test("/api/equips rows include stats, option slots, costs, description", async () => {
+  const d = await json("/api/equips/3110101");
+  assert.deepEqual(d.stats, { Atk: 5000, Hp: 40000 });
+  assert.deepEqual(d.optionSlots, [
+    { slot: 1, success: 1 },
+    { slot: 2, success: 0.5 },
+  ]);
+  assert.deepEqual(d.costs, { open: 10, change: 200, lock: 100 });
+  assert.equal(d.description.ko, "테스트 설명\n줄바꿈"); // _x000D_ stripped
+  assert.equal(d.description.en, "Test desc\n줄바꿈");
+  // item without table row data → nulls
+  const d3 = await json("/api/equips/3110301");
+  assert.equal(d3.stats, null);
+  assert.equal(d3.optionSlots, null);
+  assert.equal(d3.costs, null);
+});
+
 test("/api/equips + /options list, filters, detail", async () => {
   const all = await json("/api/equips");
   assert.equal(all.count, 3);
@@ -202,7 +219,13 @@ test("/api/avatars list + filters + detail", async () => {
 test("favorites + tables", async () => {
   assert.equal((await json("/api/favorites?q=tele")).count, 1);
   assert.equal((await get("/api/favorites/999")).status, 404);
-  assert.deepEqual((await json("/api/tables")).files.sort(), ["stage_list.json", "tower_list.json"]);
+  assert.deepEqual((await json("/api/tables")).files.sort(), [
+    "ItemEquipTable_en.json",
+    "ItemEquipTable_ja.json",
+    "ItemEquipTable_ko.json",
+    "stage_list.json",
+    "tower_list.json",
+  ]);
   assert.equal((await get("/api/tables/..%2Fcharacters.json")).status, 400);
 });
 

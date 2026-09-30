@@ -245,7 +245,7 @@ export const openapi = {
     "/api/equips": {
       get: {
         tags: ["equips"],
-        summary: "장비 아이템 목록",
+        summary: "장비 아이템 목록 — 기본 스탯·옵션슬롯 확률·재련비용·설명 포함",
         parameters: [
           { name: "q", in: "query", schema: { type: "string" }, description: "장비 이름 검색 (전 언어 부분 일치)" },
           { name: "class", in: "query", schema: { type: "string" }, description: "장착 클래스 (All/Attacker/Defender/Supporter)" },

@@ -515,11 +515,26 @@ GET /api/costumes/10012?lang=ko
   "count": 124,
   "offset": 0,
   "equips": [
-    { "id": 3110101, "name": { "ko": "...", "en": "...", "ja": "..." },
-      "class": "All", "rare": "T9", "slot": "head", "icon": "https://..." }
+    {
+      "id": 3111001, "name": { "ko": "ν 매터 바이저", "...": "..." },
+      "class": "Attacker", "rare": "T10", "slot": "head", "icon": "https://...",
+      "stats": { "Atk": 6014, "Hp": 49181 },
+      "optionSlots": [ { "slot": 1, "success": 1 }, { "slot": 2, "success": 0.5 }, { "slot": 3, "success": 0.3 } ],
+      "costs": { "open": 10, "change": 200, "lock": 100 },
+      "description": { "ko": "...", "en": "...", "ja": "..." }
+    }
   ]
 }
 ```
+
+| 필드 | 설명 |
+|------|------|
+| `stats` | 장비 기본 스탯 (`Atk`/`Hp`/`Def` 등, 없으면 `null`) |
+| `optionSlots` | 옵션 슬롯별 부여 확률 — `success`는 0~1 (1=100%). 커스텀 모듈로 1슬롯은 100%, 2슬롯 50%, 3슬롯 30% |
+| `costs` | 재련 비용 — `open`(슬롯 개방), `change`(옵션 변경), `lock`(옵션 잠금) 커스텀 모듈 수 |
+| `description` | 장비 플레이버 텍스트 (ko/en/ja) |
+
+`stats`·`optionSlots`·`costs`·`description`은 `ItemEquipTable`에서 조인되며, 테이블에 없는 항목은 `null`입니다. **옵션 효과 수치**(공격력 +X% 등)는 정적 데이터에 없어 포함되지 않습니다 — 라이브 유저 장비 조회 응답의 `options[].value`에서만 확인 가능합니다.
 
 `id`는 `/api/user/...` 보유 니케의 `equipment.*.tid`와 같은 값입니다.
 
