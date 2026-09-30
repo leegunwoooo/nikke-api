@@ -135,20 +135,34 @@ async function loadEquipMaps() {
   return { equipItemMap, equipOptionMap };
 }
 
+let stageRows: any[] | null = null;
+async function getStages(): Promise<any[]> {
+  if (!stageRows) {
+    stageRows = await loadDistJson<any[]>(path.join("tables", "stage_list.json"), []);
+  }
+  return stageRows;
+}
+
+// normalized shape served by /api/stages
+const stageRow = (s: any) => ({
+  id: s.id,
+  chapter: s.chapter_id,
+  mode: s.chapter_mod,
+  battlePower: s.standard_battle_power ?? 0,
+  name: s.name_localkey?.name ?? "",
+  scenarios: { enter: s.enter_scenario ?? null, exit: s.exit_scenario ?? null },
+});
+
 async function loadStageMap() {
   if (!stageMap) {
     stageMap = new Map();
-    try {
-      const list: { id: number; chapter_id: number; chapter_mod: string; name_localkey?: { name?: string } }[] =
-        JSON.parse(await readFile(path.join(DIST, "tables", "stage_list.json"), "utf8"));
-      for (const s of list) {
-        stageMap.set(s.id, {
-          chapter: s.chapter_id,
-          mode: s.chapter_mod,
-          name: s.name_localkey?.name ?? "",
-        });
-      }
-    } catch { /* empty */ }
+    for (const s of await getStages()) {
+      stageMap.set(s.id, {
+        chapter: s.chapter_id,
+        mode: s.chapter_mod,
+        name: s.name_localkey?.name ?? "",
+      });
+    }
   }
   return stageMap;
 }
@@ -371,6 +385,8 @@ app.get("/", (c) =>
       "GET /api/meta/filters": "available filter values",
       "GET /api/scenes": "story scene index (ko)",
       "GET /api/scenes/:groupId": "scene dialogue lines (ko)",
+      "GET /api/stages": "campaign stage list; filters: q, chapter, mode; limit/offset",
+      "GET /api/stages/:id": "stage detail (id)",
       "GET /api/favorites": "소장품(favorite item) list; filters: q, rare",
       "GET /api/favorites/:id": "소장품 detail — per-level stats, skills",
       "GET /api/cubes": "하모니 큐브 list; filter: q",
@@ -469,6 +485,37 @@ app.get("/api/scenes/:groupId", async (c) => {
   const fields = fieldsOf(c);
   if (fields || wantsLang(c)) return c.json(pickFields(JSON.parse(body), fields));
   return c.body(body, 200, { "Content-Type": "application/json" });
+});
+
+app.get("/api/stages", async (c) => {
+  const { q, chapter, mode, limit, offset } = c.req.query();
+  let list = (await getStages()).map(stageRow);
+  if (chapter) {
+    const ch = Number(chapter);
+    if (Number.isNaN(ch)) return c.json({ error: "invalid chapter" }, 400);
+    list = list.filter((s) => s.chapter === ch);
+  }
+  if (mode) list = list.filter((s) => norm(s.mode) === norm(mode));
+  if (q) {
+    const nq = norm(q);
+    list = list.filter((s) => norm(s.name).includes(nq));
+  }
+  const total = list.length;
+  const off = Math.max(0, Number(offset) || 0);
+  const lim = Math.min(Math.max(0, Number(limit) || 0), 500) || total;
+  return c.json({
+    count: total,
+    offset: off,
+    stages: pickFields(list.slice(off, off + lim), fieldsOf(c)),
+  });
+});
+
+app.get("/api/stages/:id", async (c) => {
+  const id = c.req.param("id");
+  if (!/^\d+$/.test(id)) return c.json({ error: "invalid id" }, 400);
+  const s = (await getStages()).find((x) => x.id === Number(id));
+  if (!s) return c.json({ error: "not found" }, 404);
+  return c.json(pickFields(stageRow(s), fieldsOf(c)));
 });
 
 app.get("/api/favorites", async (c) => {

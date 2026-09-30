@@ -28,21 +28,43 @@
           "name": "루트 정보",
           "request": {
             "method": "GET",
-            "url": { "raw": "{{baseUrl}}/", "host": ["{{baseUrl}}"], "path": [] }
+            "url": {
+              "raw": "{{baseUrl}}/",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": []
+            }
           }
         },
         {
           "name": "OpenAPI 스펙",
           "request": {
             "method": "GET",
-            "url": { "raw": "{{baseUrl}}/openapi.json", "host": ["{{baseUrl}}"], "path": ["openapi.json"] }
+            "url": {
+              "raw": "{{baseUrl}}/openapi.json",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "openapi.json"
+              ]
+            }
           }
         },
         {
           "name": "문서 (Scalar)",
           "request": {
             "method": "GET",
-            "url": { "raw": "{{baseUrl}}/docs", "host": ["{{baseUrl}}"], "path": ["docs"] }
+            "url": {
+              "raw": "{{baseUrl}}/docs",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "docs"
+              ]
+            }
           }
         }
       ]
@@ -56,20 +78,72 @@
             "method": "GET",
             "url": {
               "raw": "{{baseUrl}}/api/nikkes?limit=20",
-              "host": ["{{baseUrl}}"],
-              "path": ["api", "nikkes"],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "nikkes"
+              ],
               "query": [
-                { "key": "q", "value": "", "disabled": true, "description": "이름 검색 (전 언어 부분 일치)" },
-                { "key": "element", "value": "", "disabled": true },
-                { "key": "class", "value": "", "disabled": true },
-                { "key": "burst", "value": "", "disabled": true },
-                { "key": "corporation", "value": "", "disabled": true },
-                { "key": "weapon", "value": "", "disabled": true },
-                { "key": "rarity", "value": "", "disabled": true },
-                { "key": "limit", "value": "20", "description": "최대 500, 미지정 시 전체" },
-                { "key": "offset", "value": "0", "disabled": true },
-                { "key": "lang", "value": "ko", "disabled": true, "description": "ko|en|ja|zh-TW — 다국어 필드 평탄화" },
-                { "key": "fields", "value": "", "disabled": true, "description": "응답 필드 선택 (쉼표 구분)" }
+                {
+                  "key": "q",
+                  "value": "",
+                  "disabled": true,
+                  "description": "이름 검색 (전 언어 부분 일치)"
+                },
+                {
+                  "key": "element",
+                  "value": "",
+                  "disabled": true
+                },
+                {
+                  "key": "class",
+                  "value": "",
+                  "disabled": true
+                },
+                {
+                  "key": "burst",
+                  "value": "",
+                  "disabled": true
+                },
+                {
+                  "key": "corporation",
+                  "value": "",
+                  "disabled": true
+                },
+                {
+                  "key": "weapon",
+                  "value": "",
+                  "disabled": true
+                },
+                {
+                  "key": "rarity",
+                  "value": "",
+                  "disabled": true
+                },
+                {
+                  "key": "limit",
+                  "value": "20",
+                  "description": "최대 500, 미지정 시 전체"
+                },
+                {
+                  "key": "offset",
+                  "value": "0",
+                  "disabled": true
+                },
+                {
+                  "key": "lang",
+                  "value": "ko",
+                  "disabled": true,
+                  "description": "ko|en|ja|zh-TW — 다국어 필드 평탄화"
+                },
+                {
+                  "key": "fields",
+                  "value": "",
+                  "disabled": true,
+                  "description": "응답 필드 선택 (쉼표 구분)"
+                }
               ]
             }
           }
@@ -80,11 +154,24 @@
             "method": "GET",
             "url": {
               "raw": "{{baseUrl}}/api/nikkes/201601?lang=ko",
-              "host": ["{{baseUrl}}"],
-              "path": ["api", "nikkes", "201601"],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "nikkes",
+                "201601"
+              ],
               "query": [
-                { "key": "lang", "value": "ko" },
-                { "key": "fields", "value": "", "disabled": true }
+                {
+                  "key": "lang",
+                  "value": "ko"
+                },
+                {
+                  "key": "fields",
+                  "value": "",
+                  "disabled": true
+                }
               ]
             }
           }
@@ -95,11 +182,25 @@
             "method": "GET",
             "url": {
               "raw": "{{baseUrl}}/api/nikkes/라피",
-              "host": ["{{baseUrl}}"],
-              "path": ["api", "nikkes", "라피"],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "nikkes",
+                "라피"
+              ],
               "query": [
-                { "key": "lang", "value": "ko", "disabled": true },
-                { "key": "fields", "value": "", "disabled": true }
+                {
+                  "key": "lang",
+                  "value": "ko",
+                  "disabled": true
+                },
+                {
+                  "key": "fields",
+                  "value": "",
+                  "disabled": true
+                }
               ]
             }
           }
@@ -108,7 +209,17 @@
           "name": "필터 값 목록",
           "request": {
             "method": "GET",
-            "url": { "raw": "{{baseUrl}}/api/meta/filters", "host": ["{{baseUrl}}"], "path": ["api", "meta", "filters"] }
+            "url": {
+              "raw": "{{baseUrl}}/api/meta/filters",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "meta",
+                "filters"
+              ]
+            }
           }
         }
       ]
@@ -122,15 +233,46 @@
             "method": "GET",
             "url": {
               "raw": "{{baseUrl}}/api/scenes?limit=20",
-              "host": ["{{baseUrl}}"],
-              "path": ["api", "scenes"],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "scenes"
+              ],
               "query": [
-                { "key": "category", "value": "", "disabled": true, "description": "main|event|sudden|attractive" },
-                { "key": "nikke", "value": "", "disabled": true, "description": "호감도 씬 대상 니케" },
-                { "key": "q", "value": "", "disabled": true, "description": "씬 제목 검색" },
-                { "key": "limit", "value": "20" },
-                { "key": "offset", "value": "0", "disabled": true },
-                { "key": "lang", "value": "ko", "disabled": true }
+                {
+                  "key": "category",
+                  "value": "",
+                  "disabled": true,
+                  "description": "main|event|sudden|attractive"
+                },
+                {
+                  "key": "nikke",
+                  "value": "",
+                  "disabled": true,
+                  "description": "호감도 씬 대상 니케"
+                },
+                {
+                  "key": "q",
+                  "value": "",
+                  "disabled": true,
+                  "description": "씬 제목 검색"
+                },
+                {
+                  "key": "limit",
+                  "value": "20"
+                },
+                {
+                  "key": "offset",
+                  "value": "0",
+                  "disabled": true
+                },
+                {
+                  "key": "lang",
+                  "value": "ko",
+                  "disabled": true
+                }
               ]
             }
           }
@@ -141,9 +283,98 @@
             "method": "GET",
             "url": {
               "raw": "{{baseUrl}}/api/scenes/d_ex_armory_01",
-              "host": ["{{baseUrl}}"],
-              "path": ["api", "scenes", "d_ex_armory_01"],
-              "query": [{ "key": "lang", "value": "ko", "disabled": true }]
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "scenes",
+                "d_ex_armory_01"
+              ],
+              "query": [
+                {
+                  "key": "lang",
+                  "value": "ko",
+                  "disabled": true
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Stages",
+      "item": [
+        {
+          "name": "스테이지 목록",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{baseUrl}}/api/stages?chapter=1&mode=Normal&limit=20",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "stages"
+              ],
+              "query": [
+                {
+                  "key": "q",
+                  "value": "",
+                  "disabled": true,
+                  "description": "스테이지 이름 검색"
+                },
+                {
+                  "key": "chapter",
+                  "value": "1",
+                  "description": "챕터 번호"
+                },
+                {
+                  "key": "mode",
+                  "value": "Normal",
+                  "description": "Normal|Hard|Story"
+                },
+                {
+                  "key": "limit",
+                  "value": "20"
+                },
+                {
+                  "key": "offset",
+                  "value": "0",
+                  "disabled": true
+                },
+                {
+                  "key": "fields",
+                  "value": "id,name,battlePower",
+                  "disabled": true
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "스테이지 상세",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{baseUrl}}/api/stages/6000001",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "stages",
+                "6000001"
+              ],
+              "query": [
+                {
+                  "key": "fields",
+                  "value": "id,name,battlePower",
+                  "disabled": true
+                }
+              ]
             }
           }
         }
@@ -158,12 +389,30 @@
             "method": "GET",
             "url": {
               "raw": "{{baseUrl}}/api/favorites",
-              "host": ["{{baseUrl}}"],
-              "path": ["api", "favorites"],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "favorites"
+              ],
               "query": [
-                { "key": "q", "value": "", "disabled": true },
-                { "key": "rare", "value": "", "disabled": true, "description": "R|SR|SSR" },
-                { "key": "lang", "value": "ko", "disabled": true }
+                {
+                  "key": "q",
+                  "value": "",
+                  "disabled": true
+                },
+                {
+                  "key": "rare",
+                  "value": "",
+                  "disabled": true,
+                  "description": "R|SR|SSR"
+                },
+                {
+                  "key": "lang",
+                  "value": "ko",
+                  "disabled": true
+                }
               ]
             }
           }
@@ -174,9 +423,21 @@
             "method": "GET",
             "url": {
               "raw": "{{baseUrl}}/api/favorites/100101",
-              "host": ["{{baseUrl}}"],
-              "path": ["api", "favorites", "100101"],
-              "query": [{ "key": "lang", "value": "ko", "disabled": true }]
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "favorites",
+                "100101"
+              ],
+              "query": [
+                {
+                  "key": "lang",
+                  "value": "ko",
+                  "disabled": true
+                }
+              ]
             }
           }
         }
@@ -191,11 +452,24 @@
             "method": "GET",
             "url": {
               "raw": "{{baseUrl}}/api/cubes",
-              "host": ["{{baseUrl}}"],
-              "path": ["api", "cubes"],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "cubes"
+              ],
               "query": [
-                { "key": "q", "value": "", "disabled": true },
-                { "key": "lang", "value": "ko", "disabled": true }
+                {
+                  "key": "q",
+                  "value": "",
+                  "disabled": true
+                },
+                {
+                  "key": "lang",
+                  "value": "ko",
+                  "disabled": true
+                }
               ]
             }
           }
@@ -206,9 +480,21 @@
             "method": "GET",
             "url": {
               "raw": "{{baseUrl}}/api/cubes/1000301",
-              "host": ["{{baseUrl}}"],
-              "path": ["api", "cubes", "1000301"],
-              "query": [{ "key": "lang", "value": "ko", "disabled": true }]
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "cubes",
+                "1000301"
+              ],
+              "query": [
+                {
+                  "key": "lang",
+                  "value": "ko",
+                  "disabled": true
+                }
+              ]
             }
           }
         }
@@ -221,7 +507,16 @@
           "name": "테이블 목록",
           "request": {
             "method": "GET",
-            "url": { "raw": "{{baseUrl}}/api/tables", "host": ["{{baseUrl}}"], "path": ["api", "tables"] }
+            "url": {
+              "raw": "{{baseUrl}}/api/tables",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "tables"
+              ]
+            }
           }
         },
         {
@@ -230,8 +525,14 @@
             "method": "GET",
             "url": {
               "raw": "{{baseUrl}}/api/tables/character_id_map.json",
-              "host": ["{{baseUrl}}"],
-              "path": ["api", "tables", "character_id_map.json"]
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "tables",
+                "character_id_map.json"
+              ]
             }
           }
         }
@@ -246,10 +547,19 @@
             "method": "GET",
             "url": {
               "raw": "{{baseUrl}}/api/user?blablaid={{blablaid}}",
-              "host": ["{{baseUrl}}"],
-              "path": ["api", "user"],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "user"
+              ],
               "query": [
-                { "key": "blablaid", "value": "{{blablaid}}", "description": "공유 ID 또는 공유 URL 전체 (구형 ?openid=/?url=도 동작)" }
+                {
+                  "key": "blablaid",
+                  "value": "{{blablaid}}",
+                  "description": "공유 ID 또는 공유 URL 전체 (구형 ?openid=/?url=도 동작)"
+                }
               ]
             }
           }
@@ -260,8 +570,14 @@
             "method": "GET",
             "url": {
               "raw": "{{baseUrl}}/api/user/{{blablaid}}",
-              "host": ["{{baseUrl}}"],
-              "path": ["api", "user", "{{blablaid}}"]
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "user",
+                "{{blablaid}}"
+              ]
             }
           }
         },
@@ -271,17 +587,57 @@
             "method": "GET",
             "url": {
               "raw": "{{baseUrl}}/api/user/{{blablaid}}/nikke",
-              "host": ["{{baseUrl}}"],
-              "path": ["api", "user", "{{blablaid}}", "nikke"],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "user",
+                "{{blablaid}}",
+                "nikke"
+              ],
               "query": [
-                { "key": "q", "value": "", "disabled": true, "description": "이름(전 언어 부분 일치)·id·resourceId·nameCode" },
-                { "key": "element", "value": "", "disabled": true },
-                { "key": "class", "value": "", "disabled": true },
-                { "key": "burst", "value": "", "disabled": true },
-                { "key": "corporation", "value": "", "disabled": true },
-                { "key": "weapon", "value": "", "disabled": true },
-                { "key": "rarity", "value": "", "disabled": true },
-                { "key": "lang", "value": "ko", "disabled": true }
+                {
+                  "key": "q",
+                  "value": "",
+                  "disabled": true,
+                  "description": "이름(전 언어 부분 일치)·id·resourceId·nameCode"
+                },
+                {
+                  "key": "element",
+                  "value": "",
+                  "disabled": true
+                },
+                {
+                  "key": "class",
+                  "value": "",
+                  "disabled": true
+                },
+                {
+                  "key": "burst",
+                  "value": "",
+                  "disabled": true
+                },
+                {
+                  "key": "corporation",
+                  "value": "",
+                  "disabled": true
+                },
+                {
+                  "key": "weapon",
+                  "value": "",
+                  "disabled": true
+                },
+                {
+                  "key": "rarity",
+                  "value": "",
+                  "disabled": true
+                },
+                {
+                  "key": "lang",
+                  "value": "ko",
+                  "disabled": true
+                }
               ]
             }
           }
@@ -292,12 +648,29 @@
             "method": "GET",
             "url": {
               "raw": "{{baseUrl}}/api/user/nikke?blablaid={{blablaid}}",
-              "host": ["{{baseUrl}}"],
-              "path": ["api", "user", "nikke"],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "user",
+                "nikke"
+              ],
               "query": [
-                { "key": "blablaid", "value": "{{blablaid}}" },
-                { "key": "q", "value": "", "disabled": true },
-                { "key": "lang", "value": "ko", "disabled": true }
+                {
+                  "key": "blablaid",
+                  "value": "{{blablaid}}"
+                },
+                {
+                  "key": "q",
+                  "value": "",
+                  "disabled": true
+                },
+                {
+                  "key": "lang",
+                  "value": "ko",
+                  "disabled": true
+                }
               ]
             }
           }
@@ -308,9 +681,23 @@
             "method": "GET",
             "url": {
               "raw": "{{baseUrl}}/api/user/{{blablaid}}/nikke/{{nikkeNameOrId}}",
-              "host": ["{{baseUrl}}"],
-              "path": ["api", "user", "{{blablaid}}", "nikke", "{{nikkeNameOrId}}"],
-              "query": [{ "key": "lang", "value": "ko", "disabled": true }]
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "user",
+                "{{blablaid}}",
+                "nikke",
+                "{{nikkeNameOrId}}"
+              ],
+              "query": [
+                {
+                  "key": "lang",
+                  "value": "ko",
+                  "disabled": true
+                }
+              ]
             }
           }
         },
@@ -320,11 +707,25 @@
             "method": "GET",
             "url": {
               "raw": "{{baseUrl}}/api/user/nikke/{{nikkeNameOrId}}?blablaid={{blablaid}}",
-              "host": ["{{baseUrl}}"],
-              "path": ["api", "user", "nikke", "{{nikkeNameOrId}}"],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "user",
+                "nikke",
+                "{{nikkeNameOrId}}"
+              ],
               "query": [
-                { "key": "blablaid", "value": "{{blablaid}}" },
-                { "key": "lang", "value": "ko", "disabled": true }
+                {
+                  "key": "blablaid",
+                  "value": "{{blablaid}}"
+                },
+                {
+                  "key": "lang",
+                  "value": "ko",
+                  "disabled": true
+                }
               ]
             }
           }
@@ -340,9 +741,19 @@
             "method": "GET",
             "url": {
               "raw": "{{baseUrl}}/api/cdn?path=character/ko/nikke_list_v2.json",
-              "host": ["{{baseUrl}}"],
-              "path": ["api", "cdn"],
-              "query": [{ "key": "path", "value": "character/ko/nikke_list_v2.json" }]
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "cdn"
+              ],
+              "query": [
+                {
+                  "key": "path",
+                  "value": "character/ko/nikke_list_v2.json"
+                }
+              ]
             }
           }
         }

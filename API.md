@@ -18,6 +18,8 @@
 - [GET /api/tables/:file](#get-apitablesfile) — 원본 테이블 조회
 - [GET /api/scenes](#get-apiscenes) — 스토리 씬 목록 (한국어)
 - [GET /api/scenes/:groupId](#get-apiscenesgroupid) — 씬 대본 (한국어)
+- [GET /api/stages](#get-apistages) — 캠페인 스테이지 목록
+- [GET /api/stages/:id](#get-apistagesid) — 스테이지 상세
 - [GET /api/favorites](#get-apifavorites) — 소장품 목록
 - [GET /api/favorites/:id](#get-apifavoritesid) — 소장품 상세 (레벨별 스탯·스킬)
 - [GET /api/cubes](#get-apicubes) — 하모니 큐브 목록
@@ -333,6 +335,74 @@ GET /api/scenes/d_main_01_01_s?fields=name,lines
 호감도 씬(`groupId`가 `d_nikke_*`)은 상단에 `type: "attractive"`, `nikke`, `attractiveLevel` 필드가 추가로 붙습니다.
 
 캐릭터별 호감도 씬은 `/api/nikkes/:id` 상세의 `details.attractiveScenarios`에 들어있는 `attractive_scenario_group_id`로 연결됩니다. 스킨 캐릭터(예: `아니스 : 스타`)는 자기 전용 그룹(`d_nikke_anis_star_*`)을 가지며, `?nikke=` 필터는 부분 일치라 `아니스`로 검색하면 모든 스킨 버전이 함께 나옵니다.
+
+## GET /api/stages
+
+캠페인 스테이지 목록을 반환합니다 (약 4,400개 — 메인 Normal/Hard + Story 스테이지).
+
+### 쿼리 파라미터
+
+| 파라미터 | 설명 | 예시 |
+|----------|------|------|
+| `q` | 스테이지 이름 부분 일치 | `?q=0-1` |
+| `chapter` | 챕터 번호 필터 | `?chapter=12` |
+| `mode` | 난이도 필터 | `Normal` / `Hard` / `Story` |
+| `limit` | 반환 개수 제한 (최대 500) | `?limit=100` |
+| `offset` | 시작 위치 (페이지네이션) | `?offset=100` |
+| `fields` | 응답 필드 선택 (각 항목에 적용) | `?fields=id,name,battlePower` |
+
+```
+GET /api/stages?chapter=1&mode=Normal
+GET /api/stages?mode=Hard&limit=50
+```
+
+```json
+{
+  "count": 82,
+  "offset": 0,
+  "stages": [
+    {
+      "id": 6000001,
+      "chapter": 1,
+      "mode": "Normal",
+      "battlePower": 110,
+      "name": "0-1 STAGE",
+      "scenarios": { "enter": "d_main_01_01_s", "exit": "d_main_01_01_e" }
+    }
+  ]
+}
+```
+
+| 필드 | 설명 |
+|------|------|
+| `id` | 스테이지 ID |
+| `chapter` | 챕터 번호 |
+| `mode` | `Normal` / `Hard` / `Story` |
+| `battlePower` | 권장 전투력 |
+| `name` | 스테이지 표시 이름 (`"0-1 STAGE"` 등) |
+| `scenarios.enter` / `scenarios.exit` | 입장·클리어 시나리오 그룹 ID — `/api/scenes/:groupId`로 대본 조회 가능. 없으면 `null` |
+
+**에러**
+
+| 상황 | 상태 |
+|------|------|
+| `chapter`가 숫자가 아님 | 400 `{"error": "invalid chapter"}` |
+
+## GET /api/stages/:id
+
+스테이지 ID로 단건 조회합니다. 응답 형태는 목록의 `stages[]` 항목과 동일합니다.
+
+```
+GET /api/stages/6000001
+GET /api/stages/6000001?fields=id,name,battlePower
+```
+
+**에러**
+
+| 상황 | 상태 |
+|------|------|
+| `id`가 숫자가 아님 | 400 `{"error": "invalid id"}` |
+| 해당 스테이지 없음 | 404 `{"error": "not found"}` |
 
 ## GET /api/favorites
 

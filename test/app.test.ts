@@ -47,10 +47,28 @@ test("scenes index, nikke filter is case/space-insensitive", async () => {
   assert.equal((await get("/api/scenes/nope")).status, 404);
 });
 
+test("/api/stages list + filters + detail", async () => {
+  const all = await json("/api/stages");
+  assert.equal(all.count, 4);
+  assert.equal(all.stages[0].id, 6000001);
+  assert.equal(all.stages[0].battlePower, 110);
+  assert.equal(all.stages[0].scenarios.enter, "d_main_01_01_s");
+  assert.equal((await json("/api/stages?chapter=2")).count, 1);
+  assert.equal((await json("/api/stages?mode=hard")).count, 1);
+  assert.equal((await json("/api/stages?q=0-2")).count, 1);
+  assert.equal((await json("/api/stages?limit=1&offset=1")).stages[0].id, 6000002);
+  const d = await json("/api/stages/7000001");
+  assert.equal(d.mode, "Hard");
+  assert.equal(d.scenarios.exit, null);
+  assert.equal((await get("/api/stages/999")).status, 404);
+  assert.equal((await get("/api/stages/abc")).status, 400);
+  assert.equal((await get("/api/stages?chapter=x")).status, 400);
+});
+
 test("favorites + tables", async () => {
   assert.equal((await json("/api/favorites?q=tele")).count, 1);
   assert.equal((await get("/api/favorites/999")).status, 404);
-  assert.deepEqual((await json("/api/tables")).files, ["tower_list.json"]);
+  assert.deepEqual((await json("/api/tables")).files.sort(), ["stage_list.json", "tower_list.json"]);
   assert.equal((await get("/api/tables/..%2Fcharacters.json")).status, 400);
 });
 

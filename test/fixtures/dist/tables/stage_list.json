@@ -1,0 +1,6 @@
+[
+  { "id": 6000001, "chapter_id": 1, "chapter_mod": "Normal", "standard_battle_power": 110, "enter_scenario": "d_main_01_01_s", "exit_scenario": "d_main_01_01_e", "name_localkey": { "name": "0-1 STAGE" } },
+  { "id": 6000002, "chapter_id": 1, "chapter_mod": "Normal", "standard_battle_power": 500, "enter_scenario": null, "exit_scenario": "d_main_01_02_e", "name_localkey": { "name": "0-2 STAGE" } },
+  { "id": 7000001, "chapter_id": 1, "chapter_mod": "Hard", "standard_battle_power": 25000, "enter_scenario": "d_main_01_01_s", "exit_scenario": null, "name_localkey": { "name": "0-1H STAGE" } },
+  { "id": 8000001, "chapter_id": 2, "chapter_mod": "Story", "standard_battle_power": 10360, "enter_scenario": "d_main_02_01_s", "exit_scenario": "d_main_02_01_e", "name_localkey": { "name": "1-1 STORY" } }
+]

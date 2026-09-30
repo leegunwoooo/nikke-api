@@ -194,6 +194,28 @@ export const openapi = {
         responses: { "200": { description: "씬 대본" }, "404": { description: "없음" } },
       },
     },
+    "/api/stages": {
+      get: {
+        tags: ["stages"],
+        summary: "캠페인 스테이지 목록",
+        parameters: [
+          { name: "q", in: "query", schema: { type: "string" }, description: "스테이지 이름 검색" },
+          { name: "chapter", in: "query", schema: { type: "integer" }, description: "챕터 번호" },
+          { name: "mode", in: "query", schema: { type: "string", enum: ["Normal", "Hard", "Story"] } },
+          { name: "limit", in: "query", schema: { type: "integer", maximum: 500 }, description: "최대 500, 미지정 시 전체" },
+          { name: "offset", in: "query", schema: { type: "integer", default: 0 } },
+        ],
+        responses: { "200": { description: "스테이지 목록 — count는 잘라내기 전 전체 개수" } },
+      },
+    },
+    "/api/stages/{id}": {
+      get: {
+        tags: ["stages"],
+        summary: "스테이지 상세 — 권장 전투력·시나리오 키",
+        parameters: [{ name: "id", in: "path", required: true, schema: { type: "integer" }, example: 6000001 }],
+        responses: { "200": { description: "스테이지 상세" }, "400": { description: "id 형식 오류" }, "404": { description: "없음" } },
+      },
+    },
     "/api/favorites": {
       get: {
         tags: ["favorites"],
@@ -405,6 +427,8 @@ for (const p of [
   "/api/nikkes/{id}",
   "/api/scenes",
   "/api/scenes/{groupId}",
+  "/api/stages",
+  "/api/stages/{id}",
   "/api/favorites",
   "/api/favorites/{id}",
   "/api/cubes",
