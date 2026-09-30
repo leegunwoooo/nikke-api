@@ -529,7 +529,7 @@ GET /api/costumes/10012?lang=ko
 | `q` | 옵션 이름 부분 일치 | `?q=우월코드` |
 | `groupId` | 옵션 그룹 ID | `?groupId=100100` |
 | `rank` | 옵션 등급 (1~15) | `?rank=3` |
-| `limit` / `offset` / `fields` / `lang` | 목록 공통 | |
+| `page` / `limit` / `offset` / `fields` / `lang` | 목록 공통 | |
 
 **에러**: `groupId`·`rank`가 숫자가 아니면 400.
 
@@ -558,7 +558,7 @@ GET /api/equips/options/7000501?lang=ko
 | `q` | 소유 캐릭터 이름 부분 일치 (전 언어) | `?q=라피` |
 | `resourceId` | 캐릭터 resourceId 필터 | `?resourceId=102` |
 | `orphans` | `true`면 캐릭터 미매칭 아이콘만 (NPC/미출시) | `?orphans=true` |
-| `limit` / `offset` / `fields` / `lang` | 목록 공통 | |
+| `page` / `limit` / `offset` / `fields` / `lang` | 목록 공통 | |
 
 ```json
 {
