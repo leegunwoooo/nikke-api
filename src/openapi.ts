@@ -258,7 +258,7 @@ export const openapi = {
         tags: ["user"],
         summary: "유저 보유 니케 목록",
         description:
-          "항상 경량 목록(이름·레벨·전투력·돌파·코어만). /api/nikkes와 동일한 필터 지원 — 상세는 /api/user/{blablaid}/nikke/{key}에서 조회. " +
+          "항상 경량 목록(이름·레벨·전투력·돌파·코어만). /api/nikkes와 동일한 필터 지원 — 상세는 /api/user/{blablaid}/nikke/{nameOrId}에서 조회. " +
           "blablaid 대신 ?blablaid=도 가능 (/api/user/nikke?blablaid=...)",
         parameters: [
           {
@@ -410,7 +410,7 @@ for (const p of [
   "/api/cubes",
   "/api/cubes/{id}",
   "/api/user/{blablaid}/nikke",
-  "/api/user/{blablaid}/nikke/{key}",
+  "/api/user/{blablaid}/nikke/{nameOrId}",
 ]) {
   const op = (openapi.paths as Record<string, any>)[p]?.get;
   if (op) (op.parameters ??= []).push(fieldsParam);
