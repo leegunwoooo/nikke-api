@@ -748,6 +748,8 @@ app.get("/api/cdn", (c) => {
 
 app.get("/openapi.json", (c) => c.json(openapi));
 
+app.notFound((c) => c.json({ error: "not found" }, 404));
+
 app.get("/docs", (c) =>
   c.html(`<!doctype html>
 <html><head><title>nikke-api docs</title><meta charset="utf-8"/>

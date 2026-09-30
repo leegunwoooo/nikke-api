@@ -710,5 +710,6 @@ GET /api/favorites/200101?lang=en
 
 | 상황 | 상태 | 본문 |
 |------|------|------|
-| 캐릭터 없음 | 404 | `{"error": "not found"}` |
+| 리소스 없음 | 404 | `{"error": "not found"}` |
+| 없는 경로 (라우트 미스매치) | 404 | `{"error": "not found"}` — 모든 404는 JSON |
 | 잘못된 파일명/파라미터 | 400 | `{"error": "invalid file"}` / `{"error": "path required"}` |

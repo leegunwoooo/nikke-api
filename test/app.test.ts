@@ -127,6 +127,12 @@ test("/api/user responses are never edge-cached", async () => {
   assert.equal(res.headers.get("ETag"), null);
 });
 
+test("unknown routes return JSON 404", async () => {
+  const res = await get("/api/nope");
+  assert.equal(res.status, 404);
+  assert.deepEqual(await res.json(), { error: "not found" });
+});
+
 test("cache headers + conditional GET", async () => {
   const res = await get("/api/nikkes/1");
   const etag = res.headers.get("ETag");
