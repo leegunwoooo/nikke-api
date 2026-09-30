@@ -20,13 +20,15 @@ export function cacheHeaders(version: string): MiddlewareHandler {
     }
     const tag = crypto.createHash("sha1").update(`${version}|${url.pathname}${url.search}`).digest("hex");
     const etag = `W/"${tag.slice(0, 27)}"`;
-    if (c.req.header("If-None-Match") === etag) {
-      return c.body(null, 304, { ETag: etag, "Cache-Control": CACHE_CONTROL });
-    }
     await next();
+    // Conditional handling must happen after the route runs — a matching
+    // URL-derived tag only means "fresh" if the resource actually exists
     if (c.res.status === 200) {
       c.header("ETag", etag);
       c.header("Cache-Control", CACHE_CONTROL);
+      if (c.req.header("If-None-Match") === etag) {
+        c.res = c.body(null, 304, { ETag: etag, "Cache-Control": CACHE_CONTROL });
+      }
     }
   };
 }

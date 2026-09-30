@@ -1,4 +1,5 @@
 import assert from "node:assert/strict";
+import crypto from "node:crypto";
 import path from "node:path";
 import { test } from "node:test";
 
@@ -172,4 +173,14 @@ test("cache headers + conditional GET", async () => {
   assert.equal((await get("/api/nikkes/1", { "If-None-Match": etag! })).status, 304);
   assert.notEqual(etag, (await get("/api/nikkes/2")).headers.get("ETag"));
   assert.equal((await get("/api/nikkes/nobody")).headers.get("Cache-Control"), null);
+
+  // the tag is URL-derived, so it's forgeable — a missing resource must
+  // still 404 even when the client sends the "correct" If-None-Match
+  const forged = `W/"${crypto
+    .createHash("sha1")
+    .update("9.9.9-test|/api/nikkes/nobody")
+    .digest("hex")
+    .slice(0, 27)}"`;
+  const missing = await get("/api/nikkes/nobody", { "If-None-Match": forged });
+  assert.equal(missing.status, 404);
 });
