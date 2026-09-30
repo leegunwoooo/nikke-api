@@ -168,6 +168,7 @@ GET /api/favorites/200101?lang=ja
 
 - **인터랙티브 문서 (브라우저에서 바로 테스트) → [/docs](https://nikke-api-gunwoos-projects.vercel.app/docs)**
 - 요청/응답 형식 전체 문서 → [API.md](API.md)
+- Postman 컬렉션 → [nikke-api.postman_collection.json](nikke-api.postman_collection.json) (Import 후 `blablaid` 변수만 설정하면 `/api/user/*`도 바로 사용 가능)
 
 ## 문의
 

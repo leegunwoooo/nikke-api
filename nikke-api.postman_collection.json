@@ -1,14 +1,52 @@
 {
   "info": {
     "name": "nikke-api",
-    "description": "Unofficial NIKKE data API — https://github.com/leegunwoooo/nikke-api",
+    "description": "Unofficial NIKKE data API — https://github.com/leegunwoooo/nikke-api\n\n모든 엔드포인트에 공통으로 `lang`(ko|en|ja|zh-TW, 미지정 시 객체 전체)와 `fields`(응답 필드 선택, 쉼표 구분) 쿼리 파라미터를 사용할 수 있습니다.",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
   },
   "variable": [
-    { "key": "baseUrl", "value": "https://nikke-api-gunwoos-projects.vercel.app" },
-    { "key": "blablaid", "value": "" }
+    {
+      "key": "baseUrl",
+      "value": "https://nikke-api-gunwoos-projects.vercel.app"
+    },
+    {
+      "key": "blablaid",
+      "value": "",
+      "description": "BlablaLink 공유 ID (base64 openid) — /api/user/* 요청에 사용"
+    },
+    {
+      "key": "nikkeKey",
+      "value": "아니스 : 스타",
+      "description": "니케 이름(전 언어 부분 일치)·id·resourceId·nameCode"
+    }
   ],
   "item": [
+    {
+      "name": "Root",
+      "item": [
+        {
+          "name": "루트 정보",
+          "request": {
+            "method": "GET",
+            "url": { "raw": "{{baseUrl}}/", "host": ["{{baseUrl}}"], "path": [] }
+          }
+        },
+        {
+          "name": "OpenAPI 스펙",
+          "request": {
+            "method": "GET",
+            "url": { "raw": "{{baseUrl}}/openapi.json", "host": ["{{baseUrl}}"], "path": ["openapi.json"] }
+          }
+        },
+        {
+          "name": "문서 (Scalar)",
+          "request": {
+            "method": "GET",
+            "url": { "raw": "{{baseUrl}}/docs", "host": ["{{baseUrl}}"], "path": ["docs"] }
+          }
+        }
+      ]
+    },
     {
       "name": "Nikkes",
       "item": [
@@ -21,15 +59,17 @@
               "host": ["{{baseUrl}}"],
               "path": ["api", "nikkes"],
               "query": [
-                { "key": "q", "value": "", "disabled": true, "description": "이름 검색 (4개 언어 부분 일치)" },
+                { "key": "q", "value": "", "disabled": true, "description": "이름 검색 (전 언어 부분 일치)" },
                 { "key": "element", "value": "", "disabled": true },
                 { "key": "class", "value": "", "disabled": true },
                 { "key": "burst", "value": "", "disabled": true },
                 { "key": "corporation", "value": "", "disabled": true },
                 { "key": "weapon", "value": "", "disabled": true },
                 { "key": "rarity", "value": "", "disabled": true },
-                { "key": "limit", "value": "20" },
-                { "key": "offset", "value": "0" }
+                { "key": "limit", "value": "20", "description": "최대 500, 미지정 시 전체" },
+                { "key": "offset", "value": "0", "disabled": true },
+                { "key": "lang", "value": "ko", "disabled": true, "description": "ko|en|ja|zh-TW — 다국어 필드 평탄화" },
+                { "key": "fields", "value": "", "disabled": true, "description": "응답 필드 선택 (쉼표 구분)" }
               ]
             }
           }
@@ -38,14 +78,37 @@
           "name": "캐릭터 상세 (id)",
           "request": {
             "method": "GET",
-            "url": { "raw": "{{baseUrl}}/api/nikkes/201601", "host": ["{{baseUrl}}"], "path": ["api", "nikkes", "201601"] }
+            "url": {
+              "raw": "{{baseUrl}}/api/nikkes/201601?lang=ko",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "nikkes", "201601"],
+              "query": [
+                { "key": "lang", "value": "ko" },
+                { "key": "fields", "value": "", "disabled": true }
+              ]
+            }
           }
         },
         {
           "name": "캐릭터 상세 (이름)",
           "request": {
             "method": "GET",
-            "url": { "raw": "{{baseUrl}}/api/nikkes/라피", "host": ["{{baseUrl}}"], "path": ["api", "nikkes", "라피"] }
+            "url": {
+              "raw": "{{baseUrl}}/api/nikkes/라피",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "nikkes", "라피"],
+              "query": [
+                { "key": "lang", "value": "ko", "disabled": true },
+                { "key": "fields", "value": "", "disabled": true }
+              ]
+            }
+          }
+        },
+        {
+          "name": "필터 값 목록",
+          "request": {
+            "method": "GET",
+            "url": { "raw": "{{baseUrl}}/api/meta/filters", "host": ["{{baseUrl}}"], "path": ["api", "meta", "filters"] }
           }
         }
       ]
@@ -62,20 +125,26 @@
               "host": ["{{baseUrl}}"],
               "path": ["api", "scenes"],
               "query": [
-                { "key": "category", "value": "", "disabled": true, "description": "main/event/sudden/attractive" },
-                { "key": "nikke", "value": "", "disabled": true, "description": "니케 이름 (attractive 씬)" },
+                { "key": "category", "value": "", "disabled": true, "description": "main|event|sudden|attractive" },
+                { "key": "nikke", "value": "", "disabled": true, "description": "호감도 씬 대상 니케" },
                 { "key": "q", "value": "", "disabled": true, "description": "씬 제목 검색" },
                 { "key": "limit", "value": "20" },
-                { "key": "offset", "value": "0" }
+                { "key": "offset", "value": "0", "disabled": true },
+                { "key": "lang", "value": "ko", "disabled": true }
               ]
             }
           }
         },
         {
-          "name": "씬 대본",
+          "name": "씬 상세",
           "request": {
             "method": "GET",
-            "url": { "raw": "{{baseUrl}}/api/scenes/d_ex_armory_01", "host": ["{{baseUrl}}"], "path": ["api", "scenes", "d_ex_armory_01"] }
+            "url": {
+              "raw": "{{baseUrl}}/api/scenes/d_ex_armory_01",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "scenes", "d_ex_armory_01"],
+              "query": [{ "key": "lang", "value": "ko", "disabled": true }]
+            }
           }
         }
       ]
@@ -93,7 +162,8 @@
               "path": ["api", "favorites"],
               "query": [
                 { "key": "q", "value": "", "disabled": true },
-                { "key": "rare", "value": "", "disabled": true, "description": "R/SR/SSR" }
+                { "key": "rare", "value": "", "disabled": true, "description": "R|SR|SSR" },
+                { "key": "lang", "value": "ko", "disabled": true }
               ]
             }
           }
@@ -102,7 +172,12 @@
           "name": "소장품 상세",
           "request": {
             "method": "GET",
-            "url": { "raw": "{{baseUrl}}/api/favorites/100101", "host": ["{{baseUrl}}"], "path": ["api", "favorites", "100101"] }
+            "url": {
+              "raw": "{{baseUrl}}/api/favorites/100101",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "favorites", "100101"],
+              "query": [{ "key": "lang", "value": "ko", "disabled": true }]
+            }
           }
         }
       ]
@@ -118,7 +193,10 @@
               "raw": "{{baseUrl}}/api/cubes",
               "host": ["{{baseUrl}}"],
               "path": ["api", "cubes"],
-              "query": [{ "key": "q", "value": "", "disabled": true }]
+              "query": [
+                { "key": "q", "value": "", "disabled": true },
+                { "key": "lang", "value": "ko", "disabled": true }
+              ]
             }
           }
         },
@@ -126,70 +204,18 @@
           "name": "큐브 상세",
           "request": {
             "method": "GET",
-            "url": { "raw": "{{baseUrl}}/api/cubes/1000301", "host": ["{{baseUrl}}"], "path": ["api", "cubes", "1000301"] }
-          }
-        }
-      ]
-    },
-    {
-      "name": "User",
-      "item": [
-        {
-          "name": "유저 프로필",
-          "request": {
-            "method": "GET",
             "url": {
-              "raw": "{{baseUrl}}/api/user/{{blablaid}}",
+              "raw": "{{baseUrl}}/api/cubes/1000301",
               "host": ["{{baseUrl}}"],
-              "path": ["api", "user", "{{blablaid}}"],
-              "description": "blablaid를 경로로. ?blablaid= 또는 ?url=<공유 URL 전체>도 가능"
-            }
-          }
-        },
-        {
-          "name": "유저 프로필 (쿼리 형태)",
-          "request": {
-            "method": "GET",
-            "url": {
-              "raw": "{{baseUrl}}/api/user?openid={{blablaid}}",
-              "host": ["{{baseUrl}}"],
-              "path": ["api", "user"],
-              "query": [
-                { "key": "blablaid", "value": "{{blablaid}}", "description": "BlablaLink 공유 ID 또는 전체 URL" }
-              ]
-            }
-          }
-        },
-        {
-          "name": "보유 니케 목록 (경량)",
-          "request": {
-            "method": "GET",
-            "url": {
-              "raw": "{{baseUrl}}/api/user/{{blablaid}}/nikke",
-              "host": ["{{baseUrl}}"],
-              "path": ["api", "user", "{{blablaid}}", "nikke"],
-              "query": [
-                { "key": "q", "value": "", "disabled": true, "description": "필터 — 이름 부분 일치/id/nameCode" }
-              ]
-            }
-          }
-        },
-        {
-          "name": "보유 니케 상세 (정확한 이름/id)",
-          "request": {
-            "method": "GET",
-            "url": {
-              "raw": "{{baseUrl}}/api/user/{{blablaid}}/nikke/아니스%20%3A%20스타",
-              "host": ["{{baseUrl}}"],
-              "path": ["api", "user", "{{blablaid}}", "nikke", "아니스%20%3A%20스타"],
-              "description": "마지막 path = 이름(부분 일치, URL 인코딩) 또는 캐릭터 id/resourceId/nameCode — 단일 매칭 시 상세, 복수면 목록"
+              "path": ["api", "cubes", "1000301"],
+              "query": [{ "key": "lang", "value": "ko", "disabled": true }]
             }
           }
         }
       ]
     },
     {
-      "name": "Etc",
+      "name": "Tables",
       "item": [
         {
           "name": "테이블 목록",
@@ -202,18 +228,114 @@
           "name": "테이블 조회",
           "request": {
             "method": "GET",
-            "url": { "raw": "{{baseUrl}}/api/tables/character_id_map.json", "host": ["{{baseUrl}}"], "path": ["api", "tables", "character_id_map.json"] }
+            "url": {
+              "raw": "{{baseUrl}}/api/tables/character_id_map.json",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "tables", "character_id_map.json"]
+            }
           }
-        },
+        }
+      ]
+    },
+    {
+      "name": "User",
+      "item": [
         {
-          "name": "필터 값 목록",
+          "name": "유저 프로필 (쿼리)",
           "request": {
             "method": "GET",
-            "url": { "raw": "{{baseUrl}}/api/meta/filters", "host": ["{{baseUrl}}"], "path": ["api", "meta", "filters"] }
+            "url": {
+              "raw": "{{baseUrl}}/api/user?blablaid={{blablaid}}",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "user"],
+              "query": [
+                { "key": "blablaid", "value": "{{blablaid}}", "description": "공유 ID 또는 공유 URL 전체 (구형 ?openid=/?url=도 동작)" }
+              ]
+            }
           }
         },
         {
-          "name": "CDN 경로→URL",
+          "name": "유저 프로필 (경로)",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{baseUrl}}/api/user/{{blablaid}}",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "user", "{{blablaid}}"]
+            }
+          }
+        },
+        {
+          "name": "보유 니케 목록 (경로)",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{baseUrl}}/api/user/{{blablaid}}/nikke",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "user", "{{blablaid}}", "nikke"],
+              "query": [
+                { "key": "q", "value": "", "disabled": true, "description": "이름(전 언어 부분 일치)·id·resourceId·nameCode" },
+                { "key": "element", "value": "", "disabled": true },
+                { "key": "class", "value": "", "disabled": true },
+                { "key": "burst", "value": "", "disabled": true },
+                { "key": "corporation", "value": "", "disabled": true },
+                { "key": "weapon", "value": "", "disabled": true },
+                { "key": "rarity", "value": "", "disabled": true },
+                { "key": "lang", "value": "ko", "disabled": true }
+              ]
+            }
+          }
+        },
+        {
+          "name": "보유 니케 목록 (쿼리)",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{baseUrl}}/api/user/nikke?blablaid={{blablaid}}",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "user", "nikke"],
+              "query": [
+                { "key": "blablaid", "value": "{{blablaid}}" },
+                { "key": "q", "value": "", "disabled": true },
+                { "key": "lang", "value": "ko", "disabled": true }
+              ]
+            }
+          }
+        },
+        {
+          "name": "보유 니케 상세 (경로)",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{baseUrl}}/api/user/{{blablaid}}/nikke/{{nikkeKey}}",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "user", "{{blablaid}}", "nikke", "{{nikkeKey}}"],
+              "query": [{ "key": "lang", "value": "ko", "disabled": true }]
+            }
+          }
+        },
+        {
+          "name": "보유 니케 상세 (쿼리)",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{baseUrl}}/api/user/nikke/{{nikkeKey}}?blablaid={{blablaid}}",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "user", "nikke", "{{nikkeKey}}"],
+              "query": [
+                { "key": "blablaid", "value": "{{blablaid}}" },
+                { "key": "lang", "value": "ko", "disabled": true }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Misc",
+      "item": [
+        {
+          "name": "CDN 경로 → URL",
           "request": {
             "method": "GET",
             "url": {
