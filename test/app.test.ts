@@ -278,6 +278,13 @@ test("user-nikke matchers: ?id vs ?name vs unified :key", async () => {
   assert.equal(m.matchesNikke("", n102), true);
 });
 
+test("malformed percent-encoding in ?url returns 400, not 500", async () => {
+  // a share URL whose openid param itself contains a bad % sequence
+  const res = await get(`/api/user?url=${encodeURIComponent("https://x/?openid=%ZZ")}`);
+  assert.equal(res.status, 400);
+  assert.deepEqual(await res.json(), { error: "invalid blablaid" });
+});
+
 test("unknown routes return JSON 404", async () => {
   const res = await get("/api/nope");
   assert.equal(res.status, 404);

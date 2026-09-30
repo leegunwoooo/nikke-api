@@ -83,7 +83,11 @@ export const playerInfo = <T = unknown>(intlOpenId: string) =>
 export function decodeOpenid(input: string): { intlOpenId: string } | null {
   let oid = input.trim();
   const m = oid.match(/openid=([^&\s]+)/); // accept full share URLs too
-  if (m) oid = decodeURIComponent(m[1]);
+  try {
+    if (m) oid = decodeURIComponent(m[1]);
+  } catch {
+    return null; // malformed percent-encoding — not a valid share URL
+  }
   const decoded = Buffer.from(oid, "base64").toString("utf8");
   const parts = decoded.split("-");
   const id = parts.length === 2 ? parts[1] : oid;
