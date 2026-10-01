@@ -101,6 +101,8 @@ GET /api/user/<blablaid>/nikke/아니스               # 부분 일치 → 매�
 | `GET /api/nikkes/:id` | 캐릭터 상세 — 스킬/스탯/배경/CV/보이스 등 `details` 포함. `:id`는 캐릭터 ID·resourceId·이름(부분 일치) 모두 가능 |
 | `GET /api/scenes` | 씬 목록 — `?category=` `?nikke=` `?q=` `?limit=`/`?offset=`/`?page=` |
 | `GET /api/scenes/:groupId` | 씬 대본 — 대사별 화자/아이콘/보이스 |
+| `GET /api/events` | 스토리 이벤트 목록 — `event_*` 씬 그룹 묶음, `?q=` `?limit=`/`?offset=`/`?page=` |
+| `GET /api/events/:id` | 이벤트 상세 — 에피소드별 씬 목록 |
 | `GET /api/stages` | 캠페인 스테이지 목록 — `?chapter=` `?mode=` `?q=` `?limit=`/`?offset=`/`?page=` |
 | `GET /api/stages/:id` | 스테이지 상세 — 권장 전투력·시나리오 키 |
 | `GET /api/costumes` | 코스튬 목록 — `?q=` `?grade=` `?nikke=` `?limit=`/`?offset=`/`?page=` |
@@ -128,7 +130,7 @@ GET /api/user/<blablaid>/nikke/아니스               # 부분 일치 → 매�
 
 응답이 큰 엔드포인트에서 필요한 필드만 골라 받을 수 있습니다. 콤마로 여러 개 지정하고, 점(`.`)으로 중첩 필드를 파고듭니다.
 
-**지원 엔드포인트**: `/api/nikkes`, `/api/nikkes/:id`, `/api/favorites`, `/api/favorites/:id`, `/api/scenes`, `/api/scenes/:groupId`, `/api/stages`, `/api/stages/:id`, `/api/costumes`, `/api/costumes/:id`, `/api/equips`, `/api/equips/options`, `/api/equips/options/:id`, `/api/equips/:id`, `/api/avatars`, `/api/avatars/:iconId`, `/api/cubes`, `/api/cubes/:id`, `/api/user/:blablaid/nikke`, `/api/user/:blablaid/nikke/:nameOrId` (구형 `?blablaid=`·`?openid=` 쿼리 경로도 동일하게 적용)
+**지원 엔드포인트**: `/api/nikkes`, `/api/nikkes/:id`, `/api/favorites`, `/api/favorites/:id`, `/api/scenes`, `/api/scenes/:groupId`, `/api/events`, `/api/events/:id`, `/api/stages`, `/api/stages/:id`, `/api/costumes`, `/api/costumes/:id`, `/api/equips`, `/api/equips/options`, `/api/equips/options/:id`, `/api/equips/:id`, `/api/avatars`, `/api/avatars/:iconId`, `/api/cubes`, `/api/cubes/:id`, `/api/user/:blablaid/nikke`, `/api/user/:blablaid/nikke/:nameOrId` (구형 `?blablaid=`·`?openid=` 쿼리 경로도 동일하게 적용)
 
 ```
 GET /api/nikkes?fields=id,name.ko,images.icon

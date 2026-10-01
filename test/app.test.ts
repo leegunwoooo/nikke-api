@@ -93,6 +93,19 @@ test("scenes ?q is case/space-insensitive like other lists", async () => {
   assert.ok(lower.count > 0);
 });
 
+test("/api/events groups event_* scenes per event", async () => {
+  const all = await json("/api/events");
+  const ev = all.events.find((e: any) => e.id === "event_firstaffection");
+  assert.equal(ev.episodes, 2);
+  assert.deepEqual(ev.scenes, ["event_firstaffection_01", "event_firstaffection_02"]);
+  assert.equal(ev.totalLines, 4);
+
+  const d = await json("/api/events/event_firstaffection");
+  assert.equal(d.scenes[0].name, "추억은 갑작스럽게");
+  assert.equal((await get("/api/events/event_nope")).status, 404);
+  assert.ok((await json("/api/events?q=first")).count >= 1);
+});
+
 test("scenes index, nikke filter is case/space-insensitive", async () => {
   assert.equal((await json("/api/scenes")).count, 4);
   assert.equal((await json("/api/scenes?category=main")).count, 1);

@@ -462,6 +462,8 @@ app.get("/", (c) =>
       "GET /api/meta/filters": "available filter values",
       "GET /api/scenes": "story scene index (ko)",
       "GET /api/scenes/:groupId": "scene dialogue lines (ko)",
+      "GET /api/events": "story event list — event_* scene groups; filter: q",
+      "GET /api/events/:id": "event detail — episode scene list",
       "GET /api/stages": "campaign stage list; filters: q, chapter, mode; limit/offset",
       "GET /api/stages/:id": "stage detail (id)",
       "GET /api/costumes": "costume list; filters: q, grade, nikke; limit/offset",
@@ -575,6 +577,71 @@ app.get("/api/scenes", async (c) => {
     ...(pg.page ? { page: pg.page, totalPages: Math.ceil(total / pg.lim) } : {}),
     scenes: pickFields(list.slice(pg.off, pg.off + pg.lim), fieldsOf(c)),
   });
+});
+
+// event_* scenes grouped per story event — episode/prologue/epilogue/
+// intermission/_e/_s suffixes are stripped to get the event id. Event
+// names aren't in the source data, so the id is the identifier.
+const eventIdOf = (gid: string) => {
+  // strip repeatedly — ids like event_ce006_1_01_e nest two suffixes
+  let prev = gid;
+  for (;;) {
+    const next = prev.replace(/(_\d+(_[es])?|_[es]|_(prologue|epilogue|intermission|end))$/, "");
+    if (next === prev) return prev;
+    prev = next;
+  }
+};
+
+const eventGroups = async () => {
+  const groups = new Map<string, SceneIndexEntry[]>();
+  for (const s of (await getScenes()).filter((x) => x.category === "event")) {
+    const id = eventIdOf(s.groupId);
+    const arr = groups.get(id) ?? [];
+    arr.push(s);
+    groups.set(id, arr);
+  }
+  return groups;
+};
+
+app.get("/api/events", async (c) => {
+  const { q } = c.req.query();
+  let list = [...(await eventGroups()).entries()].map(([id, ss]) => ({
+    id,
+    episodes: ss.length,
+    totalLines: ss.reduce((n, s) => n + s.lines, 0),
+    scenes: ss.map((s) => s.groupId),
+  }));
+  if (q) {
+    const nq = norm(q);
+    list = list.filter((e) => norm(e.id).includes(nq));
+  }
+  const total = list.length;
+  const pg = pageQuery(c, total);
+  if ("error" in pg) return c.json({ error: pg.error }, 400);
+  return c.json({
+    count: total,
+    offset: pg.off,
+    ...(pg.page ? { page: pg.page, totalPages: Math.ceil(total / pg.lim) } : {}),
+    events: pickFields(list.slice(pg.off, pg.off + pg.lim), fieldsOf(c)),
+  });
+});
+
+app.get("/api/events/:id", async (c) => {
+  const id = c.req.param("id");
+  if (!/^[\w-]+$/.test(id)) return c.json({ error: "invalid id" }, 400);
+  const ss = (await eventGroups()).get(id);
+  if (!ss) return c.json({ error: "not found" }, 404);
+  return c.json(
+    pickFields(
+      {
+        id,
+        episodes: ss.length,
+        totalLines: ss.reduce((n, s) => n + s.lines, 0),
+        scenes: ss.map((s) => ({ groupId: s.groupId, name: s.name ?? null, lines: s.lines })),
+      },
+      fieldsOf(c),
+    ),
+  );
 });
 
 app.get("/api/scenes/:groupId", async (c) => {

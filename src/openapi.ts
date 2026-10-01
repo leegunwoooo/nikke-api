@@ -188,6 +188,27 @@ export const openapi = {
         responses: { "200": { description: "씬 목록 — count는 잘라내기 전 전체 개수" } },
       },
     },
+    "/api/events": {
+      get: {
+        tags: ["scenes"],
+        summary: "스토리 이벤트 목록 — event_* 씬 그룹을 이벤트 단위로 묶은 카탈로그",
+        parameters: [
+          { name: "q", in: "query", schema: { type: "string" }, description: "이벤트 id 검색 (부분 일치)" },
+          { name: "page", in: "query", schema: { type: "integer", minimum: 1 }, description: "페이지 번호 (1부터 — offset 대신 사용, 미지정 limit 시 페이지 크기 50)" },
+          { name: "limit", in: "query", schema: { type: "integer", maximum: 500 }, description: "최대 500, 미지정 시 전체" },
+          { name: "offset", in: "query", schema: { type: "integer", default: 0 } },
+        ],
+        responses: { "200": { description: "이벤트 목록 — id·episodes·totalLines·scenes(groupId 배열)" } },
+      },
+    },
+    "/api/events/{id}": {
+      get: {
+        tags: ["scenes"],
+        summary: "이벤트 상세 — 에피소드별 씬 목록 (groupId·제목·대사 수)",
+        parameters: [{ name: "id", in: "path", required: true, schema: { type: "string" }, example: "event_firstaffection" }],
+        responses: { "200": { description: "이벤트 상세" }, "404": { description: "없음" } },
+      },
+    },
     "/api/scenes/{groupId}": {
       get: {
         tags: ["scenes"],
@@ -531,6 +552,8 @@ for (const p of [
   "/api/nikkes/{id}",
   "/api/scenes",
   "/api/scenes/{groupId}",
+  "/api/events",
+  "/api/events/{id}",
   "/api/stages",
   "/api/stages/{id}",
   "/api/costumes",

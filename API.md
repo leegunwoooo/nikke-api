@@ -18,6 +18,8 @@
 - [GET /api/tables/:file](#get-apitablesfile) — 원본 테이블 조회
 - [GET /api/scenes](#get-apiscenes) — 스토리 씬 목록 (한국어)
 - [GET /api/scenes/:groupId](#get-apiscenesgroupid) — 씬 대본 (한국어)
+- [GET /api/events](#get-apievents) — 스토리 이벤트 목록
+- [GET /api/events/:id](#get-apieventsid) — 이벤트 상세 (에피소드 씬 목록)
 - [GET /api/stages](#get-apistages) — 캠페인 스테이지 목록
 - [GET /api/stages/:id](#get-apistagesid) — 스테이지 상세
 - [GET /api/costumes](#get-apicostumes) — 코스튬 목록
@@ -67,7 +69,7 @@
 
 **페이지네이션**: 필터가 먼저 적용된 뒤 `offset`/`limit`으로 잘립니다. `count`는 잘라내기 전 필터링된 전체 개수이고, `offset`은 실제 적용된 시작 위치가 응답에 포함됩니다. `offset`이 범위를 넘으면 빈 배열이 반환됩니다.
 
-`?page=N`(1부터)으로도 페이지를 넘길 수 있습니다 — `offset` 대신 `(page-1) * limit`이 적용되고 응답에 `page`·`totalPages`가 추가됩니다. `limit` 없이 `page`만 주면 페이지 크기 50이 기본 적용됩니다. 페이지네이션 지원 목록(`/api/nikkes`, `/api/scenes`, `/api/stages`, `/api/costumes`, `/api/equips`, `/api/equips/options`, `/api/avatars`, `/api/favorites`, `/api/cubes`)에서 동일하게 동작합니다.
+`?page=N`(1부터)으로도 페이지를 넘길 수 있습니다 — `offset` 대신 `(page-1) * limit`이 적용되고 응답에 `page`·`totalPages`가 추가됩니다. `limit` 없이 `page`만 주면 페이지 크기 50이 기본 적용됩니다. 페이지네이션 지원 목록(`/api/nikkes`, `/api/scenes`, `/api/events`, `/api/stages`, `/api/costumes`, `/api/equips`, `/api/equips/options`, `/api/avatars`, `/api/favorites`, `/api/cubes`)에서 동일하게 동작합니다.
 
 `page`·`limit`·`offset`이 정수가 아니거나 음수이면(`page`는 0 포함) `400 invalid <param>`이 반환됩니다.
 
@@ -369,6 +371,52 @@ GET /api/scenes/d_main_01_01_s?fields=name,lines
 호감도 씬(`groupId`가 `d_nikke_*`)은 상단에 `type: "attractive"`, `nikke`, `attractiveLevel` 필드가 추가로 붙습니다.
 
 캐릭터별 호감도 씬은 `/api/nikkes/:id` 상세의 `details.attractiveScenarios[].sceneGroupId`로 연결됩니다. 스킨 캐릭터(예: `아니스 : 스타`)는 자기 전용 그룹(`d_nikke_anis_star_*`)을 가지며, `?nikke=` 필터는 부분 일치라 `아니스`로 검색하면 모든 스킨 버전이 함께 나옵니다.
+
+## GET /api/events
+
+스토리 이벤트 카탈로그 — `event_*` 씬 그룹을 이벤트 단위로 묶은 목록입니다 (167개). groupId의 에피소드 접미사(`_01`/`_01_e`/`_prologue`/`_intermission` 등)를 제거해 이벤트 id를 만듭니다. 소스 데이터에 이벤트 이름이 없어 **id가 식별자**입니다.
+
+### 쿼리 파라미터
+
+| 파라미터 | 설명 | 예시 |
+|----------|------|------|
+| `q` | 이벤트 id 부분 일치 | `?q=brandnewyear` |
+| `limit` / `offset` / `page` / `fields` / `lang` | 목록 공통 | |
+
+### 응답 예시
+
+```json
+{
+  "count": 167,
+  "events": [
+    {
+      "id": "event_firstaffection",
+      "episodes": 8,
+      "totalLines": 412,
+      "scenes": ["event_firstaffection_01", "..."]
+    }
+  ]
+}
+```
+
+## GET /api/events/:id
+
+이벤트 상세 — 에피소드별 씬 목록(`groupId`·`name`·`lines`)을 반환합니다.
+
+```
+GET /api/events/event_nonsensered
+```
+
+```json
+{
+  "id": "event_nonsensered",
+  "episodes": 7,
+  "totalLines": 389,
+  "scenes": [
+    { "groupId": "event_nonsensered_1", "name": "추억은 흐르는 음악처럼", "lines": 55 }
+  ]
+}
+```
 
 ## GET /api/stages
 

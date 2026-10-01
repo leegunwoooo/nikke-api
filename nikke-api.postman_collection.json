@@ -312,6 +312,85 @@
               ]
             }
           }
+        },
+        {
+          "name": "이벤트 목록",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{baseUrl}}/api/events",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "events"
+              ],
+              "query": [
+                {
+                  "key": "q",
+                  "value": "",
+                  "disabled": true,
+                  "description": "이벤트 id 부분 일치"
+                },
+                {
+                  "key": "limit",
+                  "value": "20",
+                  "disabled": true
+                },
+                {
+                  "key": "page",
+                  "value": "1",
+                  "disabled": true,
+                  "description": "1부터 — offset 대신 사용"
+                },
+                {
+                  "key": "offset",
+                  "value": "0",
+                  "disabled": true
+                },
+                {
+                  "key": "lang",
+                  "value": "ko",
+                  "disabled": true
+                },
+                {
+                  "key": "fields",
+                  "value": "id,episodes",
+                  "disabled": true
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "이벤트 상세",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{baseUrl}}/api/events/event_firstaffection",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "events",
+                "event_firstaffection"
+              ],
+              "query": [
+                {
+                  "key": "lang",
+                  "value": "ko",
+                  "disabled": true
+                },
+                {
+                  "key": "fields",
+                  "value": "id,scenes",
+                  "disabled": true
+                }
+              ]
+            }
+          }
         }
       ]
     },
