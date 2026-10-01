@@ -159,9 +159,24 @@ async function getCostumeMap(): Promise<Record<string, any>> {
   return costumeMapData;
 }
 
+// Unique-grade costume side-stories ship as event_* scene groups named
+// after the costume; the scene index has no costume link, so this map is
+// maintained manually — add new costume tids as their events surface.
+const COSTUME_SCENE_PREFIX: Record<number, string> = {
+  30018: "event_firstaffection", // 모더니아 — 퍼스트 어펙션
+  50012: "event_nonsensered", // 레드후드 — 넌센스 레드
+};
+
+const storyScenesOf = (tid: number, scenes: SceneIndexEntry[]) => {
+  const prefix = COSTUME_SCENE_PREFIX[tid];
+  return prefix
+    ? scenes.filter((s) => s.groupId.startsWith(prefix)).map((s) => s.groupId)
+    : [];
+};
+
 // normalized shape served by /api/costumes — costume_map tid -> costume meta
 // joined with the character list for images + owner
-const costumeRow = (tid: number, co: any) => {
+const costumeRow = (tid: number, co: any, scenes: SceneIndexEntry[] = []) => {
   const n = byResourceId.get(co.resourceId);
   const owned = costumeOwner.get(tid);
   return {
@@ -172,6 +187,7 @@ const costumeRow = (tid: number, co: any) => {
     costumeIndex: co.costumeIndex ?? 0,
     images: owned?.costume.images ?? null,
     character: n ? { id: n.id, resourceId: n.resourceId, name: n.name, rarity: n.rarity } : null,
+    storyScenes: storyScenesOf(tid, scenes),
   };
 };
 
@@ -597,7 +613,10 @@ app.get("/api/stages/:id", async (c) => {
 
 app.get("/api/costumes", async (c) => {
   const { q, grade, nikke, limit, offset } = c.req.query();
-  let list = Object.entries(await getCostumeMap()).map(([tid, co]) => costumeRow(Number(tid), co));
+  const scenes = await getScenes();
+  let list = Object.entries(await getCostumeMap()).map(([tid, co]) =>
+    costumeRow(Number(tid), co, scenes),
+  );
   if (grade) list = list.filter((x) => norm(x.grade ?? "") === norm(grade));
   if (nikke) {
     const nq = norm(nikke);
@@ -629,15 +648,16 @@ app.get("/api/costumes", async (c) => {
 app.get("/api/costumes/:id", async (c) => {
   const id = c.req.param("id");
   const fields = fieldsOf(c);
+  const scenes = await getScenes();
   // numeric: costume tid lookup; otherwise name match like /api/nikkes/:id
   if (/^\d+$/.test(id)) {
     const co = (await getCostumeMap())[id];
     if (!co) return c.json({ error: "not found" }, 404);
-    return c.json(pickFields(costumeRow(Number(id), co), fields));
+    return c.json(pickFields(costumeRow(Number(id), co, scenes), fields));
   }
   const nq = norm(id);
   const hits = Object.entries(await getCostumeMap())
-    .map(([tid, co]) => costumeRow(Number(tid), co))
+    .map(([tid, co]) => costumeRow(Number(tid), co, scenes))
     .filter((x) => Object.values(x.name ?? {}).some((n) => norm(String(n)).includes(nq)));
   if (hits.length === 1) return c.json(pickFields(hits[0], fields));
   if (hits.length > 1) return c.json({ count: hits.length, costumes: pickFields(hits, fields) });

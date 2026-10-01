@@ -1,5 +1,45 @@
 {
-  "10012": { "resourceId": 10, "costumeIndex": 1, "name": { "ko": "테스트 코스튬", "en": "Test Costume" }, "description": { "ko": "테스트용", "en": "test" }, "grade": "Special" },
-  "20001": { "resourceId": 20, "costumeIndex": 1, "name": { "ko": "앵커 수영복", "en": "Anchor Swimsuit" }, "description": { "ko": "설명" }, "grade": "Normal" },
-  "99999": { "resourceId": 999, "costumeIndex": 0, "name": { "ko": "미출시 코스튬", "en": "Unreleased" }, "grade": "Event" }
+  "10012": {
+    "resourceId": 10,
+    "costumeIndex": 1,
+    "name": {
+      "ko": "테스트 코스튬",
+      "en": "Test Costume"
+    },
+    "description": {
+      "ko": "테스트용",
+      "en": "test"
+    },
+    "grade": "Special"
+  },
+  "20001": {
+    "resourceId": 20,
+    "costumeIndex": 1,
+    "name": {
+      "ko": "앵커 수영복",
+      "en": "Anchor Swimsuit"
+    },
+    "description": {
+      "ko": "설명"
+    },
+    "grade": "Normal"
+  },
+  "30018": {
+    "resourceId": 999,
+    "costumeIndex": 0,
+    "name": {
+      "ko": "퍼스트 어펙션",
+      "en": "First Affection"
+    },
+    "grade": "Unique"
+  },
+  "99999": {
+    "resourceId": 999,
+    "costumeIndex": 0,
+    "name": {
+      "ko": "미출시 코스튬",
+      "en": "Unreleased"
+    },
+    "grade": "Event"
+  }
 }

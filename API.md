@@ -460,7 +460,8 @@ GET /api/costumes?grade=Special&limit=20
       "grade": "Special",
       "costumeIndex": 2,
       "images": { "icon": "https://...", "medium": "https://...", "full": "https://..." },
-      "character": { "id": 108001, "resourceId": 80, "name": { "ko": "센티", "...": "..." }, "rarity": "SSR" }
+      "character": { "id": 108001, "resourceId": 80, "name": { "ko": "센티", "...": "..." }, "rarity": "SSR" },
+      "storyScenes": ["event_firstaffection_01", "..."]
     }
   ]
 }
@@ -472,6 +473,7 @@ GET /api/costumes?grade=Special&limit=20
 | `costumeIndex` | 아바타/스킨 인덱스 — `/api/avatars`의 `costumeIndex`와 대응 |
 | `images` | 코스튬 아이콘/중간/전신 이미지 (캐릭터 데이터에 없으면 `null`) |
 | `character` | 소유 니케 요약 — `id`/`resourceId`/`name`/`rarity`. 매칭되는 캐릭터가 없으면 `null` |
+| `storyScenes` | 코스튬 사이드 스토리의 씬 `groupId` 배열 — `/api/scenes/:groupId`로 대사 조회. 코스튬 스토리가 없으면 `[]`. 현재 `퍼스트 어펙션`(30018)·`넌센스 레드`(50012)만 매핑됨 — 이벤트 씬 목록에 코스튬 연결 정보가 없어 수동 매핑 |
 
 ## GET /api/costumes/:id
 

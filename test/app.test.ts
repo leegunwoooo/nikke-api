@@ -91,7 +91,7 @@ test("scenes ?q is case/space-insensitive like other lists", async () => {
 });
 
 test("scenes index, nikke filter is case/space-insensitive", async () => {
-  assert.equal((await json("/api/scenes")).count, 2);
+  assert.equal((await json("/api/scenes")).count, 4);
   assert.equal((await json("/api/scenes?category=main")).count, 1);
   assert.equal((await json("/api/scenes?nikke=innocentmaid")).count, 1);
   assert.equal((await json("/api/scenes?limit=1&offset=1")).scenes[0].groupId, "attract_1_1");
@@ -127,7 +127,13 @@ test("/api/costumes/:id accepts names too (like /api/nikkes/:id)", async () => {
 
 test("/api/costumes list + filters + detail", async () => {
   const all = await json("/api/costumes");
-  assert.equal(all.count, 3);
+  assert.equal(all.count, 4);
+  // costume side-stories: manual tid -> event_* scene group prefix map
+  assert.deepEqual(all.costumes.find((x: any) => x.id === 30018).storyScenes, [
+    "event_firstaffection_01",
+    "event_firstaffection_02",
+  ]);
+  assert.deepEqual(all.costumes.find((x: any) => x.id === 10012).storyScenes, []);
   const rapi = all.costumes.find((x: any) => x.id === 10012);
   assert.equal(rapi.character.id, 1);
   assert.equal(rapi.images.icon, "cos-i"); // resolved via character costumes
