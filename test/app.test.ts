@@ -380,3 +380,18 @@ test("HEAD gets the same cache headers as GET", async () => {
   assert.match(res.headers.get("ETag") ?? "", /^W\//);
   assert.match(res.headers.get("Cache-Control") ?? "", /s-maxage=/);
 });
+
+test("resolvePaging: no params returns the full list, cap only on explicit limit", async () => {
+  const { resolvePaging } = await import("../src/app.js");
+  // total > 500: no params → everything (the 500 cap must not apply)
+  assert.deepEqual(resolvePaging({}, 945), { off: 0, lim: 945, page: 0 });
+  // page without limit → default 50-page size
+  assert.deepEqual(resolvePaging({ page: "2" }, 945), { off: 50, lim: 50, page: 2 });
+  // explicit limit is still capped at 500
+  assert.deepEqual(resolvePaging({ limit: "999" }, 945), { off: 0, lim: 500, page: 0 });
+  assert.deepEqual(resolvePaging({ limit: "5", offset: "10" }, 945), {
+    off: 10,
+    lim: 5,
+    page: 0,
+  });
+});

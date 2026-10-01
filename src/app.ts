@@ -77,21 +77,33 @@ const getCubes = lazyIndex<{ id: number; rare?: string; name: Record<string, str
 const norm = (s: string) => s.toLowerCase().replace(/[\s:_\-·]/g, "");
 
 // ?page=N (1-based) or ?offset=N paging — page wins when both are given.
-// page without limit defaults to a 50-item page size. Non-integer or
-// out-of-range values are rejected so typos don't silently widen results.
-function pageQuery(c: Context, total: number) {
+// page without limit defaults to a 50-item page size; the 500 cap applies
+// only to an explicit ?limit= — no params at all returns the full list.
+// Non-integer or out-of-range values are rejected so typos don't silently
+// widen results. Exported for tests.
+export function resolvePaging(
+  qs: { page?: string; limit?: string; offset?: string },
+  total: number,
+) {
   const num = (v?: string) => (v == null || v === "" ? undefined : Number(v));
-  const page = num(c.req.query("page"));
-  const limit = num(c.req.query("limit"));
-  const offset = num(c.req.query("offset"));
+  const page = num(qs.page);
+  const limit = num(qs.limit);
+  const offset = num(qs.offset);
   for (const [k, v] of Object.entries({ page, limit, offset })) {
     if (v !== undefined && (!Number.isInteger(v) || v < 0 || (k === "page" && v < 1))) {
       return { error: `invalid ${k}` } as const;
     }
   }
-  const lim = Math.min((limit ?? 0) || (page ? 50 : total), 500);
+  const lim = limit ? Math.min(limit, 500) : page ? 50 : total;
   const off = page ? (page - 1) * lim : (offset ?? 0);
   return { off, lim, page: page ?? 0 };
+}
+
+function pageQuery(c: Context, total: number) {
+  return resolvePaging(
+    { page: c.req.query("page"), limit: c.req.query("limit"), offset: c.req.query("offset") },
+    total,
+  );
 }
 
 // --- profile normalization helpers ---
