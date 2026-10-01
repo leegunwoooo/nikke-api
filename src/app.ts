@@ -365,9 +365,11 @@ async function loadProfileLookups() {
       favoriteItem: favRef(d.favorite_item_tid, d.favorite_item_lv),
       cube: cubeRef(d.harmony_cube_tid, d.harmony_cube_lv),
       arenaCube: cubeRef(d.arena_harmony_cube_tid, d.arena_harmony_cube_lv),
+      // output key is "body" to match /api/equips slot naming; upstream
+      // fields are still torso_equip_* so eq() keeps the "torso" prefix
       equipment: {
         head: eq(d, "head"),
-        torso: eq(d, "torso"),
+        body: eq(d, "torso"),
         arm: eq(d, "arm"),
         leg: eq(d, "leg"),
       },

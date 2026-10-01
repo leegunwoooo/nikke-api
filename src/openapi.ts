@@ -112,7 +112,7 @@ const ownedNikkeDetail = {
     },
     equipment: {
       type: "object",
-      properties: { head: equipSlot, torso: equipSlot, arm: equipSlot, leg: equipSlot },
+      properties: { head: equipSlot, body: equipSlot, arm: equipSlot, leg: equipSlot },
     },
   },
 };
