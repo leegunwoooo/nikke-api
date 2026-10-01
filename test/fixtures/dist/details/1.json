@@ -1,1 +1,1 @@
-{"skills": [{"name": "s1", "description": "d"}], "background": "bg"}
+{"skills":[{"name":"s1","description":"d"}],"background":"bg","attractiveScenarios":[{"id":1,"sceneGroupId":"d_nikke_test_01","level":1,"title":{"ko":"테스트 에피소드","en":"Test Episode"},"costumeTid":null,"rewardId":50}]}

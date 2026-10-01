@@ -180,7 +180,11 @@ GET /api/nikkes?limit=20&offset=40
       { "nameCode": 5071, "id": 201401, "resourceId": 14,
         "name": { "ko": "네온 : 블루 오션", ... }, "rarity": "SSR", "image": "https://..." }
     ],
-    "attractiveScenarios": [ ... ],
+    "attractiveScenarios": [
+      { "id": 871, "sceneGroupId": "d_nikke_neon_visioneye_01", "level": 1,
+        "title": { "ko": "다시 아우터림으로", "...": "..." },
+        "costumeTid": null, "rewardId": 50 }
+    ],
     "voices": [
       {
         "id": 120001,
@@ -207,6 +211,15 @@ GET /api/nikkes?limit=20&offset=40
 | `descriptionTemplate` | 원본 템플릿 (플레이스홀더 포함) |
 | `values` | 레벨별 원본 수치 배열 (Lv1~Lv10) |
 | `cooltime` | 버스트 쿨타임, 초 단위 |
+
+### `attractiveScenarios[]` 필드
+
+호감도 시나리오 목록 — `sceneGroupId`가 `/api/scenes/:groupId`의 대본 파일과 1:1 대응합니다. `level`은 해금에 필요한 호감도 레벨, `costumeTid`는 시나리오에서 착용하는 코스튬(`/api/costumes/:id`로 조회, 없으면 `null`).
+
+```
+GET /api/nikkes/101801?fields=details.attractiveScenarios
+→ sceneGroupId로 GET /api/scenes/d_nikke_neon_visioneye_01 → 대사
+```
 
 ### `voices[]` 필드
 
@@ -355,7 +368,7 @@ GET /api/scenes/d_main_01_01_s?fields=name,lines
 
 호감도 씬(`groupId`가 `d_nikke_*`)은 상단에 `type: "attractive"`, `nikke`, `attractiveLevel` 필드가 추가로 붙습니다.
 
-캐릭터별 호감도 씬은 `/api/nikkes/:id` 상세의 `details.attractiveScenarios`에 들어있는 `attractive_scenario_group_id`로 연결됩니다. 스킨 캐릭터(예: `아니스 : 스타`)는 자기 전용 그룹(`d_nikke_anis_star_*`)을 가지며, `?nikke=` 필터는 부분 일치라 `아니스`로 검색하면 모든 스킨 버전이 함께 나옵니다.
+캐릭터별 호감도 씬은 `/api/nikkes/:id` 상세의 `details.attractiveScenarios[].sceneGroupId`로 연결됩니다. 스킨 캐릭터(예: `아니스 : 스타`)는 자기 전용 그룹(`d_nikke_anis_star_*`)을 가지며, `?nikke=` 필터는 부분 일치라 `아니스`로 검색하면 모든 스킨 버전이 함께 나옵니다.
 
 ## GET /api/stages
 

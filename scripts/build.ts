@@ -706,6 +706,32 @@ function mergeSkill(
   return { slot, id, icon: iconName ? skillIcon(iconName) : undefined, name, descriptionTemplate, descriptions, cooltime, values };
 }
 
+function mergeAttractiveScenarios(
+  roles: (RawRoleData | null)[],
+): NikkeDetail["attractiveScenarios"] {
+  const byId = new Map<number, NonNullable<NikkeDetail["attractiveScenarios"]>[number]>();
+  roles.forEach((r, i) => {
+    if (!r) return;
+    const l = LOCALES[i];
+    for (const s of r.attractive_scenario_list ?? []) {
+      let e = byId.get(s.id);
+      if (!e) {
+        e = {
+          id: s.id,
+          sceneGroupId: s.attractive_scenario_group_id,
+          level: s.attractive_level,
+          title: {},
+          costumeTid: s.costume || null,
+          rewardId: s.reward_id,
+        };
+        byId.set(s.id, e);
+      }
+      if (s.scenario_title_locale) e.title[l] = s.scenario_title_locale;
+    }
+  });
+  return [...byId.values()].sort((a, b) => (a.level ?? 0) - (b.level ?? 0));
+}
+
 async function buildDetail(resourceId: number): Promise<NikkeDetail | null> {
   const roles = await Promise.all(
     LOCALES.map((l) => readJson<RawRoleData>(`roledata_${resourceId}_${l}.json`)),
@@ -798,7 +824,9 @@ async function buildDetail(resourceId: number): Promise<NikkeDetail | null> {
       hp: first.character_level_hp_list,
     },
     teammateList: first.teammate_list,
-    attractiveScenarios: first.attractive_scenario_list,
+    // merged across locales; attractive_scenario_group_id IS the scene
+    // groupId — files live at scenes/<gid>.json served by /api/scenes/:groupId
+    attractiveScenarios: mergeAttractiveScenarios(roles),
     voices: voices.length ? voices : undefined,
   };
 }

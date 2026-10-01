@@ -34,6 +34,9 @@ test("/api/meta/filters covers the new endpoints' filter values", async () => {
 test("nikke detail by id / resourceId / name", async () => {
   const byId = await json("/api/nikkes/1");
   assert.equal(byId.details.background, "bg");
+  // attractiveScenarios expose sceneGroupId -> /api/scenes/:groupId
+  assert.equal(byId.details.attractiveScenarios[0].sceneGroupId, "d_nikke_test_01");
+  assert.equal(byId.details.attractiveScenarios[0].title.ko, "테스트 에피소드");
   assert.equal((await json("/api/nikkes/20")).id, 2);
   assert.equal((await json("/api/nikkes/rapi")).id, 1);
   assert.equal((await json("/api/nikkes/anchor")).count, 2);

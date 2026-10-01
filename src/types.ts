@@ -119,7 +119,15 @@ export interface RawRoleData {
   skill1_id?: number;
   skill2_id?: number;
   teammate_list?: Record<string, unknown>;
-  attractive_scenario_list?: Record<string, unknown>;
+  attractive_scenario_list?: {
+    id: number;
+    name_code?: number;
+    attractive_level?: number;
+    scenario_title_locale?: string;
+    attractive_scenario_group_id?: string;
+    reward_id?: number;
+    costume?: number;
+  }[];
   character_dialog_group_list?: {
     id: number;
     speech_group_id?: number;
@@ -188,7 +196,17 @@ export interface NikkeDetail {
   skills: Skill[];
   statsPerLevel: { attack?: number[]; defence?: number[]; hp?: number[] };
   teammateList?: unknown;
-  attractiveScenarios?: unknown;
+  /** 호감도 시나리오 — sceneGroupId는 /api/scenes/:groupId의 대본 파일과 1:1 대응 */
+  attractiveScenarios?: {
+    id: number;
+    sceneGroupId?: string;
+    /** 시나리오 해금에 필요한 호감도 레벨 */
+    level?: number;
+    title: Localized<string>;
+    /** 시나리오에서 착용하는 코스튬 tid (없으면 null) */
+    costumeTid?: number | null;
+    rewardId?: number;
+  }[];
   /** character voice lines; audio in ko/en/ja (zh-TW has no dub) */
   voices?: {
     id: number;
