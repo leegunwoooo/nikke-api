@@ -23,13 +23,27 @@ const PATHS = [
   "stage/stage_list.json",
 ];
 
-async function fetchText(p: string): Promise<string | null> {
-  const res = await fetch(cdnUrl(p));
-  if (!res.ok) {
-    console.log(`warn: ${res.status} ${p}`);
-    return null;
+async function fetchText(p: string, tries = 3): Promise<string | null> {
+  // transient network errors (ECONNRESET etc.) must not kill the whole run —
+  // same retry pattern as sync.ts fetchWithRetry
+  let lastErr: unknown;
+  for (let i = 0; i < tries; i++) {
+    try {
+      const res = await fetch(cdnUrl(p));
+      if (!res.ok && (res.status < 500 || i === tries - 1)) {
+        console.log(`warn: ${res.status} ${p}`);
+        return null;
+      }
+      if (res.ok) return await res.text();
+      lastErr = new Error(`HTTP ${res.status}`);
+      await new Promise((r) => setTimeout(r, 1000 * (i + 1)));
+    } catch (e) {
+      lastErr = e;
+      console.log(`warn: fetch failed (attempt ${i + 1}/${tries}) ${p}: ${e}`);
+      await new Promise((r) => setTimeout(r, 1000 * (i + 1)));
+    }
   }
-  return res.text();
+  throw lastErr;
 }
 
 async function main() {
