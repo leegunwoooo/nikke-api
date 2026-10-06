@@ -487,6 +487,8 @@ app.get("/", (c) =>
         "owned-nikke list (same filters as /api/nikkes)",
       "GET /api/user/:blablaid/nikke/:nameOrId":
         "single owned-nikke detail (nameOrId = name/id/nameCode)",
+      "GET /api/user/:blablaid/roster?area=":
+        "full owned roster, upstream-shaped (characters+details+stateEffects+outpost per area)",
     },
     fields:
       "?fields=a,b.c on nikkes, favorites, cubes, scene detail and user-nikke routes trims each object to those (dot) paths",
@@ -1030,9 +1032,11 @@ app.get("/api/tables/:file", async (c) => {
 app.get("/api/user", userProfile);
 app.get("/api/user/nikke", userNikkeList);
 app.get("/api/user/nikke/:nameOrId", userNikkeDetail);
+app.get("/api/user/roster", userRoster);
 app.get("/api/user/:blablaid", userProfile);
 app.get("/api/user/:blablaid/nikke", userNikkeList);
 app.get("/api/user/:blablaid/nikke/:nameOrId", userNikkeDetail);
+app.get("/api/user/:blablaid/roster", userRoster);
 
 async function userProfile(c: Context) {
   const q = openidInput(c);
@@ -1223,6 +1227,103 @@ async function userNikkeDetail(c: Context) {
     );
     return c.json(
       pickFields(normalizeNikke(ch, detailByCode.get(ch.name_code) ?? {}, effectById), fields),
+    );
+  } catch (e) {
+    const msg = e instanceof Error ? e.message : String(e);
+    const status = msg.includes("not configured") ? 503 : 502;
+    return c.json({ error: msg }, status);
+  }
+}
+
+// ── bulk roster (upstream-shaped) ─────────────────────────────────────────
+// Same payload the calculator's blablalink proxy worker returns: raw
+// GetUserCharacters + GetUserCharacterDetails rows so downstream consumers
+// (e.g. the damage calculator) can apply their own interpretation without
+// losing fields the normalized endpoints drop. A detail-call failure aborts
+// the whole request (502) like the worker — silently dropping an area that
+// has characters would hide real data.
+const ROSTER_AREAS = [83, 81, 84, 82, 85]; // KR, JP, Global, NA, SEA
+const ROSTER_DETAIL_BATCH = 60; // upstream truncates larger name_codes lists
+// upstream codes meaning "the owner hid their nikke list" — not a failure
+const ROSTER_PRIVATE_CODES = new Set([1301002, 1303002]);
+
+interface RosterArea {
+  area: number;
+  characters: unknown[];
+  details: unknown[];
+  stateEffects: unknown[];
+  outpost: unknown;
+}
+interface RosterFail {
+  failedCode: number;
+  failedMsg: string;
+}
+
+async function collectRosterArea(openid: string, area: number): Promise<RosterArea | RosterFail> {
+  const body = { intl_open_id: openid, nikke_area_id: area };
+  const roster = await gameApi("Game", "GetUserCharacters", body);
+  const characters =
+    roster.code === 0 ? ((roster.data as any)?.characters ?? null) : null;
+  if (!characters?.length)
+    return { failedCode: roster.code ?? 0, failedMsg: roster.msg ?? "" };
+
+  const codes = characters.map((x: any) => x.name_code);
+  const details: unknown[] = [];
+  const stateEffects: unknown[] = [];
+  for (let i = 0; i < codes.length; i += ROSTER_DETAIL_BATCH) {
+    const chunk = await gameApi("Game", "GetUserCharacterDetails", {
+      ...body,
+      name_codes: codes.slice(i, i + ROSTER_DETAIL_BATCH),
+    });
+    if (chunk.code !== 0)
+      throw new Error(
+        `GetUserCharacterDetails failed: ${chunk.code} ${chunk.msg ?? ""}`,
+      );
+    details.push(...((chunk.data as any)?.character_details ?? []));
+    stateEffects.push(...((chunk.data as any)?.state_effects ?? []));
+  }
+
+  // outpost needs a separate privacy toggle upstream — absence is normal
+  let outpost = null;
+  try {
+    const info = await gameApi("Game", "GetUserProfileOutpostInfo", body);
+    if (info.code === 0) outpost = (info.data as any)?.outpost_info ?? null;
+  } catch {
+    /* optional disclosure */
+  }
+  return { area, characters, details, stateEffects, outpost };
+}
+
+async function userRoster(c: Context) {
+  const q = openidInput(c);
+  const target = decodeOpenid(q);
+  if (!target) return c.json({ error: "invalid blablaid" }, 400);
+  const areaParam = c.req.query("area");
+  const area = areaParam == null || areaParam === "" ? null : Number(areaParam);
+  if (area !== null && (!Number.isInteger(area) || !ROSTER_AREAS.includes(area)))
+    return c.json({ error: "unsupported area" }, 400);
+  try {
+    const results = await Promise.all(
+      (area === null ? ROSTER_AREAS : [area]).map((a) =>
+        collectRosterArea(target.intlOpenId, a),
+      ),
+    );
+    const areas = results.filter((r): r is RosterArea => !("failedCode" in r));
+    if (areas.length === 0) {
+      const failures = results as RosterFail[];
+      if (failures.some((f) => ROSTER_PRIVATE_CODES.has(f.failedCode)))
+        return c.json({ error: "nikke list is private", reason: "private" }, 404);
+      const first = failures[0]!;
+      return c.json(
+        {
+          error: `upstream lookup failed (${first.failedCode} ${first.failedMsg})`,
+          code: first.failedCode,
+        },
+        502,
+      );
+    }
+    return c.json(
+      pickFields({ intlOpenId: target.intlOpenId, areas }, fieldsOf(c)),
     );
   } catch (e) {
     const msg = e instanceof Error ? e.message : String(e);

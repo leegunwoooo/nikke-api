@@ -1199,6 +1199,38 @@
               ]
             }
           }
+        },
+        {
+          "name": "보유 니케 전체 로스터 (경로)",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{baseUrl}}/api/user/{{blablaid}}/roster",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "user",
+                "{{blablaid}}",
+                "roster"
+              ],
+              "query": [
+                {
+                  "key": "area",
+                  "value": "83",
+                  "disabled": true,
+                  "description": "83 한국 | 81 일본 | 84 글로벌 | 82 북미 | 85 동남아 — 생략 시 전체 순회"
+                },
+                {
+                  "key": "fields",
+                  "value": "areas.area,areas.characters",
+                  "disabled": true
+                }
+              ]
+            },
+            "description": "보유 니케 전원을 업스트림 원시 형태로 일괄 조회 — characters·details·stateEffects·outpost. 비공개 시 404 reason=private"
+          }
         }
       ]
     },

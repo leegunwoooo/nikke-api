@@ -37,6 +37,7 @@
 - [GET /api/user](#get-apiuser) — 유저 프로필 조회 (공유 링크)
 - [GET /api/user/:blablaid/nikke](#get-apiuserblablaidnikke) — 유저 보유 니케 목록 (경량)
 - [GET /api/user/:blablaid/nikke/:nameOrId](#get-apiuserblablaidnikkenameorid) — 유저 보유 니케 상세 (이름 부분 일치/id)
+- [GET /api/user/:blablaid/roster](#get-apiuserblablaidroster) — 유저 보유 니케 전체 로스터 (업스트림 원시 형태)
 - [GET /api/cdn](#get-apicdn) — CDN 경로 → URL 변환
 - [공통: 필드 선택 `?fields=`](#공통-필드-선택-fields)
 - [공통: 언어 선택 `?lang=`](#공통-언어-선택-lang)
@@ -976,6 +977,50 @@ GET /api/user/<blablaid>/nikke/3017                # 캐릭터 id
 - `key`가 매칭되지 않으면 404 `{"error": "not found"}`.
 - 이름은 부분 일치가 아닌 **정확 일치**입니다 — `라피`는 base 캐릭터만, 스킨 캐릭터는 `라피 : 레드 후드`로 지정.
 - 장비 `tid`/옵션 `id`는 내부 아이템 코드입니다 (원본 테이블은 `/api/tables/ItemEquipTable_ko.json` 참고).
+
+## GET /api/user/:blablaid/roster
+
+공유 프로필의 보유 니케 **전원**을 한 번에 조회합니다 — 업스트림 원시 형태(`characters`·`character_details`·`state_effects`·`outpost_info`)를 서버별로 그대로 묶어 반환합니다. 정규화된 이름/이미지가 필요 없고 원시 필드를 직접 해석하는 소비자(예: 데미지 계산기)용입니다.
+
+```
+GET /api/user/<blablaid>/roster            # 5개 서버 전부 순회
+GET /api/user/<blablaid>/roster?area=83    # 한국 서버만
+GET /api/user/roster?blablaid=...          # 구형 쿼리 형태도 동일
+```
+
+### 응답 예시
+
+```json
+{
+  "intlOpenId": "1234567890",
+  "areas": [
+    {
+      "area": 83,
+      "characters": [{ "name_code": 1021, "lv": 200, "grade": 2, "core": 0, "combat": 65721 }],
+      "details": [{ "name_code": 1021, "skill1_lv": 7, "head_equip_tid": 3121001, "..." : "업스트림 원시 필드" }],
+      "stateEffects": [{ "id": 7000514, "function_details": [{ "function_type": "StatAtk", "function_value": 1052 }] }],
+      "outpost": { "synchro_level": 400, "recycle_room_researches": [] }
+    }
+  ]
+}
+```
+
+| 필드 | 설명 |
+|------|------|
+| `areas[].characters` | `GetUserCharacters` 원시 행 — `name_code`·`lv`·`grade`·`core`·`combat` 등 |
+| `areas[].details` | `GetUserCharacterDetails` 원시 행 (60개씩 배치로 수집) — 스킬 레벨·장비 `*_equip_*` 필드·큐브·소장품 |
+| `areas[].stateEffects` | 같은 응답의 `state_effects` — 장비 옵션 id → `function_details` 실제 수치 |
+| `areas[].outpost` | `GetUserProfileOutpostInfo`의 `outpost_info` — 전진기지가 비공개면 `null` (실패가 아님) |
+
+에러 정책은 다른 `/api/user/*`와 다릅니다:
+
+| 상황 | 응답 |
+|------|------|
+| `blablaid` 형식 오류 / 지원하지 않는 `area` | 400 |
+| 모든 서버 조회 실패 + 비공개 코드(1301002/1303002) 포함 | 404 `{"error": ..., "reason": "private"}` |
+| 모든 서버 조회 실패 (기타) | 502 `{"error": ..., "code": <업스트림 코드>}` |
+| 상세 배치 호출 하나라도 실패 | 502 — 해당 서버를 조용히 버리지 않고 요청 전체를 실패시킴 |
+| 서버 조회 계정 미설정 | 503 |
 
 ## GET /api/cdn
 

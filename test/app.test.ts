@@ -397,6 +397,109 @@ test("HEAD gets the same cache headers as GET", async () => {
   assert.match(res.headers.get("Cache-Control") ?? "", /s-maxage=/);
 });
 
+// ── /api/user/:blablaid/roster ────────────────────────────────────────────
+// the endpoint talks to the live BlablaLink proxy, so tests stub fetch.
+// Login must hand back a game_* cookie or blabla.ts never reaches the API.
+function stubBlabla(opts: {
+  perArea?: (area: number) => { code: number; characters?: unknown[]; msg?: string };
+  detailCode?: number;
+} = {}) {
+  const orig = globalThis.fetch;
+  const envBackup = { ...process.env };
+  process.env.BLA_OPEN_ID ??= "test-openid";
+  process.env.BLA_TOKEN ??= "test-token";
+  const detailCalls: number[] = [];
+  globalThis.fetch = (async (input: any, init?: any) => {
+    const url = String(input?.url ?? input);
+    const body = init?.body ? JSON.parse(init.body) : {};
+    if (url.endsWith("/api/user/Login"))
+      return new Response(JSON.stringify({ code: 0 }), {
+        headers: { "set-cookie": "game_token=t; Path=/" },
+      });
+    if (url.includes("GetUserGamePlayerInfo"))
+      return Response.json({ code: 0, data: { area_id: 83 } });
+    if (url.includes("GetUserCharacters")) {
+      const r = (
+        opts.perArea ??
+        ((a: number) =>
+          a === 83 ? { code: 0, characters: [{ name_code: 1, lv: 200 }], msg: "" } : { code: 0, msg: "" })
+      )(body.nikke_area_id);
+      return Response.json({ code: r.code, msg: r.msg ?? "", data: { characters: r.characters } });
+    }
+    if (url.includes("GetUserCharacterDetails")) {
+      detailCalls.push(body.name_codes.length);
+      const code = opts.detailCode ?? 0;
+      return Response.json({
+        code,
+        data: code === 0
+          ? {
+              character_details: [{ name_code: 1, skill1_lv: 10 }],
+              state_effects: [{ id: 5, function_details: [{ function_type: "StatAtk", function_value: 693 }] }],
+            }
+          : {},
+      });
+    }
+    if (url.includes("GetUserProfileOutpostInfo"))
+      return Response.json({ code: 0, data: { outpost_info: { synchro_level: 400 } } });
+    return Response.json({ code: -1, msg: "unmocked" });
+  }) as typeof fetch;
+  return {
+    restore: () => {
+      globalThis.fetch = orig;
+      process.env = envBackup;
+    },
+    detailCalls,
+  };
+}
+
+test("roster: per-area upstream bundle with batching and no-store", async () => {
+  const stub = stubBlabla();
+  try {
+    const res = await get("/api/user/12345/roster");
+    assert.equal(res.status, 200);
+    const j = await res.json();
+    assert.equal(j.intlOpenId, "12345");
+    assert.equal(j.areas.length, 1); // only area 83 has characters
+    const a = j.areas[0];
+    assert.equal(a.area, 83);
+    assert.equal(a.characters[0].name_code, 1);
+    assert.equal(a.details[0].skill1_lv, 10);
+    assert.equal(a.stateEffects[0].function_details[0].function_value, 693);
+    assert.equal(a.outpost.synchro_level, 400);
+    assert.equal(res.headers.get("Cache-Control"), "no-store");
+  } finally {
+    stub.restore();
+  }
+});
+
+test("roster: private profile → 404 reason=private; bad input → 400", async () => {
+  const stub = stubBlabla({ perArea: () => ({ code: 1301002, msg: "hidden" }) });
+  try {
+    const res = await get("/api/user/12345/roster");
+    assert.equal(res.status, 404);
+    assert.equal((await res.json()).reason, "private");
+  } finally {
+    stub.restore();
+  }
+  assert.equal((await get("/api/user/not-an-id/roster")).status, 400);
+  const stub2 = stubBlabla();
+  try {
+    assert.equal((await get("/api/user/12345/roster?area=99")).status, 400);
+  } finally {
+    stub2.restore();
+  }
+});
+
+test("roster: detail-call failure aborts with 502 rather than dropping the area", async () => {
+  const stub = stubBlabla({ detailCode: 500 });
+  try {
+    const res = await get("/api/user/12345/roster");
+    assert.equal(res.status, 502);
+  } finally {
+    stub.restore();
+  }
+});
+
 test("resolvePaging: no params returns the full list, cap only on explicit limit", async () => {
   const { resolvePaging } = await import("../src/app.js");
   // total > 500: no params → everything (the 500 cap must not apply)

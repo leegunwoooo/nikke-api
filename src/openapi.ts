@@ -502,6 +502,39 @@ export const openapi = {
         },
       },
     },
+    "/api/user/{blablaid}/roster": {
+      get: {
+        tags: ["user"],
+        summary: "유저 보유 니케 전체 로스터 (업스트림 원시 형태)",
+        description:
+          "보유 니케 전원의 업스트림 원시 묶음 — 서버별 {area, characters, details, stateEffects, outpost}. " +
+          "GetUserCharacterDetails는 name_code 60개씩 배치 호출. 기본은 5개 서버(83·81·84·82·85) 전부 조회, ?area=로 특정 서버만 지정 가능. " +
+          "모든 서버 조회가 실패하면 502(업스트림) 또는 404 reason=private(프로필 비공개). " +
+          "blablaid 대신 ?blablaid=도 가능 (/api/user/roster?blablaid=...)",
+        parameters: [
+          {
+            name: "blablaid",
+            in: "path",
+            required: true,
+            schema: { type: "string" },
+            description: "BlablaLink 공유 ID (base64 openid)",
+          },
+          {
+            name: "area",
+            in: "query",
+            schema: { type: "integer", enum: [83, 81, 84, 82, 85] },
+            description: "조회할 서버만 지정 — 생략 시 전체 순회",
+          },
+        ],
+        responses: {
+          "200": { description: "서버별 원시 로스터 묶음" },
+          "400": { description: "blablaid 형식 오류 / 지원하지 않는 area" },
+          "404": { description: "프로필 비공개 (reason=private)" },
+          "503": { description: "서버 조회 계정 미설정" },
+          "502": { description: "업스트림 실패 (상세 호출 오류 시 전체 실패)" },
+        },
+      },
+    },
     "/api/tables": {
       get: { tags: ["misc"], summary: "원본 테이블 목록", responses: { "200": { description: "파일 목록" } } },
     },
@@ -570,6 +603,7 @@ for (const p of [
   "/api/cubes/{id}",
   "/api/user/{blablaid}/nikke",
   "/api/user/{blablaid}/nikke/{nameOrId}",
+  "/api/user/{blablaid}/roster",
 ]) {
   const op = (openapi.paths as Record<string, any>)[p]?.get;
   if (op) (op.parameters ??= []).push(fieldsParam);
