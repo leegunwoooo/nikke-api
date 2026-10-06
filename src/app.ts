@@ -1303,11 +1303,12 @@ async function userRoster(c: Context) {
   if (area !== null && (!Number.isInteger(area) || !ROSTER_AREAS.includes(area)))
     return c.json({ error: "unsupported area" }, 400);
   try {
-    const results = await Promise.all(
-      (area === null ? ROSTER_AREAS : [area]).map((a) =>
-        collectRosterArea(target.intlOpenId, a),
-      ),
-    );
+    // sequential — a parallel sweep fires ~30 upstream calls at once and
+    // trips blablalink's 212000 rate limit on the shared credentials.
+    const results: (RosterArea | RosterFail)[] = [];
+    for (const a of area === null ? ROSTER_AREAS : [area]) {
+      results.push(await collectRosterArea(target.intlOpenId, a));
+    }
     const areas = results.filter((r): r is RosterArea => !("failedCode" in r));
     if (areas.length === 0) {
       const failures = results as RosterFail[];

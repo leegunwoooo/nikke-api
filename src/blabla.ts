@@ -50,21 +50,37 @@ export interface GameResponse<T = unknown> {
   data: T;
 }
 
+// upstream "request too frequently" — bursts (e.g. the roster endpoint's
+// multi-area sweep) trip this even on a healthy session. Retried with
+// backoff below; returning the last response keeps the caller's error real.
+const RATE_LIMIT_CODES = new Set([212000]);
+const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
+
 async function post<T>(path: string, body: Record<string, unknown>): Promise<GameResponse<T>> {
-  for (let i = 0; i < 2; i++) {
-    const cookie = await login();
-    const r = await fetch(`${BASE}${path}`, {
-      method: "POST",
-      headers: { "Content-Type": "application/json", Cookie: cookie },
-      body: JSON.stringify(body),
-    });
-    const j = (await r.json()) as GameResponse<T>;
-    if (j.code === 300001 || j.code === 300004) {
-      cookieJar = null; // session expired — retry once with fresh login
-      continue;
+  let limited: GameResponse<T> | null = null;
+  for (let attempt = 0; attempt < 4; attempt++) {
+    if (attempt > 0) await sleep(400 * 2 ** (attempt - 1) + Math.random() * 200);
+    for (let i = 0; i < 2; i++) {
+      const cookie = await login();
+      const r = await fetch(`${BASE}${path}`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Cookie: cookie },
+        body: JSON.stringify(body),
+      });
+      const j = (await r.json()) as GameResponse<T>;
+      if (j.code === 300001 || j.code === 300004) {
+        cookieJar = null; // session expired — retry once with fresh login
+        continue;
+      }
+      if (RATE_LIMIT_CODES.has(j.code ?? -1)) {
+        limited = j;
+        break;
+      }
+      return j;
     }
-    return j;
+    throw new Error("blabla auth failed");
   }
+  if (limited) return limited;
   throw new Error("blabla auth failed");
 }
 
