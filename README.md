@@ -195,6 +195,18 @@ https://nikke-api-edge.leegunwoo0325-5e6.workers.dev/mcp
 - 요청/응답 형식 전체 문서 → [API.md](API.md)
 - Postman 컬렉션 → [nikke-api.postman_collection.json](nikke-api.postman_collection.json) (Import 후 `blablaid` 변수만 설정하면 `/api/user/*`도 바로 사용 가능)
 
+## 문서 사이트
+
+GitHub Pages 문서 사이트 → **https://leegunwoooo.github.io/nikke-api/** (MCP 연결 가이드 + 인터랙티브 API 레퍼런스)
+
+로컬에서 실행하려면:
+
+```bash
+cd site && npm i && npm run dev
+```
+
+`npm run dev`/`build`는 먼저 `site/scripts/build-openapi.ts`를 실행해 실제 앱 응답 예시가 포함된 `openapi.json`을 생성합니다. 데이터는 `NIKKE_DATA_DIR`(없으면 `data/dist`, 그다음 `test/fixtures/dist`)을 사용하므로 실데이터로 빌드하려면 `npm run fetch:data`를 먼저 실행하세요.
+
 ## 문의
 
 문의나 요청사항은 **leegunwoo0325@gmail.com**으로 보내주시거나 **[Issues](https://github.com/leegunwoooo/nikke-api/issues)** 기능을 활용해주시면 감사하겠습니다.

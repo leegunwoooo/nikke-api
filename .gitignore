@@ -11,3 +11,15 @@ server/
 .env.*
 .vercel/
 worker/.wrangler/
+
+# docs site
+site/node_modules/
+site/.vitepress/dist/
+site/.vitepress/cache/
+site/public/openapi.json
+site/public/scalar.js
+site/public/llms.txt
+site/public/llms-full.txt
+site/public/mcp.md
+site/public/api.md
+site/public/robots.txt
