@@ -191,8 +191,29 @@ test("mcp serves the 2026-07-28 envelope path", async () => {
   assert.ok(JSON.parse(filters.contents[0].text).classes.length > 0);
 });
 
-test("mcp GET is 405 in stateless mode", async () => {
-  assert.equal((await app.request("/mcp")).status, 405);
+test("mcp GET from an MCP client is 405 in stateless mode", async () => {
+  assert.equal((await app.request("/mcp", { headers: { accept: "text/event-stream" } })).status, 405);
+});
+
+test("plain GET /mcp explains how to connect, with this server's URL", async () => {
+  const res = await app.request("http://api.example/mcp", { headers: { "x-forwarded-proto": "https" } });
+  assert.equal(res.status, 200);
+  assert.match(res.headers.get("content-type")!, /text\/markdown/);
+  assert.equal(res.headers.get("cache-control"), "no-store"); // the edge must not cache it
+  const t = await res.text();
+  assert.match(t, /MCP 서버 URL: https:\/\/api\.example\/mcp/);
+  assert.match(t, /claude mcp add --transport http nikke https:\/\/api\.example\/mcp/);
+  assert.match(t, /- search_nikkes: /); // tool list comes from the server itself
+  assert.ok(!t.includes("get_user_roster"));
+});
+
+test("llms.txt indexes the MCP guide and API docs", async () => {
+  const res = await app.request("http://api.example/llms.txt");
+  assert.equal(res.status, 200);
+  const t = await res.text();
+  assert.match(t, /^# nikke-api\n\n> /);
+  assert.match(t, /\[MCP 연결 안내\]\(http:\/\/api\.example\/mcp\)/);
+  assert.match(t, /openapi\.json/);
 });
 
 // keep last: the burst guard is process-wide state
