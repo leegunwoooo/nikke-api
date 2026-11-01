@@ -10,7 +10,8 @@ import { buildFamilies } from "./family.js";
 import { ROUTE_COVERAGE_CHAPTER, ROUTE_SOURCES, STORY_ROUTE } from "./story-route.js";
 import { fieldsOf, LOCALES, localize, pickFields } from "./fields.js";
 import { decodeOpenid, gameApi, playerInfo } from "./blabla.js";
-import { createNikkeMcp } from "./mcp.js";
+import { createNikkeMcp, requestOrigin } from "./mcp.js";
+import { llmsTxt, mcpGuide, type ToolInfo } from "./llms.js";
 import { openapi } from "./openapi.js";
 import type { Nikke } from "./types.js";
 
@@ -510,6 +511,8 @@ app.get("/", (c) =>
       "GET /api/tables/:file": "raw synced table JSON",
       "GET /api/cdn?path=": "resolve a Blablalink CDN resource path to its URL",
       "POST /mcp": "MCP (Streamable HTTP, stateless) — connect ChatGPT/Claude to these routes as tools",
+      "GET /mcp": "MCP setup instructions (text/markdown) for people and AI assistants",
+      "GET /llms.txt": "llms.txt index for AI assistants",
       "GET /api/user/:blablaid":
         "shared-profile lookup (blablaid = blablalink openid, or ?blablaid=/?url=)",
       "GET /api/user/:blablaid/nikke?q=":
@@ -1597,7 +1600,37 @@ app.get("/openapi.json", (c) => c.json(openapi));
 
 // MCP endpoint for ChatGPT/Claude connectors — tools wrap the GET routes above
 const mcp = createNikkeMcp(async (p) => app.request(p), characterData.version ?? "0.0.0");
+
+// tool names/descriptions for the plain-text guide, read once from the server itself
+let toolInfo: Promise<ToolInfo[]> | undefined;
+const listTools = () =>
+  (toolInfo ??= mcp
+    .fetch(
+      new Request("http://local/mcp", {
+        method: "POST",
+        headers: { "content-type": "application/json", accept: "application/json, text/event-stream", "mcp-protocol-version": "2025-06-18" },
+        body: JSON.stringify({ jsonrpc: "2.0", id: 1, method: "tools/list", params: {} }),
+      }),
+    )
+    .then((r) => r.text())
+    .then((t) => JSON.parse(t.split("\n").find((l) => l.startsWith("data: "))!.slice(6)).result.tools as ToolInfo[])
+    .catch(() => ((toolInfo = undefined), [])));
+
+// a person or an AI assistant opening the MCP URL does a plain GET — answer
+// with setup instructions; MCP clients (Accept: text/event-stream) still get
+// the transport's own 405 for GET in stateless mode
+app.get("/mcp", async (c, next) => {
+  if ((c.req.header("accept") ?? "").includes("text/event-stream")) return next();
+  c.header("Vary", "Accept"); // no-store comes from cacheHeaders (see cache.ts)
+  c.header("Link", '</llms.txt>; rel="describedby"');
+  return c.body(mcpGuide(requestOrigin(c.req.raw), await listTools()), 200, { "Content-Type": "text/markdown; charset=utf-8" });
+});
 app.all("/mcp", (c) => mcp.fetch(c.req.raw));
+
+app.get("/llms.txt", (c) => {
+  c.header("Cache-Control", "public, max-age=3600");
+  return c.body(llmsTxt(requestOrigin(c.req.raw)), 200, { "Content-Type": "text/markdown; charset=utf-8" });
+});
 
 app.notFound((c) => c.json({ error: "not found" }, 404));
 

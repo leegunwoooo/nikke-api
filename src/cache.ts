@@ -13,7 +13,9 @@ export function cacheHeaders(version: string): MiddlewareHandler {
     const url = new URL(c.req.url);
     // /api/user/* serves live upstream data — never edge-cache it against
     // the build version or a changed profile would return stale 304s
-    if (url.pathname.startsWith("/api/user")) {
+    // /mcp's plain GET is a setup guide while an MCP client's GET to the same
+    // URL needs the transport's answer — an URL-keyed edge cache must not mix them
+    if (url.pathname.startsWith("/api/user") || url.pathname === "/mcp") {
       await next();
       c.header("Cache-Control", "no-store");
       return;
