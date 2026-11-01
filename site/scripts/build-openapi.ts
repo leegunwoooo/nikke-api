@@ -3,6 +3,7 @@
 // stores each GET operation's live JSON as its 200 application/json example.
 import { existsSync, mkdirSync, writeFileSync, copyFileSync } from "node:fs";
 import path from "node:path";
+import { pathToFileURL } from "node:url";
 
 const ROOT = path.resolve(import.meta.dirname, "../..");
 const SITE = path.resolve(import.meta.dirname, "..");
@@ -19,8 +20,8 @@ if (!process.env.NIKKE_DATA_DIR) {
 }
 console.log(`data dir: ${process.env.NIKKE_DATA_DIR}`);
 
-const { openapi } = await import(path.join(ROOT, "src/openapi.ts"));
-const { default: app } = await import(path.join(ROOT, "src/app.ts"));
+const { openapi } = await import(pathToFileURL(path.join(ROOT, "src/openapi.ts")).href);
+const { default: app } = await import(pathToFileURL(path.join(ROOT, "src/app.ts")).href);
 
 // endpoints that need credentials / upstream calls / raw CDN passthrough —
 // same exclusions as the docs scope
