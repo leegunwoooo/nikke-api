@@ -195,6 +195,31 @@ https://nikke-api-edge.leegunwoo0325-5e6.workers.dev/mcp
 - 요청/응답 형식 전체 문서 → [API.md](API.md)
 - Postman 컬렉션 → [nikke-api.postman_collection.json](nikke-api.postman_collection.json) (Import 후 `blablaid` 변수만 설정하면 `/api/user/*`도 바로 사용 가능)
 
+## 문서 사이트
+
+문서 사이트 → **https://nikke-api-docs.pages.dev** (MCP 연결 가이드 + 인터랙티브 API 레퍼런스, Cloudflare Pages)
+
+AI 어시스턴트용으로 [`/llms.txt`](https://nikke-api-docs.pages.dev/llms.txt)와 [`/llms-full.txt`](https://nikke-api-docs.pages.dev/llms-full.txt)도 함께 배포됩니다.
+
+로컬에서 실행하려면:
+
+```bash
+cd site && npm i && npm run dev
+```
+
+`npm run dev`/`build`는 먼저 실제 앱 응답 예시가 들어간 `openapi.json`과 `llms.txt` 등을 생성합니다(`site/scripts/`). 데이터는 `NIKKE_DATA_DIR`(없으면 `data/dist`, 그다음 `test/fixtures/dist`)을 쓰므로, 실데이터로 빌드하려면 `npm run fetch:data`를 먼저 실행하세요. 빌드 환경변수: `VITE_API_BASE`(API 주소, 기본은 엣지), `VITE_SITE_URL`(canonical 기준 주소), `VITE_BASE`(하위 경로에 배포할 때).
+
+### 배포 (Cloudflare Pages)
+
+`.github/workflows/pages.yml`이 `main` push 때 프로덕션, 이 레포에서 연 PR마다 미리보기를 배포합니다. 처음 한 번만 설정이 필요합니다.
+
+1. Cloudflare 대시보드 → Workers & Pages → 만들기 → Pages → **Direct Upload**로 프로젝트 `nikke-api-docs`를 만듭니다(이름을 바꾸면 레포 변수 `DOCS_PAGES_PROJECT`에 그 이름을 넣습니다). 프로덕션 브랜치는 `main`.
+2. API 토큰 만들기 → **Cloudflare Pages: Edit** 권한 토큰을 발급합니다.
+3. 레포 Settings → Secrets and variables → Actions에 시크릿 `CLOUDFLARE_API_TOKEN`, `CLOUDFLARE_ACCOUNT_ID`를 넣습니다.
+4. 커스텀 도메인을 쓰면 Pages 프로젝트에 연결하고, 레포 변수 `DOCS_SITE_URL`에 그 주소(예: `https://docs.example.com/`)를 넣습니다. canonical·sitemap·llms.txt가 이 주소를 씁니다.
+
+시크릿이 없으면 빌드만 하고 배포는 건너뜁니다(포크 PR도 동일).
+
 ## 문의
 
 문의나 요청사항은 **leegunwoo0325@gmail.com**으로 보내주시거나 **[Issues](https://github.com/leegunwoooo/nikke-api/issues)** 기능을 활용해주시면 감사하겠습니다.

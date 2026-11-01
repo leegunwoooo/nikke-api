@@ -1,0 +1,18 @@
+{
+  "name": "nikke-api-site",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "npm run build:openapi && npm run build:llms && vitepress dev",
+    "build": "npm run build:openapi && npm run build:llms && vitepress build",
+    "preview": "vitepress preview",
+    "build:openapi": "tsx scripts/build-openapi.ts",
+    "build:llms": "tsx scripts/build-llms.ts"
+  },
+  "devDependencies": {
+    "@scalar/api-reference": "^1.76.4",
+    "tsx": "^4.23.15",
+    "vitepress": "^1.6.4",
+    "vue": "^3.5.13"
+  }
+}

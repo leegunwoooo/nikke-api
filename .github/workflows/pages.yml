@@ -1,0 +1,93 @@
+name: Docs site
+
+# Builds site/ (VitePress) and deploys it to Cloudflare Pages.
+# - push to main → production deployment
+# - pull request from this repo → preview deployment (its URL lands in the job summary)
+# Needs repo secrets CLOUDFLARE_API_TOKEN (Pages: Edit) and CLOUDFLARE_ACCOUNT_ID.
+# Optional repo variables: DOCS_PAGES_PROJECT (default nikke-api-docs) and
+# DOCS_SITE_URL (canonical site root, default https://<project>.pages.dev/).
+# Without the secrets the site is still built (so PRs check it), just not deployed.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - site/**
+      - docs/**
+      - API.md
+      - src/openapi.ts
+      - src/app.ts
+      - .github/workflows/pages.yml
+  pull_request:
+    paths:
+      - site/**
+      - docs/**
+      - API.md
+      - src/openapi.ts
+      - src/app.ts
+      - .github/workflows/pages.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  deployments: write
+
+concurrency:
+  group: docs-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+env:
+  PROJECT: ${{ vars.DOCS_PAGES_PROJECT || 'nikke-api-docs' }}
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: |
+            package-lock.json
+            site/package-lock.json
+
+      - run: npm ci
+      - run: npm run fetch:data
+
+      - run: npm ci
+        working-directory: site
+
+      - name: Build
+        working-directory: site
+        env:
+          NIKKE_DATA_DIR: ${{ github.workspace }}/data/dist
+          VITE_SITE_URL: ${{ vars.DOCS_SITE_URL || format('https://{0}.pages.dev/', env.PROJECT) }}
+        run: npm run build
+
+      - name: Check deploy credentials
+        id: creds
+        env:
+          TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          ACCOUNT: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: |
+          if [ -n "$TOKEN" ] && [ -n "$ACCOUNT" ]; then
+            echo "ok=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "ok=false" >> "$GITHUB_OUTPUT"
+            echo "Cloudflare secrets not set (or a fork PR) — built only, not deployed." >> "$GITHUB_STEP_SUMMARY"
+          fi
+
+      - name: Deploy to Cloudflare Pages
+        id: deploy
+        if: steps.creds.outputs.ok == 'true'
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy site/.vitepress/dist --project-name=${{ env.PROJECT }} --branch=${{ github.head_ref || github.ref_name }} --commit-dirty=true
+
+      - name: Summary
+        if: steps.creds.outputs.ok == 'true'
+        run: echo "Deployed → ${{ steps.deploy.outputs.deployment-url }}" >> "$GITHUB_STEP_SUMMARY"
