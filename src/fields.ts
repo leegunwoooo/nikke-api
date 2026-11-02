@@ -8,16 +8,26 @@ export function fieldsOf(c: Context): string[] | undefined {
   return fields.length ? fields : undefined;
 }
 
+// path segments that must never be read from the source object (inherited
+// members like toString leak through naive indexing) nor written into the
+// output tree (__proto__ & friends would mutate it)
+const BAD_KEY = new Set(["__proto__", "constructor", "prototype", "toString", "hasOwnProperty", "valueOf"]);
+
 function pickOne(obj: unknown, fields: string[]): unknown {
   if (obj === null || typeof obj !== "object") return obj;
   const out: Record<string, unknown> = {};
   for (const f of fields) {
     const keys = f.split(".");
+    if (keys.some((k) => BAD_KEY.has(k))) continue;
     let src: unknown = obj;
-    for (const k of keys) src = src && typeof src === "object" ? (src as Record<string, unknown>)[k] : undefined;
+    for (const k of keys)
+      src = src && typeof src === "object" && Object.hasOwn(src, k) ? (src as Record<string, unknown>)[k] : undefined;
     if (src === undefined) continue;
     let dst = out;
-    for (const k of keys.slice(0, -1)) dst = (dst[k] ??= {}) as Record<string, unknown>;
+    for (const k of keys.slice(0, -1)) {
+      const v = dst[k];
+      dst = v !== null && typeof v === "object" && !Array.isArray(v) ? (v as Record<string, unknown>) : (dst[k] = {});
+    }
     dst[keys[keys.length - 1]] = src;
   }
   return out;
