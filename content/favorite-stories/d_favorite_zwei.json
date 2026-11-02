@@ -1,0 +1,3874 @@
+{
+  "groupId": "d_favorite_zwei",
+  "type": "favorite",
+  "name": "최고의 행운",
+  "nikke": "츠바이",
+  "sourceVideo": "https://youtu.be/lkYNah271vM",
+  "lines": [
+    {
+      "id": "d_favorite_zwei_1",
+      "speaker": "ein",
+      "speakerName": "아인",
+      "text": "선배, 정말 여기에 둔 게 맞아요?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/lg-63/kj-44/f0c089e8bb85053339d41b2720f0a900.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_2",
+      "speaker": "rei",
+      "speakerName": "라이",
+      "text": "책 안에 꽂아둔 거야?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zp-67/ag-49/78e29ec0dc4dc0b4a4baa2a01d875c3e.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_3",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "…네. 분명히 이 책에 꽂아두었는데….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_4",
+      "text": "다들 여기서 뭐 해?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_5",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "선생님…!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_6",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "죄송해요, 저희가 많이 시끄러웠죠.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_7",
+      "speaker": "ein",
+      "speakerName": "아인",
+      "text": "쌤! 큰일 났어요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/lg-63/kj-44/f0c089e8bb85053339d41b2720f0a900.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_8",
+      "speaker": "ein",
+      "speakerName": "아인",
+      "text": "츠바이 선배가 아끼던 책갈피를 잃어버렸대요!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/lg-63/kj-44/f0c089e8bb85053339d41b2720f0a900.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_9",
+      "text": "책갈피를?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_10",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "그걸 왜 얘기해….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_11",
+      "speaker": "ein",
+      "speakerName": "아인",
+      "text": "왜요, 선생님도 도와주시면 더 빨리 찾을 수 있잖아요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/lg-63/kj-44/f0c089e8bb85053339d41b2720f0a900.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_12",
+      "text": "마지막에 어디에 뒀었는데?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_13",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "그게….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_14",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "어제 읽고 있었던 책에 꽂아 놓았던 것만 기억나서….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_15",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "아무래도 그대로 반납한 것 같다고 추측하고 있었어요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_16",
+      "speaker": "rei",
+      "speakerName": "라이",
+      "text": "그런데 아무리 뒤져봐도 안 나와.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zp-67/ag-49/78e29ec0dc4dc0b4a4baa2a01d875c3e.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_17",
+      "text": "그 책을 전부 찾아본 거야?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_18",
+      "speaker": "ein",
+      "speakerName": "아인",
+      "text": "완전요. 비슷한 이름의 책도 싹 다 찾아봤는데, 없어요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/lg-63/kj-44/f0c089e8bb85053339d41b2720f0a900.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_19",
+      "text": "다른 사람들이 그 책을 빌려 갔는지는 확인해 봤어?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_20",
+      "speaker": "rei",
+      "speakerName": "라이",
+      "text": "어? 맞네?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zp-67/ag-49/78e29ec0dc4dc0b4a4baa2a01d875c3e.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_21",
+      "speaker": "rei",
+      "speakerName": "라이",
+      "text": "다른 사람이 빌려 갔을 수도 있어!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zp-67/ag-49/78e29ec0dc4dc0b4a4baa2a01d875c3e.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_22",
+      "text": "물어보러 가자.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_23",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "책 안에 책갈피를 꽂아 넣은 채, 반납했다는 것이오?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_24",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "알겠소. 그런 일이라면 당연히 찾아봐야지.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_25",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "감사합니다…!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_26",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "그래서 책 이름이 무엇이오?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_27",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "그, 그게….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_28",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "…[행운을 불러오는 방법] 이에요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_29",
+      "speaker": "rei",
+      "speakerName": "라이",
+      "text": "츠바이. 왜 그렇게 작게 말해?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zp-67/ag-49/78e29ec0dc4dc0b4a4baa2a01d875c3e.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_30",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "그냥… 너무 세속적으로 보일까 봐… 부끄러워서요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_31",
+      "speaker": "rei",
+      "speakerName": "라이",
+      "text": "웅? 왜?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zp-67/ag-49/78e29ec0dc4dc0b4a4baa2a01d875c3e.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_32",
+      "speaker": "ein",
+      "speakerName": "아인",
+      "text": "에이~ 뭘 그런 걸 부끄러워하고 그래요!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/lg-63/kj-44/f0c089e8bb85053339d41b2720f0a900.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_33",
+      "speaker": "ein",
+      "speakerName": "아인",
+      "text": "세상에 행운을 싫어하는 사람이 어디 있다고~",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/lg-63/kj-44/f0c089e8bb85053339d41b2720f0a900.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_34",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "…그래도.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_35",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "흠….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_36",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "찾아봤소만, 안타깝게도 아무도 빌려 가지 않은 것 같소.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_37",
+      "text": "그럼 모든 책이 다 여기에 있다는 거야?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_38",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "아….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_39",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "그렇소.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_40",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "여길 보시겠소?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_41",
+      "text": "팬텀이 대여일지를 내밀었다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_42",
+      "text": "[핸우늘 부러오는 방뻡]라고 적혀있었다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_43",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "어딜… 봐야 하는 걸까요?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_44",
+      "speaker": "ein",
+      "speakerName": "아인",
+      "text": "이건 다른 책 아니에요?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/lg-63/kj-44/f0c089e8bb85053339d41b2720f0a900.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_45",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "?? 뭐가 말이오?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_46",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "이쪽에 있지 않소.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_47",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "[행운을 불러오는 방법]이라고.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_48",
+      "speaker": "ein",
+      "speakerName": "아인",
+      "text": "아하….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/lg-63/kj-44/f0c089e8bb85053339d41b2720f0a900.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_49",
+      "text": "…그렇구나.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_50",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "그렇… 네요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_51",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "여기 제 이름도 있어요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_52",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "보면 알겠지만 츠바이를 마지막으로 아무도 빌려 가지 않았소.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_53",
+      "speaker": "rei",
+      "speakerName": "라이",
+      "text": "그럼 어떡해?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zp-67/ag-49/78e29ec0dc4dc0b4a4baa2a01d875c3e.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_54",
+      "speaker": "rei",
+      "speakerName": "라이",
+      "text": "도서관에 있는 건 아까 다 봤는데, 없었단 말야.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zp-67/ag-49/78e29ec0dc4dc0b4a4baa2a01d875c3e.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_55",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "…….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_56",
+      "speaker": "ein",
+      "speakerName": "아인",
+      "text": "혹시 모르니까 도서관 주위도 좀 찾아볼까요?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/lg-63/kj-44/f0c089e8bb85053339d41b2720f0a900.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_57",
+      "text": "맞아. 다른 곳을 조금 더 찾아보자.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_58",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "좋소. 그럼 나도….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_59",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "아, 아니에요. 괜찮아요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_60",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "그냥 단순한 책갈피일 뿐이에요. 없어도 돼요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_61",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "다들 신경 써주셔서 감사해요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_62",
+      "speaker": "ein",
+      "speakerName": "아인",
+      "text": "그래도, 선배….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/lg-63/kj-44/f0c089e8bb85053339d41b2720f0a900.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_63",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "정말 괜찮다니까?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_64",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "먼저 가볼게요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_65",
+      "text": "츠바이가 떠나갔다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_66",
+      "speaker": "rei",
+      "speakerName": "라이",
+      "text": "츠바이 안 괜찮은 것 같은데….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zp-67/ag-49/78e29ec0dc4dc0b4a4baa2a01d875c3e.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_67",
+      "speaker": "ein",
+      "speakerName": "아인",
+      "text": "…선배.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/lg-63/kj-44/f0c089e8bb85053339d41b2720f0a900.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_68",
+      "text": "내가 따라가볼게.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_69",
+      "text": "달그락-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_70",
+      "text": "츠바이가 길가의 돌들을 뒤적거리고 있다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_71",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "…없네.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_72",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "여기 지나갈 때 떨어뜨린 것도 아닌가….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_73",
+      "text": "츠바이.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_74",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "!!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_75",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "서, 선생님…?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_76",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "여기엔 왜….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_77",
+      "text": "같이 책갈피를 찾으러 왔지.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_78",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "네?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_79",
+      "text": "지금 혼자서 찾고 있던 것 아니었어?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_80",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "그, 그게….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_81",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "여긴 그냥 잠깐 지나가는 길에 보려고 했던 것뿐이라서….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_82",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "찾지 않아도 되는 물건이에요. 정말로….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_83",
+      "text": "거짓말.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_84",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "네?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_85",
+      "text": "진심으로 찾지 않아도 괜찮다고 생각해?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_86",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "그게….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_87",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "아니요. 찾고… 싶어요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_88",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "그렇다고 모두의 시간까지 빼앗을 건 아니라고 생각해서….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_89",
+      "text": "무슨 소리야.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_90",
+      "text": "소중한 물건이라면 최선을 다해 찾아봐야지.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_91",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "…선생님.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_92",
+      "text": "최선을 다하기도 전에 포기하지 마.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_93",
+      "text": "같이 찾으러 가자. 도와줄게.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_94",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "!!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_95",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "…정말 감사해요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_96",
+      "text": "여길 찾아보고 있었던 건 길에 흘렸을까 봐 그런 거야?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_97",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "네. 맞아요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_98",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "어제 라이 선배랑 아인이랑 전초기지를 돌아다닐 때,",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_99",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "그 책을 손에 들고 다녔었거든요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_100",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "그때 혹시나 책갈피가 흘러내렸나 싶어서요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_101",
+      "text": "음. 그럼 분실물 센터에는 찾아가 봤어?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_102",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "!!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_103",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "아니요…!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_104",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "물건을 잃어버렸을 땐 당연히 그곳부터 가봤어야 했는데….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_105",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "아까부터 당연한 걸 자꾸 까먹고… 왜 이러는 걸까요. 정말 바보 같네요….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_106",
+      "text": "당황하면 당연한 것도 잊는 법이니까.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_107",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "그랬나 봐요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_108",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "생각했던 것보다 더 당황했었나 봐요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_109",
+      "text": "그만큼 그걸 소중하게 생각하고 있었다는 걸 거야.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_110",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "맞는 것… 같아요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_111",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "거짓말해서 죄송해요, 선생님.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_112",
+      "text": "괜찮아.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_113",
+      "text": "지금이라도 분실물 센터에 가볼까?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_114",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "네…!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_115",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "지휘관? 츠바이?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_116",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "무슨 일이신가영?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_117",
+      "text": "분실물을 찾으러 왔어.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_118",
+      "text": "혹시 주인 없는 책갈피가 들어온 게 있을까?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_119",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "책갈피영?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_120",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "네잎클로버가 들어있는 건데, 혹시 본 적 있으세요?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_121",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "음~ 저는 본 적 없는 것 같은뎅….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_122",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "미란다, 혹시 본 적 있어영?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_123",
+      "speaker": "miranda",
+      "speakerName": "미란다",
+      "text": "아뇨! 본 적 없습니다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vg-25/er-68/88e9d12d692695aaae54b796a4e3d0a4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_124",
+      "speaker": "miranda",
+      "speakerName": "미란다",
+      "text": "어제까지 들어온 분실물 중에는 네잎클로버도 책갈피도 없었습니다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vg-25/er-68/88e9d12d692695aaae54b796a4e3d0a4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_125",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "에흉. 네잎클로버가 든 책갈피라고 했잖아영….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_126",
+      "speaker": "miranda",
+      "speakerName": "미란다",
+      "text": "앗, 그렇습니까?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vg-25/er-68/88e9d12d692695aaae54b796a4e3d0a4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_127",
+      "speaker": "miranda",
+      "speakerName": "미란다",
+      "text": "그것도 보지 못했습니다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vg-25/er-68/88e9d12d692695aaae54b796a4e3d0a4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_128",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "음… 아무래도 없는 것 같아영.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_129",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "미안해여, 츠바이.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_130",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "아, 아니에요. 괜찮아요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_131",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "그래도 저희가 좀 더 찾아볼 테니까 너무 걱정하지 마….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_132",
+      "speaker": "miranda",
+      "speakerName": "미란다",
+      "text": "앗, 그러고 보니 아직 배달 오지 않았습니다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vg-25/er-68/88e9d12d692695aaae54b796a4e3d0a4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_133",
+      "text": "배달?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_134",
+      "speaker": "miranda",
+      "speakerName": "미란다",
+      "text": "앞으로 일주일에 한 번씩 전초기지 안을 돌아다니면서,",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vg-25/er-68/88e9d12d692695aaae54b796a4e3d0a4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_135",
+      "speaker": "miranda",
+      "speakerName": "미란다",
+      "text": "슈가가 분실물들을 모아서 배달해 준다고 하셨습니다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vg-25/er-68/88e9d12d692695aaae54b796a4e3d0a4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_136",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "응? 슈가가 그런 좋은 일을 한다고 했다고용?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_137",
+      "speaker": "miranda",
+      "speakerName": "미란다",
+      "text": "네!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vg-25/er-68/88e9d12d692695aaae54b796a4e3d0a4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_138",
+      "speaker": "miranda",
+      "speakerName": "미란다",
+      "text": "전초기지를 돌아다니며 실물이 있는지 확인하러 다녔을 때, 슈가를 만났는데.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vg-25/er-68/88e9d12d692695aaae54b796a4e3d0a4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_139",
+      "speaker": "miranda",
+      "speakerName": "미란다",
+      "text": "고생이 많다며 혹시 발견하면 대신 배달해 주냐고 물어보셨습니다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vg-25/er-68/88e9d12d692695aaae54b796a4e3d0a4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_140",
+      "speaker": "miranda",
+      "speakerName": "미란다",
+      "text": "블랙 타이푼이 있어서 빠르게 전달해 주실 수 있다고 하셨습니다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vg-25/er-68/88e9d12d692695aaae54b796a4e3d0a4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_141",
+      "speaker": "miranda",
+      "speakerName": "미란다",
+      "text": "착한 일이니까 대가로 슈가 커피 열잔만 사 먹어 주면 된다고 하셨습니다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vg-25/er-68/88e9d12d692695aaae54b796a4e3d0a4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_142",
+      "speaker": "miranda",
+      "speakerName": "미란다",
+      "text": "그래서 부탁드린다고 했습니다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vg-25/er-68/88e9d12d692695aaae54b796a4e3d0a4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_143",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "하아… 그런 일이 있으면 미리 말을 해주지 그랬어영.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_144",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "혼자 어떻게 그 많은 걸 다 마시려고 그래영.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_145",
+      "speaker": "miranda",
+      "speakerName": "미란다",
+      "text": "그냥 천천히 마시려고 했는….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vg-25/er-68/88e9d12d692695aaae54b796a4e3d0a4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_146",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "다음에 같이 마시러 가용.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_147",
+      "speaker": "miranda",
+      "speakerName": "미란다",
+      "text": "!!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vg-25/er-68/88e9d12d692695aaae54b796a4e3d0a4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_148",
+      "speaker": "miranda",
+      "speakerName": "미란다",
+      "text": "정말입니까? 좋습니다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vg-25/er-68/88e9d12d692695aaae54b796a4e3d0a4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_149",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "두 분 어떻게 하시겠어영?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_150",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "슈가에게 연락해볼까요?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_151",
+      "text": "내가 해볼게.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_152",
+      "text": "슈가 지금 어디야?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_153",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "파트너?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_154",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "난 지상에 있는데",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_155",
+      "text": "지상?!",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_156",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "의뢰 중이다",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_157",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "무슨 일이지?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_158",
+      "text": "분실물을 찾고 있는데 혹시 알고 있는 게 있어?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_159",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "분실물?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_160",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "그러고 보니 분실물 상자를 들고 의뢰를 나와버렸군",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_161",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "어떤 걸 찾고 있지?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_162",
+      "text": "책갈피를 찾고 있어",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_163",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "책갈피?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_164",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "그런 게 있었던가",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_165",
+      "text": "우리가 직접 찾아볼게",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_166",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "그건 상관없는데",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_167",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "지금은 의뢰 중이어서 만날 수 있을지 모르겠네",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_168",
+      "text": "잠깐이라도 시간을 낼 수 없을까?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_169",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "흠",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_170",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "급한 모양이군",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_171",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "그럼 지상에 잠시 올라올 수 있나?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_172",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "엘리베이터 근처에서 잠깐 만날 수 있을 것 같은데",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_173",
+      "text": "ㅇㅇ 내가 그쪽으로 갈게",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_174",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "알겠어",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_175",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "좌표를 보내도록 하지",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_176",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "저… 선생님. 지상으로 가는 건데 괜찮으세요?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_177",
+      "text": "괜찮아.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_178",
+      "text": "폴리, 슈가가 어디 있는지 알았어.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_179",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "오, 다행이네여!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_180",
+      "text": "둘 다 고마웠어.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_181",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "두 분 다 알아봐 주셔서 감사해요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_182",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "당연히 해야 할 일인 걸영.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_183",
+      "speaker": "miranda",
+      "speakerName": "미란다",
+      "text": "맞습니다! A.C.P.U.는 곤란한 시민을 돕습니다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vg-25/er-68/88e9d12d692695aaae54b796a4e3d0a4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_184",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "혹시나 찾지 못하면 언제든 다시 연락해 주세영. 아시겠졍?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_185",
+      "speaker": "miranda",
+      "speakerName": "미란다",
+      "text": "맞습니다! 최선을 다해 돕겠습니다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vg-25/er-68/88e9d12d692695aaae54b796a4e3d0a4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_186",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "…네!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_187",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "정말… 지상에 와버렸네요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_188",
+      "text": "혹시 많이 무서워?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_189",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "아뇨. 그런 건 아닌데….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_190",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "저… 선생님.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_191",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "이렇게까지 하는 게 맞을까요?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_192",
+      "text": "뭐가?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_193",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "제 물건을 찾겠다고 지상에 올라오기까지 하고….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_194",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "슈가 님에게도 선생님께도 너무 민폐를 끼치는 것 같아서요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_195",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "선생님 입장에선 그냥 책갈피 하나일 뿐일 텐데….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_196",
+      "text": "츠바이에게 소중한 물건이라면 내게도 중요한 물건이야.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_197",
+      "text": "츠바이가 내게 소중한 사람이니까.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_198",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "…!!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_199",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "그, 그렇군요….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_200",
+      "text": "그러니 민폐라고 생각하지 마. 내가 하고 싶어서 하는 거니까.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_201",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "…감사해요. 선생님.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_202",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "…사실은요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_203",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "그 책갈피… 학교에 처음 들어왔을 때부터 갖고 있었던 거였어요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_204",
+      "text": "처음 들어왔을 때부터?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_205",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "네. 학교에 처음 입학했을 때요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_206",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "입학하고 얼마 안 돼서 시험의 존재를 알게 되었는데, 그때 만들었던 것이었어요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_207",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "행운을 가져다주는 물건이라고 해서….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_208",
+      "text": "이번에 읽었다는 책도 그렇고 행운에 관심이 많은 편인가 보네.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_209",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "좀… 세속적이게 보이죠?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_210",
+      "text": "아니.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_211",
+      "text": "아인이 그랬잖아. 모든 사람이 다 그렇다고.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_212",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "후후. 감사해요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_213",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "전 이 학교에 오고 나서부터… 늘 행운을 찾고 싶어 했거든요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_214",
+      "text": "학교에 오고 나서부터?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_215",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "…네. 저희 학교 시험은 늘 어렵고….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_216",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "위험하니까요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_217",
+      "text": "…….",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_218",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "언제 어디서 어떻게 죽을지 모른다는 게, 막연하게 너무 불안하고 무섭게 느껴졌어요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_219",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "그때 이 책갈피에 대한 소문을 들은 거예요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_220",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "네잎클로버가 담긴 책갈피를 갖고 있으면 행운이 찾아온다고.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_221",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "그러면… 시험에 떨어지지 않을 수 있다고.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_222",
+      "text": "…그런 의미로 갖고 있었던 거였구나.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_223",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "학교에 많은 미신 중 하나예요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_224",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "그래도… 늘 시험 때마다 함께 있었던 거라서,",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_225",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "갖고 있는 것만으로도 위로가 되는 것 같아서.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_226",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "미신으로서의 의미가 아니더라도 애정이 가더라고요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_227",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "그러니까 분명, 잃어버린 채 지냈다면 분명 후회했을 거예요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_228",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "왜 그때 열심히 찾아보지 않았지?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_229",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "민폐라고 생각하지 말고 좀 더 적극적으로 찾아볼걸… 하고요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_230",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "그러니까… 열심히 찾을 수 있게 도와주셔서 감사해요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_231",
+      "text": "그래. 꼭 찾아오자.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_232",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "후후. 좋아요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_233",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "슈가 님과 약속한 장소가 이 앞이죠?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_234",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "얼른 가요, 선생님.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_235",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "왔군.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_236",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "둘 다 오느라 고생했다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_237",
+      "text": "의뢰 중인데 시간 내줘서 고마워.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_238",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "정말 감사합니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_239",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "감사 인사는 물건을 찾은 후에 해도 늦지 않아.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_240",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "소중한 물건을 찾고 있다고 했었지?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_241",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "…네. 제게 소중한 물건이에요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_242",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "네잎클로버가 들어있는 책갈피인데, 혹시 보신 적 있으실까요?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_243",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "분실물을 모아 놓은 상자를 그대로 들고 가던 중에 의뢰에 나온 거라,",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_244",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "나도 정확히 여기에 뭐가 있는지는 몰라.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_245",
+      "text": "슈가가 분실물 상자를 열었다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_246",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "그러니 직접 찾아봐라.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_247",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "네…!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_248",
+      "text": "츠바이가 상자 안을 들여다보았다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_249",
+      "text": "어때? 있어?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_250",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "어… 그게… 물건이 좀 많아서….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_251",
+      "text": "츠바이가 조심스레 상자 안의 물건을 뒤져보기 시작했다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_252",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "여기에 뭔가 끼어있는데….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_253",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "…아.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_254",
+      "text": "츠바이가 상자 속에서 작은 종이를 꺼내들었다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_255",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "그건가?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_256",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "아니요… 아니었어요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_257",
+      "text": "그렇구나.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_258",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "…그렇군.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_259",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "괜찮아요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_260",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "도서관 안에 아직 뒤져보지 않은 곳도 많고, 전초기지도 다 안 돌아봤는걸요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_261",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "좀 더 찾아보면 분명 나올 거예요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_262",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "절대 포기하진 않을 거니까, 너무 걱정하지 않으셔도 되….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_263",
+      "text": "지잉-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_264",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "??",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_265",
+      "text": "츠바이가 핸드폰을 들여다보았다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_266",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "…아인이 전화를 했는데요?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_267",
+      "text": "아인이?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_268",
+      "speaker": "ein",
+      "speakerName": "아인",
+      "text": "선배!! 찾았어요!!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/lg-63/kj-44/f0c089e8bb85053339d41b2720f0a900.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_269",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "응? 뭐라고…?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_270",
+      "speaker": "ein",
+      "speakerName": "아인",
+      "text": "네잎클로버 책갈피 찾았다고요!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/lg-63/kj-44/f0c089e8bb85053339d41b2720f0a900.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_271",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "!!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_272",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "정말…?!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_273",
+      "speaker": "ein",
+      "speakerName": "아인",
+      "text": "이게 근데 선배 건지는 모르겠… 으앗!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/lg-63/kj-44/f0c089e8bb85053339d41b2720f0a900.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_274",
+      "speaker": "rei",
+      "speakerName": "라이",
+      "text": "츠바이!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zp-67/ag-49/78e29ec0dc4dc0b4a4baa2a01d875c3e.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_275",
+      "speaker": "rei",
+      "speakerName": "라이",
+      "text": "얼른 메이드 카페로 와!! 얼른~!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zp-67/ag-49/78e29ec0dc4dc0b4a4baa2a01d875c3e.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_276",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "아, 알겠어요…!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_277",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "선생님…!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_278",
+      "text": "얼른 돌아가자.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_279",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "타. 엘리베이터까지 데려다줄 테니.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_280",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "둘 정도는 싣고 달릴 수 있어.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_281",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "네? 그냥 가도 괜찮은….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_282",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "얼른 찾으러 가고 싶은 거 아니었나?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_283",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "그건 맞지만….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_284",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "소중한 게 기다리고 있잖아. 그럼 얼른 가야지.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_285",
+      "text": "고마워, 슈가.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_286",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "…감사합니다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_287",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "그렇게 고마우면 나중에 슈가 커피를 먹으러 오도록 해.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_288",
+      "text": "그럴게.",
+      "window": "Choice",
+      "voice": null,
+      "chosen": true
+    },
+    {
+      "id": "d_favorite_zwei_289",
+      "text": "그건 좀….",
+      "window": "Choice",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_290",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "꼭 갈게요…!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_291",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "좋아. 그럼 어서들 타.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_292",
+      "text": "츠바이와 함께 블랙 타이푼에 올라탔다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_293",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "가자, 블랙 타이푼.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_294",
+      "text": "딸랑~",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_295",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "다녀오셨…?!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_296",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "지휘관! 츠바이!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_297",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "프리바티 선생님?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_298",
+      "text": "프리바티?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_299",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "선생님이 왜 여기에….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_300",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "메이드 카페가 너무 바쁘다고 해서 잠시 도와주러 왔는….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_301",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "아, 아니 이게 중요한 게 아니라!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_302",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "이거 맞나요?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_303",
+      "text": "프리바티가 츠바이에게 네잎클로버가 담긴 책갈피를 내밀었다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_304",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "자, 잠시만요….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_305",
+      "text": "츠바이가 책갈피를 뚫어지게 쳐다보았다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_306",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "!!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_307",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "책갈피 형태, 네잎클로버의 모양까지… 전부 맞아요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_308",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "제거예요…!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_309",
+      "text": "드디어 찾았다!",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_310",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "흐아… 다행이네요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_311",
+      "speaker": "rei",
+      "speakerName": "라이",
+      "text": "맞아? 맞지! 역시! 츠바이 거 맞았어!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zp-67/ag-49/78e29ec0dc4dc0b4a4baa2a01d875c3e.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_312",
+      "speaker": "ein",
+      "speakerName": "아인",
+      "text": "거봐요, 제가 맞다고 했죠?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/lg-63/kj-44/f0c089e8bb85053339d41b2720f0a900.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_313",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "어떻게 이걸…?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_314",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "라이와 아인이 찾아와서 말해줬어요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_315",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "츠바이가 어제 책갈피를 잃어버렸다고.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_316",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "!!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_317",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "둘 다 계속… 찾아주고 있었던 거예요?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_318",
+      "speaker": "rei",
+      "speakerName": "라이",
+      "text": "헤헤.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zp-67/ag-49/78e29ec0dc4dc0b4a4baa2a01d875c3e.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_319",
+      "speaker": "ein",
+      "speakerName": "아인",
+      "text": "히히.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/lg-63/kj-44/f0c089e8bb85053339d41b2720f0a900.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_320",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "라이 선배… 아인….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_321",
+      "speaker": "rei",
+      "speakerName": "라이",
+      "text": "팬텀이 그랬어. 책 속에 없다면 어제 다녀왔던 곳들을 가보는 게 어떻겠냐고.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zp-67/ag-49/78e29ec0dc4dc0b4a4baa2a01d875c3e.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_322",
+      "speaker": "rei",
+      "speakerName": "라이",
+      "text": "도서관은 자기가 좀 더 찾아보겠다고.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zp-67/ag-49/78e29ec0dc4dc0b4a4baa2a01d875c3e.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_323",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "팬텀 님이….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_324",
+      "speaker": "ein",
+      "speakerName": "아인",
+      "text": "그 말을 듣자마자, 어제 메이드 카페에 갔던 게 생각나서 바로 프리바티 쌤한테 연락한 거죠!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/lg-63/kj-44/f0c089e8bb85053339d41b2720f0a900.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_325",
+      "text": "그래서 프리바티가 같이 있었던 거구나.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_326",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "네. 폴리랑 미란다에게 연락해 보니까,",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_327",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "두 분은 분실물을 찾아서 슈가를 만나러 갔다고 하고.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_328",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "다른 분실물이 없는지는 폴리와 미란다가 알아봐 준다고 하더라고요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_329",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "그래서 저희는 어제 전초기지에서 돌아다녔다는 곳들을 중심으로 찾아봤는데.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_330",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "메이드 카페 근처 화단에서 저걸 발견한 거예요!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_331",
+      "speaker": "ein",
+      "speakerName": "아인",
+      "text": "으아~ 어제 갔던 곳들 다 돌아봤는데! 완전 시간 버린 거 있죠!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/lg-63/kj-44/f0c089e8bb85053339d41b2720f0a900.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_332",
+      "speaker": "ein",
+      "speakerName": "아인",
+      "text": "이럴 줄 알았으면 여기 앞에 좀 꼼꼼히 찾아볼걸.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/lg-63/kj-44/f0c089e8bb85053339d41b2720f0a900.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_333",
+      "speaker": "rei",
+      "speakerName": "라이",
+      "text": "화단 안에 떨어져 있던 거 나랑 프리바티 선생님이랑 나루 1호랑 같이 찾았어!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zp-67/ag-49/78e29ec0dc4dc0b4a4baa2a01d875c3e.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_334",
+      "speaker": "rei",
+      "speakerName": "라이",
+      "text": "대단하지?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zp-67/ag-49/78e29ec0dc4dc0b4a4baa2a01d875c3e.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_335",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "더 찾지 않아도 된다고 했는데… 왜….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_336",
+      "speaker": "rei",
+      "speakerName": "라이",
+      "text": "웅?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zp-67/ag-49/78e29ec0dc4dc0b4a4baa2a01d875c3e.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_337",
+      "speaker": "rei",
+      "speakerName": "라이",
+      "text": "그야~ 그거, 츠바이가 엄청 소중하게 생각하는 거잖아.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zp-67/ag-49/78e29ec0dc4dc0b4a4baa2a01d875c3e.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_338",
+      "speaker": "rei",
+      "speakerName": "라이",
+      "text": "매일매일 갖고 다녔잖아. 그거.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zp-67/ag-49/78e29ec0dc4dc0b4a4baa2a01d875c3e.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_339",
+      "speaker": "ein",
+      "speakerName": "아인",
+      "text": "맞아요. 선배 맨날 책에 꽂고 다녔잖아요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/lg-63/kj-44/f0c089e8bb85053339d41b2720f0a900.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_340",
+      "speaker": "ein",
+      "speakerName": "아인",
+      "text": "그런 걸 안 찾고 끝내면 완전 찝찝하잖아요!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/lg-63/kj-44/f0c089e8bb85053339d41b2720f0a900.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_341",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "둘 다… 알고 있었군요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_342",
+      "speaker": "ein",
+      "speakerName": "아인",
+      "text": "에이~ 당연하죠, 우리 완전 절친인데!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/lg-63/kj-44/f0c089e8bb85053339d41b2720f0a900.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_343",
+      "speaker": "rei",
+      "speakerName": "라이",
+      "text": "난 3학년이지만 특별히 절친이라고 해줄게.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zp-67/ag-49/78e29ec0dc4dc0b4a4baa2a01d875c3e.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_344",
+      "speaker": "rei",
+      "speakerName": "라이",
+      "text": "고맙지?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zp-67/ag-49/78e29ec0dc4dc0b4a4baa2a01d875c3e.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_345",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "…네.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_346",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "정말… 고마워요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_347",
+      "speaker": "rei",
+      "speakerName": "라이",
+      "text": "에헤헤!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zp-67/ag-49/78e29ec0dc4dc0b4a4baa2a01d875c3e.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_348",
+      "speaker": "ein",
+      "speakerName": "아인",
+      "text": "아, 그리고!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/lg-63/kj-44/f0c089e8bb85053339d41b2720f0a900.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_349",
+      "speaker": "ein",
+      "speakerName": "아인",
+      "text": "저희 찾으러 다니면서 이것도 사 왔어요!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/lg-63/kj-44/f0c089e8bb85053339d41b2720f0a900.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_350",
+      "text": "아인이 초록색 끈을 내밀었다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_351",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "끈?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_352",
+      "speaker": "ein",
+      "speakerName": "아인",
+      "text": "책갈피 찾으면 잃어버리지 않게 끈을 껴놓으면 좋을 거 같아서요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/lg-63/kj-44/f0c089e8bb85053339d41b2720f0a900.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_353",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "!!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_354",
+      "speaker": "ein",
+      "speakerName": "아인",
+      "text": "짜잔~ 여기 끝에 보여요?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/lg-63/kj-44/f0c089e8bb85053339d41b2720f0a900.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_355",
+      "text": "아인이 끈의 끝을 잡고 내밀었다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_356",
+      "speaker": "ein",
+      "speakerName": "아인",
+      "text": "이 매듭 어때요? 예쁘죠!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/lg-63/kj-44/f0c089e8bb85053339d41b2720f0a900.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_357",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "설마… 네잎클로버 모양인 거야?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_358",
+      "speaker": "ein",
+      "speakerName": "아인",
+      "text": "맞아요! 역시 한 번에 알아볼 줄 알았다니까요?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/lg-63/kj-44/f0c089e8bb85053339d41b2720f0a900.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_359",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "아….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_360",
+      "text": "예쁘네.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_361",
+      "speaker": "ein",
+      "speakerName": "아인",
+      "text": "그쵸? 쌤도 그렇게 생각하죠?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/lg-63/kj-44/f0c089e8bb85053339d41b2720f0a900.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_362",
+      "text": "책갈피랑도 잘 어울릴 거 같아.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_363",
+      "speaker": "rei",
+      "speakerName": "라이",
+      "text": "그치그치~!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zp-67/ag-49/78e29ec0dc4dc0b4a4baa2a01d875c3e.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_364",
+      "speaker": "rei",
+      "speakerName": "라이",
+      "text": "저 끈 내가 골랐어!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zp-67/ag-49/78e29ec0dc4dc0b4a4baa2a01d875c3e.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_365",
+      "speaker": "rei",
+      "speakerName": "라이",
+      "text": "매듭은 아인이 만들고!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zp-67/ag-49/78e29ec0dc4dc0b4a4baa2a01d875c3e.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_366",
+      "speaker": "ein",
+      "speakerName": "아인",
+      "text": "그리고 프리바티 쌤이 사주셨어요!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/lg-63/kj-44/f0c089e8bb85053339d41b2720f0a900.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_367",
+      "text": "프리바티가?!",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_368",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "뭐, 뭐예요. 왜 그렇게 의외라는 듯이 보는데요?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_369",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "저도 제 학생에게 끈 정도는 사줄 수 있거든요?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_370",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "프리바티 선생님….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_371",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "자, 이것도 받아요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_372",
+      "text": "프리바티가 츠바이에게 펀치를 내밀었다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_373",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "책갈피에 구멍을 뚫고 끈을 끼워 넣는 게 가장 좋을 거 같아서 펀치도 가져왔는데.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_374",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "구멍을 뚫는 게 싫으면 말해요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_375",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "접착제를 가져다 줄게요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_376",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "아, 아니에요!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_377",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "구멍 뚫어도 돼요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_378",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "다들 정말… 감사합니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_379",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "포기하지 않고 같이 찾아주셔서….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_380",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "뭘 당연한 걸 고마워하고 그래요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_381",
+      "speaker": "ein",
+      "speakerName": "아인",
+      "text": "맞아요. 선배들도 제가 좋아하는 거 잃어버리면 똑같이 찾아줄 거잖아요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/lg-63/kj-44/f0c089e8bb85053339d41b2720f0a900.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_382",
+      "speaker": "rei",
+      "speakerName": "라이",
+      "text": "웅? 나 다음에는 같이 안 찾을 건데?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zp-67/ag-49/78e29ec0dc4dc0b4a4baa2a01d875c3e.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_383",
+      "speaker": "rei",
+      "speakerName": "라이",
+      "text": "나루만 보낼 건데?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zp-67/ag-49/78e29ec0dc4dc0b4a4baa2a01d875c3e.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_384",
+      "speaker": "ein",
+      "speakerName": "아인",
+      "text": "엥? 뭐예요 그게! 완전 서운해요!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/lg-63/kj-44/f0c089e8bb85053339d41b2720f0a900.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_385",
+      "speaker": "rei",
+      "speakerName": "라이",
+      "text": "그보다 프리바티 선생님~ 나 배고파.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zp-67/ag-49/78e29ec0dc4dc0b4a4baa2a01d875c3e.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_386",
+      "speaker": "ein",
+      "speakerName": "아인",
+      "text": "어? 그러고 보니 저두요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/lg-63/kj-44/f0c089e8bb85053339d41b2720f0a900.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_387",
+      "speaker": "ein",
+      "speakerName": "아인",
+      "text": "긴장 풀리니까 갑자기 확 배고파지네요?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/lg-63/kj-44/f0c089e8bb85053339d41b2720f0a900.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_388",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "배고플 때도 됐죠. 뭐라도 먹을까요?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_389",
+      "speaker": "ein",
+      "speakerName": "아인",
+      "text": "쌤! 먹을 거 어떤 거 있어요?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/lg-63/kj-44/f0c089e8bb85053339d41b2720f0a900.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_390",
+      "speaker": "ein",
+      "speakerName": "아인",
+      "text": "주방 가서 구경해도 돼요?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/lg-63/kj-44/f0c089e8bb85053339d41b2720f0a900.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_391",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "뭐, 에이드에게 자유롭게 쓰도록 허락도 맡아놨으니까, 좋아요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_392",
+      "speaker": "rei",
+      "speakerName": "라이",
+      "text": "정말?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zp-67/ag-49/78e29ec0dc4dc0b4a4baa2a01d875c3e.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_393",
+      "speaker": "rei",
+      "speakerName": "라이",
+      "text": "그럼 나도 같이 갈래!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zp-67/ag-49/78e29ec0dc4dc0b4a4baa2a01d875c3e.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_394",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "좋아요, 와서 마음껏 골라봐요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_395",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "까짓것! 다 만들어줄게요!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_396",
+      "speaker": "rei",
+      "speakerName": "라이",
+      "text": "선생님 최고~!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zp-67/ag-49/78e29ec0dc4dc0b4a4baa2a01d875c3e.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_397",
+      "text": "아인과 라이, 프리바티가 주방 안쪽으로 떠나갔다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_398",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "…….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_399",
+      "text": "츠바이가 책갈피와 끈을 빤히 바라보았다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_400",
+      "text": "왜 그렇게 보고만 있어?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_401",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "네?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_402",
+      "text": "끈. 끼워 넣어야 하잖아.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_403",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "아, 네! 그, 그렇죠.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_404",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "일단 펀치로 구멍부터….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_405",
+      "text": "츠바이가 펀치를 가져와,",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_406",
+      "text": "책갈피 끝에 구멍을 뚫었다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_407",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "여기에 끈을 끼우면….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_408",
+      "text": "츠바이가 허둥거렸다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_409",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "음….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_410",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "어, 왜… 안 들어가지….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_411",
+      "text": "내가 해줄게.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_412",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "서, 선생님이요…?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_413",
+      "text": "응. 이리 줘볼래?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_414",
+      "text": "츠바이에게 책갈피를 건네받았다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_415",
+      "text": "흠…!",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_416",
+      "text": "펀치로 뚫은 구멍 안으로 초록색 끈을 조심스레 밀어 넣었다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_417",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "와…! 들어갔어요!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_418",
+      "text": "책갈피가 빠지지 않도록 묶은 후,",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_419",
+      "text": "이거면 되겠지?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_420",
+      "text": "츠바이에게 내밀었다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_421",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "충분해요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_422",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "감사합니다, 선생님.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_423",
+      "text": "츠바이가 책갈피를 달린 끈을 바라보았다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_424",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "이러면… 정말 잃어버리지 않겠네요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_425",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "두꺼운 책 속에 있어도 금방 찾을 수 있을 거 같아요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_426",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "…….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_427",
+      "text": "츠바이가 양손으로 책갈피를 손에 쥔 채 이쪽을 바라보았다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_428",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "…선생님.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_429",
+      "text": "응?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_430",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "기분이 너무 이상해요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_431",
+      "text": "어떤 점이?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_432",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "이걸 처음 샀을 때만 해도,",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_433",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "얼마 지나지 않아서 전 그냥 죽을지도 모른다고 생각했거든요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_434",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "그냥 막연히… 시험을 보다가 사고를 당하든, 시험에서 떨어지든… 해서 죽을 거 같았어요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_435",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "그런데….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_436",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "2학년이 되었는데도 죽지 않고 살아있는 것도 모자라,",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_437",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "팬텀 님, 폴리 님, 미란다 님, 슈가 님까지….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_438",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "제가 소중하게 여기는 걸 함께 소중하게 여겨주시는 많은 분들이 있다는 걸 알게 되었고.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_439",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "제가 포기하려는걸, 끝까지 찾아주는 소중한 친구들과.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_440",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "선생님들이 계시다는 걸 알게 되었어요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_441",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "그게 너무 이상하고… 신기해요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_442",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "정말로 이 책갈피가 행운을 가져다준 것 같아요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_443",
+      "text": "잃어버리지 않아서 다행이지?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_444",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "네. 정말요. 잃어버리지 않아서 다행이에요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_445",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "하지만 잃어버렸다고 해도, 언젠가 다시 찾을 수 있었을 것 같아요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_446",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "제겐 제 인생의 최고의 행운인 선생님과 친구들이 있으니까요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_447",
+      "text": "최고의 인사를 받은 기분이네.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_448",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "후후. 그런가요?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_449",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "다시 한번 정말 감사해요, 선생님.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_450",
+      "text": "별말씀을.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_451",
+      "text": "꼬르륵-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_452",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "!!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_453",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "저도… 배가 고팠나 봐요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_454",
+      "text": "하루 종일 아무것도 안 먹고 움직였으니까.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_455",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "그런데 다들 왜 이렇게 안 나오는 걸까요?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_456",
+      "text": "그러게. 가봐야 하나?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_457",
+      "speaker": "ein",
+      "speakerName": "아인",
+      "text": "쌤!! 츠바이 선배!!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/lg-63/kj-44/f0c089e8bb85053339d41b2720f0a900.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_458",
+      "speaker": "ein",
+      "speakerName": "아인",
+      "text": "주방으로 와봐요! 여기 진짜 최고예요!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/lg-63/kj-44/f0c089e8bb85053339d41b2720f0a900.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_459",
+      "speaker": "rei",
+      "speakerName": "라이",
+      "text": "맞아! 둘 다 얼른 와봐!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zp-67/ag-49/78e29ec0dc4dc0b4a4baa2a01d875c3e.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_460",
+      "text": "우리도 가볼까?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_461",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "좋아요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_462",
+      "text": "츠바이가 자리에서 일어났다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_463",
+      "speaker": "ein",
+      "speakerName": "아인",
+      "text": "츠바이 선배! 빨리 와봐요, 빨리!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/lg-63/kj-44/f0c089e8bb85053339d41b2720f0a900.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_464",
+      "speaker": "rei",
+      "speakerName": "라이",
+      "text": "얼른 와, 츠바이!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zp-67/ag-49/78e29ec0dc4dc0b4a4baa2a01d875c3e.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_465",
+      "text": "인생 최고의 행운들을 향해 걸어가며,",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_466",
+      "speaker": "zwei",
+      "speakerName": "츠바이",
+      "text": "네! 지금 갈게요…!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ga-35/fc-17/46f4ce5a484ae76c99a7d1d8b268c518.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_zwei_467",
+      "text": "츠바이가 환하게 웃었다.",
+      "window": "Narration",
+      "voice": null
+    }
+  ]
+}

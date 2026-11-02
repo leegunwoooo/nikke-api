@@ -1,0 +1,4324 @@
+{
+  "groupId": "d_favorite_flora",
+  "type": "favorite",
+  "name": "함께 만든 자리",
+  "nikke": "플로라",
+  "sourceVideo": "https://youtu.be/q50oC1CP-m8",
+  "lines": [
+    {
+      "id": "d_favorite_flora_1",
+      "text": "지잉-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_2",
+      "text": "나 왔어, 플로라.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_3",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "어서 오세요, 꽃님.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_4",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "오늘도 그 아이를 보러 오신 건가요?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_5",
+      "text": "맞아, 요즘 상태가 어떤지 궁금해서.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_6",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "후후, 잘 오셨어요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_7",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "마침 꽃님께 보여드리고 싶던 참이었답니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_8",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "요 며칠 사이 기생초가 부쩍 자랐거든요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_9",
+      "text": "정말?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_10",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "예, 직접 보시면 분명 놀라실 거예요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_11",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "그럼 보러 가실까요?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_12",
+      "text": "나는 플로라의 안내를 따라 정원 안쪽으로 들어갔고.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_13",
+      "text": "그곳에는 화분을 가득 채울 만큼 무성하게 자란 기생초가 있었다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_14",
+      "text": "와, 엄청 자랐네.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_15",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "그렇죠?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_16",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "줄기도 더 튼튼해지고.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_17",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "잎의 색도 훨씬 선명해졌답니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_18",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "꽃님이 틈틈이 정원에 들러 신경 써주신 덕분이에요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_19",
+      "text": "당연히 해야 할 일을 한 것뿐인걸.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_20",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "그게 꽃에게는 아주 큰일이랍니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_21",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "누군가 자신을 잊지 않고 찾아와 준다는 건,",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_22",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "성장에 큰 힘이 되어 주니까요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_23",
+      "text": "앞으로도 계속 신경 쓸게.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_24",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "기생초도 꽃님의 말에 무척 기뻐하는 것 같네요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_25",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "아, 참. 꽃님.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_26",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "오늘 마침 정원에 와주셨으니,",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_27",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "이 아이를 위해 함께 준비해주셨으면 하는 일이 있어요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_28",
+      "text": "?? 뭔데?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_29",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "이 아이에게 더 넓은 집이 필요해요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_30",
+      "text": "아, 기생초가 커진 만큼 화분이 작아졌겠구나.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_31",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "맞습니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_32",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "잎도 줄기도 무성해진 만큼,",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_33",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "화분 안쪽이 뿌리로 가득 차기 시작했답니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_34",
+      "text": "그럼 기생초를 조금 더 큰 화분으로 옮겨 심으면 돼?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_35",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "그렇게 해도 상관은 없지만,",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_36",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "이번엔 이 아이가 머물 새로운 화분을 저와 함께 만들어 주셨으면 합니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_37",
+      "text": "…화분을 직접 만들자는 거야?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_38",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "예, 이미 만들어진 화분도 좋겠지만,",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_39",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "저와 꽃님이 처음으로 함께 키워가고 있는 아이인 만큼,",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_40",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "직접 머물 공간을 같이 만들어주면 좋을 것 같아서요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_41",
+      "text": "…내가 잘 만들 수 있을지 모르겠네.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_42",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "꽃님.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_43",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "이 아이를 처음 키우실 때를 기억하시나요?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_44",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "그때도 꽃님께서는 걱정을 많이 하셨지만,",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_45",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "이 아이는 지금 훌륭하게 잘 자라주었어요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_46",
+      "text": "…그건 플로라가 도와줬으니까.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_47",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "제가 곁에서 도와드린 건 맞지만,",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_48",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "꽃님이 마음을 쏟지 않았다면,",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_49",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "이 아이는 이렇게까지 자라지 못했을 거예요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_50",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "그러니 이 아이가 이렇게 건강하게 자란 건, 꽃님 덕분이기도 합니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_51",
+      "text": "그렇게 말해주니, 안 할 수가 없네.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_52",
+      "text": "알겠어, 그럼 같이 만들어보자.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_53",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "감사해요, 꽃님.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_54",
+      "text": "플로라는 기생초를 바라봤다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_55",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "기생초, 조금만 기다려주시겠어요?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_56",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "기생초가 머물 새집을 꽃님과 함께 만들어 드릴게요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_57",
+      "text": "사락-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_58",
+      "text": "플로라의 말이 끝나자, 기생초의 잎이 작게 흔들렸다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_59",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "…어머.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_60",
+      "text": "왜 그래?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_61",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "이 아이도 기뻐하고 있는 것 같아서요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_62",
+      "text": "정말?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_63",
+      "text": "…기생초야, 좋은 집으로 만들어 줄게.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_64",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "후후, 꽃에게 말을 거는 게 처음보다 많이 자연스러워지셨네요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_65",
+      "text": "근데 화분은 어떻게 만들 거야?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_66",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "정원에는 화분을 만들 도구가 충분하지 않으니,",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_67",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "화분을 만들 수 있는 곳으로 가야겠지요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_68",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "란타나님이라면 분명 도움을 주실 수 있을 거예요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_69",
+      "text": "란타나님?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_70",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "예, 공방으로 가면 만나실 수 있습니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_71",
+      "text": "공방이라면 아, 누군지 알겠다.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_72",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "후후, 그럼 가볼까요?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_73",
+      "text": "응, 출발하자.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_74",
+      "text": "나와 플로라는 기생초가 머물 새로운 집을 만들기 위해 함께 정원을 나섰다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_75",
+      "text": "지잉-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_76",
+      "speaker": "centi",
+      "speakerName": "센티",
+      "text": "어서 오십쇼, 플로라!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vz-77/bn-70/f66c08b26047347b46420a769de04837.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_77",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "안녕하세요, 란타나님.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_78",
+      "text": "역시 센티였구나.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_79",
+      "text": "안녕, 센티.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_80",
+      "speaker": "centi",
+      "speakerName": "센티",
+      "text": "반장님도 어서 오십쇼!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vz-77/bn-70/f66c08b26047347b46420a769de04837.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_81",
+      "speaker": "centi",
+      "speakerName": "센티",
+      "text": "두 분이 공방엔 무슨 일이심까?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vz-77/bn-70/f66c08b26047347b46420a769de04837.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_82",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "화분을 만들기 위해 왔습니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_83",
+      "speaker": "centi",
+      "speakerName": "센티",
+      "text": "화분말임까? 어떤 화분임까?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vz-77/bn-70/f66c08b26047347b46420a769de04837.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_84",
+      "speaker": "centi",
+      "speakerName": "센티",
+      "text": "말씀만 해주시면, 바로 제작에 들어가겠슴다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vz-77/bn-70/f66c08b26047347b46420a769de04837.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_85",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "후후, 감사합니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_86",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "하지만 이번 화분은 꽃님과 제가 직접 만들어보고 싶어서 왔어요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_87",
+      "speaker": "centi",
+      "speakerName": "센티",
+      "text": "직접 말임까?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vz-77/bn-70/f66c08b26047347b46420a769de04837.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_88",
+      "text": "응, 플로라와 내가 함께 키운 기생초가 머물 화분이라서.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_89",
+      "speaker": "centi",
+      "speakerName": "센티",
+      "text": "아하!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vz-77/bn-70/f66c08b26047347b46420a769de04837.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_90",
+      "speaker": "centi",
+      "speakerName": "센티",
+      "text": "그런 이유라면, 직접 만드는 게 더 의미가 있을 것 같슴다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vz-77/bn-70/f66c08b26047347b46420a769de04837.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_91",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "그래서 란타나님께 화분 만드는 법을 배우고 싶은데,",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_92",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "알려주실 수 있으실까요?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_93",
+      "speaker": "centi",
+      "speakerName": "센티",
+      "text": "물론임다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vz-77/bn-70/f66c08b26047347b46420a769de04837.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_94",
+      "speaker": "centi",
+      "speakerName": "센티",
+      "text": "제가 아는 선에서 전부 알려드리겠슴다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vz-77/bn-70/f66c08b26047347b46420a769de04837.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_95",
+      "speaker": "centi",
+      "speakerName": "센티",
+      "text": "우선 키우고 계신 기생초에 대해 말씀해 주실 수 있으심까?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vz-77/bn-70/f66c08b26047347b46420a769de04837.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_96",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "당연하죠.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_97",
+      "text": "플로라는 센티에게 우리가 키우고 있는 기생초에 대해 말해주었다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_98",
+      "speaker": "centi",
+      "speakerName": "센티",
+      "text": "이해했슴다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vz-77/bn-70/f66c08b26047347b46420a769de04837.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_99",
+      "speaker": "centi",
+      "speakerName": "센티",
+      "text": "그럼 도자기 화분이 좋을 것 같슴다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vz-77/bn-70/f66c08b26047347b46420a769de04837.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_100",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "도자기 화분이요?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_101",
+      "speaker": "centi",
+      "speakerName": "센티",
+      "text": "넵!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vz-77/bn-70/f66c08b26047347b46420a769de04837.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_102",
+      "speaker": "centi",
+      "speakerName": "센티",
+      "text": "형태를 잡기도 쉽고, 굽고 나면 단단해져서 오래 쓸 수 있슴다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vz-77/bn-70/f66c08b26047347b46420a769de04837.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_103",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "혹시 화분 위에 그림도 그릴 수 있나요?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_104",
+      "speaker": "centi",
+      "speakerName": "센티",
+      "text": "당연함다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vz-77/bn-70/f66c08b26047347b46420a769de04837.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_105",
+      "speaker": "centi",
+      "speakerName": "센티",
+      "text": "물감으로 그림을 그린 뒤, 투명 유약을 얇게 입혀서 다시 구우면 됨다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vz-77/bn-70/f66c08b26047347b46420a769de04837.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_106",
+      "text": "그럼 재료 같은 건 공방에 다 있을까?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_107",
+      "speaker": "centi",
+      "speakerName": "센티",
+      "text": "도자기용 흙은 충분히 있슴다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vz-77/bn-70/f66c08b26047347b46420a769de04837.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_108",
+      "speaker": "centi",
+      "speakerName": "센티",
+      "text": "기본 도구도 있고, 가마도 문제없슴다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vz-77/bn-70/f66c08b26047347b46420a769de04837.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_109",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "물감과 유약도 있을까요?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_110",
+      "speaker": "centi",
+      "speakerName": "센티",
+      "text": "잠시만 기다려 주십쇼.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vz-77/bn-70/f66c08b26047347b46420a769de04837.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_111",
+      "speaker": "centi",
+      "speakerName": "센티",
+      "text": "한번 확인해 보겠슴다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vz-77/bn-70/f66c08b26047347b46420a769de04837.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_112",
+      "text": "달그락- 달그락-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_113",
+      "text": "센티는 공방 한쪽의 선반을 열어 재료들을 확인했다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_114",
+      "speaker": "centi",
+      "speakerName": "센티",
+      "text": "…으음.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vz-77/bn-70/f66c08b26047347b46420a769de04837.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_115",
+      "text": "왜 그래?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_116",
+      "speaker": "centi",
+      "speakerName": "센티",
+      "text": "물감과 투명 유약이 거의 남아 있지 않슴다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vz-77/bn-70/f66c08b26047347b46420a769de04837.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_117",
+      "speaker": "centi",
+      "speakerName": "센티",
+      "text": "그림에 쓸 재료는 새로 사 와야 할 것 같슴다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vz-77/bn-70/f66c08b26047347b46420a769de04837.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_118",
+      "text": "그럼 우리가 사 올게.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_119",
+      "speaker": "centi",
+      "speakerName": "센티",
+      "text": "그래주시면 정말 감사하겠슴다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vz-77/bn-70/f66c08b26047347b46420a769de04837.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_120",
+      "speaker": "centi",
+      "speakerName": "센티",
+      "text": "제가 직접 다녀오고 싶지만,",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vz-77/bn-70/f66c08b26047347b46420a769de04837.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_121",
+      "speaker": "centi",
+      "speakerName": "센티",
+      "text": "현재 리타 선배가 출장 중이어서 공방을 오래 비울 수가 없슴다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vz-77/bn-70/f66c08b26047347b46420a769de04837.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_122",
+      "speaker": "centi",
+      "speakerName": "센티",
+      "text": "죄송함다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vz-77/bn-70/f66c08b26047347b46420a769de04837.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_123",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "괜찮습니다, 란타나님.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_124",
+      "text": "필요한 것만 알려줘.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_125",
+      "speaker": "centi",
+      "speakerName": "센티",
+      "text": "물감이랑 투명 유약이면 됨다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vz-77/bn-70/f66c08b26047347b46420a769de04837.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_126",
+      "speaker": "centi",
+      "speakerName": "센티",
+      "text": "색은 두 분이 그리고 싶은 그림에 맞춰 골라오십쇼!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vz-77/bn-70/f66c08b26047347b46420a769de04837.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_127",
+      "text": "알겠어, 다녀올게.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_128",
+      "speaker": "centi",
+      "speakerName": "센티",
+      "text": "감사함다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vz-77/bn-70/f66c08b26047347b46420a769de04837.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_129",
+      "speaker": "centi",
+      "speakerName": "센티",
+      "text": "그럼 저는 그동안 흙과 작업대를 준비해 두겠슴다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vz-77/bn-70/f66c08b26047347b46420a769de04837.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_130",
+      "speaker": "centi",
+      "speakerName": "센티",
+      "text": "두 분이 돌아오시면 바로 반죽과 성형을 할 수 있게 말임다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vz-77/bn-70/f66c08b26047347b46420a769de04837.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_131",
+      "text": "부탁할게.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_132",
+      "speaker": "centi",
+      "speakerName": "센티",
+      "text": "맡겨주십쇼!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vz-77/bn-70/f66c08b26047347b46420a769de04837.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_133",
+      "text": "다녀오자, 플로라.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_134",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "예, 꽃님.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_135",
+      "text": "우리는 공방을 빠져나와 쇼핑몰에 도착했다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_136",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "물감 색상이 엄청 많군요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_137",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "마치 꽃밭 같습니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_138",
+      "text": "센티가 말한 유약도 이쪽에 있는 것 같아.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_139",
+      "text": "플로라는 물감이 놓인 선반 앞으로 천천히 다가갔다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_140",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "꽃님, 어떤 그림을 그릴지 생각한 게 있으신가요?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_141",
+      "text": "음, 아직은 없는데, 플로라는?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_142",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "우선 저는….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_143",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "저와 꽃님이 꼭 들어갔으면 좋겠습니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_144",
+      "text": "우리 둘?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_145",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "예, 그리고 기생초도요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_146",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "저희가 이 아이를 함께 키웠다는 걸 화분에 남기고 싶어서요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_147",
+      "text": "오, 좋은 생각 같아.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_148",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "후후, 그렇죠?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_149",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "그런데 꽃님은 그림을 잘 그리시나요?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_150",
+      "text": "방주를 대표하는 화가지.",
+      "window": "Choice",
+      "voice": null,
+      "chosen": true
+    },
+    {
+      "id": "d_favorite_flora_151",
+      "text": "그림을 제대로 그려본 적은 없어.",
+      "window": "Choice",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_152",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "그렇게 말씀하시니, 꽃님의 그림 실력이 기대되는군요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_153",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "그럼 꽃님께서 저를 그려주실 수 있을까요?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_154",
+      "text": "내가… 플로라를?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_155",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "예.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_156",
+      "text": "…그건 좀 부담되는데.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_157",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "왜요?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_158",
+      "text": "못 그리면 미안하잖아.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_159",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "저는 꽃님의 그림실력을 믿습니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_160",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "그리고 꽃님이 그려주신 저라면,",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_161",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "조금 서툴러도 좋을 것 같아요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_162",
+      "text": "정말?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_163",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "예.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_164",
+      "text": "…으으음.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_165",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "꽃님이 저를 그려주신다면,",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_166",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "저도 꽃님을 그려드릴게요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_167",
+      "text": "플로라가 나를?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_168",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "예, 제가 바라보는 꽃님의 모습을, 제 손으로 그려드리고 싶습니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_169",
+      "text": "그럼 잘생기게 그려줘.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_170",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "후후, 알겠습니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_171",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "꽃님이 기생초를 바라보던 모습을 떠올리며 그려드릴게요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_172",
+      "text": "…잘생긴 모습 맞아?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_173",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "제게는 아주 멋있는 모습이었답니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_174",
+      "text": "플로라는 노란색 물감 하나를 집어 들었다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_175",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "기생초는 이 색으로 그려줘야겠습니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_176",
+      "text": "기생초 꽃잎이랑 같은 색이네.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_177",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "그렇죠?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_178",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "화분 위에서도 예쁘게 피어날 것 같아요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_179",
+      "text": "달그락-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_180",
+      "text": "플로라는 노란 물감을 장바구니에 담았다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_181",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "다음으로는….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_182",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "꽃님의 색을 골라볼까요?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_183",
+      "text": "나의 색?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_184",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "예.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_185",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "꽃이 저마다 다 다른 색을 가지고 있듯이,",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_186",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "사람도 자신과 어울리는 색을 하나씩 가지고 있다고 생각하거든요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_187",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "꽃님의 색은….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_188",
+      "text": "플로라는 나를 빤히 바라봤다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_189",
+      "text": "…대충 골라줘도 돼.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_190",
+      "text": "줘도 돼.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_191",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "꽃님의 색인데, 대충 고를 수는 없지요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_192",
+      "text": "…….",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_193",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "이 색은 어떨까요?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_194",
+      "text": "플로라는 흰색 물감을 들어 올렸다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_195",
+      "text": "흰색?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_196",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "예, 흰색은 다른 색을 밀어내지 않고,",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_197",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "곁에서 모든 색과 잘 어울려주는 색이거든요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_198",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "그래서 꽃님과 잘 어울리는 색이라고 생각했습니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_199",
+      "text": "…….",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_200",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "…마음에 안 드시나요?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_201",
+      "text": "아니, 좋은 색이라고 생각했어.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_202",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "후후, 다행입니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_203",
+      "text": "달그락-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_204",
+      "text": "플로라가 고른 흰색 물감이 장바구니 안에 담겼다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_205",
+      "text": "그럼 플로라의 색은 내가 골라줘도 돼?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_206",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "그럼요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_207",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "꽃님이 생각 하셨을 때, 저는 어떤 색과 닮아 있나요?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_208",
+      "text": "플로라는…",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_209",
+      "text": "나는 플로라와 물감 선반을 번갈아 보다가,",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_210",
+      "text": "보라색 물감을 하나 집어 들었다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_211",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "…보라색인가요?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_212",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "이유를 여쭤봐도 될까요?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_213",
+      "text": "플로라를 처음 봤을 땐, 조금 신비롭게 느껴졌어.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_214",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "제가요?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_215",
+      "text": "응, 어딘가 쉽게 닿을 수 없는 사람처럼 보였거든.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_216",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "아….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_217",
+      "text": "그런데 알아갈수록, 처음에 보이지 않던 모습들이 보였어.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_218",
+      "text": "그런데 알아갈수록, 처음에 보이지 않던 모습들이 보였어.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_219",
+      "text": "꽃을 대할 때는 누구보다 다정한데, 소중한 걸 지키려 할 때는 쉽게 흔들리지 않더라고.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_220",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "!!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_221",
+      "text": "난 보라색도 그런 색이라고 생각해.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_222",
+      "text": "그래서 플로라에게 잘 어울린다고 생각했어.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_223",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "…….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_224",
+      "text": "…별로야?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_225",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "…아니요, 조금 놀라서요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_226",
+      "text": "왜?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_227",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "꽃님께서 저를 그렇게 봐주실 줄은 몰랐거든요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_228",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "색도 마음에 들어요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_229",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "꽃님이 골라주신 이유까지 함께 담긴 색이니까요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_230",
+      "text": "달그락-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_231",
+      "text": "보라색 물감도 장바구니 안으로 들어갔다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_232",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "그럼 이제 또 어떤 색을 골라볼까요?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_233",
+      "text": "이번엔……",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_234",
+      "text": "그렇게 나와 플로라는 물감 선반 앞에서,",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_235",
+      "text": "필요한 색들을 하나씩 골라갔다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_236",
+      "text": "이제 다 고른 거 맞지?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_237",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "예, 물감도, 유약도 모두 다 골랐습니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_238",
+      "text": "이제 화분을 만들 일만 남았네.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_239",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "꽃님과 함께 만드는 화분이라 그런지 많이 기대되네요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_240",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "어떤 모습으로 완성될지 자꾸 상상하게 됩니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_241",
+      "text": "나도 그래.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_242",
+      "text": "화분 위에 그림을 어떻게 그릴지도 조금씩 떠오르는 것 같아.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_243",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "후후, 저도요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_244",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "얼른 화분을 만들고 싶어 졌습니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_245",
+      "text": "그럼 늦기 전에 얼른 돌아갈까?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_246",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "예, 그러시죠.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_247",
+      "text": "지잉-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_248",
+      "speaker": "centi",
+      "speakerName": "센티",
+      "text": "오셨슴까, 반장님! 플로라!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vz-77/bn-70/f66c08b26047347b46420a769de04837.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_249",
+      "text": "다녀왔어, 센티.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_250",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "란타나님이 말씀해 주신 물감과 유약을 가져왔습니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_251",
+      "speaker": "centi",
+      "speakerName": "센티",
+      "text": "감사함다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vz-77/bn-70/f66c08b26047347b46420a769de04837.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_252",
+      "text": "달그락-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_253",
+      "text": "센티는 우리가 가져온 재료들을 작업대 위에 올려두었다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_254",
+      "speaker": "centi",
+      "speakerName": "센티",
+      "text": "이제 모든 재료는 준비 됐으니, 바로 시작하면 됨다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vz-77/bn-70/f66c08b26047347b46420a769de04837.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_255",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "후후, 잘 부탁드리겠습니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_256",
+      "text": "뭐부터 하면 돼?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_257",
+      "speaker": "centi",
+      "speakerName": "센티",
+      "text": "먼저 흙을 반죽해서 공기를 빼고.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vz-77/bn-70/f66c08b26047347b46420a769de04837.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_258",
+      "speaker": "centi",
+      "speakerName": "센티",
+      "text": "길게 민 점토를 층층이 쌓아 올리면 됨다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vz-77/bn-70/f66c08b26047347b46420a769de04837.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_259",
+      "text": "꾹- 꾹-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_260",
+      "text": "센티는 흙을 반죽한 뒤 점토를 층층이 쌓아 올리며 화분의 틀을 잡아갔다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_261",
+      "speaker": "centi",
+      "speakerName": "센티",
+      "text": "그다음 이음새를 손으로 매끄럽게 연결해 주면….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vz-77/bn-70/f66c08b26047347b46420a769de04837.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_262",
+      "text": "슥- 슥-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_263",
+      "speaker": "centi",
+      "speakerName": "센티",
+      "text": "이렇게 화분 형태가 만들어짐다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vz-77/bn-70/f66c08b26047347b46420a769de04837.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_264",
+      "speaker": "centi",
+      "speakerName": "센티",
+      "text": "그리고 모양을 잡다가 갈라지는 부분이 있으면….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vz-77/bn-70/f66c08b26047347b46420a769de04837.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_265",
+      "text": "찰방-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_266",
+      "speaker": "centi",
+      "speakerName": "센티",
+      "text": "손에 물을 묻혀 표면을 정리해 주면 됨다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vz-77/bn-70/f66c08b26047347b46420a769de04837.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_267",
+      "text": "센티는 표면을 가볍게 다듬은 뒤, 우리에게 완성된 화분을 보여줬다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_268",
+      "speaker": "centi",
+      "speakerName": "센티",
+      "text": "어떻슴까?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vz-77/bn-70/f66c08b26047347b46420a769de04837.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_269",
+      "speaker": "centi",
+      "speakerName": "센티",
+      "text": "참 쉽지 않슴까?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vz-77/bn-70/f66c08b26047347b46420a769de04837.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_270",
+      "text": "어려워 보이는데.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_271",
+      "speaker": "centi",
+      "speakerName": "센티",
+      "text": "직접 해보면 쉬우실 검다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vz-77/bn-70/f66c08b26047347b46420a769de04837.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_272",
+      "speaker": "centi",
+      "speakerName": "센티",
+      "text": "제가 만든 걸 참고해서 만들어보십쇼.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vz-77/bn-70/f66c08b26047347b46420a769de04837.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_273",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "화분을 다 만든 뒤에는 어떻게 하면 되나요?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_274",
+      "speaker": "centi",
+      "speakerName": "센티",
+      "text": "가마에서 초벌을 진행하면 됨다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vz-77/bn-70/f66c08b26047347b46420a769de04837.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_275",
+      "text": "센티는 작업대 옆에 놓인 작은 가마를 가리켰다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_276",
+      "speaker": "centi",
+      "speakerName": "센티",
+      "text": "만드신 화분을 가마 안쪽에 조심히 넣고,",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vz-77/bn-70/f66c08b26047347b46420a769de04837.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_277",
+      "speaker": "centi",
+      "speakerName": "센티",
+      "text": "문을 닫은 뒤 시작 버튼을 눌러주십쇼.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vz-77/bn-70/f66c08b26047347b46420a769de04837.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_278",
+      "speaker": "centi",
+      "speakerName": "센티",
+      "text": "가마 온도와 시간은 제가 미리 맞춰뒀슴다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vz-77/bn-70/f66c08b26047347b46420a769de04837.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_279",
+      "text": "알겠어.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_280",
+      "speaker": "centi",
+      "speakerName": "센티",
+      "text": "초벌이 끝나면 화분 위에 그림을 그리고,",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vz-77/bn-70/f66c08b26047347b46420a769de04837.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_281",
+      "speaker": "centi",
+      "speakerName": "센티",
+      "text": "투명 유약을 얇게 발라주시면 됨다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vz-77/bn-70/f66c08b26047347b46420a769de04837.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_282",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "알겠습니다, 란타나님.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_283",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "설명 감사합니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_284",
+      "speaker": "centi",
+      "speakerName": "센티",
+      "text": "그럼 저는 다른 작업을 하고 있을 테니 다 끝나면….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vz-77/bn-70/f66c08b26047347b46420a769de04837.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_285",
+      "text": "지잉-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_286",
+      "speaker": "centi",
+      "speakerName": "센티",
+      "text": "음?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vz-77/bn-70/f66c08b26047347b46420a769de04837.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_287",
+      "text": "센티는 품 안에서 핸드폰을 꺼내 확인했다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_288",
+      "speaker": "centi",
+      "speakerName": "센티",
+      "text": "…엇.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vz-77/bn-70/f66c08b26047347b46420a769de04837.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_289",
+      "text": "왜 그래?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_290",
+      "speaker": "centi",
+      "speakerName": "센티",
+      "text": "반장님, 플로라!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vz-77/bn-70/f66c08b26047347b46420a769de04837.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_291",
+      "speaker": "centi",
+      "speakerName": "센티",
+      "text": "지금 급한 수리 의뢰가 들어와서, 잠깐 다녀와야 할 것 같슴다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vz-77/bn-70/f66c08b26047347b46420a769de04837.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_292",
+      "speaker": "centi",
+      "speakerName": "센티",
+      "text": "끝까지 봐드리고 싶었는데… 죄송함다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vz-77/bn-70/f66c08b26047347b46420a769de04837.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_293",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "괜찮습니다, 란타나님.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_294",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "바쁘실 텐데 어서 가보시죠.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_295",
+      "speaker": "centi",
+      "speakerName": "센티",
+      "text": "감사함다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vz-77/bn-70/f66c08b26047347b46420a769de04837.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_296",
+      "speaker": "centi",
+      "speakerName": "센티",
+      "text": "아!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vz-77/bn-70/f66c08b26047347b46420a769de04837.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_297",
+      "speaker": "centi",
+      "speakerName": "센티",
+      "text": "유약까지 다 바르신 다음에는,",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vz-77/bn-70/f66c08b26047347b46420a769de04837.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_298",
+      "speaker": "centi",
+      "speakerName": "센티",
+      "text": "한 번 더 가마에 넣어 구워주시면 됨다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vz-77/bn-70/f66c08b26047347b46420a769de04837.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_299",
+      "text": "처음이랑 똑같이 하면 돼?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_300",
+      "speaker": "centi",
+      "speakerName": "센티",
+      "text": "거의 같슴다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vz-77/bn-70/f66c08b26047347b46420a769de04837.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_301",
+      "speaker": "centi",
+      "speakerName": "센티",
+      "text": "다만 유약을 바른 뒤에는 굽기 설정을 바꿔주셔야 함다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vz-77/bn-70/f66c08b26047347b46420a769de04837.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_302",
+      "speaker": "centi",
+      "speakerName": "센티",
+      "text": "가마에 재벌구이라는 설정이 있으니,",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vz-77/bn-70/f66c08b26047347b46420a769de04837.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_303",
+      "speaker": "centi",
+      "speakerName": "센티",
+      "text": "그걸 선택하고 시작 버튼을 눌러주십쇼!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vz-77/bn-70/f66c08b26047347b46420a769de04837.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_304",
+      "text": "알겠어.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_305",
+      "speaker": "centi",
+      "speakerName": "센티",
+      "text": "옙! 혹시 문제가 생기면 바로 연락 주십쇼!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vz-77/bn-70/f66c08b26047347b46420a769de04837.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_306",
+      "text": "조심해서 다녀와.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_307",
+      "text": "센티는 필요한 공구들을 챙긴 뒤, 서둘러 공방을 나섰다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_308",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "꽃님, 그럼 시작해 볼까요?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_309",
+      "text": "그래 우선 센티가 알려준 대로 반죽부터 하자.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_310",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "예, 좋아요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_311",
+      "text": "꾹- 꾹-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_312",
+      "text": "나와 플로라는 함께 흙을 반죽한 뒤, 길게 민 점토를 화분 바닥 위에 층층이 쌓아 올렸다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_313",
+      "text": "그리고 점토 사이의 이음새를 손끝으로 문지르며 모양을 다듬어갔지만,",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_314",
+      "text": "표면은 생각처럼 매끄럽게 이어지지 않았다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_315",
+      "text": "…음, 생각보다 어렵네.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_316",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "그럼 란타나님이 말씀해 주신 것처럼,",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_317",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "물을 묻혀 다듬어보죠.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_318",
+      "text": "좋아, 그러자.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_319",
+      "text": "찰방-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_320",
+      "text": "우리는 손끝에 물을 묻혀, 화분의 이음새를 다시 다듬어갔다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_321",
+      "text": "아까보단 좀 괜찮아진 것 같아.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_322",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "예, 표면이 많이 부드러워졌습니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_323",
+      "text": "슥- 슥-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_324",
+      "text": "하나의 화분을 함께 다듬다 보니, 플로라와 몇 번이나 손끝이 가볍게 스쳤다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_325",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "…….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_326",
+      "text": "…계속 부딪히네.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_327",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "후후, 저희가 같은 곳을 다듬고 있어서 그런가 봅니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_328",
+      "text": "그럼 내가 다른 쪽을…",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_329",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "잠시만요, 꽃님.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_330",
+      "text": "응?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_331",
+      "text": "플로라는 손을 멈추고, 우리가 다듬던 화분을 가만히 살폈다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_332",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "화분이 조금 기울어진 것 같습니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_333",
+      "text": "엇, 그러게.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_334",
+      "text": "이대로 가면 모양이 이상해질 것 같은데.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_335",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "제가 안쪽에서 형태를 잡고 있을 테니,",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_336",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "꽃님은 바깥쪽에서 기울어진 부분을 바로잡아 주시겠어요?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_337",
+      "text": "알겠어.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_338",
+      "text": "플로라는 화분 안쪽에 손을 넣어 조심스럽게 형태를 받쳤고,",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_339",
+      "text": "나는 바깥쪽에서 기울어진 벽면을 천천히 바로 잡았다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_340",
+      "text": "훨씬 안정적인 것 같아.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_341",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "그렇죠?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_342",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "이대로 쭉 만들어 나가면 될 것 같습니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_343",
+      "text": "응, 그럼 이쪽도 조금만 더….",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_344",
+      "text": "물컹-!",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_345",
+      "text": "…앗!",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_346",
+      "text": "손끝에 힘이 들어간 탓인지,",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_347",
+      "text": "화분의 벽이 살짝 안쪽으로 눌려버렸다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_348",
+      "text": "미안. 나도 모르게 힘이 들어간 것 같아.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_349",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "괜찮습니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_350",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "제가 안쪽을 잡고 있어서, 깊게 눌리지는 않았어요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_351",
+      "text": "다행이다.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_352",
+      "text": "플로라는 눌린 부분을 천천히 바깥으로 밀어냈고,",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_353",
+      "text": "나는 플로라의 움직임에 맞춰, 바깥쪽 형태를 잡아 나갔다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_354",
+      "text": "…손에 자꾸 힘이 들어가네.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_355",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "그럼 제가 좀 도와드려도 괜찮을까요?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_356",
+      "text": "어떻게?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_357",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "잠시 실례하겠습니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_358",
+      "text": "플로라는 한 손으로 화분 안쪽을 받치고,",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_359",
+      "text": "다른 한 손은 조심스레 내 손등 위로 포갰다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_360",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "꽃님, 손에 힘이 많이 들어가 있는 것 같습니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_361",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "어깨와 손목의 힘을 빼고, 손끝만 가볍게 움직여 보세요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_362",
+      "text": "플로라는 안쪽에서 늘린 부분을 받쳐 주며, 내 손을 천천히 이끌었다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_363",
+      "text": "이내 눌렸던 벽면은 조금씩 원래의 모양을 되찾아 갔다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_364",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "확실히 방금보다 가볍게 움직이고 있군요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_365",
+      "text": "플로라가 같이 움직여줘서 그런가 봐.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_366",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "후후, 그럼 이대로 조금만 더 이어가 볼까요?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_367",
+      "text": "응, 이번엔 내가 움직여 볼게.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_368",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "예, 제가 옆에서 잡아드리고 있을 테니, 꽃님께서 천천히 움직여 보세요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_369",
+      "text": "나는 플로라의 손길에 맞춰 조심스럽게 손을 움직였다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_370",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "좋아요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_371",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "지금처럼 천천히 힘을 조절하시면 됩니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_372",
+      "text": "조금만 더 같이 해보자.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_373",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "…예, 조금만 더 같이 해보죠.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_374",
+      "text": "그렇게 우리는 한동안 손을 포갠 채, 함께 화분을 천천히 다듬어갔다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_375",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "이 정도면 화분의 형태는 제법 잘 잡힌 것 같습니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_376",
+      "text": "응, 처음 만든 것 치고는 꽤 괜찮은데?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_377",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "그럼 이제 초벌을 해볼까요?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_378",
+      "text": "좋아, 가마에는 내가 넣을게.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_379",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "예, 부탁드립니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_380",
+      "text": "나는 화분을 조심스럽게 들어 올려, 가마 안으로 천천히 밀어 넣었다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_381",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "이제 예쁘게 구워질 때까지 기다리면 되는군요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_382",
+      "text": "화분 하나 만드는데 생각보다 손이 많이 가네.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_383",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "꽃이 머무를 집이니,",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_384",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "이 정도의 정성이 들어가는 건 당연하지요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_385",
+      "text": "기생초가 마음에 들어 했으면 좋겠다.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_386",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "후후, 분명 마음에 들어 할 거예요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_387",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "꽃님과 제가 정성껏 만들었으니까요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_388",
+      "text": "마지막까지 잘 만들어 보자.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_389",
+      "text": "우우웅-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_390",
+      "text": "가마 안에서는 낮은 작동음이 한동안 이어졌다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_391",
+      "text": "띵-!",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_392",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "완성되었나 봅니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_393",
+      "text": "끼이익-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_394",
+      "text": "가마 문을 열자, 초벌을 마친 화분이 모습을 드러냈고.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_395",
+      "text": "나는 화분을 조심스럽게 꺼내, 작업대 위에 올려두었다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_396",
+      "text": "아까랑은 느낌이 완전히 다르네.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_397",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "흙이 이렇게까지 단단해지다니 신기하군요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_398",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "표면도 매끄럽게 잘 표현된 것 같습니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_399",
+      "text": "걱정했는데 다행이다.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_400",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "이제 드디어 색을 올릴 차례가 왔군요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_401",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "먼저 뭐부터 그려볼까요?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_402",
+      "text": "기생초가 머물집이니까, 기생초부터 그릴까?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_403",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "좋습니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_404",
+      "text": "플로라는 노란색 물감을 붓끝에 묻혔고.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_405",
+      "text": "슥- 슥-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_406",
+      "text": "화분 한가운데에 작은 기생초를 그리기 시작했다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_407",
+      "text": "잘 그리네.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_408",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "오래 바라본 아이니까요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_409",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "손이 자연스럽게 움직이는 것 같습니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_410",
+      "text": "그럼 나는 기생초 주변으로 잎을 그려볼게.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_411",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "예, 꽃님.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_412",
+      "text": "나는 플로라가 그리고 있는 기생초 옆에 작은 잎과 줄기를 그려 넣었다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_413",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "후후.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_414",
+      "text": "…왜 웃어? 이상해?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_415",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "아뇨.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_416",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "꽃님이 그리신 기생초의 잎이 귀여워서요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_417",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "기생초가 보면 좋아할 것 같군요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_418",
+      "text": "그럼 주변에 조금만 더 그려볼게.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_419",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "예, 저도 기생초를 이어 그리겠습니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_420",
+      "text": "플로라는 기생초를 마저 그려나갔고, 나는 그 옆에 작은 잎과 줄기를 하나씩 더해갔다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_421",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "기생초는 이 정도면 된 것 같아요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_422",
+      "text": "응, 잘 그려진 것 같아.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_423",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "그럼 이제.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_424",
+      "text": "우리를 그릴 차례네.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_425",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "예, 꽃님께서 저를 그려주시고,",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_426",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "제가 꽃님을 그려드리기로 했었지요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_427",
+      "text": "…후우.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_428",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "긴장되시나요?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_429",
+      "text": "조금? 기생초 잎이랑은 난이도가 완전히 다르니까….",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_430",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "서툴러도 괜찮습니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_431",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "꽃님이 저를 그려주시는 데에 의미가 있으니까요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_432",
+      "text": "…그럼 그려볼게.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_433",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "후후, 제 어떤 모습을 그려주실지 궁금하군요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_434",
+      "text": "플로라가 웃는 모습을 그려볼까 해.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_435",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "…제 웃는 모습이요?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_436",
+      "text": "응, 그 모습이 좋아서.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_437",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "!!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_438",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "…….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_439",
+      "text": "플로라의 얼굴이 붉어졌다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_440",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "…후후.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_441",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "제 웃는 모습을 좋아해 주셨다니, 기쁩니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_442",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "앞으로 더 자주 웃어드려야겠군요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_443",
+      "text": "톡-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_444",
+      "text": "나는 보라색 물감을 붓에 묻힌 뒤,",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_445",
+      "text": "플로라의 웃는 모습을 떠올리며 천천히 붓을 움직였다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_446",
+      "text": "…이 정도면 되려나?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_447",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "한 번 봐도 될까요?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_448",
+      "text": "…응.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_449",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "…….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_450",
+      "text": "왜 아무 말도 없어…? 마음에 안 들어?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_451",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "꽃님이 저를 떠올리며 그려주신 건데, 마음에 안 들 리가 없죠.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_452",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "정성들여 그려주신 게 느껴져서, 잠시 보고 있었습니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_453",
+      "text": "…다행이다.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_454",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "그럼 이번에는 제가 꽃님을 그려드릴 차례네요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_455",
+      "text": "잘생기게 그려줘.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_456",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "후후, 맡겨주세요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_457",
+      "text": "플로라는 흰색 물감을 붓에 묻힌 뒤,",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_458",
+      "text": "내 모습을 천천히 그려나가기 시작했다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_459",
+      "text": "플로라는 그림을 그리면서, 몇 번이고 내 얼굴을 바라봤다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_460",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "…….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_461",
+      "text": "…계속 쳐다보니까, 좀 민망하네.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_462",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "꽃님을 그리는 중이니까요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_463",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "…꽃님은 눈빛이 참 올곧으시군요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_464",
+      "text": "그래?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_465",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "예, 그래서 그림에 더 잘 담아내고 싶습니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_466",
+      "text": "어떻게 그려질지 궁금하네.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_467",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "실망시키지 않게 열심히 그려드리겠습니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_468",
+      "text": "잠시 후, 플로라가 붓을 내려놓았다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_469",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "완성입니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_470",
+      "text": "화분 위에는 기생초 옆에서 웃고 있는 내 모습이 그려져 있었다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_471",
+      "text": "잘 그렸다.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_472",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "후후, 감사합니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_473",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "꽃님께서 마음에 들어 해주시니 기쁘군요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_474",
+      "text": "그럼 이제 유약을 발라볼까?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_475",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "예, 그림이 번지지 않도록 조심해서 발라보죠.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_476",
+      "text": "스윽- 스윽-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_477",
+      "text": "나와 플로라는 투명 유약을 그림 위로 얇게 발랐다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_478",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "이정도면 충분할 것 같습니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_479",
+      "text": "전체적으로 잘 발린 것 같아.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_480",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "이제 마지막으로 한 번만 더 구우면 완성이군요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_481",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "이번에는 제가 가마에 넣어보겠습니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_482",
+      "text": "알겠어, 조심해.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_483",
+      "text": "플로라는 유약을 바른 화분을 두 손으로 조심스럽게 들어 올린 뒤,",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_484",
+      "text": "가마 안쪽으로 천천히 밀어 넣었다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_485",
+      "text": "삑- 삐빅-! 달칵.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_486",
+      "text": "그리고 가마의 설정을 변경한 뒤, 시작 버튼을 눌렀다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_487",
+      "text": "우우웅-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_488",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "이제 정말 끝이 보이는군요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_489",
+      "text": "그러게.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_490",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "얼른 완성된 모습을 보고 싶습니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_491",
+      "text": "나도.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_492",
+      "text": "띵-!",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_493",
+      "text": "끝난 것 같아.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_494",
+      "text": "끼이익-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_495",
+      "text": "가마 문을 열자, 완성된 화분이 모습을 드러냈다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_496",
+      "text": "…잘 나온 것 같은데?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_497",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "예, 색도 더 또렷해졌고.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_498",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "유약도 고르게 잘 입혀진 것 같습니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_499",
+      "text": "완성된 화분 위에는 기생초와 함께 우리 둘의 모습이 은은하게 빛나고 있었다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_500",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "…….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_501",
+      "text": "플로라는 완성된 화분을 말없이 바라보았다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_502",
+      "text": "마음에 들어?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_503",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "후후, 예, 아주 많이요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_504",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "얼른 이 화분에 기생초가 머무는 모습을 보고 싶습니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_505",
+      "text": "그럼 정원으로 돌아갈까?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_506",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "예, 그러죠.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_507",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "기생초도 기다리고 있을 테니까요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_508",
+      "text": "지잉-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_509",
+      "text": "나와 플로라는 완성된 화분을 들고 정원으로 돌아왔다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_510",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "이제 옮겨 심어 볼까요?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_511",
+      "text": "응, 같이하자.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_512",
+      "text": "플로라는 오래된 화분 앞에 앉아 작은 삽을 들었다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_513",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "우선 뿌리가 다치지 않게 흙을 풀어줘야 합니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_514",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "꽃님은 화분이 흔들리지 않게 잡아주시겠어요?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_515",
+      "text": "알겠어.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_516",
+      "text": "사각- 사각-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_517",
+      "text": "플로라가 삽으로 흙을 천천히 풀자, 기생초를 감싼 흙덩이가 모습을 드러냈다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_518",
+      "text": "그리고 이내 기생초는 오래된 화분에서 천천히 빠져나왔다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_519",
+      "text": "정말 많이 자랐네.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_520",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "예, 그동안 이 안에서 열심히 자라고 있었죠.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_521",
+      "text": "플로라는 기생초의 뿌리를 바라보며 작게 미소 지었다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_522",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "기생초, 조금만 기다려주세요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_523",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "곧 새집으로 옮겨드릴 테니까요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_524",
+      "text": "사박- 사박-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_525",
+      "text": "플로라는 새 화분 안에 부드러운 흙을 깔았고,",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_526",
+      "text": "기생초를 화분 안으로 조심스럽게 옮겼다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_527",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "꽃님.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_528",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "기생초 주변으로 흙을 덮어야 하는데, 도와주시겠습니까?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_529",
+      "text": "당연하지.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_530",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "감사합니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_531",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "빈틈을 채운다는 느낌으로 살짝만 덮어주세요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_532",
+      "text": "사박- 사박-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_533",
+      "text": "우리는 기생초 주변으로 흙을 덮었고.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_534",
+      "text": "마지막 흙이 채워지자, 기생초는 새 화분 안에 편안하게 자리 잡았다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_535",
+      "text": "살랑-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_536",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "후후, 기생초의 잎이 작게 흔들리는 걸 보니, 새 화분이 마음에 든 모양입니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_537",
+      "text": "다행이다.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_538",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "꽃님.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_539",
+      "text": "응?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_540",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "앞으로 이 화분은 저에게 무척 소중한 물건이 될 것 같습니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_541",
+      "text": "플로라는 손끝으로 화분 가장자리를 조심스럽게 쓸었다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_542",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "꽃님과 함께 색을 고르던 일도,",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_543",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "서툰 손길로 흙을 빚던 시간도,",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_544",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "화분 위에 함께 그림을 그리던 순간도,",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_545",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "그리고 이 아이를 새집에 옮겨 심은 지금도….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_546",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "모두 이 화분에 남아 있으니까요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_547",
+      "text": "나도 그럴 것 같아.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_548",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "후후, 그렇게 말씀해 주시니 기쁘군요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_549",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "저와 함께 화분을 만들어 주셔서 감사합니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_550",
+      "text": "나도 플로라와 같이 만들 수 있어서 좋았어.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_551",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "…….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_552",
+      "text": "플로라는 새 화분 안에 자리 잡은 기생초를 가만히 바라보았다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_553",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "이 아이는 앞으로도 잘 자랄 거예요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_554",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "꽃님과 제가 함께 돌봐온 아이고,",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_555",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "앞으로도 소중히 돌볼 테니까요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_556",
+      "text": "응, 분명 그럴 거야.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_557",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "후후.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_558",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "꽃님과 함께 무언가를 만든다는 건,",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_559",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "생각했던 것보다 훨씬 즐거운 일이군요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_560",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "다음엔 꽃님과 또 다른걸 함께 만들어보고 싶습니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_561",
+      "text": "좋아, 그때도 같이 만들자.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_562",
+      "speaker": "flora",
+      "speakerName": "플로라",
+      "text": "예, 약속입니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rz-09/kd-23/becc4bf55ffa66874b39c62a3a2b9771.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_563",
+      "text": "플로라는 작게 웃으며, 내 말에 조용히 고개를 끄덕였다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_564",
+      "text": "새 화분 안에서 기생초는 편안히 흔들리고 있었고,",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_flora_565",
+      "text": "플로라와 나는 그 모습을 한동안 바라봤다.",
+      "window": "Narration",
+      "voice": null
+    }
+  ]
+}

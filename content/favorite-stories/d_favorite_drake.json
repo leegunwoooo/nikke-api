@@ -1,0 +1,4903 @@
+{
+  "groupId": "d_favorite_drake",
+  "type": "favorite",
+  "name": "드레이크는 어쩔 수 없는 히어로",
+  "nikke": "드레이크",
+  "sourceVideo": "https://youtu.be/LvVc1SpH5w0",
+  "lines": [
+    {
+      "id": "d_favorite_drake_1",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "후후.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_2",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "후후후.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_3",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "후하하하하-!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_4",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "오랜만에 빌런 연합 활동을 하러 가볼…!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_5",
+      "text": "툭-!",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_6",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "음?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_7",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "뭐가 떨어진….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_8",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "이런!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_9",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "나의 소중한 테러파이가!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_10",
+      "text": "드레이크는 바닥에 떨어진 빌런 피규어를 황급히 주워들었다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_11",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "다친 데는 없나?!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_12",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "후우….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_13",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "다행히 없는 것 같군.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_14",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "역시 내가 선택한 빌런답다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_15",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "충격에도 강하군.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_16",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "흠. 그래!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_17",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "오늘은 네놈이 했던 악행을 따라 해야겠다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_18",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "그게 내가 빌런이 되고 싶었던 이유기도 하니까.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_19",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "후후.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_20",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "그럼, 본격적으로 빌런 활동을 하러 가볼까.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_21",
+      "text": "평화롭다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_22",
+      "text": "이 평화를 깨고 싶지 않다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_23",
+      "text": "제발 오늘만큼은 아무도 안 오게 해주세….",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_24",
+      "text": "지잉-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_25",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "네놈! 준비해라!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_26",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "오랜만의 빌런 활동 개시다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_27",
+      "text": "…….",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_28",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "네놈도 알겠지만.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_29",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "이 몸은 히어로로서 입지를 견고히 쌓은 다음.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_30",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "빌런으로 전향하겠다고 했었다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_31",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "그래서 이 몸은 지금까지 히어로 가면을 쓴 채. 많은 입지를 다져왔지.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_32",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "하지만 더 이상 히어로 드레이크로 불릴 순 없다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_33",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "히어로의 입지는 이 정도면 충분해.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_34",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "이제 빌런으로 전향할 때가 왔다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_35",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "그리고 빌런 활동을 너무 안 하면 없어질까 봐.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_36",
+      "text": "…….",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_37",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "?? 네놈! 왜 아무 대답이 없지?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_38",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "못 들은 건가!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_39",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "얼른 대답해라!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_40",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "오랜만의 빌런 활동 개시다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_41",
+      "text": "…안 하고 싶은데.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_42",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "엇.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_43",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "안 하고 싶으면 안 되는데.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_44",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "하고 싶다고 해라.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_45",
+      "text": "그래… 하자 해.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_46",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "좋다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_47",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "후하하하하-!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_48",
+      "text": "…….",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_49",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "아.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_50",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "본격적인 활동을 들어가기 전에.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_51",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "빌런 연합의 새로운 멤버를 소개하지.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_52",
+      "text": "새로운 멤버?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_53",
+      "text": "드레이크는 나에게 피규어 하나를 보여줬다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_54",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "자, 인사해라.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_55",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "최강 빌런 [테러파이]다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_56",
+      "text": "…평범한 빌런 캐릭터 피규어잖아.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_57",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "네놈!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_58",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "말조심해라!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_59",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "이건 평범한 빌런 캐릭터 피규어가 아니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_60",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "현존하는 모든 애니메이션 빌런 캐릭터 중에.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_61",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "제일 극악무도한 빌런 캐릭터지.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_62",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "마치 나처럼.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_63",
+      "text": "…….",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_64",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "어떻게 보면 최고의 빌런 드레이크를 있게 해준 캐릭터다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_65",
+      "text": "…그래서 오늘은 어떤 악행을 저지를 거야?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_66",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "좋은 질문이군.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_67",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "오늘은 최강 빌런 테러파이가 저질렀던 악행들을.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_68",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "방주에서 똑같이 저지르고 다닐 거다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_69",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "후후. 기대되는군.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_70",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "네놈도 기대되지 않나?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_71",
+      "text": "걱정돼.",
+      "window": "Choice",
+      "voice": null,
+      "chosen": true
+    },
+    {
+      "id": "d_favorite_drake_72",
+      "text": "…기대돼.",
+      "window": "Choice",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_73",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "왜지?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_74",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "걱정은 하지 마라.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_75",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "최고의 빌런 드레이크와.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_76",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "최고의 빌런 테러파이가 있으니까.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_77",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "그럼 출발하지!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_78",
+      "text": "아이고, 머리야.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_79",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "첫 번째 빌런 활동은 이곳에서 할 거다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_80",
+      "text": "…메이드 카페?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_81",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "그래!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_82",
+      "text": "여기서 어떤 악행을 저지르려고?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_83",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "이곳에 온 손님들에게 저주의 쪽지를 남길 거다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_84",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "애니메이션에서도 테러파이가 카페에 온 손님들에게 저주의 쪽지를 남겨 모두를 괴롭게 한 에피소드가 있지.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_85",
+      "text": "근데 왜 카페가 아니라 메이드 카페에 온 거야?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_86",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "…윽.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_87",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "카페 주인들은 성가셔서 싫다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_88",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "반면에 메이드 카페엔 착한 놈들이 많지!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_89",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "원래 빌런은 착한 사람들을 괴롭혀야 더 즐거운 법이다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_90",
+      "text": "…….",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_91",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "그리고 한때는 내가 이곳에서 메이드복을 입고 히어로 입지를 쌓은 적도 있었지.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_92",
+      "text": "그건 드레이크 네가 잘못해서….",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_93",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "그럼 들어가자!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_94",
+      "text": "…….",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_95",
+      "text": "딸랑-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_96",
+      "speaker": "soda",
+      "speakerName": "소다",
+      "text": "앗, 죄송하지만 지금은… 호에엥?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zo-97/oa-63/91dc439091b6a061b3438f400135929e.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_97",
+      "speaker": "soda",
+      "speakerName": "소다",
+      "text": "주인님~? 그리고 드레이크 아가씨~?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zo-97/oa-63/91dc439091b6a061b3438f400135929e.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_98",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "네놈! 잘 지냈나? 오랜만이군.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_99",
+      "speaker": "soda",
+      "speakerName": "소다",
+      "text": "헤헤, 오랜만이에요오~",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zo-97/oa-63/91dc439091b6a061b3438f400135929e.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_100",
+      "speaker": "soda",
+      "speakerName": "소다",
+      "text": "다들 잘 지내셨나요오~?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zo-97/oa-63/91dc439091b6a061b3438f400135929e.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_101",
+      "text": "잘 지냈어.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_102",
+      "text": "에이드랑 코코아는?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_103",
+      "speaker": "soda",
+      "speakerName": "소다",
+      "text": "다음 영업을 위해 필요한 식재료를 사러 나갔어요오~",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zo-97/oa-63/91dc439091b6a061b3438f400135929e.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_104",
+      "speaker": "soda",
+      "speakerName": "소다",
+      "text": "지금은 브레이크 타임이거든요오~",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zo-97/oa-63/91dc439091b6a061b3438f400135929e.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_105",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "…이런!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_106",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "그럼 우리도 나가야하나?!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_107",
+      "speaker": "soda",
+      "speakerName": "소다",
+      "text": "메이드 카페까지 오셨는데 그냥 가시면 좀 그러니까….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zo-97/oa-63/91dc439091b6a061b3438f400135929e.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_108",
+      "speaker": "soda",
+      "speakerName": "소다",
+      "text": "음료라도 드릴까요오~?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zo-97/oa-63/91dc439091b6a061b3438f400135929e.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_109",
+      "speaker": "soda",
+      "speakerName": "소다",
+      "text": "디저트는 안되지만….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zo-97/oa-63/91dc439091b6a061b3438f400135929e.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_110",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "!! 좋다! 음료를 내와라!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_111",
+      "speaker": "soda",
+      "speakerName": "소다",
+      "text": "헤헤, 무슨 음료로 드릴까요오~?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zo-97/oa-63/91dc439091b6a061b3438f400135929e.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_112",
+      "text": "나는 소다가 잘하는 거로 부탁해.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_113",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "이 몸은.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_114",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "정확히 60도 온도로 맞춘 우유에 초콜릿과 코코넛을 왕창 갈아 넣고 휘핑크림은 반만 올린 음료로 부탁하지.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_115",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "그리고 휘핑크림 위엔 코코아 가루도….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_116",
+      "speaker": "soda",
+      "speakerName": "소다",
+      "text": "호엣…! 너, 너무 어려워서 제가 그건 못 만들 것 같은 데에…!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zo-97/oa-63/91dc439091b6a061b3438f400135929e.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_117",
+      "speaker": "soda",
+      "speakerName": "소다",
+      "text": "지금 재료가 없기도 하고… 죄송해요오….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zo-97/oa-63/91dc439091b6a061b3438f400135929e.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_118",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "그럼 그냥 아무거나 줘.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_119",
+      "speaker": "soda",
+      "speakerName": "소다",
+      "text": "헤헤, 네에~! 감사해요오~",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zo-97/oa-63/91dc439091b6a061b3438f400135929e.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_120",
+      "speaker": "soda",
+      "speakerName": "소다",
+      "text": "금방 만들어 올게요오~!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zo-97/oa-63/91dc439091b6a061b3438f400135929e.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_121",
+      "text": "…….",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_122",
+      "text": "타다닥-!",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_123",
+      "text": "소다는 주방 안으로 들어갔다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_124",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "후후.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_125",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "최고의 타이밍이다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_126",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "행운이 따르는군. 테러파이 덕분인가.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_127",
+      "text": "드레이크는 피규어를 테이블 가장자리에 앉혔다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_128",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "그럼 본격적인 악행을 저질러볼까.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_129",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "잘 봐라, 테러파이! 이 몸의 악행을.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_130",
+      "text": "뿍-!",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_131",
+      "text": "사각-! 사각-! 슥-! 슥-!",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_132",
+      "text": "…드레이크는 펜을 꺼낸 뒤, 종이에 글씨를 써 내려갔다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_133",
+      "text": "[가까운 사람에게 배신당할 거다!]",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_134",
+      "text": "[포기해라! 어차피 너는 안될 거다!]",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_135",
+      "text": "[후회할 일이 반드시 생길 거다!]",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_136",
+      "text": "이건 그냥 악담 아니야?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_137",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "아니다! 저주다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_138",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "행복하기 위해 온 메이드 카페에서 이 쪽지를 발견한다면 기분이 상당히 안 좋겠지.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_139",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "내가 쓴 쪽지를 발견하고는 다들 고통에 몸부림칠 거다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_140",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "머릿속에 맴돌 겠지.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_141",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "계속 생각나서 밤잠을 설칠 거야.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_142",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "윽… 상상만 해도 내가 다 괴롭군.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_143",
+      "text": "…….",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_144",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "네놈은 안 쓰고 뭐 하는 거지? 빨리 써라!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_145",
+      "text": "아, 나도 써야 하는 거구나. 알겠어.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_146",
+      "text": "…뭐라고 써야 할까.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_147",
+      "text": "어때?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_148",
+      "text": "[엉덩이에 모기 10방 물리기를.]",
+      "window": "Choice",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_149",
+      "text": "[새끼발가락을 모서리에 찧기를.]",
+      "window": "Choice",
+      "voice": null,
+      "chosen": true
+    },
+    {
+      "id": "d_favorite_drake_150",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "…….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_151",
+      "text": "…….",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_152",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "아, 이건 좀.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_153",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "기각이다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_154",
+      "text": "??",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_155",
+      "text": "잠시 후.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_156",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "후하하하-! 완성이다-!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_157",
+      "text": "드레이크는 저주 쪽지를 테이블 위. 세팅되어 있는 식기 밑에 끼워 두었다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_158",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "세팅 완료.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_159",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "어떤가, 테러파이. 네놈의 악행을 이 몸이 따라 하는 것이.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_160",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "음!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_161",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "표정을 보니 자랑스러운 것 같군.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_162",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "후하하하하-!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_163",
+      "text": "…….",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_164",
+      "speaker": "soda",
+      "speakerName": "소다",
+      "text": "헤헤, 주문하신 음료 나왔습니다~!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zo-97/oa-63/91dc439091b6a061b3438f400135929e.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_165",
+      "speaker": "soda",
+      "speakerName": "소다",
+      "text": "드레이크 아가씨는 초코쉐이크고 주인님은 아이스 아메리카노에요오~",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zo-97/oa-63/91dc439091b6a061b3438f400135929e.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_166",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "오, 맛있겠군.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_167",
+      "text": "꿀꺽-! 꿀꺽-! 꿀꺽-!",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_168",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "맛있군!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_169",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "잘 마셨다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_170",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "얼마지?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_171",
+      "speaker": "soda",
+      "speakerName": "소다",
+      "text": "헤헤, 계산은 안 하셔도 돼요! 제가 그냥 무료로….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zo-97/oa-63/91dc439091b6a061b3438f400135929e.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_172",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "세상에 공짜는 없다! 얼른 계산해라!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_173",
+      "speaker": "soda",
+      "speakerName": "소다",
+      "text": "진짜 괜찮은데에…",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zo-97/oa-63/91dc439091b6a061b3438f400135929e.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_174",
+      "speaker": "soda",
+      "speakerName": "소다",
+      "text": "알겠습니다아~",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zo-97/oa-63/91dc439091b6a061b3438f400135929e.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_175",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "그럼 이 몸은 다음 일정 때문에 바빠서 이만 가겠다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_176",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "가자!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_177",
+      "text": "??",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_178",
+      "text": "나 아직 한 입도 안 마셨는….",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_179",
+      "text": "드레이크는 메이드 카페를 빠져나갔다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_180",
+      "speaker": "soda",
+      "speakerName": "소다",
+      "text": "호에엥….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zo-97/oa-63/91dc439091b6a061b3438f400135929e.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_181",
+      "speaker": "soda",
+      "speakerName": "소다",
+      "text": "주인님도 드레이크 아가씨처럼 원샷하고 가세요오…!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zo-97/oa-63/91dc439091b6a061b3438f400135929e.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_182",
+      "text": "꿀꺽-! 꿀꺽-! 꿀꺽-!",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_183",
+      "text": "탁-!",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_184",
+      "text": "…후욱.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_185",
+      "text": "고마워, 소다. 다음에 또 올게.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_186",
+      "speaker": "soda",
+      "speakerName": "소다",
+      "text": "헤헤, 네에~! 언제든 또 오세요오~",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zo-97/oa-63/91dc439091b6a061b3438f400135929e.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_187",
+      "text": "아, 맞다.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_188",
+      "text": "테이블 식기 밑에 쪽지가 하나씩 있을 텐데 나중에 그거 다 버려줘, 알겠지?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_189",
+      "speaker": "soda",
+      "speakerName": "소다",
+      "text": "호에엥? 식기 밑에요?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zo-97/oa-63/91dc439091b6a061b3438f400135929e.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_190",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "네놈! 뭘 꾸물대고 있는 거냐! 빨리 와라!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_191",
+      "text": "꼭 버려야해! 꼭!",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_192",
+      "speaker": "soda",
+      "speakerName": "소다",
+      "text": "호, 호에엥! 알겠어요오~",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zo-97/oa-63/91dc439091b6a061b3438f400135929e.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_193",
+      "text": "…나는 어리둥절해하는 소다를 뒤로한 채 메이드 카페를 빠져나왔다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_194",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "만족!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_195",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "대만족!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_196",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "테러파이가 곁에 있어서 그런지 빌런 활동이 순조롭군!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_197",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "하아… 나는 정말… 너무 잔혹하다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_198",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "…이러다 지옥에 갈지도 모르겠군.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_199",
+      "text": "…후우.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_200",
+      "text": "소다한테 이야기 하고 왔으니 큰 문제는 없겠지.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_201",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "이제 두 번째 악행을 저지르러 간다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_202",
+      "text": "…….",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_203",
+      "text": "커피를 급하게 마신 것 때문일까, 아니면 드레이크 때문일까.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_204",
+      "text": "속이 꽉 막힌 기분이다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_205",
+      "text": "…진짜 경찰서에서 빌런 활동 할 거야?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_206",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "그렇다! 진정한 빌런이라면 경찰을 골탕 먹여야지.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_207",
+      "text": "…안될 것 같은데.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_208",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "네놈!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_209",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "크게 말해라! 잘 안 들린다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_210",
+      "text": "아무 말 안 했어.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_211",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "그럼 말고.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_212",
+      "text": "이번엔 무슨 악행을 저지를 거야? …설마.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_213",
+      "text": "경찰을 사칭할 거야?",
+      "window": "Choice",
+      "voice": null,
+      "chosen": true
+    },
+    {
+      "id": "d_favorite_drake_214",
+      "text": "범인들을 풀어줄 거야?",
+      "window": "Choice",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_215",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "네놈! 그건 법을 어기는 짓이다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_216",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "그런 짓은 절대로 해서는 안 된다는 걸 모르나!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_217",
+      "text": "…….",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_218",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "경찰서에 있는 수갑을 모조리 다 고장 낼 거다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_219",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "애니메이션에서도 테러파이가 수갑을 고장 내는 바람에 경찰이 중요한 순간에 활약 못하는 에피소드가 있었지.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_220",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "이번엔 그걸 따라 할 거다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_221",
+      "text": "근데 경찰서엔 경찰이 있을 텐데 수갑을 어떻게 고장 내?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_222",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "경찰을 쫓아내야지.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_223",
+      "text": "어떻게?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_224",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "후후, 그건 이 몸이 보여주지!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_225",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "가자!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_226",
+      "text": "…수습해야 할 일이 점점 늘어나는 기분이다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_227",
+      "text": "지잉-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_228",
+      "speaker": "miranda",
+      "speakerName": "미란다",
+      "text": "안녕하십니까! 지휘관! 드레이크!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vg-25/er-68/88e9d12d692695aaae54b796a4e3d0a4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_229",
+      "text": "폴리랑 키리는?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_230",
+      "speaker": "miranda",
+      "speakerName": "미란다",
+      "text": "순찰 나갔습니다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vg-25/er-68/88e9d12d692695aaae54b796a4e3d0a4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_231",
+      "text": "…그럼 미란다만 있는 거야?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_232",
+      "speaker": "miranda",
+      "speakerName": "미란다",
+      "text": "예! 그렇습니다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vg-25/er-68/88e9d12d692695aaae54b796a4e3d0a4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_233",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "앙칼진 강아지가 없다니. 오늘은 운이 좋군!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_234",
+      "speaker": "miranda",
+      "speakerName": "미란다",
+      "text": "??",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vg-25/er-68/88e9d12d692695aaae54b796a4e3d0a4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_235",
+      "speaker": "miranda",
+      "speakerName": "미란다",
+      "text": "경찰서에서는 강아지를 키우지 않습니다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vg-25/er-68/88e9d12d692695aaae54b796a4e3d0a4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_236",
+      "text": "…….",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_237",
+      "speaker": "miranda",
+      "speakerName": "미란다",
+      "text": "그런데 두 분은 경찰서엔 어쩐 일이십니까?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vg-25/er-68/88e9d12d692695aaae54b796a4e3d0a4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_238",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "신고를 하러 왔다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_239",
+      "speaker": "miranda",
+      "speakerName": "미란다",
+      "text": "예?? 무슨 신고 말씀입니까?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vg-25/er-68/88e9d12d692695aaae54b796a4e3d0a4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_240",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "공원에 위험물이 있다는 신고다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_241",
+      "speaker": "miranda",
+      "speakerName": "미란다",
+      "text": "…!! 정말입니까?!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vg-25/er-68/88e9d12d692695aaae54b796a4e3d0a4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_242",
+      "speaker": "miranda",
+      "speakerName": "미란다",
+      "text": "큰일입니다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vg-25/er-68/88e9d12d692695aaae54b796a4e3d0a4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_243",
+      "speaker": "miranda",
+      "speakerName": "미란다",
+      "text": "지금 당장 폴리와 키리에게 출동 연락을 해야겠습니다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vg-25/er-68/88e9d12d692695aaae54b796a4e3d0a4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_244",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "음? 네놈이 출동해야 하는 거 아닌가?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_245",
+      "speaker": "miranda",
+      "speakerName": "미란다",
+      "text": "저는 경찰서를 지켜야 합니다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vg-25/er-68/88e9d12d692695aaae54b796a4e3d0a4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_246",
+      "speaker": "miranda",
+      "speakerName": "미란다",
+      "text": "자리를 비울 순 없습니다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vg-25/er-68/88e9d12d692695aaae54b796a4e3d0a4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_247",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "그건 걱정 마라! 내가 봐주지.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_248",
+      "speaker": "miranda",
+      "speakerName": "미란다",
+      "text": "예? 그건 절대 안 됩니다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vg-25/er-68/88e9d12d692695aaae54b796a4e3d0a4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_249",
+      "speaker": "miranda",
+      "speakerName": "미란다",
+      "text": "특히나 드레이크라면 더더욱이나 맡길 수 없습니다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vg-25/er-68/88e9d12d692695aaae54b796a4e3d0a4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_250",
+      "speaker": "miranda",
+      "speakerName": "미란다",
+      "text": "폴리가 절대로! 무슨 일이 있어도!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vg-25/er-68/88e9d12d692695aaae54b796a4e3d0a4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_251",
+      "speaker": "miranda",
+      "speakerName": "미란다",
+      "text": "드레이크가 경찰서에 왔을 때, 혼자 두지 말라고 했기 때문입니다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vg-25/er-68/88e9d12d692695aaae54b796a4e3d0a4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_252",
+      "speaker": "miranda",
+      "speakerName": "미란다",
+      "text": "우선 폴리에게 연락 하겠습니다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vg-25/er-68/88e9d12d692695aaae54b796a4e3d0a4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_253",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "…윽. 예상외의 복병이군.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_254",
+      "text": "…….",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_255",
+      "text": "드레이크는 나에게 다가와 귓속말을 속삭였다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_256",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "네놈, 보고만 있지 말고 무슨 말이라도 해서 저 녀석을 쫓아내라.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_257",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "그래야 수갑을 고장 낼 수 있다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_258",
+      "text": "…그래도 어떻게 경찰서에서 경찰을 쫓아내.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_259",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "네놈! 빌런 연합 아닌가?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_260",
+      "text": "하아….",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_261",
+      "text": "미란다.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_262",
+      "speaker": "miranda",
+      "speakerName": "미란다",
+      "text": "예?!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vg-25/er-68/88e9d12d692695aaae54b796a4e3d0a4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_263",
+      "text": "나도 경찰서에 있을 테니까, 걱정 말고 다녀와. 드레이크는 단속 잘하고 있을게.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_264",
+      "speaker": "miranda",
+      "speakerName": "미란다",
+      "text": "…으음.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vg-25/er-68/88e9d12d692695aaae54b796a4e3d0a4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_265",
+      "text": "나 못 믿어?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_266",
+      "speaker": "miranda",
+      "speakerName": "미란다",
+      "text": "당연히 지휘관은 믿습니다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vg-25/er-68/88e9d12d692695aaae54b796a4e3d0a4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_267",
+      "speaker": "miranda",
+      "speakerName": "미란다",
+      "text": "하지만…!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vg-25/er-68/88e9d12d692695aaae54b796a4e3d0a4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_268",
+      "speaker": "miranda",
+      "speakerName": "미란다",
+      "text": "…으으.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vg-25/er-68/88e9d12d692695aaae54b796a4e3d0a4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_269",
+      "speaker": "miranda",
+      "speakerName": "미란다",
+      "text": "그래도 안 됩니다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vg-25/er-68/88e9d12d692695aaae54b796a4e3d0a4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_270",
+      "speaker": "miranda",
+      "speakerName": "미란다",
+      "text": "경찰은 경찰서를 지켜야 합니다! 우선 폴리에게 연락하겠습니다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vg-25/er-68/88e9d12d692695aaae54b796a4e3d0a4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_271",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "…….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_272",
+      "text": "…….",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_273",
+      "text": "…안 될 것 같아. 이번 건 포기하자.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_274",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "크흣… 이럴 수가.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_275",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "원대했던 나의 계획이…!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_276",
+      "speaker": "miranda",
+      "speakerName": "미란다",
+      "text": "어…?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vg-25/er-68/88e9d12d692695aaae54b796a4e3d0a4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_277",
+      "speaker": "miranda",
+      "speakerName": "미란다",
+      "text": "어어엇…!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vg-25/er-68/88e9d12d692695aaae54b796a4e3d0a4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_278",
+      "text": "?? 왜 그래?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_279",
+      "speaker": "miranda",
+      "speakerName": "미란다",
+      "text": "방금 공원에서 위험물 신고가 하나 더 접수됐습니다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vg-25/er-68/88e9d12d692695aaae54b796a4e3d0a4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_280",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "!!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_281",
+      "text": "진짜?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_282",
+      "speaker": "miranda",
+      "speakerName": "미란다",
+      "text": "이거 큰일입니다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vg-25/er-68/88e9d12d692695aaae54b796a4e3d0a4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_283",
+      "speaker": "miranda",
+      "speakerName": "미란다",
+      "text": "폴리도 키리도 연락을 안 받는데….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vg-25/er-68/88e9d12d692695aaae54b796a4e3d0a4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_284",
+      "speaker": "miranda",
+      "speakerName": "미란다",
+      "text": "…흐으음.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vg-25/er-68/88e9d12d692695aaae54b796a4e3d0a4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_285",
+      "speaker": "miranda",
+      "speakerName": "미란다",
+      "text": "…흐으으으음!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vg-25/er-68/88e9d12d692695aaae54b796a4e3d0a4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_286",
+      "speaker": "miranda",
+      "speakerName": "미란다",
+      "text": "안 되겠습니다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vg-25/er-68/88e9d12d692695aaae54b796a4e3d0a4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_287",
+      "speaker": "miranda",
+      "speakerName": "미란다",
+      "text": "지휘관! 제가 빠르게 확인하고 올 테니.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vg-25/er-68/88e9d12d692695aaae54b796a4e3d0a4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_288",
+      "speaker": "miranda",
+      "speakerName": "미란다",
+      "text": "드레이크가 경찰서에서 아무 짓도 못 하게 감시 부탁드려도 되겠습니까?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vg-25/er-68/88e9d12d692695aaae54b796a4e3d0a4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_289",
+      "speaker": "miranda",
+      "speakerName": "미란다",
+      "text": "아무래도 공원에서 큰일이 나는 것보단 나을 것 같습니다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vg-25/er-68/88e9d12d692695aaae54b796a4e3d0a4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_290",
+      "text": "…응, 노력해 볼게.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_291",
+      "speaker": "miranda",
+      "speakerName": "미란다",
+      "text": "감사합니다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vg-25/er-68/88e9d12d692695aaae54b796a4e3d0a4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_292",
+      "speaker": "miranda",
+      "speakerName": "미란다",
+      "text": "그럼 빠르게 확인하고 오겠습니다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vg-25/er-68/88e9d12d692695aaae54b796a4e3d0a4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_293",
+      "text": "지잉-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_294",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "후하하하하-!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_295",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "오늘따라 모든 게 내 뜻대로 흘러가는군!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_296",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "그리고 네놈도 든든한 빌런연합의 일원이 되어가고 있고.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_297",
+      "text": "…….",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_298",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "좋다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_299",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "이제 악행을 저질러 볼까!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_300",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "네놈도 수갑이 어디 있는지 찾아봐라!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_301",
+      "text": "그런데 진짜 하려고?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_302",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "그럼 가짜로 하냐!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_303",
+      "text": "경찰서에 있는 물건은 함부로 만졌다가 진짜 큰일 날 수도 있어.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_304",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "후하하!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_305",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "상관없다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_306",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "빌런이라면 이 정도쯤은…!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_307",
+      "text": "벌금도 물어내야 할걸?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_308",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "!!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_309",
+      "text": "최소 100만 크레디트부터 시작할 텐데.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_310",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "후, 후하하!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_311",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "…사, 상관없다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_312",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "비, 빌런이라면… 그, 그 정도쯤은…!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_313",
+      "text": "최대 1000만 크레디트까지 내야하는 거로 알고 있어.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_314",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "…….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_315",
+      "text": "…드레이크?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_316",
+      "text": "지잉-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_317",
+      "speaker": "quiry",
+      "speakerName": "키리",
+      "text": "폴리 오늘 순찰 생각보다 꽤 순조롭지 않나요?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/am-53/jy-95/1f5c00eb307f6f57ce252d5905a20b22.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_318",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "맞아영. 꽤 한가… 지휘관?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_319",
+      "speaker": "quiry",
+      "speakerName": "키리",
+      "text": "어? 지휘관?! 안녕하세요!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/am-53/jy-95/1f5c00eb307f6f57ce252d5905a20b22.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_320",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "경찰서엔 어쩐 일이세영?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_321",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "이런!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_322",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "강아지라 그런가 돌아오는 속도가 빠르군.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_323",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "어쩔 수 없지.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_324",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "테러파이. 미안하지만 이 건은 철수다!!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_325",
+      "text": "??",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_326",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "드레이크?! 크르릉… 여기서 뭐 하고 계세영?!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_327",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "이 몸은 경찰서를 맡고 있었다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_328",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "경찰이 돌아왔으니, 이 몸도 이만 돌아가겠다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_329",
+      "text": "…드레이크는 부리나케 경찰서를 빠져나갔다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_330",
+      "speaker": "quiry",
+      "speakerName": "키리",
+      "text": "에에…? 이게 무슨 일인 걸까요?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/am-53/jy-95/1f5c00eb307f6f57ce252d5905a20b22.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_331",
+      "speaker": "quiry",
+      "speakerName": "키리",
+      "text": "그리고 미란다는 어디에….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/am-53/jy-95/1f5c00eb307f6f57ce252d5905a20b22.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_332",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "그러게영!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_333",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "지휘관, 혹시 미란다 못 보셨나영?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_334",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "경찰서 절대 비우지 말랬는뎅…!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_335",
+      "speaker": "quiry",
+      "speakerName": "키리",
+      "text": "어? 폴리! 메시지 확인해봐요! 미란다가 연락이 왔었어요!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/am-53/jy-95/1f5c00eb307f6f57ce252d5905a20b22.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_336",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "엥?! 진짜네영!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_337",
+      "text": "…경찰서엔 아무 일도 없었어.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_338",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "그렇군영! 드레이크 때문에 혹시나 싶었는뎅 다행이네영!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_339",
+      "speaker": "quiry",
+      "speakerName": "키리",
+      "text": "에이~ 폴리. 바보가 아닌 이상.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/am-53/jy-95/1f5c00eb307f6f57ce252d5905a20b22.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_340",
+      "speaker": "quiry",
+      "speakerName": "키리",
+      "text": "경찰서에 제발로와서 누가 허튼짓을 하나요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/am-53/jy-95/1f5c00eb307f6f57ce252d5905a20b22.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_341",
+      "text": "…….",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_342",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "간혹가다 그런 사람들이 있더라구영.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_343",
+      "text": "폴리랑 키리가 왔으니 나도 이만 가볼게.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_344",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "아, 넹! 고생하셨어영!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_345",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "그런데 지휘관! 경찰서엔 왜 오신건가영?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_346",
+      "text": "아… 그….",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_347",
+      "text": "미란다가 알려줄 거야.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_348",
+      "text": "난 이만 가볼게, 바빠서.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_349",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "?? 넹! 알겠습니당!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_350",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "두 번째 활동은 방해꾼 탓에 실패다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_351",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "아쉽군! 하지만 괜찮다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_352",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "아직 시간은 많으니.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_353",
+      "text": "…….",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_354",
+      "text": "우리 좀 이제 쉬면 안 될까?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_355",
+      "text": "너무 힘들어서. …정신적으로.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_356",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "쯧. 나약하군.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_357",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "테러파이의 악행은 무수히 많기 때문에. 아직 해야 할 빌런 활동이 산더미다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_358",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "이제 세번째 활동하러 무기고로….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_359",
+      "text": "그 순간.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_360",
+      "text": "달칵-!",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_361",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "어어?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_362",
+      "text": "어?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_363",
+      "text": "…테러파이의 목이 부러져 버렸다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_364",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "…….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_365",
+      "text": "…….",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_366",
+      "text": "딸랑-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_367",
+      "speaker": "mica",
+      "speakerName": "미카",
+      "text": "어서 오… 아저씨?!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/pe-91/pd-61/29099e5790a79002eb8feeea3170fe36.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_368",
+      "speaker": "belorta",
+      "speakerName": "벨로타",
+      "text": "꺄~♡",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/av-87/zg-56/c7c102300d1cb6a9640cc97a9a095b38.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_369",
+      "speaker": "belorta",
+      "speakerName": "벨로타",
+      "text": "아저씨, 어서 와♡",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/av-87/zg-56/c7c102300d1cb6a9640cc97a9a095b38.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_370",
+      "speaker": "mica",
+      "speakerName": "미카",
+      "text": "장난감 사러 오셨어요?!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/pe-91/pd-61/29099e5790a79002eb8feeea3170fe36.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_371",
+      "text": "아니, 그건 아닌데….",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_372",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "꼬맹이들!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_373",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "혹시 피규어를 고칠 줄 아나?!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_374",
+      "speaker": "mica",
+      "speakerName": "미카",
+      "text": "예? 피규어요?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/pe-91/pd-61/29099e5790a79002eb8feeea3170fe36.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_375",
+      "speaker": "belorta",
+      "speakerName": "벨로타",
+      "text": "흐응~ 무슨 피규어인데?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/av-87/zg-56/c7c102300d1cb6a9640cc97a9a095b38.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_376",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "이거다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_377",
+      "speaker": "belorta",
+      "speakerName": "벨로타",
+      "text": "어? 얘 테러파이잖아♡",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/av-87/zg-56/c7c102300d1cb6a9640cc97a9a095b38.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_378",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "!!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_379",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "네놈! 테러파이를 아나?!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_380",
+      "speaker": "belorta",
+      "speakerName": "벨로타",
+      "text": "그럼~ 알지♡",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/av-87/zg-56/c7c102300d1cb6a9640cc97a9a095b38.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_381",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "후후, 최강 빌런 테러파이를 아는 사람이 나오다니 반갑군.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_382",
+      "speaker": "belorta",
+      "speakerName": "벨로타",
+      "text": "최강 빌런?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/av-87/zg-56/c7c102300d1cb6a9640cc97a9a095b38.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_383",
+      "speaker": "mica",
+      "speakerName": "미카",
+      "text": "우우… 생긴 건 빌런처럼 안 생겼는데에….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/pe-91/pd-61/29099e5790a79002eb8feeea3170fe36.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_384",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "아주 무시무시한 악행을 저지르고 다니는 거로 유명하지!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_385",
+      "speaker": "belorta",
+      "speakerName": "벨로타",
+      "text": "흐응… 그래? 스토리가 바꼈나?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/av-87/zg-56/c7c102300d1cb6a9640cc97a9a095b38.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_386",
+      "speaker": "belorta",
+      "speakerName": "벨로타",
+      "text": "뭐, 아무렴 어때!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/av-87/zg-56/c7c102300d1cb6a9640cc97a9a095b38.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_387",
+      "text": "??",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_388",
+      "speaker": "mica",
+      "speakerName": "미카",
+      "text": "이 빌런 피규어의 목을 지금 고쳐야 하는 건가요?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/pe-91/pd-61/29099e5790a79002eb8feeea3170fe36.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_389",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "그렇다! 고칠 수 있나?!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_390",
+      "speaker": "mica",
+      "speakerName": "미카",
+      "text": "우우… 피규어는 팔아본 적만 있지 고쳐 본 적은 없어서….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/pe-91/pd-61/29099e5790a79002eb8feeea3170fe36.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_391",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "크흣… 이럴 수가!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_392",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "이몸이 가장 아끼는 피규어인데…!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_393",
+      "speaker": "mica",
+      "speakerName": "미카",
+      "text": "아, 아니면 똑같은 거로 구해볼까요?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/pe-91/pd-61/29099e5790a79002eb8feeea3170fe36.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_394",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "지금의 테러파이가 아니면 의미가 없다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_395",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "왜냐면… 나의 악행을 다 지켜봐 왔기 때문이지. 그리고 이 몸과 함께한 추억이…!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_396",
+      "text": "…….",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_397",
+      "speaker": "belorta",
+      "speakerName": "벨로타",
+      "text": "흐응~ 이리 줘 봐.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/av-87/zg-56/c7c102300d1cb6a9640cc97a9a095b38.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_398",
+      "text": "벨로타는 드레이크가 들고 있던 피규어를 가져갔다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_399",
+      "speaker": "belorta",
+      "speakerName": "벨로타",
+      "text": "하필 일체형 피규어네~",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/av-87/zg-56/c7c102300d1cb6a9640cc97a9a095b38.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_400",
+      "speaker": "belorta",
+      "speakerName": "벨로타",
+      "text": "목의 이음새 부분만 잘 붙이면 괜찮을 것 같은데.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/av-87/zg-56/c7c102300d1cb6a9640cc97a9a095b38.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_401",
+      "speaker": "mica",
+      "speakerName": "미카",
+      "text": "어떻게? 본드 같은 걸로?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/pe-91/pd-61/29099e5790a79002eb8feeea3170fe36.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_402",
+      "speaker": "belorta",
+      "speakerName": "벨로타",
+      "text": "아니♡",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/av-87/zg-56/c7c102300d1cb6a9640cc97a9a095b38.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_403",
+      "speaker": "belorta",
+      "speakerName": "벨로타",
+      "text": "그러다가 또 목이 부러지면 어떡해~",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/av-87/zg-56/c7c102300d1cb6a9640cc97a9a095b38.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_404",
+      "speaker": "belorta",
+      "speakerName": "벨로타",
+      "text": "다시는 안 부러지게, 못 같은 걸로 박아버려야지!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/av-87/zg-56/c7c102300d1cb6a9640cc97a9a095b38.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_405",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "뭐, 뭣이?!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_406",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "그건 절대 안 된다! 어떻게 그런 잔인한…!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_407",
+      "speaker": "belorta",
+      "speakerName": "벨로타",
+      "text": "꺄하하! 드레이크 표정 봐!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/av-87/zg-56/c7c102300d1cb6a9640cc97a9a095b38.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_408",
+      "speaker": "belorta",
+      "speakerName": "벨로타",
+      "text": "장난이야♡",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/av-87/zg-56/c7c102300d1cb6a9640cc97a9a095b38.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_409",
+      "speaker": "belorta",
+      "speakerName": "벨로타",
+      "text": "내가 수리할 수 있을 것 같아! 잘 해볼게~",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/av-87/zg-56/c7c102300d1cb6a9640cc97a9a095b38.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_410",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "…정말이냐.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_411",
+      "speaker": "belorta",
+      "speakerName": "벨로타",
+      "text": "응!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/av-87/zg-56/c7c102300d1cb6a9640cc97a9a095b38.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_412",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "…믿어도 되는 거냐.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_413",
+      "speaker": "belorta",
+      "speakerName": "벨로타",
+      "text": "응!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/av-87/zg-56/c7c102300d1cb6a9640cc97a9a095b38.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_414",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "…그.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_415",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "못은 절대 쓰지 마라!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_416",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "잔인하니까.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_417",
+      "text": "…….",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_418",
+      "speaker": "belorta",
+      "speakerName": "벨로타",
+      "text": "걱정 마♡",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/av-87/zg-56/c7c102300d1cb6a9640cc97a9a095b38.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_419",
+      "speaker": "belorta",
+      "speakerName": "벨로타",
+      "text": "그럼 잠깐만 여기서 기다리고 있어!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/av-87/zg-56/c7c102300d1cb6a9640cc97a9a095b38.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_420",
+      "speaker": "belorta",
+      "speakerName": "벨로타",
+      "text": "미카, 나 좀 도와줘!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/av-87/zg-56/c7c102300d1cb6a9640cc97a9a095b38.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_421",
+      "speaker": "mica",
+      "speakerName": "미카",
+      "text": "으응! 알겠어!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/pe-91/pd-61/29099e5790a79002eb8feeea3170fe36.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_422",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "크흣… 테러파이.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_423",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "네놈은 잘 고쳐질 테니 너무 걱정 마라!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_424",
+      "speaker": "belorta",
+      "speakerName": "벨로타",
+      "text": "꺄하하! 누가 보면 수술하러 가는 건 줄 알겠다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/av-87/zg-56/c7c102300d1cb6a9640cc97a9a095b38.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_425",
+      "text": "잠시 후.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_426",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "…후우.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_427",
+      "text": "빙글빙글-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_428",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "…하아.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_429",
+      "text": "빙글빙글-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_430",
+      "text": "나와 드레이크는 장난감 가게를 빙글 빙글 돌고 있다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_431",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "네놈! 정신 사납다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_432",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "가만히 좀 있어라!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_433",
+      "text": "…아니, 난 드레이크가 돌길래 같이 돈 거뿐인데.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_434",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "나는 테러파이가 걱정돼서 돌고 있는 거뿐이다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_435",
+      "text": "소중한 피규어인가 보네.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_436",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "이 몸이 처음으로 멋있다고 느낀 캐릭터다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_437",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "심지어 빌런이라니! 이 몸이 안 빠질 수가 없지!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_438",
+      "text": "드레이크는 왜 빌런이 되고 싶었던 거야?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_439",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "그야.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_440",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "멋있으니까.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_441",
+      "text": "?? 그게 다야?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_442",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "그래. 그게 다다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_443",
+      "text": "…….",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_444",
+      "speaker": "belorta",
+      "speakerName": "벨로타",
+      "text": "오래 기다리셨습니다~♡",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/av-87/zg-56/c7c102300d1cb6a9640cc97a9a095b38.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_445",
+      "text": "벨로타는 완벽하게 고쳐진 테러파이를 들고나왔다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_446",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "!!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_447",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "오오… 네놈 어떻게 했지?!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_448",
+      "speaker": "belorta",
+      "speakerName": "벨로타",
+      "text": "피규어 목을 조립식으로 개조해 버렸어.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/av-87/zg-56/c7c102300d1cb6a9640cc97a9a095b38.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_449",
+      "speaker": "belorta",
+      "speakerName": "벨로타",
+      "text": "장난감 가게엔 장난감 부품이 많이 있거든~",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/av-87/zg-56/c7c102300d1cb6a9640cc97a9a095b38.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_450",
+      "speaker": "belorta",
+      "speakerName": "벨로타",
+      "text": "미카한테 장난친다고 고장 난 장난감들이 많아서♡",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/av-87/zg-56/c7c102300d1cb6a9640cc97a9a095b38.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_451",
+      "speaker": "mica",
+      "speakerName": "미카",
+      "text": "우우… 벨로타아-!!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/pe-91/pd-61/29099e5790a79002eb8feeea3170fe36.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_452",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "음! 네놈, 실력이 정말 대단하군! 테러파이의 기분도 더 좋아 보이고.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_453",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "인정하지!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_454",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "…….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_455",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "테러파이가 잘 고쳐진 기념으로. 사진을 한 장 남겨야겠군!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_456",
+      "text": "사진은 왜?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_457",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "생각해보니 테러파이는 이 몸이 제일 아끼는 물건인데 함께 찍은 사진이 단 한장도 없다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_458",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "그리고 먼 훗날. 이 사진이 역사적인 사진으로 남을 수도 있지 않겠나!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_459",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "최고의 빌런들이 함께하고 있으니.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_460",
+      "text": "…….",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_461",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "네놈, 따라와라!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_462",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "사진을 찍어줄 사람이 필요하니까.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_463",
+      "text": "드레이크는 빠르게 장난감 가게를 벗어났다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_464",
+      "text": "피규어 잘 고쳐줘서 고마워.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_465",
+      "speaker": "belorta",
+      "speakerName": "벨로타",
+      "text": "별말씀을~",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/av-87/zg-56/c7c102300d1cb6a9640cc97a9a095b38.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_466",
+      "speaker": "belorta",
+      "speakerName": "벨로타",
+      "text": "장난감 상점 사장이라면 이 정도는 해야지♡",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/av-87/zg-56/c7c102300d1cb6a9640cc97a9a095b38.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_467",
+      "speaker": "belorta",
+      "speakerName": "벨로타",
+      "text": "근데 아저씨 있지~ 그거 알아?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/av-87/zg-56/c7c102300d1cb6a9640cc97a9a095b38.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_468",
+      "speaker": "belorta",
+      "speakerName": "벨로타",
+      "text": "드레이크가 빌런이라고 믿고 있는 테러파이라는 캐릭터 있잖아.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/av-87/zg-56/c7c102300d1cb6a9640cc97a9a095b38.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_469",
+      "speaker": "belorta",
+      "speakerName": "벨로타",
+      "text": "사실은 빌런 아니다?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/av-87/zg-56/c7c102300d1cb6a9640cc97a9a095b38.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_470",
+      "text": "??",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_471",
+      "speaker": "mica",
+      "speakerName": "미카",
+      "text": "뭐?! 정말?!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/pe-91/pd-61/29099e5790a79002eb8feeea3170fe36.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_472",
+      "speaker": "belorta",
+      "speakerName": "벨로타",
+      "text": "응♡",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/av-87/zg-56/c7c102300d1cb6a9640cc97a9a095b38.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_473",
+      "speaker": "belorta",
+      "speakerName": "벨로타",
+      "text": "드레이크는 애니메이션 초반 부분만 본 것 같은데.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/av-87/zg-56/c7c102300d1cb6a9640cc97a9a095b38.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_474",
+      "speaker": "belorta",
+      "speakerName": "벨로타",
+      "text": "초반 부분엔 테러파이가 엄청난 빌런으로 비춰지거든.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/av-87/zg-56/c7c102300d1cb6a9640cc97a9a095b38.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_475",
+      "speaker": "belorta",
+      "speakerName": "벨로타",
+      "text": "그런데 후반 부분 갈수록 왜 테러파이가 그런 빌런짓을 할 수밖에 없었는지가 나와.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/av-87/zg-56/c7c102300d1cb6a9640cc97a9a095b38.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_476",
+      "speaker": "belorta",
+      "speakerName": "벨로타",
+      "text": "그리고 마지막 엔딩부분에선 많은 사람들을 구하고 죽어서.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/av-87/zg-56/c7c102300d1cb6a9640cc97a9a095b38.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_477",
+      "speaker": "belorta",
+      "speakerName": "벨로타",
+      "text": "지금은 히어로로 기억되고 있다구♡",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/av-87/zg-56/c7c102300d1cb6a9640cc97a9a095b38.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_478",
+      "text": "이럴 수가.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_479",
+      "text": "…그런데 드레이크한테 왜 말 안했어?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_480",
+      "speaker": "belorta",
+      "speakerName": "벨로타",
+      "text": "빌런 캐릭터라고 알고 있는데 굳이 내가 훼방놓을 필요는 없잖아♡",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/av-87/zg-56/c7c102300d1cb6a9640cc97a9a095b38.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_481",
+      "speaker": "belorta",
+      "speakerName": "벨로타",
+      "text": "가끔은 모르는 게 약일 때도 있고~",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/av-87/zg-56/c7c102300d1cb6a9640cc97a9a095b38.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_482",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "네놈! 뭐 하는 거냐! 빨리 나와라!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_483",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "네놈을 기다리다 테러파이와 내 목이 빠질지도 모르겠군.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_484",
+      "speaker": "belorta",
+      "speakerName": "벨로타",
+      "text": "아무튼 그렇다구~",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/av-87/zg-56/c7c102300d1cb6a9640cc97a9a095b38.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_485",
+      "speaker": "belorta",
+      "speakerName": "벨로타",
+      "text": "그럼 빨리 가봐~!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/av-87/zg-56/c7c102300d1cb6a9640cc97a9a095b38.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_486",
+      "text": "…응, 다음에 또 보자.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_487",
+      "speaker": "mica",
+      "speakerName": "미카",
+      "text": "헤헤, 조심히 가세요, 아저씨!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/pe-91/pd-61/29099e5790a79002eb8feeea3170fe36.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_488",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "사진은 이곳에서 찍는 게 좋겠군!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_489",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "네놈! 여기서 나와 테러파이의 사진을 찍어봐라!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_490",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "처음 찍는 거니 온 힘을 다해서 찍도록.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_491",
+      "text": "…알겠어.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_492",
+      "text": "빌런 활동은 더 이상 안 하는 거야?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_493",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "오늘의 빌런 연합 활동은 여기까지다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_494",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "테러파이가 또 부서질수도 있으니. 숙소에 가져다 놓을 거다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_495",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "그리고 오랜만에 한 빌런 연합 활동치고 만족스럽기도 하고.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_496",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "테러파이의 악행을 나름 잘 따라 했기 때문이지.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_497",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "후하하하하-!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_498",
+      "text": "…….",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_499",
+      "text": "지잉-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_500",
+      "text": "잠시만, 나 문자만 좀 확인하고. 포즈 정하고 있어봐.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_501",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "쯧, 알겠다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_502",
+      "speaker": "soda",
+      "speakerName": "소다",
+      "text": "주인니임~!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zo-97/oa-63/91dc439091b6a061b3438f400135929e.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_503",
+      "speaker": "soda",
+      "speakerName": "소다",
+      "text": "혹시 바쁘신가요~?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zo-97/oa-63/91dc439091b6a061b3438f400135929e.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_504",
+      "text": "아니 안 바빠",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_505",
+      "speaker": "soda",
+      "speakerName": "소다",
+      "text": "다행이다 ㅎㅎㅎㅎ",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zo-97/oa-63/91dc439091b6a061b3438f400135929e.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_506",
+      "speaker": "soda",
+      "speakerName": "소다",
+      "text": "주인님이 말했던 쪽지 말인데요!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zo-97/oa-63/91dc439091b6a061b3438f400135929e.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_507",
+      "text": "미안 그거 드레이크가",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_508",
+      "speaker": "soda",
+      "speakerName": "소다",
+      "text": "아~ 그 쪽지 드레이크 아가씨가 쓰신 건가요?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zo-97/oa-63/91dc439091b6a061b3438f400135929e.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_509",
+      "speaker": "soda",
+      "speakerName": "소다",
+      "text": "제가 주인님 가고 난 뒤에 바로 확인해 보려고 했는데",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zo-97/oa-63/91dc439091b6a061b3438f400135929e.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_510",
+      "speaker": "soda",
+      "speakerName": "소다",
+      "text": "가게 오픈시간이 다가오는 바람에 못 했거든요!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zo-97/oa-63/91dc439091b6a061b3438f400135929e.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_511",
+      "speaker": "soda",
+      "speakerName": "소다",
+      "text": "에이드랑 코코아도 와서 ㅠㅠ",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zo-97/oa-63/91dc439091b6a061b3438f400135929e.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_512",
+      "text": "헉",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_513",
+      "speaker": "soda",
+      "speakerName": "소다",
+      "text": "아무튼 손님이 발견하셔서",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zo-97/oa-63/91dc439091b6a061b3438f400135929e.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_514",
+      "speaker": "soda",
+      "speakerName": "소다",
+      "text": "이 쪽지 쓴 사람 누구냐고 물어보시는 거예요 ㅠㅠ",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zo-97/oa-63/91dc439091b6a061b3438f400135929e.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_515",
+      "text": "응 ㅠㅠ",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_516",
+      "speaker": "soda",
+      "speakerName": "소다",
+      "text": "보니까 쪽지에 후회할 일이 생길 거다?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zo-97/oa-63/91dc439091b6a061b3438f400135929e.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_517",
+      "speaker": "soda",
+      "speakerName": "소다",
+      "text": "막 이런 식으로 적혀져 있더라구요!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zo-97/oa-63/91dc439091b6a061b3438f400135929e.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_518",
+      "speaker": "soda",
+      "speakerName": "소다",
+      "text": "그래서 이 쪽지가 주인님이 말씀하신 건가보다 싶어서",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zo-97/oa-63/91dc439091b6a061b3438f400135929e.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_519",
+      "speaker": "soda",
+      "speakerName": "소다",
+      "text": "죄송하다고 바로 회수하겠다고 했는데",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zo-97/oa-63/91dc439091b6a061b3438f400135929e.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_520",
+      "speaker": "soda",
+      "speakerName": "소다",
+      "text": "자기가 지금 선택의 기로에 놓여 있는 순간에 이 쪽지를 발견했다고",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zo-97/oa-63/91dc439091b6a061b3438f400135929e.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_521",
+      "speaker": "soda",
+      "speakerName": "소다",
+      "text": "해답을 얻은 기분이라면서 엄청 좋아하시더라구요~",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zo-97/oa-63/91dc439091b6a061b3438f400135929e.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_522",
+      "text": "??",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_523",
+      "speaker": "soda",
+      "speakerName": "소다",
+      "text": "그러더니 혹시 이곳에 점쟁이가 왔다 갔냐고 ㅎㅎㅎ",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zo-97/oa-63/91dc439091b6a061b3438f400135929e.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_524",
+      "speaker": "soda",
+      "speakerName": "소다",
+      "text": "덕분에 마음이 편안해졌다고 웃으시면서 가셨어요!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zo-97/oa-63/91dc439091b6a061b3438f400135929e.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_525",
+      "speaker": "soda",
+      "speakerName": "소다",
+      "text": "이후로도 쪽지를 발견하신 분들이 꽤 있으셨는데",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zo-97/oa-63/91dc439091b6a061b3438f400135929e.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_526",
+      "speaker": "soda",
+      "speakerName": "소다",
+      "text": "다 위로를 받고 가셨어요~!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zo-97/oa-63/91dc439091b6a061b3438f400135929e.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_527",
+      "speaker": "soda",
+      "speakerName": "소다",
+      "text": "매번 떨어지는 시험에 계속 도전할지 말지 고민하시던 분도",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zo-97/oa-63/91dc439091b6a061b3438f400135929e.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_528",
+      "speaker": "soda",
+      "speakerName": "소다",
+      "text": "포기하라는 쪽지를 보시고는 시험에 대한 마음을 접으셨고",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zo-97/oa-63/91dc439091b6a061b3438f400135929e.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_529",
+      "speaker": "soda",
+      "speakerName": "소다",
+      "text": "친한 친구와 사업을 준비하던 분도 가까운 사람에게 배신당할 거라는",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zo-97/oa-63/91dc439091b6a061b3438f400135929e.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_530",
+      "speaker": "soda",
+      "speakerName": "소다",
+      "text": "쪽지를 보고는 동업하지 않겠다고 마음먹었대요 ㅎㅎㅎㅎㅎ",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zo-97/oa-63/91dc439091b6a061b3438f400135929e.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_531",
+      "text": "음",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_532",
+      "speaker": "soda",
+      "speakerName": "소다",
+      "text": "아무튼 큰일은 없었다고 말씀드리고 싶어서 연락드렸어요~!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zo-97/oa-63/91dc439091b6a061b3438f400135929e.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_533",
+      "speaker": "soda",
+      "speakerName": "소다",
+      "text": "혹시나 주인님이 걱정하실까 봐서요 ㅎㅎㅎ",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zo-97/oa-63/91dc439091b6a061b3438f400135929e.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_534",
+      "text": "고마워 그래도 다행이네",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_535",
+      "speaker": "soda",
+      "speakerName": "소다",
+      "text": "그렇죠~!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zo-97/oa-63/91dc439091b6a061b3438f400135929e.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_536",
+      "speaker": "soda",
+      "speakerName": "소다",
+      "text": "다음에 또 드레이크 아가씨랑 메이드카페에 놀러 오세요~!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zo-97/oa-63/91dc439091b6a061b3438f400135929e.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_537",
+      "speaker": "soda",
+      "speakerName": "소다",
+      "text": "그때는 디저트도 맛있는 걸로 해드릴게요 ㅎㅎㅎ",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zo-97/oa-63/91dc439091b6a061b3438f400135929e.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_538",
+      "text": "응 고마워",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_539",
+      "text": "…….",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_540",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "테러파이.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_541",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "우린 빌런이니까 아무래도 무게를 좀 잡는 게 좋지 않겠나!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_542",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "후하하하!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_543",
+      "text": "…아무래도 이건 말 안 하는 게 좋을 것 같다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_544",
+      "text": "지잉-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_545",
+      "speaker": "miranda",
+      "speakerName": "미란다",
+      "text": "지휘관!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vg-25/er-68/88e9d12d692695aaae54b796a4e3d0a4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_546",
+      "speaker": "miranda",
+      "speakerName": "미란다",
+      "text": "오늘 드레이크와 함께 위험물을 신고해 주셔서 감사합니다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vg-25/er-68/88e9d12d692695aaae54b796a4e3d0a4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_547",
+      "speaker": "miranda",
+      "speakerName": "미란다",
+      "text": "정말 큰일 날 뻔했습니다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vg-25/er-68/88e9d12d692695aaae54b796a4e3d0a4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_548",
+      "text": "?? 큰일이라니",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_549",
+      "speaker": "miranda",
+      "speakerName": "미란다",
+      "text": "공원으로 출동하니",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vg-25/er-68/88e9d12d692695aaae54b796a4e3d0a4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_550",
+      "speaker": "miranda",
+      "speakerName": "미란다",
+      "text": "위험해 보이는 택배 상자가 여러 개 있지 뭡니까!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vg-25/er-68/88e9d12d692695aaae54b796a4e3d0a4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_551",
+      "speaker": "miranda",
+      "speakerName": "미란다",
+      "text": "그걸 다 열어서 확인해 보니 환각을 일으키는 위험 물질이 가득 들어가 있었습니다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vg-25/er-68/88e9d12d692695aaae54b796a4e3d0a4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_552",
+      "text": "뭐라고????",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_553",
+      "speaker": "miranda",
+      "speakerName": "미란다",
+      "text": "그래서 지금 폴리와 키리가 함께 조사 중입니다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vg-25/er-68/88e9d12d692695aaae54b796a4e3d0a4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_554",
+      "speaker": "miranda",
+      "speakerName": "미란다",
+      "text": "사실 저는 처음에 드레이크가 거짓말하는 거라고",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vg-25/er-68/88e9d12d692695aaae54b796a4e3d0a4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_555",
+      "speaker": "miranda",
+      "speakerName": "미란다",
+      "text": "살짝 의심도 했었습니다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vg-25/er-68/88e9d12d692695aaae54b796a4e3d0a4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_556",
+      "speaker": "miranda",
+      "speakerName": "미란다",
+      "text": "죄송합니다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vg-25/er-68/88e9d12d692695aaae54b796a4e3d0a4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_557",
+      "speaker": "miranda",
+      "speakerName": "미란다",
+      "text": "이건 제가 드레이크에게 따로 연락해서 사과하겠습니다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vg-25/er-68/88e9d12d692695aaae54b796a4e3d0a4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_558",
+      "text": "아니야! 내가 전해줄게!",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_559",
+      "speaker": "miranda",
+      "speakerName": "미란다",
+      "text": "앗!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vg-25/er-68/88e9d12d692695aaae54b796a4e3d0a4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_560",
+      "speaker": "miranda",
+      "speakerName": "미란다",
+      "text": "그렇게 해주시겠습니까?!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vg-25/er-68/88e9d12d692695aaae54b796a4e3d0a4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_561",
+      "speaker": "miranda",
+      "speakerName": "미란다",
+      "text": "안 그래도 지금 조사가 다 끝난 건 아니라 조금 바쁩니다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vg-25/er-68/88e9d12d692695aaae54b796a4e3d0a4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_562",
+      "text": "내가 잘 전달해 줄게",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_563",
+      "speaker": "miranda",
+      "speakerName": "미란다",
+      "text": "감사합니다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vg-25/er-68/88e9d12d692695aaae54b796a4e3d0a4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_564",
+      "speaker": "miranda",
+      "speakerName": "미란다",
+      "text": "그럼 나중에 또 연락드리겠습니다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vg-25/er-68/88e9d12d692695aaae54b796a4e3d0a4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_565",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "네놈, 왜 그렇게 얼빠져있는 표정이지?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_566",
+      "text": "…아.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_567",
+      "text": "악행이 잘 먹힌 것 같아서.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_568",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "그래?! 뉴스라도 뜬 건가!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_569",
+      "text": "아니… 나한테 따로 연락이 왔어.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_570",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "그렇군!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_571",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "역시 테러파이의 악행은 어디서도 먹히는군.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_572",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "최강 빌런답다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_573",
+      "text": "…….",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_574",
+      "text": "…진실을 말했다가는 피곤해질것만 같다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_575",
+      "text": "나를 위해서라도. 아니, 드레이크를 위해서라도 이건 무덤까지 비밀로 가져가야겠다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_576",
+      "text": "포즈는 다 정했어?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_577",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "그래! 정했다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_578",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "후후.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_579",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "어떤가 이 포즈.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_580",
+      "text": "…멋있네.",
+      "window": "Choice",
+      "voice": null,
+      "chosen": true
+    },
+    {
+      "id": "d_favorite_drake_581",
+      "text": "…훌륭하네.",
+      "window": "Choice",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_582",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "사진을 찍기 전에.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_583",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "네놈에게 하나만 부탁해도 되겠나?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_584",
+      "text": "뭔데?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_585",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "사진 찍을 때. 하나, 둘, 셋 말고.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_586",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "최고의 빌런 드레이크!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_587",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "영원한 빌런 드레이크!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_588",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "라고 외쳐주면 안 되겠나.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_589",
+      "text": "…왜?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_590",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "멋있잖아.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_591",
+      "text": "…알겠어.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_592",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "역시 네놈과 빌런 연합에서 활동 하는 게 가장 재밌고 즐겁다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_593",
+      "text": "…다행이네. 그럼 찍을게.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_594",
+      "text": "하나….",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_595",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "뭣이?!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_596",
+      "text": "아, 미안.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_597",
+      "text": "최, 최고의 빌런 드레이크!",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_598",
+      "text": "여, 영원한 빌런 드레이크!",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_599",
+      "text": "찰칵-!",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_600",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "하하하하하하-!!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_601",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "하——하하하——!! 쿨럭, 쿨럭!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_602",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "하, 쿨럭! 하하하, 쿨럭 쿨럭!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_603",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "하—!! 하하하하——!!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_drake_604",
+      "text": "…드레이크가 있으니, 앞으로도 방주는 평화로울 것이다. 영원히 쭉.",
+      "window": "Narration",
+      "voice": null
+    }
+  ]
+}

@@ -1,0 +1,3906 @@
+{
+  "groupId": "d_favorite_frima",
+  "type": "favorite",
+  "name": "잠. 해결사. 굿.",
+  "nikke": "프림",
+  "sourceVideo": "https://youtu.be/YPZA676498A",
+  "lines": [
+    {
+      "id": "d_favorite_frima_1",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "흠.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_2",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "드디어. 잠.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_3",
+      "text": "프림은 하루 중 가장 좋아하는 시간을 만끽하기 위해.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_4",
+      "text": "모든 준비를 마치고, 가장 좋아하는 소파에 앉았다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_5",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "흠. 아주 좋음.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_6",
+      "text": "프림은 여느 때와 같이.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_7",
+      "text": "안대를 쓰고.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_8",
+      "text": "베개를 베고 누웠다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_9",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "……?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_10",
+      "text": "프림은 자리에서 일어났다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_11",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "잠. 안 옴…!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_12",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "또?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_13",
+      "text": "소파가 미묘하게 기울어져 있는지,",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_14",
+      "text": "0.00001mm라도 기울어져 있는지! 꼼꼼히 바라보았지만….",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_15",
+      "text": "아니었다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_16",
+      "text": "소파는 본연의 위치에서 한치에 기울어짐 없이, 굳건히 자리를 지키고 있었다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_17",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "그럼. 왜…?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_18",
+      "text": "지난번의 경험을 돌이켜보았을 때,",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_19",
+      "text": "분명 불면증은 아닐 것이다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_20",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "…….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_21",
+      "text": "프림은 자신의 수면에 관련된 모든 것을 세밀히 관찰하기 시작했다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_22",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "수면 안대. 정상.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_23",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "이불.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_24",
+      "text": "팡팡-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_25",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "정상.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_26",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "베개….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_27",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "푹?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_28",
+      "text": "프림이 조심스레 베개를 들어 자세히 살펴보았다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_29",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "터짐?!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_30",
+      "text": "베개 한 편이 뜯어져 솜이 삐져나와 있었다!",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_31",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "!!!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_32",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "원인. 파악. 완료.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_33",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "해결….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_34",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "어떻게?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_35",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "바로. 본론.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_36",
+      "text": "왜 큰일?",
+      "window": "Choice",
+      "voice": null,
+      "chosen": true
+    },
+    {
+      "id": "d_favorite_frima_37",
+      "text": "여. 큰일!",
+      "window": "Choice",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_38",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "굿.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_39",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "잠. 또. 안 옴.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_40",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "이번엔. 소파. 아님.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_41",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "불면증. 아님.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_42",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "원인. 앎.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_43",
+      "text": "원인이 뭐길래?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_44",
+      "text": "프림이 가방 안에서 조심스레 베개를 꺼내들었다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_45",
+      "text": "베개…?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_46",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "자세히. 봐야 함.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_47",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "솜. 빠짐.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_48",
+      "text": "프림의 말대로 자세히 보니,",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_49",
+      "text": "베개 한 편이 뜯어져 솜이 흘러내려와 있었다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_50",
+      "text": "설마… 이번엔 베개를 원래대로 되돌려야 하는 거야?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_51",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "여. 눈치. 굿.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_52",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "정답.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_53",
+      "text": "힘내. 프림.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_54",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "!!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_55",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "같이. 안 함?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_56",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "여. 해결사. 헬프!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_57",
+      "text": "해결사는 카페 스위티잖아.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_58",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "우리. 해결사. 아님.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_59",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "그냥. 원수.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_60",
+      "text": "…….",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_61",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "여. 지난번. 도와줌.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_62",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "이번에도. 도움. 필요!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_63",
+      "text": "프림이 간절한 눈으로 이쪽을 바라보았다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_64",
+      "text": "안에 들어가는 솜을 어디서 구해야 하는데?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_65",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "?!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_66",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "아.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_67",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "모름.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_68",
+      "text": "…….",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_69",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "…….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_70",
+      "text": "여분으로 사놓은 것도 없어?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_71",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "응. 없음.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_72",
+      "text": "왜? 많이 필요할 거 같은데.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_73",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "…….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_74",
+      "text": "프림…?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_75",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "준비. 안 함.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_76",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "준비. 많으면. 불행.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_77",
+      "text": "준비를 하면 불행해진다고?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_78",
+      "text": "프림이 고개를 끄덕였다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_79",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "그래서. 더. 안 함.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_80",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "…하고 싶지. 않음.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_81",
+      "text": "…알겠어.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_82",
+      "text": "그럼 새로 사는 건 어때?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_83",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "음.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_84",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "그것도 안 됨.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_85",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "이거. 안정됨. 좋음.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_86",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "다른 거. 다름. 이거 아님.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_87",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "그건. 싫음.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_88",
+      "text": "…그럼 솜을 다시 구해볼 수밖에 없겠네.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_89",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "…미안.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_90",
+      "text": "일단 솜을 가지고 있을 법한 사람을 찾아가 보자.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_91",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "좋은. 생각.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_92",
+      "speaker": "ade",
+      "speakerName": "에이드",
+      "text": "베개 안에 들어갈 솜을 찾고 계신다고요?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/fz-65/mt-84/2de03955874647e6b64b8363018bc2d9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_93",
+      "speaker": "ade",
+      "speakerName": "에이드",
+      "text": "흠… 저희는 솜 이불은 따로 구비해두지 않고 있는데.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/fz-65/mt-84/2de03955874647e6b64b8363018bc2d9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_94",
+      "text": "그랬구나.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_95",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "…우울.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_96",
+      "speaker": "ade",
+      "speakerName": "에이드",
+      "text": "저… 그럼 혹시.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/fz-65/mt-84/2de03955874647e6b64b8363018bc2d9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_97",
+      "speaker": "ade",
+      "speakerName": "에이드",
+      "text": "폭신한 다른 걸 넣어보시는 건 어떠세요?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/fz-65/mt-84/2de03955874647e6b64b8363018bc2d9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_98",
+      "text": "폭신한 다른 거?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_99",
+      "speaker": "cocoa",
+      "speakerName": "코코아",
+      "text": "웅!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ui-69/cq-89/0c68334ef72cd441e0590a6ec8423264.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_100",
+      "speaker": "cocoa",
+      "speakerName": "코코아",
+      "text": "소다같이 폭신한 거.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ui-69/cq-89/0c68334ef72cd441e0590a6ec8423264.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_101",
+      "speaker": "soda",
+      "speakerName": "소다",
+      "text": "호에에? 제, 제가요~?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zo-97/oa-63/91dc439091b6a061b3438f400135929e.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_102",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "흠.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_103",
+      "text": "프림이 소다에게 다가가….",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_104",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "흐음.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_105",
+      "text": "쿡-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_106",
+      "text": "소다의 가슴을 손가락으로 찔러보았다!",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_107",
+      "speaker": "soda",
+      "speakerName": "소다",
+      "text": "호에!?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zo-97/oa-63/91dc439091b6a061b3438f400135929e.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_108",
+      "text": "쿡쿡-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_109",
+      "speaker": "soda",
+      "speakerName": "소다",
+      "text": "아, 아가씨…?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zo-97/oa-63/91dc439091b6a061b3438f400135929e.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_110",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "…흠.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_111",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "이 느낌. 아님.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_112",
+      "speaker": "soda",
+      "speakerName": "소다",
+      "text": "호, 호에에!! 아, 아니군요오!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zo-97/oa-63/91dc439091b6a061b3438f400135929e.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_113",
+      "speaker": "soda",
+      "speakerName": "소다",
+      "text": "죄, 죄송해요~ 아가씨!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zo-97/oa-63/91dc439091b6a061b3438f400135929e.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_114",
+      "text": "…….",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_115",
+      "speaker": "ade",
+      "speakerName": "에이드",
+      "text": "흠~ 그럼 폭신한 다른 것들을 가져와 볼까요?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/fz-65/mt-84/2de03955874647e6b64b8363018bc2d9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_116",
+      "speaker": "ade",
+      "speakerName": "에이드",
+      "text": "직접 만져보고 판단하실 수 있게요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/fz-65/mt-84/2de03955874647e6b64b8363018bc2d9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_117",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "그거. 가능?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_118",
+      "speaker": "ade",
+      "speakerName": "에이드",
+      "text": "후후, 그럼요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/fz-65/mt-84/2de03955874647e6b64b8363018bc2d9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_119",
+      "speaker": "ade",
+      "speakerName": "에이드",
+      "text": "아가씨가 원하신다면 얼마든지 가져다드릴게요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/fz-65/mt-84/2de03955874647e6b64b8363018bc2d9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_120",
+      "text": "그 후, 메이드들이 수많은 폭신한 것들을 가져왔지만.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_121",
+      "text": "휴지도…",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_122",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "이거. 아님.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_123",
+      "speaker": "cocoa",
+      "speakerName": "코코아",
+      "text": "안대?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ui-69/cq-89/0c68334ef72cd441e0590a6ec8423264.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_124",
+      "text": "케이크도….",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_125",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "먹고. 자면. 됨?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_126",
+      "speaker": "soda",
+      "speakerName": "소다",
+      "text": "호에에? 그건 아닌데요오~",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zo-97/oa-63/91dc439091b6a061b3438f400135929e.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_127",
+      "text": "손님용 등받이 쿠션도…",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_128",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "음. 아님.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_129",
+      "speaker": "ade",
+      "speakerName": "에이드",
+      "text": "후후, 그렇군요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/fz-65/mt-84/2de03955874647e6b64b8363018bc2d9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_130",
+      "text": "전부 프림에게 인정받지 못했다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_131",
+      "text": "푸릉- 푸릉-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_132",
+      "text": "푸딩이 프림의 손짓에 움직였다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_133",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "이것도. 아님.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_134",
+      "speaker": "soda",
+      "speakerName": "소다",
+      "text": "호에에… 그렇군요오.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zo-97/oa-63/91dc439091b6a061b3438f400135929e.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_135",
+      "speaker": "soda",
+      "speakerName": "소다",
+      "text": "이것도 아니면 이제 더는 없는 것 같아요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zo-97/oa-63/91dc439091b6a061b3438f400135929e.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_136",
+      "speaker": "ade",
+      "speakerName": "에이드",
+      "text": "도움이 못돼 죄송해요. 주인님, 아가씨.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/fz-65/mt-84/2de03955874647e6b64b8363018bc2d9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_137",
+      "text": "아니야. 이 정도면 충분히 열심히 도와줬어.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_138",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "응. 충분. 도움.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_139",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "다른 곳. 찾음. 됨.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_140",
+      "speaker": "ade",
+      "speakerName": "에이드",
+      "text": "흠… 그래서 말인데.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/fz-65/mt-84/2de03955874647e6b64b8363018bc2d9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_141",
+      "speaker": "ade",
+      "speakerName": "에이드",
+      "text": "제가 연락을…",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/fz-65/mt-84/2de03955874647e6b64b8363018bc2d9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_142",
+      "speaker": "cocoa",
+      "speakerName": "코코아",
+      "text": "다른 곳? 폭신?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ui-69/cq-89/0c68334ef72cd441e0590a6ec8423264.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_143",
+      "speaker": "cocoa",
+      "speakerName": "코코아",
+      "text": "훔. 폭신… 폭신폭신… 폭신?!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ui-69/cq-89/0c68334ef72cd441e0590a6ec8423264.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_144",
+      "text": "코코아, 왜 그래?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_145",
+      "speaker": "cocoa",
+      "speakerName": "코코아",
+      "text": "주인!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ui-69/cq-89/0c68334ef72cd441e0590a6ec8423264.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_146",
+      "speaker": "cocoa",
+      "speakerName": "코코아",
+      "text": "코코아 생각나써.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ui-69/cq-89/0c68334ef72cd441e0590a6ec8423264.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_147",
+      "speaker": "cocoa",
+      "speakerName": "코코아",
+      "text": "폭신한 거 있는 곳!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ui-69/cq-89/0c68334ef72cd441e0590a6ec8423264.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_148",
+      "text": "그게 어딘데?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_149",
+      "speaker": "cocoa",
+      "speakerName": "코코아",
+      "text": "그거슨 바로…!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ui-69/cq-89/0c68334ef72cd441e0590a6ec8423264.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_150",
+      "speaker": "cocoa",
+      "speakerName": "코코아",
+      "text": "경찰서야!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ui-69/cq-89/0c68334ef72cd441e0590a6ec8423264.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_151",
+      "text": "응?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_152",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "경찰서?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_153",
+      "text": "에이드에게 조만간 또 연락하겠다는 배웅을 받은 우리는 경찰서로 향했다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_154",
+      "text": "그리고……",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_155",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "예?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_156",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "제 머리카락이 폭신해 보여서 만져보고 싶으시다고영?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_157",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "응. 폭신. 적절! 가능!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_158",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "으음~ 뭔가 좀 많이 이상한 거 같은뎅.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_159",
+      "text": "…….",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_160",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "…….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_161",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "흐으음….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_162",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "수상하긴 한뎅! 지휘관이 부탁하는 거니까 괜찮겠졍 뭥!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_163",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "좋아영. 만져 보세영!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_164",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "감사.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_165",
+      "text": "프림이 폴리의 머리카락을 만져보았다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_166",
+      "text": "폭신- 폭신-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_167",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "!!!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_168",
+      "text": "설마…?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_169",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "이거. 맞음!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_170",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "폭신. 폭신!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_171",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "예? 뭐가 폭신하다는 건가여?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_172",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "폴리. 폭신. 머리. 폭신!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_173",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "제. 머리카락이영?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_174",
+      "text": "프림이 고개를 끄덕였다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_175",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "폴리. 머리. 필요!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_176",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "예?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_177",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "지, 지휘관! 이게 무슨 말인 건가영?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_178",
+      "text": "그게….",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_179",
+      "text": "폴리에게 프림의 베개에 대한 이야기를 했다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_180",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "!!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_181",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "그, 그래서 제 머리카락을 달라는 건가여?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_182",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "소, 솜 대신 넣겠다고?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_183",
+      "text": "프림이 눈을 빛내며 격하게 고개를 끄덕였다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_184",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "폴리. 머리카락. 폭신.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_185",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "내. 베개. 폭신.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_186",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "베개. 솜. 폴리 머리카락. 가능!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_187",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "제, 제 머리카락을 베개 속에 넣겠다구영?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_188",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "그 무슨 호러 영화 같은 이야기인가영!!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_189",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "안돼영 안됑!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_190",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "제 머리카락은 줄 수 없어여!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_191",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "…흑. 부탁.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_192",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "아, 아니 다른 솜을 구할 방법이 정말 그렇게까지 없는 건가영?!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_193",
+      "text": "…하아.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_194",
+      "text": "지잉-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_195",
+      "speaker": "ade",
+      "speakerName": "에이드",
+      "text": "주인님 : )",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/fz-65/mt-84/2de03955874647e6b64b8363018bc2d9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_196",
+      "speaker": "ade",
+      "speakerName": "에이드",
+      "text": "베개 솜은 잘 구하셨나요?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/fz-65/mt-84/2de03955874647e6b64b8363018bc2d9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_197",
+      "text": "아니 ㅠㅠ",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_198",
+      "speaker": "ade",
+      "speakerName": "에이드",
+      "text": "저런 그러셨군요",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/fz-65/mt-84/2de03955874647e6b64b8363018bc2d9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_199",
+      "speaker": "ade",
+      "speakerName": "에이드",
+      "text": "실은",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/fz-65/mt-84/2de03955874647e6b64b8363018bc2d9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_200",
+      "speaker": "ade",
+      "speakerName": "에이드",
+      "text": "주인님이 찾지 못했을 때를 대비하여",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/fz-65/mt-84/2de03955874647e6b64b8363018bc2d9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_201",
+      "speaker": "ade",
+      "speakerName": "에이드",
+      "text": "솜을 구할 수 있을 만한 분께",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/fz-65/mt-84/2de03955874647e6b64b8363018bc2d9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_202",
+      "speaker": "ade",
+      "speakerName": "에이드",
+      "text": "미리 연락을 드려놨답니다",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/fz-65/mt-84/2de03955874647e6b64b8363018bc2d9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_203",
+      "text": "솜을 구할 수 있을만한 분?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_204",
+      "speaker": "ade",
+      "speakerName": "에이드",
+      "text": "예 : )",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/fz-65/mt-84/2de03955874647e6b64b8363018bc2d9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_205",
+      "speaker": "ade",
+      "speakerName": "에이드",
+      "text": "아니나 다를까 그분께 주인님의 사정을 전했더니",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/fz-65/mt-84/2de03955874647e6b64b8363018bc2d9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_206",
+      "speaker": "ade",
+      "speakerName": "에이드",
+      "text": "솜을 구해주실 수 있다고 하셨어요",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/fz-65/mt-84/2de03955874647e6b64b8363018bc2d9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_207",
+      "speaker": "ade",
+      "speakerName": "에이드",
+      "text": "그분이 곧 지휘관실로 방문하신다고 하니",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/fz-65/mt-84/2de03955874647e6b64b8363018bc2d9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_208",
+      "speaker": "ade",
+      "speakerName": "에이드",
+      "text": "지금 만나러 가시면 될 것 같습니다 : )",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/fz-65/mt-84/2de03955874647e6b64b8363018bc2d9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_209",
+      "text": "당장 갈게! 고마워 에이드!",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_210",
+      "speaker": "ade",
+      "speakerName": "에이드",
+      "text": "별말씀을요 : )",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/fz-65/mt-84/2de03955874647e6b64b8363018bc2d9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_211",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_212",
+      "text": "솜을 구할 수 있는 사람을 찾은 것 같아.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_213",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "!!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_214",
+      "text": "어서 돌아가자.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_215",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "고고!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_216",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "에흉.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_217",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "다른 방법이 생기셨나보군영.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_218",
+      "text": "응. 많이 놀라게 해서 미안.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_219",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "미안.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_220",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "아니에영.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_221",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "사과도 받았궁, 제 머리카락이 그만큼 폭신하고 좋았다는 뜻이니깡.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_222",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "더 이상 화내지 않을게영.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_223",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "프림의 베개 솜을 잘 구할 수 있길 바랄게영.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_224",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "알겠. 고마움.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_225",
+      "text": "고마워 폴리. 다음에 보자.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_226",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "넹! 두 분 다 다음에 뵈어용!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_227",
+      "text": "지잉-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_228",
+      "speaker": "yan",
+      "speakerName": "얀",
+      "text": "여어~ 왔나.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/os-66/so-41/3daf068e85df1185adc13e8f14c268e9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_229",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "?!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_230",
+      "text": "에이드가 말한 게 얀이었어?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_231",
+      "speaker": "yan",
+      "speakerName": "얀",
+      "text": "그래. 내다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/os-66/so-41/3daf068e85df1185adc13e8f14c268e9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_232",
+      "speaker": "yan",
+      "speakerName": "얀",
+      "text": "이런 일이 있었으면 당연히 나부터 찾아와야 하는 거 아이가?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/os-66/so-41/3daf068e85df1185adc13e8f14c268e9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_233",
+      "speaker": "yan",
+      "speakerName": "얀",
+      "text": "우예 그마이 빙빙 돌아갈 수가 있노.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/os-66/so-41/3daf068e85df1185adc13e8f14c268e9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_234",
+      "speaker": "yan",
+      "speakerName": "얀",
+      "text": "생활용품을 구하려면 당연히 내부터 찾아야지.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/os-66/so-41/3daf068e85df1185adc13e8f14c268e9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_235",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "아…!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_236",
+      "text": "…어. 음. 그렇네.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_237",
+      "speaker": "yan",
+      "speakerName": "얀",
+      "text": "응? 진짜 잊고 있었던 모양이네?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/os-66/so-41/3daf068e85df1185adc13e8f14c268e9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_238",
+      "speaker": "yan",
+      "speakerName": "얀",
+      "text": "세상에 어떻게 물건을 구하는데 상인을 까묵노?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/os-66/so-41/3daf068e85df1185adc13e8f14c268e9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_239",
+      "text": "…….",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_240",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "…….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_241",
+      "speaker": "yan",
+      "speakerName": "얀",
+      "text": "하아… 그래, 너희 둘이니 뭐 그렇게 놀랍지도 않다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/os-66/so-41/3daf068e85df1185adc13e8f14c268e9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_242",
+      "speaker": "yan",
+      "speakerName": "얀",
+      "text": "그래서 솜이 얼마나 필요한 건데?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/os-66/so-41/3daf068e85df1185adc13e8f14c268e9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_243",
+      "text": "프림이 냉큼 뜯어진 베개를 꺼내들었다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_244",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "여기. 가득. 참. 필요!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_245",
+      "speaker": "yan",
+      "speakerName": "얀",
+      "text": "거기 가득 찰 정도가 필요하다고?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/os-66/so-41/3daf068e85df1185adc13e8f14c268e9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_246",
+      "speaker": "yan",
+      "speakerName": "얀",
+      "text": "흠….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/os-66/so-41/3daf068e85df1185adc13e8f14c268e9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_247",
+      "text": "얀이 프림의 베개를 이리저리 살펴보았다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_248",
+      "speaker": "yan",
+      "speakerName": "얀",
+      "text": "니 이거 네 돈 주고 산 거 아이제?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/os-66/so-41/3daf068e85df1185adc13e8f14c268e9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_249",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "어떻게. 앎?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_250",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "카페. 창업. 비용. 사용.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_251",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "사장님. 카드. 굿.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_252",
+      "text": "카페 창업 비용으로 준 머스탱 카드로 샀다고?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_253",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "정답.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_254",
+      "text": "…….",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_255",
+      "speaker": "yan",
+      "speakerName": "얀",
+      "text": "에휴. 그럴 줄 알았다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/os-66/so-41/3daf068e85df1185adc13e8f14c268e9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_256",
+      "speaker": "yan",
+      "speakerName": "얀",
+      "text": "어쩐지 소재들이 하나같이 고급 지더라니.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/os-66/so-41/3daf068e85df1185adc13e8f14c268e9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_257",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "오오. 고급.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_258",
+      "speaker": "yan",
+      "speakerName": "얀",
+      "text": "예비용은 안 필요하나?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/os-66/so-41/3daf068e85df1185adc13e8f14c268e9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_259",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "응. 필요. 없음.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_260",
+      "speaker": "yan",
+      "speakerName": "얀",
+      "text": "왜? 또 뜯어지면 우예 할라고.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/os-66/so-41/3daf068e85df1185adc13e8f14c268e9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_261",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "그때. 또. 구함.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_262",
+      "speaker": "yan",
+      "speakerName": "얀",
+      "text": "그때 또 구하겠다고?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/os-66/so-41/3daf068e85df1185adc13e8f14c268e9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_263",
+      "speaker": "yan",
+      "speakerName": "얀",
+      "text": "왜 그렇게 바보같은 짓을….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/os-66/so-41/3daf068e85df1185adc13e8f14c268e9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_264",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "미리. 준비. 불행해짐.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_265",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "준비. 안 함. 행복.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_266",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "앞으로도. 예비. 없음. 준비. 안 할 거임.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_267",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "아무것도.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_268",
+      "speaker": "yan",
+      "speakerName": "얀",
+      "text": "…….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/os-66/so-41/3daf068e85df1185adc13e8f14c268e9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_269",
+      "text": "…….",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_270",
+      "speaker": "yan",
+      "speakerName": "얀",
+      "text": "그래. 알겠다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/os-66/so-41/3daf068e85df1185adc13e8f14c268e9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_271",
+      "speaker": "yan",
+      "speakerName": "얀",
+      "text": "네 뜻이 그렇다는데 우야겠노.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/os-66/so-41/3daf068e85df1185adc13e8f14c268e9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_272",
+      "speaker": "yan",
+      "speakerName": "얀",
+      "text": "카면~ 갖고 있는 베개를 수선할 솜의 비용만 책정하면….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/os-66/so-41/3daf068e85df1185adc13e8f14c268e9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_273",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "잠깐. 비용?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_274",
+      "speaker": "yan",
+      "speakerName": "얀",
+      "text": "그래. 비용.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/os-66/so-41/3daf068e85df1185adc13e8f14c268e9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_275",
+      "speaker": "yan",
+      "speakerName": "얀",
+      "text": "카면 내가 이걸 공짜로 줄 줄 알았나?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/os-66/so-41/3daf068e85df1185adc13e8f14c268e9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_276",
+      "speaker": "yan",
+      "speakerName": "얀",
+      "text": "니들 장사꾼 처음 보나?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/os-66/so-41/3daf068e85df1185adc13e8f14c268e9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_277",
+      "text": "그래서 얼마인데…?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_278",
+      "speaker": "yan",
+      "speakerName": "얀",
+      "text": "어디 보자….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/os-66/so-41/3daf068e85df1185adc13e8f14c268e9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_279",
+      "speaker": "yan",
+      "speakerName": "얀",
+      "text": "음~ 너희들이니까 인심 좀 썼다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/os-66/so-41/3daf068e85df1185adc13e8f14c268e9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_280",
+      "speaker": "yan",
+      "speakerName": "얀",
+      "text": "100만 크레디트면 된다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/os-66/so-41/3daf068e85df1185adc13e8f14c268e9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_281",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "!!!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_282",
+      "text": "그렇게나 많이?!",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_283",
+      "speaker": "yan",
+      "speakerName": "얀",
+      "text": "말했잖아. 이거 고급이라고.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/os-66/so-41/3daf068e85df1185adc13e8f14c268e9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_284",
+      "speaker": "yan",
+      "speakerName": "얀",
+      "text": "그러게 처음 골랐을 때 적당히 좋은 걸 골랐어야지.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/os-66/so-41/3daf068e85df1185adc13e8f14c268e9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_285",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "후회. 막심.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_286",
+      "speaker": "yan",
+      "speakerName": "얀",
+      "text": "그렇게 후회되면 다른 베개로 바꿀래?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/os-66/so-41/3daf068e85df1185adc13e8f14c268e9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_287",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "그건. 싫음.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_288",
+      "speaker": "yan",
+      "speakerName": "얀",
+      "text": "카면 어쩔 수 없지. 100만 크레디트 내면 된다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/os-66/so-41/3daf068e85df1185adc13e8f14c268e9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_289",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "깎아줌. 안됨?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_290",
+      "speaker": "yan",
+      "speakerName": "얀",
+      "text": "깎아주는 건 안되지만~",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/os-66/so-41/3daf068e85df1185adc13e8f14c268e9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_291",
+      "speaker": "yan",
+      "speakerName": "얀",
+      "text": "다른 방법은 있다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/os-66/so-41/3daf068e85df1185adc13e8f14c268e9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_292",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "다른 방법?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_293",
+      "speaker": "yan",
+      "speakerName": "얀",
+      "text": "그래. 니 해결사잖아.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/os-66/so-41/3daf068e85df1185adc13e8f14c268e9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_294",
+      "speaker": "yan",
+      "speakerName": "얀",
+      "text": "의뢰 하나만 해도.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/os-66/so-41/3daf068e85df1185adc13e8f14c268e9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_295",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "의뢰?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_296",
+      "speaker": "yan",
+      "speakerName": "얀",
+      "text": "내가 요새 곤란한 일이 있거든.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/os-66/so-41/3daf068e85df1185adc13e8f14c268e9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_297",
+      "speaker": "yan",
+      "speakerName": "얀",
+      "text": "그걸 대신 좀 해도.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/os-66/so-41/3daf068e85df1185adc13e8f14c268e9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_298",
+      "speaker": "yan",
+      "speakerName": "얀",
+      "text": "카면 대가로 솜을 줄게.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/os-66/so-41/3daf068e85df1185adc13e8f14c268e9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_299",
+      "text": "어떤 의뢰인데?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_300",
+      "speaker": "yan",
+      "speakerName": "얀",
+      "text": "역시 우리 신참이 신중하구만.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/os-66/so-41/3daf068e85df1185adc13e8f14c268e9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_301",
+      "speaker": "yan",
+      "speakerName": "얀",
+      "text": "너희 지상에 좀 다녀와야겠다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/os-66/so-41/3daf068e85df1185adc13e8f14c268e9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_302",
+      "text": "지상?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_303",
+      "speaker": "yan",
+      "speakerName": "얀",
+      "text": "이번에 거래처에 방주에서 전초기지 쪽으로, 물건을 좀 올려 달라고 시켰는데.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/os-66/so-41/3daf068e85df1185adc13e8f14c268e9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_304",
+      "speaker": "yan",
+      "speakerName": "얀",
+      "text": "세상에~",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/os-66/so-41/3daf068e85df1185adc13e8f14c268e9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_305",
+      "speaker": "yan",
+      "speakerName": "얀",
+      "text": "보내는 쪽에서 엘리베이터를 잘못 태워서,",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/os-66/so-41/3daf068e85df1185adc13e8f14c268e9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_306",
+      "speaker": "yan",
+      "speakerName": "얀",
+      "text": "지상에 물건을 올려다 놨다 카대.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/os-66/so-41/3daf068e85df1185adc13e8f14c268e9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_307",
+      "speaker": "yan",
+      "speakerName": "얀",
+      "text": "그걸 다시 가져와야 하긴 하는데,",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/os-66/so-41/3daf068e85df1185adc13e8f14c268e9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_308",
+      "speaker": "yan",
+      "speakerName": "얀",
+      "text": "내가 너무 바빠서 올라갈 시간이 없어갖고~",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/os-66/so-41/3daf068e85df1185adc13e8f14c268e9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_309",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "그거. 가져옴. 됨?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_310",
+      "speaker": "yan",
+      "speakerName": "얀",
+      "text": "그럼! 딱 되지~",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/os-66/so-41/3daf068e85df1185adc13e8f14c268e9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_311",
+      "text": "위험한 건 아니지?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_312",
+      "speaker": "yan",
+      "speakerName": "얀",
+      "text": "지상 엘리베이터 앞에 둔 건데 뭐 별일 있겠나?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/os-66/so-41/3daf068e85df1185adc13e8f14c268e9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_313",
+      "speaker": "yan",
+      "speakerName": "얀",
+      "text": "그냥 다시 갖고 내려오기만 하면 될 거다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/os-66/so-41/3daf068e85df1185adc13e8f14c268e9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_314",
+      "text": "불법적인 것도… 아니지?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_315",
+      "speaker": "yan",
+      "speakerName": "얀",
+      "text": "아니고 말고. 너희 내 못 믿나?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/os-66/so-41/3daf068e85df1185adc13e8f14c268e9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_316",
+      "text": "…….",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_317",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "…….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_318",
+      "speaker": "yan",
+      "speakerName": "얀",
+      "text": "하하. 표정들 좀 봐라~ 진짜 속이는 거 아니니까.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/os-66/so-41/3daf068e85df1185adc13e8f14c268e9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_319",
+      "speaker": "yan",
+      "speakerName": "얀",
+      "text": "잘못 배송된 택배만 가져다 도. 그거면 된다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/os-66/so-41/3daf068e85df1185adc13e8f14c268e9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_320",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "의뢰. 접수.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_321",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "솜. 부탁함.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_322",
+      "speaker": "yan",
+      "speakerName": "얀",
+      "text": "그래~ 잘 부탁한데이!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/os-66/so-41/3daf068e85df1185adc13e8f14c268e9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_323",
+      "text": "…지상. 엘리베이터 앞.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_324",
+      "text": "…없는데?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_325",
+      "text": "아무리 둘러봐도 얀이 말했던 상자가 보이지 않는다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_326",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "랩쳐? 동물? 니케?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_327",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "누구든. 가져간 듯.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_328",
+      "text": "밖에 나가보자.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_329",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "동의.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_330",
+      "text": "밖으로 나가보았다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_331",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "여. 이쪽.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_332",
+      "text": "프림이 바닥을 가리켰다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_333",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "누가. 상자. 끌고. 간 듯.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_334",
+      "text": "바닥에 상자를 끌고 간듯한 자국이 보인다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_335",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "추적. 필요. 여. 가능?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_336",
+      "text": "따라가자.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_337",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "동의.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_338",
+      "text": "프림과 함께 상자가 끌린 자국을 따라 걸었다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_339",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "…….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_340",
+      "text": "…….",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_341",
+      "text": "한 가지만 물어봐도 돼?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_342",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "? 됨.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_343",
+      "text": "왜 더는 준비하지 않는다고 한 거야?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_344",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "아.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_345",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "…….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_346",
+      "text": "이야기하기 어려우면 안 해도 괜찮아.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_347",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "…아님.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_348",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "준비. 불행. 불러옴.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_349",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "부지런함. 빨리. 끝이 옴.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_350",
+      "text": "빨리 끝이 온다고?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_351",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "응.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_352",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "잠. 끝. 미뤄줌.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_353",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "빈틈. 가능성. 만들어 줌.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_354",
+      "text": "가능이라니…?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_355",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "불행. 피할. 가능성.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_356",
+      "text": "프림과 눈이 마주쳤다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_357",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "완벽이란 거. 없음.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_358",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "준비. 많이 해도.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_359",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "이렇게. 변수. 생김.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_360",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "많이 준비함. 변수 생김. 당황. 불행. 옴.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_361",
+      "text": "변수가 생기지 않을 수도 있잖아.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_362",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "아님.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_363",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "용병은. 늘. 생김.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_364",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "…아니. 나라서. 생김.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_365",
+      "text": "용병이라니?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_366",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "용병. 뭐든 하는. 인간.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_367",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "그게. 인간일 때. 나였음.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_368",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "뭐든. 준비했음.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_369",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "뭐든. 하기 위해.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_370",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "그래서. 전부. 잃음.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_371",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "동료. 나. 모두.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_372",
+      "text": "!!",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_373",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "그래서. 더는. 안함.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_374",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "나. 뭐 하면. 불행. 옴.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_375",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "그러니.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_376",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "이제. 아무것도. 준비. 안 함.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_377",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "그것이. 최선.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_378",
+      "text": "…그래서 잠을 자는 거야?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_379",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "…….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_380",
+      "text": "아무것도 준비하지 않기 위해?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_381",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "맞음.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_382",
+      "text": "…….",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_383",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_384",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "그 표정. 노노.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_385",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "지금. 행복.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_386",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "준비 안 함. 여유. 옴.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_387",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "완벽 없음. 인정. 변수도. 허용됨.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_388",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "오늘처럼. 만남. 많아도.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_389",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "의뢰. 생겨도.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_390",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "여유로움.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_391",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "여. 계속. 함께함.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_392",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "불안. 안 함. 행복.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_393",
+      "text": "…미안. 함부로 동정하지 않을게.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_394",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "굿.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_395",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "말. 많이 함. 이제. 귀찮.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_396",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "잠. 필요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_397",
+      "text": "그래. 얼른 찾고 가자.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_398",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "여. 저기.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_399",
+      "text": "??",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_400",
+      "text": "프림이 가리킨 곳을 바라보았다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_401",
+      "text": "저 멀리에서 붉은 상자 같은 것과,",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_402",
+      "text": "그를 둘러싼 랩쳐들이 보였다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_403",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "타깃. 발견?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_404",
+      "text": "잘 안 보이는데 상자가 있는 거 같긴 해.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_405",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "굿.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_406",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "여. 물러남.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_407",
+      "text": "알겠어.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_408",
+      "text": "철컥-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_409",
+      "text": "프림이 상자에 가장 가까이 다가간 랩쳐를 조준했다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_410",
+      "text": "여기서 쏘려고?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_411",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "응. 가기. 귀찮.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_412",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "명중. 가능.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_413",
+      "text": "탕-!",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_414",
+      "text": "프림이 쏜 탄이 랩쳐의 코어를 명중했다!",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_415",
+      "text": "!!",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_416",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "의뢰. 시작.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_417",
+      "text": "얀에게 의뢰 물품을 건네준 우리는,",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_418",
+      "text": "솜을 받아 프림의 방으로 향했다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_419",
+      "text": "드디어 솜을 구할 수 있게 됐네.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_420",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "…….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_421",
+      "text": "왜 이렇게 표정이 안 좋아?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_422",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "여. 큰일 남.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_423",
+      "text": "왜?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_424",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "바느질. 할 줄. 모름.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_425",
+      "text": "!!",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_426",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "솜. 있어도. 못 고침.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_427",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "…우울.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_428",
+      "text": "…내가 해줄게.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_429",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "여? 가능?!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_430",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "!!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_431",
+      "text": "아마도?",
+      "window": "Choice",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_432",
+      "text": "가능.",
+      "window": "Choice",
+      "voice": null,
+      "chosen": true
+    },
+    {
+      "id": "d_favorite_frima_433",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "믿음직. 훌륭!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_434",
+      "text": "프림이 눈을 빛내며 베개와 솜을 내밀었다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_435",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "잘. 부탁!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_436",
+      "text": "…그래.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_437",
+      "text": "잠시 후",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_438",
+      "text": "완성.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_439",
+      "text": "프림에게 수선한 베개를 건넸다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_440",
+      "text": "프림이 베개를 눌러보았다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_441",
+      "text": "톡- 톡톡-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_442",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "오.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_443",
+      "text": "팡- 팡팡-!",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_444",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "오오!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_445",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "폭신. 이전 거. 똑같!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_446",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "여. 굿!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_447",
+      "text": "…굿.",
+      "window": "Choice",
+      "voice": null,
+      "chosen": true
+    },
+    {
+      "id": "d_favorite_frima_448",
+      "text": "힘들었어.",
+      "window": "Choice",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_449",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "고생. 많!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_450",
+      "text": "풀썩-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_451",
+      "text": "프림은 소파에 위에 누워, 베개를 들고 이리저리 살펴보았다. 그러다….",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_452",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "?!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_453",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "이거. 나?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_454",
+      "text": "베개에 수놓아진 자신의 얼굴을 발견했다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_455",
+      "text": "예비용을 준비하지 않는다면, 절대 잃어버려선 안되니까.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_456",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "!!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_457",
+      "text": "이 정도는 준비해도 되지?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_458",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "…됨.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_459",
+      "text": "프림이 베개에 수놓인 얼굴을 빤히 바라보았다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_460",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "…….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_461",
+      "text": "프림?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_462",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "…여.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_463",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "나. 더 이상. 준비. 안 함.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_464",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "대신.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_465",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "믿음.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_466",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "여. 옆에 있음.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_467",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "행복해짐.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_468",
+      "text": "프림이 이쪽을 바라보았다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_469",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "도움. 고마워.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_470",
+      "text": "…직접 얼굴을 보고 말해주다니 감동인데,",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_471",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "당연.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_472",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "여. 내 해결사. 칭찬. 필요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_473",
+      "text": "잠의 해결사라는 거지?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_474",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "!!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_475",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "잠의 해결사….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_476",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "그거. 좋음.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_477",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "잠. 기분 좋게. 올 것. 같음.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_478",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "여.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_479",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "잘 잠.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_480",
+      "text": "잘 자. 프림.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_481",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "굿.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_482",
+      "text": "프림이 눈을 감았다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_483",
+      "text": "그리고 얼마 지나지 않아,",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_484",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "쿨-",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_485",
+      "text": "자신의 얼굴이 새겨진 부분을 손으로 감싸 안은 채,",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_486",
+      "text": "깊은 잠에 들었다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_frima_487",
+      "text": "…좋은 꿈 꾸길.",
+      "window": "Self",
+      "voice": null
+    }
+  ]
+}

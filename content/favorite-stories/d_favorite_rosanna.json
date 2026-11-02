@@ -1,0 +1,4625 @@
+{
+  "groupId": "d_favorite_rosanna",
+  "type": "favorite",
+  "name": "맹세",
+  "nikke": "로산나",
+  "sourceVideo": "https://youtu.be/Nl7Xldc4je4",
+  "lines": [
+    {
+      "id": "d_favorite_rosanna_1",
+      "text": "지잉-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_2",
+      "speakerName": "콘실리에리",
+      "text": "…….",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_3",
+      "text": "달칵달칵-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_4",
+      "text": "어두운 조명 속.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_5",
+      "text": "로산나가 익숙한 손놀림으로 총열이 기다란 대구경 권총을 손질하고 있다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_6",
+      "speakerName": "콘실리에리",
+      "text": "찾으셨다고 들었습니다. 보스.",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_7",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "그래, 맞아.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_8",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "한 가지 묻고 싶은 게 생겨서 말이야.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_9",
+      "speakerName": "콘실리에리",
+      "text": "무슨 일이신지 여쭤봐도 되겠습니까.",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_10",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "기억나니?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_11",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "전에 네가 안토니의 잔여물을 쓸어버렸을 때.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_12",
+      "speakerName": "콘실리에리",
+      "text": "…….",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_13",
+      "text": "콘실리에리는 무언가 떠오른 듯 어깨를 움켜쥔다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_14",
+      "speakerName": "콘실리에리",
+      "text": "…예, 기억하고 있습니다.",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_15",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "그래, 잊으려야 잊을 수 없겠지.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_16",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "그때 송장 더미에서 뭔가 나왔나 해서 말이야.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_17",
+      "speakerName": "콘실리에리",
+      "text": "무언가… 말입니까?",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_18",
+      "speakerName": "콘실리에리",
+      "text": "안토니 패거리에서 나올만한 것이라면-",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_19",
+      "text": "반짝-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_20",
+      "text": "권총에 새겨진 장미 문양이 조명을 받아 빛난다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_21",
+      "speakerName": "콘실리에리",
+      "text": "!",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_22",
+      "speakerName": "콘실리에리",
+      "text": "…설마.",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_23",
+      "text": "콘실리에리의 시선이 벽면 쇼케이스로 향한다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_24",
+      "speakerName": "콘실리에리",
+      "text": "…!",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_25",
+      "text": "본래 [상징]이 놓여있어야 했을 쇼케이스의 안은.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_26",
+      "text": "텅 비어 있었다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_27",
+      "speakerName": "콘실리에리",
+      "text": "…….",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_28",
+      "speakerName": "콘실리에리",
+      "text": "있을 수 없는 일입니다.",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_29",
+      "speakerName": "콘실리에리",
+      "text": "안토니 녀석들이라면 후에도 저희가 몇 번이고-",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_30",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "걱정마, 그 정돈 나도 알고 있으니까.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_31",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "삼엄한 저택의 경비를 뚫고, 여기까지 들어와 쇼케이스에 손댈 수 있는 사람.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_32",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "과연 몇 명이나 될 것 같아?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_33",
+      "speakerName": "콘실리에리",
+      "text": "…물리적으로 불가능합니다.",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_34",
+      "speakerName": "콘실리에리",
+      "text": "이 저택이 침입자를 허용한 적은 단 한 번도 없었으니까요.",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_35",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "그렇지?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_36",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "설령 시도 했더라도, 지금쯤 이미 몸뚱이에 바람구멍이 났겠지.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_37",
+      "text": "달칵-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_38",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "후-",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_39",
+      "text": "손질을 끝낸 로산나는 총구에 바람을 불었다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_40",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "외부에서는 공략이 불가능한 난공불락의 요새.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_41",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "그런데 누군가 안에서 반지를 쏙 빼갔다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_42",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "이게 의미하는 건 뭘까?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_43",
+      "speakerName": "콘실리에리",
+      "text": "…내부의 소행.",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_44",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "그래 정답이야.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_45",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "안에 쥐새끼가 기어들어 온 모양이야.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_46",
+      "text": "으으….",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_47",
+      "text": "…….",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_48",
+      "text": "처음 보는 천장이다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_49",
+      "text": "벌떡-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_50",
+      "text": "여긴… 윽.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_51",
+      "text": "갑자기 밀려오는 두통에 머리를 짚는다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_52",
+      "text": "어제 무슨 일이 있었던 거지…",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_53",
+      "text": "흐릿하게 떠오르는 단편적인 기억들을 정리해 본다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_54",
+      "text": "간만에 한가했던 하루.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_55",
+      "text": "갑자기 날아온 로산나의 문자를 받은 나는.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_56",
+      "text": "아우터 림에 있는 헤도니아 저택으로 이동했다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_57",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "부담 갖지 말고 마음껏 들어.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_58",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "그동안 신세 진 것에 대한 보답이니까.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_59",
+      "text": "근사한 저녁 식사.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_60",
+      "text": "졸졸-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_61",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "자자, 쭉쭉 들이키라고.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_62",
+      "text": "그렇게 한 잔이 두 잔이 되고.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_63",
+      "text": "졸졸졸졸-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_64",
+      "text": "두 잔이 세 잔이 되고….",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_65",
+      "text": "병이 점점 쌓여간다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_66",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "역시 내 남자라면 이 정돈 거뜬해야지.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_67",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "미스터도 그렇게 생각하지 않아?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_68",
+      "text": "마, 마자아…",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_69",
+      "text": "그렇게 멋진 식사를 마치고.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_70",
+      "text": "나는 로산나가 이끄는 대로….",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_71",
+      "text": "조심스럽게 옆에 덮인 이불을 들춰본다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_72",
+      "text": "…다행히 아무도 없다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_73",
+      "text": "그 순간.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_74",
+      "text": "똑똑-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_75",
+      "speakerName": "콘실리에리",
+      "text": "일어나셨습니까?",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_76",
+      "speakerName": "콘실리에리",
+      "text": "보스의 전언입니다.",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_77",
+      "speakerName": "콘실리에리",
+      "text": "준비가 끝나는 대로 식당으로 와달라 하십니다.",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_78",
+      "text": "…알겠어.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_79",
+      "text": "서둘러 준비를 끝마친 나는 식당으로 향했다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_80",
+      "text": "한 손에 와인 잔을 들고 식사 중인 로산나가 보인다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_81",
+      "text": "어제 그렇게 마셨는데 또 마시는 거야?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_82",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "어머. 자기 일어났구나?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_83",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "잘 잤어?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_84",
+      "text": "응, 덕분에.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_85",
+      "text": "그런데 잠깐만, [자기] 라니?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_86",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "뭐야, 기억 안 나는 거야?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_87",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "어제 분명 이야기했잖아.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_88",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "지휘관 따위 때려치우고 내 사람이 되겠다고.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_89",
+      "text": "내, 내가 그랬다고?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_90",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "그럼~ 물론이지.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_91",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "어제 정말 멋졌어, 미스터.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_92",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "매번 느끼는 거지만 정말 신기하단 말이지.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_93",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "낮에는 이렇게 순진한 얼굴을 하고 있으면서,",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_94",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "해가 떨어지면 그렇게 달라질 수 있는지 말이야.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_95",
+      "text": "…….",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_96",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "음? 끝까지 모른척하기야?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_97",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "그렇다면 어젯밤에 내 귀에 대고 뭐라 했는지, 내 입으로 직접-",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_98",
+      "text": "…거기까지만 하자.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_99",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "하하, 간만에 즐겁네.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_100",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "역시 미스터한텐 장난치는 맛이 있다니까.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_101",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "그래, 농담은 여기까지.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_102",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "일단 앞에 앉아. 미스터.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_103",
+      "text": "알겠어.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_104",
+      "text": "끼익-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_105",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "궁금한 표정이네.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_106",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "왜 본인을 이곳에 불러들였는지.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_107",
+      "text": "솔직히 말하자면… 맞아.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_108",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "주된 이유는 두 가지야.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_109",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "첫 번째는 단순한 호의.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_110",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "왜, 그동안 내가 지휘관실에 신세 진 적이 많잖아?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_111",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "그걸 이제 갚을 때가 됐다- 싶었던 거지.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_112",
+      "text": "보답이 술로 시작해서 술로 끝난 거 같긴 하지만….",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_113",
+      "text": "그래도 즐거웠어.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_114",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "그래? 마음에 들었다면 다행이네.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_115",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "조금 뿌듯할지도 모르겠어.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_116",
+      "text": "그럼 나머지 이유는 뭐야?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_117",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "다른 이유 말이지.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_118",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "조만간 행사가 있을 거야.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_119",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "거기에 미스터가 참석해 줬으면 해서.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_120",
+      "text": "어떤 행사인지 궁금한데.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_121",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "헤도니아 창단으로부터 이어져 온 유구한 전통.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_122",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "[대관식]을 진행할 거야.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_123",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "아주 성대하게.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_124",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "더 이상 미루긴 힘들 것 같다는 생각이 들었거든.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_125",
+      "text": "대관식이라고?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_126",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "하하, 궁금한 게 많은 모양이네.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_127",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "잠시 자리를 좀 옮길까?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_128",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "이야기가 조금 길어질 것 같아서 말이야.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_129",
+      "text": "그렇게 우리는 전초기지로 자리를 옮겼고.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_130",
+      "text": "현 상황에 대한 자초지종을 듣게 되었다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_131",
+      "text": "정리하자면.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_132",
+      "text": "대관식을 해야 하는데, 반지를 도둑맞아서 곤란한 상황인 거지?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_133",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "외적으로는 그렇지.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_134",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "겸사겸사 미뤄놨던 의식도 치를 겸.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_135",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "쥐새끼를 끌어내는 게 주 목적이긴 하지만.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_136",
+      "text": "그 반지, 훔쳐 갈 만큼 가치 있는 물건이야?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_137",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "헤도니아 권력의 상징이야.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_138",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "조직의 보스에게만 승계되는 반지.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_139",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "후계자가 낙점되면, 대관식이라는 의식과 함께 물려받게 돼.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_140",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "선대 보스가 직접 손에 끼워주는 방식으로.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_141",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "…뭐, 나는 좀 예외였달까.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_142",
+      "text": "…….",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_143",
+      "text": "그런 곳에 내가 가도 되는건지 모르겠네.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_144",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "물론이지.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_145",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "그런 역사적인 자리에 내 남자가 빠지면 쓰겠어?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_146",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "선대 보스가 없는 상황에서.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_147",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "그 자리를 대신할 수 있는 건, 미스터 말곤 없다고 생각하는데.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_148",
+      "text": "그렇다면 어쩔 수 없지.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_149",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "뭐, 그 이야기는 차차하는 걸로 하고.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_150",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "여기.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_151",
+      "text": "로산나가 꾸깃하게 접힌 종이를 내민다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_152",
+      "text": "이건…?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_153",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "쥐새끼가 나한테 할 말이 많았는지.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_154",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "뭔갈 주저리주저리 잔뜩 써놨더라고.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_155",
+      "text": "쪽지를 펼쳐보자.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_156",
+      "text": "고의적으로 필체를 숨긴 듯한 글씨가 보인다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_157",
+      "text": "헤도니아의 왕좌는 피로 물든 찬탈자의 것이 아니다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_158",
+      "text": "정통성을 부정하며 규율을 짓밟은 자를, 우리는 보스로서 인정할 수 없다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_159",
+      "text": "네가 우리에게서 빼앗아 간 것처럼,",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_160",
+      "text": "이제 우리가 네 것을 빼앗을 차례다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_161",
+      "text": "가장 소중한 것부터.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_162",
+      "text": "…괜찮은 거 맞아?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_163",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "싸구려 촌극이야.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_164",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "정통성이 없네 뭐네, 이 바닥에 구르는 놈들에겐 뻔한 레퍼토리니까.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_165",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "다만 신경 쓰이는 게 있다면….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_166",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "…….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_167",
+      "text": "?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_168",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "하, 별거 아냐.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_169",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "그냥 열받는다, 이거지.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_170",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "쥐새끼 같은 게, 감히 내 거에 손을 대겠다고 통보질을 해대니까.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_171",
+      "text": "꽈아악-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_172",
+      "text": "잔을 쥐고 있는 로산나의 손에 힘이 들어간다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_173",
+      "text": "그 순간.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_174",
+      "speaker": "dolla",
+      "speakerName": "도라",
+      "text": "여기 있었구나.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/db-70/il-46/64a8d9fdfb64325afbf67d1e30373bd7.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_175",
+      "speaker": "dolla",
+      "speakerName": "도라",
+      "text": "분위기를 보아하니, 뭔가 중요한 이야기 중인 거 같은데.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/db-70/il-46/64a8d9fdfb64325afbf67d1e30373bd7.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_176",
+      "speaker": "dolla",
+      "speakerName": "도라",
+      "text": "이따가 다시 올까?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/db-70/il-46/64a8d9fdfb64325afbf67d1e30373bd7.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_177",
+      "text": "도라?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_178",
+      "speaker": "dolla",
+      "speakerName": "도라",
+      "text": "오랜만이야, 고객님.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/db-70/il-46/64a8d9fdfb64325afbf67d1e30373bd7.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_179",
+      "speaker": "dolla",
+      "speakerName": "도라",
+      "text": "마침 거래가 있어서 들렸는데, 고객님도 같이 있을 줄이야.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/db-70/il-46/64a8d9fdfb64325afbf67d1e30373bd7.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_180",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "상관없어.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_181",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "어차피 관련된 이야기였으니까.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_182",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "정보는 가지고 온 거겠지?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_183",
+      "speaker": "dolla",
+      "speakerName": "도라",
+      "text": "물론이지.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/db-70/il-46/64a8d9fdfb64325afbf67d1e30373bd7.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_184",
+      "speaker": "dolla",
+      "speakerName": "도라",
+      "text": "조사해 본 결과.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/db-70/il-46/64a8d9fdfb64325afbf67d1e30373bd7.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_185",
+      "speaker": "dolla",
+      "speakerName": "도라",
+      "text": "꽤나 유의미한 정보를 찾아낼 수 있었어.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/db-70/il-46/64a8d9fdfb64325afbf67d1e30373bd7.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_186",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "그래? 어디 한번 들어나 보자.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_187",
+      "speaker": "dolla",
+      "speakerName": "도라",
+      "text": "마르코라는 이름. 기억해?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/db-70/il-46/64a8d9fdfb64325afbf67d1e30373bd7.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_188",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "간만에 듣는 이름이네.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_189",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "전 보스의 장남, 아니야?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_190",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "멍청한 짓만 골라 하다가, 후계에서 제외됐었던.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_191",
+      "speaker": "dolla",
+      "speakerName": "도라",
+      "text": "글쎄, 멍청했는진 어땠는진 잘 모르겠지만.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/db-70/il-46/64a8d9fdfb64325afbf67d1e30373bd7.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_192",
+      "speaker": "dolla",
+      "speakerName": "도라",
+      "text": "장남임에도 불구하고 후계에서 제외되었던 건 맞아.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/db-70/il-46/64a8d9fdfb64325afbf67d1e30373bd7.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_193",
+      "speaker": "dolla",
+      "speakerName": "도라",
+      "text": "선대 보스가 죽고 나서 독립적인 세력을 구축했지.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/db-70/il-46/64a8d9fdfb64325afbf67d1e30373bd7.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_194",
+      "speaker": "dolla",
+      "speakerName": "도라",
+      "text": "[정통성이 있는건 우리다]라고 주장하면서.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/db-70/il-46/64a8d9fdfb64325afbf67d1e30373bd7.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_195",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "기억나, 거슬리게 굴어서 우리 쪽에서 손봐줬거든.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_196",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "그런데 그놈이 왜?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_197",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "부두술 같은 거라도 써서 무덤에서 기어 나왔대?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_198",
+      "speaker": "dolla",
+      "speakerName": "도라",
+      "text": "뭐, 비슷한 거라고 할 수 있겠지.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/db-70/il-46/64a8d9fdfb64325afbf67d1e30373bd7.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_199",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "뭐라고…?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_200",
+      "speaker": "dolla",
+      "speakerName": "도라",
+      "text": "손봐주고 나서, 어떻게 했어?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/db-70/il-46/64a8d9fdfb64325afbf67d1e30373bd7.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_201",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "저항하는 놈들은 죽이고 항복하는 놈들은….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_202",
+      "speaker": "dolla",
+      "speakerName": "도라",
+      "text": "그래, 바로 그거야.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/db-70/il-46/64a8d9fdfb64325afbf67d1e30373bd7.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_203",
+      "speaker": "dolla",
+      "speakerName": "도라",
+      "text": "네가 새로운 보스가 된 직후.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/db-70/il-46/64a8d9fdfb64325afbf67d1e30373bd7.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_204",
+      "speaker": "dolla",
+      "speakerName": "도라",
+      "text": "여러 세력을 숙청하고 흡수하는 과정에서 탈이 난거지.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/db-70/il-46/64a8d9fdfb64325afbf67d1e30373bd7.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_205",
+      "speaker": "dolla",
+      "speakerName": "도라",
+      "text": "헤도니아 조직원 전체를 대상으로 전수 조사를 해본 결과.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/db-70/il-46/64a8d9fdfb64325afbf67d1e30373bd7.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_206",
+      "speaker": "dolla",
+      "speakerName": "도라",
+      "text": "마르코의 세력 출신이 꽤 되더라고.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/db-70/il-46/64a8d9fdfb64325afbf67d1e30373bd7.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_207",
+      "speaker": "dolla",
+      "speakerName": "도라",
+      "text": "뭐, 대다수는 충성을 다하고 있겠지만.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/db-70/il-46/64a8d9fdfb64325afbf67d1e30373bd7.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_208",
+      "speaker": "dolla",
+      "speakerName": "도라",
+      "text": "과연 그 안에서 칼을 갈고 있는 자가 없을까?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/db-70/il-46/64a8d9fdfb64325afbf67d1e30373bd7.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_209",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "…….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_210",
+      "speaker": "dolla",
+      "speakerName": "도라",
+      "text": "그들이 강조하던 [정통성]이라는 단어와 현 상황.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/db-70/il-46/64a8d9fdfb64325afbf67d1e30373bd7.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_211",
+      "speaker": "dolla",
+      "speakerName": "도라",
+      "text": "미묘하게 맞아떨어지는 것 같지 않아?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/db-70/il-46/64a8d9fdfb64325afbf67d1e30373bd7.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_212",
+      "text": "그렇네, 쪽지에 적혀 있었기도 했고.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_213",
+      "speaker": "dolla",
+      "speakerName": "도라",
+      "text": "자, 여기 명단이야.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/db-70/il-46/64a8d9fdfb64325afbf67d1e30373bd7.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_214",
+      "speaker": "dolla",
+      "speakerName": "도라",
+      "text": "확인해 보겠어?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/db-70/il-46/64a8d9fdfb64325afbf67d1e30373bd7.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_215",
+      "text": "도라는 정보를 전달한 뒤, 보수를 받아 들고 홀연히 사라졌다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_216",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "…….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_217",
+      "text": "로산나는 명단을 보며 생각에 잠겨있다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_218",
+      "text": "좀 어때?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_219",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "뭐, 어느 정도 예상은 하고 있었어.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_220",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "그래도 막상 눈으로 직접 보니 유쾌하진 않네.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_221",
+      "text": "로산나의 표정이 어둡다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_222",
+      "text": "…이럴 때 내가 도움이 될 수 있는 게 있을까.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_223",
+      "text": "로산나.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_224",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "응?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_225",
+      "text": "잠깐 나랑 어디 좀 갈까?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_226",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "뭐야, 갑자기 데이트 신청?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_227",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "괜찮아, 미스터.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_228",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "내 기분 걱정하는 거라면, 그럴 필요 없어.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_229",
+      "text": "꼭 그런 건 아니고, 도움도 줄 겸 바람도 쐴 겸 해서.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_230",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "오, 그래?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_231",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "무슨 좋은 생각이라도 났나 봐?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_232",
+      "text": "응, 떠올랐거든.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_233",
+      "text": "그 녀석들의 역린을 건드릴 수 있는 비장의 수가.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_234",
+      "text": "딸랑-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_235",
+      "text": "리타, 지금 바빠?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_236",
+      "speaker": "liter",
+      "speakerName": "리타",
+      "text": "애송이?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/po-10/wr-03/430fe2319b54b1569064001be1a93641.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_237",
+      "speaker": "liter",
+      "speakerName": "리타",
+      "text": "무슨 일인 게냐, 연락도 없이 찾아오고.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/po-10/wr-03/430fe2319b54b1569064001be1a93641.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_238",
+      "speaker": "liter",
+      "speakerName": "리타",
+      "text": "그리고 옆에 있는 건…",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/po-10/wr-03/430fe2319b54b1569064001be1a93641.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_239",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "안녕~",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_240",
+      "speaker": "liter",
+      "speakerName": "리타",
+      "text": "!!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/po-10/wr-03/430fe2319b54b1569064001be1a93641.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_241",
+      "speaker": "liter",
+      "speakerName": "리타",
+      "text": "네, 네 녀석은…",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/po-10/wr-03/430fe2319b54b1569064001be1a93641.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_242",
+      "speaker": "liter",
+      "speakerName": "리타",
+      "text": "어, 언더월드 퀸?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/po-10/wr-03/430fe2319b54b1569064001be1a93641.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_243",
+      "speaker": "liter",
+      "speakerName": "리타",
+      "text": "헤도니아의 수장이 어째서 여기에….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/po-10/wr-03/430fe2319b54b1569064001be1a93641.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_244",
+      "text": "별건 아니고, 부탁할 게 좀 있어서.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_245",
+      "speaker": "liter",
+      "speakerName": "리타",
+      "text": "흠, 그래?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/po-10/wr-03/430fe2319b54b1569064001be1a93641.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_246",
+      "speaker": "liter",
+      "speakerName": "리타",
+      "text": "분위기가 뭔가 미묘하긴 하다만….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/po-10/wr-03/430fe2319b54b1569064001be1a93641.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_247",
+      "speaker": "liter",
+      "speakerName": "리타",
+      "text": "둘이 무슨 관계인 게냐.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/po-10/wr-03/430fe2319b54b1569064001be1a93641.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_248",
+      "text": "리타는 갑작스러운 로산나의 등장에 경계하고 있다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_249",
+      "text": "이럴 때일 수록 태연히 대처해야겠지.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_250",
+      "text": "그야 당연히 니케와 지휘관의.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_251",
+      "text": "말이 끝나기도 전에 나는 로산나 쪽으로 끌려갔다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_252",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "내 남자인데?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_253",
+      "text": "!!",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_254",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "…설마 이제 와서 아니라고 할 건 아니잖아. 그치?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_255",
+      "text": "그렇지.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_256",
+      "speaker": "liter",
+      "speakerName": "리타",
+      "text": "끄응… 역시 그런 거였군.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/po-10/wr-03/430fe2319b54b1569064001be1a93641.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_257",
+      "speaker": "liter",
+      "speakerName": "리타",
+      "text": "이번엔 헤도니아의 보스인 게냐.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/po-10/wr-03/430fe2319b54b1569064001be1a93641.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_258",
+      "speaker": "liter",
+      "speakerName": "리타",
+      "text": "네 녀석은 정말이지 끝도 없이 엮이는구나.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/po-10/wr-03/430fe2319b54b1569064001be1a93641.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_259",
+      "text": "…….",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_260",
+      "speaker": "liter",
+      "speakerName": "리타",
+      "text": "그래서? 오붓한 데이트 중에 공방은 무슨 일로 온 게냐.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/po-10/wr-03/430fe2319b54b1569064001be1a93641.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_261",
+      "speaker": "liter",
+      "speakerName": "리타",
+      "text": "신성한 공방에 심심풀이로 커플 반지나 만들러 왔다 하면 가만 안둘테니-",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/po-10/wr-03/430fe2319b54b1569064001be1a93641.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_262",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "오, 예리한걸? 반지 만들러 온 건 어떻게 알았대.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_263",
+      "speaker": "liter",
+      "speakerName": "리타",
+      "text": "뭐, 뭣이?!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/po-10/wr-03/430fe2319b54b1569064001be1a93641.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_264",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "걱정마, 커플 반지 같은 건 아니니까.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_265",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "정식 의뢰야.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_266",
+      "text": "여기 의뢰서 줄게.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_267",
+      "text": "인장 반지의 의뢰서를 리타에게 건네준다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_268",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "어때, 가능할 거 같아?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_269",
+      "speaker": "liter",
+      "speakerName": "리타",
+      "text": "흐음… 뭐, 이 정도면 30분 정도면 충분할 것 같구나.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/po-10/wr-03/430fe2319b54b1569064001be1a93641.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_270",
+      "speaker": "liter",
+      "speakerName": "리타",
+      "text": "그런데 이건 어디에 쓰려고 하는 게냐?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/po-10/wr-03/430fe2319b54b1569064001be1a93641.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_271",
+      "speaker": "liter",
+      "speakerName": "리타",
+      "text": "검은 거래에 쓰이거나 하면, 내가 곤란해질 수도 있으니 말이야.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/po-10/wr-03/430fe2319b54b1569064001be1a93641.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_272",
+      "text": "아, 그게 말이지…",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_273",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "글쎄~ 나도 잘 모르겠는걸.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_274",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "난 미스터가 끌고 와서 온 거뿐이라.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_275",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "프러포즈라도 하려는 거 아닐까?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_276",
+      "speaker": "liter",
+      "speakerName": "리타",
+      "text": "끄응… 역시 그런 거였나.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/po-10/wr-03/430fe2319b54b1569064001be1a93641.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_277",
+      "text": "곧이곧대로 믿지 말라고…",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_278",
+      "text": "슥삭슥삭-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_279",
+      "text": "위이이잉-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_280",
+      "text": "깡- 깡-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_281",
+      "speaker": "liter",
+      "speakerName": "리타",
+      "text": "자, 완성이니라!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/po-10/wr-03/430fe2319b54b1569064001be1a93641.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_282",
+      "text": "완성된 반지가 빛을 받아 반짝인다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_283",
+      "text": "뭔가 진짜 같지 않아?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_284",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "제법이잖아, 미스터.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_285",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "가짜 반지를 미끼로, 쥐새끼들을 끌어낼 생각을 하다니 말이야.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_286",
+      "text": "정통성을 중시하는 입장에서 뭐가 제일 거슬릴지 생각해 봤거든.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_287",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "나쁘지 않은 방법이야.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_288",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "제 발로 기어 나온다면 일이 훨씬 쉬워질 테니까.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_289",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "그래서, 다음은?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_290",
+      "text": "다음은….",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_291",
+      "text": "잠시 손 좀 줘볼래?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_292",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "? 갑자기 손은 왜.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_293",
+      "text": "껴봐야 할 거 아냐, 잘 맞는지.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_294",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "뭐, 틀린 말은 아니네.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_295",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "자, 여기.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_296",
+      "text": "로산나가 손을 내밀었고.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_297",
+      "text": "나는 그 손을 살며시 잡고, 약지에 조심스레 반지를 끼웠다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_298",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "…….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_299",
+      "text": "로산나의 시선이 잠시 자신의 손 위에 머무른다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_300",
+      "text": "잘 어울려.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_301",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "푸흡.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_302",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "하하, 뭐야 미스터.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_303",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "진짜 청혼이라도 하려고?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_304",
+      "text": "여기에 끼우는 게 아니야…?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_305",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "대관식 때 반지를 끼울 곳은.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_306",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "거기가 아니라… 여기.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_307",
+      "text": "새끼손가락이었구나.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_308",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "맞아, 새끼손가락에 끼우고.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_309",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "반지에 키스하면 끝.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_310",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "진정한 나의 사람이 되었다는 맹세지.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_311",
+      "text": "그건 대관식 때 해야 의미가 있겠는걸.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_312",
+      "text": "용의자 명단에 가짜 반지, 준비는 완벽하다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_313",
+      "text": "이제 저택으로 돌아가 준비만 한다면….",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_314",
+      "text": "그럼 슬슬 이동하자, 저택으로.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_315",
+      "text": "로산나?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_316",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "…….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_317",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "그래 좋네.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_318",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "이제 미스터는 지휘관실로 돌아가.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_319",
+      "text": "…같이 가는 거 아니었어?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_320",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "생각이 바뀌었어.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_321",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "미스터는 다음에 참석하는 걸로.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_322",
+      "text": "갑자기 왜?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_323",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "언젠가 내가 말하지 않았나.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_324",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "난 내 거에 흠집 나는 게 제일 싫다고.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_325",
+      "text": "거기 간다고 꼭 다치란 법은 없잖아.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_326",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "속 편한 소리야.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_327",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "쥐새끼들이 말한 [가장 소중한 것].",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_328",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "그게 과연 반지뿐일 거라 생각해?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_329",
+      "text": "…….",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_330",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "미스터는 그냥 기다리고 있으면 돼.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_331",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "어느 정도 정리를 끝내면 다시 돌아올 거니까.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_332",
+      "text": "로산나가 망설임 없는 발걸음으로 돌아서기 시작했다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_333",
+      "text": "잠깐만.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_334",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "또 뭐야.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_335",
+      "text": "나도 가야겠어.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_336",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "하, 미치겠네.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_337",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "바람구멍 나서 병원 신세 졌던 거.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_338",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "그새 잊은 거야?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_339",
+      "text": "…그때와 지금의 난 달라.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_340",
+      "text": "이때까지 난 로산나의 보호만 받아왔잖아.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_341",
+      "text": "이젠 너에게 힘이 되어주고 싶어.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_342",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "…….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_343",
+      "text": "동등한 위치에서.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_344",
+      "text": "로산나의 남자로서.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_345",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "후.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_346",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "참을 수 없게 만드네.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_347",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "…좋아.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_348",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "내 남자의 각오가 그렇다면, 그걸 이뤄주는 것도 내 역할이겠지.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_349",
+      "text": "로산나가 내게 손을 내민다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_350",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "따라와, 미스터.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_351",
+      "speakerName": "콘실리에리",
+      "text": "…….",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_352",
+      "text": "끼익-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_353",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "뭐야, 그렇게 얼빠진 표정을 하고선.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_354",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "하하, 왜? 긴장돼?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_355",
+      "speakerName": "콘실리에리",
+      "text": "그럴 리 있겠습니까.",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_356",
+      "speakerName": "콘실리에리",
+      "text": "오히려 쥐새끼를 잡을 생각에 피가 끓습니다만.",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_357",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "그래 맞아, 덫은 이미 놓여있어.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_358",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "우리는 느긋하게 미스터를 믿어 보자고.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_359",
+      "speakerName": "콘실리에리",
+      "text": "…그런데 괜찮으신 겁니까.",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_360",
+      "speakerName": "콘실리에리",
+      "text": "아무리 만만하다 한들 결국 같은 뒷세계 출신.",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_361",
+      "speakerName": "콘실리에리",
+      "text": "안전을 장담할 순 없을 겁니다.",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_362",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "…….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_363",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "알아.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_364",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "그래도 믿어 볼 수밖에.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_365",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "그 녀석이 나에게 각오를 보였으니까.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_366",
+      "text": "그렇게 시간은 흘러 대관식 당일.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_367",
+      "text": "험악하게 생긴 조직원들 사이에 서 있자니.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_368",
+      "text": "못 보던 얼굴이라 생각했는지, 사방에서 따가운 시선이 쏟아진다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_369",
+      "text": "하지만 이건 예상한 일이다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_370",
+      "text": "애초에 난 눈에 띄는 게 목적이었으니까.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_371",
+      "text": "드드드드-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_372",
+      "text": "드디어 무거운 문이 열리고.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_373",
+      "text": "로산나가 천천히 걸어 들어온다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_374",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "…….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_375",
+      "text": "!",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_376",
+      "text": "로산나의 눈빛이 스치는 것만으로도 압도되어 버렸다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_377",
+      "text": "…감히 저 눈빛을 마주하고도, 가짜라 말을 꺼낼 수 있는 자가 있을까.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_378",
+      "speakerName": "콘실리에리",
+      "text": "다 모인 건가.",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_379",
+      "speakerName": "콘실리에리",
+      "text": "지금부터 헤도니아의 대관식을 거행하겠다.",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_380",
+      "speakerName": "콘실리에리",
+      "text": "신성한 의식이니 품위를 해치는 짓은 삼가도록.",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_381",
+      "text": "조직원들이 차례로 나와 한쪽 무릎을 꿇었고.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_382",
+      "text": "로산나의 손을 받들어 반지에 입술을 댄다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_383",
+      "text": "내가 위치한 곳은 마르코 출신들을 모아 놓은 후열.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_384",
+      "text": "낌새를 살피며 천천히 시선을 옮기던 그때.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_385",
+      "text": "등 뒤에 차가운 것이 닿는 느낌이 든다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_386",
+      "speakerName": "수상한 조직원",
+      "text": "조용히 해.",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_387",
+      "speakerName": "수상한 조직원",
+      "text": "허튼짓하면 그 자리에서 끝장이니까.",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_388",
+      "text": "…용건이 뭐야.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_389",
+      "speakerName": "수상한 조직원",
+      "text": "한 가지 묻고 싶은 게 있어서.",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_390",
+      "speakerName": "수상한 조직원",
+      "text": "너…",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_391",
+      "speakerName": "수상한 조직원",
+      "text": "로산나의 남자지?",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_392",
+      "text": "웅성웅성-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_393",
+      "speakerName": "콘실리에리",
+      "text": "…소란스럽군.",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_394",
+      "speakerName": "콘실리에리",
+      "text": "어이, 거기! 의식 중 무례를 범하지 마라.",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_395",
+      "text": "그 순간.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_396",
+      "text": "인파를 헤치고 거구의 남자가 모습을 드러냈다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_397",
+      "text": "예상대로 손에 반지를 든 채.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_398",
+      "speakerName": "콘실리에리",
+      "text": "…너는.",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_399",
+      "speakerName": "수상한 조직원",
+      "text": "형제들이여!",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_400",
+      "text": "반짝-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_401",
+      "speakerName": "수상한 조직원",
+      "text": "이 반지가 보이는가!",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_402",
+      "speakerName": "수상한 조직원",
+      "text": "이게 진짜 반지다!",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_403",
+      "speakerName": "수상한 조직원",
+      "text": "너희들이 충성을 맹세한 것은 말 그대로 가짜!",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_404",
+      "speakerName": "수상한 조직원",
+      "text": "로산나가 너희들을 우롱한 거다!",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_405",
+      "speakerName": "수상한 조직원",
+      "text": "가짜 보스에게 걸맞은 가짜 반지로!",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_406",
+      "speakerName": "콘실리에리",
+      "text": "…예상은 했지만 미쳐도 단단히 미쳤군.",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_407",
+      "speakerName": "콘실리에리",
+      "text": "반지를 훔쳐 간 것도 모자라, 대놓고 기어 나오다니.",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_408",
+      "speakerName": "콘실리에리",
+      "text": "아무 의미 없는 개죽음이 될 거다.",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_409",
+      "speakerName": "수상한 조직원",
+      "text": "…과연 그럴까?",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_410",
+      "speakerName": "수상한 조직원",
+      "text": "형제들이여, 잊지 않았겠지.",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_411",
+      "speakerName": "수상한 조직원",
+      "text": "그날, 우리가 섬기던 보스가 어떻게 죽었는지.",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_412",
+      "speakerName": "콘실리에리",
+      "text": "…!",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_413",
+      "text": "일부 조직원들의 표정이 미묘하게 흔들린다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_414",
+      "speakerName": "수상한 조직원",
+      "text": "힘과 공포로 모든 걸 해결한다는 건 그런 거다.",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_415",
+      "speakerName": "수상한 조직원",
+      "text": "충성하는 듯 보여도, 의심이 심어지는 순간 신뢰에 금이 가게 되어있지.",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_416",
+      "speakerName": "수상한 조직원",
+      "text": "나는 오늘 한 몸 바쳐 그 씨앗을 심기 위해 왔으니까.",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_417",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "…하.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_418",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "듣자 하니 재밌네.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_419",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "누가 의심을 하고 누가 반기를 든다고?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_420",
+      "speakerName": "수상한 조직원",
+      "text": "좋아… 좋은 반응이야.",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_421",
+      "text": "거한이 씩 웃는다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_422",
+      "speakerName": "수상한 조직원",
+      "text": "로산나.",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_423",
+      "speakerName": "수상한 조직원",
+      "text": "네게 소중한 건 반지뿐만이 아니지?",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_424",
+      "text": "…!",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_425",
+      "text": "순식간에 몸이 앞으로 끌려 나갔고.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_426",
+      "text": "서늘한 칼날이 목에 닿는다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_427",
+      "speakerName": "수상한 조직원",
+      "text": "네 남자가 인질이 된 감상은 어때?",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_428",
+      "text": "여기까진 계획대로다. 이제 내가 움직일 차례-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_429",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "…….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_430",
+      "text": "순간 로산나의 표정이 차갑게 굳었다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_431",
+      "text": "로산나…?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_432",
+      "text": "그리고 이쪽을 향해 천천히 걸어오기 시작한다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_433",
+      "speakerName": "수상한 조직원",
+      "text": "나도 오늘만큼은 네 방식으로-",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_434",
+      "text": "또각또각-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_435",
+      "text": "로산나가 계속 걸어온다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_436",
+      "text": "나를 위협하고 있는 거한의 이야기를 들어줄 생각 따윈 없어 보인다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_437",
+      "speakerName": "수상한 조직원",
+      "text": "…!",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_438",
+      "speakerName": "수상한 조직원",
+      "text": "오, 오지마.",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_439",
+      "text": "또각또각-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_440",
+      "text": "빠른 걸음은 아니었지만.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_441",
+      "text": "그 여유에서 알 수 없는 압도감이 느껴진다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_442",
+      "speakerName": "수상한 조직원",
+      "text": "오지말라고…!",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_443",
+      "speakerName": "수상한 조직원",
+      "text": "이, 이익….",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_444",
+      "speakerName": "수상한 조직원",
+      "text": "더 이상 가까이 오면…!",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_445",
+      "text": "날카로운 칼날이 목 앞에 바짝 다가온다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_446",
+      "text": "…로산나!",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_447",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "미안해 미스터, 생각이 바뀌었어.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_448",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "괜찮을 줄 알았는데, 직접 보니까 참기 힘들어서 말이야.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_449",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "감히 쥐새끼가 내 것에 손대는 꼴이.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_450",
+      "speakerName": "수상한 조직원",
+      "text": "그, 그런 식으로 나온다 이거지!",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_451",
+      "text": "!!",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_452",
+      "text": "칼날이 목으로 파고들기 직전.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_453",
+      "text": "몸이 먼저 움직인다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_454",
+      "text": "퍽-!",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_455",
+      "text": "팔꿈치가 옆구리에 직격.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_456",
+      "speakerName": "수상한 조직원",
+      "text": "커, 커헉…!",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_457",
+      "text": "거한의 몸에서 힘이 빠지는 게 느껴진다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_458",
+      "text": "흐으읍-!",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_459",
+      "text": "그 찰나를 놓치지 않고 앞으로 힘껏 업어친다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_460",
+      "text": "콰앙-!",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_461",
+      "speakerName": "수상한 조직원",
+      "text": "…….",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_462",
+      "text": "사관학교에서 배웠던 대인 격투술, 이런 곳에서 사용하게 될 줄이야….",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_463",
+      "speakerName": "콘실리에리",
+      "text": "…대단합니다.",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_464",
+      "speakerName": "콘실리에리",
+      "text": "체구가 차이가 배는 됐다고 생각했습니다만.",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_465",
+      "text": "뭐… 이래 봬도 군인이니까.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_466",
+      "text": "그때.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_467",
+      "text": "뒤에서 총기를 집어 드는 소리가 난다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_468",
+      "text": "철컥-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_469",
+      "speakerName": "콘실리에리",
+      "text": "피하십쇼!",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_470",
+      "text": "투쾅-! 투쾅-!",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_471",
+      "text": "시선을 돌리자.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_472",
+      "text": "거한이 양어깨에 총을 맞고 쓰러져 있었다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_473",
+      "speakerName": "수상한 조직원",
+      "text": "크, 크헉….",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_474",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "해볼 테면 해보라지.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_475",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "난 말이야.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_476",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "한 번 내 것으로 정하면, 절대 남에게 주지 않거든.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_477",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "남자도 반지도.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_478",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "내가 몸담고 있는 헤도니아도 마찬가지.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_479",
+      "text": "철컥-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_480",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "만일 빼앗겼다면.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_481",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "힘으로 되찾으면 그만이야.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_482",
+      "text": "로산나, 잠깐…!",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_483",
+      "text": "투쾅-! 투쾅-! 투쾅-!",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_484",
+      "text": "총성이 이어진다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_485",
+      "text": "헤도니아의 보스에게 반기를 든 대가가 무엇인지.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_486",
+      "text": "투쾅-! 투쾅-! 투쾅-! 투쾅-!",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_487",
+      "text": "보스의 남자에게 손을 대면 어떤 결말이 기다리는지.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_488",
+      "text": "자리에 있는 모든 이가 똑똑히 알 수 있었다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_489",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "…….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_490",
+      "text": "로산나가 고통에 몸부림치는 거한 앞에 쪼그려 앉는다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_491",
+      "text": "거한의 손에서 반지를 빼앗아 손가락 사이로 이리저리 굴리기 시작한다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_492",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "자, 마지막으로 한 가지 물어볼게.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_493",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "어느 쪽이 진짜 반지일까?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_494",
+      "speakerName": "수상한 조직원",
+      "text": "…….",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_495",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "하.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_496",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "그 안목으로 정통성을 논하다니.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_497",
+      "text": "투쾅-!",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_498",
+      "text": "털썩-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_499",
+      "speakerName": "콘실리에리",
+      "text": "…끌어내.",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_500",
+      "speakerName": "헤도니아 조직원",
+      "text": "예.",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_501",
+      "text": "거한은 조직원들에 의해 끌려 나갔다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_502",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "…계속 말하지 않았나.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_503",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "내 거에 흠집 나는 거 정말 싫어한다고.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_504",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "그러니 조심히 다루라고 말이야.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_505",
+      "text": "그래도 반지는 멀쩡한걸.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_506",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "…….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_507",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "또 그렇게 순진한 눈을 하고.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_508",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "지금 일부러 그러는 거지?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_509",
+      "text": "…농담이야.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_510",
+      "text": "그래도 저번보단 낫지 않았어?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_511",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "하.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_512",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "환장하겠네, 진짜로.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_513",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "이럴 때 보면 나보다 더 나사가 빠져있는 것 같달까.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_514",
+      "text": "칭찬이라고 생각할게.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_515",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "뭐, 좋을 대로 생각해.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_516",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "콘실리에리.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_517",
+      "speakerName": "콘실리에리",
+      "text": "예, 보스.",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_518",
+      "text": "콘실리에리가 다가와 칼날이 스친 목을 들여다본다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_519",
+      "text": "나 멀쩡한데…",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_520",
+      "speakerName": "콘실리에리",
+      "text": "양해를 부탁드립니다.",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_521",
+      "speakerName": "콘실리에리",
+      "text": "당신이 잘못되면 저희 목숨도 장담 못 할 테니 말입니다.",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_522",
+      "text": "…알겠어.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_523",
+      "text": "그렇게 로산나의 총성은 새로운 시대의 막을 열었고.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_524",
+      "text": "헤도니아의 진정한 주인이 누구인지.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_525",
+      "text": "이 자리에 있던 모든 이들의 가슴에 다시 한번 새겨졌다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_526",
+      "text": "지잉-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_527",
+      "speakerName": "헤도니아 의무관",
+      "text": "아무 이상 없습니다.",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_528",
+      "speakerName": "헤도니아 의무관",
+      "text": "그 흔한 타박상조차 찾아볼 수 없군요.",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_529",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "그래, 수고 많았어.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_530",
+      "text": "들었지? 멀쩡하다니까.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_531",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "그래그래 알겠어.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_532",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "하, 진짜 다시 생각해 봐도 어이가 없다니까.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_533",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "본인이 미끼와 제압을 동시에 하겠다니.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_534",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "일개 군인한테서 그런 깡은 어디서 나오는 건지.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_535",
+      "text": "그 정도야 뭐, 무리 없이 할 수 있지.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_536",
+      "text": "로산나의 남자잖아.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_537",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "…….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_538",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "그것도 틀린 말은 아니네.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_539",
+      "text": "그럼, 이제 저택으로 돌아가자.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_540",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "무슨 소리야, 미스터. 혹시 머리라도 다친 거야?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_541",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "의식은 이미 끝났다고, 다시 저택으로 돌아갈 일은-",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_542",
+      "text": "알아.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_543",
+      "text": "하지만… 해야 할 일이 남았으니까.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_544",
+      "text": "끼이익-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_545",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "흠?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_546",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "뭐야, 미스터.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_547",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "갑자기 이렇게 은밀한 곳에 날 데려오고 말이야.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_548",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "새로운 취향이라도 생긴 거야?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_549",
+      "text": "잠깐만 기다려봐.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_550",
+      "text": "나는 쇼케이스를 향해 걸어갔고.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_551",
+      "text": "달칵-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_552",
+      "text": "쇼케이스의 문을 열고, 빛나고 있는 [상징]을 꺼낸다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_553",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "그런 취미가 있는 줄은 몰랐는데.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_554",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "뭐, 가져가도 좋아.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_555",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "이미 의식은 끝났고, 쥐새끼도 잡았으니까.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_556",
+      "text": "그런 게 아니야.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_557",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_558",
+      "text": "그날, 제대로 의식에 참여 못 한 거 같아서.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_559",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "하.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_560",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "여기서 또 허를 찌르네.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_561",
+      "text": "잠시 여기 앉아볼래?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_562",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "좋아, 어울려줄게.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_563",
+      "text": "로산나를 방에 있는 고풍스러운 의자에 앉히고.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_564",
+      "text": "나는 그 앞에 천천히 한쪽 무릎을 꿇었다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_565",
+      "text": "밑에서 바라본 로산나는 굉장히 위압적이었지만.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_566",
+      "text": "아름다웠다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_567",
+      "text": "로산나, 손을.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_568",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "…그래.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_569",
+      "text": "만족스러운 듯, 손을 내미는 로산나.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_570",
+      "text": "새끼손가락에 조심스럽게 반지를 끼운다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_571",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "…….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_572",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "미스터, 알고 있는 거지?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_573",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "이 행위가 뭘 의미하는 건지.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_574",
+      "text": "응, 알아.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_575",
+      "text": "전에 이야기하지 않았어? 지금 로산나가 목을 맡긴 남자는 내가 유일하다고.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_576",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "…그랬었지.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_577",
+      "text": "그러니 내 목도 네게 맡기겠어.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_578",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "…좋아.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_579",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "그렇다면, 키스해 보겠어?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_580",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "헤도니아의 상징인 이 반지에 말이야.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_581",
+      "text": "알겠어.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_582",
+      "text": "나는 천천히 로산나의 손을 들어 올리고.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_583",
+      "text": "새끼손가락에 끼워진 반지에 입술을 가져다 댔다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_584",
+      "text": "맹세할게.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_585",
+      "text": "이 순간부터 나는 진정으로 로산나의 것이야.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_586",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "후후….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_587",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "생각했던 것보다 더 즐거운걸.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_588",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "내가 목을 맡겼던 유일한 남자가.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_589",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "온전히 나의 것이 된다니 말이야.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_590",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "솔직히 말하면, 이 반지… 신경도 안 쓰고 있었단 말이지.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_591",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "그런데 지금은 마음이 바뀌었어.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_592",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "이젠 절대 못 내줄 것 같아.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_593",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "이 반지도, 미스터도.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_594",
+      "text": "…둘 다 소중히 간직해줘.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_595",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "물론이지.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_596",
+      "text": "툭툭-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_597",
+      "text": "좋아, 그럼 이제 돌아가자.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_598",
+      "text": "문손잡이에 손을 얹는다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_599",
+      "text": "끼익-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_600",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "…….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_601",
+      "text": "쿵-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_602",
+      "text": "로산나가 내가 열었던 문을 다시 닫았다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_603",
+      "text": "?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_604",
+      "text": "철컥-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_605",
+      "text": "그리고 잠근다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_606",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "글쎄, 그건 안 될 것 같은데.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_607",
+      "text": "…왜?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_608",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "왜냐면 말이지….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_609",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "나도 더 이상 참기 힘들 것 같거든.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_610",
+      "text": "로산나가 점점 다가온다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_611",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "내 마음대로 해도 되는 거지?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_612",
+      "speaker": "rosanna",
+      "speakerName": "로산나",
+      "text": "이제 미스터는 온전한 내 것이니까.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/or-25/ox-22/b24c71eb0f4824d4c7aefb379d4067e4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_613",
+      "text": "…그래.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_614",
+      "text": "그날 밤.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_615",
+      "text": "나는 로산나의 것이 되었고.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_616",
+      "text": "로산나도 나의 것이 되었다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_rosanna_617",
+      "text": "온전한 서로만의 소유가.",
+      "window": "Narration",
+      "voice": null
+    }
+  ]
+}

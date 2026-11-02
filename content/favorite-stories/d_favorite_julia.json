@@ -1,0 +1,3554 @@
+{
+  "groupId": "d_favorite_julia",
+  "type": "favorite",
+  "name": "첫 번째 관객을 위한 곡",
+  "nikke": "율리아",
+  "sourceVideo": "https://youtu.be/qp6ruobl-gk",
+  "lines": [
+    {
+      "id": "d_favorite_julia_1",
+      "text": "♬♪♩♬♪♩♬♪♩~",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_2",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "오늘도 선율의 울림이 아름답군요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_3",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "삭막함 속에서 피어나는 한 송이 선인장과 같은 소리입니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_4",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "지상의 거친 대지 위에선 저의 음악도 그를 닮아 가는 거겠죠.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_5",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "무척 만족스러워요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_6",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "그러면 다음 곡을 연주해 보도록 할까요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_7",
+      "text": "펄럭.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_8",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "아아… 이 곡은!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_9",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "지난번 폐허 속에 잠들어 연주해 줄 이를 기다리고 있던 것을 깨운, 그것이군요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_10",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "아쉽게도 그 바람을 담고 있던 종이는 금방 바스러지고 말았지만,",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_11",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "이 노트에 음표의 새로운 거처를 마련해 줄 수 있어서 다행이었습니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_12",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "만약 그러지 못했다면.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_13",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "이 아름다움이 영원한 망각 속에 남았을 수도 있겠죠.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_14",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "곡을 쓴 분에게 그때의 기쁨을 전하고 싶군요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_15",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "이번엔 그 마음을 담아 연주하겠습니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_16",
+      "text": "♬♪♩♬♪♩♬♪♩~",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_17",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "이 정도라면 그분에게도 닿을까요?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_18",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "…아뇨. 아직 그 경지는 제게 천 리 길과 같이 머나먼 곳.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_19",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "그곳에 다다를 때까지 더욱 정진해야겠군요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_20",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "계속해서 걷다 보면 언젠가는 도달할 수 있겠죠.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_21",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "그때는 저의 파도치는 선율이 그분에게 닿기를 고대하겠습니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_22",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "아쉬움은 뒤로 하고 다음으로 걸어가죠.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_23",
+      "text": "펄럭.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_24",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "아….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_25",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "방금 곡이 마지막이었군요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_26",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "그러고 보니 그 곡이 제가 가장 최근에 이 노트에 담은 것이었군요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_27",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "남은 장수는….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_28",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "아직 한 곡 정도는 담을 수 있겠네요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_29",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "이곳을 마저 채우지 못한 것은 아쉬우나,",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_30",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "한 달에 한 번, 방주를 찾겠다는 은사님과의 약속 또한 저버릴 수 없는 일.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_31",
+      "text": "율리아는 고개를 들어 주위를 둘러보았다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_32",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "벌써 황야가 붉게 물들 시간이 되었군요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_33",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "마에스트로가 제 여정의 첫걸음을 축복해 준 것도 이 시간대였죠.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_34",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "이 풍경을 보고 있자니, 그때의 이미지가 떠오르네요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_35",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "…노트의 마지막 정도는 제가 하고 싶은 이야기를 담아도 되겠죠.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_36",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "그러면 그 광경을 되새기면서 연주하도록 하겠습니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_37",
+      "text": "끼이익-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_38",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "??",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_39",
+      "text": "율리아는 잠시 멈칫하다가, 다시 연주를 시작했다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_40",
+      "text": "♬♪♩♬♪♩♬♪♩~",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_41",
+      "text": "끼이이익-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_42",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "!!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_43",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "…곤란하네요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_44",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "이미지가 제대로 떠오르지 않는군요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_45",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "그럼, 이번에 방주를 방문하면.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_46",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "마에스트로에게 찾아가도록 하죠.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_47",
+      "text": "모처럼 작전이 없는 날.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_48",
+      "text": "여태까지 밀려 있던 서류 작업을 처리하는 중이었다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_49",
+      "text": "♬♪♩♬♪♩♬♪♩~",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_50",
+      "text": "끼이익-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_51",
+      "speakerName": "???",
+      "text": "흐음….",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_52",
+      "text": "끼이이익-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_53",
+      "text": "….",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_54",
+      "speakerName": "???",
+      "text": "떠오르는 이미지 그대로 연주가 되진 않는군요.",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_55",
+      "speakerName": "???",
+      "text": "무언가가 부족한 걸까요?",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_56",
+      "text": "끼이이익-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_57",
+      "text": "…저기, 율리아.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_58",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "아, 마에스트로. 부르셨습니까.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_59",
+      "text": "내가 뭐 도울 일이라도 있을까?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_60",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "!!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_61",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "제가 저의 선율을 찾아 헤매는 사이에,",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_62",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "마에스트로의 신경이 쓰이게 해버렸군요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_63",
+      "text": "아니라고는 할 수 없지.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_64",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "저의 손을 잡아 주시겠다는 말씀에는 감사하나,",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_65",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "지금은 저도 어느 손을 내밀어야 할지 모르는 상태.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_66",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "무엇을 내밀어야 할지 알게 되면 그때 당신께 청하겠습니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_67",
+      "text": "율리아가 다시 연주를 시작했다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_68",
+      "text": "♬♪♩♬♪♩♬♪♩~",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_69",
+      "text": "끼이이익-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_70",
+      "text": "….",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_71",
+      "text": "저기, 율리아.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_72",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "말씀하시죠. 마에스트로.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_73",
+      "text": "내가 해야 할 일이라도 있을까?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_74",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "…아!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_75",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "제 거칠어진 파도와 같은 선율이 마에스트로의 잔잔한 마음을 어지럽혔군요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_76",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "하지만 너무 신경 쓰지 마시길.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_77",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "저는 거친 이 선율을 달래보겠습니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_78",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "마에스트로께선 평소처럼 행동해 주시면 됩니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_79",
+      "text": "평소처럼 말이지.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_80",
+      "text": "…다시 하던 일로 돌아가자.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_81",
+      "text": "끼이익-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_82",
+      "text": "끼이이익-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_83",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "선율이 어지러움을 호소하고 있군요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_84",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "분명 제가 갈피를 잡지 못하고 있기 때문이겠죠.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_85",
+      "text": "끼이익-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_86",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "이 방향은 아닌 것 같군요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_87",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "그렇다면 이 방향일까요?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_88",
+      "text": "♬♪♩♬♪♩♬♪♩~",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_89",
+      "text": "끼이익-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_90",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "…조금 엇나갔나 보군요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_91",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "발걸음을 살짝만 옮겨 보도록 하죠.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_92",
+      "text": "끼이이익-!",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_93",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "!!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_94",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "제가 착각을 했나 보군요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_95",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "마에스트로의 앞에서 이런 실수를 하다니.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_96",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "…이번에는 실수하지 않도록 이곳의 숨결을 깊게 느껴보도록 하겠습니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_97",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "스으읍- 하-!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_98",
+      "text": "…도저히 집중이 되지 않는다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_99",
+      "text": "마침 폴리에게 볼일이 있으니, 나가서 바람이라도 쐬고 오자.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_100",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "외출하시는 겁니까?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_101",
+      "text": "응. 폴리가 잠시 와줬으면 한대서.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_102",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "아…!!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_103",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "새로운 영감을 찾아 짧은 여행을 떠나시는군요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_104",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "저도 동행하도록 하겠습니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_105",
+      "text": "…따라오려고?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_106",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "그렇습니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_107",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "오늘 하루는 마에스트로와 발걸음을 같이 하고자 합니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_108",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "마에스트로가 빚어내는 일상을 통해,",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_109",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "저의 영혼에 무게를 더하기 위해서.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_110",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "그리하여 제 노트의 마지막 장을 채우기 위해서요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_111",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "그렇지만 마에스트로가 제게 신경 쓰실 필요는 없습니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_112",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "저의 존재는 꽃을 찾아다니는 나비처럼 생각해 주십시오.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_113",
+      "text": "엄청 신경 쓰일 것 같은데.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_114",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "!!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_115",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "아아… 그렇군요! 나비의 날갯짓은 거대한 폭풍을 부르는 것.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_116",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "실례했습니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_117",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "꿀을 찾아다니는 벌처럼 여겨주십시오.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_118",
+      "text": "아니, 그런 의미가 아니라….",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_119",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "그러면 어떤…?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_120",
+      "text": "…그냥 같이 가자.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_121",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "지휘관, 와주셨군영.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_122",
+      "text": "폴리가 이유 없이 부르지는 않았을 테니까.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_123",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "약속도 없이 호출했는데 와주셔서 감사해영.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_124",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "딱히 큰일은 아니에영.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_125",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "그냥 잠시 확인해 주셨으면 하는 게 있어서영.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_126",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "그런뎅….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_127",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "율리아는 왜 또 온 건가영?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_128",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "설마 이번에도 사고 치신 건 아니겠졍?! 크르릉….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_129",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "달의 기울기가 또 한 번 돌고 난 후, 뵙는군요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_130",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "하지만 마음을 놓으시길.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_131",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "오늘은 마에스트로의 발걸음을 따라온 것이니.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_132",
+      "text": "또… 라는 건?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_133",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "방주에 돌아올 때마다, 선율의 움직임을 따라가다 보면.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_134",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "그 끝에는 반드시 폴리가 있었습니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_135",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "마주칠 땐 항상 한숨을 쉬고 있더군요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_136",
+      "text": "대충 알만하네.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_137",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "바이올린 관련 소음 신고라면, 누구인지 뻔하긴 해도,",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_138",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "일단 신고를 받은 이상 확인을 해야 한단 말이졍.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_139",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "음률의 파도에 휩쓸리는 것은 아직 제가 부족하다는 증거.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_140",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "제 부족함으로 인해 폴리를 번거롭게 해버렸군요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_141",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "악의가 있어서 그러는 게 아니라는 것 정돈 알고 있어영.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_142",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "뭐, 오늘은 지휘관이 함께니까 괜찮겠졍.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_143",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "말씀대로, 오늘 저의 흐름은 마에스트로를 따라갈 겁니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_144",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "전과 같이 선율의 움직임에 취해 떠돌아다니는 일은 없겠죠.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_145",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "그럼 다행이지만영.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_146",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "혹시 모르니 부탁할게영, 지휘관.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_147",
+      "text": "그래, 알았어.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_148",
+      "text": "그런데 확인해 줬으면 한다는 건 뭐야?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_149",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "별거 아니에영.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_150",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "이걸 좀 봐주시겠어영?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_151",
+      "text": "폴리가 보여준 자료와 함께 업무를 시작했다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_152",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "그러면 루트는 이렇게 정하공….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_153",
+      "text": "♬♪♩♬♪♩♬♪♩~",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_154",
+      "text": "배치는 여기로….",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_155",
+      "text": "♬♪♩♬♪♩♬♪♩~",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_156",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_157",
+      "text": "….",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_158",
+      "text": "끼이익-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_159",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "앗, 흐름이…!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_160",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "아쉽군요. 완성까지 얼마 남지 않은 것 같았습니다만.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_161",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "그러나 이것으로 인해 또 새로운 영감이 태어날지도 모르죠.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_162",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "영감의 탄생까지 좀 더 기다리도록 하겠습니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_163",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "자, 그럼 여태까지 그려낸 음표들을 다시 한번….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_164",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "…….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_165",
+      "text": "폴리는 말없이 율리아를 노려보고 있었다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_166",
+      "text": "…어색한 침묵이 경찰서 안에 흘렀다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_167",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "? 두분, 왜 그러시죠?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_168",
+      "text": "저기 말이야, 율리아.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_169",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "네, 마에스트로. 말씀하시죠.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_170",
+      "text": "업무 중에는 잠깐 연주를 멈춰줄 수 있을까?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_171",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "?? 무슨 연주 말씀인가요?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_172",
+      "text": "바이올린 연주 말이야.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_173",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "??",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_174",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "!!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_175",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "…저도 모르게 바이올린을 연주하고 있었군요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_176",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "죄송합니다. 또 선율의 움직임에 취하고 말았습니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_177",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "에흉. 이젠 말하는 것도 지치네영",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_178",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "두 분이 업무를 수행하는 모습이 아름다워, 좋은 음률이 떠올랐기에.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_179",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "그 흐름을 머릿속으로 그리다가 저도 모르게 바이올린을 켠 모양이네요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_180",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "조금만 더 몸을 맡긴다면 노트가 채워질 것 같아 욕심이 난 것 같습니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_181",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "저의 과욕 때문에 두 분을 방해하고 말았군요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_182",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "반성의 의미로 지금은 영혼의 무게를 더하는 일을 잠시 멈추고,",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_183",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "두 분의 일이 끝나기를 기다리겠습니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_184",
+      "text": "율리아는 바이올린을 내려놓고.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_185",
+      "text": "나와 폴리가 업무를 처리하는 모습을 지켜보았다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_186",
+      "text": "하지만 조금 시간이 지나자.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_187",
+      "text": "안절부절 불안한 모습을 감추지 못했다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_188",
+      "text": "…율리아.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_189",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "네, 마에스트로.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_190",
+      "text": "연주하고 싶으면 그냥 연주해도 돼.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_191",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "에흉. 지휘관이라면 그렇게 말할 것 같았어영.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_192",
+      "text": "방금 율리아가 좋은 흐름을 탔다고 했잖아.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_193",
+      "text": "그 흐름을 방해하고 싶진 않아.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_194",
+      "text": "율리아는 자유롭게 흐름에 몸을 맡기도록 해.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_195",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "!!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_196",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "아아…!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_197",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "감사합니다, 마에스트로.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_198",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "마에스트로의 말씀대로 자유롭게 흐름을 느끼는 것.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_199",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "그렇게 한다면 더욱 멋진 선율을 만들 수 있겠군요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_200",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "방금 머릿속에 번개가 내려쳤습니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_201",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "그리고 지금 그 번개의 모습을 이곳에 그리겠습니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_202",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "마에스트로라는 번개의 모습을요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_203",
+      "text": "율리아는 노트를 펼쳐 망설임 없이 음표를 그려 나갔다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_204",
+      "text": "…말을 걸어도 집중하느라 대답하지 않을 것 같다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_205",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "조용해졌네영.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_206",
+      "text": "지금은 우리가 방해하지 않는 게 좋을 것 같네.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_207",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "그렇겠졍? 에흉.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_208",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "할 수 없네영. 급한 건 아니니까 남은 건 다음에 하도록 하졍.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_209",
+      "text": "고마워, 폴리.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_210",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "뭘영. 이 정도는 별거 아니에영.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_211",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "지휘관은 율리아가 잘할 수 있도록 옆에서 도와주세영.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_212",
+      "text": "물론이야.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_213",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "넹. 율리아를 잘 부탁드리겠습니당.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_214",
+      "speaker": "cocoa",
+      "speakerName": "코코아",
+      "text": "다녀왔어? 주인하고 아가씨.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ui-69/cq-89/0c68334ef72cd441e0590a6ec8423264.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_215",
+      "text": "응, 다녀왔어.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_216",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "다녀… 왔습니다?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_217",
+      "speaker": "cocoa",
+      "speakerName": "코코아",
+      "text": "마음에 드는 곳에 안자.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ui-69/cq-89/0c68334ef72cd441e0590a6ec8423264.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_218",
+      "text": "그러면 오늘은 여기에.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_219",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_220",
+      "text": "적당히 자리를 잡아 앉았지만, 율리아는 어딘지 모르게 불안해 보인다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_221",
+      "text": "왜 그래?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_222",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "저는 오늘 이곳에 처음 저의 영혼을 들였습니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_223",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "그러나 그분은 제가 이곳에 발자취를 남긴 적이 있다는 듯 말하시는군요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_224",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "마에스트로, 이곳은 대체 어떤 곳이죠?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_225",
+      "text": "메이드 카페는 처음인 거야?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_226",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "부끄럽게도 그렇습니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_227",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "저는 평생을 음악에 바쳐 왔기에.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_228",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "이런 쪽의 경험은 제게 사막을 보는 펭귄의 느낌과도 같은 것.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_229",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "그렇기에 저의 머릿속은 새하얀 오선지가 되어 버렸습니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_230",
+      "text": "지금부터 알아가면 돼.",
+      "window": "Choice",
+      "voice": null,
+      "chosen": true
+    },
+    {
+      "id": "d_favorite_julia_231",
+      "text": "그냥 즐기면 되는 곳이야.",
+      "window": "Choice",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_232",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "그렇죠.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_233",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "아직 닿지 못한 것이 있다면 닿으면 될 일.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_234",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "게다가 오늘은 마에스트로의 궤적을 따라가기로 결심했으니.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_235",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "마에스트로의 인도에 따르도록 하겠습니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_236",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "자, 어서 주문을!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_237",
+      "speaker": "cocoa",
+      "speakerName": "코코아",
+      "text": "뭐로 할 거야?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ui-69/cq-89/0c68334ef72cd441e0590a6ec8423264.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_238",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "그렇군요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_239",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "타버린 검은 물에 따라진 순백색이 춤추는 음료를 부탁드리죠.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_240",
+      "speaker": "cocoa",
+      "speakerName": "코코아",
+      "text": "타버린… 순백이 춤…?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ui-69/cq-89/0c68334ef72cd441e0590a6ec8423264.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_241",
+      "speaker": "cocoa",
+      "speakerName": "코코아",
+      "text": "주인. 코코아, 무슨 말인지 모르게써.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ui-69/cq-89/0c68334ef72cd441e0590a6ec8423264.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_242",
+      "text": "우유 넣은 커피로 부탁한다는 말이야.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_243",
+      "speaker": "cocoa",
+      "speakerName": "코코아",
+      "text": "그, 그러쿠나! 주인, 대다내!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ui-69/cq-89/0c68334ef72cd441e0590a6ec8423264.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_244",
+      "text": "나도 같은 것으로 부탁해.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_245",
+      "speaker": "cocoa",
+      "speakerName": "코코아",
+      "text": "응. 아랐어. 조금만 기다려.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ui-69/cq-89/0c68334ef72cd441e0590a6ec8423264.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_246",
+      "text": "잠시 후.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_247",
+      "speaker": "cocoa",
+      "speakerName": "코코아",
+      "text": "아가씨, 카페라떼 어때써?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ui-69/cq-89/0c68334ef72cd441e0590a6ec8423264.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_248",
+      "speaker": "cocoa",
+      "speakerName": "코코아",
+      "text": "코코아가 자신이께 만든 거야!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ui-69/cq-89/0c68334ef72cd441e0590a6ec8423264.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_249",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "흐음….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_250",
+      "text": "율리아는 눈을 감고 고뇌하고 있었다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_251",
+      "speaker": "cocoa",
+      "speakerName": "코코아",
+      "text": "왜 그래? 머 마음에 안 드는 거라도 이써?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ui-69/cq-89/0c68334ef72cd441e0590a6ec8423264.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_252",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "아…!!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_253",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "실례했습니다. 음료는 춤추는 가희만큼이나 아름다운 맛이었습니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_254",
+      "speaker": "cocoa",
+      "speakerName": "코코아",
+      "text": "다만?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ui-69/cq-89/0c68334ef72cd441e0590a6ec8423264.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_255",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "이곳에서 마에스트로와 함께 있으며 느낀 감정을 그리고자 하였으나,",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_256",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "그 감정이 방황하여 음표가 그만 길을 잃었기에.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_257",
+      "text": "방황이라고?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_258",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "그렇습니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_259",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "저는 이곳에서 마에스트로의 궤적과 흐름을 읽고자 하였으나,",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_260",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "그것이 활 없이 바이올린을 켜는 것만큼이나 어렵다는 것을 알게 되었습니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_261",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "메이드 카페란 모순된 곳의 존재로 인해서요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_262",
+      "speaker": "cocoa",
+      "speakerName": "코코아",
+      "text": "모…순?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ui-69/cq-89/0c68334ef72cd441e0590a6ec8423264.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_263",
+      "speaker": "cocoa",
+      "speakerName": "코코아",
+      "text": "그게 머야? 코코아, 무슨 실수라도 한 거야?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ui-69/cq-89/0c68334ef72cd441e0590a6ec8423264.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_264",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "아뇨, 그런 것이 아닙니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_265",
+      "speaker": "cocoa",
+      "speakerName": "코코아",
+      "text": "그러면 모순이 머야?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ui-69/cq-89/0c68334ef72cd441e0590a6ec8423264.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_266",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "제가 말하는 것은 메이드 카페라는 존재 자체입니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_267",
+      "speaker": "cocoa",
+      "speakerName": "코코아",
+      "text": "코코아, 무슨 말을 하는지 모르게써.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ui-69/cq-89/0c68334ef72cd441e0590a6ec8423264.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_268",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "본디 카페라는 것은 손님에게 커피 한 잔을 대접하는 곳.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_269",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "하지만, 이곳을 방문하는 분들은 모두 주인님입니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_270",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "그래서 저는 생각했습니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_271",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "손님과 주인님. 이 두 존재는 동전의 양면과 같은 것.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_272",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "하지만 이 메이드 카페에선 두 존재는 하나죠.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_273",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "모순되는 두 개념이 하나로서 하모니를 이루는 이곳.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_274",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "메이드 카페!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_275",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "저는 깨달은 것입니다. 마에스트로가 지닌 영감의 원천을.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_276",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "일상에서 이런 모순을 즐기기 때문에 소유할 수 있었던 거군요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_277",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "그렇기에 저도 마에스트로와 같이 영감을 선율에 담고자 하였습니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_278",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "하지만, 그 모순의 굴레를 담아내는 것은 따뜻한 냉커피를 만드는 것과 같은 것.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_279",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "아아… 저는 음표가 가야 할 길을 잃고 말았던 것입니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_280",
+      "speaker": "cocoa",
+      "speakerName": "코코아",
+      "text": "저기, 주인.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ui-69/cq-89/0c68334ef72cd441e0590a6ec8423264.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_281",
+      "speaker": "cocoa",
+      "speakerName": "코코아",
+      "text": "코코아, 분명 무슨 말을 드렀는데, 이해가 안 대.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ui-69/cq-89/0c68334ef72cd441e0590a6ec8423264.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_282",
+      "text": "…율리아, 메이드 카페는 그런 곳이 아니야.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_283",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "…네? 그런 곳이 아니라는 것은?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_284",
+      "text": "여기에 있는 건 주인님과 메이드뿐이야.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_285",
+      "text": "손님은 존재하지 않으니까, 모순도 없어.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_286",
+      "speaker": "cocoa",
+      "speakerName": "코코아",
+      "text": "마자! 코코아는 주인을 손님이라고 생각한 적 업써!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ui-69/cq-89/0c68334ef72cd441e0590a6ec8423264.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_287",
+      "text": "그러니까 율리아도 손님이 아니라 아가씨인 거지.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_288",
+      "text": "율리아도 그냥 즐기면 되는 거야.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_289",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_290",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "그렇습니까.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_291",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "이곳은 그저 모두의 순수한 즐거움으로 가득 찬 곳.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_292",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "마에스토로는 그것을 즐기기에 그런 영감을 가지신 거군요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_293",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "저도 즐기면 되는, 단순한 것이었습니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_294",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "지금 좋은 음률이 떠올랐습니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_295",
+      "text": "율리아는 노트를 꺼내 무언가를 그렸다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_296",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "이곳으로 인도해 주셔서 감사합니다, 마에스트로.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_297",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "덕분에 저의 선율에 또 하나의 색을 더할 수 있었습니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_298",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "좋은 곡이 만들어질 것 같군요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_299",
+      "text": "율리아가 스스로 깨달은 거지.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_300",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "아닙니다. 마에스트로가 저를 이끌어주지 않았다면,",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_301",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "제가 기쁨으로 채워진 이곳의 존재를 알지 못했겠죠.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_302",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "마에스트로를 따라온 것은 정답이었던 것 같습니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_303",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "앞으로 조금이면 이 노트를 가득 채울 수 있겠군요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_304",
+      "text": "아직 모자란 거구나.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_305",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "네, 그렇습니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_306",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "영혼의 선율에 아름다운 색을 더할 수는 있었으나, 제 목적은 그것을 완성하는 것이기에.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_307",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "그때까지 잘 부탁드립니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_308",
+      "text": "그래. 잘 부탁해.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_309",
+      "text": "커피를 마저 마시고, 다른 곳으로 가기 위해 일어났다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_310",
+      "speaker": "cocoa",
+      "speakerName": "코코아",
+      "text": "미아내, 아가씨.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ui-69/cq-89/0c68334ef72cd441e0590a6ec8423264.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_311",
+      "speaker": "cocoa",
+      "speakerName": "코코아",
+      "text": "코코아는 아가씨가 하는 말, 잘 모르게써서 도와주지 못한 거 가타….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ui-69/cq-89/0c68334ef72cd441e0590a6ec8423264.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_312",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "아뇨. 전 이미 충분한 도움을 받았습니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_313",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "코코아는 저의 뮤즈가 되어 제 영혼에 신선한 바람을 넣어 주셨으니까요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_314",
+      "speaker": "cocoa",
+      "speakerName": "코코아",
+      "text": "코코아, 도움이 된 거야?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ui-69/cq-89/0c68334ef72cd441e0590a6ec8423264.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_315",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "네, 물론입니다. 이곳에 흐름을 느끼기 위해 다시 방문하겠습니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_316",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "그동안 평안하시길.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_317",
+      "text": "나중에 다시 올게.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_318",
+      "speaker": "cocoa",
+      "speakerName": "코코아",
+      "text": "응, 알았어. 주인, 아가씨. 그럼 다녀와!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ui-69/cq-89/0c68334ef72cd441e0590a6ec8423264.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_319",
+      "text": "♬♪♩♬♪♩♬♪♩~",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_320",
+      "text": "율리아는 아름다운 연주로 대답을 대신했다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_321",
+      "text": "율리아와 이곳저곳을 다니며 업무와 휴식을 마치고,",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_322",
+      "text": "다시 돌아오니 어느새 밤이 깊었다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_323",
+      "text": "오늘 하루 어땠어?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_324",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "오늘 하루 말씀이군요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_325",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "처음 제가 마에스트로를 찾아오기로 결심한 것은,",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_326",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "마에스트로에게 받은 영감과 이미지를 다시 받기 위해서였습니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_327",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "그리고 오늘, 마에스트로와 동행하며 많은 것을 채울 수 있었죠.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_328",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "원하던 것, 그 이상까지 말이죠.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_329",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "그렇기에 마에스트로 덕에 무척 충실한 하루를 보낼 수 있었습니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_330",
+      "text": "도움이 됐다니 다행이네.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_331",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "저야말로 감사드립니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_332",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "오늘의 경험은 저의 많은 부분을 채워 주었습니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_333",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "안전과 평화를 수호하는 곳에서는,",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_334",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "책임과 자유의 균형에 대한 영감을.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_335",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "봉사의 기쁨이 넘치는 곳에서는,",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_336",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "순수한 즐거움의 선율을 느낄 수 있었죠.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_337",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "마에스트로와 함께하며 저의 영혼을 다채롭게 만들 수 있었습니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_338",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "노트의 마지막을 제가 그리고 싶은 이야기로 채우는 건 어렵지 않겠군요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_339",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "아마도 며칠 후에는 완성되겠죠.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_340",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "다시 한번 마에스트로에게 감사드립니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_341",
+      "text": "그래, 기대하고 있을게.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_342",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "네.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_343",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_344",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "하지만 여전히 부족한 것이 있습니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_345",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "마에스트로의 언약이 있다면, 제 이야기의 완성도 먼 이야기는 아니겠죠.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_346",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "마에스트로, 언약을 부탁드릴 수 있나요?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_347",
+      "text": "율리아가 가까이 다가왔다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_348",
+      "text": "당연히 약속해 줄게.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_349",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "호의에 감사드립니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_350",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "이걸 봐주시겠습니까, 마에스트로?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_351",
+      "text": "율리아가 노트를 꺼내 보여주었다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_352",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "저는 지상을 여행하며, 수많은 악보를 발견하였고,",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_353",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "악보가 손상되어 갈 곳을 잃을 뻔한 음표들은 이 노트에 새 거처를 마련하였습니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_354",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "그리하여 선인들의 영혼을 좀 더 오래 기억되게 할 수 있었죠.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_355",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "그러다 보니 욕심이 생겨났습니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_356",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "선인들의 영혼이 담긴 이 노트에, 저의 영혼도 담고 싶다는 욕심이요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_357",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "…마에스트로.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_358",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "저는 연주를 통해….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_359",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "음악을 통해 사람에게 기억되고자 합니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_360",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "이 노트에 있는 곡을 만든 분들처럼 말이죠.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_361",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "하지만 아직 그러한 경지에 이르기에는 부족한 점이 많습니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_362",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "이런 저라도 오늘 마에스트로와 함께하며,",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_363",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "당신에게만큼은 저의 음악이 닿기를 간절히 소망하게 되었습니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_364",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "그래서 부탁드립니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_365",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "이 노트가 완성된다면, 마에스트로가 받아주시길 바랍니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_366",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "제 이야기가 당신에게 닿아, 기억될 수 있다는 증거로서요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_367",
+      "text": "물론 받아줄게.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_368",
+      "text": "혹시 도움이 더 필요한 건 없어?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_369",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "아뇨. 도움은 충분히 받았습니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_370",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "이 이상을 원하는 것은 하늘에 닿을 탑을 쌓는 것과 같겠죠.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_371",
+      "text": "아쉽네.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_372",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "아쉬워하지 마시길.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_373",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "오늘 마에스트로와 함께 그려간 음악이 완성된다면,",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_374",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "그를 통해 당신과 이어질 테니까요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_375",
+      "text": "그렇다면 곡이 완성되길 기다릴게.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_376",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "감사합니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_377",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "이 노트의 마지막을 채운 후에,",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_378",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "당신을 가장 먼저 초대하도록 하겠습니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_379",
+      "text": "며칠 후.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_380",
+      "text": "율리아한테 극장으로 와 달라는 초청을 받고 왔다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_381",
+      "text": "그리고 관객도 스태프도 없는 극장 안.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_382",
+      "text": "율리아는 홀로 무대 위에 서서 연주를 준비하고 있었다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_383",
+      "text": "율리아.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_384",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "오셨군요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_385",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "요청을 받아주셔서 감사합니다, 마에스트로.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_386",
+      "text": "드디어 곡이 완성된 거야?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_387",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "마에스트로 덕분에 만족스럽게 마침줄을 그렸습니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_388",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "아름다운 색이 더해진 저의 혼과 당신에게 받은 혼.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_389",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "그를 통해 지상의 노래와 노트에 함께 있어도 부끄럽지 않을 곡이 완성되었습니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_390",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "하지만 저의 모든 것을 쏟아부었음에도, 겨우 그분들의 뒷모습을 발견한 것 같아서.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_391",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "앞으로의 일이 걱정되기도 하는군요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_392",
+      "text": "그런 건 걱정하지 마.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_393",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "그 말씀은…?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_394",
+      "text": "율리아라면 앞으로도 잘 해낼 테니까.",
+      "window": "Choice",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_395",
+      "text": "내가 계속 옆에서 도와줄게.",
+      "window": "Choice",
+      "voice": null,
+      "chosen": true
+    },
+    {
+      "id": "d_favorite_julia_396",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "…신기하네요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_397",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "마에스트로가 그렇게 말씀한 것만으로도,",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_398",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "지금까지의 걱정이 마치 신기루처럼 사라지는군요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_399",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "네, 그렇죠. 괜한 걱정입니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_400",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "그분들이 갔던 길을 저 역시 천천히라도 걸으면 될 뿐.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_401",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "당신과… 음악을 통해 이어지며 첫걸음을 나아가도록 하죠.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_402",
+      "text": "율리아가 무대에 놓인 보면대에 노트를 펼쳐 놓았다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_403",
+      "text": "그리고 자세를 잡고 바이올린을 켤 준비를 했다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_404",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "그러면 제 첫 번째 관객. 들어주십시오.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_405",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "당신을 생각하며, 당신과 함께 만든 곡입니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_406",
+      "text": "율리아의 연주가 시작됐다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_407",
+      "text": "극장 안에 울려 퍼지는 바이올린의 선율은.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_408",
+      "text": "다양한 형태와 색깔로 음률을 바꿔갔다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_409",
+      "text": "때로는 든든한 수호자에게 송가를.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_410",
+      "text": "때로는 다른 이와 기쁨을 나누는 것에 찬가를.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_411",
+      "text": "그리고 때로는 소중한 이와 함께 보내는 날에 대한 연가를….",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_412",
+      "text": "율리아는 텅 빈 극장을 자신의 소리로 가득 채우며,",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_413",
+      "text": "자신의 영혼을 완성해 갔다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_414",
+      "text": "짝짝짝짝.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_415",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "들어주셔서 감사합니다, 마에스트로.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_416",
+      "text": "정말 훌륭한 연주였어.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_417",
+      "text": "머릿속에 율리아와 함께 보낸 그날이 저절로 그려지더라고.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_418",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "아…!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_419",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "역시 마에스트로는 알아주셨군요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_420",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "말씀한 대로입니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_421",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "처음에는 마에스트로의 모습만을 곡에 담으려 했으나,",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_422",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "당신과 하루를 보내니 욕심이 났습니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_423",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "곡에 저와 마에스트로의 색을 함께 입히고 싶은 욕심이요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_424",
+      "text": "그거라면 곡을 통해 잘 전해진 것 같아.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_425",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "…이 음률로 노트의 마지막을 장식할 수 있어서 다행입니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_426",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "마에스트로와 이를 통해 이어질 수 있었으니까요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_427",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "그러니 제가 완성한 이 노트의 원본은 당신께 드리겠습니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_428",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "저의 이야기가 완성되고,",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_429",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "당신과 제가 이어졌다는 증거로서요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_430",
+      "text": "소중하게 간직할게.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_431",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "…저는 음악을 위해 생을 바치겠다고 결심한 몸.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_432",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "하지만 마에스트로에게라면.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_433",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "제 생의 절반 정도는 드리고 싶군요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_434",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "…혹은 그 이상이라도요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_435",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "하지만 그건 구름을 밧줄로 묶어두겠다는 것과 같은 과욕이겠죠.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_436",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "그러니 마에스트로에게 제 노트를 준 것으로 만족하겠습니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_437",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "저의 영혼과 이야기가 담긴 그 노트로 당신이 저를 기억해 준다면,",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_julia_438",
+      "speaker": "julia",
+      "speakerName": "율리아",
+      "text": "저는 언제라도 당신의 곁에 있을 테니까요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xa-08/ne-37/6de32e492ff90a95075ec82e9b350fed.webp",
+      "voice": null
+    }
+  ]
+}

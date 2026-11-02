@@ -1,0 +1,3229 @@
+{
+  "groupId": "d_favorite_moran",
+  "type": "favorite",
+  "name": "손끝에서 완성된 약속",
+  "nikke": "목단",
+  "sourceVideo": "https://youtu.be/dj2DLQLuAvg",
+  "lines": [
+    {
+      "id": "d_favorite_moran_1",
+      "text": "꿀꺽-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_2",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "드디어 오늘… 이네.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_3",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "오늘 맞지? 설마 착각한 건 아니겠지?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_4",
+      "text": "목단은 달력을 확인하고, 그제야 안심한 듯 미소 지었다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_5",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "맞아, 오늘이야, 오늘.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_6",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "잠깐, 영화관에서는 어떻게 하면 된다고 했지?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_7",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "분명 찾아봤는데, 또 까먹었네. 이 멍청한 놈.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_8",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "그때 분명… 이렇게 검색했었지. 아, 여기 있다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_9",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "어디 보자… 첫 번째, 어둠을 틈타 그 사람의 손을 잡아보세요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_10",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "두 번째, 분위기 있는 장면에서 그 사람에게 기대어보세요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_11",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "세 번째, 무서운 장면이 있다면 그 사람의 품에….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_12",
+      "speakerName": "진",
+      "text": "뭘 그렇게 열심히 보고 계십니까.",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_13",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "으아악!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_14",
+      "text": "우당탕탕-!",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_15",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "너, 너이 씨! 언제 들어왔어!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_16",
+      "speakerName": "진",
+      "text": "방금 전에요.",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_17",
+      "speakerName": "진",
+      "text": "왜 노크 안 했냐고 따지지 마십쇼.",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_18",
+      "speakerName": "진",
+      "text": "계속 노크했는데도 반응이 없어서 뭔 일 있나, 싶어서 그냥 들어온 거니까.",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_19",
+      "text": "진은 곁눈질로 달력을 확인했다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_20",
+      "speakerName": "진",
+      "text": "뭔 일이 있긴 하네요.",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_21",
+      "speakerName": "진",
+      "text": "오늘이 데이트였습니까? 그래서 싱글벙글하고 계셨….",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_22",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "그, 그, 그, 그런 거 아니야!!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_23",
+      "speakerName": "진",
+      "text": "아니긴요, 얼마 전부터 계속 날짜 세고 계시지 않았습니까.",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_24",
+      "speakerName": "진",
+      "text": "매일 오늘이 며칠이냐, 확인하시고.",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_25",
+      "speakerName": "진",
+      "text": "게다가 누님, 첫 데이트잖아요.",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_26",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "야, 너! 그걸 어떻게 알았어?!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_27",
+      "speakerName": "진",
+      "text": "어떻게 알긴요.",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_28",
+      "speakerName": "진",
+      "text": "척하면 척 아닙니까.",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_29",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "가끔 보면, 네가 우리 엄마같이 느껴질 때가 있어.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_30",
+      "speakerName": "진",
+      "text": "…죄송하지만, 전 누님 같은 딸 사양입니다.",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_31",
+      "speakerName": "진",
+      "text": "사쿠라 누님 같은 딸이면 몰라도….",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_32",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "뭐라고?!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_33",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "너 이리 와 봐! 아주 그냥 콱…!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_34",
+      "speakerName": "진",
+      "text": "그것보다 누님, 무려 첫 데이트인데 그냥 그렇게 나가실 건 아니죠?",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_35",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_36",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "이, 이게 왜! 어때서!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_37",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "…별로야?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_38",
+      "speakerName": "진",
+      "text": "아니, 별로고 뭐고… 그냥 평상시 모습이잖아요.",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_39",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "아냐!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_40",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "나 오늘 진짜 열심히 씻었어!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_41",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "향나는 바디로션도 발랐고!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_42",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "그, 리, 립… 글로즈라는 것도 발랐는데!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_43",
+      "speakerName": "진",
+      "text": "전혀 티가 안 나요, 누님.",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_44",
+      "speakerName": "진",
+      "text": "좀 눈에 확띄는 걸로 티를 내셔야죠.",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_45",
+      "speakerName": "진",
+      "text": "예쁜 원피스 같은 거 없습니까?",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_46",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "…없어.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_47",
+      "speakerName": "진",
+      "text": "에이, 진짜요?",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_48",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "못 믿겠으면 직접 확인해 봐.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_49",
+      "text": "목단이 옷장을 열어 보여주었다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_50",
+      "speakerName": "진",
+      "text": "와, 누님. 어떻게 이렇게 똑같은 옷만 잔뜩….",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_51",
+      "speakerName": "진",
+      "text": "거의 뭐 단벌 신사네요.",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_52",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "그런 건 말 안 해도 알고 있다고.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_53",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "얼마 전에 옷도 새로 사볼까 했는데.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_54",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "너무 오버하는 거 아닌가 싶기도 하고.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_55",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "막상 사려니까 뭐 어떤 걸 사야 될지 전혀 모르겠더라고.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_56",
+      "speakerName": "진",
+      "text": "그럼 저나 다른 동생들한테 물어라도 보시지.",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_57",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "…그런 걸 어떻게 묻냐, 쪽팔리게.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_58",
+      "speakerName": "진",
+      "text": "약속 시간이 몇 신데요?",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_59",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "12시.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_60",
+      "speakerName": "진",
+      "text": "20분밖에 안 남았네요, 지금 새로 옷을 사는 건 힘들 것 같고.",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_61",
+      "speakerName": "진",
+      "text": "그럼 그거라도 들고 나가시죠?",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_62",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "그… 거?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_63",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "그게 뭔데?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_64",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "이걸… 해보라고?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_65",
+      "text": "목단은 손에 들린 모란 모양 비녀를 바라보았다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_66",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "야, 이걸 어떻게 들고 나가!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_67",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "이건 너희가 사준 거잖아.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_68",
+      "speakerName": "진",
+      "text": "예, 하고 다니라고 사드렸죠.",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_69",
+      "speakerName": "진",
+      "text": "한 번도 하고 다니시는 건 못 봤지만요.",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_70",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "그건…!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_71",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "하고 다니면, 망가질 수도 있잖아.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_72",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "게다가 모란회의 보스가 이런 걸 하고 다니는 건 너무 안 어울리는 것 같….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_73",
+      "speakerName": "진",
+      "text": "그게 포인트입니다, 누님.",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_74",
+      "speakerName": "진",
+      "text": "누님은 지금 모란회의 보스로 나가는 게 아니잖아요.",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_75",
+      "speakerName": "진",
+      "text": "그리고 아까 말씀드렸다시피, 데이트에선 눈에 확 띄는 게 중요하다니까요.",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_76",
+      "speakerName": "진",
+      "text": "머리 틀어 올리고, 그거 꽂고 나가보세요.",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_77",
+      "speakerName": "진",
+      "text": "동생분이 엄청 좋아할 겁니다.",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_78",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "야, 나 이런 거 꽂을 줄 모른다고.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_79",
+      "speakerName": "진",
+      "text": "아이고, 누님. 이러다 늦겠어요!",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_80",
+      "speakerName": "진",
+      "text": "빨리 갖고 나가보십쇼!",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_81",
+      "text": "시계를 본다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_82",
+      "text": "약속 시간까지 10분 정도가 남았다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_83",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "…….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_84",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "아니, 아무리 생각해도 이런 걸 좋아할 리가….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_85",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "…….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_86",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "속는 셈 치고 한번 해볼까.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_87",
+      "text": "목단은 휴대폰을 꺼내, 비녀를 꽂는 법을 찾아보았다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_88",
+      "text": "잠시 후.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_89",
+      "text": "저 멀리, 벤치에 앉아 있는 목단이 보인다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_90",
+      "text": "목단, 나왔어!",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_91",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "?!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_92",
+      "text": "벌떡-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_93",
+      "text": "짤그랑-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_94",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "으앗!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_95",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "어, 어디에 떨어뜨렸….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_96",
+      "text": "빠드득-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_97",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "헉!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_98",
+      "text": "응?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_99",
+      "text": "지금 뭔가 밟지 않았어?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_100",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "…….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_101",
+      "text": "목단이 발을 치우자, 거기엔.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_102",
+      "text": "장식이 큰 덩어리로 조각난 무언가가 보였다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_103",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "…아으으, 망했다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_104",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "내가 이럴까 봐 들고 나오기 싫었던 건데….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_105",
+      "text": "이게 뭐야?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_106",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "너한테 잘 보이려고 가져온… 아니,",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_107",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "부하들이 나한테 선물해준… 아니,",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_108",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "으으으, 뭐라고 설명해야되냐!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_109",
+      "text": "탁-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_110",
+      "text": "일단, 진정해.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_111",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "…알았어.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_112",
+      "text": "어쨌든 이거, 목단한테 소중한 거지?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_113",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_114",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "그걸 어떻게 알았어?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_115",
+      "text": "반응만 봐도 알지.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_116",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "…응, 맞아.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_117",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "소중한 거.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_118",
+      "text": "나는 주머니에서 손수건을 꺼내어, 바닥에 흩어진 파편들을 그 안에 주워 모았다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_119",
+      "text": "우선, 이거부터 고치러 가자.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_120",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "자, 잠깐만!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_121",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "괜찮겠어?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_122",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "우리 영화 예매해놨잖아.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_123",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "동생, 네가 좋아하는 영화라며.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_124",
+      "text": "괜찮아.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_125",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "응?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_126",
+      "text": "영화는 다음에 또 볼 수 있잖아.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_127",
+      "text": "그런데 이건 지금 당장 고쳐야 할 것 같은데.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_128",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "…으.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_129",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "하지만… 첫 데이트가.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_130",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "아니, 동생 말이 맞는데… 그래도 첫 데이트….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_131",
+      "text": "손수건 안에 있던 파편과 나를 번갈아 보며, 무언가를 중얼중얼하던 목단은.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_132",
+      "text": "이내 결심한 듯, 고개를 끄덕였다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_133",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "이 은혜, 언젠가는 꼭 갚을게.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_134",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "가자!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_135",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "여긴 동생 방이네?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_136",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "왜 여기로 온 거야?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_137",
+      "text": "가까우니까.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_138",
+      "text": "그리고, 우선은 내가 직접 응급처치 해보려고.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_139",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "동생이 직접?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_140",
+      "text": "응, 전문가한테 맡기면 좋겠지만.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_141",
+      "text": "마이티툴즈가 출장을 갔더라고.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_142",
+      "text": "완벽하게는 못하겠지만, 최선을 다해볼게.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_143",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "…고마워, 동생.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_144",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "내가 도와줄 건 없어?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_145",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "뭐든 괜찮으니까 말만 해!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_146",
+      "text": "아, 그럼 저쪽 책상 서랍에 있는 접착제 좀 갖다줄래?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_147",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "그 정도야 쉽지! 맡겨둬!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_148",
+      "text": "나는 손수건에 싸인 조각들을 조심스럽게 꺼냈다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_149",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "여기 있어!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_150",
+      "text": "고마워, 다 붙이려면 시간이 좀 걸릴 것 같아.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_151",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "괜찮아, 천천히 해.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_152",
+      "text": "나는 도구와 접착제를 이용해 조각을 맞추기 시작했다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_153",
+      "text": "목단은 옆에 앉아 내가 작업하는 모습을 지켜봤다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_154",
+      "text": "이거, 꽃 모양이었나 보네.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_155",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "응, 맞아. 모란꽃 모양이야.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_156",
+      "text": "그리고 이 길쭉한 걸 보니… 머리핀 같은 건가?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_157",
+      "text": "아니면 그냥 장식품?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_158",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "비녀야.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_159",
+      "text": "그랬구나.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_160",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "…있잖아, 동생.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_161",
+      "text": "응?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_162",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "아깐 제대로 설명해 주지 못해서 미안.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_163",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "이건 내 부하들이 내가 정식으로 보스가 됐을 때, 선물해 준 거야.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_164",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "돈도 없는 녀석들이, 한푼 두푼 모아서 다 같이 샀다더라고.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_165",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "모란회니까, 모란꽃 모양으로 샀습니다! 하면서.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_166",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "이걸 선물해주더라고.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_167",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "그때 솔직하게 티는 못 냈는데.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_168",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "엄청 기뻤어.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_169",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "내가 보스라는 걸, 제대로 인정받은 느낌이라서.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_170",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "실은 나, 보스 역할을 제대로 못 해내면 어쩌지 하고.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_171",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "내심 걱정하고 있었거든.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_172",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "왜, 그런 거 있잖아.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_173",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "애들 앞에서는 큰소리치고 당당한 척하는데, 속으로는 떨리는 거.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_174",
+      "text": "그런 적 많았어?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_175",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "응, 그전까지는 많았는데.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_176",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "이걸 받고 난 이후로는 자신감이 붙었어.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_177",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "그래서 더 소중하게 느껴졌나 봐.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_178",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "내 부하들이 날 믿어준다는 증거 같은 거니까.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_179",
+      "text": "그럼 정말 소중하게 여길만하네.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_180",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "…나, 이거 한 번도 하고 다닌 적 없다?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_181",
+      "text": "왜, 소중해서?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_182",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "그 이유도 있지.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_183",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "내가 하고 다니면 100퍼센트 멀쩡하지 못할 테니까.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_184",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "받은 지 얼마 안돼서 금방 망가져 버렸을걸?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_185",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "동생도 알다시피, 우리 모란회가 좀 거칠잖아. 하하.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_186",
+      "text": "다른 이유도 있어?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_187",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "더 큰 이유가 있는데….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_188",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "그… 쪽팔려서.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_189",
+      "text": "? 뭐가 쪽팔려?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_190",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "도, 동생도 생각해 봐!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_191",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "난 모란회의 보스잖아.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_192",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "카리스마만 넘쳐도 모자랄 판에.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_193",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "이런… 크고 눈에 띄는.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_194",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "예쁘장한 꽃 비녀를 어떻게 하고 다니겠어!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_195",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "부하들이 보기에 면도 안 서는 거 같고!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_196",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "그래서 그냥 서랍 속에 보관만 해두고 있었는데….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_197",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "오늘은, 그. 특별한 날이니까.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_198",
+      "text": "나도 정신이 없어서 얘기 못 한 게 있는데.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_199",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "응? 뭔데?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_200",
+      "text": "아까 보니까 잘 어울리던데?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_201",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "뭐가…? 아?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_202",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "뭐뭐뭐야!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_203",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "이, 이거 하고 있는 거 봤어?!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_204",
+      "text": "응, 열심히 이리저리 꽂아보던 거 봤어.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_205",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "…으으, 그, 그랬구나….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_206",
+      "text": "엄청 예쁘던데.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_207",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "!!!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_208",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "갑자기 그런 얘길 하면!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_209",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "그, 심장이… 너무 빠르게 뛰는데!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_210",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "으, 으으으!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_211",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "진짜 쪼, 쪽팔려!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_212",
+      "text": "목단.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_213",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "그, 그만…! 여기서 더 하면 나 정말로…!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_214",
+      "text": "다 됐어.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_215",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "아니, 그만하라니… 엉?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_216",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "다 붙였구나, 동생!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_217",
+      "text": "응, 완벽하진 않지만.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_218",
+      "text": "이 정도면 다시 쓸 수 있을 것 같아.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_219",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "와, 동생 손재주가 대단한데?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_220",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "진짜 잘 붙였다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_221",
+      "text": "비녀를 만져보려는 목단의 손을 제지했다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_222",
+      "text": "잠깐만, 아직 건들면 안 돼.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_223",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "엉? 왜?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_224",
+      "text": "단단하게 붙는 데 시간이 좀 걸린다고 했거든.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_225",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "아, 그렇구나.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_226",
+      "text": "다행히 조각들이 커서, 붙이는 게 크게 어렵진 않았어.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_227",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "하… 정말 다행이야.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_228",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "고마워, 정말 고맙다. 동생아.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_229",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "내가 진짜로.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_230",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "이 은혜는 언젠가 꼭 갚….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_231",
+      "text": "지금 갚아줘.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_232",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "어떻게?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_233",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "뭐 생각해놓은 거라도 있어?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_234",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "말만 해, 이 누님이 다 들어 줄 테니까!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_235",
+      "text": "아까 못본 영화, 지금 보자.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_236",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "엉? 예매한 시간이 지나서 못 보는 거 아냐?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_237",
+      "text": "괜찮아.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_238",
+      "text": "여기서 보면 돼.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_239",
+      "text": "우리는 나란히 앉아 영화를 봤다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_240",
+      "speakerName": "TV 소리",
+      "text": "[네가 무엇을 위해 싸우는지.]",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_241",
+      "speakerName": "TV 소리",
+      "text": "[우리가 무엇을 위해 싸우는지 보아라.]",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_242",
+      "speakerName": "TV 소리",
+      "text": "[그럼, 그 어떤 두려움도 이겨낼 수 있을 테니.]",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_243",
+      "text": "역시, 이 대사는 봐도 봐도 좋네.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_244",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "…….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_245",
+      "text": "톡-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_246",
+      "text": "손에 무언가가 닿았다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_247",
+      "text": "?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_248",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "으, 으앗!!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_249",
+      "text": "왜, 왜 그래?!",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_250",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "아, 아냐. 아아아무것도 아니야!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_251",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "…….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_252",
+      "text": "목단은 묘하게 긴장한 모습으로 다시 TV에 시선을 고정했다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_253",
+      "text": "나도 다시 TV로 시선을 돌려던 와중에.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_254",
+      "text": "꼼지락.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_255",
+      "text": "목단의 손이 내 쪽으로 조금씩 움직여오는 게 보였다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_256",
+      "text": "꼼지락, 꼼지락.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_257",
+      "text": "그리고 아슬아슬하게 닿을 거리가 되자-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_258",
+      "text": "휙-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_259",
+      "text": "다시 제자리로 돌아갔다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_260",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "아씨… 이런 걸 어떻게 하라는 거야.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_261",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "진짜 못 해 먹겠네.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_262",
+      "speakerName": "TV 소리",
+      "text": "[따라라란~ 따라란~♪]",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_263",
+      "speakerName": "TV 소리",
+      "text": "[자, 저길 봐라!]",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_264",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "부, 분위기 있는 장면…!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_265",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "지금이야.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_266",
+      "text": "스윽-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_267",
+      "text": "어깨 근처에서 인기척이 느껴져, 슬쩍 옆을 보자.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_268",
+      "text": "목단이 눈을 꼭 감은 채 내 어깨에 닿을락 말락 한 거리까지 목을 꺾고 있다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_269",
+      "text": "뭐해?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_270",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "그, 으, 아냐아냐.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_271",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "아무것도 아냐!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_272",
+      "text": "목단은 다시 차렷 자세로 돌아갔다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_273",
+      "text": "…큰일이다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_274",
+      "text": "다음엔 목단이 어떤 행동을 할지 궁금해서, 영화에 집중이 되지 않기 시작했다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_275",
+      "text": "그리고 잠시 후.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_276",
+      "speakerName": "TV 소리",
+      "text": "[쿠콰콰콰쾅-!]",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_277",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "으, 으아아-!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_278",
+      "text": "스윽-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_279",
+      "text": "목단이 고개를 푹 숙인 채, 살포시 내 소맷자락을 잡았다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_280",
+      "text": "…이건 뭐야?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_281",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "그, 그게… 방금 전에 무서운 장면이…!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_282",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "아니 그게, 그러니까.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_283",
+      "text": "화악-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_284",
+      "text": "목단을 내 쪽으로 확 끌어당겼다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_285",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "도, 동생…! 이게 뭐 하는….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_286",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "지, 지금 손이… 어디에 가 있는….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_287",
+      "text": "이렇게 보고 싶어 하는 거 같아서.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_288",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "그그그게….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_289",
+      "text": "스윽-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_290",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "…읏!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_291",
+      "text": "스으윽-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_292",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "…으, 아앗!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_293",
+      "text": "쪽-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_294",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "자, 자자자잠깐!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_295",
+      "text": "응, 왜?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_296",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "아, 아무런 예고도 없이… 그, 그런!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_297",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "그… 으으.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_298",
+      "text": "예고해야 해?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_299",
+      "text": "그럼, 한다?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_300",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "…!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_301",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "아니, 이번엔 내가 한다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_302",
+      "text": "쪽-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_303",
+      "text": "…….",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_304",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "…….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_305",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "한 번만… 더 해도 돼?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_306",
+      "text": "나도 모르게 웃음이 터졌다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_307",
+      "text": "그런 건 일일이 안 물어봐도 돼.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_308",
+      "text": "그렇게 영화는 클라이맥스로 치달았다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_309",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "…끝났네.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_310",
+      "text": "그러게.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_311",
+      "text": "영화, 재밌었어?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_312",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "재, 재밌더라!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_313",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "특히 그 투콰앙-! 하고 우다다다하고!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_314",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "투다다다다하는 부분들이…!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_315",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "…….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_316",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "…미안, 집중 못 했어.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_317",
+      "text": "괜찮아, 나도 집중 못 했으니까.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_318",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "그, 그래? 왜?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_319",
+      "text": "…….",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_320",
+      "text": "계속 이러고 있었으니까?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_321",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "우, 우와앗!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_322",
+      "text": "목단이 순식간에 멀어졌다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_323",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "이, 이제 동생이 고쳐준 거 다 붙었겠다! 그치?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_324",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "가지고 올게!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_325",
+      "text": "…….",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_326",
+      "text": "…풉-",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_327",
+      "text": "목단은 같은 방향의 손발을 같이 움직이며 어색하게 걸어갔다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_328",
+      "text": "오, 괜찮은데?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_329",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "이거 마르면 투명해지는 접착제구나.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_330",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "이렇게 보니까 진짜 새것 같아!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_331",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "고마워, 동생!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_332",
+      "text": "아냐.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_333",
+      "text": "다음엔 조심하면 되지 뭐.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_334",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "저기… 동생.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_335",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "염치없지만, 나 부탁 하나만 더 해도 될까?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_336",
+      "text": "응, 뭔데?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_337",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "이거….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_338",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "동생이 나한테 한번 꽂아봐 줄래?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_339",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "아까 봤듯이, 내가 직접 해보려고 했는데.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_340",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "손재주가 없어서 그런가, 잘 안되더라고.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_341",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "평소에 머리 손질 같은 걸 따로 하지 않으니까, 설명도 잘 못 알아먹겠고.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_342",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "그러니까 부탁해.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_343",
+      "text": "그러지 뭐.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_344",
+      "text": "나는 목단이 공유해 준, [비녀 예쁘게 꽂는 법]을 숙지한 후.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_345",
+      "text": "목단에게 다가갔다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_346",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "나, 난 준비됐어, 동생.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_347",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "시작해도 돼.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_348",
+      "text": "알았어.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_349",
+      "text": "사라락-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_350",
+      "text": "새하얀 목덜미가 보인다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_351",
+      "text": "나도 모르게 그쪽으로 먼저 손이 갔다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_352",
+      "text": "스윽-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_353",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "…으잇!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_354",
+      "text": "…재밌다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_355",
+      "text": "그대로 손을 미끄러뜨린다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_356",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "…흣!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_357",
+      "text": "스으으윽-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_358",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "으아아아앗, 그만, 그만!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_359",
+      "text": "쪽-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_360",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "도, 동생…!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_361",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "지금 해보자는 거야?!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_362",
+      "text": "미안, 미안. 제대로 해줄게.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_363",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "…으으.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_364",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "자, 잘 부탁해.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_365",
+      "text": "스윽, 스윽-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_366",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "…….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_367",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "동생아, 오늘 정말… 미안하고 고마워.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_368",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "이제 와서 말하는 거지만, 나 오늘이 첫 데이트거든.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_369",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "그래서… 그, 너무 긴장되고 설레고 그래서.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_370",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "이것저것 준비해 봤는데.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_371",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "계획대로 된 게 하나도 없었다?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_372",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "그런데도 동생이 계속 나서서 이끌어주고, 챙겨주고 해서.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_373",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "엉망이 될뻔한 하루가, 너무 만족스러운 하루가 됐어.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_374",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "그래서 뭐랄까. 정말로, 오늘 멋있었어.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_375",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "동생이 아니라, 형님으로 느껴질 만큼 말이야!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_376",
+      "text": "…오빠도 아니고 형님이라니.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_377",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "이걸… 꼭 이야기하고 싶었어.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_378",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "하, 하하…! 이야기할 수 있어서 다행이다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_379",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "이렇게 뒤돌고 있으니까, 좀 더 이야기하기 수월하네.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_380",
+      "text": "앞을 보면 이야기하기 힘들어?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_381",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "그, 앞을 보면… 동생이랑 눈이 마주치잖아.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_382",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "그럴 때마다, 심장이 터질 것만 같다고.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_383",
+      "text": "나도 오늘은 그랬어.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_384",
+      "text": "목단이 너무 귀여워 보이더라.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_385",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "귀, 귀엽다니. 내가?!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_386",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "…으, 역시 이상해.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_387",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "동생한테는 그런 말을 들어도 자존심 상하지 않아.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_388",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "오히려… 기뻐.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_389",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "동생 앞에서만큼은, 나도 보스가 아닌… 그냥 목단으로 보이고 싶어서 그런가.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_390",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "아니, 여자로….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_391",
+      "text": "사락- 사라락-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_392",
+      "text": "목단은 언제나 목단이야.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_393",
+      "text": "보스든 아니든.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_394",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "…으으.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_395",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "이젠 뒤돌고 있어도 심장이 날뛰기 시작했어.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_396",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "동생은 말을 너무 잘 한다니까.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_397",
+      "text": "스윽-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_398",
+      "text": "자, 다 됐다.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_399",
+      "text": "반묶음도 예쁘네.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_400",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "그, 그래?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_401",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "나 괜찮아?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_402",
+      "text": "응, 목단도 그 비녀도 예뻐.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_403",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "…하, 하하하.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_404",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "고마워, 동생.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_405",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "아까 예쁘다고 해줘서, 이거 꼭 보여주고 싶었거든.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_406",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "…그, 저기.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_407",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "다음에도 이렇게 만날 수 있을까?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_408",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "다음엔 내가 진짜 잘 준비해서 올게!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_409",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "보스답… 아니, 아니.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_410",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "나답게!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_411",
+      "text": "기대할게.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_412",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "…!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_413",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "좋아!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_414",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "앞으로도 계속 소중히 할게.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_moran_415",
+      "speaker": "moran",
+      "speakerName": "목단",
+      "text": "이것도, 그리고 동생도.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/da-29/eu-27/4d82ca28d037c4aefecea57f554654aa.webp",
+      "voice": null
+    }
+  ]
+}

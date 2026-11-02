@@ -1,0 +1,3373 @@
+{
+  "groupId": "d_favorite_helm",
+  "type": "favorite",
+  "name": "달콤한 향기의 새벽",
+  "nikke": "헬름",
+  "sourceVideo": "https://youtu.be/X2-rUOMlGIM",
+  "lines": [
+    {
+      "id": "d_favorite_helm_1",
+      "text": "품 안의 온기가 빠져나가는 느낌에 잠에서 깨어났다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_2",
+      "speakerName": "???",
+      "text": "미안해. 깼어?",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_3",
+      "text": "…지금 몇 시야?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_4",
+      "text": "그럼 조금만 더 잘게…….",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_5",
+      "speakerName": "???",
+      "text": "응. 쉬는 날이니까 조금 더 자도 괜찮아.",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_6",
+      "text": "방 건너 샤워실에서 흘러나오는 물소리를 들으며.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_7",
+      "text": "다시 잠 속으로 빠져들었다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_8",
+      "text": "…….",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_9",
+      "text": "………….",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_10",
+      "speakerName": "???",
+      "text": "…관. 귀관.",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_11",
+      "text": "으음….",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_12",
+      "speakerName": "???",
+      "text": "귀관. 이제 일어나.",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_13",
+      "text": "익숙한 목소리를 들으며 천천히 눈을 떴다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_14",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "일어났네.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_15",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "잘 잤어?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_16",
+      "text": "응. 헬름은?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_17",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "나도 잘 잤어.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_18",
+      "text": "…….",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_19",
+      "text": "몸을 일으켜 앉아 보니 지금까지 일을 하고 있었던 듯.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_20",
+      "text": "테이블 위에 각종 문서와 태블릿이 보인다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_21",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "…….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_22",
+      "text": "헬름은 살짝 움직여 내 시선을 가렸다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_23",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "아침을 먹을까 하는데, 귀관은 어떻게 할래?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_24",
+      "text": "같이 먹자.",
+      "window": "Choice",
+      "voice": null,
+      "chosen": true
+    },
+    {
+      "id": "d_favorite_helm_25",
+      "text": "그럼 일단 씻을… 아, 귀찮다.",
+      "window": "Choice",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_26",
+      "text": "이리 와.",
+      "window": "Choice",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_27",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "먹고 싶은 건 있어?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_28",
+      "text": "…아무거나?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_29",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "귀관. 그러면 귀관이 원하는 걸 제대로 준비할 수가 없잖아.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_30",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "바라는 게 있으면 확실히 말하도록 해.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_31",
+      "text": "헬름은 단호하게 날 바라보고 있다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_32",
+      "text": "헬름은 여전히 엄격하구나.",
+      "window": "Choice",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_33",
+      "text": "헬름은 여전히 진지하구나.",
+      "window": "Choice",
+      "voice": null,
+      "chosen": true
+    },
+    {
+      "id": "d_favorite_helm_34",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "…….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_35",
+      "text": "잠시 망설이던 헬름이 내 옆에 앉았다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_36",
+      "text": "헬름은 아주 천천히, 내 팔을 껴안고.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_37",
+      "text": "조심스럽게 어깨에 머리를 기댔다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_38",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "좋은 아침이야. 귀관.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_39",
+      "text": "헬름의 푸른 머리카락에서, 내가 사용하는 샴푸의 향기가 풍겼다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_40",
+      "text": "헬름과 함께 방주에서 저녁 식사를 하기로 한 날.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_41",
+      "text": "약속 시간보다 15분 일찍 도착했는데도 헬름은 먼저 와서 기다리고 있었다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_42",
+      "text": "미안. 기다렸어?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_43",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "아니. 괜찮아.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_44",
+      "text": "음식을 주문하고 헬름과 마주 앉았다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_45",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "오늘은 1시간 더 일찍 일어났어.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_46",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "어드마이어 호 정기 점검이 있는 날이었거든.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_47",
+      "text": "고생했겠네. 잘 끝났어?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_48",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "응. 큰 문제는 없었어. 마스트랑 앵커가 잘 해주니까.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_49",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "자세한 건 보고서를 읽어봐.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_50",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "귀관도 볼 수 있게 참고인으로 달아 놨어.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_51",
+      "text": "음….",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_52",
+      "text": "잠시 핸드폰을 조작한다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_53",
+      "text": "오늘 문서 중에, 작성자가 헬름인 문서가….",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_54",
+      "text": "이거구나. 대충 훑어… 어?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_55",
+      "text": "도저히 텍스트 파일이라고 볼 수 없는 어마어마한 용량에 재빨리 핸드폰을 내려놓았다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_56",
+      "text": "다, 다음에 볼게.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_57",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "응. 별다른 특이 사항은 없었으니까 천천히 봐도 될 거야.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_58",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "…….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_59",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "그, 그리고 다음 선상 파티 날짜가 잡혔어.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_60",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "오후에 물자 현황이랑 일정 가안을 정리했는데, 큰 문제는 없을 것 같아.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_61",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "귀관도 확인해 볼래?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_62",
+      "text": "……보내주면 다음에 볼게.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_63",
+      "text": "뭐 도와줄 건 없어?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_64",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "음… 그러면 오랜만에 파티에 얼굴을 비춰줄 수 있어?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_65",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "파티 진행에 도움이 될 거야.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_66",
+      "text": "어려울 거 없지. 일정 맞춰볼게.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_67",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "고마워.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_68",
+      "text": "그 후로도 헬름은 이야기를 이어 나갔다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_69",
+      "text": "훈련 스케줄에 대한 이야기, 어드마이어 호에 대한 이야기.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_70",
+      "text": "스쿼드 운영 계획에 대한 이야기….",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_71",
+      "text": "자신에 대한 이야기는 거의 없고, 있더라도 훈련이나 공부에 관한 것.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_72",
+      "text": "이래서는 마치….",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_73",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "…왜 그렇게 봐?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_74",
+      "text": "음. 그게 말이지.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_75",
+      "text": "…예뻐서.",
+      "window": "Choice",
+      "voice": null,
+      "chosen": true
+    },
+    {
+      "id": "d_favorite_helm_76",
+      "text": "…대화가 너무 딱딱한 것 같아서.",
+      "window": "Choice",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_77",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "…….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_78",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "귀, 귀관한테 그런 말을 듣는 건 솔직히 기뻐.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_79",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "그래도… 지금 하고 싶은 말은 따로 있지 않아?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_80",
+      "text": "…….",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_81",
+      "text": "…대화가 너무 딱딱한 것 같아서.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_82",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "아…?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_83",
+      "text": "보고 받는 것 같다고 해야 하나.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_84",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "…미안해. 그러려던 건 아니었어.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_85",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "…그냥, 대화할 때 거리감을 잡기가 힘들어.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_86",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "연인… 사귀는 사이에서는 어떤 이야기를 하는 건지도 잘 모르겠고.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_87",
+      "text": "너무 어렵게 생각할 필요는 없어.",
+      "window": "Choice",
+      "voice": null,
+      "chosen": true
+    },
+    {
+      "id": "d_favorite_helm_88",
+      "text": "괜찮으니까 편하게 해.",
+      "window": "Choice",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_89",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "…….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_90",
+      "text": "헬름?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_91",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "…미안. 그래도 조금 어렵네.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_92",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "이런 관계는 처음 겪어 보는 거니까.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_93",
+      "text": "헬름은 뭐든지 처음부터 잘할 것 같은 이미지인데.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_94",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "그럴 리가 없잖아.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_95",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "물론 어딘가에 그런 사람도 있겠지만, 적어도 나는 아니야.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_96",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "…….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_97",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "…응. 나는 아니야.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_98",
+      "text": "부스럭. 부스럭.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_99",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "분명히 여기 어디에….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_100",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "아.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_101",
+      "text": "헬름은 선반에서 낡은 골판지 상자를 꺼냈다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_102",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "이 상자, 분명….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_103",
+      "speaker": "mast",
+      "speakerName": "마스트",
+      "text": "헬름 양반! 앵커 양반이랑 같이…엥?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/bl-62/gr-35/ff70ed8ba2e63090b39c68c61e23cf49.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_104",
+      "speaker": "mast",
+      "speakerName": "마스트",
+      "text": "뭐 하고 있는 거요? 그 상자는 또 뭐고.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/bl-62/gr-35/ff70ed8ba2e63090b39c68c61e23cf49.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_105",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "…바, 방 정리를 하고 있어.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_106",
+      "speaker": "mast",
+      "speakerName": "마스트",
+      "text": "뭣이라?! 방 정리를 한단 말요?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/bl-62/gr-35/ff70ed8ba2e63090b39c68c61e23cf49.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_107",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "…그게 그렇게 이상한 일이야?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_108",
+      "speaker": "mast",
+      "speakerName": "마스트",
+      "text": "방 정리는 이상한 일이 아니지만,",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/bl-62/gr-35/ff70ed8ba2e63090b39c68c61e23cf49.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_109",
+      "speaker": "mast",
+      "speakerName": "마스트",
+      "text": "굳~이 주말에 방 정리를 하는 건 아주 이상한 일이고 말고!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/bl-62/gr-35/ff70ed8ba2e63090b39c68c61e23cf49.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_110",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "…….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_111",
+      "speaker": "anchor",
+      "speakerName": "앵커",
+      "text": "갑자기 방 정리는 왜?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/pu-66/wo-40/b6b57b79ef36e06939705002fd672a44.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_112",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "그동안 바빠서 정리를 못 했거든.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_113",
+      "speaker": "mast",
+      "speakerName": "마스트",
+      "text": "뭐…… 우리 이지스 스쿼드가 좀 바쁘긴 했지.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/bl-62/gr-35/ff70ed8ba2e63090b39c68c61e23cf49.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_114",
+      "speaker": "mast",
+      "speakerName": "마스트",
+      "text": "큰 공을 세운 임무를 나갔다 왔는데도.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/bl-62/gr-35/ff70ed8ba2e63090b39c68c61e23cf49.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_115",
+      "speaker": "mast",
+      "speakerName": "마스트",
+      "text": "정기 훈련에, 점검에, 심지어 파티 준비까지 평소랑 똑같수다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/bl-62/gr-35/ff70ed8ba2e63090b39c68c61e23cf49.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_116",
+      "speaker": "mast",
+      "speakerName": "마스트",
+      "text": "이게 말이나 되는 거요?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/bl-62/gr-35/ff70ed8ba2e63090b39c68c61e23cf49.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_117",
+      "speaker": "anchor",
+      "speakerName": "앵커",
+      "text": "말만 들어도 피곤해… 잘래….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/pu-66/wo-40/b6b57b79ef36e06939705002fd672a44.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_118",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "…하아.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_119",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "전공을 세웠다고 해서….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_120",
+      "speaker": "mast",
+      "speakerName": "마스트",
+      "text": "잠깐!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/bl-62/gr-35/ff70ed8ba2e63090b39c68c61e23cf49.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_121",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "…?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_122",
+      "speaker": "mast",
+      "speakerName": "마스트",
+      "text": "이 마스트가 그 뒤에 올 말을 맞춰보겠수다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/bl-62/gr-35/ff70ed8ba2e63090b39c68c61e23cf49.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_123",
+      "speaker": "mast",
+      "speakerName": "마스트",
+      "text": "크흠. 큼.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/bl-62/gr-35/ff70ed8ba2e63090b39c68c61e23cf49.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_124",
+      "speaker": "mast",
+      "speakerName": "마스트",
+      "text": "전공을 세웠다고 해서 우리가 할 일이 어디 가는 건 아니요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/bl-62/gr-35/ff70ed8ba2e63090b39c68c61e23cf49.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_125",
+      "speaker": "mast",
+      "speakerName": "마스트",
+      "text": "오히려 더 책임감을 가져야 하지 않겠수?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/bl-62/gr-35/ff70ed8ba2e63090b39c68c61e23cf49.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_126",
+      "speaker": "mast",
+      "speakerName": "마스트",
+      "text": "마스트, 앵커. 어서 가서 오늘 훈련을 준비하세나.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/bl-62/gr-35/ff70ed8ba2e63090b39c68c61e23cf49.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_127",
+      "speaker": "mast",
+      "speakerName": "마스트",
+      "text": "주말이라 시간도 많으니까, 어드마이어 호 점검도 실시할 거요!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/bl-62/gr-35/ff70ed8ba2e63090b39c68c61e23cf49.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_128",
+      "speaker": "anchor",
+      "speakerName": "앵커",
+      "text": "오오. 똑같다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/pu-66/wo-40/b6b57b79ef36e06939705002fd672a44.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_129",
+      "speaker": "mast",
+      "speakerName": "마스트",
+      "text": "당연하지! 내가 헬름 양반을 얼마나 오래 봤는데.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/bl-62/gr-35/ff70ed8ba2e63090b39c68c61e23cf49.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_130",
+      "speaker": "mast",
+      "speakerName": "마스트",
+      "text": "이제는 말투도 똑같이 따라 할 정도요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/bl-62/gr-35/ff70ed8ba2e63090b39c68c61e23cf49.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_131",
+      "speaker": "anchor",
+      "speakerName": "앵커",
+      "text": "맞아. 말투도 완전히 똑같았어.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/pu-66/wo-40/b6b57b79ef36e06939705002fd672a44.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_132",
+      "speaker": "mast",
+      "speakerName": "마스트",
+      "text": "오오! 드디어 수련의 성과가 나오…!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/bl-62/gr-35/ff70ed8ba2e63090b39c68c61e23cf49.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_133",
+      "speaker": "mast",
+      "speakerName": "마스트",
+      "text": "지 않았잖수!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/bl-62/gr-35/ff70ed8ba2e63090b39c68c61e23cf49.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_134",
+      "speaker": "anchor",
+      "speakerName": "앵커",
+      "text": "응. 안 나왔어.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/pu-66/wo-40/b6b57b79ef36e06939705002fd672a44.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_135",
+      "speaker": "mast",
+      "speakerName": "마스트",
+      "text": "뭐랏!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/bl-62/gr-35/ff70ed8ba2e63090b39c68c61e23cf49.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_136",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "하아….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_137",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "…전공을 세웠다고 해서 우리가 할 일이 어디 가는 건 아니야.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_138",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "오히려 더 책임감을 가져야 해.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_139",
+      "speaker": "anchor",
+      "speakerName": "앵커",
+      "text": "와. 진짜다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/pu-66/wo-40/b6b57b79ef36e06939705002fd672a44.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_140",
+      "speaker": "mast",
+      "speakerName": "마스트",
+      "text": "이, 이게 왜 진짜인 거요?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/bl-62/gr-35/ff70ed8ba2e63090b39c68c61e23cf49.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_141",
+      "speaker": "mast",
+      "speakerName": "마스트",
+      "text": "그런데, 여기까지 똑같은 거라면… 설마….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/bl-62/gr-35/ff70ed8ba2e63090b39c68c61e23cf49.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_142",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "…마스트, 앵커.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_143",
+      "speaker": "mast",
+      "speakerName": "마스트",
+      "text": "으악! 진짜 이렇게 되는 거요?!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/bl-62/gr-35/ff70ed8ba2e63090b39c68c61e23cf49.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_144",
+      "speaker": "mast",
+      "speakerName": "마스트",
+      "text": "그냥 늘 하던 농담이었단 말요!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/bl-62/gr-35/ff70ed8ba2e63090b39c68c61e23cf49.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_145",
+      "speaker": "anchor",
+      "speakerName": "앵커",
+      "text": "자기 실헌적 예언…….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/pu-66/wo-40/b6b57b79ef36e06939705002fd672a44.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_146",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "…….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_147",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "자유롭게 쉬도록 해. 연락망만 유지하고.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_148",
+      "speaker": "anchor",
+      "speakerName": "앵커",
+      "text": "!!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/pu-66/wo-40/b6b57b79ef36e06939705002fd672a44.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_149",
+      "speaker": "anchor",
+      "speakerName": "앵커",
+      "text": "시, 식별 신호 확인 중….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/pu-66/wo-40/b6b57b79ef36e06939705002fd672a44.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_150",
+      "speaker": "mast",
+      "speakerName": "마스트",
+      "text": "…꿀꺽.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/bl-62/gr-35/ff70ed8ba2e63090b39c68c61e23cf49.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_151",
+      "speaker": "anchor",
+      "speakerName": "앵커",
+      "text": "!!!!!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/pu-66/wo-40/b6b57b79ef36e06939705002fd672a44.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_152",
+      "speaker": "mast",
+      "speakerName": "마스트",
+      "text": "결과 나왔수? 역시 헬름 양반이 아니라 랩쳐의 첩자겠지!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/bl-62/gr-35/ff70ed8ba2e63090b39c68c61e23cf49.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_153",
+      "speaker": "anchor",
+      "speakerName": "앵커",
+      "text": "…….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/pu-66/wo-40/b6b57b79ef36e06939705002fd672a44.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_154",
+      "speaker": "anchor",
+      "speakerName": "앵커",
+      "text": "헤, 헬름이야…!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/pu-66/wo-40/b6b57b79ef36e06939705002fd672a44.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_155",
+      "speaker": "mast",
+      "speakerName": "마스트",
+      "text": "그럴 리가…!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/bl-62/gr-35/ff70ed8ba2e63090b39c68c61e23cf49.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_156",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "…….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_157",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "주말에 쉬라고 하는 게 그렇게 이상해?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_158",
+      "speaker": "mast",
+      "speakerName": "마스트",
+      "text": "그야 당연히 이상…!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/bl-62/gr-35/ff70ed8ba2e63090b39c68c61e23cf49.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_159",
+      "speaker": "mast",
+      "speakerName": "마스트",
+      "text": "하진 않구만. 생각해 보니.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/bl-62/gr-35/ff70ed8ba2e63090b39c68c61e23cf49.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_160",
+      "speaker": "mast",
+      "speakerName": "마스트",
+      "text": "뭐. 솔직히 요새 헬름 양반 분위기가 많이 부드러워 졌으니까.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/bl-62/gr-35/ff70ed8ba2e63090b39c68c61e23cf49.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_161",
+      "speaker": "anchor",
+      "speakerName": "앵커",
+      "text": "응. 가끔 칭찬도 해줘.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/pu-66/wo-40/b6b57b79ef36e06939705002fd672a44.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_162",
+      "speaker": "mast",
+      "speakerName": "마스트",
+      "text": "…그래도 혹시 함정수사나 그런 건 아니겠지?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/bl-62/gr-35/ff70ed8ba2e63090b39c68c61e23cf49.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_163",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "그런 거 아니야. 나도 이 상자만 정리하고 쉬려고 했고.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_164",
+      "speaker": "mast",
+      "speakerName": "마스트",
+      "text": "흐음. 그렇구만.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/bl-62/gr-35/ff70ed8ba2e63090b39c68c61e23cf49.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_165",
+      "speaker": "mast",
+      "speakerName": "마스트",
+      "text": "찾는 게 그 상자에 들어있는 거요?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/bl-62/gr-35/ff70ed8ba2e63090b39c68c61e23cf49.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_166",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "응. 분명히 기억하고….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_167",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "!!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_168",
+      "speaker": "mast",
+      "speakerName": "마스트",
+      "text": "어떻게 알았냐는 말은 꺼내지도 마시게.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/bl-62/gr-35/ff70ed8ba2e63090b39c68c61e23cf49.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_169",
+      "speaker": "mast",
+      "speakerName": "마스트",
+      "text": "헬름 양반 하루 이틀 본 거 아니니까.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/bl-62/gr-35/ff70ed8ba2e63090b39c68c61e23cf49.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_170",
+      "speaker": "anchor",
+      "speakerName": "앵커",
+      "text": "나만 그렇게 생각한 게 아니었네.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/pu-66/wo-40/b6b57b79ef36e06939705002fd672a44.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_171",
+      "speaker": "anchor",
+      "speakerName": "앵커",
+      "text": "뭘 찾고 있던 거야?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/pu-66/wo-40/b6b57b79ef36e06939705002fd672a44.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_172",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "…그렇게 대단한 건 아니야.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_173",
+      "text": "달그락.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_174",
+      "text": "헬름은 상자에서 낡은 나침반을 꺼냈다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_175",
+      "speaker": "mast",
+      "speakerName": "마스트",
+      "text": "나침반?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/bl-62/gr-35/ff70ed8ba2e63090b39c68c61e23cf49.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_176",
+      "speaker": "anchor",
+      "speakerName": "앵커",
+      "text": "어드마이어 호에는 항법 장치가 있잖아.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/pu-66/wo-40/b6b57b79ef36e06939705002fd672a44.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_177",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "만일의 상황에도 대비해야 해. 장비가 고장 날 수도 있으니까.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_178",
+      "speaker": "mast",
+      "speakerName": "마스트",
+      "text": "어드마이어 호의 항법장치가 고장 날 정도면 고작 나침반 하나로는 아무것도….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/bl-62/gr-35/ff70ed8ba2e63090b39c68c61e23cf49.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_179",
+      "speaker": "mast",
+      "speakerName": "마스트",
+      "text": "…아니 뭐, 그것도 헬름 양반 답다면 헬름 양반 답구만.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/bl-62/gr-35/ff70ed8ba2e63090b39c68c61e23cf49.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_180",
+      "speaker": "anchor",
+      "speakerName": "앵커",
+      "text": "이거… 바늘이 계속 움직이는데?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/pu-66/wo-40/b6b57b79ef36e06939705002fd672a44.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_181",
+      "text": "낡은 나침반의 바늘은 고정되어 있지 않고, 이쪽저쪽으로 움직이고 있다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_182",
+      "speaker": "anchor",
+      "speakerName": "앵커",
+      "text": "아, 이게 그거구나. 방주 자기장.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/pu-66/wo-40/b6b57b79ef36e06939705002fd672a44.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_183",
+      "speaker": "mast",
+      "speakerName": "마스트",
+      "text": "방주의 전력 상황에 따라 자기장의 위치가 크게 바뀌지.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/bl-62/gr-35/ff70ed8ba2e63090b39c68c61e23cf49.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_184",
+      "speaker": "mast",
+      "speakerName": "마스트",
+      "text": "당연히 어지간한 자기력으로는 어림도 없지만.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/bl-62/gr-35/ff70ed8ba2e63090b39c68c61e23cf49.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_185",
+      "speaker": "mast",
+      "speakerName": "마스트",
+      "text": "뭐, 방주의 전력은 어지간한 정도는 훨씬 넘지않겠수? 북극이랑 남극보다 가깝기도 하고 말요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/bl-62/gr-35/ff70ed8ba2e63090b39c68c61e23cf49.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_186",
+      "speaker": "anchor",
+      "speakerName": "앵커",
+      "text": "오오. 마스트 똑똑해.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/pu-66/wo-40/b6b57b79ef36e06939705002fd672a44.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_187",
+      "speaker": "mast",
+      "speakerName": "마스트",
+      "text": "후후후. 그래… 서!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/bl-62/gr-35/ff70ed8ba2e63090b39c68c61e23cf49.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_188",
+      "text": "마스트는 주머니에서 비슷하게 생긴 나침반을 꺼냈다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_189",
+      "speaker": "mast",
+      "speakerName": "마스트",
+      "text": "이렇게 특수 처리된 나침반을 쓰는 거요!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/bl-62/gr-35/ff70ed8ba2e63090b39c68c61e23cf49.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_190",
+      "speaker": "mast",
+      "speakerName": "마스트",
+      "text": "아무래도 헬름 양반 건 오래돼서 고장 났나 보구만.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/bl-62/gr-35/ff70ed8ba2e63090b39c68c61e23cf49.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_191",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "…마스트도 나침반을 가지고 다녀?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_192",
+      "speaker": "mast",
+      "speakerName": "마스트",
+      "text": "당연하지! 언제 조각배에 몸을 의지하고 항해를 떠날지 모르니까!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/bl-62/gr-35/ff70ed8ba2e63090b39c68c61e23cf49.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_193",
+      "speaker": "mast",
+      "speakerName": "마스트",
+      "text": "모름지기 진정한 해적은 언제든 모험을 떠날 준비가 되어 있어야 하는 거요!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/bl-62/gr-35/ff70ed8ba2e63090b39c68c61e23cf49.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_194",
+      "speaker": "anchor",
+      "speakerName": "앵커",
+      "text": "그런데 그건 갑자기 왜 찾은 거야?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/pu-66/wo-40/b6b57b79ef36e06939705002fd672a44.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_195",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "그건….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_196",
+      "text": "헬름은 곧게 북쪽을 가리키는 마스트의 나침반을 바라보다가.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_197",
+      "text": "이리저리 갈팡질팡. 계속해서 방향이 바뀌는 자신의 나침반에 시선을 떨어뜨렸다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_198",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "…새로운 목표가 생겼거든.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_199",
+      "speaker": "mast",
+      "speakerName": "마스트",
+      "text": "…….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/bl-62/gr-35/ff70ed8ba2e63090b39c68c61e23cf49.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_200",
+      "speaker": "anchor",
+      "speakerName": "앵커",
+      "text": "…….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/pu-66/wo-40/b6b57b79ef36e06939705002fd672a44.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_201",
+      "text": "마스트와 앵커는 말없이 눈빛을 교환했다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_202",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "…….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_203",
+      "text": "…….",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_204",
+      "text": "헬름과 데이트를 하던 중, 계속해서 신경 쓰이는 것이 있다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_205",
+      "text": "달그락.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_206",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "……….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_207",
+      "text": "만난 직후부터 지금까지 줄곧.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_208",
+      "text": "헬름은 약 1분에 한 번씩 주머니에서 낡은 나침반을 꺼내 흘깃거리고 있다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_209",
+      "text": "저기…… 헬름?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_210",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "응? 왜 그래, 귀관?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_211",
+      "text": "그게 말이지….",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_212",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "아, 걱정하지 마. 쇼핑한다고 모든 가게를 한 번씩 다 돌아보지는 않을 거야.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_213",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "연인이랑 쇼핑할 때 남성은.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_214",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "가까운 친척이 사망한 것과 비슷한 정도의 스트레스를 받는다는 거, 알고 있어.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_215",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "딱 필요한 것만 적어 왔으니까….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_216",
+      "text": "아니, 그게 아니라.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_217",
+      "text": "…그 나침반은 뭐야?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_218",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "아….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_219",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "…미안. 신경 쓰이게 했네.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_220",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "별거 아니야. 그냥 부적 같은 거라고 보면 돼.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_221",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "한 번씩 꺼내보면서 마음가짐을 되새기는 거지.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_222",
+      "text": "…한 번씩?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_223",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "……?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_224",
+      "text": "헬름에게 나와 만나고 나서부터 1분에 한 번씩 나침반을 들여다보았다고 말해주었다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_225",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "말도 안….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_226",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "…아니. 사과가 먼저겠네.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_227",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "미안해, 귀관. 모처럼의 데이트인데 정작 귀관에게 집중하지 못했어.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_228",
+      "text": "무슨 일 있는 거야?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_229",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "무슨 일 이라기보단….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_230",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "…….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_231",
+      "text": "달그락.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_232",
+      "text": "헬름은 주머니에서 나침반을 꺼냈다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_233",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "이건 내가 이지스 스쿼드 소속이 되었을 때부터 갖고 있던 거야.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_234",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "살아가면서 절대 흔들리지 않을 지침이 필요했으니까.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_235",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "…이루고 싶은 목표를 위해서.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_236",
+      "text": "이지스 스쿼드구나.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_237",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "응. 지금은 귀관 덕분에 그 목표를 어느 정도 이뤘지만.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_238",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "그때는 정말로 절실했거든.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_239",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "하고 싶은 일을 하기엔 내가 맡은 책임이 너무 컸고,",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_240",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "날 믿어주는 사람들을 위해서도 매사에 최선을 다해야 했어.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_241",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "그렇게… 생각했었어.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_242",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "그런데 노력을 계속 이어가려면 의지력이 필요해.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_243",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "그리고 의지력은 결국 무한하지 않고.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_244",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "목표를 위해 노력하면서 흔들릴 때마다 이 나침반을.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_245",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "흔들리지 않고 항상 같은 방향을 가리키는 바늘을 보면서 마음을 다잡았어.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_246",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "그런데… 오랜만에 꺼내보니까 고장 나서 이 모양이네.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_247",
+      "text": "혹시 새 목표가 생긴 거야?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_248",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "그, 그건….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_249",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "그게, 그러니까.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_250",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "…….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_251",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "귀관에게 더 어울리고.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_252",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "더 사랑받을 수 있는… 연인이 되고 싶어.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_253",
+      "text": "…….",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_254",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "…미안해. 이상한 소리를 해서.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_255",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "예전 기억이 떠올라서 조금 감정적이 됐나 봐.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_256",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "분위기를 조금 바꾸자.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_257",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "오늘 저녁은 저번에 귀관이 가보고 싶다고 했던 고기 전문 식당 어때?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_258",
+      "text": "응. 가자.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_259",
+      "text": "헬름의 손을 잡고 걸음을 옮겼다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_260",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "귀관? 식당은 이쪽이 아니야.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_261",
+      "text": "거긴 다음에 갈 거야.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_262",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "그럼 지금은 어디로…?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_263",
+      "text": "음….",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_264",
+      "text": "별이 잘 보이는 곳?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_265",
+      "text": "사박. 사박.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_266",
+      "text": "헬름과 함께 눈 덮인 길을 걸었다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_267",
+      "text": "그리고 하늘에는….",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_268",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "…별이네.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_269",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "이걸 보여주고 싶었던 거야?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_270",
+      "text": "말하자면 그렇지.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_271",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "…?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_272",
+      "text": "나침반 줘 볼래?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_273",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "…알았어.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_274",
+      "text": "지상으로 올라오자, 나침반의 바늘은 북쪽을 곧게 가리키고 있다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_275",
+      "text": "꼭 나침반으로만 방향을 알 수 있는 건 아니잖아?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_276",
+      "text": "헬름은 말없이 하늘을 올려다보았다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_277",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "…….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_278",
+      "text": "끝이 붉게 질해진 바늘의 연장선.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_279",
+      "text": "밤하늘의 북쪽에는 다른 별보다 밝게 빛나는 별 하나가 떠 있다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_280",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "…그래서, 별이구나.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_281",
+      "text": "언젠가 배웠던 독도법에 대한 기억을 더듬었다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_282",
+      "text": "나침반도 마냥 정확하지는 않아.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_283",
+      "text": "내 위치에 따라, 세월의 흐름에 따라 가리키는 곳이 변하거든.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_284",
+      "text": "그래서 정확한 방향을 알려면 다른 것들의 도움도 필요해.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_285",
+      "text": "예를 들면, 북극성 같은 거.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_286",
+      "text": "나침반을 다시 헬름의 손에 쥐어주었다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_287",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "…….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_288",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "…후후.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_289",
+      "text": "왜 그래?",
+      "window": "Choice",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_290",
+      "text": "조, 좀 이상하게 들렸어?",
+      "window": "Choice",
+      "voice": null,
+      "chosen": true
+    },
+    {
+      "id": "d_favorite_helm_291",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "아니야. 그냥….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_292",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "마스트한테도 비슷한 얘기를 들었거든.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_293",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "…옛 기억을 조금 떠올려 보고 싶어서.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_294",
+      "speaker": "mast",
+      "speakerName": "마스트",
+      "text": "…….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/bl-62/gr-35/ff70ed8ba2e63090b39c68c61e23cf49.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_295",
+      "speaker": "anchor",
+      "speakerName": "앵커",
+      "text": "…….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/pu-66/wo-40/b6b57b79ef36e06939705002fd672a44.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_296",
+      "text": "마스트와 앵커는 말없이 눈빛을 교환했다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_297",
+      "speaker": "mast",
+      "speakerName": "마스트",
+      "text": "…헬름 양반.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/bl-62/gr-35/ff70ed8ba2e63090b39c68c61e23cf49.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_298",
+      "speaker": "mast",
+      "speakerName": "마스트",
+      "text": "내가 이 나침반을 언제 보는지 알겠수?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/bl-62/gr-35/ff70ed8ba2e63090b39c68c61e23cf49.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_299",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "방금 모험을 떠날 때 본다고….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_300",
+      "speaker": "mast",
+      "speakerName": "마스트",
+      "text": "하! 내 이럴 줄 알았지.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/bl-62/gr-35/ff70ed8ba2e63090b39c68c61e23cf49.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_301",
+      "speaker": "mast",
+      "speakerName": "마스트",
+      "text": "이런 걸 볼 리가 없지 않수.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/bl-62/gr-35/ff70ed8ba2e63090b39c68c61e23cf49.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_302",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "…응?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_303",
+      "speaker": "mast",
+      "speakerName": "마스트",
+      "text": "이딴 쇳덩어리가 내 로망을 알겠수?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/bl-62/gr-35/ff70ed8ba2e63090b39c68c61e23cf49.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_304",
+      "speaker": "mast",
+      "speakerName": "마스트",
+      "text": "대충 분위기나 맞추면 족한 소품일 뿐이지.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/bl-62/gr-35/ff70ed8ba2e63090b39c68c61e23cf49.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_305",
+      "speaker": "mast",
+      "speakerName": "마스트",
+      "text": "그냥! 이 가슴이 시키는 대로!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/bl-62/gr-35/ff70ed8ba2e63090b39c68c61e23cf49.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_306",
+      "speaker": "mast",
+      "speakerName": "마스트",
+      "text": "그리고 바다가 허락하는 대로 나아가는 거요!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/bl-62/gr-35/ff70ed8ba2e63090b39c68c61e23cf49.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_307",
+      "speaker": "mast",
+      "speakerName": "마스트",
+      "text": "그게 바로 로망! 그게 바로 해적!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/bl-62/gr-35/ff70ed8ba2e63090b39c68c61e23cf49.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_308",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "무슨 말을 하는 건지 모르겠어.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_309",
+      "speaker": "mast",
+      "speakerName": "마스트",
+      "text": "하. 이 헛똑똑이 양반.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/bl-62/gr-35/ff70ed8ba2e63090b39c68c61e23cf49.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_310",
+      "speaker": "mast",
+      "speakerName": "마스트",
+      "text": "요새 좀 나아진 줄 알았는데, 그새 또 예전 꽉 막힌 모습 나오는구만.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/bl-62/gr-35/ff70ed8ba2e63090b39c68c61e23cf49.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_311",
+      "text": "마스트가 검지 손가락을 뻗었다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_312",
+      "text": "손가락 끝이 헬름의 나침반을 가리켰다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_313",
+      "speaker": "mast",
+      "speakerName": "마스트",
+      "text": "이게 아니라.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/bl-62/gr-35/ff70ed8ba2e63090b39c68c61e23cf49.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_314",
+      "text": "마스트는 손가락을 들어….",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_315",
+      "text": "쿡.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_316",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "…….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_317",
+      "speaker": "mast",
+      "speakerName": "마스트",
+      "text": "이걸 따라가는 거요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/bl-62/gr-35/ff70ed8ba2e63090b39c68c61e23cf49.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_318",
+      "text": "헬름은 자신의 가슴팍에 닿은 마스트의 손가락을 내려다보았다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_319",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "하지만….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_320",
+      "speaker": "mast",
+      "speakerName": "마스트",
+      "text": "우리한테는 심장이 없네 뭐네 이런 얘기할 거면 아예 말 꺼내지도 마쇼.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/bl-62/gr-35/ff70ed8ba2e63090b39c68c61e23cf49.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_321",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "…마스트는 별이 아니라 마음이라고 했지만.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_322",
+      "text": "비슷하네.",
+      "window": "Choice",
+      "voice": null,
+      "chosen": true
+    },
+    {
+      "id": "d_favorite_helm_323",
+      "text": "비슷한 거지 뭐.",
+      "window": "Choice",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_324",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "응. 그때는 완전히 이해하지 못했는데….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_325",
+      "text": "헬름이 고개를 들어 별이 반짝이는 밤하늘을 올려다본다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_326",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "그렇구나. 꼭 나침반만 따라가지 않아도 되는 거구나.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_327",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "…귀관이 왜 별을 보러 오자고 했는지 조금 알 것 같아.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_328",
+      "text": "나는 그냥 헬름이랑 별을 보면서 눈길을 걷고 싶었거든.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_329",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "…….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_330",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "후후. 그렇구나. 그냥인 거네.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_331",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "나침반이 아니라, 별을 보는 거네.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_332",
+      "text": "맞아.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_333",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "이것저것 따지지 않고… 하고 싶은 걸 하는 거네.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_334",
+      "text": "헬름은 어때? 뭘 하고 싶어?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_335",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "나는….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_336",
+      "text": "헬름은 낡은 나침반을 내려다보았다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_337",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "…나는 귀관이랑 같이 유명한 카페에 가보고 싶어.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_338",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "거기서 커플 인증샷이란 걸 찍어서 자랑도 해보고 싶어.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_339",
+      "text": "이번 주말에 가자.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_340",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "그리고 귀관이랑 같이 쇼핑하면서.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_341",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "예쁜 옷들을 입어보고, 잘 어울리는지 물어보고 싶어.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_342",
+      "text": "시간 비워둘게.",
+      "window": "Choice",
+      "voice": null,
+      "chosen": true
+    },
+    {
+      "id": "d_favorite_helm_343",
+      "text": "그, 그건 좀 봐주면 안 될까….",
+      "window": "Choice",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_344",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "…후후.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_345",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "이거 말고도 정말 많아. 하고 싶은 거.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_346",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "하지만 지금은….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_347",
+      "text": "헬름이 별이 가득한 밤하늘을 올려다본다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_348",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "…추억을 만들고 싶어.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_349",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "이렇게 아름다운, 별이 빛나는 밤하늘 아래에서.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_350",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "귀관이랑 단둘이, 함께.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_351",
+      "text": "데코이를 설치하고, 주변을 정찰하러 간 헬름을 기다리며.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_352",
+      "text": "적당한 폐허를 골라 하룻밤을 지낼 준비를 했다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_353",
+      "text": "달칵.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_354",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "다녀왔어.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_355",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "주변에 랩쳐 반응이 없는 거 확인했고, 데코이도 잘 설치했어.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_356",
+      "text": "응. 고생했어.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_357",
+      "text": "그 뒤 챙겨온 비상식량을 나눠 먹고, 이야기를 나누고.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_358",
+      "text": "장소만 지상의 폐허일 뿐, 지금까지와 비슷한 시간이 흐른다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_359",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "…….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_360",
+      "text": "…….",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_361",
+      "text": "하지만 대화 중간에 미묘한 침묵이 흐르고.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_362",
+      "text": "짤그락.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_363",
+      "text": "나침반에 달려있던 줄을 목에 건 헬름이 내 앞으로 다가섰다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_364",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "…귀관. 혹시 그거 알고 있어?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_365",
+      "text": "뭐를?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_366",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "자기장이 바뀌어서 나침반이 가리키는 방향이 달라지는 것처럼.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_367",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "북극성도 시간이 흐르면서 계속 바뀐다고 해.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_368",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "가장 북쪽에 가까운 별을 북극성이라고 부르는 것뿐이니까.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_369",
+      "text": "응. 그렇지.",
+      "window": "Choice",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_370",
+      "text": "뭐라고??!!!",
+      "window": "Choice",
+      "voice": null,
+      "chosen": true
+    },
+    {
+      "id": "d_favorite_helm_371",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "귀관이 그렇게 놀라는 모습은 처음 보는 것 같네.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_372",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "결국, 중요한 건 하나라고 생각해.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_373",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "사람들이 그렇게 부르자고 정하고 약속한 [방향].",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_374",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "방향을 알아내는 방법은 시간이 흐르면서 계속 바뀌겠지만.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_375",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "결국 향하게 되는 곳은 변하지 않을 거야.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_376",
+      "text": "천천히 내 옆으로 돌아온 헬름이 걸음을 멈추자.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_377",
+      "text": "나침반의 바늘이 내 쪽을 가리키고 있는 것이 보인다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_378",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "그러니까, 조금만 더….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_379",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "익숙한 방법의 도움을 받을래.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_380",
+      "text": "천천히, 일직선으로.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_381",
+      "text": "바늘의 방향이 어긋나지 않도록.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_382",
+      "text": "마주선 헬름이 미는 것을 따라 뒷걸음질 치다가….",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_383",
+      "text": "털썩.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_384",
+      "text": "헬름의 허리에 팔을 두른 채, 그대로 침대에 걸터앉았다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_385",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "…이렇게 하고 싶었어.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_386",
+      "text": "응. 나도.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_387",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "…….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_388",
+      "text": "헬름의 입술이 내 입술에 닿았다가.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_389",
+      "text": "떨어진다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_390",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "이것도… 하고 싶었어.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_391",
+      "text": "나도 그래.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_392",
+      "text": "다음은 뭐가 하고 싶어?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_393",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "……….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_394",
+      "text": "헬름?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_395",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "으, 응.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_396",
+      "text": "혹시 부끄러워?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_397",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "내, 내가 먼저 이러는 건 처음이니까.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_398",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "그래도….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_399",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "…….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_400",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "…귀관.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_401",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "난 귀관 덕분에 처음 해본 것들이 정말 많아.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_402",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "처음으로 꿈에도 그리던 바다에 나갔고.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_403",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "처음으로 어드마이어 호와 함께 전과를 올렸어.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_404",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "처음으로 신뢰하는 동료들이 생겼고….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_405",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "처음으로 친구들을 사귀었어.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_406",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "처음으로….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_407",
+      "text": "내 목에 걸린 헬름의 손이 살짝 떨린다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_408",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "처음으로, 사랑하는 사람이 생겼어.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_409",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "그리고 처음으로….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_410",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "처음인데도, 두렵지 않아.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_411",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "이 나침반뿐만 아니라.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_412",
+      "text": "헬름은 가만히 나를 바라보았다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_413",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "북극성도, 방향을 알려주고 있으니까.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_414",
+      "text": "응. 무서워하지 않아도 돼.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_415",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "…그러면 귀관.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_416",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "처음으로 말도 안 되는 부탁을 하나 해도 될까?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_417",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "어쩌면… 응석이나 투정에 가까울지도 몰라.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_418",
+      "text": "전부 들어줄게.",
+      "window": "Choice",
+      "voice": null,
+      "chosen": true
+    },
+    {
+      "id": "d_favorite_helm_419",
+      "text": "뭐든지 괜찮아.",
+      "window": "Choice",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_420",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "역시 그렇게 말해주는구나.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_421",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "…귀관.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_422",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "영원히 나랑….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_423",
+      "speaker": "helm",
+      "speakerName": "헬름",
+      "text": "…함께해줘.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/va-94/bv-67/b6bd2f152e9a7e05b72e65323e039063.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_424",
+      "text": "나지막히 속삭인 헬름의 목소리가.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_helm_425",
+      "text": "차가운 밤공기 속, 익숙한 샴푸 향기에 녹아들었다.",
+      "window": "Narration",
+      "voice": null
+    }
+  ]
+}

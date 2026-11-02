@@ -1,0 +1,3157 @@
+{
+  "groupId": "d_favorite_milk",
+  "type": "favorite",
+  "name": "따뜻한 밀크 커피처럼",
+  "nikke": "밀크",
+  "sourceVideo": "https://youtu.be/mohmdc9WwAo",
+  "lines": [
+    {
+      "id": "d_favorite_milk_1",
+      "text": "엘리베이터 근처를 지나다 카페 스위티를 만났다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_2",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "오, 형씨. 여기서 보네.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_3",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "안녕, 파트너.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_4",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "여.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_5",
+      "text": "다들 안녕.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_6",
+      "text": "다 같이 의뢰라도 갔다 왔어?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_7",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "그래. 간만에 만족스러운 협동 의뢰였다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_8",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "…너한텐 아까 그게 협동이었냐?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_9",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "팀워크. 엉망.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_10",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "평소. 그대로.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_11",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "굿.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_12",
+      "text": "역시 사이좋네.",
+      "window": "Choice",
+      "voice": null,
+      "chosen": true
+    },
+    {
+      "id": "d_favorite_milk_13",
+      "text": "평소대로의 카페 스위티구나.",
+      "window": "Choice",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_14",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "너무 좋아서 쥐어박고 싶어져서 문제지.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_15",
+      "text": "밀크는 자연스럽게 내 곁에 다가섰다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_16",
+      "text": "그러고 보니 요새 의뢰 완수율은 어때?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_17",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "개인 의뢰는 반타작 간당간당하지 뭐.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_18",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "뭐, 내가 선택한 거니까.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_19",
+      "text": "그런 것 치곤 표정이 밝은데?",
+      "window": "Choice",
+      "voice": null,
+      "chosen": true
+    },
+    {
+      "id": "d_favorite_milk_20",
+      "text": "열심히 하고 있구나.",
+      "window": "Choice",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_21",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "예전처럼 쉬운 의뢰, 할 수 있는 의뢰만 받는 게 아니라.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_22",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "어떤 의뢰든 전부 받고, 어떻게든 해결하려고 노력하고 있어.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_23",
+      "text": "너무 무리하지는 마.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_24",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "당연하지.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_25",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "아, 근데 형씨.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_26",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "요새는 의뢰 하나 하는 데에 시간도 오래 걸려서 수입도 예전 같지 않거든?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_27",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "형씨한테 좀 빌붙어도 되지?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_28",
+      "text": "그럼 오늘 저녁 같이 먹을까?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_29",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "오! 바로…",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_30",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "…는 안 되겠다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_31",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "저 녀석들이랑 같이 메이드 카페에서 파는 커피 품질 검사를 하러 가기로 했거든.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_32",
+      "text": "그런 것도 하는 거야?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_33",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "제일 중요한 일 중에 하나라고!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_34",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "…….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_35",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "…저거, 어떻게 생각하지?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_36",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_37",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "저 둘, 아무리 봐도 키스를 나눈 사이로는 보이지 않아.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_38",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "아, 맞다. 형씨.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_39",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "저번 주 언더 아레나에 새로 참가한 슈퍼 루키 봤어?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_40",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "무슨 짐승처럼 싸우는 게, 보는 나도 피가 끓어오르더라고!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_41",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "나랑 싸우기 전에 떨어지지 말아야 할 텐데말야.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_42",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "??",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_43",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "키스를 한 번이라도 나눴다면, 눈만 마주쳐도 하고 싶어지게 된다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_44",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "그건. 슈가. 한정.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_45",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "그런데 저 둘은 어떻지?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_46",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "평소랑 똑같이 아무래도 좋을 이야기만 하고 있다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_47",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "그건. 인정.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_48",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "아무래도… 동료에게 도움이 필요할 것 같군.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_49",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "그럼 간다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_50",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "다음에 봐. 몸조심하고~",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_51",
+      "text": "응. 밀크도.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_52",
+      "text": "슈가랑 프림도 조심히 가.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_53",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "소근소근.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_54",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "…끄덕.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_55",
+      "text": "??",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_56",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "뭘 그렇게 속닥거리고 있어, 짜샤들아!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_57",
+      "text": "밀크는 속닥이던 둘을 끌고 사라졌다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_58",
+      "text": "카페 스위티는 메이드 카페에 둘러앉아 커피를 홀짝이고 있다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_59",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "이 슈가 커피, 전보다는 훨씬 나아졌는걸.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_60",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "아직 단맛이 조금 부족하긴 하지만.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_61",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "밀크 커피도 뭐, 그런대로 나쁘지 않아.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_62",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "쿨….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_63",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "홀짝.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_64",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "호록.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_65",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "쿠울…",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_66",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "…….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_67",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "…….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_68",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "커어…",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_69",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "그래서, 밀크.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_70",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "왜.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_71",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "파트너와 키스는 했나?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_72",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "읍, 콜록- 콜록!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_73",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "번뜩.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_74",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "콜록, 콜록! 헉, 허억….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_75",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "갑자기 뭔 소리야! 쳐맞을래!?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_76",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "우리 사이에 이 정도 질문도 못 하나?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_77",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "동의. 궁금.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_78",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "리더. 권한. 대답.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_79",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "지 좋을 때만 리더지 아주.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_80",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "부정. 안 함.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_81",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "아주. 편리.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_82",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "그 반응을 보니 별일 없었나 보군.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_83",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "한창때의 남녀가 키스를 했는데, 그다음에 아무 일도 없다?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_84",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "그건 말이 안 돼.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_85",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "애초에 키스를 하지 않았다는 결론이 합리적이다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_86",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "그건 너나 그렇겠지, 이 키스 괴인 짜샤!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_87",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "…했다고. 키스 정도는.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_88",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "그 뒤에는?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_89",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "딱히 뭐 없었는데.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_90",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_91",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_92",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "뭐야. 불만 있냐?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_93",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "내 키스 이론이 틀릴리가 없는데.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_94",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "하아… 맘대로 지껄여. 이제 그런 거에 안 휘둘리니까.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_95",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "내 개인적인 문제든.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_96",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "형씨랑 관련된 일이든 똑같아.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_97",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "좋은 것도, 나쁜 것도 피하지 않고.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_98",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "전부 하나씩 겪고, 이겨내면서.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_99",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "천천히, 내 속도대로 갈 거야.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_100",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "…….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_101",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "…….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_102",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "슈가.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_103",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "듣고 있다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_104",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "나. 몹시. 감동.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_105",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "밀크. 어느새. 어른.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_106",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "전보다도. 훨씬. 성장.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_107",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "동감이다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_108",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "이것들이 아까부터 진짜!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_109",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "그래도 이건 조심할 필요는 있다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_110",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "너네 헛소리는 조심하고 있는데.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_111",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "권태기.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_112",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "…권태기?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_113",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "일리. 있음.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_114",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "남녀 간의 사랑에 키스가 전부는 아니지만.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_115",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "상당한 비중을 차지하는 것만은 분명하다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_116",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "뭐… 아주 틀린 말은 아닌데.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_117",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "구체적으로는 99.99% 정도 차지하지.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_118",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "그건 전부잖아 이 짜샤!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_119",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "고작 0.01%만으로 관계가 유지될 거라고 생각하는 건.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_120",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "크나큰 착각이다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_121",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "그러니까 그건 너 같은 키스 괴인이나 그렇게 생각한다고!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_122",
+      "text": "밀크는 남은 커피를 단숨에 들이켜고는, 종이컵을 테이블에 내려놓았다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_123",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "그렇게 계속 헛소리나 할 거면 나 먼저 간다, 짜샤들아.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_124",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "의뢰 들어온 거 아니면 연락하지 말고.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_125",
+      "text": "짤랑-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_126",
+      "speaker": "ade",
+      "speakerName": "에이드",
+      "text": "여전히 밀크 님은 종이컵에만 커피를 드시네….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/fz-65/mt-84/2de03955874647e6b64b8363018bc2d9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_127",
+      "speaker": "ade",
+      "speakerName": "에이드",
+      "text": "그래도 다들 사이 좋아 보이셔서 다행이야.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/fz-65/mt-84/2de03955874647e6b64b8363018bc2d9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_128",
+      "speaker": "soda",
+      "speakerName": "소다",
+      "text": "저, 저게 사이 좋으신 거였어요…?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zo-97/oa-63/91dc439091b6a061b3438f400135929e.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_129",
+      "speaker": "soda",
+      "speakerName": "소다",
+      "text": "저는 혹시나 싸우시면 어떡하나 걱정했는데에….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zo-97/oa-63/91dc439091b6a061b3438f400135929e.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_130",
+      "speaker": "ade",
+      "speakerName": "에이드",
+      "text": "그럼.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/fz-65/mt-84/2de03955874647e6b64b8363018bc2d9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_131",
+      "speaker": "ade",
+      "speakerName": "에이드",
+      "text": "서로 믿으니까 저런 이야기도 할 수 있는 거야.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/fz-65/mt-84/2de03955874647e6b64b8363018bc2d9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_132",
+      "text": "방에 돌아온 밀크는 침대에 쓰러지듯 누워 핸드폰을 꺼냈다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_133",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "내일인가…",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_134",
+      "text": "핸드폰의 달력 어플에는 내일 날짜에 작은 별 표시가 되어 있다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_135",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "… 권태기라니.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_136",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "하. 헛소리.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_137",
+      "text": "밀크는 날짜만 봐도 두근거리는 가슴의 고동을 느끼며 중얼거렸다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_138",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "절대 포기 안 해.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_139",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "쉽게 쉽게 넘어갈 생각은 없어.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_140",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "천천히 노력해서.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_141",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "하나부터 열까지 다 알아낼 거야.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_142",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "그때까지 무조건 옆에 붙어있을 테니까.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_143",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "그렇게 알아.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_144",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "천천히 노력해서, 하나부터 열까지라.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_145",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "…칫. 참 당당하게도 말했네.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_146",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "……하아.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_147",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "그래서, 그다음은 대체 어떻게 해야 되냐고…",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_148",
+      "text": "한숨짓던 밀크의 시선이 침대 옆으로 향했다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_149",
+      "text": "테이블 위에 귀엽게 포장된 상자가 놓여 있다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_150",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "역시 안 되겠다. 나답지 않아.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_151",
+      "text": "달그락-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_152",
+      "text": "밀크는 상자를 열고 내용물을 조심스럽게 꺼냈다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_153",
+      "text": "다음날. 지휘관실.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_154",
+      "text": "슬슬 업무를 마무리하려는 때에, 밀크가 지휘관실로 들어왔다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_155",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "형씨. 아직 일하는 중이야?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_156",
+      "text": "어, 잠깐만.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_157",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "천천히 해~",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_158",
+      "text": "밀크는 자연스럽게 주방으로 향했다가,",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_159",
+      "text": "양손에 들고 온 머그잔 중 하나를 건네주고는, 책상에 걸터 앉았다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_160",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "무슨 일 하는데?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_161",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "아~ 이거 저번에 그거구나? 몇 달에 한 번씩 정기 보고 하는 거?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_162",
+      "text": "응. 다 끝나가.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_163",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "천천히 하라니까. 호록.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_164",
+      "text": "밀크는 머그잔을 기울여 밀크 커피를 홀짝이곤 입을 다물었다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_165",
+      "text": "…후룩.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_166",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "…홀짝.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_167",
+      "text": "곧 지휘관실에 침묵이 내려앉았다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_168",
+      "text": "당연하지만, 불편함이나 어색함은 느껴지지 않는다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_169",
+      "text": "타닥- 타닥- 탁.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_170",
+      "text": "작업을 마치고 고개를 들자, 나를 빤히 바라보고 있던 밀크와 눈이 마주쳤다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_171",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "벼, 별로. 아무것도 아냐.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_172",
+      "text": "왜?",
+      "window": "Choice",
+      "voice": null,
+      "chosen": true
+    },
+    {
+      "id": "d_favorite_milk_173",
+      "text": "내 얼굴에 뭐 묻었어?",
+      "window": "Choice",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_174",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "그냥….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_175",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "그냥, 프림이랑 슈가 짜식들이 쓸데없는 소리를 해서.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_176",
+      "text": "뭐라고 했는데?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_177",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "음….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_178",
+      "text": "어려우면 얘기 안 해도 돼.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_179",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "아니, 그런 게 아니라.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_180",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "하아, 됐다. 다른 사람도 아니고 형씨한테 숨겨서 뭐 하겠어.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_181",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "우리보고 권태기 같대. 프림이랑 밀크가.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_182",
+      "text": "??",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_183",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "푸하하. 형씨도 어이없지?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_184",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "근데 그 어이없는 말이…",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_185",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "조금, 신경 쓰이더라고.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_186",
+      "text": "밀크. 그건….",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_187",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "아, 오해하지 마. 진짜 권태기라고 생각하진 않아.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_188",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "그냥….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_189",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "그냥, 나는 아직도 갈 길이 멀구나 싶어서.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_190",
+      "text": "…….",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_191",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "나름대로 노력하고 있고, 성과도 내고 있다고 생각했어.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_192",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "성장했다고 생각했어.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_193",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "그런데도… 다른 사람의 말 한마디에 바로 흔들리더라.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_194",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "어라? 진짜 그런가?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_195",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "내 방식, 내가 가고 있는 길이 맞는 길인가?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_196",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "…다른 길이, 있는 건 아닐까?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_197",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "…라고 말야.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_198",
+      "text": "밀크….",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_199",
+      "text": "내가 뭐라고 대답하기도 전에, 밀크는 고개를 저으며 자리에서 일어났다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_200",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "아~ 머리 복잡해! 일단 움직이자.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_201",
+      "text": "괜찮겠어?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_202",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "당연히 괜찮지.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_203",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "나도 오늘 데이트, 꽤 기대하고 있었다고.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_204",
+      "text": "방주 시내에 도착했다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_205",
+      "text": "밀크와 함께 밥을 먹고, 다른 카페의 밀크 커피를 품평하고,",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_206",
+      "text": "쇼핑센터를 구경하고, 거리를 산책하다….",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_207",
+      "text": "도착한 곳은 게임센터였다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_208",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "오, 저거. 펀치머신이잖아?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_209",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "…해야겠지? 형씨.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_210",
+      "text": "대결하는 건 오랜만이네.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_211",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "먼저 해봐.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_212",
+      "text": "밀크에게 밀려 작은 샌드백이 걸려 있는 기계 앞에 섰다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_213",
+      "text": "신중하게 자세를 잡고….",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_214",
+      "text": "흡!",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_215",
+      "text": "퍼억!",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_216",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "오오! 꽤 잘 들어간 것 같은데?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_217",
+      "text": "띠리리링-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_218",
+      "text": "세 자리 숫자가 주르륵 올라가다가 멈추고….",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_219",
+      "text": "712점. 미묘하네.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_220",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "고작 그거야? 이건 당연히 내가 이겼지!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_221",
+      "text": "밀크는 자세를 잡고, 깔끔한 스트레이트를 날렸다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_222",
+      "text": "쾅!",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_223",
+      "text": "띠리리리리리링-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_224",
+      "text": "빠바밤-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_225",
+      "text": "맥 빠지는 효과음과 함께, 999점이라는 점수가 표시되었다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_226",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "그렇지 만점!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_227",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "어때, 형씨. 봤어? 봤냐고!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_228",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "패배자는 순순히 결과를 받아들이라고.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_229",
+      "text": "한 판 더 해!",
+      "window": "Choice",
+      "voice": null,
+      "chosen": true
+    },
+    {
+      "id": "d_favorite_milk_230",
+      "text": "크윽, 분하다….",
+      "window": "Choice",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_231",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "어디… 오, 이름을 남길 수 있잖아? 형씨 것도 해줄게.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_232",
+      "text": "기판을 조작해 이름을 저장한 밀크는, 물끄러미 그것을 내려다보았다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_233",
+      "text": "[1st. MILK. 999.]",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_234",
+      "text": "역시 밀크는 강하네.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_235",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "나는 그냥 니케라서 힘이 센 것뿐이야.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_236",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "실제로 형씨한테 맨날 지잖아?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_237",
+      "text": "밀크가 손가락으로 화면을 쓸었다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_238",
+      "text": "가장 아래. 아슬아슬하게 순위권에 내 기록이 있다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_239",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "…강하네, 형씨는.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_240",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "정말로… 강해.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_241",
+      "text": "…….",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_242",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "아까 하던 얘기 마저 할 건데. 괜찮겠어?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_243",
+      "text": "응.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_244",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "…형씨도 알겠지만.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_245",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "나는 겁쟁이야.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_246",
+      "text": "밀크는 그렇게 말하며 앞장서서 걷기 시작했다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_247",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "힘든 게 있으면 피하고, 어려운 게 있으면 눈을 돌려버려.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_248",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "겨우 마음을 다잡아도, 며칠이면 바로 해이해지고.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_249",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "그래서. 나는 형씨가 존경스러워.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_250",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "언제, 어떨 때나 강하고, 흔들리지 않는.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_251",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "그런 형씨가.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_252",
+      "text": "이겨냈잖아.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_253",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "이겨냈었지.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_254",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "그것도 스스로 한 게 아니라, 형씨의 도움을 받았지만.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_255",
+      "text": "…….",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_256",
+      "text": "나는 별로 강하지 않아.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_257",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "그렇지만!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_258",
+      "text": "강해져야 했을 뿐이야.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_259",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "……!!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_260",
+      "text": "소중한 사람들을 지키기 위해서.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_261",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "…….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_262",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "…그렇구나.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_263",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "뭐야. 생각보다 간단했네.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_264",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "하핫. 고민했던 게 바보 같아.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_265",
+      "text": "그것 때문에 고민했었어?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_266",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "글쎄. 고민… 이라고 해야 하나, 이걸.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_267",
+      "text": "밀크는 쭈욱 기지개를 켰다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_268",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "형씨. 오늘 조금만 더 같이 있자.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_269",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "하고 싶은 게 생겼어.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_270",
+      "text": "뭔데?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_271",
+      "text": "밀크는 검지 손가락을 수직으로 치켜세웠다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_272",
+      "text": "…시선으로 따라가자 당연히 방주의 하늘이 보인다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_273",
+      "text": "하늘…?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_274",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "그 위.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_275",
+      "text": "…지상??",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_276",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "싸우러 가자!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_277",
+      "text": "잠시 후. 지상의 폐허.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_278",
+      "text": "저벅- 저벅-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_279",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "단둘이 올라오는 건 오랜만이네.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_280",
+      "text": "그러게.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_281",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "일단 의뢰는 간단해. 물품 수거.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_282",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "랩쳐 반응이 조금 있기는 하지만… 뭐, 그게 목적이니까!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_283",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "아, 그래도 걸리적거리진 말라고.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_284",
+      "text": "당연하지.",
+      "window": "Choice",
+      "voice": null,
+      "chosen": true
+    },
+    {
+      "id": "d_favorite_milk_285",
+      "text": "밀크가 나보다 약하면서…",
+      "window": "Choice",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_286",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "시원해서 좋네.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_287",
+      "text": "저벅- 저벅-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_288",
+      "text": "실없는 대화를 나누며 익숙한 폐허를 걸었다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_289",
+      "text": "의뢰 지점까지는 이제 얼마 남지 않았다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_290",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "형씨. 오늘 내 얘기 들어줘서 고마웠어.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_291",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "오늘 형씨랑 이야기하면서 뭐랄까….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_292",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "인생의 큰 전환점을 맞은 것 같아.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_293",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "근데 뭐. 사실 이런 기분 전에도 똑같이 느꼈었던 것 같긴…",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_294",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "…….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_295",
+      "text": "저벅-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_296",
+      "text": "밀크는 걸음을 멈췄다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_297",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "…하하. 또 이러네.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_298",
+      "text": "매일 하자.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_299",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "……?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_300",
+      "text": "금방 의욕이 식고, 도망가고 싶어지는 거.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_301",
+      "text": "그걸 나랑 얘기해서 극복할 수 있는 거면.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_302",
+      "text": "매일 하면 되잖아.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_303",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "형씨 바쁘지 않아? 매일은 힘들 텐데?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_304",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "풉. 농담이야.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_305",
+      "text": "그건… 그렇긴 한데.",
+      "window": "Choice",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_306",
+      "text": "뭐… 어떻게든 해볼게.",
+      "window": "Choice",
+      "voice": null,
+      "chosen": true
+    },
+    {
+      "id": "d_favorite_milk_307",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "형씨가 이렇게까지 해주는데, 나도 계속 최선을 다해봐야지.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_308",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "흠… 그래.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_309",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "그럼 오늘치 작심삼일 선언을 해볼까.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_310",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "…형씨가 강해진 건, 소중한 것들을 지키기 위해서잖아?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_311",
+      "text": "응.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_312",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "그러니까, 나도 강해질 거야. 계속 노력할 거야.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_313",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "…소중한 걸 지키기 위해서.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_314",
+      "text": "밀크는 말을 멈추고 나를 지긋이 바라보았다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_315",
+      "text": "…예전부터 생각했는데.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_316",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "…응.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_317",
+      "text": "밀크는 진짜 부끄러운 말 아무렇지도 않게 하네….",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_318",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "그, 그래서 불만 있냐 짜샤!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_319",
+      "text": "그래서 좋아해.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_320",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "뭣….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_321",
+      "text": "한동안 굳어 있던 밀크는 한숨을 내쉬곤.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_322",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "…하아. 진짜.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_323",
+      "text": "노리쇠를 당기며 앞으로 나섰다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_324",
+      "text": "철컥-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_325",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "잘 지켜보기나 해.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_326",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "장차 최강이 될 니케가,",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_327",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "지금부터 실력을 보여줄 테니까.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_328",
+      "text": "항상 지켜보고 있어.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_329",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "…….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_330",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "…그거 알아?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_331",
+      "text": "내 말을 들은 밀크는 살짝 웃고는,",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_332",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "나 같은 겁쟁이한테는….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_333",
+      "text": "타다다닷-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_334",
+      "text": "자신 있게 앞으로 달려 나갔다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_335",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "그런 한 마디가 무엇보다도 힘이 된다고…!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_336",
+      "text": "영업이 끝난 카페로 돌아온 밀크와 나는 의자에 털썩 주저앉았다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_337",
+      "text": "털썩-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_338",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "으아~ 힘들다….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_339",
+      "text": "그러게…",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_340",
+      "text": "그 이후로도 몇 개의 의뢰를 밀크와 함께 처리했다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_341",
+      "text": "조금 무리한 일정이었지만, 의욕이 넘치는 밀크를 말릴 생각은 들지 않았다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_342",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "이런 기분 좋은 탈력감은 진짜 오랜만이야.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_343",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "그리고….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_344",
+      "text": "…그리고, 밀크도 분명히 느꼈을 전투 중에 서로 마음이 통하는 순간들.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_345",
+      "text": "말하지 않아도, 알려주지 않아도.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_346",
+      "text": "상대방에 대한 믿음과 신뢰만으로 마음이 연결되는 경험은…",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_347",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "…행복했어. 정말로.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_348",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "하하. 싸우면서 행복하다니, 무슨 전투광도 아니고.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_349",
+      "text": "싸워서 행복한 게 아니니까?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_350",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "…응.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_351",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "형씨랑 같이 싸웠으니까.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_352",
+      "text": "잠시 내 어깨에 기대어 있던 밀크가 고개를 들었다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_353",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "커피 한 잔 줄까?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_354",
+      "text": "좋지.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_355",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "웃차.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_356",
+      "text": "의자에서 몸을 일으킨 밀크는 주방으로 향했다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_357",
+      "text": "달그락거리는 소리가 잠시 이어지고, 밀크가 양손에 머그잔을 들고 돌아왔다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_358",
+      "text": "밀크와 함께 있으면 항상 마시는 밀크 커피.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_359",
+      "text": "평소보다도 훨씬 고소하고, 맛있게 느껴진다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_360",
+      "text": "편안한 분위기 속에서, 문득 잊고 있던 것이 떠올랐다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_361",
+      "text": "…사실 내가 없었어도 밀크는 잘 극복했을 거라고 생각해.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_362",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "어째서?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_363",
+      "text": "이 컵.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_364",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "커, 컵이 왜? 혹시 마음에 안 들어?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_365",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "…아차.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_366",
+      "text": "선물인 거지? 고마워.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_367",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "윽….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_368",
+      "text": "그리고….",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_369",
+      "text": "아마 안 주려고 했다가 용기를 냈을 거고.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_370",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "…어떻게 알았어?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_371",
+      "text": "밀크에 대한 건 전부 안다고 했었잖아.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_372",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "…….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_373",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "못당하겠다. 정말로.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_374",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "…형씨랑 있다 보면 좋으면서도 불안해져.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_375",
+      "text": "왜?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_376",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "자꾸 나답지 않은 행동을 하게 되거든.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_377",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "우연히 만나서 기뻐하는 것도.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_378",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "데이트 날을 기다리면서 두근대는 것도.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_379",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "자꾸 이렇게, 낯부끄러운 말을 하게 되는 것도.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_380",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "이런 선물을 준비하는 것도…",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_381",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "정말로, 나답지 않아.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_382",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "…그래도 형씨는 괜찮은 거지?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_383",
+      "text": "그래. 전부 똑같은 밀크야.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_384",
+      "text": "점점 더 성장하고, 강해지는 밀크야.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_385",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "푸핫. 형씨도 부끄러운 말, 만만치 않은 거 알아?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_386",
+      "text": "난 하나도 안 부끄러운데? 당당한데?",
+      "window": "Choice",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_387",
+      "text": "흠흠…",
+      "window": "Choice",
+      "voice": null,
+      "chosen": true
+    },
+    {
+      "id": "d_favorite_milk_388",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "하핫. 자기도 부끄러워하는구만.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_389",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "형씨. 예전에 내가 했던 말, 기억나?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_390",
+      "text": "하나부터 열까지 알아가겠다는 거.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_391",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "응. 그거.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_392",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "그… 방금 또 하나 알게 되기는 했는데.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_393",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "…오늘 하나만 더 알게… 알게 될….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_394",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "알게 해주… 아, 나. 뭐라고 말해야 돼, 이걸?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_395",
+      "text": "말 안 해도 알아.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_396",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "…….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_milk_397",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "…응. 나도 그래.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    }
+  ]
+}
