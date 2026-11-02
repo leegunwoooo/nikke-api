@@ -1,0 +1,12 @@
+name = "nikke-api"
+pages_build_output_dir = "."
+compatibility_date = "2026-10-30"
+compatibility_flags = ["nodejs_compat"]
+
+[[kv_namespaces]]
+binding = "AREA_KV"
+id = "3ed594d98dd248ed97f9f2e9dccb0843"
+
+[[analytics_engine_datasets]]
+binding = "ANALYTICS"
+dataset = "nikke_api_requests"

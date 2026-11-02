@@ -28,7 +28,7 @@ interface Env {
   ANALYTICS: {
     writeDataPoint(p: { blobs: string[]; doubles: number[]; indexes: string[] }): void;
   };
-  RATE_LIMITER: { limit(opts: { key: string }): Promise<{ success: boolean }> };
+  RATE_LIMITER?: { limit(opts: { key: string }): Promise<{ success: boolean }> };
   AREA_KV?: { get(k: string): Promise<string | null>; put(k: string, v: string, o?: object): Promise<void> };
 }
 
@@ -162,11 +162,27 @@ const userTargetOf = (url: URL) => {
   return raw ? intlOpenIdOf(raw) : null;
 };
 
+// per-isolate sliding window — fallback when no RATE_LIMITER binding exists
+// (Pages Functions don't support it). Per-isolate is still bounded, and the
+// real binding takes precedence when present.
+const windows = new Map<string, number[]>();
+const inMemoryLimited = (key: string, limit = 60) => {
+  const now = Date.now();
+  const w = (windows.get(key) ?? []).filter((t) => now - t < 60_000);
+  if (w.length >= limit) return true;
+  w.push(now);
+  windows.set(key, w);
+  return false;
+};
+
 // only origin-bound requests consume the limit — cache hits cost us nothing,
-// but bypass tricks (junk params, ?refresh) can't drain Vercel's quota
+// but bypass tricks (junk params, ?refresh) can't drain upstream quota
 const throttled = async (env: Env, request: Request) => {
   const ip = request.headers.get("cf-connecting-ip") ?? "unknown";
-  const { success } = await env.RATE_LIMITER.limit({ key: ip });
+  const limited = env.RATE_LIMITER
+    ? !(await env.RATE_LIMITER.limit({ key: ip })).success
+    : inMemoryLimited(ip);
+  const success = !limited;
   return success
     ? null
     : new Response(JSON.stringify({ error: "rate limited — retry shortly" }), {
@@ -222,8 +238,10 @@ export default {
     if (um) {
       const raw = await env.AREA_KV?.get(`user:${um[1]}`);
       if (!raw) return json({ error: "unknown connector key" }, 404);
-      const { success } = await env.RATE_LIMITER.limit({ key: `u:${um[1]}` });
-      if (!success) return json({ error: "rate limited — retry shortly" }, 429);
+      const limited = env.RATE_LIMITER
+        ? !(await env.RATE_LIMITER.limit({ key: `u:${um[1]}` })).success
+        : inMemoryLimited(`u:${um[1]}`);
+      if (limited) return json({ error: "rate limited — retry shortly" }, 429);
       const openid = (JSON.parse(raw) as { openid: string }).openid;
       url.pathname = "/mcp";
       h.set(HDR_BLABLAID, openid);

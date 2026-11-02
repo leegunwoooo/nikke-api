@@ -25,3 +25,4 @@ site/public/api.md
 site/public/robots.txt
 .vercel
 .env*
+pages-proxy/_worker.js
