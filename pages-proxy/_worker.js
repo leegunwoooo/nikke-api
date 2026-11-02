@@ -20082,6 +20082,36 @@ function buildServer(api, version2, origin = "", boundBlablaid) {
     })
   );
   server.registerTool(
+    "get_user_roster",
+    {
+      title: "Get a player's full roster",
+      description: "Every character a player owns, condensed to name_code/level/combat/grade/core per server area \u2014 the full upstream payload (details, equips, stateEffects, outpost) is too large for a tool response, use REST /api/user/:id/roster for that. Sweeps all 5 server areas (~1.3s) \u2014 pass area to fetch one. Live and rate limited.",
+      inputSchema: object({
+        blablaid: BLABLAID.optional(),
+        area: number2().int().optional().describe("Server area: 83 KR \xB7 81 JP \xB7 84 Global \xB7 82 NA \xB7 85 SEA. Omit to sweep all five")
+      }),
+      annotations: LIVE
+    },
+    userTool("get_user_roster", (a) => {
+      const blablaid = a.blablaid ?? boundBlablaid;
+      const shape = (d) => ({
+        intlOpenId: d.intlOpenId,
+        areas: (d.areas ?? []).map((ar) => ({
+          area: ar.area,
+          count: (ar.characters ?? []).length,
+          characters: (ar.characters ?? []).map((ch2) => ({
+            name_code: ch2.name_code,
+            level: ch2.lv,
+            combat: ch2.combat,
+            grade: ch2.grade,
+            core: ch2.core
+          }))
+        }))
+      });
+      return blablaid ? call(api, "get_user_roster", `/api/user/roster${qs({ blablaid, area: a.area })}`, shape) : needBlablaid();
+    })
+  );
+  server.registerTool(
     "search",
     {
       title: "Search everything",
@@ -22230,7 +22260,7 @@ async function createApp(storage) {
     }
   }
   const ROSTER_AREAS = [83, 81, 84, 82, 85];
-  const ROSTER_DETAIL_BATCH = 60;
+  const ROSTER_DETAIL_BATCH = 200;
   const mapLimit = async (items, n, fn) => {
     const out = new Array(items.length);
     let i = 0;
@@ -22258,7 +22288,7 @@ async function createApp(storage) {
       chunks.push(codes.slice(i, i + ROSTER_DETAIL_BATCH));
     const results = await mapLimit(
       chunks,
-      2,
+      3,
       (name_codes) => gameApi("Game", "GetUserCharacterDetails", { ...body, name_codes })
     );
     const details = [];
@@ -22284,7 +22314,7 @@ async function createApp(storage) {
     try {
       const results = await mapLimit(
         area === null ? ROSTER_AREAS : [area],
-        2,
+        5,
         (a) => collectRosterArea(target.intlOpenId, a)
       );
       const areas = results.filter((r) => !("failedCode" in r));

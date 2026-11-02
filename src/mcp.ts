@@ -641,9 +641,9 @@ export function buildServer(api: Fetcher, version: string, origin = "", boundBla
   server.registerTool(
     "get_user_roster",
     {
-      title: "Get a player's full roster (raw)",
+      title: "Get a player's full roster",
       description:
-        "Every character a player owns, upstream-shaped — characters + character_details + stateEffects + outpost per server area. For consumers that interpret raw fields (e.g. damage calculators). Sweeps all 5 server areas (~7 upstream calls, ~1.3s) — pass area to fetch one. Live and rate limited.",
+        "Every character a player owns, condensed to name_code/level/combat/grade/core per server area — the full upstream payload (details, equips, stateEffects, outpost) is too large for a tool response, use REST /api/user/:id/roster for that. Sweeps all 5 server areas (~1.3s) — pass area to fetch one. Live and rate limited.",
       inputSchema: z.object({
         blablaid: BLABLAID.optional(),
         area: z
@@ -651,17 +651,27 @@ export function buildServer(api: Fetcher, version: string, origin = "", boundBla
           .int()
           .optional()
           .describe("Server area: 83 KR · 81 JP · 84 Global · 82 NA · 85 SEA. Omit to sweep all five"),
-        fields: z
-          .string()
-          .optional()
-          .describe("Comma-separated dot paths kept in the response, e.g. 'areas.details'"),
       }),
       annotations: LIVE,
     },
-    userTool("get_user_roster", (a: { blablaid?: string; area?: number; fields?: string }) => {
+    userTool("get_user_roster", (a: { blablaid?: string; area?: number }) => {
       const blablaid = a.blablaid ?? boundBlablaid;
+      const shape = (d: any) => ({
+        intlOpenId: d.intlOpenId,
+        areas: (d.areas ?? []).map((ar: any) => ({
+          area: ar.area,
+          count: (ar.characters ?? []).length,
+          characters: (ar.characters ?? []).map((ch: any) => ({
+            name_code: ch.name_code,
+            level: ch.lv,
+            combat: ch.combat,
+            grade: ch.grade,
+            core: ch.core,
+          })),
+        })),
+      });
       return blablaid
-        ? call(api, "get_user_roster", `/api/user/roster${qs({ blablaid, area: a.area, fields: a.fields })}`)
+        ? call(api, "get_user_roster", `/api/user/roster${qs({ blablaid, area: a.area })}`, shape)
         : needBlablaid();
     }),
   );
