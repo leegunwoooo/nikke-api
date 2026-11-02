@@ -790,11 +790,14 @@ export function buildServer(api: Fetcher, version: string, origin = "", boundBla
 }
 
 // behind a TLS-terminating proxy (cloudflared, nginx) the request reaches us
-// as http — trust X-Forwarded-Proto so search/fetch links stay https
+// as http — trust X-Forwarded-Proto so search/fetch links stay https; a proxy
+// that forwards a public hostname (Pages -> worker) needs X-Forwarded-Host too
 export function requestOrigin(req: Request) {
   const url = new URL(req.url);
   const proto = req.headers.get("x-forwarded-proto")?.split(",")[0].trim();
   if (proto === "http" || proto === "https") url.protocol = `${proto}:`;
+  const host = req.headers.get("x-forwarded-host")?.split(",")[0].trim();
+  if (host && /^[\w.:-]+$/.test(host)) url.host = host;
   return url.origin;
 }
 
