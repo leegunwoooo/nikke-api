@@ -1,4 +1,5 @@
-import { mkdir, writeFile } from "node:fs/promises";
+import { existsSync } from "node:fs";
+import { mkdir, readdir, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { cdnUrl } from "../src/cdn.js";
 
@@ -231,14 +232,17 @@ async function main() {
   await mkdir(OUT_DIR, { recursive: true });
 
   let ok = 0;
+  const failed: string[] = [];
   for (const [p, out] of STATIC_RESOURCES) {
     if (await download(p, out)) ok++;
+    else failed.push(out);
   }
   for (const locale of LOCALES) {
     for (const [tpl, outTpl] of LANG_RESOURCES) {
       const p = tpl.replace(/\{l\}/g, locale);
       const out = outTpl.replace(/\{l\}/g, locale);
       if (await download(p, out)) ok++;
+      else failed.push(out);
     }
   }
   console.log(`\n${ok} resources synced -> ${OUT_DIR}`);
@@ -254,6 +258,35 @@ async function main() {
 
   const cb = await syncCubes();
   console.log(`${cb} harmony cube files synced`);
+
+  // fail loudly on partial syncs — missing inputs would otherwise be built
+  // and deployed as silently broken data. zh-TW equip tables do not exist
+  // upstream, so they're excluded from the required set.
+  const OPTIONAL = new Set(["ItemEquipTable_zh-TW.json", "equip_option_table_zh-TW.json"]);
+  const required = [
+    ...STATIC_RESOURCES.map(([, out]) => out),
+    ...LANG_RESOURCES.flatMap(([, out]) => LOCALES.map((l) => out.replace(/\{l\}/g, l))),
+  ].filter((f) => !OPTIONAL.has(f));
+  const missing = failed.filter((f) => !OPTIONAL.has(f));
+  for (const f of required) {
+    if (!existsSync(path.join(OUT_DIR, f)) && !missing.includes(f)) missing.push(f);
+  }
+  // corpus-level sanity: a bulk-download failure leaves a plausible-looking
+  // count. Expect ~824 roledata files (206 chars x 4 locales) and ~3200
+  // scene bodies — fail if wildly short.
+  const files = await readdir(OUT_DIR);
+  const short: string[] = [];
+  if (files.filter((f) => f.startsWith("roledata_")).length < 800) short.push("roledata_*");
+  const sceneBodies = files.filter((f) => /^(scene|attract)_/.test(f) && !/list|archive/.test(f)).length;
+  if (sceneBodies < 3000) short.push("scene bodies");
+  if (short.length) {
+    console.error(`sync incomplete — corpus too small: ${short.join(", ")} (${files.length} files total)`);
+    process.exit(1);
+  }
+  if (missing.length) {
+    console.error(`sync incomplete — ${missing.length} required files missing:\n${missing.join("\n")}`);
+    process.exit(1);
+  }
 }
 
 main();
