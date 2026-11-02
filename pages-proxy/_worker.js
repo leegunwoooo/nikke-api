@@ -2469,7 +2469,7 @@ var favoriteRouteEntries = (scenes) => scenes.filter((s) => s.category === "favo
 }));
 
 // src/scene-categories.ts
-var SCENE_CATEGORIES = ["main", "event", "attractive", "sudden", "favorite"];
+var SCENE_CATEGORIES = ["main", "event", "attractive", "sudden", "favorite", "library"];
 
 // src/fields.ts
 function fieldsOf(c) {
@@ -19587,6 +19587,7 @@ var MAX_CHARS = 6e4;
 var INSTRUCTIONS = `Unofficial NIKKE (GODDESS OF VICTORY: NIKKE) game data. Data \xA9 SHIFT UP / Level Infinite.
 - Character names exist in ko/en/ja/zh-TW and searches match any of them; responses default to Korean (lang=ko).
 - Story scene scripts are Korean only. Favorite-item (\uC560\uC7A5\uD488, category "favorite") scripts are transcribed from videos, not game data: they may have typos and follow only the choice taken in the video (chosen: true).
+- category "library" scenes are stories the game data doesn't serve (messenger chats, lost relics, side stories, sub quests, older events), from a community archive. They have speaker names but no voice or icons. Lines inside a choice carry branch ("<block>.<option>", nested pairs for nested choices): read one branch, not all of them. next says which scene follows.
 - Alternate versions (\uC774\uACA9, e.g. "\uB77C\uD53C : \uB808\uB4DC \uD6C4\uB4DC") are linked to their original: name searches and character story lookups cover every version unless a tool says otherwise.
 - Filters take English enum values; Korean terms map as noted in each parameter (e.g. \uCCA0\uAC11 = Iron).
 - Lists are paged with limit/offset. Oversized responses come back with a "truncated" object telling you how to fetch the rest.
@@ -19722,7 +19723,10 @@ var shapeScene = (includeMedia) => (d) => includeMedia || !Array.isArray(d?.line
     speaker: l.speakerName ?? l.speaker,
     text: l.text,
     ...l.window === "Choice" ? { window: l.window } : {},
-    ...l.chosen ? { chosen: true } : {}
+    ...l.chosen ? { chosen: true } : {},
+    ...l.branch ? { branch: l.branch } : {},
+    ...l.choiceId ? { choiceId: l.choiceId } : {},
+    ...l.optionValue ? { optionValue: l.optionValue } : {}
   }))
 };
 var ICON = `data:image/svg+xml;base64,${Buffer.from(
@@ -19806,7 +19810,7 @@ function buildServer(api, version2, origin = "", boundBlablaid) {
     "search_scenes",
     {
       title: "Search story scenes",
-      description: "List story scene scripts (Korean): main story, events, sudden (\uB3CC\uBC1C), affection and favorite-item (\uC560\uC7A5\uD488) scenes. Use get_scene to read the dialogue.",
+      description: `List story scene scripts (Korean): main story, events, sudden (\uB3CC\uBC1C), affection, favorite-item (\uC560\uC7A5\uD488) and library scenes (messenger, lost relics, side stories, sub quests, events missing from the game data). q also matches a library scene's collection, e.g. "ARK RANGER" or "blabla". Use get_scene to read the dialogue.`,
       inputSchema: object({
         q: string2().optional().describe("Scene name or groupId substring"),
         category: _enum(SCENE_CATEGORIES).optional(),
@@ -19912,7 +19916,7 @@ function buildServer(api, version2, origin = "", boundBlablaid) {
     "search_lines",
     {
       title: "Search story dialogue",
-      description: "Full-text search over every story line (main, events, sudden, affection, favorite items \u2014 Korean). Find who said something, where a phrase or topic comes up, or all lines of one speaker. Each hit names its scene and event; read around it with get_scene.",
+      description: "Full-text search over every story line (main, events, sudden, affection, favorite items, library \u2014 Korean). Find who said something, where a phrase or topic comes up, or all lines of one speaker. Each hit names its scene and event; read around it with get_scene.",
       inputSchema: object({
         q: string2().optional().describe("Text to find in the dialogue (Korean), punctuation ignored"),
         speaker: string2().optional().describe("Only lines spoken by this character (Korean name, e.g. \uB77C\uD53C)"),
@@ -21468,7 +21472,7 @@ async function createApp(storage) {
     }
     if (q) {
       const nq = norm(q);
-      list = list.filter((s) => norm(s.groupId).includes(nq) || norm(s.name ?? "").includes(nq));
+      list = list.filter((s) => [s.groupId, s.name, s.collection, s.libraryCategory].some((v) => norm(v ?? "").includes(nq)));
     }
     const total = list.length;
     const pg = pageQuery(c, total);
@@ -21719,6 +21723,12 @@ async function createApp(storage) {
   async function storyRoute() {
     const [chapters, events, scenes] = await Promise.all([mainChapters(), eventGroups(), getScenes()]);
     const last = Math.max(-1, ...chapters.keys());
+    const libraryByTitle = /* @__PURE__ */ new Map();
+    for (const s of scenes) {
+      if (s.category !== "library" || !s.collection) continue;
+      const k = searchNorm(s.collection);
+      libraryByTitle.set(k, [...libraryByTitle.get(k) ?? [], s.groupId]);
+    }
     const extra = Array.from({ length: Math.max(0, last - ROUTE_COVERAGE_CHAPTER) }, (_, i) => ({ kind: "main", chapter: ROUTE_COVERAGE_CHAPTER + 1 + i }));
     return [...STORY_ROUTE, ...extra, ...favoriteRouteEntries(scenes)].map((e, step) => {
       if (e.kind === "main") {
@@ -21731,7 +21741,8 @@ async function createApp(storage) {
       }
       const found = e.ids.flatMap((id) => [id, ...[...events.keys()].filter((k) => k.startsWith(`${id}_b`) && /_b\d+$/.test(k))]).filter((id) => events.has(id));
       const affectionScenes = e.nikke ? scenes.filter((s) => s.category === "attractive" && s.nikke === e.nikke).length : 0;
-      const inData = e.kind === "affection" ? affectionScenes > 0 : found.length > 0;
+      const library = e.kind !== "affection" && !found.length ? libraryByTitle.get(searchNorm(e.title)) ?? [] : [];
+      const inData = e.kind === "affection" ? affectionScenes > 0 : found.length + library.length > 0;
       return {
         step,
         kind: e.kind,
@@ -21741,7 +21752,8 @@ async function createApp(storage) {
         ...e.nikke ? { nikke: e.nikke } : {},
         required: e.required,
         ...e.importance ? { importance: e.importance } : {},
-        ...e.kind === "affection" ? { scenes: affectionScenes } : { episodes: found.reduce((n, id) => n + (events.get(id)?.episodes ?? 0), 0) },
+        ...e.kind === "affection" ? { scenes: affectionScenes } : { episodes: found.reduce((n, id) => n + (events.get(id)?.episodes ?? 0), library.length) },
+        ...library.length ? { firstScene: library[0] } : {},
         inData,
         ...e.note || !inData ? { note: [e.note, inData ? "" : "\uC774 API \uB370\uC774\uD130\uC5D0\uB294 \uC2A4\uD06C\uB9BD\uD2B8\uAC00 \uC5C6\uC74C"].filter(Boolean).join(" \xB7 ") } : {}
       };

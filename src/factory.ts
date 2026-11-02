@@ -124,6 +124,8 @@ interface SceneIndexEntry {
   type?: string;
   nikke?: string;
   source?: string;
+  collection?: string;
+  libraryCategory?: string;
 }
 
 interface EventEntry {
@@ -636,7 +638,7 @@ app.get("/api/scenes", async (c) => {
   }
   if (q) {
     const nq = norm(q);
-    list = list.filter((s) => norm(s.groupId).includes(nq) || norm(s.name ?? "").includes(nq));
+    list = list.filter((s) => [s.groupId, s.name, s.collection, s.libraryCategory].some((v) => norm(v ?? "").includes(nq)));
   }
   const total = list.length;
   const pg = pageQuery(c, total);
@@ -933,6 +935,13 @@ const mainChapters = async () => {
 async function storyRoute() {
   const [chapters, events, scenes] = await Promise.all([mainChapters(), eventGroups(), getScenes()]);
   const last = Math.max(-1, ...chapters.keys());
+  // events and side stories the game data lacks can still be in the archive, under the guide's title
+  const libraryByTitle = new Map<string, string[]>();
+  for (const s of scenes) {
+    if (s.category !== "library" || !s.collection) continue;
+    const k = searchNorm(s.collection);
+    libraryByTitle.set(k, [...(libraryByTitle.get(k) ?? []), s.groupId]);
+  }
   const extra = Array.from({ length: Math.max(0, last - ROUTE_COVERAGE_CHAPTER) }, (_, i) => ({ kind: "main" as const, chapter: ROUTE_COVERAGE_CHAPTER + 1 + i }));
   return [...STORY_ROUTE, ...extra, ...favoriteRouteEntries(scenes)].map((e, step) => {
     if (e.kind === "main") {
@@ -946,7 +955,8 @@ async function storyRoute() {
     // bonus episodes ship as their own "<id>_bNN" events — they belong to the same entry
     const found = e.ids.flatMap((id) => [id, ...[...events.keys()].filter((k) => k.startsWith(`${id}_b`) && /_b\d+$/.test(k))]).filter((id) => events.has(id));
     const affectionScenes = e.nikke ? scenes.filter((s) => s.category === "attractive" && s.nikke === e.nikke).length : 0;
-    const inData = e.kind === "affection" ? affectionScenes > 0 : found.length > 0;
+    const library = e.kind !== "affection" && !found.length ? libraryByTitle.get(searchNorm(e.title)) ?? [] : [];
+    const inData = e.kind === "affection" ? affectionScenes > 0 : found.length + library.length > 0;
     return {
       step,
       kind: e.kind,
@@ -956,7 +966,8 @@ async function storyRoute() {
       ...(e.nikke ? { nikke: e.nikke } : {}),
       required: e.required,
       ...(e.importance ? { importance: e.importance } : {}),
-      ...(e.kind === "affection" ? { scenes: affectionScenes } : { episodes: found.reduce((n, id) => n + (events.get(id)?.episodes ?? 0), 0) }),
+      ...(e.kind === "affection" ? { scenes: affectionScenes } : { episodes: found.reduce((n, id) => n + (events.get(id)?.episodes ?? 0), library.length) }),
+      ...(library.length ? { firstScene: library[0] } : {}),
       inData,
       ...(e.note || !inData ? { note: [e.note, inData ? "" : "이 API 데이터에는 스크립트가 없음"].filter(Boolean).join(" · ") } : {}),
     };

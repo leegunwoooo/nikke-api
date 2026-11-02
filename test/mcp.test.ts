@@ -91,6 +91,13 @@ test("get_nikke links the favorite story scene", async () => {
   assert.equal(n.details.favoriteStory.sceneGroupId, "d_favorite_test");
 });
 
+test("get_scene keeps branch markers on library scenes", async () => {
+  const s = (await tool("get_scene", { groupId: "lib_test_00" })).json;
+  assert.deepEqual(s.next, [{ groupId: "lib_test_01" }]);
+  assert.deepEqual(s.lines[1], { text: "고른 말", window: "Choice", branch: "1.1" });
+  assert.deepEqual(s.lines[2], { speaker: "감독", text: "분기 대사", branch: "1.1" });
+});
+
 test("favorite stories sit optional at the end of the route, after every chapter", async () => {
   const route = (await tool("story_route", {})).json;
   const last = route.entries.at(-1);
@@ -319,6 +326,10 @@ test("story_route resolves the curated order against the data", async () => {
   assert.ok(!r.unplaced.some((e: any) => e.id === "event_firstaffection_b01"));
   assert.deepEqual(fa.ids, ["event_firstaffection", "event_firstaffection_b01"]);
   assert.ok(r.sources.S.url.startsWith("https://ssissun.github.io/"));
+  // a guide entry the game data lacks resolves to the archive by title
+  const ark = r.entries.find((e: any) => e.title === "ARK RANGER");
+  assert.deepEqual([ark.inData, ark.firstScene, ark.episodes], [true, "lib_test_00", 1]);
+  assert.doesNotMatch(ark.note ?? "", /스크립트가 없음/);
 });
 
 test("next_story walks the route from a chapter or an entry", async () => {
