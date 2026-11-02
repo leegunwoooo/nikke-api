@@ -232,6 +232,13 @@ GET /api/nikkes?limit=20&offset=40
       "fireType": "ProjectileDirect", "inputType": "UP",
       "spotFirstDelay": 0.2, "spotLastDelay": 0.2, "spotProjectileSpeed": 300,
       "spotRadius": 50, "spotRadiusObject": 2, "spotExplosionRange": 500
+    },
+    "statEnhance": {
+      "id": 5105,
+      "limitBreak": { "ratio": 200, "hp": 3000, "attack": 20, "defence": 100,
+        "energyResist": 0, "metalResist": 0, "bioResist": 0 },
+      "core": { "hp": 200, "attack": 200, "defence": 200,
+        "energyResist": 0, "metalResist": 0, "bioResist": 0 }
     }
   }
 }
@@ -279,6 +286,10 @@ GET /api/nikkes/101801?fields=details.attractiveScenarios
 | `coreDamageRate` / `penetration` | 코어 대미지 %·관통 |
 | `preferTarget` / `preferTargetCondition` / `shotTiming` / `fireType` / `inputType` | 사격·타겟팅 메타 |
 | `spot*` | 발사 지연·탄속·범위 |
+
+### `statEnhance` 필드
+
+돌파(grade)와 코어 강화 보너스 — roledata `stat_enhance_detail`. 값은 **원시 게임 유닛**입니다 (÷100 → 표시값). `limitBreak`는 돌파 1단계당 보너스, `core`는 코어 강화 1단계당 보너스. id는 레어도 대역으로 공유됩니다 (1xxx=R, 3xxx=SR, 5xxx=SSR — 같은 대역 내 값 동일).
 
 ### 복수 매칭 시
 

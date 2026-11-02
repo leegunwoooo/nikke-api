@@ -1043,6 +1043,28 @@ async function buildDetail(resourceId: number): Promise<NikkeDetail | null> {
     attractiveScenarios: mergeAttractiveScenarios(roles),
     voices: voices.length ? voices : undefined,
     shot: buildShot(roles),
+    statEnhance: first.stat_enhance_detail
+      ? {
+          id: first.stat_enhance_detail.id ?? first.stat_enhance_id,
+          limitBreak: {
+            ratio: first.stat_enhance_detail.grade_ratio,
+            hp: first.stat_enhance_detail.grade_hp,
+            attack: first.stat_enhance_detail.grade_attack,
+            defence: first.stat_enhance_detail.grade_defence,
+            energyResist: first.stat_enhance_detail.grade_energy_resist,
+            metalResist: first.stat_enhance_detail.grade_metal_resist,
+            bioResist: first.stat_enhance_detail.grade_bio_resist,
+          },
+          core: {
+            hp: first.stat_enhance_detail.core_hp,
+            attack: first.stat_enhance_detail.core_attack,
+            defence: first.stat_enhance_detail.core_defence,
+            energyResist: first.stat_enhance_detail.core_energy_resist,
+            metalResist: first.stat_enhance_detail.core_metal_resist,
+            bioResist: first.stat_enhance_detail.core_bio_resist,
+          },
+        }
+      : undefined,
   };
 }
 

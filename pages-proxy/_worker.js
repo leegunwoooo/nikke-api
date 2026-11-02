@@ -19627,6 +19627,7 @@ var NIKKE_EXTRA = {
   statsPerLevel: "details.statsPerLevel",
   voices: "details.voices",
   shot: "details.shot",
+  statEnhance: "details.statEnhance",
   teammateList: "details.teammateList",
   costumes: "costumes",
   images: "images"
@@ -19792,7 +19793,7 @@ function buildServer(api, version2, origin = "", boundBlablaid) {
       description: "Character detail: profile, skills (rendered at Lv10), backstory, squad, CV, affection (\uD638\uAC10\uB3C4) scene ids and the favorite-item (\uC560\uC7A5\uD488) story scene id. Add more with include. If the name matches several characters, a {count, characters} list comes back instead \u2014 call again with one of their ids.",
       inputSchema: object({
         nameOrId: string2().min(1).describe("Character name (partial, any language), id or resourceId"),
-        include: array(_enum(Object.keys(NIKKE_EXTRA))).optional().describe("Extra sections added to the default: statsPerLevel (~30KB), voices (~80KB, voice lines incl. costumeIndex), shot (weapon mechanics \u2014 damage/charge/rate-of-fire/burst-gauge units), teammateList, costumes, images"),
+        include: array(_enum(Object.keys(NIKKE_EXTRA))).optional().describe("Extra sections added to the default: statsPerLevel (~30KB), voices (~80KB, voice lines incl. costumeIndex), shot (weapon mechanics \u2014 damage/charge/rate-of-fire/burst-gauge units), statEnhance (limit-break & core bonus), teammateList, costumes, images"),
         lang: LANG
       }),
       annotations: READ_ONLY

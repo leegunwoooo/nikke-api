@@ -39,6 +39,7 @@ BlablaLink(공식 위키 도구)의 CDN 데이터를 매일 동기화합니다. 
 | 스탯 | 레벨별 공격력/방어력/HP 배열 (Lv1~최대) |
 | 전투 정보 | 치명타 확률·피해, 사거리 보정, 버스트 지연·지속시간 등 |
 | 무기 스펙 | 캐릭터별 무기 메카닉 (`details.shot`) — 샷 대미지·차지 시간·연사·재장전·명중률 서클·샷당 버스트 게이지·타겟 우선순위 |
+| 돌파·코어 보너스 | 한계돌파 1단계당 + 코어 강화 1단계당 스탯 보너스 (`details.statEnhance`) — 레어도별 공통 테이블 |
 | 스토리 정보 | 배경 스토리(4개 언어), 소속 스쿼드, 성우(CV), 호감도 씬 연결(`details.attractiveScenarios[].sceneGroupId` → `/api/scenes/:groupId`), 애장품 스토리 연결(`details.favoriteStory`), 팀원 목록(캐릭터 이름·이미지로 해석) |
 | **보이스** | 캐릭터 대사 목록 (`details.voices`) — 로비 터치, 전투 진입·승리, 호감도 대사 등. 대사별 `label`(종류)·`text`(대사) 4개 언어 + `voice` 음성 mp3 **ko/en/ja 3종**. `conditionAttractiveLevel`로 해금 조건, `costumeIndex`로 코스튬별 대사 구분 (66명이 코스튬 전용 대사 보유) |
 

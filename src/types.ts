@@ -147,6 +147,8 @@ export interface RawRoleData {
     costume_index?: number;
   }[];
   shot_detail?: RawShotDetail;
+  stat_enhance_id?: number;
+  stat_enhance_detail?: RawStatEnhance;
   character_level_attack_list?: number[];
   character_level_defence_list?: number[];
   character_level_hp_list?: number[];
@@ -215,6 +217,26 @@ export interface RawShotDetail {
   spot_explosion_range?: number;
   core_damage_rate?: number;
   penetration?: number;
+}
+
+// limit-break/core bonus table row (roledata stat_enhance_detail) — ids are
+// per rarity band (1xxx R, 3xxx SR, 5xxx SSR) with identical values inside
+// each band. Values are raw game units (÷100 → displayed %/stats).
+export interface RawStatEnhance {
+  id?: number;
+  grade_ratio?: number;
+  grade_hp?: number;
+  grade_attack?: number;
+  grade_defence?: number;
+  grade_energy_resist?: number;
+  grade_metal_resist?: number;
+  grade_bio_resist?: number;
+  core_hp?: number;
+  core_attack?: number;
+  core_defence?: number;
+  core_energy_resist?: number;
+  core_metal_resist?: number;
+  core_bio_resist?: number;
 }
 
 export type Localized<T> = Partial<Record<Locale, T>>;
@@ -289,6 +311,29 @@ export interface NikkeDetail {
   }[];
   /** per-character weapon spec from roledata shot_detail */
   shot?: NikkeShot;
+  /** limit-break (돌파) and core-enhance (코어) bonus values — raw units */
+  statEnhance?: NikkeStatEnhance;
+}
+
+export interface NikkeStatEnhance {
+  id?: number;
+  limitBreak?: {
+    ratio?: number;
+    hp?: number;
+    attack?: number;
+    defence?: number;
+    energyResist?: number;
+    metalResist?: number;
+    bioResist?: number;
+  };
+  core?: {
+    hp?: number;
+    attack?: number;
+    defence?: number;
+    energyResist?: number;
+    metalResist?: number;
+    bioResist?: number;
+  };
 }
 
 export interface NikkeShot {
