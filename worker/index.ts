@@ -1,12 +1,10 @@
-// Cloudflare Worker front for the Vercel deployment — caches cacheable GET
-// responses at the edge so hobby-plan Vercel request usage stays low.
-// The origin already marks responses: data endpoints get s-maxage=86400.
-// /api/user/* is live upstream data on a shared BlablaLink account, so it
-// gets a short USER_TTL edge cache instead of pass-through — repeat reads
-// of the same profile absorb at the edge instead of burning the shared
-// account's rate limit. ?refresh on any GET bypasses the cache once.
-// ANALYTICS records one point per request (path group + HIT/MISS/PASS) —
-// Vercel hobby keeps no request history, this is the traffic breakdown.
+// Cloudflare Worker — serves the whole API app directly. GET responses are
+// edge-cached (data endpoints mark s-maxage=86400) so repeat reads never
+// touch the app or the data host. /api/user/* is live upstream data on a
+// shared BlablaLink account, so it gets a short USER_TTL edge cache with
+// SWR instead — repeat reads absorb at the edge instead of burning the
+// shared account's rate limit. ?refresh on any GET bypasses once.
+// ANALYTICS records one point per request (path group + HIT/MISS/PASS).
 
 import { createApp } from "../src/factory.js";
 import { httpStorage } from "../src/storage.js";
@@ -19,6 +17,11 @@ const CREDS_KEY = "bla:creds";
 const HDR_CREDS = "x-bla-creds"; // edge->origin: current upstream session creds (b64 json)
 const HDR_BLABLAID = "x-registered-blablaid"; // edge->origin: bound profile for /mcp/u/<key>
 
+// CF cache API isn't in the DOM types — one typed handle for the default store
+const edgeCache = (caches as unknown as {
+  default: { match(k: Request): Promise<Response | undefined>; put(k: Request, r: Response): Promise<void> };
+}).default;
+
 interface Env {
   ADMIN_TOKEN?: string;
   DIST_HOST?: string;
@@ -29,10 +32,31 @@ interface Env {
   AREA_KV?: { get(k: string): Promise<string | null>; put(k: string, v: string, o?: object): Promise<void> };
 }
 
-// the whole API app runs here — built once per isolate, data reads go to R2
-let appPromise: Promise<ReturnType<typeof createApp>> | undefined;
+// the whole API app runs here — built once per isolate, data reads go to
+// the Pages data host. Re-check the bundle version every few minutes so a
+// data refresh reaches long-lived isolates without a redeploy.
+type App = Awaited<ReturnType<typeof createApp>>;
 const DATA_HOST = "https://nikke-api-data.pages.dev";
-const getApp = (env: Env) => (appPromise ??= createApp(httpStorage(env.DIST_HOST ?? DATA_HOST)));
+const REVALIDATE_MS = 300_000;
+let appPromise: Promise<App> | undefined;
+let appBuiltAt = 0;
+let dataStamp = "";
+const getApp = async (env: Env): Promise<App> => {
+  const host = env.DIST_HOST ?? DATA_HOST;
+  const now = Date.now();
+  if (appPromise && now - appBuiltAt < REVALIDATE_MS) return appPromise;
+  const stamp = await fetch(`${host}/characters.json`)
+    .then((r) => r.json() as Promise<{ syncedAt?: string; version?: string }>)
+    .then((j) => `${j.syncedAt}|${j.version}`)
+    .catch(() => null);
+  if (appPromise && stamp !== null && stamp === dataStamp) {
+    appBuiltAt = now;
+    return appPromise;
+  }
+  if (stamp !== null) dataStamp = stamp;
+  appBuiltAt = now;
+  return (appPromise = createApp(httpStorage(host)));
+};
 
 const json = (d: unknown, status = 200) =>
   new Response(JSON.stringify(d), {
@@ -211,18 +235,48 @@ export default {
       return new Response(res.body, res);
     }
 
-    // routes that can call the upstream game API get the latest creds injected
-    if (url.pathname.startsWith("/api/user") || url.pathname.startsWith("/mcp")) {
+    const userPath = url.pathname.startsWith("/api/user");
+    const target = userPath ? userTargetOf(url) : null;
+    const isGet = request.method === "GET" || request.method === "HEAD";
+    let key: Request | undefined;
+
+    // GET: serve from edge cache BEFORE touching the app or KV — a hit
+    // shouldn't spend an app init (characters.json read) or creds lookup
+    const refresh = url.searchParams.has("refresh");
+    if (isGet) {
+      url.searchParams.delete("refresh");
+      // a remembered nikke_area_id lets the origin skip one upstream call
+      if (target && !url.searchParams.has("area")) {
+        const area = await env.AREA_KV?.get(target);
+        if (area) url.searchParams.set("area", area);
+      }
+      url.searchParams.sort(); // param order shouldn't split the cache
+      key = new Request(url.toString());
+      if (!refresh) {
+        const hit = await edgeCache.match(key);
+        if (hit) {
+          track("HIT");
+          // honor If-None-Match against the stored ETag — a matching tag
+          // means 304 instead of resending the whole body
+          const etag = hit.headers.get("etag");
+          const inm = request.headers.get("if-none-match");
+          if (etag && inm && inm.split(",").map((t) => t.trim()).includes(etag)) {
+            return new Response(null, { status: 304, headers: { etag, "x-edge-cache": "HIT" } });
+          }
+          return outgoing(hit, "HIT", userPath);
+        }
+      }
+    }
+
+    // MISS/pass-through from here on — now the app and creds are needed
+    if (userPath || url.pathname.startsWith("/mcp")) {
       const creds = await env.AREA_KV?.get(CREDS_KEY);
       if (creds) h.set(HDR_CREDS, btoa(creds));
     }
     request = new Request(request, { headers: h });
-
-    const userPath = url.pathname.startsWith("/api/user");
-    const target = userPath ? userTargetOf(url) : null;
-
     const app = await getApp(env);
-    if (request.method !== "GET" && request.method !== "HEAD") {
+
+    if (!isGet) {
       const denied = await throttled(env, request);
       if (denied) return denied;
       const res = await app.fetch(request);
@@ -232,31 +286,16 @@ export default {
       return out;
     }
 
-    const refresh = url.searchParams.has("refresh");
-    url.searchParams.delete("refresh");
-    // a remembered nikke_area_id lets the origin skip one upstream call
-    if (target && !url.searchParams.has("area")) {
-      const area = await env.AREA_KV?.get(target);
-      if (area) url.searchParams.set("area", area);
-    }
-    url.searchParams.sort(); // param order shouldn't split the cache
-    const key = new Request(url.toString());
-
-    if (!refresh) {
-      const hit = await caches.default.match(key);
-      if (hit) {
-        track("HIT");
-        return outgoing(hit, "HIT", userPath);
-      }
-    }
-
     // a stale If-None-Match can't match the origin's version-derived ETag
     const denied = await throttled(env, request);
     if (denied) return denied;
     const oh = new Headers(h);
     oh.set("if-none-match", "");
     const res = await app.fetch(new Request(url.toString(), { headers: oh, method: "GET" }));
-    if (res.ok) {
+    // userPath responses are rewritten to edge-cacheable below; other
+    // no-store responses (mcp guide etc.) must not be stored at all
+    const cacheable = res.ok && (userPath || !res.headers.get("cache-control")?.includes("no-store"));
+    if (cacheable) {
       const stored = new Response(res.clone().body, res);
       // user responses arrive no-store — rewrite TTL for edge storage only;
       // past USER_TTL the edge serves stale while it revalidates in the
@@ -266,7 +305,7 @@ export default {
           "Cache-Control",
           `public, max-age=${USER_TTL}, s-maxage=${USER_TTL}, stale-while-revalidate=${USER_SWR}`,
         );
-      ctx.waitUntil(caches.default.put(key, stored));
+      ctx.waitUntil(edgeCache.put(key!, stored));
       // profile responses carry intlOpenId + areaId — remember the mapping
       if (target && env.AREA_KV) {
         ctx.waitUntil(
