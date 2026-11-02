@@ -3,7 +3,7 @@ import path from "node:path";
 import { cdnUrl } from "../src/cdn.js";
 import { compareEventScenes, eventIdOf } from "../src/events.js";
 import { readFavoriteStories } from "./favorite-stories.js";
-import { assertDistinctIds, dedupKeys, readLibraryStories, selectNewScripts } from "./library-stories.js";
+import { assertDistinctIds, dedupKeys, LIBRARY_EVENT_CATEGORIES, libraryEventId, readLibraryStories, selectNewScripts } from "./library-stories.js";
 import type {
   Burst,
   Locale,
@@ -530,6 +530,7 @@ async function main() {
       for (const k of dedupKeys(scene.l.map(([, text]) => ({ text })))) known.add(k);
     }
   }
+  const nikkeNames = new Set(characters.map((n) => n.name.ko));
   const library = await readLibraryStories();
   for (const w of library.warnings) console.log(`warn: library ${w}`);
   const libraryScenes = selectNewScripts(library.scenes, known);
@@ -539,7 +540,15 @@ async function main() {
     // a route into a scene dropped as a duplicate would be a dead link
     const next = scene.next?.filter((n) => libraryIds.has(n.groupId));
     const { next: _next, ...rest } = scene;
-    await writeFile(path.join(SCENES, `${scene.groupId}.json`), JSON.stringify({ ...rest, ...(next?.length ? { next } : {}) }));
+    // character episodes and 1:1 chats are titled with the character's exact name
+    const nikke =
+      (scene.libraryCategory === "character_episodes" || scene.section === "개인") && nikkeNames.has(scene.collection)
+        ? scene.collection
+        : undefined;
+    await writeFile(
+      path.join(SCENES, `${scene.groupId}.json`),
+      JSON.stringify({ ...rest, ...(nikke ? { nikke } : {}), ...(next?.length ? { next } : {}) }),
+    );
     sceneIndex.push({
       groupId: scene.groupId,
       name: scene.name,
@@ -549,6 +558,7 @@ async function main() {
       collection: scene.collection,
       libraryCategory: scene.libraryCategory,
       ...(scene.section ? { section: scene.section } : {}),
+      ...(nikke ? { nikke } : {}),
     });
     addLines(scene.groupId, "library", scene.lines);
   }
@@ -600,6 +610,17 @@ async function main() {
     ...e,
     scenes: e.scenes.sort(compareEventScenes),
   }));
+  const libraryEvents = new Map<string, (typeof events)[number]>();
+  for (const s of libraryScenes) {
+    if (!LIBRARY_EVENT_CATEGORIES.has(s.libraryCategory)) continue;
+    const id = libraryEventId(s.collection);
+    const e = libraryEvents.get(id) ?? { id, title: s.collection, episodes: 0, totalLines: 0, scenes: [], source: "library" };
+    e.episodes++;
+    e.totalLines += s.lines.length;
+    e.scenes.push(s.groupId);
+    libraryEvents.set(id, e);
+  }
+  events.push(...libraryEvents.values());
   await writeFile(path.join(OUT, "events.json"), JSON.stringify(events));
   console.log(`events.json: ${events.length} events`);
 

@@ -251,7 +251,7 @@
                   "key": "category",
                   "value": "",
                   "disabled": true,
-                  "description": "main|event|sudden|attractive|favorite"
+                  "description": "main|event|sudden|attractive|favorite|library"
                 },
                 {
                   "key": "nikke",

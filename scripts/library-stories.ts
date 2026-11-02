@@ -191,6 +191,14 @@ export function selectNewScripts<T extends { lines: { text?: string }[] }>(scrip
   return kept;
 }
 
+/** Collections that read as one story get an event entry, so they show up in /api/events. */
+export const LIBRARY_EVENT_CATEGORIES = new Set(["event_stories", "side_stories", "special_stories"]);
+
+export const libraryEventId = (collection: string) => {
+  const slug = collection.toLowerCase().replace(/[^a-z0-9]+/g, "_").replace(/^_|_$/g, "");
+  return `lib_${/^[\x00-\x7f]+$/.test(collection) && slug ? slug : crypto.createHash("sha1").update(collection).digest("hex").slice(0, 12)}`;
+};
+
 /** Scene files are named by id, and case-insensitive checkouts would merge ids differing only in case. */
 export function assertDistinctIds(scenes: { groupId: string }[]) {
   const seen = new Set<string>();
@@ -234,7 +242,7 @@ export async function readLibraryStories(root = path.resolve(LIBRARY_DIR)) {
       scenes.push({
         groupId,
         type: "library",
-        name: p.subTitle,
+        name: p.subTitle || (meta?.title ?? stem),
         collection: meta?.title ?? stem,
         libraryCategory: dirs[0],
         ...(meta?.section ? { section: meta.section } : {}),
