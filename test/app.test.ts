@@ -128,6 +128,7 @@ test("scenes index, nikke filter is case/space-insensitive", async () => {
   assert.equal((await json("/api/scenes?category=library")).count, 1);
   assert.equal((await json("/api/scenes?q=ARK RANGER")).scenes[0].groupId, "lib_test_00"); // q matches the collection
   assert.equal((await json("/api/scenes?q=event_stories")).count, 1);
+  assert.equal((await json("/api/scenes?category=library&nikke=금서고")).count, 1);
   assert.equal((await json("/api/scenes?category=main")).count, 1);
   assert.equal((await json("/api/scenes?nikke=innocentmaid")).count, 1);
   assert.equal((await json("/api/scenes?limit=1&offset=1")).scenes[0].groupId, "attract_1_1");

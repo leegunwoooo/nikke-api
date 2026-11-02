@@ -91,6 +91,18 @@ test("get_nikke links the favorite story scene", async () => {
   assert.equal(n.details.favoriteStory.sceneGroupId, "d_favorite_test");
 });
 
+test("library collections are events, with branches marked in the script", async () => {
+  const list = (await tool("list_events", { q: "ARK RANGER" })).json;
+  assert.deepEqual(list.events[0], { id: "lib_ark_ranger", title: "ARK RANGER", episodes: 1, totalLines: 3, source: "library" });
+  const s = (await tool("read_event", { id: "lib_ark_ranger" })).json;
+  assert.deepEqual(s.episodes[0].lines, ["감독: 라이브러리 대사", "[선택지 1.1] 고른 말", "[1.1] 감독: 분기 대사"]);
+});
+
+test("search hits on library scenes name their collection", async () => {
+  const hit = (await tool("search_lines", { q: "라이브러리 대사" })).json.lines[0];
+  assert.deepEqual([hit.scene.collection, hit.scene.event.id], ["ARK RANGER", "lib_ark_ranger"]);
+});
+
 test("get_scene keeps branch markers on library scenes", async () => {
   const s = (await tool("get_scene", { groupId: "lib_test_00" })).json;
   assert.deepEqual(s.next, [{ groupId: "lib_test_01" }]);
@@ -328,7 +340,8 @@ test("story_route resolves the curated order against the data", async () => {
   assert.ok(r.sources.S.url.startsWith("https://ssissun.github.io/"));
   // a guide entry the game data lacks resolves to the archive by title
   const ark = r.entries.find((e: any) => e.title === "ARK RANGER");
-  assert.deepEqual([ark.inData, ark.firstScene, ark.episodes], [true, "lib_test_00", 1]);
+  assert.deepEqual([ark.inData, ark.firstScene, ark.episodes, ark.ids], [true, "lib_test_00", 1, ["lib_ark_ranger"]]);
+  assert.ok(!r.unplaced.some((e: any) => e.id === "lib_ark_ranger"));
   assert.doesNotMatch(ark.note ?? "", /스크립트가 없음/);
 });
 

@@ -3,6 +3,7 @@ import { test } from "node:test";
 import {
   assertDistinctIds,
   dedupKeys,
+  libraryEventId,
   libraryGroupId,
   parseLibraryCatalog,
   parseLibraryScript,
@@ -129,6 +130,12 @@ test("scene ids are URL safe and stable", () => {
   assert.match(libraryGroupId("UFO챈.zip_00"), /^lib_[0-9a-f]{12}$/);
   assert.equal(libraryGroupId("UFO챈.zip_00"), libraryGroupId("UFO챈.zip_00"));
   assert.throws(() => assertDistinctIds([{ groupId: "lib_A" }, { groupId: "lib_a" }]), /id clash/);
+});
+
+test("event ids are readable when the title is ASCII", () => {
+  assert.equal(libraryEventId("BOOM! THE GHOST!"), "lib_boom_the_ghost");
+  assert.match(libraryEventId("2X2 LOVE 1부"), /^lib_[0-9a-f]{12}$/);
+  assert.notEqual(libraryEventId("2X2 LOVE 1부"), libraryEventId("2X2 LOVE 2부"));
 });
 
 test("catalog reads titles and sections from the archive's index", () => {
