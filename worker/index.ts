@@ -41,21 +41,42 @@ const REVALIDATE_MS = 300_000;
 let appPromise: Promise<App> | undefined;
 let appBuiltAt = 0;
 let dataStamp = "";
-const getApp = async (env: Env): Promise<App> => {
-  const host = env.DIST_HOST ?? DATA_HOST;
-  const now = Date.now();
-  if (appPromise && now - appBuiltAt < REVALIDATE_MS) return appPromise;
-  const stamp = await fetch(`${host}/characters.json`)
+const stampOf = (host: string) =>
+  fetch(`${host}/characters.json`)
     .then((r) => r.json() as Promise<{ syncedAt?: string; version?: string }>)
     .then((j) => `${j.syncedAt}|${j.version}`)
     .catch(() => null);
-  if (appPromise && stamp !== null && stamp === dataStamp) {
-    appBuiltAt = now;
+// revalidation runs in the background — requests never wait on the stamp
+// fetch, and a data refresh still reaches long-lived isolates within
+// REVALIDATE_MS + one request
+const getApp = async (env: Env, ctx?: ExecutionContext): Promise<App> => {
+  const host = env.DIST_HOST ?? DATA_HOST;
+  const now = Date.now();
+  if (appPromise && now - appBuiltAt < REVALIDATE_MS) return appPromise;
+  if (appPromise) {
+    // warm isolate past the revalidation window — serve the current app
+    // and refresh the stamp (and the app, if it changed) in the background
+    const check = stampOf(host).then((stamp) => {
+      appBuiltAt = Date.now();
+      if (stamp !== null && stamp !== dataStamp) {
+        dataStamp = stamp;
+        appPromise = createApp(httpStorage(host));
+      }
+    });
+    if (ctx) ctx.waitUntil(check);
+    else check.catch(() => {});
     return appPromise;
   }
-  if (stamp !== null) dataStamp = stamp;
+  // cold isolate — build now; learn the current stamp in the background so
+  // revalidation has a baseline without a second request-path fetch
   appBuiltAt = now;
-  return (appPromise = createApp(httpStorage(host)));
+  appPromise = createApp(httpStorage(host));
+  const learn = stampOf(host).then((stamp) => {
+    if (stamp !== null) dataStamp = stamp;
+  });
+  if (ctx) ctx.waitUntil(learn);
+  else learn.catch(() => {});
+  return appPromise;
 };
 
 const json = (d: unknown, status = 200) =>
@@ -117,9 +138,9 @@ const adminToken = async (request: Request, env: Env) => {
 
 // POST /mcp/register {url|blablaid} — verify the profile is reachable through
 // the origin, then issue a personal connector key stored in KV
-const registerUser = async (request: Request, env: Env) => {
+const registerUser = async (request: Request, env: Env, ctx?: ExecutionContext) => {
   if (!env.AREA_KV) return json({ error: "KV not configured" }, 500);
-  const app = await getApp(env);
+  const app = await getApp(env, ctx);
   const body = (await request.json().catch(() => null)) as { url?: string; blablaid?: string } | null;
   const raw = body?.url ?? body?.blablaid;
   const openid = typeof raw === "string" ? intlOpenIdOf(raw) : null;
@@ -274,7 +295,7 @@ export default {
     }
     if (url.pathname === "/mcp/register") {
       if (request.method !== "POST") return json({ error: "method not allowed" }, 405);
-      return registerUser(request, env);
+      return registerUser(request, env, ctx);
     }
 
     // /mcp/u/<key> — bound connector: resolve the key, inject the profile,
@@ -292,7 +313,7 @@ export default {
       h.set(HDR_BLABLAID, openid);
       const creds = await getCreds(env);
       if (creds) h.set(HDR_CREDS, btoa(creds));
-      const app = await getApp(env);
+      const app = await getApp(env, ctx);
       const res = await app.fetch(new Request(url.toString(), new Request(request, { headers: h })));
       track("PASS");
       return new Response(res.body, res);
@@ -337,7 +358,7 @@ export default {
       if (creds) h.set(HDR_CREDS, btoa(creds));
     }
     request = new Request(request, { headers: h });
-    const app = await getApp(env);
+    const app = await getApp(env, ctx);
 
     if (!isGet) {
       const denied = await throttled(env, request);

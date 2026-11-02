@@ -21021,8 +21021,12 @@ async function createApp(storage) {
     }
   }
   const loadNameCodeMap = memo3(async () => {
-    nameCodeMap ??= await loadDistJson("name_code_map.json", {});
-    avatarMap ??= await loadDistJson("avatar_map.json", {});
+    const [nc, av] = await Promise.all([
+      loadDistJson("name_code_map.json", {}),
+      loadDistJson("avatar_map.json", {})
+    ]);
+    nameCodeMap ??= nc;
+    avatarMap ??= av;
     return nameCodeMap;
   });
   const loadFavNames = memo3(async () => {
@@ -21044,8 +21048,12 @@ async function createApp(storage) {
     return cubeNameMap;
   });
   const loadEquipMaps = memo3(async () => {
-    equipItemMap ??= await loadDistJson("equip_item_map.json", {});
-    equipOptionMap ??= await loadDistJson("equip_option_map.json", {});
+    const [items, options] = await Promise.all([
+      loadDistJson("equip_item_map.json", null),
+      loadDistJson("equip_option_map.json", null)
+    ]);
+    equipItemMap ??= items;
+    equipOptionMap ??= options;
     return { equipItemMap, equipOptionMap };
   });
   let costumeMapData = null;
@@ -21445,9 +21453,10 @@ async function createApp(storage) {
   app.get("/api/events/:id", async (c) => {
     const id = c.req.param("id");
     if (!/^[\w-]+$/.test(id)) return c.json({ error: "invalid id" }, 400);
-    const ev2 = (await eventGroups()).get(id);
+    const [eg, scenes] = await Promise.all([eventGroups(), getScenes()]);
+    const ev2 = eg.get(id);
     if (!ev2) return c.json({ error: "not found" }, 404);
-    const sceneIdx = new Map((await getScenes()).map((s) => [s.groupId, s]));
+    const sceneIdx = new Map(scenes.map((s) => [s.groupId, s]));
     return c.json(
       pickFields(
         {
@@ -21495,20 +21504,42 @@ async function createApp(storage) {
     }
     return p;
   };
-  let scriptsCache;
-  const getScripts = () => scriptsCache ??= (async () => {
-    const scripts = /* @__PURE__ */ new Map();
-    const ids = (await getScenes()).map((s) => s.groupId);
-    for (let i = 0; i < ids.length; i += 64) {
-      await Promise.all(
-        ids.slice(i, i + 64).map(
-          (g) => getScript(g).then((l) => scripts.set(g, l)).catch(() => {
-          })
-        )
-      );
+  const LINE_CATS = ["main", "event", "attractive", "sudden", "etc"];
+  const shardCache = /* @__PURE__ */ new Map();
+  const getShard = (cat) => {
+    let p = shardCache.get(cat);
+    if (!p) {
+      p = storage.readText(path.join("lines", `${cat}.json`)).then((raw2) => {
+        const shard = JSON.parse(raw2);
+        const m = /* @__PURE__ */ new Map();
+        for (const [g, scene] of Object.entries(shard)) {
+          const sns = scene.sp.map(norm);
+          m.set(
+            g,
+            scene.l.map(([si, t]) => ({ s: scene.sp[si] ?? "", ns: sns[si] ?? "", t, nt: searchNorm(t) }))
+          );
+        }
+        return m;
+      }).catch(async () => {
+        const m = /* @__PURE__ */ new Map();
+        const scenes = (await getScenes()).filter((s) => (s.category ?? "etc") === cat);
+        await Promise.all(
+          scenes.map((s) => getScript(s.groupId).then((l) => m.set(s.groupId, l)).catch(() => {
+          }))
+        );
+        return m;
+      });
+      shardCache.set(cat, p);
     }
-    return scripts;
-  })();
+    return p;
+  };
+  const getScripts = async (category) => {
+    const maps2 = await Promise.all((category ? [category] : LINE_CATS).map(getShard));
+    if (maps2.length === 1) return maps2[0];
+    const all = /* @__PURE__ */ new Map();
+    for (const m of maps2) for (const [g, lines] of m) all.set(g, lines);
+    return all;
+  };
   const eventOfScene = memo3(async () => {
     const m = /* @__PURE__ */ new Map();
     for (const e of (await eventGroups()).values()) for (const g of e.scenes) m.set(g, { id: e.id, title: e.title });
@@ -21556,15 +21587,18 @@ async function createApp(storage) {
     const fam = speaker && truthy(c.req.query("family")) ? families.byName(speaker) : void 0;
     const speakers = fam ? new Set(families.names(fam).map(norm)) : void 0;
     const ns = speaker ? norm(speaker) : "";
-    const idx = new Map((await getScenes()).map((s) => [s.groupId, s]));
-    const evOf = await eventOfScene();
+    const [scenes, evOf, scripts] = await Promise.all([
+      getScenes(),
+      eventOfScene(),
+      getScripts(category)
+    ]);
+    const idx = new Map(scenes.map((s) => [s.groupId, s]));
     const pg0 = { page: page ? Number(page) : void 0, limit: limit ? Number(limit) : void 0, offset: offset ? Number(offset) : void 0 };
     const hits = [];
     let count = 0;
     const lim = pg0.limit ? Math.min(pg0.limit, 500) : pg0.page ? 50 : Infinity;
     const off = pg0.page ? (pg0.page - 1) * lim : pg0.offset ?? 0;
-    for (const [g, lines] of await getScripts()) {
-      if (category && idx.get(g)?.category !== category) continue;
+    for (const [g, lines] of scripts) {
       lines.forEach((l, i) => {
         if (speaker && !(speakers ? speakers.has(l.ns) : l.ns === ns)) return;
         if (nq && !l.nt.includes(nq)) return;
@@ -21587,12 +21621,15 @@ async function createApp(storage) {
     if (!fam) return c.json({ error: "not found" }, 404);
     const { category } = c.req.query();
     const speakers = new Set(families.names(fam).map(norm));
-    const idx = new Map((await getScenes()).map((s) => [s.groupId, s]));
-    const evOf = await eventOfScene();
+    const [scenes, evOf, scripts] = await Promise.all([
+      getScenes(),
+      eventOfScene(),
+      getScripts(category)
+    ]);
+    const idx = new Map(scenes.map((s) => [s.groupId, s]));
     const rows = [];
-    for (const [g, lines] of await getScripts()) {
-      if (category && idx.get(g)?.category !== category) continue;
-      const spoken = lines.filter((l) => speakers.has(norm(l.s))).length;
+    for (const [g, lines] of scripts) {
+      const spoken = lines.filter((l) => speakers.has(l.ns)).length;
       if (spoken) rows.push({ groupId: g, lines: spoken });
     }
     rows.sort((a, b) => b.lines - a.lines);
@@ -21626,7 +21663,7 @@ async function createApp(storage) {
     return m;
   };
   async function storyRoute() {
-    const [chapters, events, scenes] = [await mainChapters(), await eventGroups(), await getScenes()];
+    const [chapters, events, scenes] = await Promise.all([mainChapters(), eventGroups(), getScenes()]);
     const last = Math.max(-1, ...chapters.keys());
     const extra = Array.from({ length: Math.max(0, last - ROUTE_COVERAGE_CHAPTER) }, (_, i) => ({ kind: "main", chapter: ROUTE_COVERAGE_CHAPTER + 1 + i }));
     return [...STORY_ROUTE, ...extra].map((e, step) => {
@@ -22322,18 +22359,33 @@ var REVALIDATE_MS = 3e5;
 var appPromise;
 var appBuiltAt = 0;
 var dataStamp = "";
-var getApp = async (env) => {
+var stampOf = (host) => fetch(`${host}/characters.json`).then((r) => r.json()).then((j) => `${j.syncedAt}|${j.version}`).catch(() => null);
+var getApp = async (env, ctx) => {
   const host = env.DIST_HOST ?? DATA_HOST;
   const now = Date.now();
   if (appPromise && now - appBuiltAt < REVALIDATE_MS) return appPromise;
-  const stamp = await fetch(`${host}/characters.json`).then((r) => r.json()).then((j) => `${j.syncedAt}|${j.version}`).catch(() => null);
-  if (appPromise && stamp !== null && stamp === dataStamp) {
-    appBuiltAt = now;
+  if (appPromise) {
+    const check = stampOf(host).then((stamp) => {
+      appBuiltAt = Date.now();
+      if (stamp !== null && stamp !== dataStamp) {
+        dataStamp = stamp;
+        appPromise = createApp(httpStorage(host));
+      }
+    });
+    if (ctx) ctx.waitUntil(check);
+    else check.catch(() => {
+    });
     return appPromise;
   }
-  if (stamp !== null) dataStamp = stamp;
   appBuiltAt = now;
-  return appPromise = createApp(httpStorage(host));
+  appPromise = createApp(httpStorage(host));
+  const learn = stampOf(host).then((stamp) => {
+    if (stamp !== null) dataStamp = stamp;
+  });
+  if (ctx) ctx.waitUntil(learn);
+  else learn.catch(() => {
+  });
+  return appPromise;
 };
 var json = (d, status = 200) => new Response(JSON.stringify(d), {
   status,
@@ -22383,9 +22435,9 @@ var adminToken = async (request, env) => {
   credsMemo = { v: JSON.stringify(c), at: Date.now() };
   return json({ ok: true, open_id: c.open_id, expires: c.expires });
 };
-var registerUser = async (request, env) => {
+var registerUser = async (request, env, ctx) => {
   if (!env.AREA_KV) return json({ error: "KV not configured" }, 500);
-  const app = await getApp(env);
+  const app = await getApp(env, ctx);
   const body = await request.json().catch(() => null);
   const raw2 = body?.url ?? body?.blablaid;
   const openid = typeof raw2 === "string" ? intlOpenIdOf(raw2) : null;
@@ -22498,7 +22550,7 @@ var index_default = {
     }
     if (url2.pathname === "/mcp/register") {
       if (request.method !== "POST") return json({ error: "method not allowed" }, 405);
-      return registerUser(request, env);
+      return registerUser(request, env, ctx);
     }
     const um = url2.pathname.match(/^\/mcp\/u\/([A-Za-z0-9_-]+)$/);
     if (um) {
@@ -22511,7 +22563,7 @@ var index_default = {
       h.set(HDR_BLABLAID, openid);
       const creds = await getCreds(env);
       if (creds) h.set(HDR_CREDS, btoa(creds));
-      const app2 = await getApp(env);
+      const app2 = await getApp(env, ctx);
       const res2 = await app2.fetch(new Request(url2.toString(), new Request(request, { headers: h })));
       track("PASS");
       return new Response(res2.body, res2);
@@ -22547,7 +22599,7 @@ var index_default = {
       if (creds) h.set(HDR_CREDS, btoa(creds));
     }
     request = new Request(request, { headers: h });
-    const app = await getApp(env);
+    const app = await getApp(env, ctx);
     if (!isGet) {
       const denied2 = await throttled(env, request);
       if (denied2) return denied2;
