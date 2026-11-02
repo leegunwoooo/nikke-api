@@ -141,13 +141,15 @@ interface FavoriteIndexEntry {
   weaponType?: string;
 }
 
-// index files are immutable per deployment — parse once, reuse across requests
+// index files are immutable per deployment — parse once, reuse across requests.
+// a read failure must not become a permanent empty list: evict the promise and
+// propagate the error so the route returns 5xx instead of a fake empty 200
 function lazyIndex<T>(file: string): () => Promise<T[]> {
   let cached: Promise<T[]> | undefined;
   return () =>
     (cached ??= storage.readText(path.join(file))
       .then((raw) => JSON.parse(raw) as T[])
-      .catch(() => []));
+      .catch((e) => ((cached = undefined), Promise.reject(e))));
 }
 
 const getScenes = lazyIndex<SceneIndexEntry>("scenes.json");
@@ -178,18 +180,16 @@ for (const n of characters) {
   for (const co of n.costumes) costumeOwner.set(co.id, { nikke: n, costume: co });
 }
 
-async function loadDistJson<T>(file: string, fallback: T): Promise<T> {
-  try {
-    return JSON.parse(await storage.readText(path.join(file))) as T;
-  } catch {
-    return fallback;
-  }
+// dist data the route can't answer without — propagate read errors instead of
+// returning a fallback that memo() would then cache permanently
+async function loadDistJson<T>(file: string): Promise<T> {
+  return JSON.parse(await storage.readText(path.join(file))) as T;
 }
 
 const loadNameCodeMap = memo(async () => {
   const [nc, av] = await Promise.all([
-    loadDistJson<Record<string, number>>("name_code_map.json", {}),
-    loadDistJson<Record<string, { resourceId: number; costumeIndex: number }>>("avatar_map.json", {}),
+    loadDistJson<Record<string, number>>("name_code_map.json"),
+    loadDistJson<Record<string, { resourceId: number; costumeIndex: number }>>("avatar_map.json"),
   ]);
   nameCodeMap ??= nc;
   avatarMap ??= av;
@@ -217,8 +217,8 @@ const loadCubeNames = memo(async () => {
 
 const loadEquipMaps = memo(async () => {
   const [items, options] = await Promise.all([
-    loadDistJson<typeof equipItemMap>("equip_item_map.json", null),
-    loadDistJson<typeof equipOptionMap>("equip_option_map.json", null),
+    loadDistJson<NonNullable<typeof equipItemMap>>("equip_item_map.json"),
+    loadDistJson<NonNullable<typeof equipOptionMap>>("equip_option_map.json"),
   ]);
   equipItemMap ??= items;
   equipOptionMap ??= options;
@@ -227,7 +227,7 @@ const loadEquipMaps = memo(async () => {
 
 let costumeMapData: Record<string, any> | null = null;
 const getCostumeMap = memo(async () => {
-  costumeMapData ??= await loadDistJson("costume_map.json", {});
+  costumeMapData ??= await loadDistJson<Record<string, any>>("costume_map.json");
   return costumeMapData;
 });
 
@@ -266,7 +266,7 @@ const costumeRow = (tid: number, co: any, scenes: SceneIndexEntry[] = []) => {
 let stageRows: any[] | null = null;
 const getStages = memo(async () => {
   if (!stageRows) {
-    stageRows = await loadDistJson<any[]>(path.join("tables", "stage_list.json"), []);
+    stageRows = await loadDistJson<any[]>(path.join("tables", "stage_list.json"));
   }
   return stageRows;
 });
@@ -1121,7 +1121,6 @@ const loadEquipTables = memo(async () => {
       ["ko", "en", "ja"].map(async (l) => {
         const t = await loadDistJson<EquipTableRecord[] | { records?: EquipTableRecord[] }>(
           `tables/ItemEquipTable_${l}.json`,
-          [],
         );
         return Array.isArray(t) ? t : (t.records ?? []);
       }),
