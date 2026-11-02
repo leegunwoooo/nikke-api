@@ -1,0 +1,3552 @@
+{
+  "groupId": "d_favorite_sugar",
+  "type": "favorite",
+  "name": "파트너",
+  "nikke": "슈가",
+  "sourceVideo": "https://youtu.be/cQoTpjl3XjI",
+  "lines": [
+    {
+      "id": "d_favorite_sugar_1",
+      "text": "지잉-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_2",
+      "text": "왔어?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_3",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "그래.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_4",
+      "text": "슈가가 들어와 들고 다니는 샷건 두 자루를 대충 소파에 던진 뒤,",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_5",
+      "text": "다가와 몸을 숙여 내 어깨를 짚고, 입을 맞춘다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_6",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "커피 마셨나?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_7",
+      "text": "좀 전에.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_8",
+      "text": "몸을 일으켜 커피 두 잔을 새로 내린다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_9",
+      "text": "의뢰는?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_10",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "뭐, 평소대로였어.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_11",
+      "text": "슈가의 몸 곳곳에는 흙먼지가 묻어 있다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_12",
+      "text": "힘들었나 보구만, 뭘.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_13",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "그야 파트너가 없었으니까.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_14",
+      "text": "커피를 한 모금 홀짝인 슈가의 몸에서 긴장이 풀린다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_15",
+      "text": "미안. 너무 바빴어서.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_16",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "이젠 괜찮나?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_17",
+      "text": "응. 또 다른 의뢰 있어?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_18",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "당장은 아니고, 며칠 뒤에.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_19",
+      "text": "그건 같이 가자. 어딘데?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_20",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "아우터 림.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_21",
+      "text": "요새 그쪽 의뢰가 많네.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_22",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "격동의 시기니까.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_23",
+      "text": "어느새 커피를 다 마신 슈가가 일어난다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_24",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "드라이브나 가지, 파트너.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_25",
+      "text": "슈가가 헬멧을 집어들어 내게 던진다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_26",
+      "text": "그걸 받아서 옆구리에 끼우고, 서랍에서 장갑을 꺼낸다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_27",
+      "text": "야간 드라이브는 오랜만인데?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_28",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "그러고 보니… 민원이 들어온 다음부턴 안 했군.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_29",
+      "text": "그걸 민원이라고 해야 하나…. 온갖 저주가 담긴 편지였잖아.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_30",
+      "text": "이 세상이 판타지였다면 틀림없이 저주받아서 죽었을걸.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_31",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "이 세상이 판타지였다면 나는 블랙 타이푼을 탄 기사였겠지.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_32",
+      "text": "무기는?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_33",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "흠….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_34",
+      "text": "슈가가 고민하다가 진지하게 말한다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_35",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "…배틀액스.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_36",
+      "text": "어울리는 것 같기도 하고 아닌 것 같기도 하고…",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_37",
+      "text": "…그런데.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_38",
+      "text": "배틀액스 하니, 하나가 떠올랐다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_39",
+      "text": "그때 그 키링, 달고 다녀?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_40",
+      "text": "잘그락.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_41",
+      "text": "슈가가 열쇠고리를 꺼낸다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_42",
+      "text": "블랙 타이푼의 열쇠와, 원격 리모콘.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_43",
+      "text": "그리고 작은 도끼 모양의 키링이 달려 있다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_44",
+      "text": "…잠깐.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_45",
+      "text": "도끼 모양 키링에는 붉은 얼룩이 묻어 있다….",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_46",
+      "text": "…아니지?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_47",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "진정한 해결사는 도구를 가리지 않는 법이다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_48",
+      "text": "…….",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_49",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "농담이야. 메이드 카페에서 케첩이 묻었나 보군.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_50",
+      "text": "슈가가 키링을 내려다본다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_51",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "[귀 달린 삼촌] 펍이었던가.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_52",
+      "text": "[키다리 삼촌]이겠지.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_53",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "아무튼간에.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_54",
+      "text": "그때 슈가가 인질로 잡히는 바람에 고생 좀 했지 아마.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_55",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "작전이었어.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_56",
+      "text": "혼자만 알고 있는 작전이어서 문제였지.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_57",
+      "text": "슈가가 잠시, 열쇠고리를 내려다본다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_58",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "오늘은 파트너가 몰아.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_59",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "난 뒤에 탈게.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_60",
+      "text": "날아온 열쇠고리를 받는다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_61",
+      "text": "각자 안 타고?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_62",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "오늘은 그런 기분이야.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_63",
+      "text": "슈가가 살짝 옆을 보며, 천천히 눈을 두 번 깜빡인다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_64",
+      "text": "변함없이 쿨한 말투지만, 지금의 나는 알고 있다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_65",
+      "text": "…뭐, 알았어.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_66",
+      "text": "그게 슈가 본인도 모르는, 딴청을 피울 때의 버릇이라는 걸.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_67",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "[레드 타이푼]은 수리 중이야.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_68",
+      "text": "응? 왜?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_69",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "방금 전에 타고 갔다 왔거든.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_70",
+      "text": "그럼, 뭐.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_71",
+      "text": "열쇠고리에 달린 리모콘을 누른다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_72",
+      "text": "부아아아아아앙-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_73",
+      "text": "멀리서부터 익숙한 배기음이 들린다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_74",
+      "text": "Mk.1이네.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_75",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "클래식이지.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_76",
+      "text": "며칠 뒤.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_77",
+      "text": "준비를 마치고, 방주에서 슈가와 만났다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_78",
+      "text": "전처럼 제압탄이 아니라 소이탄 넣어둔 거 아니지?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_79",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "그건 불운한 사고였어.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_80",
+      "text": "그래. 머리카락이랑 눈썹이 싹 타 버린 그 친구한테는 정말 불운했지.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_81",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "전위적인 스타일이라고 꽤 마음에 들어 하던데.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_82",
+      "text": "블랙 타이푼에 실린 더플백 지퍼를 열어, 가득 담긴 총기와 탄약을 대충 살펴본다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_83",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "이번에 파트너는 비무장이야.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_84",
+      "text": "아, 또?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_85",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "그쪽 대장이 조건을 걸었어.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_86",
+      "text": "근데 왜 하필 나야? 슈가가 아니라.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_87",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "나는 무장이든 비무장이든 똑같으니까.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_88",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "몇 달 전 의뢰 이후엔 굳이 비무장으로 나오라고 안 하더군.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_89",
+      "text": "그때가 맨손으로 다 때려눕혔던 때던가?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_90",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "벽돌 정도는 썼지.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_91",
+      "text": "그랬나? 같이 한 의뢰가 많으니까 헷갈리네.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_92",
+      "text": "내 권총을 더플백에 넣고 지퍼를 잠근다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_93",
+      "text": "슈가가 블랙 타이푼의 시동을 걸자, 열쇠고리에 매달린 키링이 잘그락거린다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_94",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "준비됐어?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_95",
+      "text": "헬멧의 쉴드를 내린다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_96",
+      "text": "물론이지.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_97",
+      "text": "잠시 후, 아우터 림 모처.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_98",
+      "text": "허름한 건물들 사이의 공터에서, 험상궂은 악당들과 우리 사이에 긴장감이 흐른다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_99",
+      "speakerName": "건들거리는 악당",
+      "text": "아, 그렇게 나오면 우리도 곤란하지~",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_100",
+      "text": "애초에 우리가 받아들일 수 없는 조건을 들이대는 악당에게서 눈을 돌린다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_101",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "…….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_102",
+      "text": "슈가가 나를 바라본다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_103",
+      "text": "눈짓을 하는 것도, 입을 움직이는 것도 아니다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_104",
+      "text": "하지만…",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_105",
+      "text": "…….",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_106",
+      "text": "…그것으로, 충분하다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_107",
+      "speakerName": "건들거리는 악당",
+      "text": "크악?!",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_108",
+      "text": "슈가가 번개같이 샷건을 뽑아 대화하던 악당에게 쏜다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_109",
+      "text": "그와 동시에, 몸을 굴려 옆 엄폐물로 들어간다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_110",
+      "speakerName": "안대를 쓴 악당",
+      "text": "둘 다 죽여 버려!",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_111",
+      "text": "타타타타탕!",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_112",
+      "text": "순식간에 총격전이 벌어진다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_113",
+      "text": "비무장 상태로 왔기에, 나에겐 권총 한 자루조차 없다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_114",
+      "text": "엄폐물 뒤에 몸을 숨긴 채, 총성 사이로 슈가를 부른다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_115",
+      "text": "슈가!!",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_116",
+      "speakerName": "안대를 쓴 악당",
+      "text": "크악!",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_117",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "왜.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_118",
+      "text": "총 줘!",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_119",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "블랙 타이푼에 있잖아.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_120",
+      "text": "퍼억- 퍼억-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_121",
+      "text": "내가 몸을 숨긴 엄폐물 뒤에 탄환이 마구 박힌다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_122",
+      "text": "쟤네 실탄 쏘잖아!",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_123",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "맞으면 죽나?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_124",
+      "text": "당연히 죽…!",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_125",
+      "text": "…진 않을지도 모르지만 굉장히 아플걸!",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_126",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "흠. 파트너가 아픈 건 곤란하지.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_127",
+      "text": "슈가가 쉴 새 없이 사격과 재장전을 반복하며, 세워둔 블랙 타이푼 쪽으로 걸어간다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_128",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "던진다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_129",
+      "text": "정확히 날아든 총을 받아든… 아니.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_130",
+      "text": "…이건 [슈퍼 스위티]잖아!",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_131",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "그렇지.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_132",
+      "text": "난 이거 못 쏴! 반동이 너무 세!",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_133",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "나는 파트너를 그렇게 나약하게 키운 적 없어.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_134",
+      "text": "나약하고 자시고 팔 부러진다고!",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_135",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "어쩔 수 없군. 던져.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_136",
+      "text": "슈가가 사격 중이던 자신의 샷건, 웜 아이스를 내 쪽으로 던진다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_137",
+      "text": "웜 아이스와 슈퍼 스위티가 공중에서 교차한다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_138",
+      "text": "철컥.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_139",
+      "text": "웜 아이스를 받아들고, 펌프를 당겨 빈 셀을 배출한다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_140",
+      "text": "…한바탕 해볼까.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_141",
+      "text": "엄폐물 옆으로 살짝 몸을 내밀고, 방아쇠를 당긴다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_142",
+      "text": "타앙!",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_143",
+      "speakerName": "비실비실한 악당",
+      "text": "크아악!",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_144",
+      "speakerName": "악을 쓰는 악당",
+      "text": "놈도 총을 들었다!",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_145",
+      "text": "적들이 당황한 사이 다음 엄폐물로 달리다 슬라이딩.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_146",
+      "text": "미끄러지며, 샷건을 겨눈다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_147",
+      "text": "타앙! 철컥. 타앙! 철컥.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_148",
+      "text": "슈가의 샷건은 자주 다뤄봤다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_149",
+      "text": "반동이 강하긴 하지만, 못 버틸 정도는 아니다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_150",
+      "text": "그리고, 슈가의 손에 들어간 [슈퍼 스위티]는….",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_151",
+      "text": "콰아아앙!",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_152",
+      "speakerName": "악을 쓰는 악당",
+      "text": "뭐야 저건?!",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_153",
+      "speakerName": "악을 쓰는 악당",
+      "text": "저게 대포야 샷건이야!",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_154",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "샷건이다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_155",
+      "text": "콰아아앙!",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_156",
+      "speakerName": "악을 쓰는 악당",
+      "text": "이런 미친!",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_157",
+      "text": "아무리 슈가라도, [슈퍼 스위티]로 악당을 직접 노리진 않는다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_158",
+      "text": "그 대신, 주변의 엄폐물이 흔적도 없이 날아가며 허름한 뒷골목이 점점 허허벌판이 되어간다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_159",
+      "text": "탕! 탕!",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_160",
+      "text": "그리고 노출된 악당에게, 슈가의 또 다른 애총인 더블배럴 샷건이 불을 뿜는다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_161",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "장전 좀.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_162",
+      "text": "슈가가 던진 샷건을 받아, 제압탄이 든 셀 두 개를 순식간에 삽입해 재장전을 마친-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_163",
+      "speakerName": "악을 쓰는 악당",
+      "text": "죽어어어어엇!",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_164",
+      "text": "타앙!",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_165",
+      "text": "…하나를 새로 넣고, 다시 슈가에게 던진다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_166",
+      "text": "타앙! 타앙!",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_167",
+      "text": "슈가가 엄호하는 사이, 웜 아이스의 탄창에 셀을 채워 넣으며 주변을 살핀다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_168",
+      "text": "뭐… 금방 정리되겠네.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_169",
+      "text": "어차피 익숙한 장면과, 익숙한 일.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_170",
+      "text": "기계적으로 슈가와 함께 적들을 쓰러뜨렸다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_171",
+      "text": "잠시 후.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_172",
+      "text": "현장은 순식간에 정리되고, 신음하는 악당들을 묶어둔다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_173",
+      "text": "부스럭.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_174",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "자.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_175",
+      "text": "슈가가 막대 과자 하나를 꺼내 입에 물고, 내게도 건넨다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_176",
+      "text": "이건 뭔데?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_177",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "한대 피워야 할 분위기라서.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_178",
+      "text": "그건 그렇네.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_179",
+      "text": "막대 과자를 받아 입에 물고 흙먼지가 묻은 머리와 옷을 대충 털어낸다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_180",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "이번에도 이걸로 끝인가.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_181",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "생각보다 간단했….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_182",
+      "text": "저벅. 저벅.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_183",
+      "text": "그때, 누군가 천천히 다가온다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_184",
+      "text": "저벅. 저벅.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_185",
+      "speakerName": "악당 두목",
+      "text": "이런. 이런. 이-",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_186",
+      "text": "타앙-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_187",
+      "text": "털썩.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_188",
+      "text": "남자는 비명도 지르지 못하고 고꾸라진다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_189",
+      "text": "[이게 누구신가. 카페 스위티의 슈가잖아.] 까지 다 들어주지 그랬어.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_190",
+      "text": "막대 과자를 우물거리며 더플백을 정리한다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_191",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "그럴 걸 그랬나?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_192",
+      "text": "그래. 이번에 들으면 딱 10번째였는데.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_193",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "기념일 하나를 날려먹었군.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_194",
+      "text": "다음에는 까먹지…",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_195",
+      "text": "그 순간.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_196",
+      "text": "타앙-!",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_197",
+      "text": "!!",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_198",
+      "text": "쓰러졌던 남자가 상체를 일으키고, 총구에서 연기가 피어오르는 권총을 겨누고 있는 것이 보인다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_199",
+      "text": "빠르게 몸 상태를 확인한다. 총상은 없다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_200",
+      "text": "그 대신.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_201",
+      "text": "털썩.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_202",
+      "text": "슈가…!",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_203",
+      "text": "내 옆에 있던 슈가가 바닥에 쓰러진다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_204",
+      "speakerName": "악당 두목",
+      "text": "휴우. 돈 값을 하는군.",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_205",
+      "text": "남자가 몸을 일으키는 것과 동시에,",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_206",
+      "text": "어디서 나온 건지 다른 악당들이 나타나 우리를 둘러싸고 총을 겨눈다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_207",
+      "text": "어떻게 일어났지?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_208",
+      "speakerName": "악당 두목",
+      "text": "하-하하하! 그건 말이다!",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_209",
+      "text": "남자가 자랑스럽게 가슴을 내민다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_210",
+      "speakerName": "악당 두목",
+      "text": "사는 데에 무려 50일이나 걸린 이 방탄복 때문이지!",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_211",
+      "speakerName": "악당 두목",
+      "text": "군용에는 못 미치지만, 너희가 쓰는 제압탄 정도는 무리 없이 버틸 수 있지!",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_212",
+      "speakerName": "악당 두목",
+      "text": "그리고 이 총!",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_213",
+      "text": "남자가 방금 슈가를 쏜 총을 들어보인다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_214",
+      "speakerName": "악당 두목",
+      "text": "이 특수 마비탄과 전용 총기를 사는 데에는, 무려!",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_215",
+      "speakerName": "악당 두목",
+      "text": "무려 우리 조직 전체가 200일간 굴러야 했다!",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_216",
+      "text": "어. 그, 그래. 친절한 설명 고마워.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_217",
+      "text": "그러는 와중에도, 주변을 둘러싼 악당들은 말없이 총구를 겨누고 있다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_218",
+      "text": "조금 전 우리에게 쓰러진 이들과는 확실히 분위기가 다르다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_219",
+      "text": "…나 안 죽이나?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_220",
+      "speakerName": "악당 두목",
+      "text": "내가 너를 왜 죽이겠어?",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_221",
+      "text": "두목이 천천히 걸어온다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_222",
+      "text": "손을 들고, 천천히 물러난다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_223",
+      "speakerName": "악당 두목",
+      "text": "요구할 게 있는데 말이야.",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_224",
+      "text": "그렇다는 건, 지금은 날 풀어줄 거고?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_225",
+      "speakerName": "악당 두목",
+      "text": "그렇지!",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_226",
+      "text": "나는 내 친구들 데려와서 너네 다 쓸어버릴 건데?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_227",
+      "speakerName": "악당 두목",
+      "text": "그럼, 뭐.",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_228",
+      "text": "남자가 정신을 잃고 쓰러진 슈가의 얼굴을 툭툭 찬다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_229",
+      "speakerName": "악당 두목",
+      "text": "네 소중한 파트너가 죽는 거지.",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_230",
+      "text": "남자가 만족스럽게 웃는다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_231",
+      "speakerName": "악당 두목",
+      "text": "호오. 이제야 좀 반응을 보이는군.",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_232",
+      "speakerName": "악당 두목",
+      "text": "본격적으로 대화할 마음이 드나?",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_233",
+      "text": "…원하는 게 뭐야.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_234",
+      "speakerName": "악당 두목",
+      "text": "뻔하지.",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_235",
+      "speakerName": "악당 두목",
+      "text": "물자. 그것도 아주 많은.",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_236",
+      "text": "돈이라면 얼마든지… 응?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_237",
+      "speakerName": "악당 두목",
+      "text": "돈은 필요 없다!",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_238",
+      "speakerName": "악당 두목",
+      "text": "내가 필요한 건 오직 물자뿐!",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_239",
+      "text": "그… 일단 한 번 물어보자.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_240",
+      "text": "물자는 왜?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_241",
+      "speakerName": "악당 두목",
+      "text": "그야 지상에 낙원을 만들어야 하니까!",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_242",
+      "speakerName": "악당 두목",
+      "text": "방주는 썩어빠졌다!",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_243",
+      "speakerName": "악당 두목",
+      "text": "나는 지상으로 올라가서, 지상 낙원을 만들 거다!",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_244",
+      "text": "…예?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_245",
+      "speakerName": "악당 두목",
+      "text": "지금까지 성실하게 일을 하면서 준비를 해왔다.",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_246",
+      "speakerName": "악당 두목",
+      "text": "새벽 4시에 기상!",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_247",
+      "speakerName": "악당 두목",
+      "text": "아침 식사는 중요하다! 간단히라도 챙겨 먹은 뒤 바로 일과를 시작한다!",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_248",
+      "speakerName": "악당 두목",
+      "text": "돈이 되는 거라면 무엇이든지 한다! 우리 조직 전체가 한마음 한뜻으로!",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_249",
+      "speakerName": "악당 두목",
+      "text": "그리고 자정에 수면 후 반복!",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_250",
+      "speakerName": "악당 두목",
+      "text": "오직 단 하나의 목표, 지상 낙원을 위해!",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_251",
+      "text": "남자가 열변을 토하자, 주변의 악당들이 동조한다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_252",
+      "speakerName": "악당 두목",
+      "text": "그리고 거기서… 나는 신세계의 신이 된다!",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_253",
+      "speakerName": "악당 두목",
+      "text": "하-하하하하하!!!",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_254",
+      "text": "세상 호탕하게 웃는 악당을 보며, 그냥 두면 해결되지 않을까 하고 잠시 고민하던 중.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_255",
+      "text": "정신을 차린 슈가가 눈을 뜬다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_256",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "…음.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_257",
+      "speakerName": "악당 두목",
+      "text": "어이쿠. 일어나셨나.",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_258",
+      "speakerName": "악당 두목",
+      "text": "섣불리 움직이지 않는 게 좋을 거야. 머리가 날아갈 거거든.",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_259",
+      "speakerName": "악당 두목",
+      "text": "네가 아니라, 저기 있는 네 소중한 [파트너]의 머리가.",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_260",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "…….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_261",
+      "text": "몸을 일으키려던 슈가가 힘을 뺀다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_262",
+      "speakerName": "악당 두목",
+      "text": "그렇지, 그렇지. 아주 소~중한 파트너가 다치면 안 되잖아.",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_263",
+      "speakerName": "악당 두목",
+      "text": "하-하하하! 그동안 성실하게 너희를 연구한 보람이 있었어!",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_264",
+      "text": "남자가 USB 하나를 던진다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_265",
+      "speakerName": "악당 두목",
+      "text": "뭐, 알아들었으면 3일 후까지.",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_266",
+      "speakerName": "악당 두목",
+      "text": "그 좌표로 목록에 있는 물자를 가져와라!",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_267",
+      "speakerName": "악당 두목",
+      "text": "물론 안 가져와도 상관없지만 그러면 네 파트너가 아주 보기 좋은 꼴이 되겠지!",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_268",
+      "speakerName": "악당 두목",
+      "text": "하-하하하하하!!!",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_269",
+      "speakerName": "악당 두목",
+      "text": "그렇지! 저 바이크도 저 녀석에게 소중한 물건이다! 가져가! 총도 같이!",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_270",
+      "text": "호탕한 웃음을 남기고 악당들이 사라진 뒤, 목록을 살펴본다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_271",
+      "text": "아주 성실하고 보기 좋게 필요 물자 목록과 우선순위까지 정리되어 있다….",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_272",
+      "text": "쓸데없이 성실한 녀석들이네… 응?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_273",
+      "text": "슈가가 쓰러져 있던 자리에, 무언가가 보인다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_274",
+      "text": "이건….",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_275",
+      "text": "잘그락.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_276",
+      "text": "블랙 타이푼의 열쇠를 집어든다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_277",
+      "text": "…내가 선물해 준, 열쇠고리에 달린.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_278",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "슈가가 인질로 잡혔다고?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_279",
+      "text": "응. 도와줘.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_280",
+      "text": "내 말에, 밀크와 프림은 예상대로의 반응을 보여주었다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_281",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "휴. 드디어 그 꼬라지 안 보겠네.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_282",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "슈가 커피. 메뉴. 내림.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_283",
+      "text": "…….",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_284",
+      "text": "농담이 아냐. 진짜로 잡혀갔어.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_285",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "…뭐 어쩌다가 그랬는데?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_286",
+      "text": "그게 말이지….",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_287",
+      "text": "밀크와 프림에게… 프림은 다시 자는구나.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_288",
+      "text": "…아무튼, 사정을 설명했다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_289",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "아, 걔넨가보네. 그 겁나 성실하게 일한다는 애들.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_290",
+      "text": "응. 지상 올라가서 신세계의 신이 된다더라.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_291",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "…그냥 놔두면 되지 않아?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_292",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "슈가 짜식도 어차피 며칠 있으면 알아서 기어들어올걸.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_293",
+      "text": "…그래도 그냥 둘 수는 없어.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_294",
+      "text": "[파트너]니까.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_295",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "…….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_296",
+      "text": "한동안 말이 없던 밀크가 프림을 걷어찬다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_297",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "짜샤! 좀 일어나 봐, 그만 쳐자고!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_298",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "컥.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_299",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "너 걔네들 정보 있어?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_300",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "없음.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_301",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "어딨는지는 알아?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_302",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "모름.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_303",
+      "text": "밀크가 눈을 질끈 감는다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_304",
+      "text": "위치는 특정돼.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_305",
+      "text": "남자가 줬던 USB를 꺼낸다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_306",
+      "text": "여기 좌표가 지상 좌표야.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_307",
+      "text": "아우터 림하고 연결된 엘리베이터랑 가까워.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_308",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "함정.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_309",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "함정[도] 있겠지.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_310",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "그 성실하게 범죄를 저지르는 놈들이, 그렇게 비싼 장비를 투입했잖아.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_311",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "형씨랑 슈가를 이용해서 물자를 얻어내려는 계획은 진짜야.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_312",
+      "text": "밀크가 삐딱하게 나를 본다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_313",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "그래서, 뭐 작전은 있어?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_314",
+      "text": "우리가 돌입하면, 슈가도 준비하고 있다가 호응할 거야.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_315",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "그걸 어떻게 알아?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_316",
+      "text": "알 수 있어.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_317",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "쳇. 같이 의뢰 좀 뛰었다 이거야?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_318",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "우리보다. 훨씬. 많이. 함.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_319",
+      "text": "잘그락.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_320",
+      "text": "잡혀갈 때, 이 열쇠고리를 떨어뜨려 뒀더라고.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_321",
+      "text": "슈가가 일부러 인질로 잡혔던 의뢰가 끝나고, 내가 사줬던 거야.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_322",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "…….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_323",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "오. 낭만적.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_324",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "조, 조금 그런 느낌이 없지는 않네.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_325",
+      "text": "아무튼. 도와줄 거지?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_326",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "하아… 뭐, 어쩔 수 없지.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_327",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "짜증나도 일단 같은 스쿼드….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_328",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "쿨….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_329",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "네가 리더잖아 이 짜샤!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_330",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "그러고 보니 좀 전부터 나만 말하네!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_331",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "컥.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_332",
+      "text": "밀크가 프림을 강제로 끌어낸다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_333",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "후딱 가자. 끝내고 쉬게.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_334",
+      "text": "응. 아우터 림 쪽 말고, 정규 엘리베이터로 올라가자.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_335",
+      "text": "내가 안내할게.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_336",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "귀찮. 짜증.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_337",
+      "text": "그렇게 도착한 약속 장소는.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_338",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "…형씨.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_339",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "여기서 뭐, 전쟁이라도 난 것 같은데?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_340",
+      "text": "…….",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_341",
+      "text": "박살난 건물 잔해로 가득했다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_342",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "슈퍼. 스위티.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_343",
+      "text": "자려고 누웠던 프림이 바닥 한켠을 가리킨다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_344",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "탄흔.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_345",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "그새를 못 참고 아주 박살을 냈구만.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_346",
+      "text": "…잠깐.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_347",
+      "text": "몸을 낮추고 앞을 살핀다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_348",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "뭐야. 사람들인데?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_349",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "다 묶여있어. 20명 정도 되네.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_350",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "얼굴. 앎.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_351",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "주. 126시간. 패밀리.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_352",
+      "text": "그런 이름이었구나…",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_353",
+      "text": "그 사이, 밀크가 손발이 묶여 있는 남자 중 하나에게 다가갔다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_354",
+      "speakerName": "PTSD에 시달리는 악당",
+      "text": "커피는슈가커피커피는슈가커피커피는슈가커피커피는슈가커피커피는….",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_355",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "뭐 세뇌된 거야 얘는?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_356",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "야, 짜샤. 일어나봐.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_357",
+      "text": "밀크가 남자를 툭툭 찬다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_358",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "여기서 뭔 일 있었….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_359",
+      "speakerName": "PTSD에 시달리는 악당",
+      "text": "히이이이익!",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_360",
+      "speakerName": "PTSD에 시달리는 악당",
+      "text": "커, 커피 냄새가 난다아아아아아아…!",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_361",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "…….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_362",
+      "text": "…….",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_363",
+      "text": "다른 남자들도 상태는 별반 다르지 않다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_364",
+      "speakerName": "???",
+      "text": "잠시, 괜찮은가?",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_365",
+      "text": "폐허에 걸터앉아 우리에게 말을 건 남자는.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_366",
+      "text": "묶인 손으로 돌멩이를 들고, 마치 커피를 마시듯 입가에 기울이고 있다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_367",
+      "speakerName": "이상한 악당",
+      "text": "아. 자네들도 슈가 커피 한 잔 할 텐가?",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_368",
+      "speakerName": "이상한 악당",
+      "text": "향이 아주 좋다네.",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_369",
+      "text": "…….",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_370",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "…….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_371",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "…….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_372",
+      "text": "남자는 제멋대로 이야기를 시작했다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_373",
+      "speakerName": "이상한 악당",
+      "text": "우리는 선발대였다네.",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_374",
+      "speakerName": "이상한 악당",
+      "text": "위대한 스승 슈가 님을 모시고 먼저 올라왔다가.",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_375",
+      "speakerName": "이상한 악당",
+      "text": "참변. 아, 아니.",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_376",
+      "speakerName": "이상한 악당",
+      "text": "가르침을 받았지.",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_377",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "그래서 지금 슈가는 어디 있는데?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_378",
+      "speakerName": "이상한 악당",
+      "text": "뒤따라 올라온 우리 본대와 교전… 아니.",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_379",
+      "speakerName": "이상한 악당",
+      "text": "가르침을 내리시는 중이라네.",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_380",
+      "speakerName": "이상한 악당",
+      "text": "얼마 안 됐어. 한 20분 정도 되었나….",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_381",
+      "text": "남자가 건물 너머를 가리킨다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_382",
+      "text": "귀를 기울여보니 희미하지만, 총성이 들려온다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_383",
+      "text": "…가자.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_384",
+      "text": "밀크, 프림과 함께 빠르게 걸음을 옮겼다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_385",
+      "text": "탕! 타타탕!",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_386",
+      "speakerName": "악을 쓰는 악당",
+      "text": "죽여! 그냥 죽여!",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_387",
+      "speakerName": "악당 두목",
+      "text": "죽이면 안 돼! 물자를 받아야 한다!",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_388",
+      "speakerName": "악을 쓰는 악당",
+      "text": "다 죽게 생겼잖습니까, 두목!",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_389",
+      "speakerName": "악을 쓰는 악당",
+      "text": "다시 성실하게 일해서 벌죠!",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_390",
+      "speakerName": "악당 두목",
+      "text": "크윽…!",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_391",
+      "text": "한창 전투가 벌어지는 곳을, 폐허에 몸을 숨기고 살펴본다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_392",
+      "text": "슈가는….",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_393",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "…….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_394",
+      "text": "묵묵히, 노획한 총기로 악당들의 팔다리를 노려 쓰러뜨리고 있다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_395",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "수가 좀 많은데…",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_396",
+      "text": "…내가 준비한 게 있어.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_397",
+      "text": "잘그락.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_398",
+      "text": "품 속에서 열쇠고리를 꺼낸다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_399",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "뭐야. 열쇠?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_400",
+      "text": "응. 블랙 타이푼 열쇠야.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_401",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "?? 블랙 타이푼은 지금 슈가랑 있잖아.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_402",
+      "text": "Mk.1은 그렇지.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_403",
+      "text": "리모컨 버튼을 누르고, 품에서 선글라스를 꺼내 쓴다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_404",
+      "text": "부아아아아아앙-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_405",
+      "text": "우리가 올라온 엘리베이터 쪽에서부터 배기음이 들려오고…",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_406",
+      "speakerName": "악당 두목",
+      "text": "뭐, 뭐지?!",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_407",
+      "text": "곧, 바이크가 날아 오른다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_408",
+      "text": "악당들의 시선이 집중된다. 당연하다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_409",
+      "text": "폭발적인 배기음을 울리며 하늘 높이 뛰어오른 눈부신 흰색 바이크를 바라보지 않을 수 없다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_410",
+      "text": "그리고 그 순간.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_411",
+      "text": "번-쩍.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_412",
+      "text": "태양과도 같은 섬광이 블랙 타이푼… 아니,",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_413",
+      "text": "블랙 타이푼 Mk.8.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_414",
+      "text": "a.k.a. [화이트 타이푼]에서 뿜어져 나왔다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_415",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "으아아악!! 내 눈!!!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_416",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "눈. 부심.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_417",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "잠. 깸.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_418",
+      "text": "선글라스를 벗은 뒤 슈가의 샷건, 웜 아이스를 꺼내든다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_419",
+      "text": "악당들은 당연히, 눈을 부여잡고 바닥을 구르고 있다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_420",
+      "text": "철컥.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_421",
+      "text": "그럼 가자. 동료를 구하려.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_422",
+      "speaker": "milk",
+      "speakerName": "밀크",
+      "text": "아니 씨, 앞이 안 보인다고 이 짜샤!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/mn-24/ez-58/a9472edc3aa3bfab46898c208d0b8f26.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_423",
+      "speaker": "frima",
+      "speakerName": "프림",
+      "text": "다시. 잠.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rt-52/kg-85/75cd454109aa4e98bba1ce0c26354234.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_424",
+      "text": "전투는 싱겁게 끝났다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_425",
+      "text": "악당들은 이미 전의를 상실한 상태였… 다기보단, 앞을 보지 못하는 상태였고.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_426",
+      "text": "포박하는 우리에게 조금도 저항하지 못했다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_427",
+      "text": "저벅. 저벅.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_428",
+      "text": "밀크와 프림은 포박한 악당들을 끌고 먼저 돌아갔다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_429",
+      "text": "슈가랑 놀더니 완전히 슈가 다 됐네, 라는.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_430",
+      "text": "…뭔가 찜찜한 감상을 남기고.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_431",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "늦었군. 파트너.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_432",
+      "text": "건물 잔해에 걸터앉은 슈가의 옆에 털썩 앉는다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_433",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "조금만 더 있었어도 혼자 다 쓸어버렸을 텐데.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_434",
+      "text": "그런 것 치곤 고생 좀 했나 본데?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_435",
+      "text": "슈가의 온몸은 자잘한 상처와 흙먼지투성이다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_436",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "이번엔 대니케용 탄을 쓰더라고.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_437",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "성실하게 모아놨대.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_438",
+      "text": "대체 얼마나 성실한 거야…",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_439",
+      "text": "자. 놓고 간 거.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_440",
+      "text": "열쇠고리를 슈가에게 던진다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_441",
+      "text": "다음에 또 잃어버리면 알아서 해.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_442",
+      "text": "열쇠고리를 받아든 슈가가 피식 웃는다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_443",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "또 기념할만한 날이 됐군.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_444",
+      "text": "두 번째로 인질이 됐다가 구해진 날?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_445",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "두 번째로 [일부러] 인질이 됐다가 구해진 날이다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_446",
+      "text": "슈가의 말에, 이번엔 내가 피식 웃는다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_447",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "…이건?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_448",
+      "text": "슈가가 열쇠고리를 본다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_449",
+      "text": "도끼 모양 키링 말고도, 탄두가 붉게 칠해진 권총탄이 꿰어져 매달려 있다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_450",
+      "text": "뭐 있을 때마다 하나씩 선물하는 것도 나쁘지 않은 것 같아서.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_451",
+      "text": "슈가를 기절시킨 특제 마비탄이야. 두목한테 압수했어.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_452",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "…….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_453",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "뭐, 한 번씩 이렇게 인질이 되는 것도 나쁘지 않겠네.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_454",
+      "text": "두 번만 인질 되면 근처가 다 평지가 되겠는데.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_455",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "그럼 빨리 구하러 와.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_456",
+      "text": "슈가가 열쇠고리를 꼭 쥔다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_457",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "…….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_458",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "앞으로… 아주 커다란 열쇠고리가 필요하겠군.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_459",
+      "text": "피식 웃으며 슈가를 안아든다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_460",
+      "text": "저벅. 저벅.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_461",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "…피곤하군.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_462",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "이대로라면 돌아가서 짐승이 된 파트너에게,",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_463",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "아무런 저항도 하지 못하고, 입술 말고도 전부 허락하고 말겠어.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_464",
+      "text": "내가 짐승이 된다는 전제 하에 이야기가 되고 있는데.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_465",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "하드보일드한 여자가 약해진 모습은 섹시한 법이니까.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_466",
+      "text": "부정은 못 하겠네.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_467",
+      "text": "저벅. 저벅.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_468",
+      "text": "천천히 걸어, 엘리베이터 쪽으로 향한다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_469",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "이봐, 파트너.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_470",
+      "text": "응.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_471",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "키스할까?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_472",
+      "text": "좋은데, 자세가 안 나와.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_473",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "별 걱정을 다 하는군.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_474",
+      "text": "슈가가 내게 안긴 채 살짝 상체를 들어 입을 맞춘다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_475",
+      "text": "입가에 커피 향이 감돈다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_476",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "…어느새 오래되었군.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_477",
+      "text": "그러게. 팔자에도 없는 해결사 일을 이렇게 오래 할 줄은 몰랐어.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_478",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "이제는 파트너도 꽤 그림이 나와.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_479",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "말하지 않아도 비밀 작전에 맞춰줄 정도니까.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_480",
+      "text": "알았어, 알았어.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_481",
+      "text": "다음에 또 비밀 작전 있으면 이번보다 먼저 구해줄게.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_482",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "…소중한 파트너니까?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_483",
+      "text": "소중한 파트너니까.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_484",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "…….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_485",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "…그게 전부야?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_486",
+      "text": "…….",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_487",
+      "text": "말없이 슈가를 내려다본다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_488",
+      "text": "슈가도 나를 본다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_489",
+      "text": "눈짓을 하는 것도, 입을 움직이는 것도 아니다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_490",
+      "text": "하지만…",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_491",
+      "text": "…슈가.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_492",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "왜, 파트너.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_493",
+      "text": "키스할까?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_494",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "…….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_495",
+      "text": "슈가의 시선이 살짝 옆으로 향한다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_496",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "…지금은 별로 안 내키는데. 다시 몸 일으키기 힘들어.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_497",
+      "text": "그리고 천천히, 눈이 두 번 깜빡인다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_498",
+      "text": "그래? 그럼 내가 숙이면?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_499",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "…….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_500",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "그건… 나쁘지 않군.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_501",
+      "text": "입 안에 달콤한 슈가 커피의 맛이 감겨든다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_502",
+      "text": "…밖에서 할 만한 키스는 아닌데?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_503",
+      "text": "슈가가 대답하지 않고 리모컨 버튼을 누른다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_504",
+      "text": "부아아아아앙-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_505",
+      "text": "블랙 타이푼 꽤 부서졌던데.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_506",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "뭐, 조금만 무리 시키지.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_507",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "…아마 블랙 타이푼도 이해해 줄 거야.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_sugar_508",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "나는 지금… 한시라도 빨리 돌아가고 싶으니까.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    }
+  ]
+}

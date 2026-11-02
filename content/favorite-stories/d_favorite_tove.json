@@ -1,0 +1,3756 @@
+{
+  "groupId": "d_favorite_tove",
+  "type": "favorite",
+  "name": "따뜻한 온기",
+  "nikke": "토브",
+  "sourceVideo": "https://youtu.be/zTVsmaby2UE",
+  "lines": [
+    {
+      "id": "d_favorite_tove_1",
+      "text": "달그락달그락.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_2",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "어디 보자….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_3",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "다용도로 사용 가능한 멀티툴!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_4",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "공구 여러 가지를 들고 다니는 거에 비하면 편하긴 하지만….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_5",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "역시 크기가 작아서 규모가 큰 작업에는 어려운 점이 있단 말이야.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_6",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "그래도 간단한 도구를 만드는 것 정도는 충분히 가능하지!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_7",
+      "text": "찰칵찰칵.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_8",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "좋아. [기능 상 이상 없음] 체크!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_9",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "그다음은….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_10",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "지난번에 만들었던 5분 점화 초간편 토치!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_11",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "불이 멋대로 꺼지거나 해서 생각한 대로 작동하지 않았지만,",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_12",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "바닥에 던졌던 걸, 생존가님이 다시 주워 오신 덕분에 그때 따뜻한 물을 만들 수 있었지!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_13",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "…히힛.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_14",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "작동 안정성을 어떻게 보완해야 할지 생각해 봐야겠네.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_15",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "[보강 필요] 체크!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_16",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "그리고 여기 어디쯤에 있을 건데….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_17",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "앗!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_18",
+      "text": "우당탕당!",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_19",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "으으, 다 쏟아졌잖아…!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_20",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "하아… 나중에 다시 괜찮은지 점검해야겠네.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_21",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "그으래도 그건 망가지지 않았겠지?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_22",
+      "text": "부스럭부스럭.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_23",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "여기 있다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_24",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "지상에서 주워 온 파이어 스타터!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_25",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "작전 중 불이 급하게 필요할 때, 마침 근처에 있는 걸 발견해서.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_26",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "현재까지도 요긴하게 쓰고 있는 생존 필수품!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_27",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "부싯돌보다 간편하고, 라이터보다 신뢰성이 높아서 정말 유용하지!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_28",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "괜히 구시대의 생존 다큐에서도 필수품으로 다뤄지는 게 아니란 말이야.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_29",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "…그땐 정말 위험했지.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_30",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "불을 피워서 위치를 알려야 하는데.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_31",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "가지고 있던 발화용 도구는 전부 젖거나 망가져서 쓸 수 없었고.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_32",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "모포 속에서 우연히 발견한 이 파이어 스타터가 아니었다면 불을 피우지 못했을 거야.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_33",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "그 후로도 여러 번 도움을 받았었고.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_34",
+      "text": "잘그락.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_35",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "…….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_36",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "이 사람들에게도, 무척 소중한 물건이었겠지.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_37",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "…그럼, 점검을….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_38",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "어디 보자….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_39",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "옆에 달린 긁개로 이 봉을 이렇게 긁으면.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_40",
+      "text": "틱.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_41",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "긁으… 면…!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_42",
+      "text": "틱. 틱.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_43",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "…어?!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_44",
+      "text": "틱, 틱. 틱, 틱!",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_45",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "불똥이 튀어야 하는…데?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_46",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "지, 지난번까지만 해도 됐었는데?!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_47",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "자, 잘못된 건… 아니겠지?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_48",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "…이런 이유로 생존가님에게 찾아오게 된 거예요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_49",
+      "text": "요컨대.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_50",
+      "text": "그 [파이어 스타터]라는 물건을 수리하고 싶다는 거지?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_51",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "네, 맞아요!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_52",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "제게 있어서 이건 정말 소중한 물건이거든요!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_53",
+      "text": "토브가 자랑스럽게 쇳조각과 지저분한 이름표, 주황색 손잡이에 금속봉이 달린 물건을 내밀었다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_54",
+      "text": "그런 일이라면 방주에서 해결할 수 있지 않아?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_55",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "물론, 여기에 오기 전에 방주를 열심히 수색해 봤죠!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_56",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "하지만 당연히 방주에서는 방법을 찾을 수가 없었어요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_57",
+      "text": "당연히?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_58",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "네….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_59",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "방주에서는 생존 물품을 생산하지 않거든요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_60",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "더 이상 필요하지 않으니까요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_61",
+      "text": "아….",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_62",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "방주에서도 유사한 걸 생산하지 않는 건 아니에요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_63",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "야외에서 필요한 물품은 매장에 쌓여 있고.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_64",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "캠핑에 쓸 만한 물건은 얼마든지 구입할 수 있어요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_65",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "성냥이나 라이터, 토치처럼 불을 지필 수 있는 도구는 쉽게 구할 수 있어요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_66",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "하지만 본격적인 생존 물품은 찾아볼 수 없거든요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_67",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "이 파이어 스타터 같은 것 말이에요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_68",
+      "text": "사정은 잘 알겠어.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_69",
+      "text": "그렇다면 그거 수리할 수는 있는 거야?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_70",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "수리 자체가 어려운 건 아니에요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_71",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "이 봉을 칼날로 긁으면 불똥이 튀어야 하는데, 그게 다 닳은 것뿐이니까요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_72",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "여기 이 봉을 만져보시면 아시겠지만, 매끈매끈하죠?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_73",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "파이어 스타터의 원리는 이 쇠 긁개로 봉을 긁어 금속 가루를 내고.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_74",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "그 가루가 공기와 만나 산화되면.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_75",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "파팟! 하고 불똥이 되는 거예요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_76",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "그러니까 봉의 표면이 매끈하다는 건 더 이상 긁어낼 금속이 없다는 거고.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_77",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "그러므로 더 이상 불똥이 만들어지지 않는 거죠.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_78",
+      "text": "아마도?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_79",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "어, 얼마 전에 조금 사고가 있어서 말이죠.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_80",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "아주 사알짝 손상될 수도 있는 일이 있었거든요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_81",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "무, 물론 그 정도로 못 쓰게 될 물건은 아니지만 말이에요!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_82",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "[자연 VS 인간]이 틀리지 않았다면, 그럴 거예요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_83",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "거기에 나오시는 베X 그릴스, 그분은 절대 틀린 말을 하지 않으시거든요!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_84",
+      "text": "그분이라면 믿을 만하지.",
+      "window": "Choice",
+      "voice": null,
+      "chosen": true
+    },
+    {
+      "id": "d_favorite_tove_85",
+      "text": "그거, 믿어도 괜찮은 거야?",
+      "window": "Choice",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_86",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "히힛. 생존가님도 잘 아시네요!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_87",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "제가 배운 생존 지식의 절반은 구시대의 다큐에서 나왔어요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_88",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "오지에서 낙오되었을 때를 가정한 생존 방법에 관해선 무척 많이 배웠죠!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_89",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "에드 스X 포드라는 분의 다큐도 있는데, 오지에서 살아가는 방법 전문이에요!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_90",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "두 분이 지향하는 방향성이 달라, 함께 보면 아쉬운 부분이 채워지거든요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_91",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "그래서 한쪽 다큐를 봤으면, 다른 쪽 비슷한 다큐를 이어서 보면 좋아요!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_92",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "예를 들어 [자연 VS 인간] 시즌 2의 첫 화가 사막에서 탈출이니까.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_93",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "비슷한 배경의 [외로운 생존가] 시즌….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_94",
+      "text": "…아무튼 그 파이어 스타터를 수리하고 싶다는 거지?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_95",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "어… 네, 그렇죠.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_96",
+      "text": "그 방법을 알고 싶어서 날 찾아온 거고.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_97",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "네, 생존가님이라면 방법을 알지 않을까 해서요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_98",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "지상에서의 경험이 풍부하고, 생존에 대한 지식도 있으시니까요!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_99",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "모른다고 하더라도, 알고 있는 분을 소개해 주시지 않을까… 해서….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_100",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "아, 아무튼!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_101",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "생존가님, 저를 좀 도와주실 수 있나요?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_102",
+      "text": "확실히 내가 지상 생존의 전문가이긴 하지만.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_103",
+      "text": "거기까지 알고 있지는 않지.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_104",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "그렇, 죠…?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_105",
+      "text": "하지만.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_106",
+      "text": "수리 방법을 알 것 같은 인물은 알고 있어.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_107",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "오, 오오!!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_108",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "역시 생존가님.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_109",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "존경하고 있습니다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_110",
+      "text": "훗.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_111",
+      "text": "그럼, 그곳으로 갈까?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_112",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "넵! 당장 가죠!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_113",
+      "speaker": "centi",
+      "speakerName": "센티",
+      "text": "반장님, 오셨슴까!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vz-77/bn-70/f66c08b26047347b46420a769de04837.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_114",
+      "speaker": "centi",
+      "speakerName": "센티",
+      "text": "토브도 함께 오신 검까!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vz-77/bn-70/f66c08b26047347b46420a769de04837.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_115",
+      "text": "안녕, 센티.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_116",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "센티 씨, 잘 지내셨죠?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_117",
+      "speaker": "centi",
+      "speakerName": "센티",
+      "text": "저는 잘 지내지 말입니다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vz-77/bn-70/f66c08b26047347b46420a769de04837.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_118",
+      "speaker": "centi",
+      "speakerName": "센티",
+      "text": "토브야말로 괜찮은 검까?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vz-77/bn-70/f66c08b26047347b46420a769de04837.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_119",
+      "speaker": "centi",
+      "speakerName": "센티",
+      "text": "지난번 공방에서 요상한 물건을 만들다 리타 선배에게 출입 금지를 당한 이후.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vz-77/bn-70/f66c08b26047347b46420a769de04837.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_120",
+      "speaker": "centi",
+      "speakerName": "센티",
+      "text": "한동안 공방에선 얼굴을 못 봤지 말임다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vz-77/bn-70/f66c08b26047347b46420a769de04837.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_121",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "아, 하하하. 네, 뭐….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_122",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "요상하다기보다는, 생존을 위해 최소한의 재료로 만든 도구였달까….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_123",
+      "speaker": "centi",
+      "speakerName": "센티",
+      "text": "그때 리타 선배가 [이 도구를 만든 녀석은 누구냐!]라며 화내는 모습은.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vz-77/bn-70/f66c08b26047347b46420a769de04837.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_124",
+      "speaker": "centi",
+      "speakerName": "센티",
+      "text": "정말 무서웠지 말임다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vz-77/bn-70/f66c08b26047347b46420a769de04837.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_125",
+      "text": "그런 일도 있었구나.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_126",
+      "speaker": "centi",
+      "speakerName": "센티",
+      "text": "네, 그렇슴다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vz-77/bn-70/f66c08b26047347b46420a769de04837.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_127",
+      "speaker": "centi",
+      "speakerName": "센티",
+      "text": "그 후로 가끔 토브를 만날 때면, 근처에 리타 선배가 계시는지 확인하고 있슴다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vz-77/bn-70/f66c08b26047347b46420a769de04837.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_128",
+      "speaker": "centi",
+      "speakerName": "센티",
+      "text": "지금은 다른 곳으로 출장 가셔서 안 계시니 안심하셔도 됨다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vz-77/bn-70/f66c08b26047347b46420a769de04837.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_129",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "하하… 감사해요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_130",
+      "speaker": "centi",
+      "speakerName": "센티",
+      "text": "한데 반장님과 함께 공방에 오셨으니, 특별한 볼일이 있어서 온 것 같슴다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vz-77/bn-70/f66c08b26047347b46420a769de04837.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_131",
+      "speaker": "centi",
+      "speakerName": "센티",
+      "text": "필요한 게 있다면 편하게 말씀해 주십쇼!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vz-77/bn-70/f66c08b26047347b46420a769de04837.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_132",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "네, 알겠어요!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_133",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "그래서 말인데요. 센티, 혹시 이거….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_134",
+      "text": "토브가 센티에게 파이어 스타터를 건넸다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_135",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "수리가 가능한가요?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_136",
+      "speaker": "centi",
+      "speakerName": "센티",
+      "text": "이건….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vz-77/bn-70/f66c08b26047347b46420a769de04837.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_137",
+      "text": "센티는 파이어 스타터의 이곳저곳을 꼼꼼히 살펴보기 시작했다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_138",
+      "speaker": "centi",
+      "speakerName": "센티",
+      "text": "흠…. 오호….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vz-77/bn-70/f66c08b26047347b46420a769de04837.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_139",
+      "speaker": "centi",
+      "speakerName": "센티",
+      "text": "아!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vz-77/bn-70/f66c08b26047347b46420a769de04837.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_140",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "뭔가 좀 알 것 같은가요?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_141",
+      "speaker": "centi",
+      "speakerName": "센티",
+      "text": "그렇슴다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vz-77/bn-70/f66c08b26047347b46420a769de04837.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_142",
+      "speaker": "centi",
+      "speakerName": "센티",
+      "text": "여기 이 봉에 붙은 잔여 금속으로 추정해 보건대.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vz-77/bn-70/f66c08b26047347b46420a769de04837.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_143",
+      "speaker": "centi",
+      "speakerName": "센티",
+      "text": "이건 불을 붙이기 위한 도구이지 말임다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vz-77/bn-70/f66c08b26047347b46420a769de04837.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_144",
+      "text": "오, 정확한데.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_145",
+      "speaker": "centi",
+      "speakerName": "센티",
+      "text": "딱히 어려운 구조는 아님다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vz-77/bn-70/f66c08b26047347b46420a769de04837.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_146",
+      "speaker": "centi",
+      "speakerName": "센티",
+      "text": "발화를 위한 합금 봉과 긁개로 이루어진 극히 단순한 구조임다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vz-77/bn-70/f66c08b26047347b46420a769de04837.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_147",
+      "speaker": "centi",
+      "speakerName": "센티",
+      "text": "그리고 합금 봉은 쓰면 쓸수록 닳슴다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vz-77/bn-70/f66c08b26047347b46420a769de04837.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_148",
+      "speaker": "centi",
+      "speakerName": "센티",
+      "text": "연필심과 같은 소모품이라고 할 수 있슴다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vz-77/bn-70/f66c08b26047347b46420a769de04837.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_149",
+      "speaker": "centi",
+      "speakerName": "센티",
+      "text": "그러니까 봉만 교체하면 얼마든지 다시 쓸 수 있지 말임다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vz-77/bn-70/f66c08b26047347b46420a769de04837.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_150",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "역시 제 예상이 맞았군요!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_151",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "다큐멘터리는 거짓말을 안 한다니까요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_152",
+      "text": "그럼, 봉은 어디서 구할 수 있어?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_153",
+      "speaker": "centi",
+      "speakerName": "센티",
+      "text": "안타깝지만, 방주에서는 구할 수 없을 검다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vz-77/bn-70/f66c08b26047347b46420a769de04837.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_154",
+      "speaker": "centi",
+      "speakerName": "센티",
+      "text": "이런 걸 취급하는 곳은 더 이상 존재하지 않슴다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vz-77/bn-70/f66c08b26047347b46420a769de04837.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_155",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "역시 그렇죠… 제가 찾을 때도 다들 모른다는 반응이었으니까요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_156",
+      "text": "그래서 마이티 툴즈를 찾아온 거야.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_157",
+      "text": "마이티 툴즈는 어떤 도구도 만들 수 있으니까.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_158",
+      "speaker": "centi",
+      "speakerName": "센티",
+      "text": "그렇슴다! 마이티 툴즈는 전지전능의 도구임다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vz-77/bn-70/f66c08b26047347b46420a769de04837.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_159",
+      "speaker": "centi",
+      "speakerName": "센티",
+      "text": "이 봉을 만들기 위해 금속을 녹여 정확한 비율로 혼합할 설비!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vz-77/bn-70/f66c08b26047347b46420a769de04837.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_160",
+      "speaker": "centi",
+      "speakerName": "센티",
+      "text": "그렇게 만든 합금을 주조하고 냉각할 시설!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vz-77/bn-70/f66c08b26047347b46420a769de04837.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_161",
+      "speaker": "centi",
+      "speakerName": "센티",
+      "text": "그리고 그 모든 과정을 수행할 수 있는.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vz-77/bn-70/f66c08b26047347b46420a769de04837.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_162",
+      "speaker": "centi",
+      "speakerName": "센티",
+      "text": "모든 것이 마이티 툴즈에는 존재함다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vz-77/bn-70/f66c08b26047347b46420a769de04837.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_163",
+      "speaker": "centi",
+      "speakerName": "센티",
+      "text": "따라서 재료만 있다면 교체할 합금 봉을 만드는 건 어렵지 않슴다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vz-77/bn-70/f66c08b26047347b46420a769de04837.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_164",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "그, 그렇다면!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_165",
+      "speaker": "centi",
+      "speakerName": "센티",
+      "text": "그렇슴다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vz-77/bn-70/f66c08b26047347b46420a769de04837.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_166",
+      "speaker": "centi",
+      "speakerName": "센티",
+      "text": "못 만듬다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vz-77/bn-70/f66c08b26047347b46420a769de04837.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_167",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "네에에에?!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_168",
+      "text": "자신감 넘치게 말하길래 만들 수 있을 줄 알았는데!?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_169",
+      "speaker": "centi",
+      "speakerName": "센티",
+      "text": "만드는 것은 어렵지 않슴다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vz-77/bn-70/f66c08b26047347b46420a769de04837.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_170",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "그, 그런데 왜…?!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_171",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "분명 거기선 [당연히 만들 수 있슴다!]라고 말할 타이밍 아닌가요?!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_172",
+      "speaker": "centi",
+      "speakerName": "센티",
+      "text": "저도 그렇게 말하고 싶슴다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vz-77/bn-70/f66c08b26047347b46420a769de04837.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_173",
+      "speaker": "centi",
+      "speakerName": "센티",
+      "text": "하지만 그렇게 하지 못하는 치명적인 이유가 있슴다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vz-77/bn-70/f66c08b26047347b46420a769de04837.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_174",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "뭐죠, 그게?!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_175",
+      "speaker": "centi",
+      "speakerName": "센티",
+      "text": "간단함다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vz-77/bn-70/f66c08b26047347b46420a769de04837.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_176",
+      "speaker": "centi",
+      "speakerName": "센티",
+      "text": "재료가 없슴다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vz-77/bn-70/f66c08b26047347b46420a769de04837.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_177",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "아….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_178",
+      "text": "무척 간단명료한 이유네.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_179",
+      "speaker": "centi",
+      "speakerName": "센티",
+      "text": "합금 봉을 만들기 위해서는 희토류라는 재료가 필요함다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vz-77/bn-70/f66c08b26047347b46420a769de04837.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_180",
+      "speaker": "centi",
+      "speakerName": "센티",
+      "text": "잘 쓰는 재료는 아니기 때문에 마이티 툴즈에서도 필요할 때마다 가지고 오지 말임다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vz-77/bn-70/f66c08b26047347b46420a769de04837.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_181",
+      "speaker": "centi",
+      "speakerName": "센티",
+      "text": "그리고 방주 내의 희토류는 미실리스가 전매하고 있슴다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vz-77/bn-70/f66c08b26047347b46420a769de04837.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_182",
+      "speaker": "centi",
+      "speakerName": "센티",
+      "text": "그렇기에 미실리스에서 필요한 재료를 가지고 오지 않으면.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vz-77/bn-70/f66c08b26047347b46420a769de04837.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_183",
+      "speaker": "centi",
+      "speakerName": "센티",
+      "text": "이곳에서 봉 제작에 쓸 합금을 만드는 건 불가능함다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vz-77/bn-70/f66c08b26047347b46420a769de04837.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_184",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "미실리스 본사에서 재료를 가지고 와야 한다니.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_185",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "할 수 있는 가능성은 있는 거예요?!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_186",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "그냥 주지는 않을 거 같은데….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_187",
+      "text": "아마 그렇겠지.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_188",
+      "speaker": "centi",
+      "speakerName": "센티",
+      "text": "금액만 충분하다면 못 사지는 않을 검다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vz-77/bn-70/f66c08b26047347b46420a769de04837.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_189",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "가격은 어느 정도 일까요?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_190",
+      "speaker": "centi",
+      "speakerName": "센티",
+      "text": "마이티 툴즈에서 필요한 재료는 리타 선배가 도맡아서 발주하고 있슴다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vz-77/bn-70/f66c08b26047347b46420a769de04837.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_191",
+      "speaker": "centi",
+      "speakerName": "센티",
+      "text": "그래서 저는 모름다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vz-77/bn-70/f66c08b26047347b46420a769de04837.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_192",
+      "text": "…일단 미실리스 본사로 가보는 수밖에 없겠네.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_193",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "아무래도 그래야겠죠?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_194",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "센티 씨, 도와줘서 고마워요!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_195",
+      "speaker": "centi",
+      "speakerName": "센티",
+      "text": "별거 아님다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vz-77/bn-70/f66c08b26047347b46420a769de04837.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_196",
+      "speaker": "centi",
+      "speakerName": "센티",
+      "text": "다음에 리타 선배가 출입 금지를 풀어주시면, 마음 편하게 찾아오십쇼!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vz-77/bn-70/f66c08b26047347b46420a769de04837.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_197",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "아하, 하…. 네에.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_198",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "으, 긴장된다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_199",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "여기만 오면 왜 이렇게 가슴이 뛰는 걸까요?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_200",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "뭐랄까. 포식자 앞에 선 한 마리 초식동물이 된 거 같은….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_201",
+      "text": "아, 그거 나도 무슨 느낌인지 알아.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_202",
+      "text": "나도 중앙 정부 사무소에 서류 제출하러 가면 그렇거든.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_203",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "오! 생존가님도 그럴 때가 있군요!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_204",
+      "text": "심사를 받는 건 언제나 긴장되니까.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_205",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "역시! 저도 선배님들한테 제가 만든 도구를 선보일 때면 항상 긴장되거든요!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_206",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "지금의 경우, 짐작가는 일이라면….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_207",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "언리미티드 스쿼드에 가게 해달라고 미실리스에 떼쓰는 바람에.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_208",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "가기로 내정되어 있던 곳에 가지 않아서, 일까요?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_209",
+      "text": "…그거네.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_210",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "하, 하핫! 역시 그으렇겠죠?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_211",
+      "speaker": "maxwell",
+      "speakerName": "맥스웰",
+      "text": "오, 베이비랑 토브잖아?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/wh-55/wl-81/a5c70b677371c1769e79a9bf47232734.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_212",
+      "speaker": "maxwell",
+      "speakerName": "맥스웰",
+      "text": "미실리스 본사까지는 무슨 일로 찾아왔대?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/wh-55/wl-81/a5c70b677371c1769e79a9bf47232734.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_213",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "안녕하세요, 맥스웰 씨?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_214",
+      "text": "맥스웰이야말로 어쩐 일이야?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_215",
+      "speaker": "maxwell",
+      "speakerName": "맥스웰",
+      "text": "나 말이야?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/wh-55/wl-81/a5c70b677371c1769e79a9bf47232734.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_216",
+      "speaker": "maxwell",
+      "speakerName": "맥스웰",
+      "text": "…어떤 바보들이 친 사고를 수습해야 해서 말이지.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/wh-55/wl-81/a5c70b677371c1769e79a9bf47232734.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_217",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "사고라니, 혹시 위험한….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_218",
+      "speaker": "maxwell",
+      "speakerName": "맥스웰",
+      "text": "아아, 그런 건 아니야.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/wh-55/wl-81/a5c70b677371c1769e79a9bf47232734.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_219",
+      "speaker": "maxwell",
+      "speakerName": "맥스웰",
+      "text": "그냥 평소에 항상 있는 해프닝 같은 거지.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/wh-55/wl-81/a5c70b677371c1769e79a9bf47232734.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_220",
+      "speaker": "maxwell",
+      "speakerName": "맥스웰",
+      "text": "하여간 그 바보들은 질리지도 않는 모양이야.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/wh-55/wl-81/a5c70b677371c1769e79a9bf47232734.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_221",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "그렇다면 다행이네요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_222",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "전 또 누군가가 다치거나, 어딘가가 무너지기라도 한 줄 알았어요!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_223",
+      "speaker": "maxwell",
+      "speakerName": "맥스웰",
+      "text": "…….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/wh-55/wl-81/a5c70b677371c1769e79a9bf47232734.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_224",
+      "text": "…그랬나 보군.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_225",
+      "speaker": "maxwell",
+      "speakerName": "맥스웰",
+      "text": "어디까지나 다친 건 그 녀석들이고, 무너진 건 우리 숙소지만 말이야.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/wh-55/wl-81/a5c70b677371c1769e79a9bf47232734.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_226",
+      "speaker": "maxwell",
+      "speakerName": "맥스웰",
+      "text": "…깨지는 건 나고.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/wh-55/wl-81/a5c70b677371c1769e79a9bf47232734.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_227",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "어, 그… 괜찮으신가요?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_228",
+      "speaker": "maxwell",
+      "speakerName": "맥스웰",
+      "text": "괜찮아, 괜찮아. 한두 번 있는 일도 아닌데 뭘.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/wh-55/wl-81/a5c70b677371c1769e79a9bf47232734.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_229",
+      "speaker": "maxwell",
+      "speakerName": "맥스웰",
+      "text": "그 녀석들, 몸 하나는 더럽게 강하니까 어지간한 상처로는 끄떡도 없어.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/wh-55/wl-81/a5c70b677371c1769e79a9bf47232734.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_230",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "아뇨, 맥스웰 씨가 괜찮은 지 물은 건데요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_231",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "꽤 고생하신 거 같은데.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_232",
+      "speaker": "maxwell",
+      "speakerName": "맥스웰",
+      "text": "…우리 스쿼드 바보들도 토브 너 정도 배려심만 있었다면 좋았을 텐데.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/wh-55/wl-81/a5c70b677371c1769e79a9bf47232734.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_233",
+      "speaker": "maxwell",
+      "speakerName": "맥스웰",
+      "text": "그래서 무슨 용건으로 찾아온 거랬지?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/wh-55/wl-81/a5c70b677371c1769e79a9bf47232734.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_234",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "참, 그랬죠! 잠시 여기 찾아온 목적을 잊고 있었어요!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_235",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "맥스웰 씨, 이것 좀 봐주시겠어요?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_236",
+      "text": "토브가 맥스웰에게 파이어 스타터를 건넸다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_237",
+      "speaker": "maxwell",
+      "speakerName": "맥스웰",
+      "text": "오, 뭐야. 파이어 스타터잖아.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/wh-55/wl-81/a5c70b677371c1769e79a9bf47232734.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_238",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "와! 바로 알아보시는군요!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_239",
+      "speaker": "maxwell",
+      "speakerName": "맥스웰",
+      "text": "지상에 작전을 나가면 이따금 발견할 수 있거든.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/wh-55/wl-81/a5c70b677371c1769e79a9bf47232734.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_240",
+      "speaker": "maxwell",
+      "speakerName": "맥스웰",
+      "text": "특히 사람이 머물던 흔적이 있는 곳에선 심심치 않게 볼 수 있어.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/wh-55/wl-81/a5c70b677371c1769e79a9bf47232734.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_241",
+      "speaker": "maxwell",
+      "speakerName": "맥스웰",
+      "text": "이 봉에 발려 있는 합금의 성질이 신기해서 한번 조사해 본 적도 있고.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/wh-55/wl-81/a5c70b677371c1769e79a9bf47232734.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_242",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "그, 그럼 어떤 재료로 만드는 지도 잘 아시겠군요!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_243",
+      "speaker": "maxwell",
+      "speakerName": "맥스웰",
+      "text": "물론이지.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/wh-55/wl-81/a5c70b677371c1769e79a9bf47232734.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_244",
+      "text": "역시 메티스의 미케닉!",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_245",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "저, 혹시 그렇다면….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_246",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "여기서 합금 제작에 필요한 재료를 살 수 있을까요?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_247",
+      "speaker": "maxwell",
+      "speakerName": "맥스웰",
+      "text": "당연하지.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/wh-55/wl-81/a5c70b677371c1769e79a9bf47232734.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_248",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "…생존가님.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_249",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "지금 제 가슴에서 솟아오르는 이 감정을 환희라고 불러도 되겠죠?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_250",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "방주와 전초기지를 한참 동안 뒤져도 찾지 못했던, 제 소중한 파이어 스타터를 수리할 방법을….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_251",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "드디어 찾아낸 거예요!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_252",
+      "text": "축하해. 토브.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_253",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "히힛, 뭘요. 생존가님이 아니었다면 불가능했을 거예요!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_254",
+      "text": "내가 뭘 했다고.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_255",
+      "text": "토브야말로 고생했지.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_256",
+      "speaker": "maxwell",
+      "speakerName": "맥스웰",
+      "text": "…저기 산통을 깨서 미안한데.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/wh-55/wl-81/a5c70b677371c1769e79a9bf47232734.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_257",
+      "speaker": "maxwell",
+      "speakerName": "맥스웰",
+      "text": "크레딧은 충분해?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/wh-55/wl-81/a5c70b677371c1769e79a9bf47232734.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_258",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "어… 크레딧이요?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_259",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "얼마나 필요한데요?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_260",
+      "speaker": "maxwell",
+      "speakerName": "맥스웰",
+      "text": "잘 모르나 보구나.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/wh-55/wl-81/a5c70b677371c1769e79a9bf47232734.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_261",
+      "speaker": "maxwell",
+      "speakerName": "맥스웰",
+      "text": "여기 필요한 합금에는 각종 희토류가 포함되어 있어.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/wh-55/wl-81/a5c70b677371c1769e79a9bf47232734.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_262",
+      "speaker": "maxwell",
+      "speakerName": "맥스웰",
+      "text": "그러니까 이 정도 봉을 만들기 위한 합금을 제작하려면, 필요한 크레딧은….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/wh-55/wl-81/a5c70b677371c1769e79a9bf47232734.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_263",
+      "speaker": "maxwell",
+      "speakerName": "맥스웰",
+      "text": "대충 이 정도일 거야.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/wh-55/wl-81/a5c70b677371c1769e79a9bf47232734.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_264",
+      "text": "맥스웰이 계산기로 계산한 숫자를 보여주었다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_265",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "!!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_266",
+      "text": "이, 이거 진짜야?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_267",
+      "speaker": "maxwell",
+      "speakerName": "맥스웰",
+      "text": "물론 진짜지.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/wh-55/wl-81/a5c70b677371c1769e79a9bf47232734.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_268",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "이 크레딧이면, 제가 여태까지 사거나 제작한 생존 도구의 가격을 모두 합해도….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_269",
+      "text": "왜 이렇게 비싼 건데?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_270",
+      "speaker": "maxwell",
+      "speakerName": "맥스웰",
+      "text": "말했잖아. 희토류가 필요하다고. 말 그대로 희귀하단 말이지.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/wh-55/wl-81/a5c70b677371c1769e79a9bf47232734.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_271",
+      "speaker": "maxwell",
+      "speakerName": "맥스웰",
+      "text": "참고로 방주 근처의 희토류 광산은 진즉에 바닥났어. 채광을 위해서는 먼 곳까지 자원 수집 부대를 파견해야 해.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/wh-55/wl-81/a5c70b677371c1769e79a9bf47232734.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_272",
+      "speaker": "maxwell",
+      "speakerName": "맥스웰",
+      "text": "게다가 희토류는 전략 물자야. 중앙 정부가 미실리스에게 위탁해 엄격하게 관리하고 있어.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/wh-55/wl-81/a5c70b677371c1769e79a9bf47232734.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_273",
+      "speaker": "maxwell",
+      "speakerName": "맥스웰",
+      "text": "그러다 보니 일반인은 접근하기 힘든 가격이 형성되어 있지.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/wh-55/wl-81/a5c70b677371c1769e79a9bf47232734.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_274",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "그럴, 수가….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_275",
+      "speaker": "maxwell",
+      "speakerName": "맥스웰",
+      "text": "…보아하니 그럴 만한 크레딧은 없는 모양이네.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/wh-55/wl-81/a5c70b677371c1769e79a9bf47232734.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_276",
+      "speaker": "maxwell",
+      "speakerName": "맥스웰",
+      "text": "그럼, 합금을 직접 제작하는 건 포기하는 게 좋아.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/wh-55/wl-81/a5c70b677371c1769e79a9bf47232734.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_277",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "그치만, 전…. 꼭 이 파이어 스타터를 고쳐야 한다고요!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_278",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "여기에 담긴 기억들이 저한텐….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_279",
+      "speaker": "maxwell",
+      "speakerName": "맥스웰",
+      "text": "근데 그거, 굳이 합금을 만들어야 할 이유는 없는 거 아니야?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/wh-55/wl-81/a5c70b677371c1769e79a9bf47232734.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_280",
+      "speaker": "maxwell",
+      "speakerName": "맥스웰",
+      "text": "봉만 교체하면 되는 거잖아.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/wh-55/wl-81/a5c70b677371c1769e79a9bf47232734.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_281",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "하지만 교체할 봉을 만들기 위해서는 합금이 필요하",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_282",
+      "speaker": "maxwell",
+      "speakerName": "맥스웰",
+      "text": "아니아니. 그러니까 합금이 필요한 게 아니라, 교체할 봉이 필요한 거잖아.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/wh-55/wl-81/a5c70b677371c1769e79a9bf47232734.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_283",
+      "text": "그렇지.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_284",
+      "speaker": "maxwell",
+      "speakerName": "맥스웰",
+      "text": "봉을 찾으면 끝날 일 아니야?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/wh-55/wl-81/a5c70b677371c1769e79a9bf47232734.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_285",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "그게, 방주 내에서는 어디에도 없더라고요….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_286",
+      "speaker": "maxwell",
+      "speakerName": "맥스웰",
+      "text": "당연히 그렇겠지.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/wh-55/wl-81/a5c70b677371c1769e79a9bf47232734.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_287",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "어… 그럼, 어떻게 찾아야 하죠?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_288",
+      "speaker": "maxwell",
+      "speakerName": "맥스웰",
+      "text": "조금 전에 말했잖아?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/wh-55/wl-81/a5c70b677371c1769e79a9bf47232734.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_289",
+      "speaker": "maxwell",
+      "speakerName": "맥스웰",
+      "text": "지상에서.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/wh-55/wl-81/a5c70b677371c1769e79a9bf47232734.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_290",
+      "text": "지상의 어느 폐허 도시.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_291",
+      "text": "맥스웰이 말한 대로, 토브와 함께 파이어 스타터를 찾기 위해 지상으로 올라왔다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_292",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "생각해 보면 단순한 거였어요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_293",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "제가 지상에서 이 파이어 스타터를 찾았으니까.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_294",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "당연히 교체품을 찾기 위해선 지상으로 왔으면 되는 거였죠!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_295",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "참 먼 길을 돌아왔다는 생각이 드네요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_296",
+      "text": "그 또한 길이지.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_297",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "…히힛, 그렇죠! 길은 결국 통하게 되어 있죠!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_298",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "과정이야 어쨌든, 결국 제 파이어 스타터를 고칠 방법을 찾아낸 거니까요!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_299",
+      "text": "그런데 이곳을 처음 탐색하는 이유라도 있어?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_300",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "음, 일단 가능성이 제일 높을 것 같아서요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_301",
+      "text": "가능성?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_302",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "네. 주변을 보시면 아시겠지만, 여긴 과거에 도시였잖아요?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_303",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "도시는 사람이 생존하기 위한 인프라가 이것저것 갖추어져 있어요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_304",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "당장 눈앞에 있는 건물들은 외부의 위협으로부터 안전을 도모하기 위한 것이죠.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_305",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "각종 물자가 모이는 곳이기도 하니, 필요한 물건을 구하기도 쉽고요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_306",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "거기다가….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_307",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "대부분의 사람은 험난한 환경에서 살 수 있을 만한 지식을 갖추고 있지 못해요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_308",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "만약 갑자기 위기 상황이 닥친다면, 익숙한 곳에 머무르려고 할 거고요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_309",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "그러니 1차 랩쳐 침공 때, 방주로 들어가지 못한 사람들은….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_310",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "주로 이런 도시에서 생존해 갔을 거예요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_311",
+      "text": "…….",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_312",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "아하하, 죄송해요. 너무 무거운 이야기였죠?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_313",
+      "text": "아냐. 괜찮아.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_314",
+      "text": "그보다 토브.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_315",
+      "text": "생존 이야기를 할 때 꽤 진지해졌구나.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_316",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "그, 그런가요?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_317",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "…확실히 예전엔 생존이라는 걸 조금 가볍게 생각했던 것 같아요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_318",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "다큐나 책으로 본 게, 제가 아는 생존에 관한 이야기 전부였으니까요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_319",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "하지만 그러다 언리미티드 스쿼드의 선배님들과 함께 북부 기지에서 많은 조난자분들을 구조하고.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_320",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "많은 위기 상황을 겪으면서, 생각이 바뀐 거 같아요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_321",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "[생존은 낭만이 아니라 현실이구나] 하고요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_322",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "뭐, 이런 말을 하기엔 아직 여러모로 부족하지만요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_323",
+      "text": "토브는 이미 훌륭한 생존 전문가야.",
+      "window": "Choice",
+      "voice": null,
+      "chosen": true
+    },
+    {
+      "id": "d_favorite_tove_324",
+      "text": "걱정 마. 토브라면 곧 그런 말 할 자격이 충분해질 거야.",
+      "window": "Choice",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_325",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "생존가님이 그렇게 말씀해 주시니 정말 그럴지도 모르겠네요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_326",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "그래도 아직 선배님들에게 배울 게 많은 신입이랍니다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_327",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "…선배님들은 정말 대단하세요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_328",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "극한의 환경을 자랑하는 북부 기지에서 능숙하게 임무를 해내는 모습은 정말 존경스럽죠.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_329",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "그래서 제가 만든 도구들로 선배님들에게 도움이 될 때면.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_330",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "단지 그것만으로도 자부심이 들 정도라니까요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_331",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "…더 열심히 해야겠다는 생각도 들고요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_332",
+      "text": "토브가 열심히 하는 건 모두가 알고 있어.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_333",
+      "text": "좀 더 자랑스러워해도 좋아.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_334",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "그럴… 까요? 에헤헤….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_335",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "그, 그럼! 파이어 스타터가 있을 만한 곳으로 가보죠!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_336",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "일단 저 건물 안을 탐색해 봐요!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_337",
+      "text": "토브는 빠른 걸음으로 정면에 보이는 건물 안으로 걸어갔다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_338",
+      "text": "토브를 따라 들어간 건물의 어느 방 안.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_339",
+      "text": "그곳에는 아주 오래되긴 했지만, 사람이 머물렀다는 흔적이 여기저기 남아있었다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_340",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "여긴 사람이 잠깐만 머무르다 떠난 곳인가 보네요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_341",
+      "text": "어떻게 그런 걸 아는 거야?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_342",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "별거 아니에요!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_343",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "여기, 이거 보이시죠?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_344",
+      "text": "토브가 조금 그을린 바닥을 가리켰다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_345",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "불을 지핀 흔적은 있지만, 주변에 여전히 땔감이 될 만한 것들이 많이 남아있어요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_346",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "오랫동안 머물지는 않았다는 거예요!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_347",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "어! 저건…!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_348",
+      "text": "토브는 건물 한구석에 방치된 채로 놓여있는 가방으로 달려가, 내용물을 뒤지기 시작했다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_349",
+      "text": "부스럭부스럭.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_350",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "역시 생존 가방이네요!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_351",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "배낭 안에 여러 소모품도 많이 남아있어요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_352",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "그렇다는 건….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_353",
+      "text": "부스럭부스럭.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_354",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "여기 어딘가에 있을 텐데…",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_355",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "아!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_356",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "찾았어요, 생존가님!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_357",
+      "text": "토브는 활짝 웃으며 가방에서 꺼낸 물건을 보여줬다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_358",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "파이어 스타터에요!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_359",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "데코이 설치 완료.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_360",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "식량 확보 완료.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_361",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "간이 텐트 설치 완료.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_362",
+      "text": "늦은 밤.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_363",
+      "text": "이곳에서 하루를 묵기로 결정하자 토브는 아주 능숙하게 야영을 준비했다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_364",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "남은 건 이제 불을 지피는 일이네요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_365",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "다행히 주변에 태울 만한 땔감은 많이 있으니까.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_366",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "작은 불을 만들 부싯깃과 불쏘시개만 있으면 될 것 같네요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_367",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "생존가님, 제가 장작을 쌓는 동안 그것들 좀 모아와 주시겠어요?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_368",
+      "text": "그래, 맡겨 줘.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_369",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "네! 부탁드릴게요!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_370",
+      "text": "토브의 말에 따라 건물 안을 돌아다니며, 부싯깃과 불쏘시개를 찾아다녔고.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_371",
+      "text": "베개와 책 정도를 확보할 수 있었다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_372",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "으음….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_373",
+      "text": "돌아오니 토브는 자신의 파이어 스타터에 무언가를 조심스럽게 적고 있었다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_374",
+      "text": "뭐 하고 있는 거야?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_375",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "아, 생존가님. 벌써 돌아오셨군요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_376",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "지금 제 파이어 스타터를 손보는 중이에요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_377",
+      "text": "뭔가를 적는 것 같던데.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_378",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "아, 하하. 보고 계셨군요….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_379",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "그… 말하기 쑥스러운 이야기인데요. 뭐라고 해야 할까….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_380",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "일종의 의식… 이라고 해야 하나? 아니면, 제 나름대로의 예의라고 할까요?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_381",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "…여기에 제가 교체에 사용한 파이어 스타터의 원래 주인의 이름을 적고 있었어요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_382",
+      "text": "토브는 부끄러워하며 자신의 파이어 스타터에 달린 지저분한 이름표를 보여주었다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_383",
+      "text": "거기에 붙어 있는 이름 스티커들엔 수많은 이름이 적혀 있었지만.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_384",
+      "text": "그중에 겹쳐져 가려진 이름은 하나도 없었다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_385",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "제가 처음 주웠을 때부터 이렇게 이름들이 적혀 있더라고요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_386",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "…여기 이름이 적힌 분들이 어떤 사람들인지는 저도 잘 몰라요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_387",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "이 파이어 스타터를 거쳐 간 사람들의 이름일 수도 있고.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_388",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "저처럼 다른 누군가를 기억하기 위해서 적은 거일 수도 있겠죠.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_389",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "이유야 어쨌든, 여기에 적힌 사람들의 이름이….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_390",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "지워지지 않기를 바라는 마음만큼은 확실하게 느껴지더라고요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_391",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "그래서 저도 그 마음을 이어받고 싶어서 이렇게 그분의 이름을 적고 있는 거죠.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_392",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "하, 하핫! 낯간지러운 이야기죠?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_393",
+      "text": "조금 그럴지도 모르겠네.",
+      "window": "Choice",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_394",
+      "text": "아니. 좋은 이야기야.",
+      "window": "Choice",
+      "voice": null,
+      "chosen": true
+    },
+    {
+      "id": "d_favorite_tove_395",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "…어, 그, 그게, 그러니까.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_396",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "감사합니다…!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_397",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "그, 으럼. 불을 붙여보도록 하죠.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_398",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "생존가님이 모아와 주신 베개의 솜을 부싯깃 삼아서 이렇게 파이어 스타터를 갖다 대고.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_399",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "옆에 달린 긁개로 이 봉을 긁으면….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_400",
+      "text": "틱. 틱.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_401",
+      "text": "토브가 쇳조각으로 교체한 합금 봉을 긁자, 강한 불똥이 튀었고.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_402",
+      "text": "불똥은 이내 부싯깃, 불쏘시개를 차례대로 태우고 땔감에 불을 붙였다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_403",
+      "text": "화르르륵.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_404",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "이렇게 쉽게 불을 붙일 수 있답니다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_405",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "…라이터나 성냥만큼 쉬운 건 아니지만.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_406",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "훨씬 튼튼하다는 게 무엇보다 큰 장점이죠.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_407",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "그럼, 불도 붙였으니까….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_408",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "이제 허기를 달래도록 할까요?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_409",
+      "text": "모닥불의 온기가 천천히 방 안에 퍼지는 것을 느끼면서.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_410",
+      "text": "토브와 함께 준비한 음식을 데워 먹었다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_411",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "흐아~ 역시 음식은 따뜻해야 한다니까요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_412",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "그리고 그를 위한 불의 존재는, 인류 생존의 근간이라고 할 수 있죠!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_413",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "그래서 불을 피우는 도구의 존재가 소중한 거고요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_414",
+      "text": "동감이야.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_415",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "역시 생존가님이라면 이해해주실 줄 알았어요!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_416",
+      "text": "타닥, 탁.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_417",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "…따뜻하네요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_418",
+      "text": "그러네.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_419",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "이렇게 앉아서 불을 바라보고 있으면.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_420",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "몸뿐만 아니라 마음도 따뜻해지는 것 같지 않나요?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_421",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "…전에 이 파이어 스타터를 사용했었던 사람들도 이 온기를 느꼈겠죠.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_422",
+      "text": "토브는 자신의 파이어 스타터를 소중하게 움켜쥐며 중얼거렸다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_423",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "그래서 이러고 있으면.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_424",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "그 사람들과 같은 감정을 공유하고 있는 기분이 들어요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_425",
+      "text": "어쩌면 거기에 남은 사람들의 추억 때문일지도 모르지.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_426",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "여기, 에요?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_427",
+      "text": "소중하게 여긴 물건에는 무언가가 깃든다고 하잖아.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_428",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "그럼, 전에 사용했던 사람들도 이걸 정말 소중하게 생각했겠네요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_429",
+      "text": "틀림없이 그럴 거야.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_430",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "…역시 그렇겠죠.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_431",
+      "text": "그런데 거기 이름표에 왜 토브의 이름은 없어?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_432",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "제, 제 이름이요?!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_433",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "어… 감히 제가 여기 제 이름을 적어도 될까요?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_434",
+      "text": "토브는 그걸 소중하게 생각하지?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_435",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "물론이죠! 정말 소중한 물건이에요!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_436",
+      "text": "그러면 그 파이어 스타터에 토브의 이름을 적을 자격은 충분해.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_437",
+      "text": "그걸 소중하게 생각했던 사람들과 마찬가지로.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_438",
+      "text": "토브도 지상을 살아가는 생존 전문가잖아.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_439",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "…생존가님….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_440",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "그으, 저, 저기….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_441",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "그러면 제 이름을 적는 김에 말이죠!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_442",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "생존가님 이름도 함께 적고 싶은데, …괜찮으신가요?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_443",
+      "text": "내 이름말이야?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_444",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "파이어 스타터를 수리하기 위해 저와 함께 해주신 데다가.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_445",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "생존가님도 저랑 같은, 지상을 살아가는 생존 전문가니까요!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_446",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "그러니까 제가 이름을 적을 자격이 있다면!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_447",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "생존가님 역시 이름을 적을 자격이 있다는 거예요!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_448",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "…생존가님의 이름이 지워지지 않기를 바라는 마음도 있고요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_449",
+      "text": "좋아. 그럼 내 이름도 부탁할게.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_450",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "히힛! 넵, 알겠습니다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_451",
+      "text": "토브는 파이어 스타터에 달린 낡은 이름표에 조심스럽게 토브와 내 이름을 적었다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_452",
+      "text": "그리고 배시시 웃으며 이름표를 보여주었다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_tove_453",
+      "speaker": "tove",
+      "speakerName": "토브",
+      "text": "이 이름표에 적힌 이름들이 절대 잊혀지지 않도록, 우리 반드시 생존하도록 해요!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xu-44/cg-20/971525e4870d57187a646e92b31ee993.webp",
+      "voice": null
+    }
+  ]
+}

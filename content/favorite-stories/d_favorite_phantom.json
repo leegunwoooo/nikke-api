@@ -1,0 +1,4291 @@
+{
+  "groupId": "d_favorite_phantom",
+  "type": "favorite",
+  "name": "베스트셀러의 괴도 팬텀",
+  "nikke": "팬텀",
+  "sourceVideo": "https://youtu.be/-yT9du5AyWE",
+  "lines": [
+    {
+      "id": "d_favorite_phantom_1",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "후우…",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_2",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "오늘은 도서관의 대청소 날이오.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_3",
+      "speaker": "arcana",
+      "speakerName": "아르카나",
+      "text": "우엥~",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/of-98/kh-89/2a8b1a833483ca6aaef103f3ce487f0b.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_4",
+      "speaker": "arcana",
+      "speakerName": "아르카나",
+      "text": "결국 이날이 오고 말았군요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/of-98/kh-89/2a8b1a833483ca6aaef103f3ce487f0b.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_5",
+      "speaker": "label",
+      "speakerName": "레이블",
+      "text": "도서관에서. 청소를 하다가…",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/tl-27/po-17/af2657ff5ffb44f70ed2db8d5de8985a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_6",
+      "speaker": "label",
+      "speakerName": "레이블",
+      "text": "높은 책에 손이 닿지 않아서… 발꿈치를 들고….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/tl-27/po-17/af2657ff5ffb44f70ed2db8d5de8985a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_7",
+      "speaker": "label",
+      "speakerName": "레이블",
+      "text": "그때 뒤에서 인기척이 느껴지고…! 손이 겹쳐져서 …! 으흐흐….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/tl-27/po-17/af2657ff5ffb44f70ed2db8d5de8985a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_8",
+      "speaker": "arcana",
+      "speakerName": "아르카나",
+      "text": "저는 늘 하던 대로 카운터 쪽을 맡을게요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/of-98/kh-89/2a8b1a833483ca6aaef103f3ce487f0b.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_9",
+      "speaker": "label",
+      "speakerName": "레이블",
+      "text": "흐흐… 저는 가장 구석진 곳부터….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/tl-27/po-17/af2657ff5ffb44f70ed2db8d5de8985a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_10",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "나는 작업실부터 진행하겠소.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_11",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "다들, 잘 부탁하오.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_12",
+      "text": "부스럭- 부스럭-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_13",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "휴… 아무리 나만 쓰는 작업실이라 해도 정리를 너무 안 했나 보오.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_14",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "괴도 자료들이랑, 도서관 자료들이 마구잡이로 섞여 있군.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_15",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "이 자료는 이따가 정리하면 될 것 같고….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_16",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "음?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_17",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "아, 이 상자는…",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_18",
+      "text": "팬텀은 구석에 박혀있던 먼지 묻은 상자를 꺼냈다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_19",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "이런….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_20",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "이 소중한 것을 내가 이렇게 방치해두었다니…",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_21",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "정말 미안하오.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_22",
+      "text": "탁- 탁-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_23",
+      "text": "먼지를 털어내고.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_24",
+      "text": "조심스럽게 상자의 뚜껑을 연다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_25",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "내 괴도의 시작을 함께했던….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_26",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "나의-",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_27",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "……?!?!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_28",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "이, 이, 이럴 수가…!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_29",
+      "text": "바닥으로 떨어진 상자 안에는 아무것도 들어있지 않다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_30",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "…이건.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_31",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "괴도의 자존심을 걸고, 있을 수 없는 일이오.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_32",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "당장 예고장을 써야겠소!!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_33",
+      "text": "[나애 소중한 물건이 사라졋쏘.]",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_34",
+      "text": "[정의 과도단애 히미 피료하오.]",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_35",
+      "text": "[붙이 함깨 헤주시오.]",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_36",
+      "text": "평소보다 맞춤법 파괴가 심한 것 같은데.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_37",
+      "text": "익숙한 종이에 쓰여진, 익숙한 글씨.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_38",
+      "text": "덜컹-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_39",
+      "text": "자연스럽게 열리는 창문.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_40",
+      "text": "그리고…",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_41",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "그대, 내가 왔소.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_42",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "예고장은 받았소?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_43",
+      "text": "받긴 했는데, 예고장이 아니라 그냥 편지 아니야?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_44",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "맞소.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_45",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "사실상 그대에게 도움을 요청하는 편지였소.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_46",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "…정말 부끄럽지만.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_47",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "내가 아주 소중히 여기던 것을 도둑맞았소.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_48",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "그것을 함께 되찾아달라고 부탁을 하러 온 것이오.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_49",
+      "text": "그래? 그게 뭔데?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_50",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "음….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_51",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "내 입으로 차마 말하기에는 좀 부끄럽지만….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_52",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "내, 내가.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_53",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "…괴도가 되기로 처음 마음먹었을 때 사용했던 가면이오.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_54",
+      "text": "팬텀은 날 때부터 괴도인 게 아니었구나!",
+      "window": "Choice",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_55",
+      "text": "지금 쓰고 있는 가면이 처음부터 쓰던 게 아니었구나.",
+      "window": "Choice",
+      "voice": null,
+      "chosen": true
+    },
+    {
+      "id": "d_favorite_phantom_56",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "그렇소.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_57",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "이래 봬도, 괴도 생활을 한 지는 제법 오래되었소.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_58",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "처음에는 아주 형편없는 괴도였지.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_59",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "그런 나를 지탱해 준, 아주 소중한 가면이라오.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_60",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "아무튼, 그래서 그대를 찾아왔소.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_61",
+      "text": "그런데 다른 괴도단 애들은 안 부르는 거야?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_62",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "…그게 말이오.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_63",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "사실 우리 괴도단을 의심하고 있기 때문이오.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_64",
+      "text": "에엥? 걔들을?? 대체 왜???",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_65",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "생각해 보시오.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_66",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "나와 함께 활동하고 있는 이들은, 그대를 제외하면 셋.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_67",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "퀀시, 미란다, 델타, 이렇게요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_68",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "그들은 괴도에 관한 강한 열망과 큰 기대를 안고 있지.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_69",
+      "text": "…….",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_70",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "그러니, 최고의 괴도가 되겠다는 마음으로 나의 첫 가면을 훔친 것이 아니겠소!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_71",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "바로, 나.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_72",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "괴도 팬텀이 되고 싶어서 말이오!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_73",
+      "text": "…그럼 나는 왜 의심 안 했는데?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_74",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "뭐라고 해야 하나…",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_75",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "그대는 그럴 이미지가 아니오.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_76",
+      "text": "하핫, 내가 좀 선량한 이미지긴 하지.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_77",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "그렇다기보다는, 귀찮아할 것 같소.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_78",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "관심도 없을 것 같고.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_79",
+      "text": "…….",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_80",
+      "text": "맞는 말인데 묘하게 기분이 별로네.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_81",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "그래서, 그대.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_82",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "나를 도와 함께 하겠소?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_83",
+      "text": "그래, 하자.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_84",
+      "text": "도와줄게.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_85",
+      "text": "나와 팬텀은 지휘관실에서 이어진 구멍에 들어갔고.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_86",
+      "text": "델타의 숙소로 넘어갔다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_87",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "흠…",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_88",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "괴도 닌자, 델타.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_89",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "여기엔 없는 것 같소.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_90",
+      "text": "또 어디 이상한 곳에 숨어있는 거 아냐?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_91",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "그건 아니오.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_92",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "델타가 아무리 날고 기어도, 결국 수습이니까 말이오.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_93",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "정식 괴도인 나를 속일 수는 없지.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_94",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "델타는 여기에 없소.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_95",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "그대, 혹시 알고 있는 것 있소?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_96",
+      "text": "음… 지금 시간이면 아마 관측소에 있을 수도 있겠다.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_97",
+      "text": "가볼까?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_98",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "좋소, 앞장서시오.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_99",
+      "text": "지잉-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_100",
+      "text": "관측소의 문을 열자, 각 잡힌 자세로 서 있는 델타가 우리를 반겨주었다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_101",
+      "speaker": "delta",
+      "speakerName": "델타",
+      "text": "좋은 아침이지 말입니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/fj-90/ll-52/c323eb897a0788dd888219ce3f8ed0c2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_102",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "…여기 있었군, 델타.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_103",
+      "speaker": "delta",
+      "speakerName": "델타",
+      "text": "어쩐 일로 오셨습니까, 팬텀.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/fj-90/ll-52/c323eb897a0788dd888219ce3f8ed0c2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_104",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "델타에게 묻고 싶은 게 있어서 왔소.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_105",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "내가 묻는 말에 부디 솔직하게 답해주면 좋겠소.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_106",
+      "speaker": "delta",
+      "speakerName": "델타",
+      "text": "예. 말씀하시지 말입니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/fj-90/ll-52/c323eb897a0788dd888219ce3f8ed0c2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_107",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "혹시 델타, 그대가.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_108",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "내 소중한 가면을 가져갔소?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_109",
+      "speaker": "delta",
+      "speakerName": "델타",
+      "text": "가면… 말입니까?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/fj-90/ll-52/c323eb897a0788dd888219ce3f8ed0c2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_110",
+      "speaker": "delta",
+      "speakerName": "델타",
+      "text": "가면은 지금 팬텀의 얼굴 위에 있지 말입니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/fj-90/ll-52/c323eb897a0788dd888219ce3f8ed0c2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_111",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "이게 아니오.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_112",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "이렇게 정갈하고, 예쁜 모습이 아니오.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_113",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "낡고, 너덜너덜한 가면이오.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_114",
+      "speaker": "delta",
+      "speakerName": "델타",
+      "text": "그런 가면은 본 적 없습니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/fj-90/ll-52/c323eb897a0788dd888219ce3f8ed0c2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_115",
+      "speaker": "delta",
+      "speakerName": "델타",
+      "text": "더욱, 제가 가져갈 이유도 없지 말입니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/fj-90/ll-52/c323eb897a0788dd888219ce3f8ed0c2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_116",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "델타, 그대는 정의 괴도단 중에서 유일한 수습이오.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_117",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "정식 괴도가 되고 싶어, 나의 가면을 훔친 것이 아니오?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_118",
+      "speaker": "delta",
+      "speakerName": "델타",
+      "text": "그렇게 비겁한 행동은 하지 않습니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/fj-90/ll-52/c323eb897a0788dd888219ce3f8ed0c2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_119",
+      "speaker": "delta",
+      "speakerName": "델타",
+      "text": "만약 팬텀의 가면을 훔친 것으로 제가 정식 괴도가 될 수 있었다면,",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/fj-90/ll-52/c323eb897a0788dd888219ce3f8ed0c2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_120",
+      "speaker": "delta",
+      "speakerName": "델타",
+      "text": "저는 정의 괴도단에 정식으로 입단하지 않을 것입니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/fj-90/ll-52/c323eb897a0788dd888219ce3f8ed0c2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_121",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "어째서지.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_122",
+      "speaker": "delta",
+      "speakerName": "델타",
+      "text": "정의롭지 못하기 때문입니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/fj-90/ll-52/c323eb897a0788dd888219ce3f8ed0c2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_123",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "…!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_124",
+      "speaker": "delta",
+      "speakerName": "델타",
+      "text": "제가 되고 싶었던 괴도는, 정의로웠습니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/fj-90/ll-52/c323eb897a0788dd888219ce3f8ed0c2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_125",
+      "speaker": "delta",
+      "speakerName": "델타",
+      "text": "그리고 그것이 저를 더 단단하게 만들어 줄 것이라 믿었기 때문에.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/fj-90/ll-52/c323eb897a0788dd888219ce3f8ed0c2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_126",
+      "speaker": "delta",
+      "speakerName": "델타",
+      "text": "열심히 수행을 했던 것입니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/fj-90/ll-52/c323eb897a0788dd888219ce3f8ed0c2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_127",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "…….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_128",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "오늘은 수행을 하고 있지 않은 듯 하오.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_129",
+      "speaker": "delta",
+      "speakerName": "델타",
+      "text": "맞습니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/fj-90/ll-52/c323eb897a0788dd888219ce3f8ed0c2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_130",
+      "speaker": "delta",
+      "speakerName": "델타",
+      "text": "수습 괴도 닌자 델타가 아닌, 스카우팅의 델타이기 때문입니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/fj-90/ll-52/c323eb897a0788dd888219ce3f8ed0c2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_131",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "…그렇군.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_132",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "결국, 그것이 그대의 본체.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_133",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "그래서, 괴도 닌자를 통해 델타, 그대는 더 강해졌소?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_134",
+      "speaker": "delta",
+      "speakerName": "델타",
+      "text": "예. 무척 단단하고 강해졌지 말입니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/fj-90/ll-52/c323eb897a0788dd888219ce3f8ed0c2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_135",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "…….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_136",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "이해했소.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_137",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "그대는 범인이 아닌 듯하군.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_138",
+      "text": "어떻게 확신할 수 있는 거야?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_139",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "저 올곧은 눈을 보시오.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_140",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "저런 눈을 한 자는, 누군가의 것을 빼앗으려 들지 않소.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_141",
+      "text": "…….",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_142",
+      "speaker": "delta",
+      "speakerName": "델타",
+      "text": "도움이 필요하신 거라면, 돕겠습니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/fj-90/ll-52/c323eb897a0788dd888219ce3f8ed0c2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_143",
+      "speaker": "delta",
+      "speakerName": "델타",
+      "text": "언제든 변할 수 있도록, 괴도 복장을 챙기고 다니지 말입니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/fj-90/ll-52/c323eb897a0788dd888219ce3f8ed0c2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_144",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "아니오.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_145",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "델타는 델타의 자리에 있으시오.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_146",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "하지만, 아무래도 개인적인 물건이다 보니 내 손으로 직접 찾아보고 싶소.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_147",
+      "speaker": "delta",
+      "speakerName": "델타",
+      "text": "알겠습니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/fj-90/ll-52/c323eb897a0788dd888219ce3f8ed0c2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_148",
+      "speaker": "delta",
+      "speakerName": "델타",
+      "text": "그럼, 추후에라도 도움이 필요하시면 말씀해 주시기 바랍니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/fj-90/ll-52/c323eb897a0788dd888219ce3f8ed0c2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_149",
+      "speaker": "delta",
+      "speakerName": "델타",
+      "text": "저는, 스카우팅의 델타입니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/fj-90/ll-52/c323eb897a0788dd888219ce3f8ed0c2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_150",
+      "speaker": "delta",
+      "speakerName": "델타",
+      "text": "탐색, 수색, 정찰이 제가 하는 일이지 말입니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/fj-90/ll-52/c323eb897a0788dd888219ce3f8ed0c2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_151",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "그렇군, 잘 알겠소.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_152",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "말씀에 감사하오.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_153",
+      "text": "관측소를 나온 우리는, 미란다의 숙소로 향했다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_154",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "흠.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_155",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "미란다도 여기에 없군.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_156",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "그렇다면 아무래도 경찰서에 있겠지?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_157",
+      "text": "그렇겠지.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_158",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "이것 참, 곤란하군.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_159",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "경찰서에는 내가 들어가기 힘드니 말이오.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_160",
+      "text": "음… 괜찮아, 가보자.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_161",
+      "text": "오늘은 괴도가 아니라, 시민으로 가는 거니까.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_162",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "…호오.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_163",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "알겠소, 그대가 그렇게 말한다면 믿고 따라가겠소.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_164",
+      "text": "지잉-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_165",
+      "speaker": "miranda",
+      "speakerName": "미란다",
+      "text": "안녕하십니까!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vg-25/er-68/88e9d12d692695aaae54b796a4e3d0a4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_166",
+      "speaker": "miranda",
+      "speakerName": "미란다",
+      "text": "어엇…!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vg-25/er-68/88e9d12d692695aaae54b796a4e3d0a4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_167",
+      "speaker": "miranda",
+      "speakerName": "미란다",
+      "text": "지휘관과 팬텀입니다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vg-25/er-68/88e9d12d692695aaae54b796a4e3d0a4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_168",
+      "speaker": "miranda",
+      "speakerName": "미란다",
+      "text": "팬텀은 경찰서에 들어오면 안 됩니다…!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vg-25/er-68/88e9d12d692695aaae54b796a4e3d0a4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_169",
+      "speaker": "miranda",
+      "speakerName": "미란다",
+      "text": "아! 아닙니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vg-25/er-68/88e9d12d692695aaae54b796a4e3d0a4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_170",
+      "speaker": "miranda",
+      "speakerName": "미란다",
+      "text": "수갑을 채우면 된다고 폴리가 그랬습니다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vg-25/er-68/88e9d12d692695aaae54b796a4e3d0a4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_171",
+      "text": "잠깐, 미란다.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_172",
+      "text": "우리는 오늘 시민으로서 경찰서에 찾아온 거야.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_173",
+      "speaker": "miranda",
+      "speakerName": "미란다",
+      "text": "아, 괴도가 아닌 것입니까?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vg-25/er-68/88e9d12d692695aaae54b796a4e3d0a4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_174",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "괴도는 맞-",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_175",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "우웁!!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_176",
+      "text": "응, 소중한 물건이 분실됐거든.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_177",
+      "speaker": "miranda",
+      "speakerName": "미란다",
+      "text": "분실물 접수를 하러 오셨던 겁니까?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vg-25/er-68/88e9d12d692695aaae54b796a4e3d0a4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_178",
+      "speaker": "miranda",
+      "speakerName": "미란다",
+      "text": "그러면 들어오셔도 됩니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vg-25/er-68/88e9d12d692695aaae54b796a4e3d0a4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_179",
+      "text": "다행히, 우리는 안전하게 경찰서에 들어올 수 있었다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_180",
+      "speaker": "miranda",
+      "speakerName": "미란다",
+      "text": "분실물이 어떤 것입니까?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vg-25/er-68/88e9d12d692695aaae54b796a4e3d0a4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_181",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "…….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_182",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "내 괴도 가면이오.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_183",
+      "speaker": "miranda",
+      "speakerName": "미란다",
+      "text": "팬텀의 괴도 가면 말입니까?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vg-25/er-68/88e9d12d692695aaae54b796a4e3d0a4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_184",
+      "speaker": "miranda",
+      "speakerName": "미란다",
+      "text": "가면은 지금 팬텀의 얼굴 위에 있습니다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vg-25/er-68/88e9d12d692695aaae54b796a4e3d0a4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_185",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "이 가면이 아니라, 다른 가면이오.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_186",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "아주 소중한 추억이 있는.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_187",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "그리고, 나는 그 가면을 미란다, 그대가 가져간 것이 아닌가 의심하고 있소.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_188",
+      "speaker": "miranda",
+      "speakerName": "미란다",
+      "text": "제가 말입니까?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vg-25/er-68/88e9d12d692695aaae54b796a4e3d0a4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_189",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "그렇소.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_190",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "더 완벽한 괴도 경찰이 되기 위해, 나의 가면을 가져간 것 아니겠소!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_191",
+      "speaker": "miranda",
+      "speakerName": "미란다",
+      "text": "아닙니다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vg-25/er-68/88e9d12d692695aaae54b796a4e3d0a4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_192",
+      "speaker": "miranda",
+      "speakerName": "미란다",
+      "text": "저는 팬텀이 준 아주 멋진 가면과 괴도복이 있습니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vg-25/er-68/88e9d12d692695aaae54b796a4e3d0a4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_193",
+      "speaker": "miranda",
+      "speakerName": "미란다",
+      "text": "굳이 팬텀의 소중한 추억이 담긴 가면을 가져갈 이유가 없습니다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vg-25/er-68/88e9d12d692695aaae54b796a4e3d0a4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_194",
+      "speaker": "miranda",
+      "speakerName": "미란다",
+      "text": "그리고, 저는 A.C.P.U.의 미란다입니다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vg-25/er-68/88e9d12d692695aaae54b796a4e3d0a4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_195",
+      "speaker": "miranda",
+      "speakerName": "미란다",
+      "text": "허락도 없이 다른 사람의 물건을 가져가지 않습니다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vg-25/er-68/88e9d12d692695aaae54b796a4e3d0a4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_196",
+      "speaker": "miranda",
+      "speakerName": "미란다",
+      "text": "그런 행동은, 괴도도 경찰도 될 수 없습니다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vg-25/er-68/88e9d12d692695aaae54b796a4e3d0a4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_197",
+      "speaker": "miranda",
+      "speakerName": "미란다",
+      "text": "그렇기 때문에 괴도 경찰은 더더욱 될 수 없습니다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vg-25/er-68/88e9d12d692695aaae54b796a4e3d0a4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_198",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "……!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_199",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "…….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_200",
+      "speaker": "miranda",
+      "speakerName": "미란다",
+      "text": "그렇게 슬픈 표정 짓지 않아도 됩니다, 팬텀!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vg-25/er-68/88e9d12d692695aaae54b796a4e3d0a4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_201",
+      "speaker": "miranda",
+      "speakerName": "미란다",
+      "text": "저희 A.C.P.U.는 시민의 안전과 행복을 위해 최선을 다합니다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vg-25/er-68/88e9d12d692695aaae54b796a4e3d0a4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_202",
+      "speaker": "miranda",
+      "speakerName": "미란다",
+      "text": "그러니 팬텀의 가면을 반드시 찾아드리겠습니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vg-25/er-68/88e9d12d692695aaae54b796a4e3d0a4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_203",
+      "speaker": "miranda",
+      "speakerName": "미란다",
+      "text": "혹시 사진을 갖고 계십니까?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vg-25/er-68/88e9d12d692695aaae54b796a4e3d0a4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_204",
+      "speaker": "miranda",
+      "speakerName": "미란다",
+      "text": "없다면 색깔이나 생김새를 표현해 줘도 됩니다! 분실물 찾기에 도움이 됩니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vg-25/er-68/88e9d12d692695aaae54b796a4e3d0a4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_205",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "사진은 없소.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_206",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "색깔은 어두운색에, 종이로 만들어 구겨지고, 낡았지.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_207",
+      "speaker": "miranda",
+      "speakerName": "미란다",
+      "text": "확인했습니다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vg-25/er-68/88e9d12d692695aaae54b796a4e3d0a4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_208",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "하지만, 도와주지 않아도 괜찮소.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_209",
+      "speaker": "miranda",
+      "speakerName": "미란다",
+      "text": "분실물은 함께 찾아야 합니다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vg-25/er-68/88e9d12d692695aaae54b796a4e3d0a4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_210",
+      "speaker": "miranda",
+      "speakerName": "미란다",
+      "text": "그건 제가 해야 할 일입니다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vg-25/er-68/88e9d12d692695aaae54b796a4e3d0a4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_211",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "알고 있소.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_212",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "다만, 이건 내 손으로 직접 찾고 싶소.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_213",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "미란다는 나보다 더 급한 사람들을 도와주면 좋겠소.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_214",
+      "speaker": "miranda",
+      "speakerName": "미란다",
+      "text": "음. 잘 모르겠습니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vg-25/er-68/88e9d12d692695aaae54b796a4e3d0a4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_215",
+      "speaker": "miranda",
+      "speakerName": "미란다",
+      "text": "그래도 팬텀이 그렇게 말씀하시니, 알겠습니다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vg-25/er-68/88e9d12d692695aaae54b796a4e3d0a4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_216",
+      "speaker": "miranda",
+      "speakerName": "미란다",
+      "text": "경찰서는 언제나 열려있고, A.C.P.U.의 미란다는 언제나 시민들을 위합니다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vg-25/er-68/88e9d12d692695aaae54b796a4e3d0a4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_217",
+      "speaker": "miranda",
+      "speakerName": "미란다",
+      "text": "찾다가 힘드시면 다시 방문해 주시기 바랍니다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vg-25/er-68/88e9d12d692695aaae54b796a4e3d0a4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_218",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "알겠소.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_219",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "말씀에 감사하오.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_220",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "마지막은, 퀀시로군.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_221",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "…….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_222",
+      "text": "내키지 않아 보이는 표정이네.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_223",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "내키지 않는다기보다는…",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_224",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "생각이 좀 많아져서 말이오.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_225",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "일단 출발하도록 하지.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_226",
+      "text": "우리는 다시 지휘관실로 돌아갔고,",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_227",
+      "text": "퀀시의 방….",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_228",
+      "text": "아니, 퀀시의 감옥과 이어진 통로로 들어갔다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_229",
+      "text": "덜컹-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_230",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "음?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_231",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "흠… 아무도 없는 것 같소만.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_232",
+      "text": "그렇네.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_233",
+      "text": "감옥 안에는 아무도 없었고.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_234",
+      "text": "그냥 나와 팬텀이 감옥에 갇힌 꼴이 되어 버렸다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_235",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "또 탈옥해서 어디 나가 있나 보오.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_236",
+      "text": "…이 정도면 갱생관이 문제인 거 아냐?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_237",
+      "text": "그때, 뒤에서 익숙한 목소리가 들려온다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_238",
+      "speakerName": "퀀시",
+      "text": "응?",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_239",
+      "text": "이 목소리는…",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_240",
+      "speakerName": "퀀시",
+      "text": "교관님이랑, 팬텀?",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_241",
+      "text": "뒤를 돌아보자, 다른 구멍을 통해 감옥으로 들어오는 퀀시가 보인다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_242",
+      "speakerName": "퀀시",
+      "text": "안녕~ 이렇게 먼저 찾아와 준 건 오랜만이네.",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_243",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "어딜 다녀온 것이오?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_244",
+      "speakerName": "퀀시",
+      "text": "나? 아지트.",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_245",
+      "speakerName": "퀀시",
+      "text": "최근에 좋은 물건들을 많이 구했거든~",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_246",
+      "speakerName": "퀀시",
+      "text": "병뚜껑 아주 쏠쏠하게 벌었어~! 킥킥.",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_247",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "좋은 물건…!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_248",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "역시, 퀀시! 그대가 나의 괴도 가면을 가져간 것이오?!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_249",
+      "speakerName": "퀀시",
+      "text": "엥? 괴도 가면?",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_250",
+      "speakerName": "퀀시",
+      "text": "가면은 지금 팬텀의 얼굴 위에 있잖아.",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_251",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "이 가면이 아니오.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_252",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "내가 가장 소중히 여기는, 나의 첫 괴도 가면이 없어졌단 말이오.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_253",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "게다가, 퀀시. 그대는 소매치기에도 일가견이 있고.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_254",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "원한다면 어디든 갈 수 있지.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_255",
+      "speakerName": "퀀시",
+      "text": "응, 맞긴 한데.",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_256",
+      "speakerName": "퀀시",
+      "text": "나는 그런 건 안 훔쳐.",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_257",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "그런 거…?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_258",
+      "speakerName": "퀀시",
+      "text": "우리 아지트에서 팬텀의 소중하고 오래된 낡은 가면을 사고 싶어 하는 사람.",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_259",
+      "speakerName": "퀀시",
+      "text": "아무도 없을 거거든.",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_260",
+      "speakerName": "퀀시",
+      "text": "그것보다 가치 있는 것들이 얼마나 많은데.",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_261",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "…!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_262",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "어떻게 그런 말을…!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_263",
+      "speakerName": "퀀시",
+      "text": "내 말은~ 개개인의 가치는 다 다르다는 거야.",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_264",
+      "text": "스윽-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_265",
+      "text": "퀀시가 병뚜껑 하나를 꺼내 들었다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_266",
+      "speakerName": "퀀시",
+      "text": "팬텀이 봤을 때 이 병뚜껑의 가치는 어떻게 돼?",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_267",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "…?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_268",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "그냥 재활용 쓰레기지 않소.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_269",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "거기에 가치가 있는 거요?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_270",
+      "speakerName": "퀀시",
+      "text": "응, 우리한테는 이게 화폐거든.",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_271",
+      "speakerName": "퀀시",
+      "text": "크레디트보다 더 큰 가치를 갖고 있는 거야~",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_272",
+      "speakerName": "퀀시",
+      "text": "다른 사람들에게는 아니더라도,",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_273",
+      "speakerName": "퀀시",
+      "text": "팬텀에게 그 가면이 누구보다 소중한 것처럼.",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_274",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "…그렇군.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_275",
+      "speakerName": "퀀시",
+      "text": "그리고~ 난 그 가면에 대해 오늘 처음 얘기 듣는 건데, 어디에 있는 줄 알고 그걸 훔쳐.",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_276",
+      "speakerName": "퀀시",
+      "text": "같은 단원에 대한 신뢰가 너무 없는 것 아냐~? 위대하신 괴도 팬텀님?",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_277",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "…….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_278",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "미안하오.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_279",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "급한 마음에 그만…",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_280",
+      "speakerName": "퀀시",
+      "text": "에이~ 농담인데 너무 다큐로 받네.",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_281",
+      "speakerName": "퀀시",
+      "text": "도움이 필요하면 말해 줘.",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_282",
+      "speakerName": "퀀시",
+      "text": "탈옥왕이라는 수식어가 괜히 붙은 게 아니니까.",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_283",
+      "speakerName": "퀀시",
+      "text": "범인의 집까지 단번에 가는 루트를 뚫어줄게!",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_284",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "…이것 참.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_285",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "다들 든든하기 짝이 없군.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_286",
+      "speakerName": "퀀시",
+      "text": "응? 그게 무슨 말이야?",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_287",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "실은, 내 가면을 훔쳐 갈 만한 사람은 정의 괴도 단원들밖에 없을 것이라 생각하고.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_288",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "모두를 의심하면서 다녔소.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_289",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "그런데, 다들 범인이 아니었고.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_290",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "하나같이 입을 모아 나를 도와준다고 하더군.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_291",
+      "speakerName": "퀀시",
+      "text": "키킥! 우리가 그걸 훔쳤을 리가 없잖아~",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_292",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "그러게 말이오.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_293",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "다음에 모두에게 제대로 사과를 해야겠소.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_294",
+      "speakerName": "퀀시",
+      "text": "음~ 다들 아무 생각 없을 것 같긴 한데.",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_295",
+      "speakerName": "퀀시",
+      "text": "그게 마음이 편할 것 같으면 그러도록 해.",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_296",
+      "speakerName": "퀀시",
+      "text": "아무튼, 나도 아지트에 있는 죄수들에게 정보를 한 번 모아볼게.",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_297",
+      "speakerName": "퀀시",
+      "text": "열심히 찾아보자!",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_298",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "…그래, 알겠소.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_299",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "말씀에 감사하오.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_300",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "…후.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_301",
+      "text": "이제 어디로 가야 할까.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_302",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "그러게 말이오.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_303",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "…….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_304",
+      "text": "기분이 안 좋아 보여.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_305",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "…그렇소.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_306",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "가면이 없어진 것도 없어진 거지만.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_307",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "괜히 모두를 의심했다는 생각이 드오.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_308",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "더욱이, 다들 나를 도와준다고 하지 않소.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_309",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "괴도 활동을 하는 것도 아닌데 모두를 끼어들게 한 것 같아서 신경이 쓰이는군.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_310",
+      "text": "무슨 소리야.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_311",
+      "text": "괴도 활동이든 아니든 상관없지.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_312",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "…?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_313",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "다들 본인의 일상을 살고 있지 않았소.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_314",
+      "text": "괴도도 그 일상 중 하나잖아.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_315",
+      "text": "괴도복을 입지 않았다고 해서, 정의 괴도단이 아닌 건 아니니까.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_316",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "…!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_317",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "…….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_318",
+      "text": "그리고, 생각해 보니까 전제부터 잘못됐어.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_319",
+      "text": "그 잃어버렸다는 가면, 어디에 뒀었어?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_320",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "상자 안에 넣어서, 작업실 안에 보관해뒀소.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_321",
+      "text": "작업실이라면, 팬텀의?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_322",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "그렇… 아니, 아니오.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_323",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "괴도가 아닌 일상을 살던 팬텀의 작업실이오.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_324",
+      "text": "팬텀.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_325",
+      "text": "괴도와 일상의 팬텀을 나눌 필요는 없어.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_326",
+      "text": "오늘 만났던 델타, 미란다, 퀀시 처럼.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_327",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "아…!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_328",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "이 책들만 정리하면 오늘 하루도 끝이군.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_329",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "후우… 조금 지치는구만.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_330",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "음?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_331",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "괴도 P군의 가면?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_332",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "처음 보는 책이오.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_333",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "소설인가 보군.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_334",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "정리하고 쉬면서 한 번 읽어나 볼까.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_335",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "괴도 P군은….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_336",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "힘든 일상이 있지만, 자유로운 뒷면이 있는 존재로군.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_337",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "그 자유 덕분에 힘든 일상을 버티고 있고.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_338",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "음… 다른 괴도 소설도 한 번 읽어볼까.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_339",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "이제야 괴도라는 존재에 대해 조금 더 알 것 같소.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_340",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "게다가 그 자유를 이용해 어둠 속에서 정의를 행한다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_341",
+      "text": "팬텀이 작업실을 둘러본다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_342",
+      "text": "열심히 무언가를 했던 흔적.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_343",
+      "text": "하지만 기억나는 것은 없다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_344",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "…마치.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_345",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "나와 같지 않소!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_346",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "좋소, 조금 어설프지만!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_347",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "이 가면만 있으면, 나도 괴도가 될 수 있을 것이오.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_348",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "뒤에서 모두를 돕고.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_349",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "내 일상은 좀 더 다채로워질 것이오.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_350",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "…내가 행한 모든 정의를 기억하게 될 테니까.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_351",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "맞소.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_352",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "어느새인가 잊고 있었소.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_353",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "나는 괴도이고, 그 괴도는 결국 나인 것을.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_354",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "내가 존재하기에, 괴도도 존재하고.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_355",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "그렇기에 다시 내가 존재한다는 것을….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_356",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "그 가면은.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_357",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "괴도 팬텀을 노린 누군가가 훔쳐 간 것이 아니라.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_358",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "그저, 팬텀이 잃어버린 것일 수도 있겠소.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_359",
+      "text": "그래서, 포기하려고?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_360",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "그냥 놔주는 것뿐이오.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_361",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "초심을 잃은 팬텀에게 주는 벌이기도 하고.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_362",
+      "text": "그래도 혹시 모르잖아.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_363",
+      "text": "한 번만 더 찾아보자.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_364",
+      "text": "도와줄게.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_365",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "…!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_366",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "그, 그대가 그렇게 말한다면.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_367",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "어쩔 수 없군.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_368",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "나의 작업실로 가보는 수밖에.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_369",
+      "text": "어… 내가 가도 괜찮은 거야?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_370",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "그대가 얘기하지 않았소.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_371",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "괴도와 일상의 팬텀을 나눌 필요는 없다고 말이오.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_372",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "특별히 초대하도록 하겠소.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_373",
+      "text": "…….",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_374",
+      "text": "팬텀을 따라 들어간 곳은, 익숙한 도서관이었고.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_375",
+      "text": "우리는 언젠가 들어가 본 적 있는 철문 앞에 함께 섰다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_376",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "…그대.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_377",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "아무것도 묻지 않는 것이오.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_378",
+      "text": "으응… 이제 와서 놀라기도 좀 그렇고.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_379",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "후후, 그렇군.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_380",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "이미 내 정체를 꿰뚫고 있었나 보오.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_381",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "역시, 그대는 언제나 내 기대를 넘어서는 것 같소.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_382",
+      "text": "덜컥! 끼이이-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_383",
+      "text": "철문이 열리고, 팬텀의 작업실이 펼쳐진다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_384",
+      "text": "오, 되게 깔끔한데.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_385",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "깔끔…?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_386",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "아아아악!!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_387",
+      "text": "뭐, 뭐야? 왜 그래!",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_388",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "나, 나는 오늘 대청소 날이었는데…!!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_389",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "그걸 잊고 흥분해서 도서관을 뛰쳐나와 버렸소!!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_390",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "아, 아르카나와 레이블이 모두 정리를 해둔 듯하오…!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_391",
+      "text": "아…",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_392",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "이럴 수가.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_393",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "사, 사, 사죄를 어떻게 해야…!!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_394",
+      "text": "잠깐만.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_395",
+      "text": "책상 위에 쪽지가 하나 있는데?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_396",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "쪽지…?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_397",
+      "text": "[소리 지르면서 뛰쳐나가고 안 들어오길래 청소는 우리가 다 해놨어요.]",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_398",
+      "text": "[뭔지는 잘 모르겠지만, 청소하다가 찾았어요.]",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_399",
+      "text": "[혹시 찾는 게 이거 맞나요?]",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_400",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "…!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_401",
+      "text": "팬텀은 쪽지 옆에 얹어진 [괴도 P군의 가면]이라는 책을 꺼내 들었다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_402",
+      "text": "책 안에서 무언가가 떨어진다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_403",
+      "text": "종이로 만들어 잔뜩 구겨진.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_404",
+      "text": "하지만, 최선을 다해 만든 느낌이 드는.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_405",
+      "text": "낡은 가면이었다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_406",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "아…",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_407",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "이제야 기억났소.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_408",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "더 소중히 보관하고 싶어서, 이 책에 끼워뒀었지.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_409",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "…결국, 여기서 찾게 되는군.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_410",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "두 사람에게 어떻게 감사 인사를 해야 할지 모르겠소.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_411",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "나는-",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_412",
+      "text": "슉-! 탁!!",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_413",
+      "speaker": "delta",
+      "speakerName": "델타",
+      "text": "닌닌.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/fj-90/ll-52/c323eb897a0788dd888219ce3f8ed0c2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_414",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "…?!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_415",
+      "text": "델타?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_416",
+      "speaker": "delta",
+      "speakerName": "델타",
+      "text": "좋은 저녁이지 말입니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/fj-90/ll-52/c323eb897a0788dd888219ce3f8ed0c2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_417",
+      "speaker": "delta",
+      "speakerName": "델타",
+      "text": "팬텀이 찾는 물건과 유사한 것을 발견하여 찾아왔습니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/fj-90/ll-52/c323eb897a0788dd888219ce3f8ed0c2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_418",
+      "text": "델타는 팬텀에게 무섭게 생긴 검은색 가면을 건네주었다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_419",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "이… 이게 무엇이오?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_420",
+      "speaker": "delta",
+      "speakerName": "델타",
+      "text": "가면입니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/fj-90/ll-52/c323eb897a0788dd888219ce3f8ed0c2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_421",
+      "speaker": "delta",
+      "speakerName": "델타",
+      "text": "얼굴을 다 덮는다는 점에서 팬텀이 사용하는 가면과는 다르지만.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/fj-90/ll-52/c323eb897a0788dd888219ce3f8ed0c2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_422",
+      "speaker": "delta",
+      "speakerName": "델타",
+      "text": "혹시나 하여 챙겨왔지 말입니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/fj-90/ll-52/c323eb897a0788dd888219ce3f8ed0c2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_423",
+      "speaker": "delta",
+      "speakerName": "델타",
+      "text": "관측소에서 확인하고 급하게 회수한 거라, 상태는 엉망입니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/fj-90/ll-52/c323eb897a0788dd888219ce3f8ed0c2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_424",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "그, 그럼 설마… 지상까지 다녀왔다는-",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_425",
+      "text": "덜컹-!",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_426",
+      "speakerName": "퀀시",
+      "text": "위대하신 괴도 팬텀님~",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_427",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "…!!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_428",
+      "text": "퀀시.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_429",
+      "speakerName": "퀀시",
+      "text": "킥킥, 생각보다 손님들이 많네.",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_430",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "여긴 어떻게….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_431",
+      "speakerName": "퀀시",
+      "text": "걱정돼서 이곳저곳 돌아다니다가 엇비슷해 보이는 걸 하나 찾아서 들고 왔어.",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_432",
+      "speakerName": "퀀시",
+      "text": "어떤 것 같아?",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_433",
+      "text": "퀀시는 플라스틱으로 된 가면을 건넸다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_434",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "이… 이건 어떻게…?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_435",
+      "speakerName": "퀀시",
+      "text": "사람들한테 수소문도 해보고, 직접 돌아도 다녀봤지.",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_436",
+      "speakerName": "퀀시",
+      "text": "그러다가 누가 비슷한 걸 본 적 있다고 하더라고.",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_437",
+      "speakerName": "퀀시",
+      "text": "내가 이 정보 값으로 병뚜껑 얼마를 쓴 줄 알아~?",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_438",
+      "speakerName": "퀀시",
+      "text": "아무튼, 진짜 가면이 있더라고.",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_439",
+      "speakerName": "퀀시",
+      "text": "팬텀이 찾는 거일 수도 있으니까 챙겨왔어.",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_440",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "이, 이 가면을 위해… 퀀시의 소중한 자산을-",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_441",
+      "text": "지잉-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_442",
+      "text": "다다다다-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_443",
+      "speaker": "miranda",
+      "speakerName": "미란다",
+      "text": "안녕하십니까, 팬텀!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vg-25/er-68/88e9d12d692695aaae54b796a4e3d0a4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_444",
+      "speaker": "miranda",
+      "speakerName": "미란다",
+      "text": "혹시 가면은 찾았습니까?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vg-25/er-68/88e9d12d692695aaae54b796a4e3d0a4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_445",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "…….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_446",
+      "text": "결국 다 모였네.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_447",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "…미란다도 가면을 찾아온 것이오?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_448",
+      "speaker": "miranda",
+      "speakerName": "미란다",
+      "text": "예, 맞습니다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vg-25/er-68/88e9d12d692695aaae54b796a4e3d0a4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_449",
+      "speaker": "miranda",
+      "speakerName": "미란다",
+      "text": "팬텀의 가면을 열심히 찾다가 비슷한 걸 찾았습니다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vg-25/er-68/88e9d12d692695aaae54b796a4e3d0a4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_450",
+      "speaker": "miranda",
+      "speakerName": "미란다",
+      "text": "한 번 봐주시겠습니까?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vg-25/er-68/88e9d12d692695aaae54b796a4e3d0a4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_451",
+      "text": "미란다는, 어린이용 동물 가면을 건넨다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_452",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "이건…",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_453",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "어디서 찾은 것이오…?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_454",
+      "speaker": "miranda",
+      "speakerName": "미란다",
+      "text": "공원 안쪽을 찾다가 발견했습니다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vg-25/er-68/88e9d12d692695aaae54b796a4e3d0a4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_455",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "…아무것도 찾지 못했다면 어쩌려고 했소.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_456",
+      "speaker": "miranda",
+      "speakerName": "미란다",
+      "text": "그럼 계속 찾았을 겁니다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vg-25/er-68/88e9d12d692695aaae54b796a4e3d0a4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_457",
+      "speaker": "miranda",
+      "speakerName": "미란다",
+      "text": "시민들이 잃어버린 물건은 찾아줘야 합니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vg-25/er-68/88e9d12d692695aaae54b796a4e3d0a4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_458",
+      "speaker": "miranda",
+      "speakerName": "미란다",
+      "text": "팬텀이 잃어버린 물건이라면 더더욱 찾아줘야 합니다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vg-25/er-68/88e9d12d692695aaae54b796a4e3d0a4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_459",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "…….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_460",
+      "text": "팬텀은 앞에 있는 4개의 가면을 바라보며, 금방이라도 울 것 같은 표정을 하고 있었다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_461",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "이게… 이게 다 무슨 일이오.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_462",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "나, 나는….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_463",
+      "text": "괴도들이 다녀간 거야.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_464",
+      "text": "팬텀이 잃어버린 물건을 찾아줬잖아.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_465",
+      "text": "1개가 아니라 4개로 늘어나 버렸지만.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_466",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "아아.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_467",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "…그렇군.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_468",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "이들은 어둠 속에서 정의를 행했고.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_469",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "나는 또 구원받은 것이오.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_470",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "괴도들에게.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_471",
+      "text": "팬텀은 쓰고 있는 가면을 벗는다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_472",
+      "text": "[괴도 P군의 가면] 책을 품에 안는다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_473",
+      "text": "그리고, 본인 앞에 있는 가면 4개를 집어 든다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_474",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "그대!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_475",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "어떻소?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_476",
+      "text": "사서 같기도 하고, 괴도 같기도 하네.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_477",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "그 말은 즉.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_478",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "팬텀 같다는 얘기 아니겠소.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_479",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "그렇다면, 그대들은 누구요!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_480",
+      "text": "팬텀이 미소를 지으며, 우리를 향해 외친다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_481",
+      "text": "그 자리에 있는 사람들이, 서로의 눈치를 본다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_482",
+      "text": "나는 앞으로 나서서, 큰 소리로 말했다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_483",
+      "text": "…나는, 괴도 지휘관 @UserName.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_484",
+      "text": "인류를 지키는 지휘관이자.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_485",
+      "text": "괴도들의 기지를 제공하고 있지!",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_486",
+      "speaker": "miranda",
+      "speakerName": "미란다",
+      "text": "아하!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vg-25/er-68/88e9d12d692695aaae54b796a4e3d0a4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_487",
+      "speaker": "miranda",
+      "speakerName": "미란다",
+      "text": "저는 괴도 경찰 미란다입니다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vg-25/er-68/88e9d12d692695aaae54b796a4e3d0a4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_488",
+      "speaker": "miranda",
+      "speakerName": "미란다",
+      "text": "시민들의 안전을 지키고!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vg-25/er-68/88e9d12d692695aaae54b796a4e3d0a4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_489",
+      "speaker": "miranda",
+      "speakerName": "미란다",
+      "text": "정의를 위해 일하고 있습니다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vg-25/er-68/88e9d12d692695aaae54b796a4e3d0a4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_490",
+      "speakerName": "퀀시",
+      "text": "키킥! 뭐야~ 이런 거야?",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_491",
+      "speakerName": "퀀시",
+      "text": "나는 괴도 죄수 퀀시!",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_492",
+      "speakerName": "퀀시",
+      "text": "자유롭게 살아가면서~ 팬텀의 조수로서 열심히 길을 만들어주고 있지.",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_493",
+      "speaker": "delta",
+      "speakerName": "델타",
+      "text": "수습 괴도 닌자, 스카우팅 델타입니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/fj-90/ll-52/c323eb897a0788dd888219ce3f8ed0c2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_494",
+      "speaker": "delta",
+      "speakerName": "델타",
+      "text": "관측 및 정찰이 필요하다면 언제든 찾아주시지 말입니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/fj-90/ll-52/c323eb897a0788dd888219ce3f8ed0c2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_495",
+      "speaker": "delta",
+      "speakerName": "델타",
+      "text": "그리고, 정식 괴도가 되기 위해 노력하고 있습니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/fj-90/ll-52/c323eb897a0788dd888219ce3f8ed0c2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_496",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "…….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_497",
+      "text": "팬텀이 감격스러운 표정으로 한 명 한 명을 바라보았다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_498",
+      "text": "그래서.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_499",
+      "text": "내 앞에 있는 팬텀은 누구지?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_500",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "…….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_501",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "어둠 속에서 정의를 행하는!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_502",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "내 이름은 괴도 사서 팬텀.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_503",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "책을 사랑하기에, 사서가 되었고.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_504",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "선을 사랑하기에, 괴도가 되었소.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_505",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "…이 중요한 사실을 이제야 깨달아 버렸지.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_506",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "많이 늦었지만…",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_507",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "앞으로도 그대들과 함께해도 되겠소?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_508",
+      "text": "우리는 힘차게 고개를 끄덕였다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_509",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "하하…! 하하핫!!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_510",
+      "text": "팬텀은 한 번도 본 적 없는 표정으로 웃는다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_511",
+      "text": "…처음 괴도가 되기로 결심한 날 저 가면을 쓰고 똑같은 표정을 짓지 않았을까.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_512",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "…….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_513",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "슬슬 해가 뜨는가 보오.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_514",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "도서관으로 빛이 새어들기 시작하는군.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_515",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "…어둠이 걷히고, 사람들은 잠에서 깨어나기 시작할 것이오.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_516",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "밤하늘을 누비던 이들은 본래의 자리로 돌아가고.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_517",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "아무 일 없었다는 듯, 하루는 또 시작되겠지.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_518",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "하지만, 나는 이제 낮과 밤의 구분을 두지 않을 것이오.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_519",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "그 모든 시간에.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_520",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "나는 존재할 테니 말이오.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_521",
+      "speaker": "phantom",
+      "speakerName": "팬텀",
+      "text": "그런데, 그대들은 내가 사서 팬텀인 걸 어떻게 알았소?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/zw-94/uk-84/895f63fea88f4f6e6a248ef7007286bf.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_522",
+      "speakerName": "퀀시",
+      "text": "빨리도 묻네~",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_523",
+      "speakerName": "퀀시",
+      "text": "이쯤 되면 본인이 얼마나 허술했는지 정도는 눈치채도 되지 않아?",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_524",
+      "speaker": "miranda",
+      "speakerName": "미란다",
+      "text": "……?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vg-25/er-68/88e9d12d692695aaae54b796a4e3d0a4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_525",
+      "speaker": "delta",
+      "speakerName": "델타",
+      "text": "……?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/fj-90/ll-52/c323eb897a0788dd888219ce3f8ed0c2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_526",
+      "speaker": "miranda",
+      "speakerName": "미란다",
+      "text": "사서 팬텀이 따로 있는 겁니까?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vg-25/er-68/88e9d12d692695aaae54b796a4e3d0a4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_527",
+      "speaker": "delta",
+      "speakerName": "델타",
+      "text": "그냥 팬텀의 흔적을 따라온 것뿐이지 말입니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/fj-90/ll-52/c323eb897a0788dd888219ce3f8ed0c2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_528",
+      "text": "아.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_phantom_529",
+      "text": "그리고, 괴도 사서 팬텀의 비밀은 다행히 조금 더 지켜질 수 있을 듯하다.",
+      "window": "Narration",
+      "voice": null
+    }
+  ]
+}

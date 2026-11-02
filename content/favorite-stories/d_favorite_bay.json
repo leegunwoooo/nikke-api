@@ -1,0 +1,3148 @@
+{
+  "groupId": "d_favorite_bay",
+  "type": "favorite",
+  "name": "시선의 끝",
+  "nikke": "베이",
+  "sourceVideo": "https://youtu.be/J5TTbbt2r-4",
+  "lines": [
+    {
+      "id": "d_favorite_bay_1",
+      "text": "탁! 탁!",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_2",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "후우…! 후우…!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_3",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "짝- 짝- 짝-! Go! Go! Victory!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_4",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "짝- 짝- 짝-! Go! Go! Victory!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_5",
+      "text": "베이, 물 들고 왔어.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_6",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "엇…!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_7",
+      "text": "끼이익-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_8",
+      "text": "털썩!",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_9",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "하아… 하아….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_10",
+      "text": "미안해, 내가 갑자기 말을 걸어서….",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_11",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "…아니, 코치님 때문이 아니야.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_12",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "신발 밑창이 떨어진 것 같아.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_13",
+      "text": "신발?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_14",
+      "text": "베이는 너덜너덜해진 낡은 신발을 신고 있었다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_15",
+      "text": "와, 얼마나 신은 거야.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_16",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "처음 치어리더를 했을 때부터 신었으니까….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_17",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "꽤 오래되긴 했지.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_18",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "…진짜 새 걸로 바꿔야 하나.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_19",
+      "text": "베이는 신발을 조심스레 쓰다듬었다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_20",
+      "text": "수선하면 되는 거 아냐?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_21",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "어?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_22",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "으응, 그렇지.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_23",
+      "text": "표정이 왜 그래?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_24",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "아, 아니.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_25",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "보는 사람마다 버리라고 말하던데.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_26",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "코치님은 다르구나, 싶어서.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_27",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "연습할 때마다 신었던 거라, 확실히 애착이 많이 가는 신발이거든.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_28",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "내가 넘어지고, 다치고, 땀흘리는걸 계속 함께 해준 녀석이니까.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_29",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "이왕이면 고쳐서 계속 신고 싶어.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_30",
+      "text": "그럼, 가자.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_31",
+      "text": "나는 여전히 넘어져 있는 베이에게 손을 내밀었다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_32",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "어…?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_33",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "같이 가주는 거야?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_34",
+      "text": "응, 물론이지.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_35",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "…….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_36",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "고마워.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_37",
+      "text": "베이는 내 손을 잡고, 일어났다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_38",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "수선하러 간다고 하지 않았어?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_39",
+      "text": "그랬지.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_40",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "그런데 지휘관실에는 왜 온 거야?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_41",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "코치님이 직접 수선하는 거야?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_42",
+      "text": "그럴리가.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_43",
+      "text": "나는 샤워실로 들어갔다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_44",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "……?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_45",
+      "text": "그리고 베이에게 손을 내밀었다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_46",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "뭐하는 거야?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_47",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "드, 들어오라고?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_48",
+      "text": "아니…! 신발 달라고.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_49",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "신발?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_50",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "…자, 여기.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_51",
+      "text": "끼릭- 끼릭-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_52",
+      "text": "쏴아아아.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_53",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "!!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_54",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "갑자기 왜 신발에 물을….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_55",
+      "text": "이렇게 더러운 채로 수선을 맡길 수는 없잖아.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_56",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "그래서, 직접 씻으려고?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_57",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "그냥 세탁을 맡기면 되잖아.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_58",
+      "text": "오래 걸리잖아.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_59",
+      "text": "곧 경기 있는 거 아냐?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_60",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "어… 며칠 남긴 했어.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_61",
+      "text": "이 신발이 있어야 연습이 가능한 거고.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_62",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "맨발로 해도 돼.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_63",
+      "text": "위험하잖아.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_64",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "…….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_65",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "내가 해도 되는데.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_66",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "고마워.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_67",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "옆에서 응원이라도 해줄까?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_68",
+      "text": "신발 씻는 것뿐인데, 그건 좀….",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_69",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "응.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_70",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "…….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_71",
+      "text": "찰박- 찰박-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_72",
+      "text": "쏴아아아.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_73",
+      "text": "나는 열심히 신발을 씻었고.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_74",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "…….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_75",
+      "text": "베이는 그런 나를 빤히 쳐다보았다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_76",
+      "text": "다 씻었다.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_77",
+      "text": "말리기만 하면 돼.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_78",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "신발이라 말리는 데 시간 오래 걸리지 않아?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_79",
+      "text": "이렇게 봉투에 넣고 드라이기로 말려주면 빨리 마른대.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_80",
+      "text": "위이이잉-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_81",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "와, 그렇구나.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_82",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "신기하네.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_83",
+      "text": "위이이잉-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_84",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "근데, 코치님.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_85",
+      "text": "응?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_86",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "왜 아까부터 다른 곳을 보면서 말하는 거야?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_87",
+      "text": "그야, 베이는 쳐다보면….",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_88",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "……!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_89",
+      "text": "홱-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_90",
+      "text": "이렇게 고개를 돌려 버리니까.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_91",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "그건…!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_92",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "너무 갑자기 쳐다보니까 놀라서 그런 거지.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_93",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "봐.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_94",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "코치님의 눈은 이제 쳐다볼 수 있다구.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_95",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "…….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_96",
+      "text": "베이의 얼굴은 점점 붉어졌지만, 내 눈을 피하지는 않는다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_97",
+      "text": "…계속 이렇게 보면 돼?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_98",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "아, 아니!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_99",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "시도 때도 없이 보라는 건 아니었어.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_100",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "그냥 뭐랄까.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_101",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "코치님이 의도적으로 내 눈을 피하는 것 같아서.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_102",
+      "text": "베이는 눈 마주치는 걸 부담스러워하니까, 의도한 건 맞아.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_103",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "아.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_104",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "배려해 준 거였구나.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_105",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "…….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_106",
+      "text": "위이이잉-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_107",
+      "text": "오, 이 정도면 다 마른 것 같아.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_108",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "어디 봐.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_109",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "음.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_110",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "그렇네.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_111",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "도와줘서 고마워.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_112",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "이렇게 씻고 나니까, 낡고 헤진 부분이 더 잘 보이네.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_113",
+      "text": "어서 수선하러 가자.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_114",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "응.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_115",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "코치님.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_116",
+      "text": "응?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_117",
+      "text": "나를 부른 베이가, 내 눈을 빤히 바라본다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_118",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "갑자기 든 생각인데.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_119",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "나-",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_120",
+      "speaker": "clay",
+      "speakerName": "클레이",
+      "text": "하낫! 두울!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/uf-21/jy-91/620397b71778b8c8884d0fe83a61b9d3.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_121",
+      "speaker": "clay",
+      "speakerName": "클레이",
+      "text": "핫! 핫!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/uf-21/jy-91/620397b71778b8c8884d0fe83a61b9d3.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_122",
+      "text": "어? 클레이?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_123",
+      "speaker": "clay",
+      "speakerName": "클레이",
+      "text": "어엇?!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/uf-21/jy-91/620397b71778b8c8884d0fe83a61b9d3.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_124",
+      "speaker": "clay",
+      "speakerName": "클레이",
+      "text": "베이랑 코치님이시네요옷!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/uf-21/jy-91/620397b71778b8c8884d0fe83a61b9d3.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_125",
+      "speaker": "clay",
+      "speakerName": "클레이",
+      "text": "여기는 어떤 일이신가요옷?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/uf-21/jy-91/620397b71778b8c8884d0fe83a61b9d3.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_126",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "신발을 수선하러 가는 길이었어.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_127",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "클레이는?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_128",
+      "speaker": "clay",
+      "speakerName": "클레이",
+      "text": "연습 중이었어요옷.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/uf-21/jy-91/620397b71778b8c8884d0fe83a61b9d3.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_129",
+      "speaker": "clay",
+      "speakerName": "클레이",
+      "text": "며칠 뒤에 여기서 치어리딩을 해야 하잖아요옷.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/uf-21/jy-91/620397b71778b8c8884d0fe83a61b9d3.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_130",
+      "speaker": "clay",
+      "speakerName": "클레이",
+      "text": "아직 박자감이 부족한 것 같아서, 일부러 현장에서 연습을 좀 하고 있었어요옷.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/uf-21/jy-91/620397b71778b8c8884d0fe83a61b9d3.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_131",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "요 며칠 따로 연습한다고 하더니, 여기서 연습하고 있었구나.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_132",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "기특하네.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_133",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "얼마나 잘 하는지 한 번 볼까?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_134",
+      "speaker": "clay",
+      "speakerName": "클레이",
+      "text": "엇! 봐주시는 건가요옷?!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/uf-21/jy-91/620397b71778b8c8884d0fe83a61b9d3.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_135",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "시간은 여유 있어.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_136",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "괜찮지, 코치님?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_137",
+      "text": "응, 물론이지.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_138",
+      "speaker": "clay",
+      "speakerName": "클레이",
+      "text": "와앗! 감사드립니다앗!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/uf-21/jy-91/620397b71778b8c8884d0fe83a61b9d3.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_139",
+      "speaker": "clay",
+      "speakerName": "클레이",
+      "text": "그럼 시작할게요옷!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/uf-21/jy-91/620397b71778b8c8884d0fe83a61b9d3.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_140",
+      "text": "클레이는 노래를 틀더니, 박자에 맞춰 뛰기 시작했다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_141",
+      "speaker": "clay",
+      "speakerName": "클레이",
+      "text": "헷! 헷!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/uf-21/jy-91/620397b71778b8c8884d0fe83a61b9d3.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_142",
+      "speaker": "clay",
+      "speakerName": "클레이",
+      "text": "Go! Go! Victory!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/uf-21/jy-91/620397b71778b8c8884d0fe83a61b9d3.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_143",
+      "speaker": "clay",
+      "speakerName": "클레이",
+      "text": "힘내라! 힘내라!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/uf-21/jy-91/620397b71778b8c8884d0fe83a61b9d3.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_144",
+      "text": "나는 열심히 응원하는 클레이를 바라보았고.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_145",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "…….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_146",
+      "text": "베이는 그런 나를 바라보았다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_147",
+      "text": "베이, 왜 그래?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_148",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "응?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_149",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "아, 코치님이 클레이를 너무 빤히 쳐다보는 것 같아서.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_150",
+      "text": "응? 괜찮은지 봐주기로 했잖아.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_151",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "아.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_152",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "그래, 그렇지.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_153",
+      "text": "……?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_154",
+      "speaker": "clay",
+      "speakerName": "클레이",
+      "text": "흐앗~!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/uf-21/jy-91/620397b71778b8c8884d0fe83a61b9d3.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_155",
+      "speaker": "clay",
+      "speakerName": "클레이",
+      "text": "여기까지예요옷.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/uf-21/jy-91/620397b71778b8c8884d0fe83a61b9d3.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_156",
+      "speaker": "clay",
+      "speakerName": "클레이",
+      "text": "어떠셨나요옷?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/uf-21/jy-91/620397b71778b8c8884d0fe83a61b9d3.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_157",
+      "text": "한 번씩 박자 놓치는 것만 주의하면 될 것 같은데?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_158",
+      "speaker": "clay",
+      "speakerName": "클레이",
+      "text": "그런가요옷?!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/uf-21/jy-91/620397b71778b8c8884d0fe83a61b9d3.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_159",
+      "speaker": "clay",
+      "speakerName": "클레이",
+      "text": "연습한 보람이 있네요옷!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/uf-21/jy-91/620397b71778b8c8884d0fe83a61b9d3.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_160",
+      "speaker": "clay",
+      "speakerName": "클레이",
+      "text": "베이는 어떠셨나요옷?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/uf-21/jy-91/620397b71778b8c8884d0fe83a61b9d3.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_161",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "어?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_162",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "으응, 잘하더라.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_163",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "며칠 더 연습하면 될 것 같아.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_164",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "나랑 합도 다시 맞춰야 하니까, 다음 주부터는 연습실에 나오고.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_165",
+      "speaker": "clay",
+      "speakerName": "클레이",
+      "text": "헛! 베이에게 칭찬을 받다니잇…!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/uf-21/jy-91/620397b71778b8c8884d0fe83a61b9d3.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_166",
+      "speaker": "clay",
+      "speakerName": "클레이",
+      "text": "정말 기뻐요옷! 감사합니다앗!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/uf-21/jy-91/620397b71778b8c8884d0fe83a61b9d3.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_167",
+      "speaker": "clay",
+      "speakerName": "클레이",
+      "text": "그나저나 신발을 수선하러 간다고 하셨죠옷?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/uf-21/jy-91/620397b71778b8c8884d0fe83a61b9d3.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_168",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "아, 응.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_169",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "매번 연습 때 신던 신발이, 너무 헤져서.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_170",
+      "speaker": "clay",
+      "speakerName": "클레이",
+      "text": "오옷! 드디어 가시는 거군요옷!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/uf-21/jy-91/620397b71778b8c8884d0fe83a61b9d3.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_171",
+      "speaker": "clay",
+      "speakerName": "클레이",
+      "text": "그 신발, 밑창이 뜯어진 지 오래돼서 매번 불안했었거든요옷.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/uf-21/jy-91/620397b71778b8c8884d0fe83a61b9d3.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_172",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "오래됐었어?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_173",
+      "speaker": "clay",
+      "speakerName": "클레이",
+      "text": "네엣. 적어도 한 달은 됐을 거예요옷.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/uf-21/jy-91/620397b71778b8c8884d0fe83a61b9d3.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_174",
+      "speaker": "clay",
+      "speakerName": "클레이",
+      "text": "신기하게 베이는 그 신발을 신고도 안 넘어지고 잘했지만 말이에요옷.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/uf-21/jy-91/620397b71778b8c8884d0fe83a61b9d3.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_175",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "……?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_176",
+      "speaker": "clay",
+      "speakerName": "클레이",
+      "text": "아무튼, 시간 내주셔서 감사합니다앗.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/uf-21/jy-91/620397b71778b8c8884d0fe83a61b9d3.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_177",
+      "speaker": "clay",
+      "speakerName": "클레이",
+      "text": "어서 수선하러 가보세요옷.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/uf-21/jy-91/620397b71778b8c8884d0fe83a61b9d3.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_178",
+      "text": "그래. 가자, 베이.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_179",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "어…?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_180",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "아, 그래.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_181",
+      "text": "루피의 작업실.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_182",
+      "text": "딸랑-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_183",
+      "text": "루피, 있어?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_184",
+      "speakerName": "???",
+      "text": "오빠 왔어~?",
+      "window": "Speech",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_185",
+      "text": "응? 이 목소리는….",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_186",
+      "text": "아인?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_187",
+      "speaker": "ein",
+      "speakerName": "아인",
+      "text": "에이, 안 낚이네.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/lg-63/kj-44/f0c089e8bb85053339d41b2720f0a900.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_188",
+      "speaker": "ein",
+      "speakerName": "아인",
+      "text": "쌤, 하이요!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/lg-63/kj-44/f0c089e8bb85053339d41b2720f0a900.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_189",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "코치님, 이 학생은?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_190",
+      "text": "미미르 부속 고등학교에 재학 중인 아인이야.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_191",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "그렇구나.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_192",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "반가워, 아인. 나는 리와인드의 베이라고 해.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_193",
+      "speaker": "ein",
+      "speakerName": "아인",
+      "text": "하이요!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/lg-63/kj-44/f0c089e8bb85053339d41b2720f0a900.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_194",
+      "speaker": "ein",
+      "speakerName": "아인",
+      "text": "입고 있는 옷을 보니까….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/lg-63/kj-44/f0c089e8bb85053339d41b2720f0a900.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_195",
+      "speaker": "ein",
+      "speakerName": "아인",
+      "text": "치어리더 맞죠?!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/lg-63/kj-44/f0c089e8bb85053339d41b2720f0a900.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_196",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "그래, 맞아.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_197",
+      "speaker": "ein",
+      "speakerName": "아인",
+      "text": "역시~",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/lg-63/kj-44/f0c089e8bb85053339d41b2720f0a900.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_198",
+      "speaker": "ein",
+      "speakerName": "아인",
+      "text": "막, 힘내라! 힘내라! 하면서 춤도 추고 하시겠네요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/lg-63/kj-44/f0c089e8bb85053339d41b2720f0a900.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_199",
+      "speaker": "ein",
+      "speakerName": "아인",
+      "text": "멋있다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/lg-63/kj-44/f0c089e8bb85053339d41b2720f0a900.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_200",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "칭찬 고마워.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_201",
+      "speaker": "ein",
+      "speakerName": "아인",
+      "text": "그런데 여기는 어쩐 일이세요?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/lg-63/kj-44/f0c089e8bb85053339d41b2720f0a900.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_202",
+      "text": "수선을 좀 부탁하려고.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_203",
+      "speaker": "ein",
+      "speakerName": "아인",
+      "text": "수선이요?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/lg-63/kj-44/f0c089e8bb85053339d41b2720f0a900.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_204",
+      "speaker": "ein",
+      "speakerName": "아인",
+      "text": "어떤 건데요?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/lg-63/kj-44/f0c089e8bb85053339d41b2720f0a900.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_205",
+      "speaker": "ein",
+      "speakerName": "아인",
+      "text": "제가 요새 루피 언니한테 많이 배워서, 꽤 잘하거든요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/lg-63/kj-44/f0c089e8bb85053339d41b2720f0a900.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_206",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "아.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_207",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "이 신발이야.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_208",
+      "speaker": "ein",
+      "speakerName": "아인",
+      "text": "신발요?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/lg-63/kj-44/f0c089e8bb85053339d41b2720f0a900.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_209",
+      "speaker": "ein",
+      "speakerName": "아인",
+      "text": "아, 신발은 좀 자신 없는데.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/lg-63/kj-44/f0c089e8bb85053339d41b2720f0a900.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_210",
+      "speaker": "ein",
+      "speakerName": "아인",
+      "text": "어디 볼….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/lg-63/kj-44/f0c089e8bb85053339d41b2720f0a900.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_211",
+      "speaker": "ein",
+      "speakerName": "아인",
+      "text": "흐익!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/lg-63/kj-44/f0c089e8bb85053339d41b2720f0a900.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_212",
+      "speaker": "ein",
+      "speakerName": "아인",
+      "text": "완전 너덜너덜해졌잖아요!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/lg-63/kj-44/f0c089e8bb85053339d41b2720f0a900.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_213",
+      "speaker": "ein",
+      "speakerName": "아인",
+      "text": "이 정도면 그냥 새 걸 사는 게 어때요?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/lg-63/kj-44/f0c089e8bb85053339d41b2720f0a900.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_214",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "음….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_215",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "나한테는 소중한 신발이거든.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_216",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "멀쩡하게 만들어 달라고는 하지 않을게.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_217",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "신을 수 있는 정도만이라도 안 될까?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_218",
+      "speaker": "ein",
+      "speakerName": "아인",
+      "text": "으으음",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/lg-63/kj-44/f0c089e8bb85053339d41b2720f0a900.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_219",
+      "speaker": "ein",
+      "speakerName": "아인",
+      "text": "솔직히, 제가 잘할 수 있을지 모르겠거든요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/lg-63/kj-44/f0c089e8bb85053339d41b2720f0a900.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_220",
+      "speaker": "ein",
+      "speakerName": "아인",
+      "text": "차라리 루피 언니가 올 때까지 기다리는 게 어때요?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/lg-63/kj-44/f0c089e8bb85053339d41b2720f0a900.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_221",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "언제 오는데?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_222",
+      "speaker": "ein",
+      "speakerName": "아인",
+      "text": "몰라요!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/lg-63/kj-44/f0c089e8bb85053339d41b2720f0a900.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_223",
+      "speaker": "ein",
+      "speakerName": "아인",
+      "text": "무슨 행사가 있는데, 거기 간다고 며칠간 자리 비울 거라고 했어요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/lg-63/kj-44/f0c089e8bb85053339d41b2720f0a900.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_224",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "그래?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_225",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "…곤란하네.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_226",
+      "speaker": "ein",
+      "speakerName": "아인",
+      "text": "…….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/lg-63/kj-44/f0c089e8bb85053339d41b2720f0a900.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_227",
+      "speaker": "ein",
+      "speakerName": "아인",
+      "text": "흐음~",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/lg-63/kj-44/f0c089e8bb85053339d41b2720f0a900.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_228",
+      "speaker": "ein",
+      "speakerName": "아인",
+      "text": "저, 그럼요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/lg-63/kj-44/f0c089e8bb85053339d41b2720f0a900.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_229",
+      "speaker": "ein",
+      "speakerName": "아인",
+      "text": "응원하는 거 한 번만 보여주세요!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/lg-63/kj-44/f0c089e8bb85053339d41b2720f0a900.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_230",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "뭐? 응원?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_231",
+      "speaker": "ein",
+      "speakerName": "아인",
+      "text": "네!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/lg-63/kj-44/f0c089e8bb85053339d41b2720f0a900.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_232",
+      "speaker": "ein",
+      "speakerName": "아인",
+      "text": "응원을 힘으로 제가 기적처럼 엄청 잘 해낼 수도 있는 거잖아요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/lg-63/kj-44/f0c089e8bb85053339d41b2720f0a900.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_233",
+      "speaker": "ein",
+      "speakerName": "아인",
+      "text": "보여주시면, 최선을 다해서 해볼게요!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/lg-63/kj-44/f0c089e8bb85053339d41b2720f0a900.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_234",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "…음.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_235",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "좋아, 알겠어.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_236",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "잘 부탁해.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_237",
+      "speaker": "ein",
+      "speakerName": "아인",
+      "text": "오예~",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/lg-63/kj-44/f0c089e8bb85053339d41b2720f0a900.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_238",
+      "text": "아인은 신발을 받아들었고.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_239",
+      "text": "베이는 폼폼을 높이 들었다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_240",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "후우, 시작할게.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_241",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "Go! Go! Victory!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_242",
+      "speaker": "ein",
+      "speakerName": "아인",
+      "text": "와아~!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/lg-63/kj-44/f0c089e8bb85053339d41b2720f0a900.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_243",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "Go! Go! Victory!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_244",
+      "speaker": "ein",
+      "speakerName": "아인",
+      "text": "워호오~!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/lg-63/kj-44/f0c089e8bb85053339d41b2720f0a900.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_245",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "오오오오-! 오오오오-!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_246",
+      "speaker": "ein",
+      "speakerName": "아인",
+      "text": "멋지다~!!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/lg-63/kj-44/f0c089e8bb85053339d41b2720f0a900.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_247",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "후우….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_248",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "아인, 미안한데.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_249",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "그만 쳐다보면 안 될까…?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_250",
+      "speaker": "ein",
+      "speakerName": "아인",
+      "text": "엥, 왜요?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/lg-63/kj-44/f0c089e8bb85053339d41b2720f0a900.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_251",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "치어리더로서 이런 말 하긴 좀 그렇지만.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_252",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "내가… 주목 공포증이 있거든.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_253",
+      "speaker": "ein",
+      "speakerName": "아인",
+      "text": "헐.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/lg-63/kj-44/f0c089e8bb85053339d41b2720f0a900.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_254",
+      "speaker": "ein",
+      "speakerName": "아인",
+      "text": "저는 치어리딩 하는 거 보고 싶어서 응원 해달라고 한 건데.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/lg-63/kj-44/f0c089e8bb85053339d41b2720f0a900.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_255",
+      "speaker": "ein",
+      "speakerName": "아인",
+      "text": "그냥 소리만 들어야 하는 거예요?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/lg-63/kj-44/f0c089e8bb85053339d41b2720f0a900.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_256",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "…….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_257",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "극복하려고 노력 중인데, 잘 안되네.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_258",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "미안해.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_259",
+      "speaker": "ein",
+      "speakerName": "아인",
+      "text": "뭐, 그런 거라면….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/lg-63/kj-44/f0c089e8bb85053339d41b2720f0a900.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_260",
+      "speaker": "ein",
+      "speakerName": "아인",
+      "text": "어쩔 수 없죠, 알았어요!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/lg-63/kj-44/f0c089e8bb85053339d41b2720f0a900.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_261",
+      "speaker": "ein",
+      "speakerName": "아인",
+      "text": "응원받은 셈 치고, 열심히 만들어 볼게요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/lg-63/kj-44/f0c089e8bb85053339d41b2720f0a900.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_262",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "응, 고마워.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_263",
+      "text": "아인은 작업에 몰두했고.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_264",
+      "text": "나와 베이는 그 모습을 보며, 간간히 응원의 멘트를 날렸다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_265",
+      "text": "잠시 후.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_266",
+      "speaker": "ein",
+      "speakerName": "아인",
+      "text": "자, 여기요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/lg-63/kj-44/f0c089e8bb85053339d41b2720f0a900.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_267",
+      "speaker": "ein",
+      "speakerName": "아인",
+      "text": "음… 잘 됐는지 모르겠는데요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/lg-63/kj-44/f0c089e8bb85053339d41b2720f0a900.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_268",
+      "speaker": "ein",
+      "speakerName": "아인",
+      "text": "혹시 신고 활동 하시다가 문제 생기면, 다시 오세요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/lg-63/kj-44/f0c089e8bb85053339d41b2720f0a900.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_269",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "고마워.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_270",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "많이 깔끔해졌네.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_271",
+      "speaker": "ein",
+      "speakerName": "아인",
+      "text": "애초에 신발이 너무 낡아서, 이게 최선이었어요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/lg-63/kj-44/f0c089e8bb85053339d41b2720f0a900.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_272",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "이 정도면 충분해.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_273",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "학생인데도 대단하네.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_274",
+      "speaker": "ein",
+      "speakerName": "아인",
+      "text": "진짜요? 하~ 루피 언니가 이 말을 들어야 했는데.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/lg-63/kj-44/f0c089e8bb85053339d41b2720f0a900.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_275",
+      "speaker": "ein",
+      "speakerName": "아인",
+      "text": "아, 근데요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/lg-63/kj-44/f0c089e8bb85053339d41b2720f0a900.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_276",
+      "speaker": "ein",
+      "speakerName": "아인",
+      "text": "저, 주목 공포증이 왜 생기는지 조금 알 것 같기도 했어요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/lg-63/kj-44/f0c089e8bb85053339d41b2720f0a900.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_277",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "응? 그게 무슨 말이야?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_278",
+      "speaker": "ein",
+      "speakerName": "아인",
+      "text": "방금 작업 하는데, 너무 쳐다봐서 좀 부담스러웠거든요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/lg-63/kj-44/f0c089e8bb85053339d41b2720f0a900.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_279",
+      "speaker": "ein",
+      "speakerName": "아인",
+      "text": "특히 쌤이 말이에요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/lg-63/kj-44/f0c089e8bb85053339d41b2720f0a900.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_280",
+      "speaker": "ein",
+      "speakerName": "아인",
+      "text": "실수하면 쪽팔리는데 어떡하지, 싶고.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/lg-63/kj-44/f0c089e8bb85053339d41b2720f0a900.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_281",
+      "speaker": "ein",
+      "speakerName": "아인",
+      "text": "괜히 더 긴장되고 떨리는 거 있죠.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/lg-63/kj-44/f0c089e8bb85053339d41b2720f0a900.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_282",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "……!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_283",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "그… 랬어, 코치님?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_284",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "아인 계속 보고 있었어?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_285",
+      "text": "응, 열중하는 모습이 멋있더라고.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_286",
+      "speaker": "ein",
+      "speakerName": "아인",
+      "text": "으헤헤~! 다음에 루피 언니 앞에서 꼭 다시 말해줘요, 쌤~!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/lg-63/kj-44/f0c089e8bb85053339d41b2720f0a900.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_287",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "아.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_288",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "어쨌든, 신발 고마워.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_289",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "잘 신을게.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_290",
+      "speaker": "ein",
+      "speakerName": "아인",
+      "text": "넹, 조심히 가세요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/lg-63/kj-44/f0c089e8bb85053339d41b2720f0a900.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_291",
+      "text": "아인은 팔을 붕붕 흔들며 우리를 배웅해 주었다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_292",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "음.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_293",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "수선은 잘 된 것 같아.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_294",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "확실히 편해졌어.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_295",
+      "text": "다행이다.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_296",
+      "text": "연습도 한 번 해봐.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_297",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "그럴까.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_298",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "흐읍!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_299",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "짝- 짝- 짝-! Go! Go! Victory!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_300",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "짝- 짝- 짝-! Go! Go! Victory!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_301",
+      "text": "베이는 가볍게 몸을 풀며 뛰어다녔다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_302",
+      "text": "오, 괜찮은 것 같은데?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_303",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "!!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_304",
+      "text": "끼이익-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_305",
+      "text": "털썩!",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_306",
+      "text": "아….",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_307",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "…….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_308",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "다시 해볼게.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_309",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "후우.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_310",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "짝- 짝- 짝-! Go! Go! Victory!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_311",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "짝- 짝- 짝-! Go! Go! Victory!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_312",
+      "text": "쿵! 쿵! 쿵!",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_313",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "하아…! 하아…!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_314",
+      "text": "거울을 보며 뛰던 베이는.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_315",
+      "text": "그 너머의 나와 눈이 마주쳤다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_316",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "앗!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_317",
+      "text": "끼이익-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_318",
+      "text": "털썩!",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_319",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "하아….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_320",
+      "text": "미안해, 역시 내가 쳐다봐서 그런 거지?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_321",
+      "text": "그냥 다른 곳을 보고 있을….",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_322",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "아냐!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_323",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "다른 곳 보지 마.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_324",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "그런 게 아니니까.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_325",
+      "text": "……?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_326",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "코치님, 잠시만 내 눈을 봐줄래?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_327",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "확인해 보고 싶은 게 있어.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_328",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "…….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_329",
+      "text": "…….",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_330",
+      "text": "베이는 내 시선을 피하지 않고, 눈을 깜빡이지도 않은 채.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_331",
+      "text": "나와 계속 눈을 맞췄다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_332",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "…….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_333",
+      "text": "베이의 얼굴은 점점 붉어졌고.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_334",
+      "text": "나조차 슬슬 민망하다는 생각이 들 때쯤.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_335",
+      "text": "베이의 시선이 감겼다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_336",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "아….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_337",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "그렇구나, 그런 거였어.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_338",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "후우….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_339",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "하, 하하…!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_340",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "아하하~!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_341",
+      "text": "베이?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_342",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "아, 정말 곤란하네.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_343",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "이렇게 갑자기 알아버리다니.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_344",
+      "text": "뭘?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_345",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "내가 넘어졌던 거.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_346",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "코치님 때문이 맞아.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_347",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "한 달 가까이 너덜거리는 신발을 신고 연습해도 넘어지지 않았던 내가.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_348",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "코치님이 나를 보고 있다는 걸 인식하는 순간 다리에 힘이 확 풀려버려.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_349",
+      "text": "역시 주목 공포증이구나.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_350",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "아니, 그런 게 아냐.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_351",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "오늘 하루 종일 같이 있으면서 느꼈어.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_352",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "나, 코치님이 다른 곳을 보는 게 싫어.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_353",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "다른 사람들이 나를 쳐다보는 건 무섭지만.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_354",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "코치님은 나만을 바라봐줬으면 좋겠어.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_355",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "배려인 건 알지만, 나와 말할 때 눈을 마주치지 않는 게 서운했고.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_356",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "클레이를 빤히 바라보는 게 신경 쓰였고.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_357",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "아인이 부담스러워할 만큼 쳐다봤다는 얘기를 듣고.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_358",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "질투가 났어.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_359",
+      "text": "……!",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_360",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "하하, 이 신발 때문이라고 얘기했지만, 그런 게 아니었어.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_361",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "…코치님이 좋아서.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_362",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "나를 보고 있다는 게 두근거리고 설레서.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_363",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "그래서 그랬던 거야.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_364",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "…어쩌지?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_365",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "코치님한테만큼은 주목 공포증을 고쳤다고 생각했는데.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_366",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "다른 병이 생겨버렸어.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_367",
+      "text": "베이.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_368",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "코치님, 부탁이 있어.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_369",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "나, 아마 앞으로도 많이 넘어질 거야.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_370",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "그러니까, 옆에서 날 일으켜줘.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_371",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "이 두근거림에 익숙해져서, 더 이상 넘어지지 않게 계속 바라봐줘.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_372",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "…너덜거릴 때까지.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_373",
+      "text": "베이가 나를 향해 손을 내밀었다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_374",
+      "text": "이건 신발처럼 수선이 힘들 텐데?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_375",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "괜찮아.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_376",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "신발은 좀 험하게 다뤘지만.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_377",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "이 감정은, 부드럽고 소중하게 다룰 테니까.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_378",
+      "text": "…….",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_379",
+      "text": "나는 손을 잡아 베이를 일으켰다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_380",
+      "text": "베이가 넘어지면, 이렇게 일으켜 줄게.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_381",
+      "text": "언제, 어디서든.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_382",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "……!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_383",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "응, 그렇게 나만 바라봐 줘.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_bay_384",
+      "speaker": "bay",
+      "speakerName": "베이",
+      "text": "많이 좋아해, 코치님.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/dg-85/er-64/f2342f4e5fa1d04157b5630e8267611a.webp",
+      "voice": null
+    }
+  ]
+}

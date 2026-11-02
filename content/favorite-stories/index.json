@@ -1,0 +1,173 @@
+{
+  "count": 21,
+  "scenes": [
+    {
+      "groupId": "d_favorite_sugar",
+      "name": "파트너",
+      "nikke": "슈가",
+      "lines": 508,
+      "category": "favorite",
+      "sourceVideo": "https://youtu.be/cQoTpjl3XjI"
+    },
+    {
+      "groupId": "d_favorite_rosanna",
+      "name": "맹세",
+      "nikke": "로산나",
+      "lines": 617,
+      "category": "favorite",
+      "sourceVideo": "https://youtu.be/Nl7Xldc4je4"
+    },
+    {
+      "groupId": "d_favorite_flora",
+      "name": "함께 만든 자리",
+      "nikke": "플로라",
+      "lines": 565,
+      "category": "favorite",
+      "sourceVideo": "https://youtu.be/q50oC1CP-m8"
+    },
+    {
+      "groupId": "d_favorite_phantom",
+      "name": "베스트셀러의 괴도 팬텀",
+      "nikke": "팬텀",
+      "lines": 529,
+      "category": "favorite",
+      "sourceVideo": "https://youtu.be/-yT9du5AyWE"
+    },
+    {
+      "groupId": "d_favorite_milk",
+      "name": "따뜻한 밀크 커피처럼",
+      "nikke": "밀크",
+      "lines": 397,
+      "category": "favorite",
+      "sourceVideo": "https://youtu.be/mohmdc9WwAo"
+    },
+    {
+      "groupId": "d_favorite_exia",
+      "name": "그날, 그 작은 게임기 밖엔.",
+      "nikke": "엑시아",
+      "lines": 462,
+      "category": "favorite",
+      "sourceVideo": "https://youtu.be/uWq3AIP31YE"
+    },
+    {
+      "groupId": "d_favorite_frima",
+      "name": "잠. 해결사. 굿.",
+      "nikke": "프림",
+      "lines": 487,
+      "category": "favorite",
+      "sourceVideo": "https://youtu.be/YPZA676498A"
+    },
+    {
+      "groupId": "d_favorite_viper",
+      "name": "그 시궁쥐는 빛을 찾았다",
+      "nikke": "바이퍼",
+      "lines": 389,
+      "category": "favorite",
+      "sourceVideo": "https://youtu.be/79crt5axKS8"
+    },
+    {
+      "groupId": "d_favorite_laplace",
+      "name": "슈퍼 그레이트 히어로!",
+      "nikke": "라플라스",
+      "lines": 453,
+      "category": "favorite",
+      "sourceVideo": "https://youtu.be/TQD4czL0Zf4"
+    },
+    {
+      "groupId": "d_favorite_diesel",
+      "name": "마침내 종점에 다다른다",
+      "nikke": "디젤",
+      "lines": 349,
+      "category": "favorite",
+      "sourceVideo": "https://youtu.be/F4VEF5tMmVk"
+    },
+    {
+      "groupId": "d_favorite_centi",
+      "name": "마음의 표현",
+      "nikke": "센티",
+      "lines": 571,
+      "category": "favorite",
+      "sourceVideo": "https://youtu.be/l8xhdIrl4xQ"
+    },
+    {
+      "groupId": "d_favorite_drake",
+      "name": "드레이크는 어쩔 수 없는 히어로",
+      "nikke": "드레이크",
+      "lines": 604,
+      "category": "favorite",
+      "sourceVideo": "https://youtu.be/LvVc1SpH5w0"
+    },
+    {
+      "groupId": "d_favorite_tove",
+      "name": "따뜻한 온기",
+      "nikke": "토브",
+      "lines": 453,
+      "category": "favorite",
+      "sourceVideo": "https://youtu.be/zTVsmaby2UE"
+    },
+    {
+      "groupId": "d_favorite_miranda",
+      "name": "마땅한 대가",
+      "nikke": "미란다",
+      "lines": 430,
+      "category": "favorite",
+      "sourceVideo": "https://youtu.be/lS41g6VAk-0"
+    },
+    {
+      "groupId": "d_favorite_helm",
+      "name": "달콤한 향기의 새벽",
+      "nikke": "헬름",
+      "lines": 425,
+      "category": "favorite",
+      "sourceVideo": "https://youtu.be/X2-rUOMlGIM"
+    },
+    {
+      "groupId": "d_favorite_poli",
+      "name": "베테랑 경찰 폴리의 힐링",
+      "nikke": "폴리",
+      "lines": 454,
+      "category": "favorite",
+      "sourceVideo": "https://youtu.be/Haqr8XePOZQ"
+    },
+    {
+      "groupId": "d_favorite_julia",
+      "name": "첫 번째 관객을 위한 곡",
+      "nikke": "율리아",
+      "lines": 438,
+      "category": "favorite",
+      "sourceVideo": "https://youtu.be/qp6ruobl-gk"
+    },
+    {
+      "groupId": "d_favorite_moran",
+      "name": "손끝에서 완성된 약속",
+      "nikke": "목단",
+      "lines": 415,
+      "category": "favorite",
+      "sourceVideo": "https://youtu.be/dj2DLQLuAvg"
+    },
+    {
+      "groupId": "d_favorite_zwei",
+      "name": "최고의 행운",
+      "nikke": "츠바이",
+      "lines": 467,
+      "category": "favorite",
+      "sourceVideo": "https://youtu.be/lkYNah271vM"
+    },
+    {
+      "groupId": "d_favorite_bay",
+      "name": "시선의 끝",
+      "nikke": "베이",
+      "lines": 384,
+      "category": "favorite",
+      "sourceVideo": "https://youtu.be/J5TTbbt2r-4"
+    },
+    {
+      "groupId": "d_favorite_privaty",
+      "name": "노력의 보상",
+      "nikke": "프리바티",
+      "lines": 557,
+      "category": "favorite",
+      "sourceVideo": "https://youtu.be/JOnBEtulvmg"
+    }
+  ]
+}

@@ -1,0 +1,4542 @@
+{
+  "groupId": "d_favorite_privaty",
+  "type": "favorite",
+  "name": "노력의 보상",
+  "nikke": "프리바티",
+  "sourceVideo": "https://youtu.be/JOnBEtulvmg",
+  "lines": [
+    {
+      "id": "d_favorite_privaty_1",
+      "text": "중앙 정부군 행정실.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_2",
+      "text": "지잉-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_3",
+      "text": "트라이앵글 스쿼드 멤버들이 부대 행사 리허설을 마치고, 행정실에 돌아왔다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_4",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "리허설 때 하는 것도 딱히 없어서 그런가.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_5",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "뭔가 많이 지루하네요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_6",
+      "speaker": "admi",
+      "speakerName": "애드미",
+      "text": "행사 리허설이라는 게 대체로 그렇죠.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/lt-30/kp-83/9d4ceef56ffabba0e3469fb5fcb18414.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_7",
+      "speaker": "admi",
+      "speakerName": "애드미",
+      "text": "특히나 군대 행사라고 하면 더 딱딱한 느낌이 있으니까요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/lt-30/kp-83/9d4ceef56ffabba0e3469fb5fcb18414.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_8",
+      "speaker": "yulha",
+      "speakerName": "율하",
+      "text": "그래도 프리바티, 너 예전에 이 행사에서 훈장 받았었잖아.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xk-26/us-78/5ee44c9e8591369d60be8eca023eaf36.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_9",
+      "speaker": "yulha",
+      "speakerName": "율하",
+      "text": "다른 사람도 아니고, 너는 좀 달라야지.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xk-26/us-78/5ee44c9e8591369d60be8eca023eaf36.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_10",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "아, 알고 있어요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_11",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "싫다고 한 건 아니잖아요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_12",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "그냥 지켜만 보고 있는 게, 조금 지루할 뿐이라구요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_13",
+      "text": "프리바티는 자신의 자리에 돌아왔다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_14",
+      "text": "드르륵-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_15",
+      "text": "서랍에 고이 넣어둔 자신의 훈장을 꺼냈다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_16",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "[중앙 정부 특별 훈장]….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_17",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "벌써 오래 전인 것처럼 느껴지네요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_18",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "…어라?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_19",
+      "text": "프리바티는 훈장의 일부가 불그스름하게 변한 것을 발견했다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_20",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "이거 왜 이러지?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_21",
+      "speaker": "yulha",
+      "speakerName": "율하",
+      "text": "갑자기 또 무슨 일이야?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xk-26/us-78/5ee44c9e8591369d60be8eca023eaf36.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_22",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "후, 훈장 색깔이 좀 이상해요!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_23",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "이거 왜 이러는 거죠?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_24",
+      "speaker": "admi",
+      "speakerName": "애드미",
+      "text": "색깔이 이상하다구요?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/lt-30/kp-83/9d4ceef56ffabba0e3469fb5fcb18414.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_25",
+      "text": "애드미가 프리바티 곁으로 다가와 훈장을 슬쩍 바라본다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_26",
+      "speaker": "admi",
+      "speakerName": "애드미",
+      "text": "아아.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/lt-30/kp-83/9d4ceef56ffabba0e3469fb5fcb18414.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_27",
+      "speaker": "admi",
+      "speakerName": "애드미",
+      "text": "훈장에 녹이 좀 슬었네요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/lt-30/kp-83/9d4ceef56ffabba0e3469fb5fcb18414.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_28",
+      "speaker": "yulha",
+      "speakerName": "율하",
+      "text": "관리를 어떻게 했는데 녹이 슬어?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xk-26/us-78/5ee44c9e8591369d60be8eca023eaf36.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_29",
+      "speaker": "yulha",
+      "speakerName": "율하",
+      "text": "받아서 좋다고 난리 칠 땐 언제고.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xk-26/us-78/5ee44c9e8591369d60be8eca023eaf36.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_30",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "어, 어쩔 수 없었잖아요!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_31",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "그동안 얼마나 바빴는데!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_32",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "으으….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_33",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "이걸 어떡하지.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_34",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "닦으면 없어지려나.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_35",
+      "text": "스윽-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_36",
+      "text": "프리바티는 자리에 있던 헝겊으로 훈장을 문질렀다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_37",
+      "speaker": "admi",
+      "speakerName": "애드미",
+      "text": "그거 그냥 문지르면 안 될 것 같은데요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/lt-30/kp-83/9d4ceef56ffabba0e3469fb5fcb18414.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_38",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "아아아앗!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_39",
+      "speaker": "yulha",
+      "speakerName": "율하",
+      "text": "또 뭐야?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xk-26/us-78/5ee44c9e8591369d60be8eca023eaf36.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_40",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "이, 이거 어쩌죠?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_41",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "붉은 게 더 번졌는데요?!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_42",
+      "speaker": "admi",
+      "speakerName": "애드미",
+      "text": "그러게 문지르면 안 된다고 했잖아요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/lt-30/kp-83/9d4ceef56ffabba0e3469fb5fcb18414.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_43",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "어, 어, 어, 어떡하죠?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_44",
+      "speaker": "admi",
+      "speakerName": "애드미",
+      "text": "녹 지우는 방법을 알 만한 사람한테 도와달라고 해보는 건 어떨까요?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/lt-30/kp-83/9d4ceef56ffabba0e3469fb5fcb18414.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_45",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "방법을 알 만한 사람….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_46",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "저, 잠깐 나갔다 올게요!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_47",
+      "text": "다다닥-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_48",
+      "text": "프리바티는 밖으로 뛰쳐나갔다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_49",
+      "speaker": "admi",
+      "speakerName": "애드미",
+      "text": "누구한테 가려는 걸까요?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/lt-30/kp-83/9d4ceef56ffabba0e3469fb5fcb18414.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_50",
+      "speaker": "yulha",
+      "speakerName": "율하",
+      "text": "쟤가 갈 곳이야 뻔하지, 뭐.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/xk-26/us-78/5ee44c9e8591369d60be8eca023eaf36.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_51",
+      "text": "지잉-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_52",
+      "text": "프리바티가 황급히 들어왔다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_53",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "지, 지휘관!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_54",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "좀 도와주세요!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_55",
+      "text": "도와달라고?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_56",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "이, 이거 좀 봐줄래요?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_57",
+      "text": "프리바티가 훈장을 보여주었다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_58",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "이 훈장의 녹을 지우고 싶은데, 혼자 지우려니까 안되더라구요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_59",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "마침, 애드미가 다른 사람에게 도와달라고 하는 게 어떻겠냐고 해서….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_60",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "그래서….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_61",
+      "text": "도와줄 사람으로 제일 먼저 날 떠올렸다는 거네?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_62",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "제, 제일 먼저 떠올리긴요!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_63",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "해결할 수 있는 사람을 찾다 찾다, 도저히 못 찾아서 온 거죠!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_64",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "지휘관은 제일 마지막에 찾아 온 거라구요!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_65",
+      "text": "날 바로 찾아주지 않았다니.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_66",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "아니, 그런 게 아니라….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_67",
+      "text": "섭섭한데….",
+      "window": "Choice",
+      "voice": null,
+      "chosen": true
+    },
+    {
+      "id": "d_favorite_privaty_68",
+      "text": "난 그 정도밖에 안 되는 존재였구나.",
+      "window": "Choice",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_69",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "사실 제일 먼저 찾아온 건 맞는데….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_70",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "제일 먼저 찾았다고 하면, 너무 의지하는 것처럼 보일까 봐….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_71",
+      "text": "훈장에 녹만 빼주면 되는 거지?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_72",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "…….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_73",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "노, 놀린 거였나요!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_74",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "진짜 지휘관만 믿고 달려왔는데…!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_75",
+      "text": "알았어. 놀려서 미안해.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_76",
+      "text": "일단 훈장부터 줘 볼래?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_77",
+      "text": "프리바티는 토라진 표정으로 훈장을 건네주었다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_78",
+      "text": "이게 망가진 훈장이란 말이지.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_79",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "말은 정확히 해주세요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_80",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "망가진 게 아니라 조금 변질된 거예요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_81",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "너무 바빠서 어쩔 수 없이 잠깐 관리에 소홀해졌는데.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_82",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "헝겊으로 문지르다가 녹이 번졌을 뿐인 거라구요!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_83",
+      "text": "얘길 들어보면.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_84",
+      "text": "결국 실수로 훈장이 더 망가졌다는 거네.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_85",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "그, 그치만 정말 몰랐는걸요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_86",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "천으로 닦으면 닦일 줄 알았단 말이에요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_87",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "설마 녹이 번질 줄 누가 알았겠어요?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_88",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "어떻게….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_89",
+      "text": "…….",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_90",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "방법이 없을까요…?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_91",
+      "text": "프리바티는 당장이라도 울 것처럼 나를 올려다보았다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_92",
+      "text": "어떻게든 해 보자.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_93",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "…다행이다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_94",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "지휘관은 녹 지우는 방법을 알고 있었던 거군요!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_95",
+      "text": "아니, 나도 몰라.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_96",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "…….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_97",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "그럼 자신감 넘치는 표정은 뭐였던 거예요….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_98",
+      "text": "모른다고 그냥 포기하면 아무것도 안되니까.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_99",
+      "text": "포기하지 말고 할 수 있는 건 다 해봐야지.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_100",
+      "text": "그런 의미의 표정이야.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_101",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "…….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_102",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "…그렇네요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_103",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "어떻게든 해보려는 노력이 중요하니까요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_104",
+      "text": "그럼 일단 물로 닦아보자.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_105",
+      "text": "헝겊을 적셔와서 훈장을 닦아 보았다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_106",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "…….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_107",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "안되네요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_108",
+      "text": "…그러게.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_109",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "혹시 다른 방법은 없을까요?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_110",
+      "text": "으음….",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_111",
+      "text": "그럼 세제 같은 걸 좀 써볼까?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_112",
+      "text": "헝겊에 세제를 살짝 묻혀서 닦아보았다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_113",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "좀 닦이나요?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_114",
+      "text": "전혀 안 닦여….",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_115",
+      "text": "이후로도 다양한 방법을 시도해 봤지만.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_116",
+      "text": "지우개로 문질러봐도 안 되네.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_117",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "…치약도 소용 없었구요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_118",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "이러면 생각나는 건 다 해본 것 같기도….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_119",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "하아….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_120",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "훈장은 그냥 이대로 둬야하는 걸까요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_121",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "정말 소중한 물건인데.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_122",
+      "text": "안 되겠다. 전문가를 찾아가 보자.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_123",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "전문가? 무슨 전문가요?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_124",
+      "text": "[청소의 대가]들.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_125",
+      "text": "딸랑-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_126",
+      "speaker": "ade",
+      "speakerName": "에이드",
+      "text": "어머, 주인님.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/fz-65/mt-84/2de03955874647e6b64b8363018bc2d9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_127",
+      "speaker": "ade",
+      "speakerName": "에이드",
+      "text": "그리고 프리바티 아가씨.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/fz-65/mt-84/2de03955874647e6b64b8363018bc2d9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_128",
+      "speaker": "ade",
+      "speakerName": "에이드",
+      "text": "다녀오셨어요?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/fz-65/mt-84/2de03955874647e6b64b8363018bc2d9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_129",
+      "text": "안녕, 에이드.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_130",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "에이드, 좀 실례할게요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_131",
+      "speaker": "ade",
+      "speakerName": "에이드",
+      "text": "네, 이쪽으로 모시겠습니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/fz-65/mt-84/2de03955874647e6b64b8363018bc2d9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_132",
+      "speaker": "ade",
+      "speakerName": "에이드",
+      "text": "음료는 어떤 것으로 하시겠어요?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/fz-65/mt-84/2de03955874647e6b64b8363018bc2d9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_133",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "아, 오늘은 커피 마시러 온 게 아니에요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_134",
+      "text": "에이드, 혹시 청소하면서 녹슨 곳도 청소해본 적 있어?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_135",
+      "speaker": "ade",
+      "speakerName": "에이드",
+      "text": "녹 제거 말씀이신가요?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/fz-65/mt-84/2de03955874647e6b64b8363018bc2d9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_136",
+      "speaker": "ade",
+      "speakerName": "에이드",
+      "text": "물론 청소해 본 적 있죠.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/fz-65/mt-84/2de03955874647e6b64b8363018bc2d9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_137",
+      "speaker": "ade",
+      "speakerName": "에이드",
+      "text": "후후.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/fz-65/mt-84/2de03955874647e6b64b8363018bc2d9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_138",
+      "speaker": "ade",
+      "speakerName": "에이드",
+      "text": "말씀을 들어보니, 뭔가 제 도움이 필요하신가 보네요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/fz-65/mt-84/2de03955874647e6b64b8363018bc2d9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_139",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "그게 말이죠….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_140",
+      "text": "프리바티는 손에 들고 있던 훈장을 내밀었다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_141",
+      "speaker": "ade",
+      "speakerName": "에이드",
+      "text": "프리바티 아가씨의 훈장인가요?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/fz-65/mt-84/2de03955874647e6b64b8363018bc2d9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_142",
+      "speaker": "ade",
+      "speakerName": "에이드",
+      "text": "정말 멋지네요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/fz-65/mt-84/2de03955874647e6b64b8363018bc2d9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_143",
+      "speaker": "ade",
+      "speakerName": "에이드",
+      "text": "그런데… 녹이….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/fz-65/mt-84/2de03955874647e6b64b8363018bc2d9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_144",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "맞아요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_145",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "제가 소중하게 여기던 훈장인데.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_146",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "녹이 좀 슬어서 어떻게 지울 방법이 없을까 물어보려고 찾아왔어요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_147",
+      "speaker": "ade",
+      "speakerName": "에이드",
+      "text": "후후, 그러셨군요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/fz-65/mt-84/2de03955874647e6b64b8363018bc2d9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_148",
+      "speaker": "ade",
+      "speakerName": "에이드",
+      "text": "너무 걱정하지 마세요. 녹이 슨 것 정도는 금방 제거할 수 있답니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/fz-65/mt-84/2de03955874647e6b64b8363018bc2d9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_149",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "저, 정말인가요!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_150",
+      "speaker": "ade",
+      "speakerName": "에이드",
+      "text": "물론이죠.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/fz-65/mt-84/2de03955874647e6b64b8363018bc2d9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_151",
+      "speaker": "ade",
+      "speakerName": "에이드",
+      "text": "아까 말씀드렸다시피.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/fz-65/mt-84/2de03955874647e6b64b8363018bc2d9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_152",
+      "speaker": "ade",
+      "speakerName": "에이드",
+      "text": "청소하다 보면 녹슨 곳도 처리해야 할 때가 있으니까요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/fz-65/mt-84/2de03955874647e6b64b8363018bc2d9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_153",
+      "speaker": "ade",
+      "speakerName": "에이드",
+      "text": "그럴 때마다 어렵지 않게 처리하는 방법이 있어요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/fz-65/mt-84/2de03955874647e6b64b8363018bc2d9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_154",
+      "speaker": "ade",
+      "speakerName": "에이드",
+      "text": "구연산…이라고 아시나요?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/fz-65/mt-84/2de03955874647e6b64b8363018bc2d9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_155",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_156",
+      "speaker": "ade",
+      "speakerName": "에이드",
+      "text": "후후, 처음 듣는다는 표정이시네요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/fz-65/mt-84/2de03955874647e6b64b8363018bc2d9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_157",
+      "speaker": "ade",
+      "speakerName": "에이드",
+      "text": "구연산은 쓰는 용도가 여러 가지 있는데.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/fz-65/mt-84/2de03955874647e6b64b8363018bc2d9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_158",
+      "speaker": "ade",
+      "speakerName": "에이드",
+      "text": "녹을 지우는 데도 탁월하답니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/fz-65/mt-84/2de03955874647e6b64b8363018bc2d9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_159",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "그, 그걸 쓰면 이 녹을 바로 지울 수 있는 거죠?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_160",
+      "speaker": "ade",
+      "speakerName": "에이드",
+      "text": "그럼요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/fz-65/mt-84/2de03955874647e6b64b8363018bc2d9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_161",
+      "speaker": "ade",
+      "speakerName": "에이드",
+      "text": "지금 보여주신 훈장 상태를 보면.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/fz-65/mt-84/2de03955874647e6b64b8363018bc2d9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_162",
+      "speaker": "ade",
+      "speakerName": "에이드",
+      "text": "1시간… 아니, 30분이면 충분히 다 지워질 것 같네요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/fz-65/mt-84/2de03955874647e6b64b8363018bc2d9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_163",
+      "text": "구연산으로 녹을 지울 수 있다는 건 처음 알았어.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_164",
+      "speaker": "ade",
+      "speakerName": "에이드",
+      "text": "녹 지울 일이 흔하게 있는 일은 아니니까요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/fz-65/mt-84/2de03955874647e6b64b8363018bc2d9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_165",
+      "speaker": "ade",
+      "speakerName": "에이드",
+      "text": "지울 수 있는 다른 여러 제품도 있다고는 들었는데.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/fz-65/mt-84/2de03955874647e6b64b8363018bc2d9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_166",
+      "speaker": "ade",
+      "speakerName": "에이드",
+      "text": "일단 저희는 구연산을 사용하고 있답니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/fz-65/mt-84/2de03955874647e6b64b8363018bc2d9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_167",
+      "speaker": "ade",
+      "speakerName": "에이드",
+      "text": "그럼, 프리바티 아가씨.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/fz-65/mt-84/2de03955874647e6b64b8363018bc2d9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_168",
+      "speaker": "ade",
+      "speakerName": "에이드",
+      "text": "제가 직접 지워드릴까요?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/fz-65/mt-84/2de03955874647e6b64b8363018bc2d9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_169",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "…….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_170",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "아니요, 괜찮아요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_171",
+      "speaker": "ade",
+      "speakerName": "에이드",
+      "text": "그 정돈 맡겨주셔도 괜찮은데….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/fz-65/mt-84/2de03955874647e6b64b8363018bc2d9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_172",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "말씀만으로도 고마워요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_173",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "그치만 제 소중한 물건이니까요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_174",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "앞으로의 관리를 위해서라도, 제가 직접 해볼게요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_175",
+      "speaker": "ade",
+      "speakerName": "에이드",
+      "text": "…….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/fz-65/mt-84/2de03955874647e6b64b8363018bc2d9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_176",
+      "speaker": "ade",
+      "speakerName": "에이드",
+      "text": "그러시군요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/fz-65/mt-84/2de03955874647e6b64b8363018bc2d9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_177",
+      "speaker": "ade",
+      "speakerName": "에이드",
+      "text": "알겠습니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/fz-65/mt-84/2de03955874647e6b64b8363018bc2d9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_178",
+      "speaker": "ade",
+      "speakerName": "에이드",
+      "text": "직접 하실 땐 하시더라도, 저희가 가지고 있는 걸 나눠드리는 정도는 괜찮겠죠?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/fz-65/mt-84/2de03955874647e6b64b8363018bc2d9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_179",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "네, 부탁해요!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_180",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "그렇다고 너무 많이 받아 가면 죄송하니까….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_181",
+      "speaker": "ade",
+      "speakerName": "에이드",
+      "text": "후후, 걱정 마세요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/fz-65/mt-84/2de03955874647e6b64b8363018bc2d9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_182",
+      "speaker": "ade",
+      "speakerName": "에이드",
+      "text": "많은 양이 아니어도, 녹을 지우는 데는 문제 없답니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/fz-65/mt-84/2de03955874647e6b64b8363018bc2d9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_183",
+      "speaker": "ade",
+      "speakerName": "에이드",
+      "text": "그럼, 잠시만 기다려주세요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/fz-65/mt-84/2de03955874647e6b64b8363018bc2d9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_184",
+      "text": "에이드는 메이드 카페 창고로 향했다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_185",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "이렇게 쉽게 해결할 수 있었다니….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_186",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "지휘관에게 상담하러 오길 잘했네요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_187",
+      "text": "포기하지 않아서 다행이야.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_188",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "오늘 도와주신 것만으로도 충분히 감사하게 생각하고 있어요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_189",
+      "text": "그러니까 필요할 땐 주변에 도움을 요청하는 것도 중요해.",
+      "window": "Choice",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_190",
+      "text": "그러니까 도움이 필요하면 언제든 찾아 와.",
+      "window": "Choice",
+      "voice": null,
+      "chosen": true
+    },
+    {
+      "id": "d_favorite_privaty_191",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "아무리 그래도 혼자 해결할 수 있는 일은 혼자 해결해야죠.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_192",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "그래도….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_193",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "지휘관이 그렇게까지 말한다면, 앞으로 곤란할 때마다 찾아가 드릴 수도 있어요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_194",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "…어, 어디까지나 지휘관이 언제든 찾아오라고 말해서 그런 거니까, 오해하진 마세요!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_195",
+      "text": "항상 기다리고 있을 테니까, 편하게 와도 돼.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_196",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "부, 불편하다고 느낀 적은 한 번도 없었어요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_197",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "말 안 해도 편하게 찾아갈 거니까, 걱정 마세요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_198",
+      "speaker": "ade",
+      "speakerName": "에이드",
+      "text": "주인님, 프리바티 아가씨….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/fz-65/mt-84/2de03955874647e6b64b8363018bc2d9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_199",
+      "speaker": "ade",
+      "speakerName": "에이드",
+      "text": "말씀 중에 죄송합니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/fz-65/mt-84/2de03955874647e6b64b8363018bc2d9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_200",
+      "text": "벌써 찾은 거야?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_201",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "생각보다 빨리 돌아오셨네요?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_202",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "그런데 표정이 왜 이렇게 어두워요?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_203",
+      "speaker": "ade",
+      "speakerName": "에이드",
+      "text": "죄송해요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/fz-65/mt-84/2de03955874647e6b64b8363018bc2d9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_204",
+      "speaker": "ade",
+      "speakerName": "에이드",
+      "text": "창고를 열심히 찾아봤는데….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/fz-65/mt-84/2de03955874647e6b64b8363018bc2d9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_205",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "서, 설마….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_206",
+      "speaker": "ade",
+      "speakerName": "에이드",
+      "text": "구연산이 다 떨어졌어요….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/fz-65/mt-84/2de03955874647e6b64b8363018bc2d9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_207",
+      "text": "한 시간 전.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_208",
+      "speaker": "ade",
+      "speakerName": "에이드",
+      "text": "정말 죄송해요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/fz-65/mt-84/2de03955874647e6b64b8363018bc2d9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_209",
+      "speaker": "ade",
+      "speakerName": "에이드",
+      "text": "설마 구연산이 다 떨어졌을 줄은….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/fz-65/mt-84/2de03955874647e6b64b8363018bc2d9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_210",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "괜찮아요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_211",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "에이드 잘못은 아닌걸요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_212",
+      "text": "그래, 우린 얻어 쓰는 입장일 뿐이니까.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_213",
+      "text": "그래도 혹시 구할 수 있는 곳은 알고 있어?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_214",
+      "speaker": "ade",
+      "speakerName": "에이드",
+      "text": "아마 얀 아가씨에게 가면 구하실 수 있을 거예요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/fz-65/mt-84/2de03955874647e6b64b8363018bc2d9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_215",
+      "speaker": "ade",
+      "speakerName": "에이드",
+      "text": "저희도 그곳에서 카페에 필요한 물건을 구입하곤 하니까요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/fz-65/mt-84/2de03955874647e6b64b8363018bc2d9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_216",
+      "text": "지금 얀에게 가면 구할 수 있는 거지?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_217",
+      "speaker": "ade",
+      "speakerName": "에이드",
+      "text": "네, 주인님.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/fz-65/mt-84/2de03955874647e6b64b8363018bc2d9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_218",
+      "speaker": "ade",
+      "speakerName": "에이드",
+      "text": "지금 가시려는 거라면, 미리 연락해 둘까요?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/fz-65/mt-84/2de03955874647e6b64b8363018bc2d9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_219",
+      "text": "그래 주면 우리야 고맙지.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_220",
+      "speaker": "ade",
+      "speakerName": "에이드",
+      "text": "그럼 출발하시자마자 바로 연락해 두겠습니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/fz-65/mt-84/2de03955874647e6b64b8363018bc2d9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_221",
+      "text": "그렇게 우리는 메이드 카페를 나서, 쇼핑몰에 왔다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_222",
+      "speaker": "yan",
+      "speakerName": "얀",
+      "text": "여어, 신참.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/os-66/so-41/3daf068e85df1185adc13e8f14c268e9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_223",
+      "speaker": "yan",
+      "speakerName": "얀",
+      "text": "소식은 들었다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/os-66/so-41/3daf068e85df1185adc13e8f14c268e9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_224",
+      "speaker": "yan",
+      "speakerName": "얀",
+      "text": "구연산 필요하다카드만.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/os-66/so-41/3daf068e85df1185adc13e8f14c268e9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_225",
+      "speaker": "yan",
+      "speakerName": "얀",
+      "text": "어디에 쓸라꼬?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/os-66/so-41/3daf068e85df1185adc13e8f14c268e9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_226",
+      "text": "훈장의 녹을 지우는 데 필요해.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_227",
+      "speaker": "yan",
+      "speakerName": "얀",
+      "text": "훈장?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/os-66/so-41/3daf068e85df1185adc13e8f14c268e9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_228",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "이거예요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_229",
+      "text": "프리바티가 훈장을 내밀었다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_230",
+      "speaker": "yan",
+      "speakerName": "얀",
+      "text": "아아.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/os-66/so-41/3daf068e85df1185adc13e8f14c268e9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_231",
+      "speaker": "yan",
+      "speakerName": "얀",
+      "text": "본 적 있다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/os-66/so-41/3daf068e85df1185adc13e8f14c268e9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_232",
+      "speaker": "yan",
+      "speakerName": "얀",
+      "text": "이걸 그… 뭐라카드라.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/os-66/so-41/3daf068e85df1185adc13e8f14c268e9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_233",
+      "speaker": "yan",
+      "speakerName": "얀",
+      "text": "…[중앙 정부 특별 훈장].",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/os-66/so-41/3daf068e85df1185adc13e8f14c268e9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_234",
+      "speaker": "yan",
+      "speakerName": "얀",
+      "text": "맞제?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/os-66/so-41/3daf068e85df1185adc13e8f14c268e9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_235",
+      "text": "뭔지 알고 있어?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_236",
+      "speaker": "yan",
+      "speakerName": "얀",
+      "text": "알지 알지.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/os-66/so-41/3daf068e85df1185adc13e8f14c268e9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_237",
+      "speaker": "yan",
+      "speakerName": "얀",
+      "text": "장사하다 보면 가~끔 본다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/os-66/so-41/3daf068e85df1185adc13e8f14c268e9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_238",
+      "speaker": "yan",
+      "speakerName": "얀",
+      "text": "근데 이거 아무나 못 받는다카든데.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/os-66/so-41/3daf068e85df1185adc13e8f14c268e9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_239",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "그럼요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_240",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "특별한 공로가 있어야만 받을 수 있는 훈장이니까요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_241",
+      "text": "그 정도로 대단한 거야?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_242",
+      "speaker": "yan",
+      "speakerName": "얀",
+      "text": "녹 지워준다고 같이 돌아다니면서, 그것도 모르고 있었나.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/os-66/so-41/3daf068e85df1185adc13e8f14c268e9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_243",
+      "text": "전혀 몰랐어….",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_244",
+      "speaker": "yan",
+      "speakerName": "얀",
+      "text": "그나저나, 중앙 정부도 쩨쩨하네.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/os-66/so-41/3daf068e85df1185adc13e8f14c268e9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_245",
+      "speaker": "yan",
+      "speakerName": "얀",
+      "text": "이왕 줄라믄 금으로 주지, 강철이 뭐고, 강철이.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/os-66/so-41/3daf068e85df1185adc13e8f14c268e9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_246",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "재료가 중요한 게 아니에요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_247",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "꺾이지 않는 마음을 가지라는, 훈장의 의미가 중요한 거죠.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_248",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "그래서 재료도 강철인거구요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_249",
+      "speaker": "yan",
+      "speakerName": "얀",
+      "text": "아따, 무섭다이.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/os-66/so-41/3daf068e85df1185adc13e8f14c268e9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_250",
+      "speaker": "yan",
+      "speakerName": "얀",
+      "text": "그런 표정 짓지 마라.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/os-66/so-41/3daf068e85df1185adc13e8f14c268e9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_251",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "정색하면서 말한 건 미안해요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_252",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "하지만 그만큼 저한테 소중한 물건이라서 그랬어요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_253",
+      "speaker": "yan",
+      "speakerName": "얀",
+      "text": "…긍지 넘치는 군인이네.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/os-66/so-41/3daf068e85df1185adc13e8f14c268e9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_254",
+      "speaker": "yan",
+      "speakerName": "얀",
+      "text": "그래, 미안타. 못 들은 걸로 해도.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/os-66/so-41/3daf068e85df1185adc13e8f14c268e9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_255",
+      "speaker": "yan",
+      "speakerName": "얀",
+      "text": "욕할라고 한 소린 아이다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/os-66/so-41/3daf068e85df1185adc13e8f14c268e9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_256",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "괜찮아요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_257",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "그래서, 구연산은 있나요?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_258",
+      "speaker": "yan",
+      "speakerName": "얀",
+      "text": "우리가 취급 안 하는 게 어디 있겠노.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/os-66/so-41/3daf068e85df1185adc13e8f14c268e9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_259",
+      "speaker": "yan",
+      "speakerName": "얀",
+      "text": "잠만 기다려 봐라.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/os-66/so-41/3daf068e85df1185adc13e8f14c268e9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_260",
+      "text": "얀이 가게 안에 들어갔다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_261",
+      "text": "엄청 중요하게 생각하는 훈장이었구나.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_262",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "그럼요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_263",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "특히나 저한테는 더 의미 있는 물건이거든요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_264",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "제가 중앙 정부 일을 하면ㅅ….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_265",
+      "speaker": "yan",
+      "speakerName": "얀",
+      "text": "찾아왔다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/os-66/so-41/3daf068e85df1185adc13e8f14c268e9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_266",
+      "speaker": "yan",
+      "speakerName": "얀",
+      "text": "이거 맞제?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/os-66/so-41/3daf068e85df1185adc13e8f14c268e9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_267",
+      "text": "어느새 얀이 돌아와 흰색 플라스틱 통을 내밀었다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_268",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_269",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "고, 고마워요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_270",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "이걸로 녹을 지울 수 있게 됐네요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_271",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "가격은 얼마죠?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_272",
+      "speaker": "yan",
+      "speakerName": "얀",
+      "text": "얼마 안 한다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/os-66/so-41/3daf068e85df1185adc13e8f14c268e9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_273",
+      "speaker": "yan",
+      "speakerName": "얀",
+      "text": "그런데….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/os-66/so-41/3daf068e85df1185adc13e8f14c268e9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_274",
+      "speaker": "yan",
+      "speakerName": "얀",
+      "text": "니들 좀 한가하나?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/os-66/so-41/3daf068e85df1185adc13e8f14c268e9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_275",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "바쁘죠.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_276",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "바로 녹 지우러 가야 하니까.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_277",
+      "speaker": "yan",
+      "speakerName": "얀",
+      "text": "녹이야 금방 지워질낀데 바쁠 일이 뭐 있겠노.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/os-66/so-41/3daf068e85df1185adc13e8f14c268e9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_278",
+      "speaker": "yan",
+      "speakerName": "얀",
+      "text": "그거 말고 할 일 없으면, 내 좀 도와도.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/os-66/so-41/3daf068e85df1185adc13e8f14c268e9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_279",
+      "speaker": "yan",
+      "speakerName": "얀",
+      "text": "도와주면 내 구연산 값은 안 받는다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/os-66/so-41/3daf068e85df1185adc13e8f14c268e9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_280",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "어떤 일인데요?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_281",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "들어나 보죠.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_282",
+      "speaker": "yan",
+      "speakerName": "얀",
+      "text": "별거 아이다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/os-66/so-41/3daf068e85df1185adc13e8f14c268e9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_283",
+      "speaker": "yan",
+      "speakerName": "얀",
+      "text": "내일까지 메이드 카페에 납품해야 하는데, 담당 기사가 몸살이 났단다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/os-66/so-41/3daf068e85df1185adc13e8f14c268e9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_284",
+      "speaker": "yan",
+      "speakerName": "얀",
+      "text": "거기 물건만 좀 배달해 도.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/os-66/so-41/3daf068e85df1185adc13e8f14c268e9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_285",
+      "speaker": "yan",
+      "speakerName": "얀",
+      "text": "그래, 구연산도 배송 리스트에 있다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/os-66/so-41/3daf068e85df1185adc13e8f14c268e9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_286",
+      "speaker": "yan",
+      "speakerName": "얀",
+      "text": "너희, 메이드 카페에서 왔제?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/os-66/so-41/3daf068e85df1185adc13e8f14c268e9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_287",
+      "speaker": "yan",
+      "speakerName": "얀",
+      "text": "녹 지울라믄 구연산 쓰라고, 거기서 알려줬다카던데.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/os-66/so-41/3daf068e85df1185adc13e8f14c268e9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_288",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "맞아요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_289",
+      "speaker": "yan",
+      "speakerName": "얀",
+      "text": "그라믄 은혜 갚는 셈치고, 가져다줄 수 있는 거 아이가.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/os-66/so-41/3daf068e85df1185adc13e8f14c268e9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_290",
+      "speaker": "yan",
+      "speakerName": "얀",
+      "text": "메이드 카페는 물건 빨리 받아서 좋고.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/os-66/so-41/3daf068e85df1185adc13e8f14c268e9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_291",
+      "speaker": "yan",
+      "speakerName": "얀",
+      "text": "너희는 구연산 받아가서 좋고.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/os-66/so-41/3daf068e85df1185adc13e8f14c268e9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_292",
+      "speaker": "yan",
+      "speakerName": "얀",
+      "text": "나쁜 거래는 아니제?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/os-66/so-41/3daf068e85df1185adc13e8f14c268e9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_293",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "…….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_294",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "다른 건 모르겠지만, 에이드를 돕는다는 건 좋네요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_295",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "녹 지우는 법을 알려준 답례가 필요하긴 했으니까요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_296",
+      "speaker": "yan",
+      "speakerName": "얀",
+      "text": "그럼 거래도 성립됐고….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/os-66/so-41/3daf068e85df1185adc13e8f14c268e9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_297",
+      "speaker": "yan",
+      "speakerName": "얀",
+      "text": "창고로 가자.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/os-66/so-41/3daf068e85df1185adc13e8f14c268e9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_298",
+      "text": "한 무더기의 상자들 앞에 섰다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_299",
+      "speaker": "yan",
+      "speakerName": "얀",
+      "text": "빨간 테이프 붙은 것들만 옮기면 된다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/os-66/so-41/3daf068e85df1185adc13e8f14c268e9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_300",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "이, 이건 대체….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_301",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "이렇게 많다고는 안했잖아요!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_302",
+      "speaker": "yan",
+      "speakerName": "얀",
+      "text": "적다고도 안 했는데?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/os-66/so-41/3daf068e85df1185adc13e8f14c268e9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_303",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "그리고 이 양….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_304",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "이 많은 걸 어떻게 한 번에 옮겨요?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_305",
+      "speaker": "yan",
+      "speakerName": "얀",
+      "text": "와 한 번에 다 옮길라 카는데?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/os-66/so-41/3daf068e85df1185adc13e8f14c268e9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_306",
+      "speaker": "yan",
+      "speakerName": "얀",
+      "text": "몇 번씩 왔다 갔다 하믄서 옮겨도 된다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/os-66/so-41/3daf068e85df1185adc13e8f14c268e9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_307",
+      "speaker": "yan",
+      "speakerName": "얀",
+      "text": "그라고 양이 뭐가 중요한데.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/os-66/so-41/3daf068e85df1185adc13e8f14c268e9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_308",
+      "speaker": "yan",
+      "speakerName": "얀",
+      "text": "니 입으로 메이드 카페 돕겠다 안 했나?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/os-66/so-41/3daf068e85df1185adc13e8f14c268e9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_309",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "그건 그렇지만….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_310",
+      "speaker": "yan",
+      "speakerName": "얀",
+      "text": "그럼 부탁한데이~",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/os-66/so-41/3daf068e85df1185adc13e8f14c268e9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_311",
+      "text": "메이드 카페에 짐을 몇 번 옮겼다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_312",
+      "text": "그리고 마지막 짐을 챙기기 위해 창고로 돌아왔다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_313",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "곰곰이 생각해 봤는데, 안 되겠어요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_314",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "구연산 한 통 받으려고, 이렇게까지 해야 해요?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_315",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "돈 주고 샀으면 진작에 끝났을 텐데?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_316",
+      "text": "내가 생각해도 짐이 좀 많기는 해.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_317",
+      "text": "그래도 얀도 생각이 있어서 그랬을 거야.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_318",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "생각?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_319",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "어떻게 하면 싸게 굴릴 수 있을까, 뭐 그런 생각이요?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_320",
+      "text": "이렇게라도 메이드 카페를 돕지 않았으면.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_321",
+      "text": "어떻게 답례할지 고민했을 거잖아.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_322",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "…제 마음의 짐을 덜어주려고 이 일을 시켰다는 건가요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_323",
+      "text": "그렇지.",
+      "window": "Choice",
+      "voice": null,
+      "chosen": true
+    },
+    {
+      "id": "d_favorite_privaty_324",
+      "text": "짐작일 뿐이지만.",
+      "window": "Choice",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_325",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "…….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_326",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "왜 그런 생각을 했는지, 썩 내키지 않긴 한데요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_327",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "일단 지휘관 말을 믿어볼게요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_328",
+      "text": "뭐, 좋게 생각하자면 그렇다는 거지.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_329",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "…확실한 답례를 할 수 있는 건 사실이니까.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_330",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "지휘관과 에이드 얼굴을 봐서, 이번만이에요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_331",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "근데 저는 그렇다 쳐도, 지휘관은 괜찮나요?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_332",
+      "text": "나는 왜?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_333",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "제 훈장 때문에 지휘관도 같이 짐 옮기고 있는 거잖아요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_334",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "지휘관이 구연산 필요한 것도 아닌데, 괜찮냐는 거죠.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_335",
+      "text": "옆에 있을 수 있는 일이니까 괜찮아.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_336",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "여, 옆에 있을 수 있…!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_337",
+      "text": "갑자기 프리바티가 내 손을 유심히 바라보았다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_338",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "…….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_339",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "괜찮은 건 괜찮은 거고, 조금 쉬었다 하죠.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_340",
+      "text": "지쳤어?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_341",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "제가 이 정도 일로 왜 지쳐요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_342",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "지휘관이 좀 쉬어야 할 것 같아서 그래요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_343",
+      "text": "나도 안 지쳤는데.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_344",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "본인 손을 좀 보세요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_345",
+      "text": "손?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_346",
+      "text": "나도 모르는 새, 손이 더러워져 있었다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_347",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "그런 손을 하고 있으면서, 무슨 말을 하는 거예요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_348",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "일단 좀 쉬죠.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_349",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "쉬고 나서 다시 해도 늦지 않아요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_350",
+      "text": "털썩-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_351",
+      "text": "프리바티는 상자를 가져와 앉았다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_352",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "자, 앉으세요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_353",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "지휘관 앉으라고 두 개 가져왔으니까.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_354",
+      "text": "나는 프리바티 옆에 앉았다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_355",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "손이 그렇게 될 때까지 왜 아무 말 안 한 거예요?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_356",
+      "text": "나도 프리바티가 말해주고 나서 알았어.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_357",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "너무 오래 일한다 싶으면, 먼저 쉬자고 말해주세요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_358",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "괘, 괜히 무리하다가 다치기라도 하면 잠자리가 뒤숭숭해지니까요…!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_359",
+      "text": "알았어, 무리하진 않을게.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_360",
+      "text": "그보다 아까 훈장에 대해 하려고 했던 얘기는 뭐였어?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_361",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "아까 하려고 했던 얘기요?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_362",
+      "text": "얼마나 의미있는 훈장인지 듣다가 말았어.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_363",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "아아, 그 얘기 말인가요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_364",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "이 훈장은 임무 성공률 100%를 달성해서 받았거든요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_365",
+      "text": "임무 성공률 100%?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_366",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "네, 100%. 엄청나죠?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_367",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "제가 그걸 최초로 해냈어요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_368",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "뭐… 화려한 공로를 세운 건 아니지만,",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_369",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "그래도!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_370",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "포기하지 않고 꾸준히 노력한 결과잖아요?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_371",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "다른 것보다도, 그걸 인정 받은 기분이라 더 기뻤어요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_372",
+      "text": "훈장에는 프리바티의 긍지가 담겨있는 거네.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_373",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "제 긍지….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_374",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "지, 지휘관은 왜 그렇게 생각….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_375",
+      "text": "응?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_376",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "…….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_377",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "아, 아무것도 아니에요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_378",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "후, 훈장 얘기는 여기까지만 할까요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_379",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "생각해 보니 낯간지러운 소리를 한 것 같은데.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_380",
+      "text": "난 그렇게 생각 안 하는데.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_381",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "저, 전 그렇게 생각해요!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_382",
+      "text": "그럼, 바로 다시 짐 옮길까?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_383",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "지금 바로?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_384",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "더 쉬지 않아도 괜찮아요?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_385",
+      "text": "괜찮아. 빨리 해결하고 훈장을 닦으러 가자.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_386",
+      "text": "나도 얼른 깨끗해진 훈장을 보고 싶어.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_387",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "…….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_388",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "알았어요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_389",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "빨리 끝내고 가죠.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_390",
+      "text": "마지막 짐을 들고, 메이드 카페에 왔다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_391",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "끄, 끝났어요!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_392",
+      "speaker": "ade",
+      "speakerName": "에이드",
+      "text": "주인님, 프리바티 아가씨. 고생 많으셨어요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/fz-65/mt-84/2de03955874647e6b64b8363018bc2d9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_393",
+      "speaker": "ade",
+      "speakerName": "에이드",
+      "text": "원래라면 저희가 옮겼어야 할 짐인데….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/fz-65/mt-84/2de03955874647e6b64b8363018bc2d9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_394",
+      "speaker": "ade",
+      "speakerName": "에이드",
+      "text": "이렇게까지 도와주셔서, 뭐라고 감사해야 할지 모르겠어요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/fz-65/mt-84/2de03955874647e6b64b8363018bc2d9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_395",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "짐 옮기는 것쯤이야 별거 아닌데요, 뭐.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_396",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "노, 녹 지우는 법을 알려주신 답례로 딱 맞는 일이었으니까요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_397",
+      "speaker": "ade",
+      "speakerName": "에이드",
+      "text": "후후, 그러신가요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/fz-65/mt-84/2de03955874647e6b64b8363018bc2d9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_398",
+      "speaker": "ade",
+      "speakerName": "에이드",
+      "text": "그럼, 서로 한 번씩 주고받았다고 해도 되겠네요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/fz-65/mt-84/2de03955874647e6b64b8363018bc2d9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_399",
+      "text": "…….",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_400",
+      "speaker": "ade",
+      "speakerName": "에이드",
+      "text": "어라?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/fz-65/mt-84/2de03955874647e6b64b8363018bc2d9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_401",
+      "speaker": "ade",
+      "speakerName": "에이드",
+      "text": "여기 상자에 쪽지가 하나 있네요?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/fz-65/mt-84/2de03955874647e6b64b8363018bc2d9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_402",
+      "speaker": "ade",
+      "speakerName": "에이드",
+      "text": "두 분께 드릴 구연산은 짐에 같이 넣어놨으니, 바로 꺼내서 가져가시면 된다고 적혀있어요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/fz-65/mt-84/2de03955874647e6b64b8363018bc2d9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_403",
+      "text": "에이드는 상자를 열어 구연산 통을 꺼냈다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_404",
+      "speaker": "ade",
+      "speakerName": "에이드",
+      "text": "프리바티 아가씨, 받아주시겠어요?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/fz-65/mt-84/2de03955874647e6b64b8363018bc2d9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_405",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "이게 구연산….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_406",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "이, 이것만 있으면 녹이 지워지는 거 맞죠?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_407",
+      "speaker": "ade",
+      "speakerName": "에이드",
+      "text": "그럼요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/fz-65/mt-84/2de03955874647e6b64b8363018bc2d9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_408",
+      "speaker": "ade",
+      "speakerName": "에이드",
+      "text": "훈장에 녹이 엄청 슬었던 건 아니니까.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/fz-65/mt-84/2de03955874647e6b64b8363018bc2d9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_409",
+      "speaker": "ade",
+      "speakerName": "에이드",
+      "text": "물에 한두 스푼 정도 녹여서 담가놓으면 아마 깨끗하게 지워질 거예요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/fz-65/mt-84/2de03955874647e6b64b8363018bc2d9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_410",
+      "speaker": "ade",
+      "speakerName": "에이드",
+      "text": "시간이 조금 지난 다음에, 칫솔로 살살 문지르ㄹ….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/fz-65/mt-84/2de03955874647e6b64b8363018bc2d9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_411",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "드디어….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_412",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "드디어 훈장의 녹을 지울 수 있게 됐어요!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_413",
+      "speaker": "ade",
+      "speakerName": "에이드",
+      "text": "후후, 너무 기뻐서 안 들리시나 보네요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/fz-65/mt-84/2de03955874647e6b64b8363018bc2d9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_414",
+      "text": "방법은 내가 들었으니까, 괜찮아.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_415",
+      "speaker": "ade",
+      "speakerName": "에이드",
+      "text": "혹시 몰라서 말씀드리면.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/fz-65/mt-84/2de03955874647e6b64b8363018bc2d9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_416",
+      "speaker": "ade",
+      "speakerName": "에이드",
+      "text": "구연산은 약산성이라 맨손으로 만지면 손이 상할 수도 있어요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/fz-65/mt-84/2de03955874647e6b64b8363018bc2d9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_417",
+      "speaker": "ade",
+      "speakerName": "에이드",
+      "text": "가루를 직접 만지실 일이 있으면 꼭 장갑을 착용해 주세요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/fz-65/mt-84/2de03955874647e6b64b8363018bc2d9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_418",
+      "speaker": "ade",
+      "speakerName": "에이드",
+      "text": "아마 이 정도만 주의하시면, 문제없을 거예요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/fz-65/mt-84/2de03955874647e6b64b8363018bc2d9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_419",
+      "text": "명심할게.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_420",
+      "text": "그럼 가기 전에 하나만 물어봐도 돼?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_421",
+      "speaker": "ade",
+      "speakerName": "에이드",
+      "text": "네, 뭐든지 말씀하세요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/fz-65/mt-84/2de03955874647e6b64b8363018bc2d9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_422",
+      "speaker": "ade",
+      "speakerName": "에이드",
+      "text": "어떤 게 궁금하신가요?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/fz-65/mt-84/2de03955874647e6b64b8363018bc2d9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_423",
+      "text": "짐 옮기는 일, 혹시 에이드가 부탁했어?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_424",
+      "speaker": "ade",
+      "speakerName": "에이드",
+      "text": "…….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/fz-65/mt-84/2de03955874647e6b64b8363018bc2d9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_425",
+      "speaker": "ade",
+      "speakerName": "에이드",
+      "text": "역시 주인님이시네요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/fz-65/mt-84/2de03955874647e6b64b8363018bc2d9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_426",
+      "speaker": "ade",
+      "speakerName": "에이드",
+      "text": "프리바티 아가씨는 조금 솔직하지 못하시지만.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/fz-65/mt-84/2de03955874647e6b64b8363018bc2d9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_427",
+      "speaker": "ade",
+      "speakerName": "에이드",
+      "text": "항상 주변을 생각해 주시는 분이시잖아요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/fz-65/mt-84/2de03955874647e6b64b8363018bc2d9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_428",
+      "speaker": "ade",
+      "speakerName": "에이드",
+      "text": "그래서 프리바티 아가씨라면 어떻게 고맙다고 해야 할지, 고민하실 거라 생각했어요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/fz-65/mt-84/2de03955874647e6b64b8363018bc2d9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_429",
+      "speaker": "ade",
+      "speakerName": "에이드",
+      "text": "조금이나마 마음의 짐을 덜어드리려고 했는데….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/fz-65/mt-84/2de03955874647e6b64b8363018bc2d9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_430",
+      "speaker": "ade",
+      "speakerName": "에이드",
+      "text": "제가 너무 주제넘은 일을 한 걸까요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/fz-65/mt-84/2de03955874647e6b64b8363018bc2d9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_431",
+      "text": "이 정도 배려라면 괜찮지 않을까?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_432",
+      "speaker": "ade",
+      "speakerName": "에이드",
+      "text": "그렇게 생각해 주시니 다행이에요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/fz-65/mt-84/2de03955874647e6b64b8363018bc2d9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_433",
+      "speaker": "ade",
+      "speakerName": "에이드",
+      "text": "…그래도 아가씨께는 비밀로 해주실 수 있나요?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/fz-65/mt-84/2de03955874647e6b64b8363018bc2d9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_434",
+      "text": "무덤까지 비밀로 가져갈게.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_435",
+      "speaker": "ade",
+      "speakerName": "에이드",
+      "text": "후후, 감사합니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/fz-65/mt-84/2de03955874647e6b64b8363018bc2d9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_436",
+      "text": "프리바티와 함께 지휘관실에 돌아왔다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_437",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "그럼….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_438",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "바로 시작할까요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_439",
+      "text": "내가 할까?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_440",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "괜찮아요. 제가 할게요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_441",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "제 손으로 직접 하고 싶어요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_442",
+      "text": "알았어.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_443",
+      "text": "그러면 물만 가져올게.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_444",
+      "text": "지휘관실을 나왔다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_445",
+      "text": "잠시 후.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_446",
+      "text": "지잉-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_447",
+      "text": "물 떠왔어.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_448",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "비벼도 잘 안워지는….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_449",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "아, 지휘관.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_450",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "이거 잘 안 지워지는데요?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_451",
+      "text": "프리바티는 구연산 가루를 손에 묻혀 훈장을 비비고 있었다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_452",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "에이드가 거짓말을 했을 리는 없고….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_453",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "사실 구연산이 아니라 다른 걸 가져온 게 아닐까요?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_454",
+      "text": "잠깐만 프리바티!",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_455",
+      "text": "그렇게 쓰면 안 돼!",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_456",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_457",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "쓰, 쓰는 방법이 따로 있는 건가요?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_458",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "저는 당연히 가루 그대로 비비면 될 줄 알고….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_459",
+      "text": "내가 해줄 테니까, 이리 줘 봐.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_460",
+      "text": "받아 온 물에 구연산을 풀었다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_461",
+      "text": "그리고 훈장을 물에 담갔다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_462",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "그, 그렇게 쓰는 거였군요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_463",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "몰랐어요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_464",
+      "text": "에이드가 다 설명해 줬던 거긴 한데….",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_465",
+      "text": "일단 손부터 씻고 오자.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_466",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "네….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_467",
+      "text": "프리바티가 손을 씻고 돌아왔다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_468",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "씻고 왔어요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_469",
+      "text": "손은 괜찮아?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_470",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "안 괜찮을 이유 있나요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_471",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "가루 좀 묻은 정도로 무슨 일 나겠어요?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_472",
+      "text": "그래도 한 번 보여줘.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_473",
+      "text": "나는 프리바티의 손을 붙잡았다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_474",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "…저, 정말 괜찮아요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_475",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "…아무렇지도 않아요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_476",
+      "text": "약산성이라 손에 닿으면 안 좋대.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_477",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "…펴, 평범한 인간이면 그렇겠죠.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_478",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "…전 니케니까 괜찮다구요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_479",
+      "text": "아프거나 따갑진 않아?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_480",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "…저, 전혀요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_481",
+      "text": "아닌 것 같은데.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_482",
+      "text": "떨고 있잖아.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_483",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "그, 그건 지휘관이 자꾸 제 손을 주무르니까 그렇죠!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_484",
+      "text": "걱정돼서 그래.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_485",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "거, 걱정….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_486",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "크흠. 그런 거라면 어쩔 수 없네요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_487",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "뭐, 그렇게까지 걱정한다면 잠깐은 잡고 있어도 상관없….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_488",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "푸훗.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_489",
+      "text": "갑자기 왜 웃어?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_490",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "그도 그럴게.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_491",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "아까는 제가 지휘관 손을 걱정했었는데.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_492",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "지금은 반대로 지휘관이 제 손을 걱정하고 있잖아요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_493",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "…정말, 지휘관은 왜 항상 남부터 챙기는지 모르겠어요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_494",
+      "text": "난 하루쯤 지나면 괜찮을 거야.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_495",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "제 손도 괜찮아요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_496",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "너무 걱정 안 해도 돼요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_497",
+      "text": "…….",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_498",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "…….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_499",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "그, 그러고 보니 이제 녹이 다 빠지지 않았을까요?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_500",
+      "text": "슬슬 그렇겠네.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_501",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "화, 확인해 보죠!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_502",
+      "text": "프리바티가 물그릇을 바라봤다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_503",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "물 색깔이 변한 걸 보니까, 제대로 되는 것 같네요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_504",
+      "text": "잠깐만 기다려 봐.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_505",
+      "text": "나는 칫솔을 가져와, 훈장의 녹슨 부분을 문질렀다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_506",
+      "text": "아까와는 달리, 녹은 쉽게 벗겨졌다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_507",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "지휘관!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_508",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "에이드가 말했던 대로네요!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_509",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "녹이 다 사라졌어요!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_510",
+      "text": "이렇게까지 깔끔하게 사라질 줄은 몰랐네.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_511",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "정말이에요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_512",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "완전 새것처럼 닦일 줄이야….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_513",
+      "text": "그럼 프리바티, 잠깐 내 앞으로 와 볼래?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_514",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "지휘관 앞으로…?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_515",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "이렇게요?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_516",
+      "text": "나는 훈장을 수건으로 닦은 다음,",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_517",
+      "text": "프리바티의 가슴에 달아주었다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_518",
+      "text": "음. 잘 어울리네.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_519",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "후, 훈장을 달아주려고 한 거였군요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_520",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "손을 올리길래, 다른 걸 하려는 줄 알고….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_521",
+      "text": "다른 거?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_522",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "아, 아무것도 아니에요!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_523",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "그것보다 훈장!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_524",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "훈장은 갑자기 왜 달아준 거예요?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_525",
+      "text": "이걸 달고 있는 프리바티가 보고 싶었어.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_526",
+      "text": "이 훈장은 프리바티의 긍지잖아.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_527",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "…아까부터 이걸 제 긍지라고 하셨는데,",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_528",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "왜 그렇게 생각한 건가요?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_529",
+      "text": "프리바티가 누구보다 더 노력했기 때문에 받은 것일 테니까.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_530",
+      "text": "그건 훈장을 받기 위한 노력이 아니라,",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_531",
+      "text": "부대를 위해, 임무를 성공시키기 위해 했던 노력일 테니까.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_532",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "!!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_533",
+      "text": "그러니까 프리바티에게 [긍지]일 거라고 생각했어.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_534",
+      "text": "아니야?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_535",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "맞아… 요. 제 긍지에요, 이건.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_536",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "저도 이걸 노력이 인정받은 증거라고 생각했어요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_537",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "그런데 그걸 지휘관에게도 듣게 될 줄이야….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_538",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "정말… 기뻐요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_539",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "훈장을 처음 받았던 그 순간만큼이나 기뻐요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_540",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "제 [긍지]가 더 특별해진 느낌이에요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_541",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "정말 고마워요, 지휘관…!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_542",
+      "text": "그만큼 기뻐하게 해준 훈장이니까, 앞으론 잘 관리해야겠지?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_543",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "네.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_544",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "제 긍지를 더럽히지 않도록, 앞으론 더 열심히 관리해야겠어요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_545",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "…그래도 혹시, 정말 피치 못한 사정으로 또 녹이 슬게 되면,",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_546",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "…그때도 이번처럼 도와줄 수 있나요?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_547",
+      "text": "아까 메이드 카페에서도 약속했잖아.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_548",
+      "text": "필요하면 언제든지 도와줄게.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_549",
+      "text": "네가 긍지를 지킬 수 있도록.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_550",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "지, 진짜 약속하는 거죠?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_551",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "지금 약속하는 건 절대 못 물러요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_552",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "평생 지켜야 하는 약속이니까….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_553",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "그, 그래!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_554",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "종신계약이에요, 이거…!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_555",
+      "text": "알았어, 약속할게.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_556",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "그, 그럼 제가 언제든 도와달라고 할 수 있게….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_privaty_557",
+      "speaker": "privaty",
+      "speakerName": "프리바티",
+      "text": "항상 제 눈 닿는 곳에 있어 주세요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/se-97/pl-51/b901c8f631bb2bfc2f59022ab3c785ce.webp",
+      "voice": null
+    }
+  ]
+}

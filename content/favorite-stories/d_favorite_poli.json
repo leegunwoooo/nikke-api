@@ -1,0 +1,3819 @@
+{
+  "groupId": "d_favorite_poli",
+  "type": "favorite",
+  "name": "베테랑 경찰 폴리의 힐링",
+  "nikke": "폴리",
+  "sourceVideo": "https://youtu.be/Haqr8XePOZQ",
+  "lines": [
+    {
+      "id": "d_favorite_poli_1",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "월간 보고서, 써야 하는뎅….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_2",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "으으으… 피곤해랑.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_3",
+      "text": "탁- 탁탁-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_4",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "응?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_5",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "태블릿이 왜 반응이 없징.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_6",
+      "text": "탁탁-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_7",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "망가졌나 보당.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_8",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "에흉, 마음대로 되는 일이 하나도 없넹.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_9",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "어쩔 수 없징, 간만에 수첩에다가 써야겠당.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_10",
+      "text": "사각- 사각-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_11",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "후웅.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_12",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "다 썼당~",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_13",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "간만에 수첩을 썼더닝, 추억이 새록새록 떠오르넹.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_14",
+      "text": "드르륵-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_15",
+      "text": "폴리는 책상 서랍들을 열었고.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_16",
+      "text": "그 안에는 낡은 수첩 몇 권이 들어가 있었다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_17",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "크흠… 아무도 안 왔징?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_18",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "아마 제일 안쪽에 있었을텐뎅….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_19",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "끄으으응-",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_20",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "아! 찾았당!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_21",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "이제 보니까 엄청 낡았넹.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_22",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "…조금만 읽어 볼깡….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_23",
+      "text": "사락- 사락-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_24",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "…….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_25",
+      "text": "지잉-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_26",
+      "speaker": "miranda",
+      "speakerName": "미란다",
+      "text": "좋은 아침입니다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vg-25/er-68/88e9d12d692695aaae54b796a4e3d0a4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_27",
+      "speaker": "quiry",
+      "speakerName": "키리",
+      "text": "안녕하세요, 폴리~",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/am-53/jy-95/1f5c00eb307f6f57ce252d5905a20b22.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_28",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "!!!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_29",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "으잉, 두 분 다 빨리 왔네영.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_30",
+      "speaker": "miranda",
+      "speakerName": "미란다",
+      "text": "예, 오늘은 평소보다 더 빨리 왔습니다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vg-25/er-68/88e9d12d692695aaae54b796a4e3d0a4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_31",
+      "speaker": "miranda",
+      "speakerName": "미란다",
+      "text": "경찰은 부지런해야 하기 때문입니다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vg-25/er-68/88e9d12d692695aaae54b796a4e3d0a4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_32",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "뭐, 맞는 말이졍.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_33",
+      "speaker": "miranda",
+      "speakerName": "미란다",
+      "text": "어? 그런데 손에 든 그건 뭡니까?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vg-25/er-68/88e9d12d692695aaae54b796a4e3d0a4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_34",
+      "speaker": "miranda",
+      "speakerName": "미란다",
+      "text": "엄청 오래된 것 같습니다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vg-25/er-68/88e9d12d692695aaae54b796a4e3d0a4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_35",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "아, 이… 이건….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_36",
+      "speaker": "miranda",
+      "speakerName": "미란다",
+      "text": "아! 뭔지 알겠습니다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vg-25/er-68/88e9d12d692695aaae54b796a4e3d0a4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_37",
+      "speaker": "miranda",
+      "speakerName": "미란다",
+      "text": "버려야 하는 물건이군영!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vg-25/er-68/88e9d12d692695aaae54b796a4e3d0a4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_38",
+      "speaker": "miranda",
+      "speakerName": "미란다",
+      "text": "청소를 하던 중이었습니까?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vg-25/er-68/88e9d12d692695aaae54b796a4e3d0a4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_39",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "네엥?! 아니에영!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_40",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "이건 버릴 수 있는 게 아니라구영.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_41",
+      "speaker": "miranda",
+      "speakerName": "미란다",
+      "text": "엇, 그렇습니까?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vg-25/er-68/88e9d12d692695aaae54b796a4e3d0a4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_42",
+      "speaker": "miranda",
+      "speakerName": "미란다",
+      "text": "폴리가 버릴 수 없다면, 제가 버려드리겠습니다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vg-25/er-68/88e9d12d692695aaae54b796a4e3d0a4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_43",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "그게 아니에영!!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_44",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "저에게 소중한 물건이라서 못 버리는 거예영!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_45",
+      "speaker": "quiry",
+      "speakerName": "키리",
+      "text": "으응? 폴리에게 소중한 물건을 손에 쥐고 있다구요?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/am-53/jy-95/1f5c00eb307f6f57ce252d5905a20b22.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_46",
+      "speaker": "quiry",
+      "speakerName": "키리",
+      "text": "저는 아무것도 안 보이는데요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/am-53/jy-95/1f5c00eb307f6f57ce252d5905a20b22.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_47",
+      "speaker": "miranda",
+      "speakerName": "미란다",
+      "text": "당연합니다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vg-25/er-68/88e9d12d692695aaae54b796a4e3d0a4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_48",
+      "speaker": "miranda",
+      "speakerName": "미란다",
+      "text": "거기는 수건이기 때문입니다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vg-25/er-68/88e9d12d692695aaae54b796a4e3d0a4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_49",
+      "speaker": "quiry",
+      "speakerName": "키리",
+      "text": "허어억…!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/am-53/jy-95/1f5c00eb307f6f57ce252d5905a20b22.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_50",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "에흉… 오자마자 또 시작이네영.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_51",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "경찰서 안에 수건을 없애버려야겠어영.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_52",
+      "speaker": "miranda",
+      "speakerName": "미란다",
+      "text": "그럼, 손을 씻고 어디에 닦습니까?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vg-25/er-68/88e9d12d692695aaae54b796a4e3d0a4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_53",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "크르릉… 이상한 데에서 태클 걸지 말아영.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_54",
+      "speaker": "miranda",
+      "speakerName": "미란다",
+      "text": "알겠습니다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vg-25/er-68/88e9d12d692695aaae54b796a4e3d0a4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_55",
+      "speaker": "miranda",
+      "speakerName": "미란다",
+      "text": "그럼, 그 수첩 폴리에게 소중한 물건이라고 하셨는데.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vg-25/er-68/88e9d12d692695aaae54b796a4e3d0a4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_56",
+      "speaker": "miranda",
+      "speakerName": "미란다",
+      "text": "뭔지 여쭤봐도 됩니까?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vg-25/er-68/88e9d12d692695aaae54b796a4e3d0a4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_57",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "이 수첩은….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_58",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "…….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_59",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "비밀이에영.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_60",
+      "speaker": "miranda",
+      "speakerName": "미란다",
+      "text": "!!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vg-25/er-68/88e9d12d692695aaae54b796a4e3d0a4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_61",
+      "speaker": "miranda",
+      "speakerName": "미란다",
+      "text": "폴리가 저희에게 말 못 할 비밀이 있다니, 충격입니다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vg-25/er-68/88e9d12d692695aaae54b796a4e3d0a4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_62",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "넹, 충격받도록 해영.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_63",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "흠.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_64",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "오늘 급한 민원이나 사건 같은 건 없었으닝.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_65",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "저는 잠시 나갔다 올게영.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_66",
+      "speaker": "miranda",
+      "speakerName": "미란다",
+      "text": "어디 가시는 겁니까?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vg-25/er-68/88e9d12d692695aaae54b796a4e3d0a4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_67",
+      "speaker": "miranda",
+      "speakerName": "미란다",
+      "text": "저도 같이 가겠습니다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vg-25/er-68/88e9d12d692695aaae54b796a4e3d0a4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_68",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "어디 가는지는 비밀이니까, 따라오지 마영.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_69",
+      "speaker": "miranda",
+      "speakerName": "미란다",
+      "text": "폴리가 저희에게 말 못 할 비밀이 2개나 있다니, 충격입니다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vg-25/er-68/88e9d12d692695aaae54b796a4e3d0a4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_70",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "크르릉!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_71",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "미란다, 보고서는 다 썼나영?!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_72",
+      "speaker": "miranda",
+      "speakerName": "미란다",
+      "text": "아! 아직입니다, 이제 쓸 예정입니다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vg-25/er-68/88e9d12d692695aaae54b796a4e3d0a4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_73",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "키리는영?!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_74",
+      "speaker": "quiry",
+      "speakerName": "키리",
+      "text": "방금 출근했으니, 당연히 아직이에요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/am-53/jy-95/1f5c00eb307f6f57ce252d5905a20b22.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_75",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "좋아영!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_76",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "쓸데없는 얘기는 그만하고, 둘 다 보고서나 작성해 주세영.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_77",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "그리고 저는 오늘 파업이니까.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_78",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "그런 줄 알공, 경찰서 잘 지키고 계세영!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_79",
+      "speaker": "quiry",
+      "speakerName": "키리",
+      "text": "포, 폴리…! 잠시만요!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/am-53/jy-95/1f5c00eb307f6f57ce252d5905a20b22.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_80",
+      "speaker": "quiry",
+      "speakerName": "키리",
+      "text": "파업이라니, 갑자기 그게 무슨 말씀…!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/am-53/jy-95/1f5c00eb307f6f57ce252d5905a20b22.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_81",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "그건 제가 아니라 수건이예영!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_82",
+      "text": "폴리는 그 말을 마지막으로, 경찰서를 떠났다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_83",
+      "speaker": "quiry",
+      "speakerName": "키리",
+      "text": "이… 이럴 수가….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/am-53/jy-95/1f5c00eb307f6f57ce252d5905a20b22.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_84",
+      "speaker": "quiry",
+      "speakerName": "키리",
+      "text": "이게 폴리가 아니라니….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/am-53/jy-95/1f5c00eb307f6f57ce252d5905a20b22.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_85",
+      "text": "평화로운 아침을 즐기던 나는.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_86",
+      "text": "문밖에서부터 들리는 요란한 발소리에 마음의 준비를 하며 문을 미리 열어두었다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_87",
+      "text": "지잉-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_88",
+      "text": "다다다다다…!!!",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_89",
+      "speaker": "quiry",
+      "speakerName": "키리",
+      "text": "지휘과아아안!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/am-53/jy-95/1f5c00eb307f6f57ce252d5905a20b22.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_90",
+      "speaker": "miranda",
+      "speakerName": "미란다",
+      "text": "지휘과아아안!!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vg-25/er-68/88e9d12d692695aaae54b796a4e3d0a4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_91",
+      "text": "어…?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_92",
+      "speaker": "quiry",
+      "speakerName": "키리",
+      "text": "큰일, 큰일 났어요!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/am-53/jy-95/1f5c00eb307f6f57ce252d5905a20b22.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_93",
+      "speaker": "miranda",
+      "speakerName": "미란다",
+      "text": "폴리가…! 폴리가!!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vg-25/er-68/88e9d12d692695aaae54b796a4e3d0a4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_94",
+      "text": "둘 다 진정하고 얘기해 봐.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_95",
+      "speaker": "quiry",
+      "speakerName": "키리",
+      "text": "으으으….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/am-53/jy-95/1f5c00eb307f6f57ce252d5905a20b22.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_96",
+      "speaker": "miranda",
+      "speakerName": "미란다",
+      "text": "폴리가 경찰서를 나갔습니다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vg-25/er-68/88e9d12d692695aaae54b796a4e3d0a4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_97",
+      "speaker": "miranda",
+      "speakerName": "미란다",
+      "text": "저희한테 화가 난 것 같았습니다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vg-25/er-68/88e9d12d692695aaae54b796a4e3d0a4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_98",
+      "text": "그건 늘 있던 일 아니야?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_99",
+      "speaker": "quiry",
+      "speakerName": "키리",
+      "text": "뭐랄까. 평소와는 조금 달랐어요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/am-53/jy-95/1f5c00eb307f6f57ce252d5905a20b22.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_100",
+      "speaker": "quiry",
+      "speakerName": "키리",
+      "text": "혼자 있고 싶으셨던 것 같기도 하고요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/am-53/jy-95/1f5c00eb307f6f57ce252d5905a20b22.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_101",
+      "speaker": "quiry",
+      "speakerName": "키리",
+      "text": "저희랑 같이 있는 게 싫으셨던 걸까요…?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/am-53/jy-95/1f5c00eb307f6f57ce252d5905a20b22.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_102",
+      "speaker": "miranda",
+      "speakerName": "미란다",
+      "text": "폴리는 경찰을 그만두는 겁니까?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vg-25/er-68/88e9d12d692695aaae54b796a4e3d0a4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_103",
+      "speaker": "miranda",
+      "speakerName": "미란다",
+      "text": "그게… 저희 때문입니까…?!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vg-25/er-68/88e9d12d692695aaae54b796a4e3d0a4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_104",
+      "text": "그건 아닐 것 같은데….",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_105",
+      "speaker": "quiry",
+      "speakerName": "키리",
+      "text": "그만둔다고 말하지는 않으셨지만.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/am-53/jy-95/1f5c00eb307f6f57ce252d5905a20b22.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_106",
+      "speaker": "quiry",
+      "speakerName": "키리",
+      "text": "오늘 파업한다고 하셨어요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/am-53/jy-95/1f5c00eb307f6f57ce252d5905a20b22.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_107",
+      "speaker": "quiry",
+      "speakerName": "키리",
+      "text": "이런 적은 처음이라… 어떻게 해야 할지 모르겠어요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/am-53/jy-95/1f5c00eb307f6f57ce252d5905a20b22.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_108",
+      "speaker": "miranda",
+      "speakerName": "미란다",
+      "text": "지휘관, 혹시 도와주실 수 있으십니까?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vg-25/er-68/88e9d12d692695aaae54b796a4e3d0a4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_109",
+      "text": "물론이지.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_110",
+      "speaker": "quiry",
+      "speakerName": "키리",
+      "text": "정말 감사해요, 지휘관!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/am-53/jy-95/1f5c00eb307f6f57ce252d5905a20b22.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_111",
+      "speaker": "quiry",
+      "speakerName": "키리",
+      "text": "아, 그러고 보니….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/am-53/jy-95/1f5c00eb307f6f57ce252d5905a20b22.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_112",
+      "speaker": "quiry",
+      "speakerName": "키리",
+      "text": "미란다, 폴리가 수첩을 엄청 소중하게 들고 있었다고 했죠?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/am-53/jy-95/1f5c00eb307f6f57ce252d5905a20b22.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_113",
+      "speaker": "miranda",
+      "speakerName": "미란다",
+      "text": "예, 맞습니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vg-25/er-68/88e9d12d692695aaae54b796a4e3d0a4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_114",
+      "speaker": "miranda",
+      "speakerName": "미란다",
+      "text": "소중한 수첩이 뭔지 물었는데, 비밀이라고 했습니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vg-25/er-68/88e9d12d692695aaae54b796a4e3d0a4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_115",
+      "speaker": "miranda",
+      "speakerName": "미란다",
+      "text": "어디 가냐고 물었는데도 비밀이라고 했습니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vg-25/er-68/88e9d12d692695aaae54b796a4e3d0a4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_116",
+      "speaker": "miranda",
+      "speakerName": "미란다",
+      "text": "하루아침에 비밀이 2개나 생겨버린 겁니다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vg-25/er-68/88e9d12d692695aaae54b796a4e3d0a4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_117",
+      "speaker": "miranda",
+      "speakerName": "미란다",
+      "text": "정말 충격이었습니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vg-25/er-68/88e9d12d692695aaae54b796a4e3d0a4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_118",
+      "text": "…무슨 말인지는 잘 모르겠지만, 이번 일이 폴리의 수첩이랑 연관이 있다는 거지?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_119",
+      "speaker": "quiry",
+      "speakerName": "키리",
+      "text": "확실하지는 않지만, 그런 것 같아요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/am-53/jy-95/1f5c00eb307f6f57ce252d5905a20b22.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_120",
+      "speaker": "quiry",
+      "speakerName": "키리",
+      "text": "수첩을 숨기고 싶어 하셨거든요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/am-53/jy-95/1f5c00eb307f6f57ce252d5905a20b22.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_121",
+      "text": "알겠어, 폴리를 찾으면 한 번 물어볼게.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_122",
+      "speaker": "miranda",
+      "speakerName": "미란다",
+      "text": "예!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vg-25/er-68/88e9d12d692695aaae54b796a4e3d0a4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_123",
+      "speaker": "miranda",
+      "speakerName": "미란다",
+      "text": "저희는 폴리와 지휘관을 기다리면서, 열심히 일하고 있겠습니다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/vg-25/er-68/88e9d12d692695aaae54b796a4e3d0a4.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_124",
+      "speaker": "quiry",
+      "speakerName": "키리",
+      "text": "잘 부탁드릴게요~!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/am-53/jy-95/1f5c00eb307f6f57ce252d5905a20b22.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_125",
+      "text": "미란다와 키리는 다시 경찰서로 복귀했고.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_126",
+      "text": "나는 폴리를 찾기 시작했다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_127",
+      "text": "…….",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_128",
+      "text": "그런데, 어디서 찾아야 하지?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_129",
+      "text": "잠시 고민을 하던 나는.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_130",
+      "text": "혼자 있고 싶었던 것 같았다는 키리의 말을 떠올리며, 폴리의 숙소로 발을 옮겼다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_131",
+      "text": "똑똑똑.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_132",
+      "text": "…….",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_133",
+      "text": "역시, 여기엔 없나….",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_134",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "킁킁……!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_135",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "오잉? 이 냄새는….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_136",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "잠시만영, 나갈게영!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_137",
+      "text": "!",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_138",
+      "text": "지잉-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_139",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "지휘관! 여기까지 어쩐 일이세영?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_140",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "아항, 그랬군영.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_141",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "키리랑 미란다가 지휘관에게 찾아갔군영.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_142",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "크르르릉… 보고서 쓰고 있으라고 했는뎅…!!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_143",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "뭐, 예상은 했었지만영.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_144",
+      "text": "화가 많이 났다고 들었는데….",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_145",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "화영?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_146",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "으으음, 화가 난 건 아니고용.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_147",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "그냥 혼자 있고 싶어서 그랬어영.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_148",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "그렇게 안 하면 계속 쫓아올 것 같아서영….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_149",
+      "text": "무슨 일 있었어?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_150",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "그런 건 아닌데영.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_151",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "요새 너무 못 쉬어서 그런 것 같아영.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_152",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "그러다 보니 여러 가지 생각도 들고용.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_153",
+      "text": "그랬구나, 폴리는 휴식이 필요할 만하지.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_154",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "헤헹, 좋게 말씀해 주셔서 감사해영.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_155",
+      "text": "그런데, 수첩은 뭐야?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_156",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "느엥?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_157",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "미란다랑 키리가 수첩 얘기도 했나영?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_158",
+      "text": "응.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_159",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "으음… 이 수첩은….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_160",
+      "text": "말하기 싫으면 안 해도 돼.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_161",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "아녜영.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_162",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "생각보다 별것 아니라성, 좀 민망해서 그래영.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_163",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "이 수첩은, 제가 처음 경찰이 된 이후에 사용했던 수첩이에영.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_164",
+      "text": "아…! 그랬구나….",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_165",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "넹, 헤헹.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_166",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "에흉, 그래도 조금 쉬었으니까 슬슬 돌아가서 달래줘야겠네영.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_167",
+      "text": "엥? 너무 조금 쉰 거 아냐?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_168",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "그래도 계속 미안한 채로 내버려두면 좀 그렇잖아영.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_169",
+      "text": "…30분도 안 지난 것 같은데, 좀 내버려둬도 되지 않나.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_170",
+      "text": "파업했다고 들었는데, 오늘은 일 없는 거야?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_171",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "넹, 이미 다 끝내놨졍.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_172",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "갑자기 큰 일이 생기지 않는 이상은 없어영.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_173",
+      "text": "그럼, 우리 힐링 좀 하러 갈까?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_174",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "힐링이영?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_175",
+      "text": "응! 이런 날 좀 쉬고, 놀고 해야지.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_176",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "그건 맞는 말이긴 하지만….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_177",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "뭘 하면서 쉬고 놀고 해야 하는 건지 잘 모르겠어서영.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_178",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "이 시간에 경찰서가 아니라 다른 곳에 있는 것 자체가 좀 어색하거든영.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_179",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "키리랑 미란다도 조금 신경 쓰이고용.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_180",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "…….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_181",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "그래도, 좋아영!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_182",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "가영, 힐링하러!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_183",
+      "text": "괜찮겠어?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_184",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "넹.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_185",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "키리랑 미란다는 잘 있겠졍.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_186",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "그래도 두 분 다 어엿한 경찰들이니까영.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_187",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "…여러모로 지쳐있는 것도 사실이공.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_188",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "아까 잠깐 수첩을 읽어 봤었는뎅.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_189",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "초보 경찰 폴리는 근무가 힘들 때마다, 열심히 쉬고 놀고 했더라구영.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_190",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "그때의 폴리로 잠깐 돌아가 보는 것도 재미있을 것 같아서영.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_191",
+      "text": "업무에 관한 것만 쓰여있는 수첩이 아니었구나.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_192",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "…형사 수첩이라 용도는 그게 맞는뎅, 어쩔 수 없이 초짜 티가 나는 거정.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_193",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "지금의 저와는 느낌이 좀 다르정?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_194",
+      "text": "응, 그렇네.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_195",
+      "text": "그럼 초보 경찰 폴리의 첫 번째 힐링 스팟은 어디야?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_196",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "기분이 별로일 땐!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_197",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "달달한 거 앞으로 가야 한다고 쓰여 있어영.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_198",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "저만 따라오세영, 지휘관.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_199",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "앞장설게영!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_200",
+      "text": "딸랑-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_201",
+      "speaker": "ade",
+      "speakerName": "에이드",
+      "text": "어서 오세요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/fz-65/mt-84/2de03955874647e6b64b8363018bc2d9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_202",
+      "speaker": "ade",
+      "speakerName": "에이드",
+      "text": "주인님, 그리고….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/fz-65/mt-84/2de03955874647e6b64b8363018bc2d9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_203",
+      "speaker": "ade",
+      "speakerName": "에이드",
+      "text": "폴리 아가씨.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/fz-65/mt-84/2de03955874647e6b64b8363018bc2d9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_204",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "아, 아가씨라구영?!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_205",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "이런 호칭은 또 처음이네영.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_206",
+      "speaker": "ade",
+      "speakerName": "에이드",
+      "text": "혹시 불편하신가요?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/fz-65/mt-84/2de03955874647e6b64b8363018bc2d9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_207",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "아녕…! 익숙지 않은 것뿐이에영.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_208",
+      "speaker": "ade",
+      "speakerName": "에이드",
+      "text": "다행이군요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/fz-65/mt-84/2de03955874647e6b64b8363018bc2d9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_209",
+      "speaker": "ade",
+      "speakerName": "에이드",
+      "text": "그럼 이쪽 자리로 안내해 드리겠습니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/fz-65/mt-84/2de03955874647e6b64b8363018bc2d9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_210",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "고마워영.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_211",
+      "text": "드르륵-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_212",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "흐음.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_213",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "막상 와보니까 조금 어색하네영.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_214",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "지휘관은 뭘 드실 건가영?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_215",
+      "text": "폴리가 먹는 거랑 같은 걸로 먹을래.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_216",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "헤헹, 좋아영.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_217",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "그럼, 으으음~",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_218",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "여기서 제일 잘 나간다는 특제 오므라이스랑.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_219",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "딸기 파르페 2개씩 부탁드려영!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_220",
+      "speaker": "ade",
+      "speakerName": "에이드",
+      "text": "네, 알겠습니다. 잠시만 기다려 주세요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/fz-65/mt-84/2de03955874647e6b64b8363018bc2d9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_221",
+      "text": "우아하게 인사를 한 에이드는, 안쪽으로 들어갔다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_222",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "조금 기대되네영.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_223",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "경찰은 언제든 출동 준비가 되어 있어야 하니까, 이렇게 따로 나오기는 힘들거든영.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_224",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "밤새워서 일을 끝마친 보람이 있네영~",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_225",
+      "text": "고생 많았어.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_226",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "아니에영~",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_227",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "…초보 경찰 폴리는, 일이 많이 힘들었나 봐영.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_228",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "업무에 대한 기록 끝에는 꼭,",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_229",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "[사건 정리되면 당 충전하러 가기] 라는 말이 쓰여 있었거든영.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_230",
+      "text": "처음엔 누구나 그럴 수밖에 없지.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_231",
+      "text": "지금은 그런 생각 잘 안 하지 않아?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_232",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "그렇졍.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_233",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "그만큼 저도 성장했다는 뜻이겠졍?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_234",
+      "text": "당연하지.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_235",
+      "speaker": "ade",
+      "speakerName": "에이드",
+      "text": "오래 기다리셨습니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/fz-65/mt-84/2de03955874647e6b64b8363018bc2d9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_236",
+      "speaker": "ade",
+      "speakerName": "에이드",
+      "text": "주문하신 오므라이스, 그리고 파르페 준비해 드리겠습니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/fz-65/mt-84/2de03955874647e6b64b8363018bc2d9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_237",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "감사합니당!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_238",
+      "text": "달칵-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_239",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "오잉.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_240",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "왜 저랑 지휘관의 음식들 색이 다른 건가영?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_241",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "뭔가, 더 갈색빛이 나는 듯한….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_242",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "킁, 킁킁.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_243",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "흐어어엉?!?! 이, 이 냄새는?!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_244",
+      "text": "뭐야, 뭔데.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_245",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "고, 고구마 퍼펙트 향이 나영….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_246",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "제가 제일 좋아하는 건뎅!!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_247",
+      "speaker": "ade",
+      "speakerName": "에이드",
+      "text": "폴리 아가씨의 취향에 맞춰, 레시피를 조금 수정해 봤어요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/fz-65/mt-84/2de03955874647e6b64b8363018bc2d9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_248",
+      "speaker": "ade",
+      "speakerName": "에이드",
+      "text": "한 번 드셔보시겠어요?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/fz-65/mt-84/2de03955874647e6b64b8363018bc2d9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_249",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "넹!! 잘 먹겠습니당!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_250",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "와앙-",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_251",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "우물우물….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_252",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "!!!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_253",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "처, 천상의 맛이에영….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_254",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "고구마 퍼펙트로 이런 맛을 낼 수도 있다닝….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_255",
+      "speaker": "ade",
+      "speakerName": "에이드",
+      "text": "마음에 드시는 것 같아, 다행이네요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/fz-65/mt-84/2de03955874647e6b64b8363018bc2d9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_256",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "제가 이거 좋아하는 걸 어떻게 알공.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_257",
+      "speaker": "ade",
+      "speakerName": "에이드",
+      "text": "전초 기지에서 함께 생활하는 아가씨들의 입맛 취향은.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/fz-65/mt-84/2de03955874647e6b64b8363018bc2d9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_258",
+      "speaker": "ade",
+      "speakerName": "에이드",
+      "text": "필수적으로 체크하고 있답니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/fz-65/mt-84/2de03955874647e6b64b8363018bc2d9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_259",
+      "speaker": "ade",
+      "speakerName": "에이드",
+      "text": "게다가 폴리 아가씨는, 이곳은 물론 방주의 안전까지 책임지고 계시는.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/fz-65/mt-84/2de03955874647e6b64b8363018bc2d9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_260",
+      "speaker": "ade",
+      "speakerName": "에이드",
+      "text": "대단한 일을 하고 계시잖아요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/fz-65/mt-84/2de03955874647e6b64b8363018bc2d9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_261",
+      "speaker": "ade",
+      "speakerName": "에이드",
+      "text": "모두가 편안한 생활을 할 수 있도록 도와주셔서, 정말 감사합니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/fz-65/mt-84/2de03955874647e6b64b8363018bc2d9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_262",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "아, 아녜영…!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_263",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "저는 제 일을 하는 것뿐인 걸영.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_264",
+      "speaker": "ade",
+      "speakerName": "에이드",
+      "text": "그 일이, 다른 모두를 위한 일이라는 게 정말 대단한 거라 생각해요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/fz-65/mt-84/2de03955874647e6b64b8363018bc2d9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_265",
+      "speaker": "ade",
+      "speakerName": "에이드",
+      "text": "저도 그냥 한 명의 시민으로서, 그런 폴리 아가씨에게 감사를 표한 거라 생각해 주세요.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/fz-65/mt-84/2de03955874647e6b64b8363018bc2d9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_266",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "그….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_267",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "그렇게 말씀해 주셔서 감사해영….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_268",
+      "text": "생각지 못한 칭찬이었던 건지, 폴리는 어쩔 줄 몰라 하며 고개를 숙였다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_269",
+      "text": "맛있게 잘 먹었어, 에이드.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_270",
+      "speaker": "ade",
+      "speakerName": "에이드",
+      "text": "부디, 좋은 시간 되셨길 바랍니다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/fz-65/mt-84/2de03955874647e6b64b8363018bc2d9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_271",
+      "speaker": "ade",
+      "speakerName": "에이드",
+      "text": "그럼 다녀오세요 주인님, 폴리 아가씨.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/fz-65/mt-84/2de03955874647e6b64b8363018bc2d9.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_272",
+      "text": "자, 배도 부르고 당도 찼는데.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_273",
+      "text": "다음은 어디로 가면 돼?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_274",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "으으음….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_275",
+      "text": "스윽- 스윽-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_276",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "후우웅.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_277",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "저는 산책하는 걸 좋아했네영.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_278",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "소화도 시킬 겸 조금 걸을까영?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_279",
+      "text": "좋지.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_280",
+      "text": "나와 폴리는 메이드 카페를 떠나, 승리의 여신상으로 향했다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_281",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "흥흥~",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_282",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "역시 산책은 좋네영.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_283",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "여러 가지 냄새도 나공.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_284",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "킁킁~",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_285",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "…킁?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_286",
+      "text": "폴리, 왜 그래?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_287",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "뭔가 수상한 냄새가 나영.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_288",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "어서 가보졍!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_289",
+      "text": "나는 폴리를 따라 달려갔고.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_290",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "네 녀석.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_291",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "그 오토바이를 내게 넘겨라!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_292",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "내가 왜 그래야 하지?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_293",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "어제 영화를 한 편 봤는데.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_294",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "빌런들이 모두 오토바이를 몰고 있었다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_295",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "그러니 내게 넘겨라!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_296",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "우리 블랙 타이푼은, 나 이외에는 아무도 허락하지 않아.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_297",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "그럼 나를 첫 번째로 허락하게 되겠군.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_298",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "…….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_299",
+      "text": "…….",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_300",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "에흉.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_301",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "수상한 일이 벌어지고 있긴 하네영.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_302",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "별일 없을 것 같긴 하지만, 그래도 중재하겠습니당.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_303",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "A.C.P.U. 입니닷!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_304",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "모두 멈추세영!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_305",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "잘 왔어, 폴리.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_306",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "드레이크 좀 데려가 줄래?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_307",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "유치장에 들어가는 게 아니라면, 싫다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_308",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "에흉, 무슨 일인데영.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_309",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "내 블랙 타이푼을 허락도 없이 타려고 하잖아.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_310",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "허락을 구하던 중이었다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_311",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "그래서 거절했잖아!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_312",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "그래서 계속 허락을 구하고 있는 거다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_313",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "말이 안 통하네.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_314",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "내가 할 말이다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_315",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "잠시만영.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_316",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "드레이크, 면허 있어영?!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_317",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "하하! 자동차 면허라면, 당연히 갖고 있다.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_318",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "오토바이 면허는영.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_319",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "…오토바이 면허?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_320",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "그런 게 있었나?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_321",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "넹, 있어영.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_322",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "슈가의 오토바이 정도 되는 크기를 몰려면, 오토바이 면허가 따로 있어야 하거든영.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_323",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "…무면허 운전은 안 되지.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_324",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "어쩔 수 없군.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_325",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "완벽한 빌런이 되기 위해서, 면허를 먼저 따오겠다!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_326",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "그때까지 오토바이 관리, 잘하도록.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_327",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "그리고, 경찰 네놈.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_328",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "넹?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_329",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "여전히 일을 잘하는군.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_330",
+      "speaker": "drake",
+      "speakerName": "드레이크",
+      "text": "앞으로도 잘 하도록 해라!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/rb-27/lb-08/48e2d0b41848d524f651eee9e81b44da.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_331",
+      "text": "드레이크는 그 말을 남기고 유유히 사라졌다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_332",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "…칭찬인 거겠졍?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_333",
+      "text": "아마도?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_334",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "나 원 참.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_335",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "어쨌든, 도와줘서 고마워 폴리.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_336",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "면허 얘기는 꺼내 볼 생각도 못 했네.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_337",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "아니에영.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_338",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "물론 두 분은 안 그러시겠지만.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_339",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "보통 이러다가 싸우는 경우를 자주 봐서영.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_340",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "빨리 중재를 해야겠다 생각했을 뿐이에영.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_341",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "사람들 말리는 건 감정 소모가 심할 것 같은데.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_342",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "힘들진 않아?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_343",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "힘든 날도 있고, 아닌 날도 있는 거졍.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_344",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "이러니저러니 해도, 제가 해야 하는 일이니까영.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_345",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "역시, 프로야.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_346",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "매번 도움 많이 받고 있어.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_347",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "고마워.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_348",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "……!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_349",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "천만에영….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_350",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "이만 가볼게.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_351",
+      "speaker": "sugar",
+      "speakerName": "슈가",
+      "text": "가자, 블랙 타이푼.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/ye-20/pc-53/b8231297ba3db5cc1150f08c049e4baa.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_352",
+      "text": "바바바바….",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_353",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "…….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_354",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "꼬응, 오늘은 뭔가 많은 분께 인사를 듣네영.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_355",
+      "text": "폴리가 그만큼 일을 잘하니까.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_356",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "헤헹, 말만 들어도 기분이 좋네영.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_357",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "그런데, 저도 처음엔 실수투성이 경찰이었답니당.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_358",
+      "text": "폴리가?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_359",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "넹.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_360",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "…음.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_361",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "같이 조용한 데로 가영.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_362",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "지금이라면 할 수 있을 것 같아영.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_363",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "초보 경찰 폴리의 이야기를 들려드릴게영.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_364",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "역시, 이런 얘기를 할 때는 지휘관실 만한 곳이 없졍.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_365",
+      "text": "…생각보다 프라이빗하지는 않지만.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_366",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "…….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_367",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "음~ 어디서부터 얘기를 해야 할까영.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_368",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "요 며칠 며칠 밤도 새우공.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_369",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "많은 일을 하면서, 여러 가지 생각이 들더라구영.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_370",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "내가 너무 형식적으로 일을 하고 있는 건 아닐깡.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_371",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "잘하고 있는 게 맞낭.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_372",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "…그런 생각이영.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_373",
+      "text": "폴리도 그런 생각을 하는구나.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_374",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "당연하졍!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_375",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "기계처럼 일만 하지는 않는다구영.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_376",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "그런데 마침 이 수첩이 눈에 들어오더라고용.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_377",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "예상은 하셨겠지만, 이 경찰수첩.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_378",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "제가 인간이던 시절에 쓴 수첩이에영.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_379",
+      "text": "역시….",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_380",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "지금의 폴리와 다르게, 초보 경찰 폴리는.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_381",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "어리버리하고, 눈치도 많이 보공.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_382",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "칭찬 한 번에 기뻐하공, 꾸중 한 번에 우울해 하던.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_383",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "평범한 신입이었어영.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_384",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "실수도 많이 했고용.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_385",
+      "text": "처음이라면 누구나 그렇지.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_386",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "그리고 믿으실지는 모르겠지만,",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_387",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "저는 시민들이 무서웠어영.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_388",
+      "text": "왜? 뭐라고 할까 봐?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_389",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "그런 것도 있었지만.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_390",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "제가 잘못 된 판단을 했을 때, 시민들이 다칠 수도 있다는 게 무서웠어영.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_391",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "스스로의 판단에 신뢰가 없었던 거죵.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_392",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "저조차도 못 믿는 저를, 어떤 시민들이 믿어주겠어영.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_393",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "그 두려움 때문에, 소극적으로 일을 했었어영.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_394",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "빨리 오늘이 끝나고 쉬고 싶당- 이라는 생각밖에 없었졍.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_395",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "그래서 전 미란다랑 키리가 참 대단하다고 생각해영.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_396",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "실수와 불안감에 무너지지 않공, 언제나 의욕이 넘치잖아영.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_397",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "그런 의욕 안에서 이 일을 진심으로 사랑한다는 게 느껴지고영.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_398",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "…물론, 한 번씩 속 터질 것 같은 날도 있긴 하지만영.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_399",
+      "text": "음, 그렇지.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_400",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "아마 이런 것 때문에 두 사람에게 이 수첩이 뭔지 말할 수 없었던 것 같아영.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_401",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "부끄러웠거든영.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_402",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "이 수첩 안에는 실수했던 일, 실패했던 일 그런 것들이 모두 정리되어 있는데영.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_403",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "누구보다 경찰 일에 진심인 두 분에겡.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_404",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "나의 시작은 그렇지 않았당.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_405",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "겁쟁이에 회피만 하는 초짜 경찰이었당.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_406",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "라는 걸 보여주는 게 부끄러웠어영.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_407",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "파업이라고 큰소리치면서 나왔던 것도, 회피의 일종이었겠졍.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_408",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "이렇게 생각하면 크게 성장한 건 없는 것 같기도 하고용, 헤헹.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_409",
+      "text": "머쓱하게 웃는 폴리를 향해.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_410",
+      "text": "나는 손을 뻗었다.",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_411",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "우엥?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_412",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "지휘관, 갑자기 머리는 왜 쓰다듬으시나영?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_413",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "기분 좋기는 한데영.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_414",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "흐에엥, 녹는당….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_415",
+      "text": "일단, 어려운 얘기였을 텐데 먼저 얘기해줘서 고마워.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_416",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "그러게영.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_417",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "지휘관한테는 이런 부끄러운 얘기도 편하게 할 수 있는 것 같아영.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_418",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "있는 그대로를 봐주시니까 그런 걸까영?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_419",
+      "text": "그렇다기보다는, 부끄러운 얘기가 아니였기 때문이겠지.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_420",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "넹? 그게 무슨 말씀이세영?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_421",
+      "text": "지금의 폴리를 있게 해준, 소중한 경험이잖아.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_422",
+      "text": "오늘, 폴리도 그걸 느낀 거야.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_423",
+      "text": "그렇지?",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_424",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "…….",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_425",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "넹.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_426",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "많은 분들이 감사 인사를 해주시는뎅.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_427",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "그때 알았어영.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_428",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "저는 더 이상 시민들을 무서워하지 않공, 시민들은 그런 저를 믿어주고 있다는 걸.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_429",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "초보 경찰 폴리는 진짜로 성장했단 걸 말이에영!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_430",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "그래서 자신 있게 지휘관에게도 얘기할 수 있었던 것 같아영!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_431",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "고마워영, 지휘관.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_432",
+      "text": "내가 한 게 뭐 있다고.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_433",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "많은 걸 해주셨졍.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_434",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "지휘관이 아니었으면, 혼자 생각 정리만 좀 하다가 다시 경찰서로 돌아갔을 거공.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_435",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "오늘처럼 많은 생각이 드는 날이 오면,",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_436",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "키리와 미란다를 보면서 비교하고, 부끄러워했겠졍.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_437",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "덕분에, 저는 두 분에게도 제 수첩을 보여드릴 수 있는 자신감이 생겼어영.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_438",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "저도 이럴 때가 있었답니당! 하면서영! 헤헹.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_439",
+      "text": "역시 베테랑 경찰은 마음가짐이 다르네.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_440",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "헤헹, 칭찬 고마워영.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_441",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "으음~",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_442",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "그래동, 이렇게 한 번씩 지휘관한테 어리광 부리러 와도 되나영?",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_443",
+      "text": "당연하지.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_444",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "초보 경찰 폴리는 힘들 때마다 단 걸 먹고, 산책을 다녔지만.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_445",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "베테랑 경찰 폴리는 힘들 때 지휘관에게 쓰다듬을 받을 거예영.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_446",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "이게 제 최고의 힐링이거든영~",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_447",
+      "text": "그럼 마구마구 쓰다듬어줘야지!",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_448",
+      "text": "쓰담- 쓰담-",
+      "window": "Narration",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_449",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "후아아앙… 정말 중독적이라니까영.",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_450",
+      "text": "언제든지 쓰다듬어줄 테니까.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_451",
+      "text": "앞으로도 시민들의 안전을 잘 부탁해, 폴리.",
+      "window": "Self",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_452",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "넹! 알겠습니당!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_453",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "언제든 A.C.P.U.의 폴리만 믿으세영~!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    },
+    {
+      "id": "d_favorite_poli_454",
+      "speaker": "poli",
+      "speakerName": "폴리",
+      "text": "시민들도, 지휘관도 제가 꼭 지켜드릴게영!",
+      "window": "Speech",
+      "speakerIcon": "https://sg-tools-cdn.blablalink.com/py-85/jn-36/2e1ca2791472c8dd9a3109f716b704b2.webp",
+      "voice": null
+    }
+  ]
+}
