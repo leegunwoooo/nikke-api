@@ -190,6 +190,8 @@ https://nikke-api.pages.dev/mcp
 
 클라이언트별 연결 방법, 도구 목록, 문제 해결은 [docs/mcp.md](docs/mcp.md)에 있습니다.
 
+자기 BlablaLink 공유 링크를 `POST /mcp/register`에 한 번 등록하면 개인 커넥터 URL(`/mcp/u/<key>`)을 받습니다 — 그 주소로 연결하면 `get_user_*` 도구가 링크 입력 없이 내 프로필을 바로 조회합니다.
+
 ## API 문서
 
 - **인터랙티브 문서 (브라우저에서 바로 테스트) → [/docs](https://nikke-api.pages.dev/docs)**

@@ -4,7 +4,7 @@ import { test } from "node:test";
 
 process.env.NIKKE_DATA_DIR = path.join(import.meta.dirname, "fixtures/dist");
 const { default: app } = await import("../src/app.js");
-const { fitJson, requestOrigin } = await import("../src/mcp.js");
+const { fitJson, requestOrigin, resetUserRateLimit } = await import("../src/mcp.js");
 
 // stateless 2025-era Streamable HTTP: every call is a standalone POST and the
 // JSON-RPC reply comes back as a single SSE message
@@ -299,4 +299,36 @@ test("next_story walks the route from a chapter or an entry", async () => {
   assert.deepEqual((await tool("next_story", { chapter: 30, done: ["x"] })).json.missed, []);
   assert.equal((await tool("next_story", {})).isError, true);
   assert.equal((await tool("next_story", { after: "nope" })).isError, true);
+});
+
+// bound connector: /mcp/u/<key> arrives with x-registered-blablaid injected by
+// the edge — get_user_* may then omit the link entirely
+const boundRpc = async (method: string, params: unknown = {}, blablaid?: string) => {
+  const res = await app.request("/mcp", {
+    method: "POST",
+    headers: {
+      "content-type": "application/json",
+      accept: "application/json, text/event-stream",
+      "mcp-protocol-version": "2025-06-18",
+      ...(blablaid ? { "x-registered-blablaid": blablaid } : {}),
+    },
+    body: JSON.stringify({ jsonrpc: "2.0", id: 1, method, params }),
+  });
+  const data = (await res.text()).split("\n").find((l) => l.startsWith("data: "));
+  return JSON.parse(data!.slice(6));
+};
+
+test("get_user_* without a link asks for one (unbound)", async () => {
+  resetUserRateLimit();
+  const { result } = await boundRpc("tools/call", { name: "get_user_profile", arguments: {} });
+  assert.match(result.content[0].text, /share link is required|mcp\/register/);
+});
+
+test("x-registered-blablaid binds the profile (no link arg needed)", async () => {
+  resetUserRateLimit();
+  // reaches the upstream lookup instead of the missing-link error —
+  // no creds in test env, so it fails at the upstream stage, which proves
+  // the bound id flowed through
+  const { result } = await boundRpc("tools/call", { name: "get_user_profile", arguments: {} }, "some-blablaid");
+  assert.ok(!/share link is required/.test(result.content[0].text));
 });

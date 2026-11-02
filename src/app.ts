@@ -9,7 +9,7 @@ import { groupEventScenes } from "./events.js";
 import { buildFamilies } from "./family.js";
 import { ROUTE_COVERAGE_CHAPTER, ROUTE_SOURCES, STORY_ROUTE } from "./story-route.js";
 import { fieldsOf, LOCALES, localize, pickFields } from "./fields.js";
-import { decodeOpenid, gameApi, playerInfo } from "./blabla.js";
+import { blaCredsContext, credsFromHeader, decodeOpenid, gameApi, playerInfo } from "./blabla.js";
 import { createNikkeMcp, requestOrigin } from "./mcp.js";
 import { llmsTxt, mcpGuide, type ToolInfo } from "./llms.js";
 import { openapi } from "./openapi.js";
@@ -461,6 +461,13 @@ const wantsLang = (c: Context) => {
 const app = new Hono();
 app.use("*", cors());
 app.use("*", cacheHeaders(characterData.syncedAt));
+
+// edge-injected upstream credentials (worker/index.ts) — request-scoped so a
+// forged header can only affect the request that carries it
+app.use("*", (c, next) => {
+  const creds = credsFromHeader(c.req.header("x-bla-creds") ?? null);
+  return creds ? blaCredsContext.run(creds, next) : next();
+});
 
 // ?lang=ko|en|ja|zh-TW flattens {ko,en,ja,zh-TW} objects into single strings
 // on every JSON response

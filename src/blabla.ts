@@ -5,26 +5,80 @@
 // obtain a `game_*` cookie session via /api/user/Login, then calls the
 // game-proxy endpoints used by the ShiftyPad profile pages.
 
+import { AsyncLocalStorage } from "node:async_hooks";
+
 const BASE = "https://api.blablalink.com";
 
 let cookieJar: string | null = null;
+// creds that produced the jar — a runtime credential refresh (KV via edge)
+// must not keep serving the old account's session cookies
+let jarCredsKey: string | null = null;
 let loggingIn: Promise<string> | null = null;
 
+// The lookup-account credentials may be refreshed at runtime through the
+// edge worker (KV -> x-bla-creds header, see worker/index.ts). They ride
+// this request-scoped context instead of a module variable so one request's
+// creds can never leak into another request. Env stays the fallback.
+export interface BlaCreds {
+  open_id: string;
+  token: string;
+  uid: string;
+  channel_id: number;
+  expires: string;
+}
+export const blaCredsContext = new AsyncLocalStorage<BlaCreds>();
+
+// tests stub fetch per case — each stub needs a fresh upstream session
+export function resetBlaSession() {
+  cookieJar = null;
+  jarCredsKey = null;
+}
+
+// x-bla-creds is base64 JSON set only by the edge — clients can set the same
+// header but it only affects their own request, so no secret is needed
+export function credsFromHeader(headerValue: string | null): BlaCreds | null {
+  if (!headerValue) return null;
+  try {
+    const j = JSON.parse(Buffer.from(headerValue, "base64").toString("utf8"));
+    if (!j.open_id || !j.token) return null;
+    return {
+      open_id: String(j.open_id),
+      token: String(j.token),
+      uid: String(j.uid ?? ""),
+      channel_id: Number(j.channel_id ?? 6),
+      expires: String(j.expires ?? ""),
+    };
+  } catch {
+    return null;
+  }
+}
+
+const envCreds = (): BlaCreds | null =>
+  process.env.BLA_OPEN_ID && process.env.BLA_TOKEN
+    ? {
+        open_id: process.env.BLA_OPEN_ID,
+        token: process.env.BLA_TOKEN,
+        uid: process.env.BLA_UID ?? "",
+        channel_id: Number(process.env.BLA_CHANNEL_ID ?? 6),
+        expires: process.env.BLA_EXPIRES ?? "",
+      }
+    : null;
+
 async function doLogin(): Promise<string> {
-  const openId = process.env.BLA_OPEN_ID;
-  const token = process.env.BLA_TOKEN;
-  if (!openId || !token) throw new Error("blabla credentials not configured");
+  const c = blaCredsContext.getStore() ?? envCreds();
+  if (!c) throw new Error("blabla credentials not configured");
+  const { open_id: openId, token } = c;
   const res = await fetch(`${BASE}/api/user/Login`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     redirect: "manual",
     body: JSON.stringify({
       game_openid: openId,
-      game_channelid: Number(process.env.BLA_CHANNEL_ID ?? 6),
+      game_channelid: c.channel_id,
       game_token: token,
       game_id: "29080",
-      game_expire_time: process.env.BLA_EXPIRES ?? "",
-      game_uid: process.env.BLA_UID ?? "",
+      game_expire_time: c.expires,
+      game_uid: c.uid,
     }),
   });
   const cookies = res.headers
@@ -41,11 +95,15 @@ async function doLogin(): Promise<string> {
     throw new Error(`blabla login failed: ${j.msg ?? res.status}${hint}`);
   }
   cookieJar = cookies.join("; ");
+  jarCredsKey = `${c.open_id}:${c.token}`;
   return cookieJar;
 }
 
 function login(): Promise<string> {
-  if (cookieJar) return Promise.resolve(cookieJar);
+  const c = blaCredsContext.getStore() ?? envCreds();
+  const key = c ? `${c.open_id}:${c.token}` : null;
+  if (cookieJar && jarCredsKey === key) return Promise.resolve(cookieJar);
+  cookieJar = null;
   return (loggingIn ??= doLogin().finally(() => (loggingIn = null)));
 }
 

@@ -5,6 +5,7 @@ import { test } from "node:test";
 
 process.env.NIKKE_DATA_DIR = path.join(import.meta.dirname, "fixtures/dist");
 const { default: app } = await import("../src/app.js");
+const { resetBlaSession } = await import("../src/blabla.js");
 
 const get = (url: string, headers?: Record<string, string>) =>
   app.request(url, headers ? { headers } : undefined);
@@ -422,16 +423,20 @@ function stubBlabla(opts: {
 } = {}) {
   const orig = globalThis.fetch;
   const envBackup = { ...process.env };
+  resetBlaSession();
   process.env.BLA_OPEN_ID ??= "test-openid";
   process.env.BLA_TOKEN ??= "test-token";
   const detailCalls: number[] = [];
+  const loginBodies: any[] = [];
   globalThis.fetch = (async (input: any, init?: any) => {
     const url = String(input?.url ?? input);
     const body = init?.body ? JSON.parse(init.body) : {};
-    if (url.endsWith("/api/user/Login"))
+    if (url.endsWith("/api/user/Login")) {
+      loginBodies.push(body);
       return new Response(JSON.stringify({ code: 0 }), {
         headers: { "set-cookie": "game_token=t; Path=/" },
       });
+    }
     if (url.includes("GetUserGamePlayerInfo"))
       return Response.json({ code: 0, data: { area_id: 83 } });
     if (url.includes("GetUserCharacters")) {
@@ -465,6 +470,7 @@ function stubBlabla(opts: {
       process.env = envBackup;
     },
     detailCalls,
+    loginBodies,
   };
 }
 
@@ -539,4 +545,47 @@ test("/api/events ?q ignores punctuation/whitespace on both sides", async () => 
   // id search still works, with or without the underscore
   assert.equal((await json("/api/events?q=freezeacpu")).count, 1);
   assert.equal((await json("/api/events?q=event_freezeacpu")).count, 1);
+});
+
+// ── x-bla-creds (edge-injected upstream credentials) ──────────────────────
+// the edge worker injects the KV-stored lookup creds as a base64 header;
+// they must be request-scoped so a forged header can't poison other calls
+
+const blaCredsHeader = (over: Record<string, string> = {}) =>
+  Buffer.from(
+    JSON.stringify({
+      open_id: "injected-openid",
+      token: "injected-token",
+      uid: "123",
+      channel_id: 6,
+      expires: "2099-01-01",
+      ...over,
+    }),
+  ).toString("base64");
+
+test("x-bla-creds supplies the upstream login for its request only", async () => {
+  const stub = stubBlabla();
+  try {
+    // request with the injected header uses injected creds
+    const res = await get("/api/user/12345", { "x-bla-creds": blaCredsHeader() });
+    assert.equal(res.status, 200);
+    assert.equal(stub.loginBodies.at(-1).game_openid, "injected-openid");
+    assert.equal(stub.loginBodies.at(-1).game_token, "injected-token");
+    // a request without the header still uses env creds — no leakage
+    await get("/api/user/12345");
+    assert.equal(stub.loginBodies.at(-1).game_openid, "test-openid");
+  } finally {
+    stub.restore();
+  }
+});
+
+test("a malformed x-bla-creds header falls back to env creds", async () => {
+  const stub = stubBlabla();
+  try {
+    await get("/api/user/12345", { "x-bla-creds": "not-base64!!" });
+    // env creds (set by stubBlabla) were used, not garbage
+    assert.equal(stub.loginBodies.at(-1).game_openid, "test-openid");
+  } finally {
+    stub.restore();
+  }
 });

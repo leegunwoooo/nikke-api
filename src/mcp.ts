@@ -34,7 +34,7 @@ const OFFSET = z.number().int().min(0).default(0);
 const BLABLAID = z
   .string()
   .min(1)
-  .describe("BlablaLink share id (base64 openid) or the whole share URL (https://www.blablalink.com/user?openid=...)");
+  .describe("BlablaLink share id (base64 openid) or the whole share URL (https://www.blablalink.com/user?openid=...). Optional when the connector is registered via POST /mcp/register");
 
 // filter values are English and matched case-insensitively by the routes;
 // enums keep models from guessing, the Korean names map user wording
@@ -86,6 +86,7 @@ const LIVE = { readOnlyHint: true, idempotentHint: true, openWorldHint: true } a
 // single runaway tool loop from draining the shared account's rate limit
 const USER_CALLS_PER_MINUTE = 30;
 const userCalls: number[] = [];
+export const resetUserRateLimit = () => userCalls.splice(0); // tests only
 const userRateLimited = () => {
   const now = Date.now();
   while (userCalls.length && now - userCalls[0] > 60_000) userCalls.shift();
@@ -200,7 +201,13 @@ const ICON = `data:image/svg+xml;base64,${Buffer.from(
   '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="#1f2937"/><text x="32" y="44" font-family="Arial,sans-serif" font-size="30" font-weight="700" text-anchor="middle" fill="#f9fafb">N</text></svg>',
 ).toString("base64")}`;
 
-export function buildServer(api: Fetcher, version: string, origin = "") {
+export function buildServer(api: Fetcher, version: string, origin = "", boundBlablaid?: string) {
+  // /mcp/u/<key> connections arrive with x-registered-blablaid injected by the
+  // edge — get_user_* tools may then omit the link
+  const needBlablaid = () =>
+    Promise.resolve(
+      text(JSON.stringify({ error: "a BlablaLink share link is required — or register one at POST /mcp/register for a personal connector URL" }), true),
+    );
   const server = new McpServer(
     {
       name: "nikke-api",
@@ -561,12 +568,15 @@ export function buildServer(api: Fetcher, version: string, origin = "") {
       title: "Get player profile",
       description:
         "A player's public profile (nickname, level, team combat, campaign progress, towers) from their BlablaLink share link. Live and rate limited.",
-      inputSchema: z.object({ blablaid: BLABLAID, lang: LANG }),
+      inputSchema: z.object({ blablaid: BLABLAID.optional(), lang: LANG }),
       annotations: LIVE,
     },
-    userTool("get_user_profile", (a: { blablaid: string; lang: string }) =>
-      call(api, "get_user_profile", `/api/user${qs({ blablaid: a.blablaid, lang: a.lang })}`),
-    ),
+    userTool("get_user_profile", (a: { blablaid?: string; lang: string }) => {
+      const blablaid = a.blablaid ?? boundBlablaid;
+      return blablaid
+        ? call(api, "get_user_profile", `/api/user${qs({ blablaid, lang: a.lang })}`)
+        : needBlablaid();
+    }),
   );
 
   server.registerTool(
@@ -576,7 +586,7 @@ export function buildServer(api: Fetcher, version: string, origin = "") {
       description:
         "Characters a player owns with their level. Filters work like search_nikkes; use get_user_nikke for one character's full build. Live and rate limited.",
       inputSchema: z.object({
-        blablaid: BLABLAID,
+        blablaid: BLABLAID.optional(),
         name: z.string().optional().describe("Name substring, any language"),
         ...FILTERS,
         fields: z.string().optional().describe("Comma-separated dot paths kept per entry, e.g. 'character.name,level'"),
@@ -584,12 +594,14 @@ export function buildServer(api: Fetcher, version: string, origin = "") {
       }),
       annotations: LIVE,
     },
-    userTool("get_user_nikkes", (a: Record<string, string | undefined>) =>
-      call(
+    userTool("get_user_nikkes", (a: Record<string, string | undefined>) => {
+      const blablaid = a.blablaid ?? boundBlablaid;
+      if (!blablaid) return needBlablaid();
+      return call(
         api,
         "get_user_nikkes",
         `/api/user/nikke${qs({
-          blablaid: a.blablaid,
+          blablaid,
           name: a.name,
           element: a.element,
           class: a.class,
@@ -600,8 +612,8 @@ export function buildServer(api: Fetcher, version: string, origin = "") {
           fields: a.fields,
           lang: a.lang,
         })}`,
-      ),
-    ),
+      );
+    }),
   );
 
   server.registerTool(
@@ -611,15 +623,18 @@ export function buildServer(api: Fetcher, version: string, origin = "") {
       description:
         "Build detail of one owned character: skill levels, equipment, cube, favorite item. If the name matches several owned characters, a list comes back — call again with an id. Live and rate limited.",
       inputSchema: z.object({
-        blablaid: BLABLAID,
+        blablaid: BLABLAID.optional(),
         nameOrId: z.string().min(1).describe("Character name (partial, any language) or id"),
         lang: LANG,
       }),
       annotations: LIVE,
     },
-    userTool("get_user_nikke", (a: { blablaid: string; nameOrId: string; lang: string }) =>
-      call(api, "get_user_nikke", `/api/user/nikke/${enc(a.nameOrId)}${qs({ blablaid: a.blablaid, lang: a.lang })}`),
-    ),
+    userTool("get_user_nikke", (a: { blablaid?: string; nameOrId: string; lang: string }) => {
+      const blablaid = a.blablaid ?? boundBlablaid;
+      return blablaid
+        ? call(api, "get_user_nikke", `/api/user/nikke/${enc(a.nameOrId)}${qs({ blablaid, lang: a.lang })}`)
+        : needBlablaid();
+    }),
   );
 
   // ChatGPT's connector/deep-research contract: search(query) -> results with
@@ -745,6 +760,12 @@ export function requestOrigin(req: Request) {
 }
 
 export const createNikkeMcp = (api: Fetcher, version: string) =>
-  createMcpHandler((ctx) => buildServer(api, version, ctx.requestInfo ? requestOrigin(ctx.requestInfo) : ""), {
+  createMcpHandler((ctx) =>
+    buildServer(
+      api,
+      version,
+      ctx.requestInfo ? requestOrigin(ctx.requestInfo) : "",
+      ctx.requestInfo?.headers.get("x-registered-blablaid") ?? undefined,
+    ), {
     onerror: (e) => console.error(JSON.stringify({ mcp: "error", message: e.message })),
   });

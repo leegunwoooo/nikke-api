@@ -1194,6 +1194,28 @@ https://nikke-api.pages.dev/mcp
 
 모든 도구는 기본 `lang=ko`로 응답합니다. 이름 검색·호감도 씬·대사 검색은 기본으로 이격까지 묶어서 찾습니다(`family`, 끄려면 `false`). 60,000자를 넘는 응답은 목록 뒤쪽을 덜어내고 `truncated`(`nextOffset` 포함)를 붙여 돌려줍니다. 클라이언트별 연결 방법은 [docs/mcp.md](docs/mcp.md)를 보세요.
 
+### 개인 커넥터 등록 `/mcp/u/<key>`
+
+BlablaLink 공유 링크를 한 번 등록하면 개인 커넥터 URL을 발급받습니다. 이 URL로 연결한 세션에서는 `get_user_*` 도구의 `blablaid` 인자를 생략할 수 있습니다 — 등록한 프로필이 자동으로 쓰입니다.
+
+```
+POST /mcp/register
+Content-Type: application/json
+
+{"url": "https://www.blablalink.com/user?openid=<base64>"}
+```
+
+응답: `{"key": "u_…", "url": "https://nikke-api.pages.dev/mcp/u_…"}` — 링크가 실제 프로필로 해석되는지 서버가 한 번 조회해 검증한 뒤 발급합니다. 등록 정보만 저장되며 게임 토큰은 받지 않습니다(조회는 서버 계정으로 수행). 키별로 분당 60회 제한이 따로 적용됩니다.
+
+## 운영자 엔드포인트 `/admin/token`
+
+엣지(Cloudflare Worker)에만 있는 관리자용 엔드포인트입니다. `x-admin-token` 헤더로 인증합니다.
+
+- `GET /admin/token` — 저장된 조회 계정 상태(설정 여부·open_id·만료 시각, 토큰 값은 비노출)
+- `POST /admin/token` — BlablaLink `__ss_storage_ls_cache_login_meta__` JSON(또는 `{open_id, token, uid, channel_id, expires}`)을 받아 업스트림 `/api/user/Login`으로 **검증 성공 시에만** 저장. 이후 `/api/user/*`·MCP 조회에 즉시 반영(재배포 불필요)
+
+엣지는 저장된 자격증명을 내부 헤더(`x-bla-creds`)로 오리진에만 주입하고, 클라이언트가 보낸 동명 헤더는 항상 제거합니다.
+
 ## 이격 연결
 
 데이터에는 이격(같은 캐릭터의 다른 버전)과 원본을 잇는 필드가 없어서, 모든 언어에서 지키는 이름 규칙 `<원본> : <수식어>`(예: `라피 : 레드 후드`, `Rapi: Red Hood`)로 묶습니다. 규칙에서 벗어나는 경우는 [`src/family.ts`](src/family.ts)의 표에 둡니다 (현재 `모더니아` → `마리안`).
