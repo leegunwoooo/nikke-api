@@ -831,6 +831,81 @@ function mergeAttractiveScenarios(
   return [...byId.values()].sort((a, b) => (a.level ?? 0) - (b.level ?? 0));
 }
 
+// per-character weapon spec — shot ids are unique per character except a
+// few shared weapons. Times come in /100 s and damage-type values /100 %,
+// so they're normalized like the combat block; burst energies stay raw
+// (gauge units, ÷10000 → %).
+function buildShot(roles: (RawRoleData | null)[]): NikkeDetail["shot"] {
+  const name: Partial<Record<Locale, string>> = {};
+  const descriptionTemplate: Partial<Record<Locale, string>> = {};
+  let first: RawRoleData["shot_detail"] | undefined;
+  roles.forEach((r, i) => {
+    const s = r?.shot_detail;
+    if (!s) return;
+    first ??= s;
+    const l = LOCALES[i];
+    if (s.name_localkey) name[l] = s.name_localkey;
+    if (s.description_localkey) descriptionTemplate[l] = s.description_localkey;
+  });
+  if (!first) return undefined;
+  const s = first;
+  const sec = (v?: number) => (v != null ? v / 100 : undefined);
+  const pct = (v?: number) => (v != null ? v / 100 : undefined);
+  return {
+    id: s.id,
+    weaponType: s.weapon_type,
+    attackType: s.attack_type,
+    counterElement: s.counter_enermy,
+    name,
+    descriptionTemplate,
+    damage: pct(s.damage),
+    shotCount: s.shot_count,
+    muzzleCount: s.muzzle_count,
+    multiTargetCount: s.multi_target_count,
+    centerShotCount: s.center_shot_count,
+    maxAmmo: s.max_ammo,
+    reloadTime: sec(s.reload_time),
+    reloadBullet: s.reload_bullet,
+    reloadStartAmmo: s.reload_start_ammo,
+    rateOfFire: s.rate_of_fire,
+    endRateOfFire: s.end_rate_of_fire,
+    rateOfFireChangePershot: s.rate_of_fire_change_pershot,
+    rateOfFireResetTime: sec(s.rate_of_fire_reset_time),
+    burstEnergyPershot: s.burst_energy_pershot,
+    targetBurstEnergyPershot: s.target_burst_energy_pershot,
+    chargeTime: sec(s.charge_time),
+    fullChargeDamage: pct(s.full_charge_damage),
+    fullChargeBurstEnergy: s.full_charge_burst_energy,
+    coreDamageRate: pct(s.core_damage_rate),
+    penetration: s.penetration,
+    preferTarget: s.prefer_target,
+    preferTargetCondition: s.prefer_target_condition,
+    shotTiming: s.shot_timing,
+    fireType: s.fire_type,
+    inputType: s.input_type,
+    maintainFireStance: s.maintain_fire_stance,
+    fireTiming: s.fire_timing,
+    accuracyCircle: {
+      start: s.start_accuracy_circle_scale,
+      end: s.end_accuracy_circle_scale,
+      changePershot: s.accuracy_change_pershot,
+      changeSpeed: s.accuracy_change_speed,
+      autoStart: s.auto_start_accuracy_circle_scale,
+      autoEnd: s.auto_end_accuracy_circle_scale,
+      autoChangePershot: s.auto_accuracy_change_pershot,
+      autoChangeSpeed: s.auto_accuracy_change_speed,
+    },
+    zoomRate: s.zoom_rate,
+    multiAimRange: s.multi_aim_range,
+    spotFirstDelay: sec(s.spot_first_delay),
+    spotLastDelay: sec(s.spot_last_delay),
+    spotProjectileSpeed: s.spot_projectile_speed,
+    spotRadius: s.spot_radius,
+    spotRadiusObject: s.spot_radius_object,
+    spotExplosionRange: s.spot_explosion_range,
+  };
+}
+
 async function buildDetail(resourceId: number): Promise<NikkeDetail | null> {
   const roles = await Promise.all(
     LOCALES.map((l) => readJson<RawRoleData>(`roledata_${resourceId}_${l}.json`)),
@@ -927,6 +1002,7 @@ async function buildDetail(resourceId: number): Promise<NikkeDetail | null> {
     // groupId — files live at scenes/<gid>.json served by /api/scenes/:groupId
     attractiveScenarios: mergeAttractiveScenarios(roles),
     voices: voices.length ? voices : undefined,
+    shot: buildShot(roles),
   };
 }
 

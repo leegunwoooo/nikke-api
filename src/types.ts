@@ -139,6 +139,7 @@ export interface RawRoleData {
     speech_id?: string;
     speech_localkey?: string;
   }[];
+  shot_detail?: RawShotDetail;
   character_level_attack_list?: number[];
   character_level_defence_list?: number[];
   character_level_hp_list?: number[];
@@ -151,6 +152,62 @@ export interface RawRoleData {
     costume_shop_type?: string;
     is_hidden?: boolean;
   }[];
+}
+
+// per-character weapon spec (roledata shot_detail) — ids are unique per
+// character except a few shared weapons. Times are /100 s, damage-type
+// values are /100 %, and burst energies are gauge units (÷10000 → % of
+// the full 1,000,000-unit gauge).
+export interface RawShotDetail {
+  id?: number;
+  name_localkey?: string;
+  description_localkey?: string;
+  weapon_type?: string;
+  attack_type?: string;
+  counter_enermy?: string;
+  prefer_target?: string;
+  prefer_target_condition?: string;
+  shot_timing?: string;
+  fire_type?: string;
+  input_type?: string;
+  damage?: number;
+  shot_count?: number;
+  muzzle_count?: number;
+  multi_target_count?: number;
+  center_shot_count?: number;
+  max_ammo?: number;
+  maintain_fire_stance?: number;
+  fire_timing?: number;
+  reload_time?: number;
+  reload_bullet?: number;
+  reload_start_ammo?: number;
+  rate_of_fire_reset_time?: number;
+  rate_of_fire?: number;
+  end_rate_of_fire?: number;
+  rate_of_fire_change_pershot?: number;
+  burst_energy_pershot?: number;
+  target_burst_energy_pershot?: number;
+  spot_first_delay?: number;
+  spot_last_delay?: number;
+  start_accuracy_circle_scale?: number;
+  end_accuracy_circle_scale?: number;
+  accuracy_change_pershot?: number;
+  accuracy_change_speed?: number;
+  auto_start_accuracy_circle_scale?: number;
+  auto_end_accuracy_circle_scale?: number;
+  auto_accuracy_change_pershot?: number;
+  auto_accuracy_change_speed?: number;
+  zoom_rate?: number;
+  multi_aim_range?: number;
+  spot_projectile_speed?: number;
+  charge_time?: number;
+  full_charge_damage?: number;
+  full_charge_burst_energy?: number;
+  spot_radius_object?: number;
+  spot_radius?: number;
+  spot_explosion_range?: number;
+  core_damage_rate?: number;
+  penetration?: number;
 }
 
 export type Localized<T> = Partial<Record<Locale, T>>;
@@ -219,4 +276,72 @@ export interface NikkeDetail {
     text: Localized<string>;
     voice: { ko?: string; en?: string; ja?: string };
   }[];
+  /** per-character weapon spec from roledata shot_detail */
+  shot?: NikkeShot;
+}
+
+export interface NikkeShot {
+  id?: number;
+  weaponType?: string;
+  attackType?: string;
+  counterElement?: string;
+  name: Localized<string>;
+  /** raw template with {damage}/{charge_time} placeholders */
+  descriptionTemplate: Localized<string>;
+  /** % of ATK per hit */
+  damage?: number;
+  shotCount?: number;
+  muzzleCount?: number;
+  multiTargetCount?: number;
+  centerShotCount?: number;
+  maxAmmo?: number;
+  /** seconds */
+  reloadTime?: number;
+  reloadBullet?: number;
+  reloadStartAmmo?: number;
+  /** rounds per minute */
+  rateOfFire?: number;
+  endRateOfFire?: number;
+  rateOfFireChangePershot?: number;
+  /** seconds */
+  rateOfFireResetTime?: number;
+  /** gauge units per hit — ÷10000 → % of burst gauge */
+  burstEnergyPershot?: number;
+  /** gauge units per hit against the targeted enemy («대상» 기준) */
+  targetBurstEnergyPershot?: number;
+  /** seconds to full charge */
+  chargeTime?: number;
+  /** % damage at full charge */
+  fullChargeDamage?: number;
+  fullChargeBurstEnergy?: number;
+  /** % bonus when hitting the core */
+  coreDamageRate?: number;
+  penetration?: number;
+  preferTarget?: string;
+  preferTargetCondition?: string;
+  shotTiming?: string;
+  fireType?: string;
+  inputType?: string;
+  maintainFireStance?: number;
+  fireTiming?: number;
+  accuracyCircle?: {
+    start?: number;
+    end?: number;
+    changePershot?: number;
+    changeSpeed?: number;
+    autoStart?: number;
+    autoEnd?: number;
+    autoChangePershot?: number;
+    autoChangeSpeed?: number;
+  };
+  zoomRate?: number;
+  multiAimRange?: number;
+  /** seconds */
+  spotFirstDelay?: number;
+  /** seconds */
+  spotLastDelay?: number;
+  spotProjectileSpeed?: number;
+  spotRadius?: number;
+  spotRadiusObject?: number;
+  spotExplosionRange?: number;
 }

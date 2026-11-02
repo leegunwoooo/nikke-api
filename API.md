@@ -207,7 +207,30 @@ GET /api/nikkes?limit=20&offset=40
         "text": { "ko": "믿는 버릇을 들이라고? 하하. 농담도.", ... },
         "voice": { "ko": ".../c012_Lobby_Touch_1.mp3", "en": "...", "ja": "..." }
       }
-    ]
+    ],
+    "shot": {
+      "id": 1010001,
+      "weaponType": "RL",
+      "attackType": "Metal",
+      "name": { "ko": "런처", "en": "Rocket Launcher", ... },
+      "descriptionTemplate": { "ko": "■ 대상에게\n[공격력 {damage}% 대미지] ...", ... },
+      "damage": 63.11,
+      "shotCount": 1, "maxAmmo": 6,
+      "reloadTime": 2.33,
+      "rateOfFire": 60, "endRateOfFire": 60,
+      "burstEnergyPershot": 14500,
+      "targetBurstEnergyPershot": 29000,
+      "chargeTime": 1,
+      "fullChargeDamage": 250,
+      "fullChargeBurstEnergy": 25000,
+      "coreDamageRate": 200,
+      "accuracyCircle": { "start": 10, "end": 10, "changePershot": 0, "changeSpeed": 0,
+        "autoStart": 10, "autoEnd": 10, "autoChangePershot": 0, "autoChangeSpeed": 0 },
+      "preferTarget": "TargetGL", "shotTiming": "Concurrence",
+      "fireType": "ProjectileDirect", "inputType": "UP",
+      "spotFirstDelay": 0.2, "spotLastDelay": 0.2, "spotProjectileSpeed": 300,
+      "spotRadius": 50, "spotRadiusObject": 2, "spotExplosionRange": 500
+    }
   }
 }
 ```
@@ -234,6 +257,22 @@ GET /api/nikkes/101801?fields=details.attractiveScenarios
 ### `voices[]` 필드
 
 캐릭터 대사/보이스 목록 (로비 터치, 전투 진입·승리, 호감도 구간 대사 등). `label`은 대사 종류(언어별), `text`는 대사 텍스트(언어별), `voice`는 ko/en/ja 음성 mp3 URL (zh-TW 보이스는 존재하지 않음). `conditionAttractiveLevel`은 대사 해금에 필요한 호감도 레벨.
+
+### `shot` 필드
+
+캐릭터별 무기 스펙 (roledata `shot_detail`). 시간 계열은 초, 대미지 계열은 %로 정규화되어 있고, 버스트 게이지 값들은 **게이지 유닛 원시값**입니다 (÷10000 → 게이지 %; 풀 게이지 = 1,000,000 유닛).
+
+| 필드 | 설명 |
+|------|------|
+| `damage` | 샷당 공격력 % |
+| `burstEnergyPershot` / `targetBurstEnergyPershot` | 샷당 버스트 게이지 — «대상» 기준은 `target*` 쪽 (÷10000 → %) |
+| `chargeTime` / `fullChargeDamage` / `fullChargeBurstEnergy` | 풀차지 시간(초)·배율·게이지 |
+| `rateOfFire` / `endRateOfFire` | 분당 발사 수 |
+| `reloadTime` / `reloadBullet` / `reloadStartAmmo` | 재장전 |
+| `accuracyCircle` | 명중률 서클 (수동/자동 각각) |
+| `coreDamageRate` / `penetration` | 코어 대미지 %·관통 |
+| `preferTarget` / `preferTargetCondition` / `shotTiming` / `fireType` / `inputType` | 사격·타겟팅 메타 |
+| `spot*` | 발사 지연·탄속·범위 |
 
 ### 복수 매칭 시
 
