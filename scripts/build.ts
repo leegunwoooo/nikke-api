@@ -396,6 +396,36 @@ async function main() {
     : gid.startsWith("d_nikke") ? "attractive"
     : gid.startsWith("d_ex") ? "sudden"
     : "etc";
+
+  // aggregated line index — /api/lines and appearances load one shard file
+  // per category instead of one fetch per scene. [speakerIdx, text] tuples
+  // with per-scene speaker dedup keep shards ~90% smaller than the full
+  // scene files (which carry ids/icons/voice per line)
+  const lineIndex = new Map<string, Record<string, { sp: string[]; l: [number, string][] }>>();
+  const addLines = (
+    gid: string,
+    cat: string,
+    lines: { speakerName?: string; speaker?: string; text?: string }[],
+  ) => {
+    const bucket = lineIndex.get(cat) ?? {};
+    const sp: string[] = [];
+    const spIdx = new Map<string, number>();
+    bucket[gid] = {
+      sp,
+      l: lines.map((r): [number, string] => {
+        const s = r.speakerName ?? r.speaker ?? "";
+        let i = spIdx.get(s);
+        if (i === undefined) {
+          i = sp.length;
+          sp.push(s);
+          spIdx.set(s, i);
+        }
+        return [i, r.text ?? ""];
+      }),
+    };
+    lineIndex.set(cat, bucket);
+  };
+
   for (const f of rawFiles.filter((f) => /^scene_(d_|event_)/.test(f))) {
     const d = JSON.parse(await readFile(path.join(RAW, f), "utf8"));
     const gid = d.scenario_group_id?.value ?? f.replace(/^scene_|\.json$/g, "");
@@ -414,6 +444,7 @@ async function main() {
       JSON.stringify({ id: d.id, groupId: gid, name: d.scene_name, lines }),
     );
     sceneIndex.push({ groupId: gid, name: d.scene_name, lines: lines.length, category: sceneCategory(gid), source: sceneSource.get(gid) });
+    addLines(gid, sceneCategory(gid), lines);
   }
 
   // --- normalize ko attractive (호감도) dialogue files ---
@@ -453,9 +484,17 @@ async function main() {
       nikke: meta?.nikke,
       level: meta?.level,
     });
+    addLines(gid, "attractive", lines);
   }
   await writeFile(path.join(OUT, "scenes.json"), JSON.stringify(sceneIndex));
   console.log(`scenes/: ${sceneIndex.length} dialogue files (ko)`);
+
+  const LINES = path.join(OUT, "lines");
+  await mkdir(LINES, { recursive: true });
+  for (const [cat, bucket] of lineIndex) {
+    await writeFile(path.join(LINES, `${cat}.json`), JSON.stringify(bucket));
+  }
+  console.log(`lines/: ${[...lineIndex.keys()].join(", ")} shards`);
 
   // --- events.json — event_* scenes grouped per story event, with titles ---
   // Titles aren't in the upstream data (only Locale_Event localkeys), so they

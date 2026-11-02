@@ -187,8 +187,12 @@ async function loadDistJson<T>(file: string, fallback: T): Promise<T> {
 }
 
 const loadNameCodeMap = memo(async () => {
-  nameCodeMap ??= await loadDistJson("name_code_map.json", {});
-  avatarMap ??= await loadDistJson("avatar_map.json", {});
+  const [nc, av] = await Promise.all([
+    loadDistJson<Record<string, number>>("name_code_map.json", {}),
+    loadDistJson<Record<string, { resourceId: number; costumeIndex: number }>>("avatar_map.json", {}),
+  ]);
+  nameCodeMap ??= nc;
+  avatarMap ??= av;
   return nameCodeMap;
 });
 
@@ -212,8 +216,12 @@ const loadCubeNames = memo(async () => {
 });
 
 const loadEquipMaps = memo(async () => {
-  equipItemMap ??= await loadDistJson("equip_item_map.json", {});
-  equipOptionMap ??= await loadDistJson("equip_option_map.json", {});
+  const [items, options] = await Promise.all([
+    loadDistJson<typeof equipItemMap>("equip_item_map.json", null),
+    loadDistJson<typeof equipOptionMap>("equip_option_map.json", null),
+  ]);
+  equipItemMap ??= items;
+  equipOptionMap ??= options;
   return { equipItemMap, equipOptionMap };
 });
 
@@ -673,9 +681,10 @@ app.get("/api/events", async (c) => {
 app.get("/api/events/:id", async (c) => {
   const id = c.req.param("id");
   if (!/^[\w-]+$/.test(id)) return c.json({ error: "invalid id" }, 400);
-  const ev = (await eventGroups()).get(id);
+  const [eg, scenes] = await Promise.all([eventGroups(), getScenes()]);
+  const ev = eg.get(id);
   if (!ev) return c.json({ error: "not found" }, 404);
-  const sceneIdx = new Map((await getScenes()).map((s) => [s.groupId, s]));
+  const sceneIdx = new Map(scenes.map((s) => [s.groupId, s]));
   return c.json(
     pickFields(
       {
@@ -732,22 +741,50 @@ const getScript = (g: string): Promise<ScriptLine[]> => {
   }
   return p;
 };
-let scriptsCache: Promise<Map<string, ScriptLine[]>> | undefined;
-const getScripts = () =>
-  (scriptsCache ??= (async () => {
-    const scripts = new Map<string, ScriptLine[]>();
-    const ids = (await getScenes()).map((s) => s.groupId);
-    // batched so thousands of files never hit the open-file limit; failed
-    // reads are skipped (not cached) so the next request retries them
-    for (let i = 0; i < ids.length; i += 64) {
-      await Promise.all(
-        ids.slice(i, i + 64).map((g) =>
-          getScript(g).then((l) => scripts.set(g, l)).catch(() => {}),
-        ),
-      );
-    }
-    return scripts;
-  })());
+// build emits one shard per scene category (lines/<cat>.json) — a
+// category-filtered search reads a single file, and even an unfiltered
+// scan is 5 parallel fetches instead of thousands of scene reads. Speaker
+// strings are deduped per scene; ns/nt are normalized once on load.
+const LINE_CATS = ["main", "event", "attractive", "sudden", "etc"];
+const shardCache = new Map<string, Promise<Map<string, ScriptLine[]>>>();
+const getShard = (cat: string): Promise<Map<string, ScriptLine[]>> => {
+  let p = shardCache.get(cat);
+  if (!p) {
+    p = storage
+      .readText(path.join("lines", `${cat}.json`))
+      .then((raw) => {
+        const shard = JSON.parse(raw) as Record<string, { sp: string[]; l: [number, string][] }>;
+        const m = new Map<string, ScriptLine[]>();
+        for (const [g, scene] of Object.entries(shard)) {
+          const sns = scene.sp.map(norm);
+          m.set(
+            g,
+            scene.l.map(([si, t]) => ({ s: scene.sp[si] ?? "", ns: sns[si] ?? "", t, nt: searchNorm(t) })),
+          );
+        }
+        return m;
+      })
+      .catch(async () => {
+        // dists predating lines/ shards — read that category's scene files
+        // directly (slower, same result)
+        const m = new Map<string, ScriptLine[]>();
+        const scenes = (await getScenes()).filter((s) => (s.category ?? "etc") === cat);
+        await Promise.all(
+          scenes.map((s) => getScript(s.groupId).then((l) => m.set(s.groupId, l)).catch(() => {})),
+        );
+        return m;
+      });
+    shardCache.set(cat, p);
+  }
+  return p;
+};
+const getScripts = async (category?: string) => {
+  const maps = await Promise.all((category ? [category] : LINE_CATS).map(getShard));
+  if (maps.length === 1) return maps[0];
+  const all = new Map<string, ScriptLine[]>();
+  for (const m of maps) for (const [g, lines] of m) all.set(g, lines);
+  return all;
+};
 
 // scene → story event, for labelling hits
 const eventOfScene = memo(async () => {
@@ -806,16 +843,19 @@ app.get("/api/lines", async (c) => {
   const fam = speaker && truthy(c.req.query("family")) ? families.byName(speaker) : undefined;
   const speakers = fam ? new Set(families.names(fam).map(norm)) : undefined;
   const ns = speaker ? norm(speaker) : "";
-  const idx = new Map((await getScenes()).map((s) => [s.groupId, s]));
-  const evOf = await eventOfScene();
+  const [scenes, evOf, scripts] = await Promise.all([
+    getScenes(),
+    eventOfScene(),
+    getScripts(category),
+  ]);
+  const idx = new Map(scenes.map((s) => [s.groupId, s]));
   // count every match but only materialize hits inside the requested page
   const pg0 = { page: page ? Number(page) : undefined, limit: limit ? Number(limit) : undefined, offset: offset ? Number(offset) : undefined };
   const hits: { groupId: string; line: number; speaker: string; text: string }[] = [];
   let count = 0;
   const lim = pg0.limit ? Math.min(pg0.limit, 500) : pg0.page ? 50 : Infinity;
   const off = pg0.page ? (pg0.page - 1) * lim : (pg0.offset ?? 0);
-  for (const [g, lines] of await getScripts()) {
-    if (category && idx.get(g)?.category !== category) continue;
+  for (const [g, lines] of scripts) {
     lines.forEach((l, i) => {
       if (speaker && !(speakers ? speakers.has(l.ns) : l.ns === ns)) return;
       if (nq && !l.nt.includes(nq)) return;
@@ -840,12 +880,15 @@ app.get("/api/nikkes/:id/appearances", async (c) => {
   if (!fam) return c.json({ error: "not found" }, 404);
   const { category } = c.req.query();
   const speakers = new Set(families.names(fam).map(norm));
-  const idx = new Map((await getScenes()).map((s) => [s.groupId, s]));
-  const evOf = await eventOfScene();
+  const [scenes, evOf, scripts] = await Promise.all([
+    getScenes(),
+    eventOfScene(),
+    getScripts(category),
+  ]);
+  const idx = new Map(scenes.map((s) => [s.groupId, s]));
   const rows: { groupId: string; lines: number }[] = [];
-  for (const [g, lines] of await getScripts()) {
-    if (category && idx.get(g)?.category !== category) continue;
-    const spoken = lines.filter((l) => speakers.has(norm(l.s))).length;
+  for (const [g, lines] of scripts) {
+    const spoken = lines.filter((l) => speakers.has(l.ns)).length;
     if (spoken) rows.push({ groupId: g, lines: spoken });
   }
   rows.sort((a, b) => b.lines - a.lines);
@@ -887,7 +930,7 @@ const mainChapters = async () => {
 // the curated route resolved against the data, with chapters past the
 // guide's coverage appended so the route reaches the latest chapter
 async function storyRoute() {
-  const [chapters, events, scenes] = [await mainChapters(), await eventGroups(), await getScenes()];
+  const [chapters, events, scenes] = await Promise.all([mainChapters(), eventGroups(), getScenes()]);
   const last = Math.max(-1, ...chapters.keys());
   const extra = Array.from({ length: Math.max(0, last - ROUTE_COVERAGE_CHAPTER) }, (_, i) => ({ kind: "main" as const, chapter: ROUTE_COVERAGE_CHAPTER + 1 + i }));
   return [...STORY_ROUTE, ...extra].map((e, step) => {
