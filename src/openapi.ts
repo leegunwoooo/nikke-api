@@ -1,5 +1,7 @@
 // OpenAPI 3.1 spec — served at /openapi.json, rendered by /docs (Scalar)
 // the version comes from the data bundle (characters.json version stamp)
+import { SCENE_CATEGORIES } from "./scene-categories.js";
+
 export function buildOpenapi(pkgVersion: string) {
 
 const localized = {
@@ -172,7 +174,7 @@ const openapi = {
         tags: ["scenes"],
         summary: "씬 목록",
         parameters: [
-          { name: "category", in: "query", schema: { type: "string", enum: ["main", "event", "sudden", "attractive", "favorite"] } },
+          { name: "category", in: "query", schema: { type: "string", enum: [...SCENE_CATEGORIES] } },
           { name: "nikke", in: "query", schema: { type: "string" }, description: "호감도 씬 대상 니케" },
           { name: "family", in: "query", schema: { type: "string", enum: ["1", "true"] }, description: "원본·이격까지 함께 (nikke를 모든 버전 이름과 정확히 매칭)" },
           { name: "q", in: "query", schema: { type: "string" }, description: "씬 제목 검색" },
@@ -225,7 +227,7 @@ const openapi = {
           { name: "q", in: "query", schema: { type: "string" }, description: "대사 본문 부분 일치 (문장부호·공백 무시)" },
           { name: "speaker", in: "query", schema: { type: "string" }, description: "화자 이름 (한국어, 정확히 일치)" },
           { name: "family", in: "query", schema: { type: "string", enum: ["1", "true"] }, description: "화자를 원본·이격 전체로 확장" },
-          { name: "category", in: "query", schema: { type: "string", enum: ["main", "event", "sudden", "attractive", "favorite"] } },
+          { name: "category", in: "query", schema: { type: "string", enum: [...SCENE_CATEGORIES] } },
           { name: "page", in: "query", schema: { type: "integer", minimum: 1 } },
           { name: "limit", in: "query", schema: { type: "integer", maximum: 500 } },
           { name: "offset", in: "query", schema: { type: "integer", default: 0 } },
@@ -239,7 +241,7 @@ const openapi = {
         summary: "캐릭터 등장 씬 — 원본·이격 합산, 대사 수 순, 이벤트별 집계 포함",
         parameters: [
           { name: "id", in: "path", required: true, schema: { type: "string" }, example: "아니스", description: "캐릭터 id / resourceId / 이름" },
-          { name: "category", in: "query", schema: { type: "string", enum: ["main", "event", "sudden", "attractive", "favorite"] } },
+          { name: "category", in: "query", schema: { type: "string", enum: [...SCENE_CATEGORIES] } },
           { name: "page", in: "query", schema: { type: "integer", minimum: 1 } },
           { name: "limit", in: "query", schema: { type: "integer", maximum: 500 } },
           { name: "offset", in: "query", schema: { type: "integer", default: 0 } },

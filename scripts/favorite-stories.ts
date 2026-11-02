@@ -1,4 +1,4 @@
-import { readFile } from "node:fs/promises";
+import { readdir, readFile } from "node:fs/promises";
 import path from "node:path";
 
 // 애장품 스토리 scripts aren't in the game data, so they live in the repo
@@ -9,7 +9,6 @@ export interface FavoriteLine {
   speakerName?: string;
   text: string;
   window: string;
-  speakerIcon?: string;
   voice: null;
   chosen?: boolean;
 }
@@ -25,8 +24,6 @@ export interface FavoriteScene {
 export const FAVORITE_DIR = "content/favorite-stories";
 
 export async function readFavoriteStories(dir = path.resolve(FAVORITE_DIR)): Promise<FavoriteScene[]> {
-  const index = JSON.parse(await readFile(path.join(dir, "index.json"), "utf8")) as { scenes: { groupId: string }[] };
-  return Promise.all(
-    index.scenes.map(async (s) => JSON.parse(await readFile(path.join(dir, `${s.groupId}.json`), "utf8")) as FavoriteScene),
-  );
+  const files = (await readdir(dir)).filter((f) => /^d_favorite_\w+\.json$/.test(f)).sort();
+  return Promise.all(files.map(async (f) => JSON.parse(await readFile(path.join(dir, f), "utf8")) as FavoriteScene));
 }

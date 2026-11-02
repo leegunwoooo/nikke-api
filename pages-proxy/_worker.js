@@ -2460,6 +2460,16 @@ var STORY_ROUTE = [
   ...ch(49, 50),
   ev("MARIA-n", [], { note: "4\uC8FC\uB144" })
 ];
+var favoriteRouteEntries = (scenes) => scenes.filter((s) => s.category === "favorite").map((s) => ({
+  kind: "favorite",
+  title: `${s.nikke} \uC560\uC7A5\uD488 \uC2A4\uD1A0\uB9AC: ${s.name}`,
+  sceneGroupId: s.groupId,
+  nikke: s.nikke ?? "",
+  note: "\uAC00\uC774\uB4DC\uC5D0 \uC5C6\uB294 \uD56D\uBAA9 \u2014 \uC904\uAC70\uB9AC\uC0C1 \uC704\uCE58\uB97C \uD655\uC778\uD558\uC9C0 \uC54A\uC544 \uC21C\uC11C \uB9E8 \uB05D\uC5D0 \uB460"
+}));
+
+// src/scene-categories.ts
+var SCENE_CATEGORIES = ["main", "event", "attractive", "sudden", "favorite"];
 
 // src/fields.ts
 function fieldsOf(c) {
@@ -19711,7 +19721,7 @@ var shapeScene = (includeMedia) => (d) => includeMedia || !Array.isArray(d?.line
   lines: d.lines.map((l) => ({
     speaker: l.speakerName ?? l.speaker,
     text: l.text,
-    ...l.window === "Choice" ? { choice: true } : {},
+    ...l.window === "Choice" ? { window: l.window } : {},
     ...l.chosen ? { chosen: true } : {}
   }))
 };
@@ -19799,7 +19809,7 @@ function buildServer(api, version2, origin = "", boundBlablaid) {
       description: "List story scene scripts (Korean): main story, events, sudden (\uB3CC\uBC1C), affection and favorite-item (\uC560\uC7A5\uD488) scenes. Use get_scene to read the dialogue.",
       inputSchema: object({
         q: string2().optional().describe("Scene name or groupId substring"),
-        category: _enum(["main", "event", "sudden", "attractive", "favorite"]).optional(),
+        category: _enum(SCENE_CATEGORIES).optional(),
         nikke: string2().optional().describe("Affection and favorite-item scenes of this character (name or id)"),
         family: FAMILY,
         limit: LIMIT,
@@ -19907,7 +19917,7 @@ function buildServer(api, version2, origin = "", boundBlablaid) {
         q: string2().optional().describe("Text to find in the dialogue (Korean), punctuation ignored"),
         speaker: string2().optional().describe("Only lines spoken by this character (Korean name, e.g. \uB77C\uD53C)"),
         family: FAMILY,
-        category: _enum(["main", "event", "sudden", "attractive", "favorite"]).optional(),
+        category: _enum(SCENE_CATEGORIES).optional(),
         limit: LIMIT,
         offset: OFFSET
       }),
@@ -19929,7 +19939,7 @@ function buildServer(api, version2, origin = "", boundBlablaid) {
       description: "Every story scene a character speaks in (all of their versions), with line counts, plus the story events they appear in ranked by how much they talk. Answers 'which events feature X' or 'where does X show up'.",
       inputSchema: object({
         nameOrId: string2().min(1).describe("Character name (any language) or id"),
-        category: _enum(["main", "event", "sudden", "attractive", "favorite"]).optional(),
+        category: _enum(SCENE_CATEGORIES).optional(),
         limit: LIMIT,
         offset: OFFSET
       }),
@@ -20490,7 +20500,7 @@ function buildOpenapi(pkgVersion) {
           tags: ["scenes"],
           summary: "\uC52C \uBAA9\uB85D",
           parameters: [
-            { name: "category", in: "query", schema: { type: "string", enum: ["main", "event", "sudden", "attractive", "favorite"] } },
+            { name: "category", in: "query", schema: { type: "string", enum: [...SCENE_CATEGORIES] } },
             { name: "nikke", in: "query", schema: { type: "string" }, description: "\uD638\uAC10\uB3C4 \uC52C \uB300\uC0C1 \uB2C8\uCF00" },
             { name: "family", in: "query", schema: { type: "string", enum: ["1", "true"] }, description: "\uC6D0\uBCF8\xB7\uC774\uACA9\uAE4C\uC9C0 \uD568\uAED8 (nikke\uB97C \uBAA8\uB4E0 \uBC84\uC804 \uC774\uB984\uACFC \uC815\uD655\uD788 \uB9E4\uCE6D)" },
             { name: "q", in: "query", schema: { type: "string" }, description: "\uC52C \uC81C\uBAA9 \uAC80\uC0C9" },
@@ -20543,7 +20553,7 @@ function buildOpenapi(pkgVersion) {
             { name: "q", in: "query", schema: { type: "string" }, description: "\uB300\uC0AC \uBCF8\uBB38 \uBD80\uBD84 \uC77C\uCE58 (\uBB38\uC7A5\uBD80\uD638\xB7\uACF5\uBC31 \uBB34\uC2DC)" },
             { name: "speaker", in: "query", schema: { type: "string" }, description: "\uD654\uC790 \uC774\uB984 (\uD55C\uAD6D\uC5B4, \uC815\uD655\uD788 \uC77C\uCE58)" },
             { name: "family", in: "query", schema: { type: "string", enum: ["1", "true"] }, description: "\uD654\uC790\uB97C \uC6D0\uBCF8\xB7\uC774\uACA9 \uC804\uCCB4\uB85C \uD655\uC7A5" },
-            { name: "category", in: "query", schema: { type: "string", enum: ["main", "event", "sudden", "attractive", "favorite"] } },
+            { name: "category", in: "query", schema: { type: "string", enum: [...SCENE_CATEGORIES] } },
             { name: "page", in: "query", schema: { type: "integer", minimum: 1 } },
             { name: "limit", in: "query", schema: { type: "integer", maximum: 500 } },
             { name: "offset", in: "query", schema: { type: "integer", default: 0 } }
@@ -20557,7 +20567,7 @@ function buildOpenapi(pkgVersion) {
           summary: "\uCE90\uB9AD\uD130 \uB4F1\uC7A5 \uC52C \u2014 \uC6D0\uBCF8\xB7\uC774\uACA9 \uD569\uC0B0, \uB300\uC0AC \uC218 \uC21C, \uC774\uBCA4\uD2B8\uBCC4 \uC9D1\uACC4 \uD3EC\uD568",
           parameters: [
             { name: "id", in: "path", required: true, schema: { type: "string" }, example: "\uC544\uB2C8\uC2A4", description: "\uCE90\uB9AD\uD130 id / resourceId / \uC774\uB984" },
-            { name: "category", in: "query", schema: { type: "string", enum: ["main", "event", "sudden", "attractive", "favorite"] } },
+            { name: "category", in: "query", schema: { type: "string", enum: [...SCENE_CATEGORIES] } },
             { name: "page", in: "query", schema: { type: "integer", minimum: 1 } },
             { name: "limit", in: "query", schema: { type: "integer", maximum: 500 } },
             { name: "offset", in: "query", schema: { type: "integer", default: 0 } }
@@ -21548,7 +21558,7 @@ async function createApp(storage) {
     }
     return p;
   };
-  const LINE_CATS = ["main", "event", "attractive", "sudden", "favorite", "etc"];
+  const LINE_CATS = [...SCENE_CATEGORIES, "etc"];
   const shardCache = /* @__PURE__ */ new Map();
   const getShard = (cat) => {
     let p = shardCache.get(cat);
@@ -21710,12 +21720,14 @@ async function createApp(storage) {
     const [chapters, events, scenes] = await Promise.all([mainChapters(), eventGroups(), getScenes()]);
     const last = Math.max(-1, ...chapters.keys());
     const extra = Array.from({ length: Math.max(0, last - ROUTE_COVERAGE_CHAPTER) }, (_, i) => ({ kind: "main", chapter: ROUTE_COVERAGE_CHAPTER + 1 + i }));
-    const favorites = scenes.filter((s) => s.category === "favorite");
-    const route = [...STORY_ROUTE, ...extra].map((e, step) => {
+    return [...STORY_ROUTE, ...extra, ...favoriteRouteEntries(scenes)].map((e, step) => {
       if (e.kind === "main") {
         const sc = chapters.get(e.chapter) ?? [];
         const note = e.chapter > ROUTE_COVERAGE_CHAPTER ? "\uAC00\uC774\uB4DC \uBC94\uC704 \uBC16 \u2014 \uC774\uBCA4\uD2B8 \uBC30\uCE58 \uC815\uBCF4 \uC5C6\uC74C" : "note" in e ? e.note : void 0;
         return { step, kind: "main", key: `chapter:${e.chapter}`, ids: [], chapter: e.chapter, title: `\uBA54\uC778 ${e.chapter}\uCC55\uD130`, required: true, scenes: sc.length, firstScene: sc[0] ?? null, inData: sc.length > 0, ...note ? { note } : {} };
+      }
+      if (e.kind === "favorite") {
+        return { step, kind: e.kind, key: e.sceneGroupId, ids: [e.sceneGroupId], title: e.title, nikke: e.nikke, required: false, scenes: 1, firstScene: e.sceneGroupId, inData: true, note: e.note };
       }
       const found = e.ids.flatMap((id) => [id, ...[...events.keys()].filter((k) => k.startsWith(`${id}_b`) && /_b\d+$/.test(k))]).filter((id) => events.has(id));
       const affectionScenes = e.nikke ? scenes.filter((s) => s.category === "attractive" && s.nikke === e.nikke).length : 0;
@@ -21734,22 +21746,6 @@ async function createApp(storage) {
         ...e.note || !inData ? { note: [e.note, inData ? "" : "\uC774 API \uB370\uC774\uD130\uC5D0\uB294 \uC2A4\uD06C\uB9BD\uD2B8\uAC00 \uC5C6\uC74C"].filter(Boolean).join(" \xB7 ") } : {}
       };
     });
-    return [
-      ...route,
-      ...favorites.map((s, i) => ({
-        step: route.length + i,
-        kind: "favorite",
-        key: s.groupId,
-        ids: [s.groupId],
-        title: `${s.nikke} \uC560\uC7A5\uD488 \uC2A4\uD1A0\uB9AC: ${s.name}`,
-        nikke: s.nikke,
-        required: false,
-        scenes: 1,
-        firstScene: s.groupId,
-        inData: true,
-        note: "\uAC00\uC774\uB4DC\uC5D0 \uC5C6\uB294 \uD56D\uBAA9 \u2014 \uC904\uAC70\uB9AC\uC0C1 \uC704\uCE58\uB97C \uD655\uC778\uD558\uC9C0 \uC54A\uC544 \uC21C\uC11C \uB9E8 \uB05D\uC5D0 \uB460"
-      }))
-    ];
   }
   app.get("/api/story/route", async (c) => {
     const entries = await storyRoute();

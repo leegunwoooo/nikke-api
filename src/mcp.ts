@@ -1,5 +1,6 @@
 import { createMcpHandler, McpServer, ResourceTemplate } from "@modelcontextprotocol/server";
 import * as z from "zod/v4";
+import { SCENE_CATEGORIES } from "./scene-categories.js";
 
 // MCP (Model Context Protocol) face of the REST API, served at /mcp so
 // ChatGPT/Claude connectors can use the data as tools. Every tool is a thin
@@ -200,7 +201,7 @@ const shapeScene = (includeMedia: boolean) => (d: any) =>
         lines: d.lines.map((l: any) => ({
           speaker: l.speakerName ?? l.speaker,
           text: l.text,
-          ...(l.window === "Choice" ? { choice: true } : {}),
+          ...(l.window === "Choice" ? { window: l.window } : {}),
           ...(l.chosen ? { chosen: true } : {}),
         })),
       };
@@ -305,7 +306,7 @@ export function buildServer(api: Fetcher, version: string, origin = "", boundBla
         "List story scene scripts (Korean): main story, events, sudden (돌발), affection and favorite-item (애장품) scenes. Use get_scene to read the dialogue.",
       inputSchema: z.object({
         q: z.string().optional().describe("Scene name or groupId substring"),
-        category: z.enum(["main", "event", "sudden", "attractive", "favorite"]).optional(),
+        category: z.enum(SCENE_CATEGORIES).optional(),
         nikke: z.string().optional().describe("Affection and favorite-item scenes of this character (name or id)"),
         family: FAMILY,
         limit: LIMIT,
@@ -430,7 +431,7 @@ export function buildServer(api: Fetcher, version: string, origin = "", boundBla
         q: z.string().optional().describe("Text to find in the dialogue (Korean), punctuation ignored"),
         speaker: z.string().optional().describe("Only lines spoken by this character (Korean name, e.g. 라피)"),
         family: FAMILY,
-        category: z.enum(["main", "event", "sudden", "attractive", "favorite"]).optional(),
+        category: z.enum(SCENE_CATEGORIES).optional(),
         limit: LIMIT,
         offset: OFFSET,
       }),
@@ -454,7 +455,7 @@ export function buildServer(api: Fetcher, version: string, origin = "", boundBla
         "Every story scene a character speaks in (all of their versions), with line counts, plus the story events they appear in ranked by how much they talk. Answers 'which events feature X' or 'where does X show up'.",
       inputSchema: z.object({
         nameOrId: z.string().min(1).describe("Character name (any language) or id"),
-        category: z.enum(["main", "event", "sudden", "attractive", "favorite"]).optional(),
+        category: z.enum(SCENE_CATEGORIES).optional(),
         limit: LIMIT,
         offset: OFFSET,
       }),

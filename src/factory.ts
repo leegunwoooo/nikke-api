@@ -6,7 +6,8 @@ import { cacheHeaders } from "./cache.js";
 import { cdnUrl } from "./cdn.js";
 import { groupEventScenes } from "./events.js";
 import { buildFamilies } from "./family.js";
-import { ROUTE_COVERAGE_CHAPTER, ROUTE_SOURCES, STORY_ROUTE } from "./story-route.js";
+import { favoriteRouteEntries, ROUTE_COVERAGE_CHAPTER, ROUTE_SOURCES, STORY_ROUTE } from "./story-route.js";
+import { SCENE_CATEGORIES } from "./scene-categories.js";
 import { fieldsOf, LOCALES, localize, pickFields } from "./fields.js";
 import { blaCredsContext, credsFromHeader, decodeOpenid, gameApi, playerInfo } from "./blabla.js";
 import { createNikkeMcp, requestOrigin } from "./mcp.js";
@@ -745,7 +746,7 @@ const getScript = (g: string): Promise<ScriptLine[]> => {
 // category-filtered search reads a single file, and even an unfiltered
 // scan is 6 parallel fetches instead of thousands of scene reads. Speaker
 // strings are deduped per scene; ns/nt are normalized once on load.
-const LINE_CATS = ["main", "event", "attractive", "sudden", "favorite", "etc"];
+const LINE_CATS = [...SCENE_CATEGORIES, "etc"];
 const shardCache = new Map<string, Promise<Map<string, ScriptLine[]>>>();
 const getShard = (cat: string): Promise<Map<string, ScriptLine[]>> => {
   let p = shardCache.get(cat);
@@ -933,14 +934,14 @@ async function storyRoute() {
   const [chapters, events, scenes] = await Promise.all([mainChapters(), eventGroups(), getScenes()]);
   const last = Math.max(-1, ...chapters.keys());
   const extra = Array.from({ length: Math.max(0, last - ROUTE_COVERAGE_CHAPTER) }, (_, i) => ({ kind: "main" as const, chapter: ROUTE_COVERAGE_CHAPTER + 1 + i }));
-  // the guide doesn't cover 애장품 stories, so they go last: existing steps stay
-  // put and they never displace a chapter from `next`
-  const favorites = scenes.filter((s) => s.category === "favorite");
-  const route = [...STORY_ROUTE, ...extra].map((e, step) => {
+  return [...STORY_ROUTE, ...extra, ...favoriteRouteEntries(scenes)].map((e, step) => {
     if (e.kind === "main") {
       const sc = chapters.get(e.chapter) ?? [];
       const note = e.chapter > ROUTE_COVERAGE_CHAPTER ? "가이드 범위 밖 — 이벤트 배치 정보 없음" : "note" in e ? e.note : undefined;
       return { step, kind: "main" as const, key: `chapter:${e.chapter}`, ids: [] as string[], chapter: e.chapter, title: `메인 ${e.chapter}챕터`, required: true, scenes: sc.length, firstScene: sc[0] ?? null, inData: sc.length > 0, ...(note ? { note } : {}) };
+    }
+    if (e.kind === "favorite") {
+      return { step, kind: e.kind, key: e.sceneGroupId, ids: [e.sceneGroupId], title: e.title, nikke: e.nikke, required: false, scenes: 1, firstScene: e.sceneGroupId, inData: true, note: e.note };
     }
     // bonus episodes ship as their own "<id>_bNN" events — they belong to the same entry
     const found = e.ids.flatMap((id) => [id, ...[...events.keys()].filter((k) => k.startsWith(`${id}_b`) && /_b\d+$/.test(k))]).filter((id) => events.has(id));
@@ -960,22 +961,6 @@ async function storyRoute() {
       ...(e.note || !inData ? { note: [e.note, inData ? "" : "이 API 데이터에는 스크립트가 없음"].filter(Boolean).join(" · ") } : {}),
     };
   });
-  return [
-    ...route,
-    ...favorites.map((s, i) => ({
-      step: route.length + i,
-      kind: "favorite" as const,
-      key: s.groupId,
-      ids: [s.groupId],
-      title: `${s.nikke} 애장품 스토리: ${s.name}`,
-      nikke: s.nikke,
-      required: false,
-      scenes: 1,
-      firstScene: s.groupId,
-      inData: true,
-      note: "가이드에 없는 항목 — 줄거리상 위치를 확인하지 않아 순서 맨 끝에 둠",
-    })),
-  ];
 }
 
 app.get("/api/story/route", async (c) => {

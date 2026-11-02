@@ -18,6 +18,7 @@ test("favorite story files keep the shape the build expects", async () => {
       assert.equal(l.id, `${s.groupId}_${i + 1}`);
       assert.ok(["Speech", "Self", "Narration", "Choice"].includes(l.window), l.id);
       assert.ok(l.text, l.id);
+      assert.ok(!("speakerIcon" in l), `${l.id}: icons are added by the build`);
     });
   }
 });

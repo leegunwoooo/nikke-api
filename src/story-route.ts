@@ -50,7 +50,8 @@ export type RouteEntry =
       required: boolean;
       importance?: Importance;
       note?: string;
-    };
+    }
+  | { kind: "favorite"; title: string; sceneGroupId: string; nikke: string; note: string };
 
 const ch = (from: number, to = from, note?: string): RouteEntry[] =>
   Array.from({ length: to - from + 1 }, (_, i) => ({ kind: "main", chapter: from + i, ...(note && i === 0 ? { note } : {}) }));
@@ -117,3 +118,16 @@ export const STORY_ROUTE: RouteEntry[] = [
   ...ch(49, 50),
   ev("MARIA-n", [], { note: "4주년" }),
 ];
+
+// 애장품 stories aren't in the guide, so they go after everything else:
+// existing steps stay put and they never displace a chapter from `next`
+export const favoriteRouteEntries = (scenes: { groupId: string; name?: string; nikke?: string; category?: string }[]): RouteEntry[] =>
+  scenes
+    .filter((s) => s.category === "favorite")
+    .map((s) => ({
+      kind: "favorite",
+      title: `${s.nikke} 애장품 스토리: ${s.name}`,
+      sceneGroupId: s.groupId,
+      nikke: s.nikke ?? "",
+      note: "가이드에 없는 항목 — 줄거리상 위치를 확인하지 않아 순서 맨 끝에 둠",
+    }));

@@ -239,7 +239,13 @@ async function main() {
       detailCount++;
     }
   }
-  console.log(`details/: ${detailCount} character detail files, ${linkedFavorites}/${favoriteStories.length} favorite stories linked`);
+  console.log(`details/: ${detailCount} character detail files`);
+  // a renamed character would otherwise silently lose its story link
+  if (linkedFavorites !== favoriteStories.length) {
+    const names = new Set(characters.map((n) => n.name.ko));
+    const missing = favoriteStories.filter((s) => !names.has(s.nikke)).map((s) => s.nikke);
+    throw new Error(`favorite stories without a character: ${missing.join(", ")}`);
+  }
 
   // --- name_code / avatar-id → character maps (for shared-profile lookups) ---
   const idMap: { name_code: number; id: number; resource_id: number }[] = JSON.parse(
@@ -499,17 +505,18 @@ async function main() {
 
   // --- 애장품 scripts kept in the repo (not in the game data) ---
   for (const scene of favoriteStories) {
-    await writeFile(path.join(SCENES, `${scene.groupId}.json`), JSON.stringify(scene));
+    const lines = scene.lines.map((l) => ({ ...l, speakerIcon: speakerIcon(l.speaker, undefined) }));
+    await writeFile(path.join(SCENES, `${scene.groupId}.json`), JSON.stringify({ ...scene, lines }));
     sceneIndex.push({
       groupId: scene.groupId,
       name: scene.name,
-      lines: scene.lines.length,
+      lines: lines.length,
       category: "favorite",
       type: "favorite",
       nikke: scene.nikke,
       sourceVideo: scene.sourceVideo,
     });
-    addLines(scene.groupId, "favorite", scene.lines);
+    addLines(scene.groupId, "favorite", lines);
   }
   await writeFile(path.join(OUT, "scenes.json"), JSON.stringify(sceneIndex));
   console.log(`scenes/: ${sceneIndex.length} dialogue files (ko)`);

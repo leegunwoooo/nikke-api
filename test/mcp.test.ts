@@ -106,8 +106,8 @@ test("favorite stories sit optional at the end of the route, after every chapter
 test("get_scene keeps which options were choices and which was taken", async () => {
   const { lines } = (await tool("get_scene", { groupId: "d_favorite_test" })).json;
   assert.deepEqual(lines[0], { speaker: "테스트 니케", text: "애장품 대사" });
-  assert.deepEqual(lines[1], { text: "고른 항목", choice: true, chosen: true });
-  assert.deepEqual(lines[2], { text: "안 고른 항목", choice: true });
+  assert.deepEqual(lines[1], { text: "고른 항목", window: "Choice", chosen: true });
+  assert.deepEqual(lines[2], { text: "안 고른 항목", window: "Choice" });
 });
 
 test("filters reject values outside the enum", async () => {
