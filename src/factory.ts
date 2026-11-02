@@ -1516,10 +1516,11 @@ const ownedNikkeSummary = (charRef: any) => (ch: any) => ({
 // triggers the detail call
 async function userNikkeList(c: Context) {
   try {
+    const lookups = loadProfileLookups(); // dist reads overlap the upstream calls
     const res = await loadOwnedNikkes(c);
     if ("error" in res) return res.error;
     const { q, id, name, element, class: cls, burst, corporation, weapon, rarity } = c.req.query();
-    const { charRef, matchesNikkeId, matchesNikkeName } = await loadProfileLookups();
+    const { charRef, matchesNikkeId, matchesNikkeName } = await lookups;
     const n = (v?: string | null) => v?.toLowerCase();
     const nikkes = res.owned
       .filter((ch) => (!id || matchesNikkeId(id, ch)) && matchesNikkeName(name ?? q ?? "", ch))
@@ -1548,10 +1549,11 @@ async function userNikkeList(c: Context) {
 // matched like /api/nikkes/:id (fuzzy name); multiple hits return the list
 async function userNikkeDetail(c: Context) {
   try {
+    const lookups = loadProfileLookups(); // dist reads overlap the upstream calls
     const res = await loadOwnedNikkes(c);
     if ("error" in res) return res.error;
     const key = c.req.param("nameOrId") ?? "";
-    const { charRef, normalizeNikke, matchesNikke } = await loadProfileLookups();
+    const { charRef, normalizeNikke, matchesNikke } = await lookups;
     const fields = fieldsOf(c);
     const hits = res.owned.filter((ch) => matchesNikke(key, ch));
     if (hits.length === 0) return c.json({ error: "not found" }, 404);
@@ -1593,6 +1595,23 @@ async function userNikkeDetail(c: Context) {
 // has characters would hide real data.
 const ROSTER_AREAS = [83, 81, 84, 82, 85]; // KR, JP, Global, NA, SEA
 const ROSTER_DETAIL_BATCH = 60; // upstream truncates larger name_codes lists
+
+// bounded parallelism — fully parallel sweeps (~30 calls at once) trip
+// blablalink's 212000 rate limit, but a pool of 2 stays well under it and
+// still halves the round-trips. post()'s backoff catches the rare burst.
+const mapLimit = async <T, R>(items: T[], n: number, fn: (x: T) => Promise<R>): Promise<R[]> => {
+  const out = new Array<R>(items.length);
+  let i = 0;
+  await Promise.all(
+    Array.from({ length: Math.min(n, items.length) }, async () => {
+      while (i < items.length) {
+        const j = i++;
+        out[j] = await fn(items[j]!);
+      }
+    }),
+  );
+  return out;
+};
 // upstream codes meaning "the owner hid their nikke list" — not a failure
 const ROSTER_PRIVATE_CODES = new Set([1301002, 1303002]);
 
@@ -1617,13 +1636,20 @@ async function collectRosterArea(openid: string, area: number): Promise<RosterAr
     return { failedCode: roster.code ?? 0, failedMsg: roster.msg ?? "" };
 
   const codes = characters.map((x: any) => x.name_code);
+  // outpost needs a separate privacy toggle upstream — absence is normal,
+  // and it overlaps the detail chunks instead of adding a serial round-trip
+  const outpostP = gameApi("Game", "GetUserProfileOutpostInfo", body)
+    .then((info) => (info.code === 0 ? ((info.data as any)?.outpost_info ?? null) : null))
+    .catch(() => null);
+  const chunks: any[][] = [];
+  for (let i = 0; i < codes.length; i += ROSTER_DETAIL_BATCH)
+    chunks.push(codes.slice(i, i + ROSTER_DETAIL_BATCH));
+  const results = await mapLimit(chunks, 2, (name_codes) =>
+    gameApi("Game", "GetUserCharacterDetails", { ...body, name_codes }),
+  );
   const details: unknown[] = [];
   const stateEffects: unknown[] = [];
-  for (let i = 0; i < codes.length; i += ROSTER_DETAIL_BATCH) {
-    const chunk = await gameApi("Game", "GetUserCharacterDetails", {
-      ...body,
-      name_codes: codes.slice(i, i + ROSTER_DETAIL_BATCH),
-    });
+  for (const chunk of results) {
     if (chunk.code !== 0)
       throw new Error(
         `GetUserCharacterDetails failed: ${chunk.code} ${chunk.msg ?? ""}`,
@@ -1631,16 +1657,7 @@ async function collectRosterArea(openid: string, area: number): Promise<RosterAr
     details.push(...((chunk.data as any)?.character_details ?? []));
     stateEffects.push(...((chunk.data as any)?.state_effects ?? []));
   }
-
-  // outpost needs a separate privacy toggle upstream — absence is normal
-  let outpost = null;
-  try {
-    const info = await gameApi("Game", "GetUserProfileOutpostInfo", body);
-    if (info.code === 0) outpost = (info.data as any)?.outpost_info ?? null;
-  } catch {
-    /* optional disclosure */
-  }
-  return { area, characters, details, stateEffects, outpost };
+  return { area, characters, details, stateEffects, outpost: await outpostP };
 }
 
 async function userRoster(c: Context) {
@@ -1652,12 +1669,11 @@ async function userRoster(c: Context) {
   if (area !== null && (!Number.isInteger(area) || !ROSTER_AREAS.includes(area)))
     return c.json({ error: "unsupported area" }, 400);
   try {
-    // sequential — a parallel sweep fires ~30 upstream calls at once and
-    // trips blablalink's 212000 rate limit on the shared credentials.
-    const results: (RosterArea | RosterFail)[] = [];
-    for (const a of area === null ? ROSTER_AREAS : [area]) {
-      results.push(await collectRosterArea(target.intlOpenId, a));
-    }
+    // pool of 2 — full parallelism trips blablalink's 212000 rate limit
+    // on the shared credentials, sequential wastes ~25 round-trips
+    const results = await mapLimit(area === null ? ROSTER_AREAS : [area], 2, (a) =>
+      collectRosterArea(target.intlOpenId, a),
+    );
     const areas = results.filter((r): r is RosterArea => !("failedCode" in r));
     if (areas.length === 0) {
       const failures = results as RosterFail[];
