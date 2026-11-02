@@ -2,6 +2,7 @@ import { mkdir, readFile, writeFile, copyFile, readdir } from "node:fs/promises"
 import path from "node:path";
 import { cdnUrl } from "../src/cdn.js";
 import { compareEventScenes, eventIdOf } from "../src/events.js";
+import { readFavoriteStories } from "./favorite-stories.js";
 import type {
   Burst,
   Locale,
@@ -389,6 +390,7 @@ async function main() {
     nikke?: string;
     level?: number;
     source?: string;
+    sourceVideo?: string;
   }[] = [];
   const sceneCategory = (gid: string) =>
     gid.startsWith("d_main") ? "main"
@@ -485,6 +487,21 @@ async function main() {
       level: meta?.level,
     });
     addLines(gid, "attractive", lines);
+  }
+
+  // --- 애장품 scripts kept in the repo (not in the game data) ---
+  for (const scene of await readFavoriteStories()) {
+    await writeFile(path.join(SCENES, `${scene.groupId}.json`), JSON.stringify(scene));
+    sceneIndex.push({
+      groupId: scene.groupId,
+      name: scene.name,
+      lines: scene.lines.length,
+      category: "favorite",
+      type: "favorite",
+      nikke: scene.nikke,
+      sourceVideo: scene.sourceVideo,
+    });
+    addLines(scene.groupId, "favorite", scene.lines);
   }
   await writeFile(path.join(OUT, "scenes.json"), JSON.stringify(sceneIndex));
   console.log(`scenes/: ${sceneIndex.length} dialogue files (ko)`);

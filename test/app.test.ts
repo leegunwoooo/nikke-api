@@ -124,7 +124,7 @@ test("event source records which scene list the group came from", async () => {
 });
 
 test("scenes index, nikke filter is case/space-insensitive", async () => {
-  assert.equal((await json("/api/scenes")).count, 4);
+  assert.equal((await json("/api/scenes")).count, 5);
   assert.equal((await json("/api/scenes?category=main")).count, 1);
   assert.equal((await json("/api/scenes?nikke=innocentmaid")).count, 1);
   assert.equal((await json("/api/scenes?limit=1&offset=1")).scenes[0].groupId, "attract_1_1");

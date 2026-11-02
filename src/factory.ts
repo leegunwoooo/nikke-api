@@ -743,9 +743,9 @@ const getScript = (g: string): Promise<ScriptLine[]> => {
 };
 // build emits one shard per scene category (lines/<cat>.json) — a
 // category-filtered search reads a single file, and even an unfiltered
-// scan is 5 parallel fetches instead of thousands of scene reads. Speaker
+// scan is 6 parallel fetches instead of thousands of scene reads. Speaker
 // strings are deduped per scene; ns/nt are normalized once on load.
-const LINE_CATS = ["main", "event", "attractive", "sudden", "etc"];
+const LINE_CATS = ["main", "event", "attractive", "sudden", "favorite", "etc"];
 const shardCache = new Map<string, Promise<Map<string, ScriptLine[]>>>();
 const getShard = (cat: string): Promise<Map<string, ScriptLine[]>> => {
   let p = shardCache.get(cat);

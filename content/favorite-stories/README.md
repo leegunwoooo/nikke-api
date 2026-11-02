@@ -1,6 +1,6 @@
 # 애장품 스토리 대본
 
-니케 21명의 애장품 스토리 대본입니다. `/api/scenes/:groupId` 응답과 같은 모양의 JSON이며, 아직 API로 제공하지는 않습니다.
+니케 21명의 애장품 스토리 대본입니다. `/api/scenes/:groupId` 응답과 같은 모양의 JSON이고, 빌드할 때 데이터에 합쳐져 API(`/api/scenes?category=favorite`)와 MCP로 제공됩니다.
 
 - `index.json`: 전체 목록
 - `d_favorite_<화자 코드>.json`: 편별 대본

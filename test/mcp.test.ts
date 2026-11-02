@@ -75,6 +75,24 @@ test("get_scene returns speaker/text lines unless media is asked for", async () 
   assert.equal(full.lines[0].speakerName, "라피");
 });
 
+test("favorite stories are reachable by category, nikke and line search", async () => {
+  const list = (await tool("search_scenes", { category: "favorite" })).json;
+  assert.equal(list.scenes[0].groupId, "d_favorite_test");
+  assert.equal(list.scenes[0].sourceVideo, "https://youtu.be/test");
+  assert.equal((await tool("search_scenes", { nikke: "테스트 니케", family: false })).json.count, 1);
+  const hit = (await tool("search_lines", { q: "애장품 대사" })).json;
+  assert.equal(hit.lines[0].groupId, "d_favorite_test");
+  assert.equal(hit.lines[0].scene.category, "favorite");
+  assert.equal((await tool("search_lines", { q: "애장품 대사", category: "favorite" })).json.count, 1);
+});
+
+test("get_scene keeps which options were choices and which was taken", async () => {
+  const { lines } = (await tool("get_scene", { groupId: "d_favorite_test" })).json;
+  assert.deepEqual(lines[0], { speaker: "테스트 니케", text: "애장품 대사" });
+  assert.deepEqual(lines[1], { text: "고른 항목", choice: true, chosen: true });
+  assert.deepEqual(lines[2], { text: "안 고른 항목", choice: true });
+});
+
 test("filters reject values outside the enum", async () => {
   assert.equal((await tool("search_nikkes", { element: "불" })).isError, true);
 });
