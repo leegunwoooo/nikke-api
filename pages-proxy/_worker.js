@@ -2468,16 +2468,22 @@ function fieldsOf(c) {
   const fields = raw2.split(",").map((f) => f.trim()).filter(Boolean);
   return fields.length ? fields : void 0;
 }
+var BAD_KEY = /* @__PURE__ */ new Set(["__proto__", "constructor", "prototype", "toString", "hasOwnProperty", "valueOf"]);
 function pickOne(obj, fields) {
   if (obj === null || typeof obj !== "object") return obj;
   const out = {};
   for (const f of fields) {
     const keys = f.split(".");
+    if (keys.some((k) => BAD_KEY.has(k))) continue;
     let src = obj;
-    for (const k of keys) src = src && typeof src === "object" ? src[k] : void 0;
+    for (const k of keys)
+      src = src && typeof src === "object" && Object.hasOwn(src, k) ? src[k] : void 0;
     if (src === void 0) continue;
     let dst = out;
-    for (const k of keys.slice(0, -1)) dst = dst[k] ??= {};
+    for (const k of keys.slice(0, -1)) {
+      const v = dst[k];
+      dst = v !== null && typeof v === "object" && !Array.isArray(v) ? v : dst[k] = {};
+    }
     dst[keys[keys.length - 1]] = src;
   }
   return out;
@@ -20218,6 +20224,8 @@ function requestOrigin(req) {
   const url2 = new URL(req.url);
   const proto = req.headers.get("x-forwarded-proto")?.split(",")[0].trim();
   if (proto === "http" || proto === "https") url2.protocol = `${proto}:`;
+  const host = req.headers.get("x-forwarded-host")?.split(",")[0].trim();
+  if (host && /^[\w.:-]+$/.test(host)) url2.host = host;
   return url2.origin;
 }
 var createNikkeMcp = (api, version2) => createMcpHandler((ctx) => buildServer(
@@ -21024,7 +21032,7 @@ async function createApp(storage) {
   }
   function lazyIndex(file) {
     let cached2;
-    return () => cached2 ??= storage.readText(path.join(file)).then((raw2) => JSON.parse(raw2)).catch(() => []);
+    return () => cached2 ??= storage.readText(path.join(file)).then((raw2) => JSON.parse(raw2)).catch((e) => (cached2 = void 0, Promise.reject(e)));
   }
   const getScenes = lazyIndex("scenes.json");
   const getEvents = lazyIndex("events.json");
@@ -21044,17 +21052,13 @@ async function createApp(storage) {
   for (const n of characters) {
     for (const co of n.costumes) costumeOwner.set(co.id, { nikke: n, costume: co });
   }
-  async function loadDistJson(file, fallback) {
-    try {
-      return JSON.parse(await storage.readText(path.join(file)));
-    } catch {
-      return fallback;
-    }
+  async function loadDistJson(file) {
+    return JSON.parse(await storage.readText(path.join(file)));
   }
   const loadNameCodeMap = memo3(async () => {
     const [nc, av] = await Promise.all([
-      loadDistJson("name_code_map.json", {}),
-      loadDistJson("avatar_map.json", {})
+      loadDistJson("name_code_map.json"),
+      loadDistJson("avatar_map.json")
     ]);
     nameCodeMap ??= nc;
     avatarMap ??= av;
@@ -21080,8 +21084,8 @@ async function createApp(storage) {
   });
   const loadEquipMaps = memo3(async () => {
     const [items, options] = await Promise.all([
-      loadDistJson("equip_item_map.json", null),
-      loadDistJson("equip_option_map.json", null)
+      loadDistJson("equip_item_map.json"),
+      loadDistJson("equip_option_map.json")
     ]);
     equipItemMap ??= items;
     equipOptionMap ??= options;
@@ -21089,7 +21093,7 @@ async function createApp(storage) {
   });
   let costumeMapData = null;
   const getCostumeMap = memo3(async () => {
-    costumeMapData ??= await loadDistJson("costume_map.json", {});
+    costumeMapData ??= await loadDistJson("costume_map.json");
     return costumeMapData;
   });
   const COSTUME_SCENE_PREFIX = {
@@ -21119,7 +21123,7 @@ async function createApp(storage) {
   let stageRows = null;
   const getStages = memo3(async () => {
     if (!stageRows) {
-      stageRows = await loadDistJson(path.join("tables", "stage_list.json"), []);
+      stageRows = await loadDistJson(path.join("tables", "stage_list.json"));
     }
     return stageRows;
   });
@@ -21847,8 +21851,7 @@ async function createApp(storage) {
       const [ko, en, ja] = await Promise.all(
         ["ko", "en", "ja"].map(async (l) => {
           const t = await loadDistJson(
-            `tables/ItemEquipTable_${l}.json`,
-            []
+            `tables/ItemEquipTable_${l}.json`
           );
           return Array.isArray(t) ? t : t.records ?? [];
         })
@@ -22104,6 +22107,7 @@ async function createApp(storage) {
         gameApi("Game", "GetUserProfileOutpostInfo", body),
         loadProfileLookups()
       ]);
+      if (basic.code !== 0) throw new Error(basic.msg ?? `profile error ${basic.code}`);
       const bi = basic.data?.basic_info ?? {};
       const op = outpost.data?.outpost_info ?? {};
       const corporations = {};
@@ -22192,6 +22196,10 @@ async function createApp(storage) {
       return { error: c.json({ error: resolved.error, code: resolved.code }, 502) };
     const body = { intl_open_id: target.intlOpenId, nikke_area_id: resolved.areaId };
     const chars = await gameApi("Game", "GetUserCharacters", body);
+    if (chars.code !== 0)
+      return {
+        error: ROSTER_PRIVATE_CODES.has(chars.code) ? c.json({ error: "nikke list is private", reason: "private" }, 404) : c.json({ error: chars.msg ?? "upstream error", code: chars.code }, 502)
+      };
     const owned = chars.data?.characters ?? [];
     return { body, owned };
   }
@@ -22244,6 +22252,7 @@ async function createApp(storage) {
         ...res.body,
         name_codes: [ch2.name_code]
       });
+      if (details.code !== 0) throw new Error(details.msg ?? `detail error ${details.code}`);
       const detailByCode = new Map(
         (details.data?.character_details ?? []).map((x) => [x.name_code, x])
       );
@@ -22415,6 +22424,16 @@ var appPromise;
 var appBuiltAt = 0;
 var dataStamp = "";
 var stampOf = (host) => fetch(`${host}/characters.json`).then((r) => r.json()).then((j) => `${j.syncedAt}|${j.version}`).catch(() => null);
+var stampPromise;
+var dataVersionOf = (env) => {
+  if (dataStamp) return Promise.resolve(dataStamp);
+  const host = env.DIST_HOST ?? DATA_HOST;
+  return stampPromise ??= stampOf(host).then((s) => {
+    stampPromise = void 0;
+    if (s !== null) dataStamp = s;
+    return s;
+  });
+};
 var getApp = async (env, ctx) => {
   const host = env.DIST_HOST ?? DATA_HOST;
   const now = Date.now();
@@ -22434,12 +22453,9 @@ var getApp = async (env, ctx) => {
   }
   appBuiltAt = now;
   appPromise = createApp(httpStorage(host));
-  const learn = stampOf(host).then((stamp) => {
-    if (stamp !== null) dataStamp = stamp;
+  const learn = dataVersionOf(env).catch(() => {
   });
   if (ctx) ctx.waitUntil(learn);
-  else learn.catch(() => {
-  });
   return appPromise;
 };
 var json = (d, status = 200) => new Response(JSON.stringify(d), {
@@ -22641,7 +22657,10 @@ var index_default = {
         url2.searchParams.delete("fields");
         if (v) url2.searchParams.set("fields", v);
       }
-      key2 = new Request(url2.toString());
+      const dv = await dataVersionOf(env);
+      const keyUrl = new URL(url2);
+      if (dv) keyUrl.searchParams.set("__v", dv);
+      key2 = new Request(keyUrl.toString());
       if (!refresh) {
         const hit = await edgeCache.match(key2);
         if (hit) {
