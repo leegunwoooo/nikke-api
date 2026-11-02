@@ -3,6 +3,7 @@ import path from "node:path";
 import { cdnUrl } from "../src/cdn.js";
 import { compareEventScenes, eventIdOf } from "../src/events.js";
 import { readFavoriteStories } from "./favorite-stories.js";
+import { assertDistinctIds, dedupKeys, readLibraryStories, selectNewScripts } from "./library-stories.js";
 import type {
   Burst,
   Locale,
@@ -405,6 +406,9 @@ async function main() {
     level?: number;
     source?: string;
     sourceVideo?: string;
+    collection?: string;
+    libraryCategory?: string;
+    section?: string;
   }[] = [];
   const sceneCategory = (gid: string) =>
     gid.startsWith("d_main") ? "main"
@@ -518,6 +522,37 @@ async function main() {
     });
     addLines(scene.groupId, "favorite", lines);
   }
+
+  // --- stories from the pinned archive that the game data above doesn't have ---
+  const known = new Set<string>();
+  for (const bucket of lineIndex.values()) {
+    for (const scene of Object.values(bucket)) {
+      for (const k of dedupKeys(scene.l.map(([, text]) => ({ text })))) known.add(k);
+    }
+  }
+  const library = await readLibraryStories();
+  for (const w of library.warnings) console.log(`warn: library ${w}`);
+  const libraryScenes = selectNewScripts(library.scenes, known);
+  assertDistinctIds(libraryScenes);
+  const libraryIds = new Set(libraryScenes.map((s) => s.groupId));
+  for (const scene of libraryScenes) {
+    // a route into a scene dropped as a duplicate would be a dead link
+    const next = scene.next?.filter((n) => libraryIds.has(n.groupId));
+    const { next: _next, ...rest } = scene;
+    await writeFile(path.join(SCENES, `${scene.groupId}.json`), JSON.stringify({ ...rest, ...(next?.length ? { next } : {}) }));
+    sceneIndex.push({
+      groupId: scene.groupId,
+      name: scene.name,
+      lines: scene.lines.length,
+      category: "library",
+      type: "library",
+      collection: scene.collection,
+      libraryCategory: scene.libraryCategory,
+      ...(scene.section ? { section: scene.section } : {}),
+    });
+    addLines(scene.groupId, "library", scene.lines);
+  }
+  console.log(`library: ${libraryScenes.length}/${library.scenes.length} scenes are new`);
   await writeFile(path.join(OUT, "scenes.json"), JSON.stringify(sceneIndex));
   console.log(`scenes/: ${sceneIndex.length} dialogue files (ko)`);
 
