@@ -1065,6 +1065,16 @@ app.get("/api/costumes", async (c) => {
   });
 });
 
+// single-costume rows carry that costume's own voice set — voice lines
+// tagged costumeIndex == the costume's skinIndex, from the owner's detail
+// file. Costumes without unique lines get voices: [].
+const costumeWithVoices = async (tid: number, row: object) => {
+  const owner = costumeOwner.get(tid);
+  const detail = owner ? ((await getDetail(owner.nikke.id)) as { voices?: { costumeIndex?: number }[] } | null) : null;
+  const voices = (detail?.voices ?? []).filter((v) => v.costumeIndex === owner?.costume.skinIndex);
+  return { ...row, voices };
+};
+
 app.get("/api/costumes/:id", async (c) => {
   const id = c.req.param("id");
   const fields = fieldsOf(c);
@@ -1073,13 +1083,16 @@ app.get("/api/costumes/:id", async (c) => {
   if (/^\d+$/.test(id)) {
     const co = (await getCostumeMap())[id];
     if (!co) return c.json({ error: "not found" }, 404);
-    return c.json(pickFields(costumeRow(Number(id), co, scenes), fields));
+    return c.json(pickFields(await costumeWithVoices(Number(id), costumeRow(Number(id), co, scenes)), fields));
   }
   const nq = norm(id);
   const hits = Object.entries(await getCostumeMap())
     .map(([tid, co]) => costumeRow(Number(tid), co, scenes))
     .filter((x) => Object.values(x.name ?? {}).some((n) => norm(String(n)).includes(nq)));
-  if (hits.length === 1) return c.json(pickFields(hits[0], fields));
+  if (hits.length === 1) {
+    const row = hits[0] as { id: number };
+    return c.json(pickFields(await costumeWithVoices(row.id, row), fields));
+  }
   if (hits.length > 1) return c.json({ count: hits.length, costumes: pickFields(hits, fields) });
   return c.json({ error: "not found" }, 404);
 });

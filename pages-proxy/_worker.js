@@ -19609,6 +19609,7 @@ var NIKKE_DEFAULT_FIELDS = [
 var NIKKE_EXTRA = {
   statsPerLevel: "details.statsPerLevel",
   voices: "details.voices",
+  shot: "details.shot",
   teammateList: "details.teammateList",
   costumes: "costumes",
   images: "images"
@@ -19766,7 +19767,7 @@ function buildServer(api, version2, origin = "", boundBlablaid) {
       description: "Character detail: profile, skills (rendered at Lv10), backstory, squad, CV and affection (\uD638\uAC10\uB3C4) scene ids. Add more with include. If the name matches several characters, a {count, characters} list comes back instead \u2014 call again with one of their ids.",
       inputSchema: object({
         nameOrId: string2().min(1).describe("Character name (partial, any language), id or resourceId"),
-        include: array(_enum(Object.keys(NIKKE_EXTRA))).optional().describe("Extra sections added to the default: statsPerLevel (~30KB), voices (~80KB, voice lines), teammateList, costumes, images"),
+        include: array(_enum(Object.keys(NIKKE_EXTRA))).optional().describe("Extra sections added to the default: statsPerLevel (~30KB), voices (~80KB, voice lines incl. costumeIndex), shot (weapon mechanics \u2014 damage/charge/rate-of-fire/burst-gauge units), teammateList, costumes, images"),
         lang: LANG
       }),
       annotations: READ_ONLY
@@ -21784,6 +21785,12 @@ async function createApp(storage) {
       costumes: pickFields(list.slice(pg.off, pg.off + pg.lim), fieldsOf(c))
     });
   });
+  const costumeWithVoices = async (tid, row) => {
+    const owner = costumeOwner.get(tid);
+    const detail = owner ? await getDetail(owner.nikke.id) : null;
+    const voices = (detail?.voices ?? []).filter((v) => v.costumeIndex === owner?.costume.skinIndex);
+    return { ...row, voices };
+  };
   app.get("/api/costumes/:id", async (c) => {
     const id = c.req.param("id");
     const fields = fieldsOf(c);
@@ -21791,11 +21798,14 @@ async function createApp(storage) {
     if (/^\d+$/.test(id)) {
       const co = (await getCostumeMap())[id];
       if (!co) return c.json({ error: "not found" }, 404);
-      return c.json(pickFields(costumeRow(Number(id), co, scenes), fields));
+      return c.json(pickFields(await costumeWithVoices(Number(id), costumeRow(Number(id), co, scenes)), fields));
     }
     const nq = norm(id);
     const hits = Object.entries(await getCostumeMap()).map(([tid, co]) => costumeRow(Number(tid), co, scenes)).filter((x) => Object.values(x.name ?? {}).some((n) => norm(String(n)).includes(nq)));
-    if (hits.length === 1) return c.json(pickFields(hits[0], fields));
+    if (hits.length === 1) {
+      const row = hits[0];
+      return c.json(pickFields(await costumeWithVoices(row.id, row), fields));
+    }
     if (hits.length > 1) return c.json({ count: hits.length, costumes: pickFields(hits, fields) });
     return c.json({ error: "not found" }, 404);
   });

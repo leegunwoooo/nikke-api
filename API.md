@@ -709,6 +709,8 @@ GET /api/costumes?grade=Special&limit=20
 - 숫자: 코스튬 tid 조회
 - 그 외: 코스튬 이름 부분 일치 (전 언어, 대소문자·공백 무시) — 1건만 매칭되면 상세, 복수 매칭이면 `{count, costumes[]}` 목록
 
+단일 코스튬 응답에는 `voices` 필드가 붙습니다 — 그 코스튬을 입었을 때 나오는 **전용 대사+음성** (`details.voices`에서 `costumeIndex`가 이 코스튬의 `skinIndex`인 항목만). 각 항목은 `label`/`text` 4개 언어 + `voice` ko/en/ja mp3 URL. 코스튬 전용 대사가 없으면 `voices: []`입니다. 기본 외형 대사(`costumeIndex: 0`)는 `/api/nikkes/:id`의 `details.voices`에서 조회하세요.
+
 ```
 GET /api/costumes/10012
 GET /api/costumes/수영복
