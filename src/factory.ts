@@ -1404,6 +1404,7 @@ async function userProfile(c: Context) {
       gameApi("Game", "GetUserProfileOutpostInfo", body),
       loadProfileLookups(),
     ]);
+    if (basic.code !== 0) throw new Error(basic.msg ?? `profile error ${basic.code}`);
 
     const bi = (basic.data as any)?.basic_info ?? {};
     const op = (outpost.data as any)?.outpost_info ?? {};
@@ -1511,6 +1512,12 @@ async function loadOwnedNikkes(c: Context) {
     return { error: c.json({ error: resolved.error, code: resolved.code }, 502) };
   const body = { intl_open_id: target.intlOpenId, nikke_area_id: resolved.areaId };
   const chars = await gameApi("Game", "GetUserCharacters", body);
+  if (chars.code !== 0)
+    return {
+      error: ROSTER_PRIVATE_CODES.has(chars.code)
+        ? c.json({ error: "nikke list is private", reason: "private" }, 404)
+        : c.json({ error: chars.msg ?? "upstream error", code: chars.code }, 502),
+    };
   const owned = ((chars.data as any)?.characters ?? []) as any[];
   return { body, owned };
 }
@@ -1582,6 +1589,7 @@ async function userNikkeDetail(c: Context) {
       ...res.body,
       name_codes: [ch.name_code],
     });
+    if (details.code !== 0) throw new Error(details.msg ?? `detail error ${details.code}`);
     const detailByCode = new Map<number, any>(
       ((details.data as any)?.character_details ?? []).map((x: any) => [x.name_code, x]),
     );

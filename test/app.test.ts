@@ -460,6 +460,8 @@ function stubBlabla(opts: {
           : {},
       });
     }
+    if (url.includes("GetUserProfileBasicInfo"))
+      return Response.json({ code: 0, data: { basic_info: { nickname: "t", lv: 1, character_count: 1 } } });
     if (url.includes("GetUserProfileOutpostInfo"))
       return Response.json({ code: 0, data: { outpost_info: { synchro_level: 400 } } });
     return Response.json({ code: -1, msg: "unmocked" });
