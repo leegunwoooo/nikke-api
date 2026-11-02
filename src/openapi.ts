@@ -128,7 +128,7 @@ export const openapi = {
     license: { name: "Non-commercial fan project" },
     contact: { email: "leegunwoo0325@gmail.com" },
   },
-  servers: [{ url: "https://nikke-api-edge.leegunwoo0325-5e6.workers.dev" }],
+  servers: [{ url: "https://nikke-api.pages.dev" }],
   tags: [
     { name: "nikkes", description: "캐릭터 도감" },
     { name: "scenes", description: "스토리 씬 대본" },

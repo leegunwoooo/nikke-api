@@ -17,7 +17,7 @@
 
 BlablaLink(공식 위키 도구)의 CDN 데이터를 매일 동기화합니다. 데이터 변경이 감지될 때만 자동 재배포되어 항상 최신 상태를 유지합니다. 데이터 빌드는 GitHub Actions에서 수행하고 결과물을 [`data-latest`](https://github.com/leegunwoooo/nikke-api/releases/tag/data-latest) 릴리즈 artifact로 올리므로, Vercel 배포는 tarball 하나만 받으면 됩니다.
 
-**라이브 주소**: https://nikke-api-edge.leegunwoo0325-5e6.workers.dev
+**라이브 주소**: https://nikke-api.pages.dev
 **문서 사이트**: https://nikke-api-docs.pages.dev
 
 - **4개 언어** 지원: 한국어 `ko` / 영어 `en` / 일본어 `ja` / 중국어 번체 `zh-TW`
@@ -185,14 +185,14 @@ GET /api/favorites/200101?lang=ja
 `/mcp`는 MCP 서버입니다. ChatGPT, Claude, Cursor 같은 AI 클라이언트에 아래 URL을 넣으면 이 API를 도구로 쓸 수 있습니다. 인증은 필요 없습니다.
 
 ```
-https://nikke-api-edge.leegunwoo0325-5e6.workers.dev/mcp
+https://nikke-api.pages.dev/mcp
 ```
 
 클라이언트별 연결 방법, 도구 목록, 문제 해결은 [docs/mcp.md](docs/mcp.md)에 있습니다.
 
 ## API 문서
 
-- **인터랙티브 문서 (브라우저에서 바로 테스트) → [/docs](https://nikke-api-edge.leegunwoo0325-5e6.workers.dev/docs)**
+- **인터랙티브 문서 (브라우저에서 바로 테스트) → [/docs](https://nikke-api.pages.dev/docs)**
 - 요청/응답 형식 전체 문서 → [API.md](API.md)
 - Postman 컬렉션 → [nikke-api.postman_collection.json](nikke-api.postman_collection.json) (Import 후 `blablaid` 변수만 설정하면 `/api/user/*`도 바로 사용 가능)
 

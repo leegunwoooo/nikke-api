@@ -12,7 +12,7 @@ import path from "node:path";
 
 const ROOT = path.resolve(import.meta.dirname, "../..");
 const PUBLIC = path.resolve(import.meta.dirname, "../public");
-const OFFICIAL_API = "https://nikke-api-edge.leegunwoo0325-5e6.workers.dev";
+const OFFICIAL_API = "https://nikke-api.pages.dev";
 
 const apiBase = (process.env.VITE_API_BASE || OFFICIAL_API).replace(/\/$/, "");
 const siteUrl = (process.env.VITE_SITE_URL || "https://nikke-api-docs.pages.dev/").replace(/\/?$/, "/");

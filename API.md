@@ -1,6 +1,6 @@
 # API 문서
 
-베이스 URL: `https://nikke-api-edge.leegunwoo0325-5e6.workers.dev`
+베이스 URL: `https://nikke-api.pages.dev`
 
 모든 응답은 `application/json`. 캐릭터 이름은 4개 언어(`ko`, `en`, `ja`, `zh-TW`)로 제공되며, 검색은 모든 언어에 대해 부분 일치로 동작합니다.
 
@@ -1171,10 +1171,10 @@ GET /api/cdn?path=character/ko/nikke_list_v2.json
 `/mcp`는 [Model Context Protocol](https://modelcontextprotocol.io) 서버입니다. ChatGPT나 Claude에 연결하면 이 API를 도구처럼 쓸 수 있습니다. 세션을 저장하지 않는 Streamable HTTP 방식이라 인증 없이 URL만 넣으면 됩니다.
 
 ```
-https://nikke-api-edge.leegunwoo0325-5e6.workers.dev/mcp
+https://nikke-api.pages.dev/mcp
 ```
 
-- **Claude**: 커스텀 커넥터를 추가하면서 위 URL을 넣습니다. Claude Code는 `claude mcp add --transport http nikke https://nikke-api-edge.leegunwoo0325-5e6.workers.dev/mcp`로 추가합니다.
+- **Claude**: 커스텀 커넥터를 추가하면서 위 URL을 넣습니다. Claude Code는 `claude mcp add --transport http nikke https://nikke-api.pages.dev/mcp`로 추가합니다.
 - **ChatGPT**: 개발자 모드를 켠 뒤 커넥터를 추가하면서 위 URL을 넣고, 인증은 '없음'으로 둡니다.
 
 | 도구 | 감싸는 엔드포인트 |
