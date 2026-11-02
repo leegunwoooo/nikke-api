@@ -15,7 +15,9 @@
 
 승리의 여신: 니케(GODDESS OF VICTORY: NIKKE) 게임 데이터를 제공하는 REST API입니다.
 
-BlablaLink(공식 위키 도구)의 CDN 데이터를 매일 동기화합니다. 데이터 변경이 감지될 때만 자동 재배포되어 항상 최신 상태를 유지합니다. 데이터 빌드는 GitHub Actions에서 수행하고 결과물을 [`data-latest`](https://github.com/leegunwoooo/nikke-api/releases/tag/data-latest) 릴리즈 artifact로 올리므로, Vercel 배포는 tarball 하나만 받으면 됩니다.
+BlablaLink(공식 위키 도구)의 CDN 데이터를 매일 동기화합니다. 데이터 변경이 감지될 때만 자동 배포되어 항상 최신 상태를 유지합니다.
+
+전체가 Cloudflare 위에서 동작합니다 — Cloudflare Worker가 API를 직접 서빙하고, 데이터는 `nikke-api-data` Pages 프로젝트의 정적 파일로 읽습니다(빌드 산출물은 백업 겸 로컬 개발용으로 [`data-latest`](https://github.com/leegunwoooo/nikke-api/releases/tag/data-latest) 릴리즈 artifact로도 올립니다). GitHub Actions의 일일 리프레시는 sync+build 후 변경분을 Pages로 배포해 즉시 반영합니다.
 
 **라이브 주소**: https://nikke-api.pages.dev
 **문서 사이트**: https://nikke-api-docs.pages.dev

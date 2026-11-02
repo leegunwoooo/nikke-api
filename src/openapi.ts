@@ -1,13 +1,6 @@
 // OpenAPI 3.1 spec — served at /openapi.json, rendered by /docs (Scalar)
-import { readFileSync } from "node:fs";
-import path from "node:path";
-
-// package.json isn't guaranteed in the deployed bundle — the build bakes
-// the version into characters.json (which is shipped via includeFiles)
-const DIST = path.resolve(process.env.NIKKE_DATA_DIR ?? "data/dist");
-const pkgVersion: string = JSON.parse(
-  readFileSync(path.join(DIST, "characters.json"), "utf8"),
-).version ?? "0.0.0";
+// the version comes from the data bundle (characters.json version stamp)
+export function buildOpenapi(pkgVersion: string) {
 
 const localized = {
   type: "object",
@@ -117,7 +110,7 @@ const ownedNikkeDetail = {
   },
 };
 
-export const openapi = {
+const openapi = {
   openapi: "3.1.0",
   info: {
     title: "nikke-api",
@@ -673,4 +666,7 @@ for (const p of [
 ]) {
   const op = (openapi.paths as Record<string, any>)[p]?.get;
   if (op) (op.parameters ??= []).push(fieldsParam);
+}
+
+return openapi;
 }

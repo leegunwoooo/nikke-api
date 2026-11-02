@@ -1,7 +1,9 @@
 name = "nikke-api-edge"
 main = "index.ts"
 compatibility_date = "2026-10-30"
+compatibility_flags = ["nodejs_compat"]
 workers_dev = true
+
 
 [[analytics_engine_datasets]]
 binding = "ANALYTICS"

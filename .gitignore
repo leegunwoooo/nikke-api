@@ -23,3 +23,5 @@ site/public/llms-full.txt
 site/public/mcp.md
 site/public/api.md
 site/public/robots.txt
+.vercel
+.env*

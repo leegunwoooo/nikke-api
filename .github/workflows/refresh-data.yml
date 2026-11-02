@@ -65,9 +65,8 @@ jobs:
             echo "deploy=no" >> "$GITHUB_OUTPUT"; echo "reason=unchanged" >> "$GITHUB_OUTPUT"
           fi
 
-      # data/dist를 빌드해 data-latest 릴리즈에 올린다. Vercel 배포는
-      # scripts/fetch-dist.mjs가 이 artifact를 받아 쓰므로 CDN 재다운로드가 없다.
-      # 반드시 배포 훅보다 먼저 실행해야 새 데이터가 배포에 반영된다.
+      # data/dist를 빌드해 data-latest 릴리즈에 올린다. 로컬 개발과
+      # scripts/fetch-dist.mjs 폴백용 백업이고, 실제 서빙은 Pages 배포가 담당한다.
       - name: Build data dist
         if: steps.decide.outputs.deploy == 'yes'
         run: npm run sync && npm run build
@@ -82,11 +81,19 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Trigger Vercel deploy hook
+      # the API worker reads dist over HTTP from the nikke-api-data Pages
+      # project — refreshing data is just a static deploy, no backend rebuild
+      - name: Generate file manifest
         if: steps.decide.outputs.deploy == 'yes'
-        run: curl -fsS -X POST "$VERCEL_DEPLOY_HOOK_URL"
-        env:
-          VERCEL_DEPLOY_HOOK_URL: ${{ secrets.VERCEL_DEPLOY_HOOK_URL }}
+        run: node -e "const {writeFileSync,readdirSync,statSync}=require('fs');const{join}=require('path');const out=[];const walk=(d)=>{for(const f of readdirSync(d)){const p=join(d,f);statSync(p).isDirectory()?walk(p):out.push(p.replace(/\/g,'/').replace(/^data.dist./,''))}};walk('data/dist');writeFileSync('data/dist/_manifest.json',JSON.stringify(out.sort()))"
+
+      - name: Deploy dist to Cloudflare Pages
+        if: steps.decide.outputs.deploy == 'yes'
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy data/dist --project-name=nikke-api-data --branch=main --commit-dirty=true
 
       - name: Save new fingerprint
         if: steps.decide.outputs.deploy == 'yes'

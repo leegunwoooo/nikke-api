@@ -8,7 +8,9 @@
 // ANALYTICS records one point per request (path group + HIT/MISS/PASS) —
 // Vercel hobby keeps no request history, this is the traffic breakdown.
 
-const ORIGIN = "https://nikke-api-gunwoos-projects.vercel.app";
+import { createApp } from "../src/factory.js";
+import { httpStorage } from "../src/storage.js";
+
 const USER_TTL = 300;
 const USER_SWR = 86400;
 const AREA_KV_TTL = 30 * 86400;
@@ -19,12 +21,18 @@ const HDR_BLABLAID = "x-registered-blablaid"; // edge->origin: bound profile for
 
 interface Env {
   ADMIN_TOKEN?: string;
+  DIST_HOST?: string;
   ANALYTICS: {
     writeDataPoint(p: { blobs: string[]; doubles: number[]; indexes: string[] }): void;
   };
   RATE_LIMITER: { limit(opts: { key: string }): Promise<{ success: boolean }> };
   AREA_KV?: { get(k: string): Promise<string | null>; put(k: string, v: string, o?: object): Promise<void> };
 }
+
+// the whole API app runs here — built once per isolate, data reads go to R2
+let appPromise: Promise<ReturnType<typeof createApp>> | undefined;
+const DATA_HOST = "https://nikke-api-data.pages.dev";
+const getApp = (env: Env) => (appPromise ??= createApp(httpStorage(env.DIST_HOST ?? DATA_HOST)));
 
 const json = (d: unknown, status = 200) =>
   new Response(JSON.stringify(d), {
@@ -86,6 +94,7 @@ const adminToken = async (request: Request, env: Env) => {
 // the origin, then issue a personal connector key stored in KV
 const registerUser = async (request: Request, env: Env) => {
   if (!env.AREA_KV) return json({ error: "KV not configured" }, 500);
+  const app = await getApp(env);
   const body = (await request.json().catch(() => null)) as { url?: string; blablaid?: string } | null;
   const raw = body?.url ?? body?.blablaid;
   const openid = typeof raw === "string" ? intlOpenIdOf(raw) : null;
@@ -93,9 +102,11 @@ const registerUser = async (request: Request, env: Env) => {
   const denied = await throttled(env, request);
   if (denied) return denied;
   const creds = await env.AREA_KV.get(CREDS_KEY);
-  const probe = await fetch(`${ORIGIN}/api/user/${openid}?fields=intlOpenId`, {
-    headers: creds ? { [HDR_CREDS]: creds } : {},
-  });
+  const probe = await app.fetch(
+    new Request(`https://internal/api/user/${openid}?fields=intlOpenId`, {
+      headers: creds ? { [HDR_CREDS]: creds } : {},
+    }),
+  );
   if (!probe.ok) return json({ error: `profile lookup failed (${probe.status})` }, 502);
   const key = `u_${crypto.randomUUID().replaceAll("-", "").slice(0, 16)}`;
   await env.AREA_KV.put(`user:${key}`, JSON.stringify({ openid, created: new Date().toISOString() }));
@@ -194,7 +205,8 @@ export default {
       h.set(HDR_BLABLAID, openid);
       const creds = await env.AREA_KV?.get(CREDS_KEY);
       if (creds) h.set(HDR_CREDS, creds);
-      const res = await fetch(ORIGIN + url.pathname + url.search, new Request(request, { headers: h }));
+      const app = await getApp(env);
+      const res = await app.fetch(new Request(url.toString(), new Request(request, { headers: h })));
       track("PASS");
       return new Response(res.body, res);
     }
@@ -209,10 +221,11 @@ export default {
     const userPath = url.pathname.startsWith("/api/user");
     const target = userPath ? userTargetOf(url) : null;
 
+    const app = await getApp(env);
     if (request.method !== "GET" && request.method !== "HEAD") {
       const denied = await throttled(env, request);
       if (denied) return denied;
-      const res = await fetch(ORIGIN + url.pathname + url.search, request);
+      const res = await app.fetch(request);
       track("PASS");
       const out = new Response(res.body, res);
       out.headers.set("Cache-Control", "no-store");
@@ -227,7 +240,7 @@ export default {
       if (area) url.searchParams.set("area", area);
     }
     url.searchParams.sort(); // param order shouldn't split the cache
-    const key = new Request(ORIGIN + url.pathname + url.search);
+    const key = new Request(url.toString());
 
     if (!refresh) {
       const hit = await caches.default.match(key);
@@ -242,7 +255,7 @@ export default {
     if (denied) return denied;
     const oh = new Headers(h);
     oh.set("if-none-match", "");
-    const res = await fetch(key, { headers: oh });
+    const res = await app.fetch(new Request(url.toString(), { headers: oh, method: "GET" }));
     if (res.ok) {
       const stored = new Response(res.clone().body, res);
       // user responses arrive no-store — rewrite TTL for edge storage only;
