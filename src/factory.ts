@@ -1607,11 +1607,12 @@ async function userNikkeDetail(c: Context) {
 // the whole request (502) like the worker — silently dropping an area that
 // has characters would hide real data.
 const ROSTER_AREAS = [83, 81, 84, 82, 85]; // KR, JP, Global, NA, SEA
-const ROSTER_DETAIL_BATCH = 60; // upstream truncates larger name_codes lists
+const ROSTER_DETAIL_BATCH = 200; // upstream truncates larger name_codes lists
 
 // bounded parallelism — fully parallel sweeps (~30 calls at once) trip
-// blablalink's 212000 rate limit, but a pool of 2 stays well under it and
-// still halves the round-trips. post()'s backoff catches the rare burst.
+// blablalink's 212000 rate limit. Pool sizes keep worst-case concurrency
+// ~9 (5 area sweeps + 3 detail chunks + outpost), well under the limit;
+// post()'s backoff catches the rare burst anyway.
 const mapLimit = async <T, R>(items: T[], n: number, fn: (x: T) => Promise<R>): Promise<R[]> => {
   const out = new Array<R>(items.length);
   let i = 0;
@@ -1657,7 +1658,7 @@ async function collectRosterArea(openid: string, area: number): Promise<RosterAr
   const chunks: any[][] = [];
   for (let i = 0; i < codes.length; i += ROSTER_DETAIL_BATCH)
     chunks.push(codes.slice(i, i + ROSTER_DETAIL_BATCH));
-  const results = await mapLimit(chunks, 2, (name_codes) =>
+  const results = await mapLimit(chunks, 3, (name_codes) =>
     gameApi("Game", "GetUserCharacterDetails", { ...body, name_codes }),
   );
   const details: unknown[] = [];
@@ -1682,9 +1683,9 @@ async function userRoster(c: Context) {
   if (area !== null && (!Number.isInteger(area) || !ROSTER_AREAS.includes(area)))
     return c.json({ error: "unsupported area" }, 400);
   try {
-    // pool of 2 — full parallelism trips blablalink's 212000 rate limit
-    // on the shared credentials, sequential wastes ~25 round-trips
-    const results = await mapLimit(area === null ? ROSTER_AREAS : [area], 2, (a) =>
+    // all five areas at once — each is a single GetUserCharacters call for
+    // empty areas, so the sweep costs one round-trip instead of three
+    const results = await mapLimit(area === null ? ROSTER_AREAS : [area], 5, (a) =>
       collectRosterArea(target.intlOpenId, a),
     );
     const areas = results.filter((r): r is RosterArea => !("failedCode" in r));
