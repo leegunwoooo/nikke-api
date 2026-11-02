@@ -15,6 +15,13 @@ import { buildOpenapi } from "./openapi.js";
 import type { Nikke } from "./types.js";
 import type { Storage } from "./storage.js";
 
+// share one in-flight load across concurrent callers; failures evict
+// themselves so a transient error never becomes a permanent cache entry
+const memo = <T>(fn: () => Promise<T>) => {
+  let p: Promise<T> | undefined;
+  return () => (p ??= fn().catch((e) => ((p = undefined), Promise.reject(e))));
+};
+
 const norm = (s: string) => s.toLowerCase().replace(/[\s:_\-·]/g, "");
 const truthy = (v?: string) => v === "1" || v === "true";
 
@@ -89,18 +96,18 @@ const characters = characterData.characters;
 const byId = new Map(characters.map((c) => [c.id, c]));
 const byResourceId = new Map(characters.map((c) => [c.resourceId, c]));
 const families = buildFamilies(characters);
-const detailCache = new Map<number, unknown>();
+const detailCache = new Map<number, Promise<unknown>>();
 
 async function getDetail(id: number): Promise<unknown | null> {
-  if (detailCache.has(id)) return detailCache.get(id);
-  try {
-    const d = JSON.parse(await storage.readText(path.join("details", `${id}.json`)));
-    detailCache.set(id, d);
-    return d;
-  } catch {
-    detailCache.set(id, null);
-    return null;
+  let p = detailCache.get(id);
+  if (!p) {
+    p = storage
+      .readText(path.join("details", `${id}.json`))
+      .then((raw) => JSON.parse(raw) as unknown)
+      .catch(() => (detailCache.delete(id), null));
+    detailCache.set(id, p);
   }
+  return p;
 }
 
 async function withDetail(n: Nikke): Promise<unknown> {
@@ -179,13 +186,13 @@ async function loadDistJson<T>(file: string, fallback: T): Promise<T> {
   }
 }
 
-async function loadNameCodeMap() {
+const loadNameCodeMap = memo(async () => {
   nameCodeMap ??= await loadDistJson("name_code_map.json", {});
   avatarMap ??= await loadDistJson("avatar_map.json", {});
   return nameCodeMap;
-}
+});
 
-async function loadFavNames() {
+const loadFavNames = memo(async () => {
   if (!favNameMap) {
     favNameMap = new Map();
     try {
@@ -194,27 +201,27 @@ async function loadFavNames() {
     } catch { /* empty */ }
   }
   return favNameMap;
-}
+});
 
-async function loadCubeNames() {
+const loadCubeNames = memo(async () => {
   if (!cubeNameMap) {
     cubeNameMap = new Map();
     for (const cu of await getCubes()) cubeNameMap.set(cu.id, cu);
   }
   return cubeNameMap;
-}
+});
 
-async function loadEquipMaps() {
+const loadEquipMaps = memo(async () => {
   equipItemMap ??= await loadDistJson("equip_item_map.json", {});
   equipOptionMap ??= await loadDistJson("equip_option_map.json", {});
   return { equipItemMap, equipOptionMap };
-}
+});
 
 let costumeMapData: Record<string, any> | null = null;
-async function getCostumeMap(): Promise<Record<string, any>> {
+const getCostumeMap = memo(async () => {
   costumeMapData ??= await loadDistJson("costume_map.json", {});
   return costumeMapData;
-}
+});
 
 // Unique-grade costume side-stories ship as event_* scene groups named
 // after the costume; the scene index has no costume link, so this map is
@@ -249,12 +256,12 @@ const costumeRow = (tid: number, co: any, scenes: SceneIndexEntry[] = []) => {
 };
 
 let stageRows: any[] | null = null;
-async function getStages(): Promise<any[]> {
+const getStages = memo(async () => {
   if (!stageRows) {
     stageRows = await loadDistJson<any[]>(path.join("tables", "stage_list.json"), []);
   }
   return stageRows;
-}
+});
 
 // normalized shape served by /api/stages
 const stageRow = (s: any) => ({
@@ -273,7 +280,7 @@ async function getStageRows() {
   return stageRowsNorm;
 }
 
-async function loadStageMap() {
+const loadStageMap = memo(async () => {
   if (!stageMap) {
     stageMap = new Map();
     for (const s of await getStages()) {
@@ -285,9 +292,9 @@ async function loadStageMap() {
     }
   }
   return stageMap;
-}
+});
 
-async function loadRecycleMap() {
+const loadRecycleMap = memo(async () => {
   if (!recycleMap) {
     recycleMap = new Map();
     try {
@@ -299,7 +306,7 @@ async function loadRecycleMap() {
     } catch { /* empty */ }
   }
   return recycleMap;
-}
+});
 
 const CORP_NAMES: Record<number, string> = {
   1: "ELYSION",
@@ -564,8 +571,9 @@ app.get("/api/nikkes", (c) => {
 app.get("/api/nikkes/:id", async (c) => {
   const key = c.req.param("id");
   const fields = fieldsOf(c);
+  const needDetail = !fields || fields.some((f) => f === "details" || f.startsWith("details."));
   const one = async (n: Nikke) => {
-    const d = (await withDetail(n)) as object;
+    const d = needDetail ? ((await withDetail(n)) as object) : (n as object);
     return c.json(pickFields({ ...d, family: families.view(families.of(n)) }, fields));
   };
   if (/^\d+$/.test(key)) {
@@ -701,34 +709,52 @@ app.get("/api/scenes/:groupId", async (c) => {
   return c.body(body, 200, { "Content-Type": "application/json" });
 });
 
-// every scene's dialogue reduced to speaker + text, read once on first use —
-// line search and appearance lookups scan this instead of ~80MB of files
-interface ScriptLine { s: string; t: string }
+// every scene's dialogue reduced to speaker + text + pre-normalized forms
+// (ns/nt), read once on first use — line search scans these, and routes that
+// only need one scene's lines don't pay for the whole corpus
+interface ScriptLine { s: string; ns: string; t: string; nt: string }
+const scriptCache = new Map<string, Promise<ScriptLine[]>>();
+const getScript = (g: string): Promise<ScriptLine[]> => {
+  let p = scriptCache.get(g);
+  if (!p) {
+    p = storage
+      .readText(path.join("scenes", `${g}.json`))
+      .then((raw) =>
+        (JSON.parse(raw).lines ?? []).map((l: any) => ({
+          s: l.speakerName ?? l.speaker ?? "",
+          ns: norm(l.speakerName ?? l.speaker ?? ""),
+          t: l.text ?? "",
+          nt: searchNorm(l.text ?? ""),
+        })),
+      )
+      .catch((e) => (scriptCache.delete(g), Promise.reject(e)));
+    scriptCache.set(g, p);
+  }
+  return p;
+};
 let scriptsCache: Promise<Map<string, ScriptLine[]>> | undefined;
 const getScripts = () =>
   (scriptsCache ??= (async () => {
     const scripts = new Map<string, ScriptLine[]>();
     const ids = (await getScenes()).map((s) => s.groupId);
-    // batched so thousands of files never hit the open-file limit
+    // batched so thousands of files never hit the open-file limit; failed
+    // reads are skipped (not cached) so the next request retries them
     for (let i = 0; i < ids.length; i += 64) {
       await Promise.all(
-        ids.slice(i, i + 64).map(async (g) => {
-          try {
-            const d = JSON.parse(await storage.readText(path.join("scenes", `${g}.json`)));
-            scripts.set(g, (d.lines ?? []).map((l: any) => ({ s: l.speakerName ?? l.speaker ?? "", t: l.text ?? "" })));
-          } catch { /* scene listed without a file */ }
-        }),
+        ids.slice(i, i + 64).map((g) =>
+          getScript(g).then((l) => scripts.set(g, l)).catch(() => {}),
+        ),
       );
     }
     return scripts;
   })());
 
 // scene → story event, for labelling hits
-const eventOfScene = async () => {
+const eventOfScene = memo(async () => {
   const m = new Map<string, { id: string; title: string }>();
   for (const e of (await eventGroups()).values()) for (const g of e.scenes) m.set(g, { id: e.id, title: e.title });
   return m;
-};
+});
 
 const sceneLabel = (s: SceneIndexEntry | undefined, ev?: { id: string; title: string }) => ({
   name: s?.name ?? null,
@@ -746,16 +772,18 @@ app.get("/api/events/:id/script", async (c) => {
   if (!ev) return c.json({ error: "not found" }, 404);
   const pg = pageQuery(c, ev.scenes.length);
   if ("error" in pg) return c.json({ error: pg.error }, 400);
-  const [scripts, idx] = [await getScripts(), new Map((await getScenes()).map((s) => [s.groupId, s]))];
+  const ids = ev.scenes.slice(pg.off, pg.off + pg.lim);
+  const idx = new Map((await getScenes()).map((s) => [s.groupId, s]));
+  const scripts = await Promise.all(ids.map((g) => getScript(g).catch(() => [])));
   return c.json({
     id: ev.id,
     title: ev.title,
     count: ev.scenes.length,
     offset: pg.off,
-    episodes: ev.scenes.slice(pg.off, pg.off + pg.lim).map((g) => ({
+    episodes: ids.map((g, i) => ({
       groupId: g,
       name: idx.get(g)?.name ?? null,
-      lines: (scripts.get(g) ?? []).map((l) => (l.s && l.s !== "Narration" ? `${l.s}: ${l.t}` : l.t)),
+      lines: scripts[i].map((l) => (l.s && l.s !== "Narration" ? `${l.s}: ${l.t}` : l.t)),
     })),
   });
 });
@@ -765,27 +793,42 @@ app.get("/api/events/:id/script", async (c) => {
 app.get("/api/lines", async (c) => {
   const { q, speaker, category } = c.req.query();
   if (!q && !speaker) return c.json({ error: "q or speaker required" }, 400);
+  // cheap validation happens before any data loading — bad page/limit or a
+  // query that normalizes to nothing shouldn't read a single file
   const nq = q ? searchNorm(q) : "";
+  if (q && !nq && !speaker) return c.json({ error: "q or speaker required" }, 400);
+  const page = c.req.query("page"), limit = c.req.query("limit"), offset = c.req.query("offset");
+  for (const [k, v] of Object.entries({ page, limit, offset })) {
+    if (v !== undefined && v !== "" && (!Number.isInteger(Number(v)) || Number(v) < 0 || (k === "page" && Number(v) < 1))) {
+      return c.json({ error: `invalid ${k}` }, 400);
+    }
+  }
   const fam = speaker && truthy(c.req.query("family")) ? families.byName(speaker) : undefined;
   const speakers = fam ? new Set(families.names(fam).map(norm)) : undefined;
   const ns = speaker ? norm(speaker) : "";
   const idx = new Map((await getScenes()).map((s) => [s.groupId, s]));
   const evOf = await eventOfScene();
+  // count every match but only materialize hits inside the requested page
+  const pg0 = { page: page ? Number(page) : undefined, limit: limit ? Number(limit) : undefined, offset: offset ? Number(offset) : undefined };
   const hits: { groupId: string; line: number; speaker: string; text: string }[] = [];
+  let count = 0;
+  const lim = pg0.limit ? Math.min(pg0.limit, 500) : pg0.page ? 50 : Infinity;
+  const off = pg0.page ? (pg0.page - 1) * lim : (pg0.offset ?? 0);
   for (const [g, lines] of await getScripts()) {
     if (category && idx.get(g)?.category !== category) continue;
     lines.forEach((l, i) => {
-      if (speaker && !(speakers ? speakers.has(norm(l.s)) : norm(l.s) === ns)) return;
-      if (nq && !searchNorm(l.t).includes(nq)) return;
-      hits.push({ groupId: g, line: i, speaker: l.s, text: l.t });
+      if (speaker && !(speakers ? speakers.has(l.ns) : l.ns === ns)) return;
+      if (nq && !l.nt.includes(nq)) return;
+      if (count >= off && hits.length < lim) hits.push({ groupId: g, line: i, speaker: l.s, text: l.t });
+      count++;
     });
   }
-  const pg = pageQuery(c, hits.length);
+  const pg = pageQuery(c, count);
   if ("error" in pg) return c.json({ error: pg.error }, 400);
   return c.json({
-    count: hits.length,
+    count,
     offset: pg.off,
-    lines: hits.slice(pg.off, pg.off + pg.lim).map((h) => ({ ...h, scene: sceneLabel(idx.get(h.groupId), evOf.get(h.groupId)) })),
+    lines: hits.map((h) => ({ ...h, scene: sceneLabel(idx.get(h.groupId), evOf.get(h.groupId)) })),
   });
 });
 
@@ -1014,7 +1057,7 @@ let equipTables: {
   byId: Map<number, EquipTableRecord>;
   desc: Map<number, Record<string, string>>;
 } | null = null;
-async function loadEquipTables() {
+const loadEquipTables = memo(async () => {
   if (!equipTables) {
     const byId = new Map<number, EquipTableRecord>();
     const desc = new Map<number, Record<string, string>>();
@@ -1041,7 +1084,7 @@ async function loadEquipTables() {
     equipTables = { byId, desc };
   }
   return equipTables;
-}
+});
 
 // normalized rows served by /api/equips
 const equipRow = (tid: number, item: any, tbl?: Awaited<ReturnType<typeof loadEquipTables>>) => {
