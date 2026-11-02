@@ -638,6 +638,34 @@ export function buildServer(api: Fetcher, version: string, origin = "", boundBla
     }),
   );
 
+  server.registerTool(
+    "get_user_roster",
+    {
+      title: "Get a player's full roster (raw)",
+      description:
+        "Every character a player owns, upstream-shaped — characters + character_details + stateEffects + outpost per server area. For consumers that interpret raw fields (e.g. damage calculators). Sweeps all 5 server areas (~7 upstream calls, ~1.3s) — pass area to fetch one. Live and rate limited.",
+      inputSchema: z.object({
+        blablaid: BLABLAID.optional(),
+        area: z
+          .number()
+          .int()
+          .optional()
+          .describe("Server area: 83 KR · 81 JP · 84 Global · 82 NA · 85 SEA. Omit to sweep all five"),
+        fields: z
+          .string()
+          .optional()
+          .describe("Comma-separated dot paths kept in the response, e.g. 'areas.details'"),
+      }),
+      annotations: LIVE,
+    },
+    userTool("get_user_roster", (a: { blablaid?: string; area?: number; fields?: string }) => {
+      const blablaid = a.blablaid ?? boundBlablaid;
+      return blablaid
+        ? call(api, "get_user_roster", `/api/user/roster${qs({ blablaid, area: a.area, fields: a.fields })}`)
+        : needBlablaid();
+    }),
+  );
+
   // ChatGPT's connector/deep-research contract: search(query) -> results with
   // id/title/url, fetch(id) -> one document. Ids are "<kind>:<key>".
   server.registerTool(

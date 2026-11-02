@@ -44,8 +44,9 @@ test("mcp initialize + tools/list", async () => {
   for (const n of ["search_nikkes", "get_nikke", "get_scene", "list_events", "api_get", "get_user_nikkes"]) {
     assert.ok(names.includes(n), n);
   }
-  // the multi-server roster sweep is too heavy for a tool call
-  assert.ok(!names.includes("get_user_roster"));
+  // the roster sweep is bounded (~7 upstream calls) and edge-cached, so
+  // it's exposed as a live tool like the other get_user_* tools
+  assert.ok(names.includes("get_user_roster"));
   const search = tools.find((t: any) => t.name === "search_nikkes");
   assert.deepEqual(search.inputSchema.properties.element.enum, ["Fire", "Water", "Wind", "Electronic", "Iron"]);
 });
@@ -204,7 +205,7 @@ test("plain GET /mcp explains how to connect, with this server's URL", async () 
   assert.match(t, /MCP 서버 URL: https:\/\/api\.example\/mcp/);
   assert.match(t, /claude mcp add --transport http nikke https:\/\/api\.example\/mcp/);
   assert.match(t, /- search_nikkes: /); // tool list comes from the server itself
-  assert.ok(!t.includes("get_user_roster"));
+  assert.match(t, /- get_user_roster: /);
 });
 
 test("llms.txt indexes the MCP guide and API docs", async () => {
