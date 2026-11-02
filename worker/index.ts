@@ -46,6 +46,19 @@ const stampOf = (host: string) =>
     .then((r) => r.json() as Promise<{ syncedAt?: string; version?: string }>)
     .then((j) => `${j.syncedAt}|${j.version}`)
     .catch(() => null);
+// the stamp namespaces edge-cache keys — without it a cold isolate can serve
+// a pre-deploy cached body for up to the TTL. Learned once per isolate (shared
+// in-flight promise, failures retry next request); after that it's free.
+let stampPromise: Promise<string | null> | undefined;
+const dataVersionOf = (env: Env): Promise<string | null> => {
+  if (dataStamp) return Promise.resolve(dataStamp);
+  const host = env.DIST_HOST ?? DATA_HOST;
+  return (stampPromise ??= stampOf(host).then((s) => {
+    stampPromise = undefined;
+    if (s !== null) dataStamp = s;
+    return s;
+  }));
+};
 // revalidation runs in the background — requests never wait on the stamp
 // fetch, and a data refresh still reaches long-lived isolates within
 // REVALIDATE_MS + one request
@@ -71,11 +84,8 @@ const getApp = async (env: Env, ctx?: ExecutionContext): Promise<App> => {
   // revalidation has a baseline without a second request-path fetch
   appBuiltAt = now;
   appPromise = createApp(httpStorage(host));
-  const learn = stampOf(host).then((stamp) => {
-    if (stamp !== null) dataStamp = stamp;
-  });
+  const learn = dataVersionOf(env).catch(() => {});
   if (ctx) ctx.waitUntil(learn);
-  else learn.catch(() => {});
   return appPromise;
 };
 
@@ -345,7 +355,12 @@ export default {
         url.searchParams.delete("fields");
         if (v) url.searchParams.set("fields", v);
       }
-      key = new Request(url.toString());
+      // version-scope the cache key — a data deploy must not let this isolate
+      // keep serving pre-deploy bodies for the rest of their TTL
+      const dv = await dataVersionOf(env);
+      const keyUrl = new URL(url);
+      if (dv) keyUrl.searchParams.set("__v", dv);
+      key = new Request(keyUrl.toString());
       if (!refresh) {
         const hit = await edgeCache.match(key);
         if (hit) {
