@@ -139,6 +139,13 @@ export interface RawRoleData {
     speech_id?: string;
     speech_localkey?: string;
   }[];
+  // voice group -> costume binding (costume_index 0 = base appearance)
+  dialog_group_list?: {
+    id: number;
+    voice_type?: string;
+    resource_id?: number;
+    costume_index?: number;
+  }[];
   shot_detail?: RawShotDetail;
   character_level_attack_list?: number[];
   character_level_defence_list?: number[];
@@ -267,6 +274,8 @@ export interface NikkeDetail {
   /** character voice lines; audio in ko/en/ja (zh-TW has no dub) */
   voices?: {
     id: number;
+    /** 0 = base appearance; >0 = costume-specific lines (costumes[].skinIndex) */
+    costumeIndex?: number;
     categoryGroup?: number;
     order?: number;
     isTeaser?: boolean;

@@ -198,6 +198,7 @@ GET /api/nikkes?limit=20&offset=40
     "voices": [
       {
         "id": 120001,
+        "costumeIndex": 0,
         "categoryGroup": 1,
         "order": 101,
         "isTeaser": true,
@@ -256,7 +257,7 @@ GET /api/nikkes/101801?fields=details.attractiveScenarios
 
 ### `voices[]` 필드
 
-캐릭터 대사/보이스 목록 (로비 터치, 전투 진입·승리, 호감도 구간 대사 등). `label`은 대사 종류(언어별), `text`는 대사 텍스트(언어별), `voice`는 ko/en/ja 음성 mp3 URL (zh-TW 보이스는 존재하지 않음). `conditionAttractiveLevel`은 대사 해금에 필요한 호감도 레벨.
+캐릭터 대사/보이스 목록 (로비 터치, 전투 진입·승리, 호감도 구간 대사 등). `label`은 대사 종류(언어별), `text`는 대사 텍스트(언어별), `voice`는 ko/en/ja 음성 mp3 URL (zh-TW 보이스는 존재하지 않음). `conditionAttractiveLevel`은 대사 해금에 필요한 호감도 레벨. `costumeIndex`는 대사가 속한 코스튬 (`0`=기본 외형, `1`이상은 `costumes[].skinIndex`와 대응 — 코스튬별 별도 대사가 있는 캐릭터가 66명 있습니다).
 
 ### `shot` 필드
 

@@ -930,7 +930,14 @@ async function buildDetail(resourceId: number): Promise<NikkeDetail | null> {
     mergeSkill("burst", roles, (r) => r.ulti_skill_detail),
   ].filter((s): s is Skill => s !== null);
 
-  // character voice lines — audio exists for ko/en/ja only
+  // character voice lines — audio exists for ko/en/ja only. Speech groups
+  // are bound to costumes via dialog_group_list (0 = base appearance).
+  const groupCostume = new Map<number, number>();
+  for (const r of roles) {
+    for (const g of r?.dialog_group_list ?? []) {
+      if (g.id != null) groupCostume.set(g.id, g.costume_index ?? 0);
+    }
+  }
   const voiceById = new Map<number, NonNullable<NikkeDetail["voices"]>[number]>();
   roles.forEach((r, i) => {
     if (!r) return;
@@ -940,6 +947,7 @@ async function buildDetail(resourceId: number): Promise<NikkeDetail | null> {
       if (!e) {
         e = {
           id: v.id,
+          costumeIndex: v.speech_group_id != null ? groupCostume.get(v.speech_group_id) : undefined,
           categoryGroup: v.category_group,
           order: v.order,
           isTeaser: v.is_teaser,
