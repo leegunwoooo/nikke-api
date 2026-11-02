@@ -20,7 +20,7 @@ if (!process.env.NIKKE_DATA_DIR) {
 }
 console.log(`data dir: ${process.env.NIKKE_DATA_DIR}`);
 
-const { openapi } = await import(pathToFileURL(path.join(ROOT, "src/openapi.ts")).href);
+const { buildOpenapi } = await import(pathToFileURL(path.join(ROOT, "src/openapi.ts")).href);
 const { default: app } = await import(pathToFileURL(path.join(ROOT, "src/app.ts")).href);
 
 // endpoints that need credentials / upstream calls / raw CDN passthrough —
@@ -78,7 +78,10 @@ const trim = (v: any): any => {
   return v;
 };
 
-const spec: any = JSON.parse(JSON.stringify(openapi));
+const charData = JSON.parse(
+  await import("node:fs/promises").then((m) => m.readFile(path.join(process.env.NIKKE_DATA_DIR!, "characters.json"), "utf8")).catch(() => "{}"),
+);
+const spec: any = JSON.parse(JSON.stringify(buildOpenapi(charData.version ?? "0.0.0")));
 if (process.env.VITE_API_BASE) {
   spec.servers = [{ url: process.env.VITE_API_BASE.replace(/\/$/, "") }];
 }
