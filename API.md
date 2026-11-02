@@ -195,6 +195,7 @@ GET /api/nikkes?limit=20&offset=40
         "title": { "ko": "다시 아우터림으로", "...": "..." },
         "costumeTid": null, "rewardId": 50 }
     ],
+    "favoriteStory": { "sceneGroupId": "d_favorite_sugar", "name": "파트너", "sourceVideo": "https://youtu.be/cQoTpjl3XjI" },
     "voices": [
       {
         "id": 120001,
@@ -254,6 +255,10 @@ GET /api/nikkes?limit=20&offset=40
 GET /api/nikkes/101801?fields=details.attractiveScenarios
 → sceneGroupId로 GET /api/scenes/d_nikke_neon_visioneye_01 → 대사
 ```
+
+### `favoriteStory` 필드
+
+애장품 스토리가 있는 니케(21명)에만 있습니다. `sceneGroupId`로 `/api/scenes/:groupId`에서 대본을 읽습니다. 이름이 정확히 같은 니케에만 연결되어, 이격 버전에는 붙지 않습니다.
 
 ### `voices[]` 필드
 
@@ -331,15 +336,15 @@ GET /api/tables/CharacterLevelTable.json
 
 ## GET /api/scenes
 
-스토리 씬 목록을 반환합니다 (한국어). 메인/이벤트/돌발 스토리 + **호감도(Attractive) 시나리오** 포함 — 약 3000개 그룹.
+스토리 씬 목록을 반환합니다 (한국어). 메인/이벤트/돌발 스토리 + **호감도(Attractive) 시나리오** + **애장품 스토리 21편** 포함 — 약 3000개 그룹.
 
 ### 쿼리 파라미터
 
 | 파라미터 | 설명 | 예시 |
 |----------|------|------|
 | `q` | 그룹 ID·씬 이름 부분 일치 | `?q=발신자` |
-| `category` | 카테고리 필터 | `main` / `event` / `sudden` / `attractive` |
-| `nikke` | 호감도 씬 대상 니케 이름 부분 일치 | `?nikke=아니스` |
+| `category` | 카테고리 필터 | `main` / `event` / `sudden` / `attractive` / `favorite` |
+| `nikke` | 호감도·애장품 씬 대상 니케 이름 부분 일치 | `?nikke=아니스` |
 | `family` | `1`이면 `nikke`를 그 캐릭터의 모든 버전(원본·이격) 이름과 정확히 매칭 | `?nikke=라피 : 레드 후드&family=1` |
 | `limit` | 반환 개수 제한 (최대 500) | `?limit=50` |
 | `page` | 페이지 번호 (1부터, `offset` 대신 사용 — page와 offset 동시 지정 시 page 우선) | `?page=2` |
@@ -371,13 +376,14 @@ GET /api/scenes?category=main&limit=20&offset=0
 
 | 필드 | 설명 |
 |------|------|
-| `groupId` | 시나리오 그룹 ID (`d_main_*` 메인, `event_*` 이벤트, `d_ex_*` 돌발, `d_nikke_*` 호감도) |
+| `groupId` | 시나리오 그룹 ID (`d_main_*` 메인, `event_*` 이벤트, `d_ex_*` 돌발, `d_nikke_*` 호감도, `d_favorite_*` 애장품) |
 | `name` | 씬 이름 (한국어) |
 | `lines` | 대사 수 |
-| `category` | `main` / `event` / `sudden` / `attractive` / `etc` |
-| `type` | `"attractive"`이면 호감도 시나리오 (일반 스토리는 없음) |
-| `nikke` | 호감도 시나리오 대상 니케 (호감도만) |
+| `category` | `main` / `event` / `sudden` / `attractive` / `favorite` / `etc` |
+| `type` | `"attractive"`이면 호감도 시나리오, `"favorite"`이면 애장품 스토리 (일반 스토리는 없음) |
+| `nikke` | 대상 니케 (호감도·애장품만) |
 | `level` | 필요 호감도 레벨 (호감도만) |
+| `sourceVideo` | 대본을 옮긴 원본 영상 주소 (애장품만) |
 
 ## GET /api/scenes/:groupId
 
@@ -420,6 +426,8 @@ GET /api/scenes/d_main_01_01_s?fields=name,lines
 호감도 씬(`groupId`가 `d_nikke_*`)은 상단에 `type: "attractive"`, `nikke`, `attractiveLevel` 필드가 추가로 붙습니다.
 
 캐릭터별 호감도 씬은 `/api/nikkes/:id` 상세의 `details.attractiveScenarios[].sceneGroupId`로 연결됩니다. 스킨 캐릭터(예: `아니스 : 스타`)는 자기 전용 그룹(`d_nikke_anis_star_*`)을 가지며, `?nikke=` 필터는 부분 일치라 `아니스`로 검색하면 모든 스킨 버전이 함께 나옵니다.
+
+애장품 스토리(`d_favorite_*`, `GET /api/scenes/d_favorite_sugar`)는 게임 데이터에 없어 공개 영상 화면을 OCR로 옮긴 대본입니다. 오탈자가 있을 수 있고, 상단에 `type: "favorite"`, `nikke`, `sourceVideo`가 붙습니다. `window`는 `Speech`·`Self`·`Narration`·`Choice`뿐이고, 고른 선택지에만 `chosen: true`가 있으며 그 뒤 대사는 고른 분기만 있습니다. 자세한 내용은 [`content/favorite-stories/README.md`](content/favorite-stories/README.md)에 있습니다.
 
 ## GET /api/events
 
@@ -499,14 +507,14 @@ GET /api/events/event_BunnyX777/script?limit=1
 
 ## GET /api/lines
 
-모든 씬(메인·이벤트·돌발·호감도)의 대사를 검색합니다. `q`와 `speaker` 중 하나는 필요합니다. 처음 호출할 때 대본 전체를 한 번 읽어 메모리에 올립니다.
+모든 씬(메인·이벤트·돌발·호감도·애장품)의 대사를 검색합니다. `q`와 `speaker` 중 하나는 필요합니다. 처음 호출할 때 대본 전체를 한 번 읽어 메모리에 올립니다.
 
 | 파라미터 | 설명 | 예시 |
 |----------|------|------|
 | `q` | 대사 본문 부분 일치 (문장부호·공백 무시) | `?q=방주의 영웅` |
 | `speaker` | 화자 이름 정확히 일치 (한국어) | `?speaker=라피` |
 | `family` | `1`이면 `speaker`를 그 캐릭터의 모든 버전 이름으로 확장 | `?speaker=라피 : 레드 후드&family=1` |
-| `category` | 씬 카테고리 | `main` / `event` / `sudden` / `attractive` |
+| `category` | 씬 카테고리 | `main` / `event` / `sudden` / `attractive` / `favorite` |
 | `limit` / `page` / `offset` | 페이지네이션 | `?limit=20` |
 
 ```json
@@ -556,6 +564,7 @@ GET /api/events/event_BunnyX777/script?limit=1
 - 항목 하나가 여러 이벤트 id를 묶을 수 있습니다 (예: `OVER ZONE` → `event_overzone1`, `event_overzone2`).
 - `inData: false`인 항목은 이 API에 대본이 없습니다 (사이드 스토리, 아카이브에 없는 최신 이벤트).
 - `unplaced`는 가이드가 배치하지 않은 이벤트(주로 시즌 이벤트)입니다.
+- 애장품 스토리(`kind: "favorite"`, `firstScene`이 대본)는 가이드에 없어 모든 챕터 뒤에 선택 항목으로 붙습니다. 줄거리상 위치를 뜻하지 않습니다.
 
 ```json
 {

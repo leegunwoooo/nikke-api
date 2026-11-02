@@ -144,8 +144,8 @@ curl -X POST https://nikke-api.pages.dev/mcp \
 | 도구 | 하는 일 |
 |------|---------|
 | `search_nikkes` | 캐릭터 검색 (이름·속성·클래스·버스트·기업·무기·레어) |
-| `get_nikke` | 캐릭터 상세: 스킬(Lv10 기준), 배경, 스쿼드, CV, 호감도 씬. 레벨별 스탯·음성·코스튬 등은 `include`로 추가 (예: `["statsPerLevel"]`). 이름이 여러 캐릭터에 맞으면 후보 목록이 옵니다 |
-| `search_scenes` / `get_scene` | 스토리 씬 검색 / 대본 읽기 (한국어, 기본은 화자·대사만 — 음성·아이콘 URL은 `includeMedia`) |
+| `get_nikke` | 캐릭터 상세: 스킬(Lv10 기준), 배경, 스쿼드, CV, 호감도 씬, 애장품 스토리. 레벨별 스탯·음성·코스튬 등은 `include`로 추가 (예: `["statsPerLevel"]`). 이름이 여러 캐릭터에 맞으면 후보 목록이 옵니다 |
+| `search_scenes` / `get_scene` | 스토리 씬 검색 / 대본 읽기 (한국어, 호감도·애장품 스토리 포함. 기본은 화자·대사만, 선택지에는 `window`와 `chosen` 표시 — 음성·아이콘 URL은 `includeMedia`) |
 | `list_events` / `get_event` | 스토리 이벤트 목록 / 에피소드 씬 목록 |
 | `search_favorites` / `get_favorite` | 소장품 목록 / 레벨별 스탯·스킬 |
 | `get_user_profile` | 유저 프로필 (BlablaLink 공유 링크로 조회) |
@@ -157,7 +157,7 @@ curl -X POST https://nikke-api.pages.dev/mcp \
 | `search_lines` | 대사 본문·화자로 전체 스토리 검색. 결과마다 씬·이벤트 표시 |
 | `nikke_appearances` | 캐릭터가 나오는 씬과 이벤트를 대사 수 순으로 |
 | `compare_nikkes` | 2–4명의 프로필·스킬을 한 번에 (이름이 정확히 맞는 캐릭터 우선) |
-| `story_route` / `next_story` | 스토리 감상 순서 (커뮤니티 가이드 기준, 50챕터까지) / 지금 진행 위치에서 다음에 볼 스토리 |
+| `story_route` / `next_story` | 스토리 감상 순서 (커뮤니티 가이드 기준, 50챕터까지. 가이드에 없는 애장품 스토리는 맨 끝) / 지금 진행 위치에서 다음에 볼 스토리 |
 
 - 모든 도구는 기본으로 한국어(`lang=ko`)로 응답합니다. 다른 언어는 `lang`에 `en`·`ja`·`zh-TW`를 넣습니다.
 - 리소스도 제공합니다: `nikke://filters`(필터 값 전체), `nikke://nikke/{id}`(캐릭터 상세, id 자동완성 지원). Claude에서 컨텍스트로 첨부할 때 씁니다.

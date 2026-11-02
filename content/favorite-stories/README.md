@@ -1,9 +1,8 @@
 # 애장품 스토리 대본
 
-니케 21명의 애장품 스토리 대본입니다. `/api/scenes/:groupId` 응답과 같은 모양의 JSON이며, 아직 API로 제공하지는 않습니다.
+니케 21명의 애장품 스토리 대본입니다. `/api/scenes/:groupId` 응답과 같은 모양의 JSON이고, 빌드할 때 데이터에 합쳐져 API(`/api/scenes?category=favorite`)와 MCP로 제공됩니다.
 
-- `index.json`: 전체 목록
-- `d_favorite_<화자 코드>.json`: 편별 대본
+`d_favorite_<화자 코드>.json` 파일 하나가 한 편입니다. 폴더에 파일을 넣으면 빌드에 포함됩니다.
 
 ## 출처와 저작권
 
@@ -23,7 +22,6 @@
 | `lines[].window` | `Speech`, `Self`(지휘관 대사), `Narration`, `Choice` |
 | `lines[].speaker` | 화자 코드. 호감도 씬으로 확인한 화자만 있음 |
 | `lines[].speakerName` | 화자 이름. 지휘관 대사와 지문에는 없음 |
-| `lines[].speakerIcon` | 화자 아이콘 URL. 코드를 확인한 화자만 있음 |
 | `lines[].voice` | 항상 `null` |
 | `lines[].chosen` | 영상에서 고른 선택지에만 `true` (API에 없는 추가 필드) |
 
@@ -38,3 +36,7 @@
 - OCR 기반이라 오탈자가 있을 수 있습니다. 선택지는 영상 프레임으로 확인했지만, 나머지 대사는 전부 대조하지 않았습니다.
 - 지휘관 이름은 API 대본과 같이 `@UserName`으로 표기합니다.
 - 오류를 발견하면 이슈로 알려주세요.
+
+## 수정 방법
+
+이 폴더의 JSON이 원본이니 직접 고칩니다. `speakerIcon`은 빌드할 때 화자 코드로 만들어 붙이므로 적지 않습니다. `nikke`는 `/api/nikkes`의 한국어 이름과 정확히 같아야 하며, 다르면 빌드가 실패합니다.

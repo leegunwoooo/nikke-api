@@ -1,5 +1,6 @@
 import { createMcpHandler, McpServer, ResourceTemplate } from "@modelcontextprotocol/server";
 import * as z from "zod/v4";
+import { SCENE_CATEGORIES } from "./scene-categories.js";
 
 // MCP (Model Context Protocol) face of the REST API, served at /mcp so
 // ChatGPT/Claude connectors can use the data as tools. Every tool is a thin
@@ -15,7 +16,7 @@ const MAX_CHARS = 60_000;
 
 const INSTRUCTIONS = `Unofficial NIKKE (GODDESS OF VICTORY: NIKKE) game data. Data © SHIFT UP / Level Infinite.
 - Character names exist in ko/en/ja/zh-TW and searches match any of them; responses default to Korean (lang=ko).
-- Story scene scripts are Korean only.
+- Story scene scripts are Korean only. Favorite-item (애장품, category "favorite") scripts are transcribed from videos, not game data: they may have typos and follow only the choice taken in the video (chosen: true).
 - Alternate versions (이격, e.g. "라피 : 레드 후드") are linked to their original: name searches and character story lookups cover every version unless a tool says otherwise.
 - Filters take English enum values; Korean terms map as noted in each parameter (e.g. 철갑 = Iron).
 - Lists are paged with limit/offset. Oversized responses come back with a "truncated" object telling you how to fetch the rest.
@@ -63,7 +64,7 @@ const FILTERS = {
 const NIKKE_DEFAULT_FIELDS = [
   "id", "resourceId", "name", "rarity", "class", "burst", "corporation", "element", "weapon",
   "details.skills", "details.backstory", "details.squad", "details.cv", "details.combat",
-  "details.attractiveScenarios", "family",
+  "details.attractiveScenarios", "details.favoriteStory", "family",
 ];
 const NIKKE_EXTRA = {
   statsPerLevel: "details.statsPerLevel",
@@ -195,7 +196,15 @@ async function call(api: Fetcher, tool: string, path: string, shape?: (data: any
 const shapeScene = (includeMedia: boolean) => (d: any) =>
   includeMedia || !Array.isArray(d?.lines)
     ? d
-    : { ...d, lines: d.lines.map((l: any) => ({ speaker: l.speakerName ?? l.speaker, text: l.text })) };
+    : {
+        ...d,
+        lines: d.lines.map((l: any) => ({
+          speaker: l.speakerName ?? l.speaker,
+          text: l.text,
+          ...(l.window === "Choice" ? { window: l.window } : {}),
+          ...(l.chosen ? { chosen: true } : {}),
+        })),
+      };
 
 // a plain glyph — the game's own art is not ours to use as a brand mark
 const ICON = `data:image/svg+xml;base64,${Buffer.from(
@@ -272,7 +281,7 @@ export function buildServer(api: Fetcher, version: string, origin = "", boundBla
     {
       title: "Get NIKKE character detail",
       description:
-        "Character detail: profile, skills (rendered at Lv10), backstory, squad, CV and affection (호감도) scene ids. Add more with include. If the name matches several characters, a {count, characters} list comes back instead — call again with one of their ids.",
+        "Character detail: profile, skills (rendered at Lv10), backstory, squad, CV, affection (호감도) scene ids and the favorite-item (애장품) story scene id. Add more with include. If the name matches several characters, a {count, characters} list comes back instead — call again with one of their ids.",
       inputSchema: z.object({
         nameOrId: z.string().min(1).describe("Character name (partial, any language), id or resourceId"),
         include: z
@@ -294,11 +303,11 @@ export function buildServer(api: Fetcher, version: string, origin = "", boundBla
     {
       title: "Search story scenes",
       description:
-        "List story scene scripts (Korean): main story, events, sudden (돌발) and affection scenes. Use get_scene to read the dialogue.",
+        "List story scene scripts (Korean): main story, events, sudden (돌발), affection and favorite-item (애장품) scenes. Use get_scene to read the dialogue.",
       inputSchema: z.object({
         q: z.string().optional().describe("Scene name or groupId substring"),
-        category: z.enum(["main", "event", "sudden", "attractive"]).optional(),
-        nikke: z.string().optional().describe("Affection scenes of this character (name or id)"),
+        category: z.enum(SCENE_CATEGORIES).optional(),
+        nikke: z.string().optional().describe("Affection and favorite-item scenes of this character (name or id)"),
         family: FAMILY,
         limit: LIMIT,
         offset: OFFSET,
@@ -417,12 +426,12 @@ export function buildServer(api: Fetcher, version: string, origin = "", boundBla
     {
       title: "Search story dialogue",
       description:
-        "Full-text search over every story line (main, events, sudden, affection — Korean). Find who said something, where a phrase or topic comes up, or all lines of one speaker. Each hit names its scene and event; read around it with get_scene.",
+        "Full-text search over every story line (main, events, sudden, affection, favorite items — Korean). Find who said something, where a phrase or topic comes up, or all lines of one speaker. Each hit names its scene and event; read around it with get_scene.",
       inputSchema: z.object({
         q: z.string().optional().describe("Text to find in the dialogue (Korean), punctuation ignored"),
         speaker: z.string().optional().describe("Only lines spoken by this character (Korean name, e.g. 라피)"),
         family: FAMILY,
-        category: z.enum(["main", "event", "sudden", "attractive"]).optional(),
+        category: z.enum(SCENE_CATEGORIES).optional(),
         limit: LIMIT,
         offset: OFFSET,
       }),
@@ -446,7 +455,7 @@ export function buildServer(api: Fetcher, version: string, origin = "", boundBla
         "Every story scene a character speaks in (all of their versions), with line counts, plus the story events they appear in ranked by how much they talk. Answers 'which events feature X' or 'where does X show up'.",
       inputSchema: z.object({
         nameOrId: z.string().min(1).describe("Character name (any language) or id"),
-        category: z.enum(["main", "event", "sudden", "attractive"]).optional(),
+        category: z.enum(SCENE_CATEGORIES).optional(),
         limit: LIMIT,
         offset: OFFSET,
       }),
@@ -506,7 +515,7 @@ export function buildServer(api: Fetcher, version: string, origin = "", boundBla
     {
       title: "Story reading order",
       description:
-        "The recommended order to read NIKKE's story (up to Chapter 50), from the community guide linked on the Arca Live NIKKE channel: main chapters (game numbering, 0-based) with events, side stories and affection stories slotted in, each marked required or optional (with importance) and with notes, including where other guides disagree. 'unplaced' lists events the guide doesn't position (mostly seasonal). Entries with inData=false have no script here. Credit the guide (sources.S) when presenting it.",
+        "The recommended order to read NIKKE's story (up to Chapter 50), from the community guide linked on the Arca Live NIKKE channel: main chapters (game numbering, 0-based) with events, side stories and affection stories slotted in, each marked required or optional (with importance) and with notes, including where other guides disagree. 'unplaced' lists events the guide doesn't position (mostly seasonal). Favorite-item stories (kind 'favorite') aren't in the guide: they sit optional at the very end, and that position says nothing about where they fall in the plot. Entries with inData=false have no script here. Credit the guide (sources.S) when presenting it.",
       inputSchema: z.object({}),
       annotations: READ_ONLY,
     },

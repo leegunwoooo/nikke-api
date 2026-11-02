@@ -2,6 +2,7 @@ import { mkdir, readFile, writeFile, copyFile, readdir } from "node:fs/promises"
 import path from "node:path";
 import { cdnUrl } from "../src/cdn.js";
 import { compareEventScenes, eventIdOf } from "../src/events.js";
+import { readFavoriteStories } from "./favorite-stories.js";
 import type {
   Burst,
   Locale,
@@ -211,9 +212,17 @@ async function main() {
   const DETAILS = path.join(OUT, "details");
   await mkdir(DETAILS, { recursive: true });
   let detailCount = 0;
+  const favoriteStories = await readFavoriteStories();
+  const favoriteStoryOf = new Map(favoriteStories.map((s) => [s.nikke, s]));
+  let linkedFavorites = 0;
   for (const n of characters) {
     const detail = await buildDetail(n.resourceId);
     if (detail) {
+      const fav = favoriteStoryOf.get(n.name.ko ?? "");
+      if (fav) {
+        detail.favoriteStory = { sceneGroupId: fav.groupId, name: fav.name, sourceVideo: fav.sourceVideo };
+        linkedFavorites++;
+      }
       // raw teammate entries -> character refs
       if (Array.isArray(detail.teammateList)) {
         detail.teammateList = (detail.teammateList as any[]).map((t) => ({
@@ -231,6 +240,12 @@ async function main() {
     }
   }
   console.log(`details/: ${detailCount} character detail files`);
+  // a renamed character would otherwise silently lose its story link
+  if (linkedFavorites !== favoriteStories.length) {
+    const names = new Set(characters.map((n) => n.name.ko));
+    const missing = favoriteStories.filter((s) => !names.has(s.nikke)).map((s) => s.nikke);
+    throw new Error(`favorite stories without a character: ${missing.join(", ")}`);
+  }
 
   // --- name_code / avatar-id → character maps (for shared-profile lookups) ---
   const idMap: { name_code: number; id: number; resource_id: number }[] = JSON.parse(
@@ -389,6 +404,7 @@ async function main() {
     nikke?: string;
     level?: number;
     source?: string;
+    sourceVideo?: string;
   }[] = [];
   const sceneCategory = (gid: string) =>
     gid.startsWith("d_main") ? "main"
@@ -485,6 +501,22 @@ async function main() {
       level: meta?.level,
     });
     addLines(gid, "attractive", lines);
+  }
+
+  // --- 애장품 scripts kept in the repo (not in the game data) ---
+  for (const scene of favoriteStories) {
+    const lines = scene.lines.map((l) => ({ ...l, speakerIcon: speakerIcon(l.speaker, undefined) }));
+    await writeFile(path.join(SCENES, `${scene.groupId}.json`), JSON.stringify({ ...scene, lines }));
+    sceneIndex.push({
+      groupId: scene.groupId,
+      name: scene.name,
+      lines: lines.length,
+      category: "favorite",
+      type: "favorite",
+      nikke: scene.nikke,
+      sourceVideo: scene.sourceVideo,
+    });
+    addLines(scene.groupId, "favorite", lines);
   }
   await writeFile(path.join(OUT, "scenes.json"), JSON.stringify(sceneIndex));
   console.log(`scenes/: ${sceneIndex.length} dialogue files (ko)`);

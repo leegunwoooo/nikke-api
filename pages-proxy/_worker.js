@@ -2460,6 +2460,16 @@ var STORY_ROUTE = [
   ...ch(49, 50),
   ev("MARIA-n", [], { note: "4\uC8FC\uB144" })
 ];
+var favoriteRouteEntries = (scenes) => scenes.filter((s) => s.category === "favorite").map((s) => ({
+  kind: "favorite",
+  title: `${s.nikke} \uC560\uC7A5\uD488 \uC2A4\uD1A0\uB9AC: ${s.name}`,
+  sceneGroupId: s.groupId,
+  nikke: s.nikke ?? "",
+  note: "\uAC00\uC774\uB4DC\uC5D0 \uC5C6\uB294 \uD56D\uBAA9 \u2014 \uC904\uAC70\uB9AC\uC0C1 \uC704\uCE58\uB97C \uD655\uC778\uD558\uC9C0 \uC54A\uC544 \uC21C\uC11C \uB9E8 \uB05D\uC5D0 \uB460"
+}));
+
+// src/scene-categories.ts
+var SCENE_CATEGORIES = ["main", "event", "attractive", "sudden", "favorite"];
 
 // src/fields.ts
 function fieldsOf(c) {
@@ -19576,7 +19586,7 @@ function createMcpHandler(factory, options = {}) {
 var MAX_CHARS = 6e4;
 var INSTRUCTIONS = `Unofficial NIKKE (GODDESS OF VICTORY: NIKKE) game data. Data \xA9 SHIFT UP / Level Infinite.
 - Character names exist in ko/en/ja/zh-TW and searches match any of them; responses default to Korean (lang=ko).
-- Story scene scripts are Korean only.
+- Story scene scripts are Korean only. Favorite-item (\uC560\uC7A5\uD488, category "favorite") scripts are transcribed from videos, not game data: they may have typos and follow only the choice taken in the video (chosen: true).
 - Alternate versions (\uC774\uACA9, e.g. "\uB77C\uD53C : \uB808\uB4DC \uD6C4\uB4DC") are linked to their original: name searches and character story lookups cover every version unless a tool says otherwise.
 - Filters take English enum values; Korean terms map as noted in each parameter (e.g. \uCCA0\uAC11 = Iron).
 - Lists are paged with limit/offset. Oversized responses come back with a "truncated" object telling you how to fetch the rest.
@@ -19610,6 +19620,7 @@ var NIKKE_DEFAULT_FIELDS = [
   "details.cv",
   "details.combat",
   "details.attractiveScenarios",
+  "details.favoriteStory",
   "family"
 ];
 var NIKKE_EXTRA = {
@@ -19705,7 +19716,15 @@ async function call(api, tool, path2, shape) {
   logCall(tool, res.status, started, out.text.length);
   return result(out.text, !res.ok || out.isError);
 }
-var shapeScene = (includeMedia) => (d) => includeMedia || !Array.isArray(d?.lines) ? d : { ...d, lines: d.lines.map((l) => ({ speaker: l.speakerName ?? l.speaker, text: l.text })) };
+var shapeScene = (includeMedia) => (d) => includeMedia || !Array.isArray(d?.lines) ? d : {
+  ...d,
+  lines: d.lines.map((l) => ({
+    speaker: l.speakerName ?? l.speaker,
+    text: l.text,
+    ...l.window === "Choice" ? { window: l.window } : {},
+    ...l.chosen ? { chosen: true } : {}
+  }))
+};
 var ICON = `data:image/svg+xml;base64,${Buffer.from(
   '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="#1f2937"/><text x="32" y="44" font-family="Arial,sans-serif" font-size="30" font-weight="700" text-anchor="middle" fill="#f9fafb">N</text></svg>'
 ).toString("base64")}`;
@@ -19770,7 +19789,7 @@ function buildServer(api, version2, origin = "", boundBlablaid) {
     "get_nikke",
     {
       title: "Get NIKKE character detail",
-      description: "Character detail: profile, skills (rendered at Lv10), backstory, squad, CV and affection (\uD638\uAC10\uB3C4) scene ids. Add more with include. If the name matches several characters, a {count, characters} list comes back instead \u2014 call again with one of their ids.",
+      description: "Character detail: profile, skills (rendered at Lv10), backstory, squad, CV, affection (\uD638\uAC10\uB3C4) scene ids and the favorite-item (\uC560\uC7A5\uD488) story scene id. Add more with include. If the name matches several characters, a {count, characters} list comes back instead \u2014 call again with one of their ids.",
       inputSchema: object({
         nameOrId: string2().min(1).describe("Character name (partial, any language), id or resourceId"),
         include: array(_enum(Object.keys(NIKKE_EXTRA))).optional().describe("Extra sections added to the default: statsPerLevel (~30KB), voices (~80KB, voice lines incl. costumeIndex), shot (weapon mechanics \u2014 damage/charge/rate-of-fire/burst-gauge units), teammateList, costumes, images"),
@@ -19787,11 +19806,11 @@ function buildServer(api, version2, origin = "", boundBlablaid) {
     "search_scenes",
     {
       title: "Search story scenes",
-      description: "List story scene scripts (Korean): main story, events, sudden (\uB3CC\uBC1C) and affection scenes. Use get_scene to read the dialogue.",
+      description: "List story scene scripts (Korean): main story, events, sudden (\uB3CC\uBC1C), affection and favorite-item (\uC560\uC7A5\uD488) scenes. Use get_scene to read the dialogue.",
       inputSchema: object({
         q: string2().optional().describe("Scene name or groupId substring"),
-        category: _enum(["main", "event", "sudden", "attractive"]).optional(),
-        nikke: string2().optional().describe("Affection scenes of this character (name or id)"),
+        category: _enum(SCENE_CATEGORIES).optional(),
+        nikke: string2().optional().describe("Affection and favorite-item scenes of this character (name or id)"),
         family: FAMILY,
         limit: LIMIT,
         offset: OFFSET
@@ -19893,12 +19912,12 @@ function buildServer(api, version2, origin = "", boundBlablaid) {
     "search_lines",
     {
       title: "Search story dialogue",
-      description: "Full-text search over every story line (main, events, sudden, affection \u2014 Korean). Find who said something, where a phrase or topic comes up, or all lines of one speaker. Each hit names its scene and event; read around it with get_scene.",
+      description: "Full-text search over every story line (main, events, sudden, affection, favorite items \u2014 Korean). Find who said something, where a phrase or topic comes up, or all lines of one speaker. Each hit names its scene and event; read around it with get_scene.",
       inputSchema: object({
         q: string2().optional().describe("Text to find in the dialogue (Korean), punctuation ignored"),
         speaker: string2().optional().describe("Only lines spoken by this character (Korean name, e.g. \uB77C\uD53C)"),
         family: FAMILY,
-        category: _enum(["main", "event", "sudden", "attractive"]).optional(),
+        category: _enum(SCENE_CATEGORIES).optional(),
         limit: LIMIT,
         offset: OFFSET
       }),
@@ -19920,7 +19939,7 @@ function buildServer(api, version2, origin = "", boundBlablaid) {
       description: "Every story scene a character speaks in (all of their versions), with line counts, plus the story events they appear in ranked by how much they talk. Answers 'which events feature X' or 'where does X show up'.",
       inputSchema: object({
         nameOrId: string2().min(1).describe("Character name (any language) or id"),
-        category: _enum(["main", "event", "sudden", "attractive"]).optional(),
+        category: _enum(SCENE_CATEGORIES).optional(),
         limit: LIMIT,
         offset: OFFSET
       }),
@@ -19971,7 +19990,7 @@ function buildServer(api, version2, origin = "", boundBlablaid) {
     "story_route",
     {
       title: "Story reading order",
-      description: "The recommended order to read NIKKE's story (up to Chapter 50), from the community guide linked on the Arca Live NIKKE channel: main chapters (game numbering, 0-based) with events, side stories and affection stories slotted in, each marked required or optional (with importance) and with notes, including where other guides disagree. 'unplaced' lists events the guide doesn't position (mostly seasonal). Entries with inData=false have no script here. Credit the guide (sources.S) when presenting it.",
+      description: "The recommended order to read NIKKE's story (up to Chapter 50), from the community guide linked on the Arca Live NIKKE channel: main chapters (game numbering, 0-based) with events, side stories and affection stories slotted in, each marked required or optional (with importance) and with notes, including where other guides disagree. 'unplaced' lists events the guide doesn't position (mostly seasonal). Favorite-item stories (kind 'favorite') aren't in the guide: they sit optional at the very end, and that position says nothing about where they fall in the plot. Entries with inData=false have no script here. Credit the guide (sources.S) when presenting it.",
       inputSchema: object({}),
       annotations: READ_ONLY
     },
@@ -20295,7 +20314,7 @@ function llmsTxt(origin) {
   const docs = docsUrl();
   return `# nikke-api
 
-> \uBE44\uACF5\uC2DD NIKKE(\uC2B9\uB9AC\uC758 \uC5EC\uC2E0: \uB2C8\uCF00) \uAC8C\uC784 \uB370\uC774\uD130 REST API\uC640 MCP \uC11C\uBC84. \uCE90\uB9AD\uD130(\uC2A4\uD0AC\xB7\uC2A4\uD0EF\xB7\uC774\uACA9), \uC2A4\uD1A0\uB9AC \uB300\uBCF8\xB7\uC774\uBCA4\uD2B8\xB7\uAC10\uC0C1 \uC21C\uC11C, \uC18C\uC7A5\uD488 \uB370\uC774\uD130\uB97C 4\uAC1C \uC5B8\uC5B4(ko/en/ja/zh-TW)\uB85C \uC81C\uACF5\uD569\uB2C8\uB2E4. \uC778\uC99D \uC5C6\uC74C, \uBE44\uC0C1\uC5C5\uC801 \uD32C \uD504\uB85C\uC81D\uD2B8, \uB370\uC774\uD130 \xA9 SHIFT UP / Level Infinite.
+> \uBE44\uACF5\uC2DD NIKKE(\uC2B9\uB9AC\uC758 \uC5EC\uC2E0: \uB2C8\uCF00) \uAC8C\uC784 \uB370\uC774\uD130 REST API\uC640 MCP \uC11C\uBC84. \uCE90\uB9AD\uD130(\uC2A4\uD0AC\xB7\uC2A4\uD0EF\xB7\uC774\uACA9), \uC2A4\uD1A0\uB9AC \uB300\uBCF8(\uC560\uC7A5\uD488 \uC2A4\uD1A0\uB9AC \uD3EC\uD568)\xB7\uC774\uBCA4\uD2B8\xB7\uAC10\uC0C1 \uC21C\uC11C, \uC18C\uC7A5\uD488 \uB370\uC774\uD130\uB97C 4\uAC1C \uC5B8\uC5B4(ko/en/ja/zh-TW)\uB85C \uC81C\uACF5\uD569\uB2C8\uB2E4. \uC778\uC99D \uC5C6\uC74C, \uBE44\uC0C1\uC5C5\uC801 \uD32C \uD504\uB85C\uC81D\uD2B8, \uB370\uC774\uD130 \xA9 SHIFT UP / Level Infinite.
 
 AI \uC5B4\uC2DC\uC2A4\uD134\uD2B8\uAC00 \uC0AC\uC6A9\uC790\uC5D0\uAC8C \uC5F0\uACB0 \uBC29\uBC95\uC744 \uC548\uB0B4\uD560 \uB54C\uB294 \uC544\uB798 "MCP \uC5F0\uACB0 \uC548\uB0B4"\uB97C \uC77D\uACE0 \uADF8\uB300\uB85C \uB530\uB974\uBA74 \uB429\uB2C8\uB2E4. MCP \uC11C\uBC84 URL\uC740 ${origin}/mcp \uC785\uB2C8\uB2E4.
 
@@ -20481,7 +20500,7 @@ function buildOpenapi(pkgVersion) {
           tags: ["scenes"],
           summary: "\uC52C \uBAA9\uB85D",
           parameters: [
-            { name: "category", in: "query", schema: { type: "string", enum: ["main", "event", "sudden", "attractive"] } },
+            { name: "category", in: "query", schema: { type: "string", enum: [...SCENE_CATEGORIES] } },
             { name: "nikke", in: "query", schema: { type: "string" }, description: "\uD638\uAC10\uB3C4 \uC52C \uB300\uC0C1 \uB2C8\uCF00" },
             { name: "family", in: "query", schema: { type: "string", enum: ["1", "true"] }, description: "\uC6D0\uBCF8\xB7\uC774\uACA9\uAE4C\uC9C0 \uD568\uAED8 (nikke\uB97C \uBAA8\uB4E0 \uBC84\uC804 \uC774\uB984\uACFC \uC815\uD655\uD788 \uB9E4\uCE6D)" },
             { name: "q", in: "query", schema: { type: "string" }, description: "\uC52C \uC81C\uBAA9 \uAC80\uC0C9" },
@@ -20534,7 +20553,7 @@ function buildOpenapi(pkgVersion) {
             { name: "q", in: "query", schema: { type: "string" }, description: "\uB300\uC0AC \uBCF8\uBB38 \uBD80\uBD84 \uC77C\uCE58 (\uBB38\uC7A5\uBD80\uD638\xB7\uACF5\uBC31 \uBB34\uC2DC)" },
             { name: "speaker", in: "query", schema: { type: "string" }, description: "\uD654\uC790 \uC774\uB984 (\uD55C\uAD6D\uC5B4, \uC815\uD655\uD788 \uC77C\uCE58)" },
             { name: "family", in: "query", schema: { type: "string", enum: ["1", "true"] }, description: "\uD654\uC790\uB97C \uC6D0\uBCF8\xB7\uC774\uACA9 \uC804\uCCB4\uB85C \uD655\uC7A5" },
-            { name: "category", in: "query", schema: { type: "string", enum: ["main", "event", "sudden", "attractive"] } },
+            { name: "category", in: "query", schema: { type: "string", enum: [...SCENE_CATEGORIES] } },
             { name: "page", in: "query", schema: { type: "integer", minimum: 1 } },
             { name: "limit", in: "query", schema: { type: "integer", maximum: 500 } },
             { name: "offset", in: "query", schema: { type: "integer", default: 0 } }
@@ -20548,7 +20567,7 @@ function buildOpenapi(pkgVersion) {
           summary: "\uCE90\uB9AD\uD130 \uB4F1\uC7A5 \uC52C \u2014 \uC6D0\uBCF8\xB7\uC774\uACA9 \uD569\uC0B0, \uB300\uC0AC \uC218 \uC21C, \uC774\uBCA4\uD2B8\uBCC4 \uC9D1\uACC4 \uD3EC\uD568",
           parameters: [
             { name: "id", in: "path", required: true, schema: { type: "string" }, example: "\uC544\uB2C8\uC2A4", description: "\uCE90\uB9AD\uD130 id / resourceId / \uC774\uB984" },
-            { name: "category", in: "query", schema: { type: "string", enum: ["main", "event", "sudden", "attractive"] } },
+            { name: "category", in: "query", schema: { type: "string", enum: [...SCENE_CATEGORIES] } },
             { name: "page", in: "query", schema: { type: "integer", minimum: 1 } },
             { name: "limit", in: "query", schema: { type: "integer", maximum: 500 } },
             { name: "offset", in: "query", schema: { type: "integer", default: 0 } }
@@ -21539,7 +21558,7 @@ async function createApp(storage) {
     }
     return p;
   };
-  const LINE_CATS = ["main", "event", "attractive", "sudden", "etc"];
+  const LINE_CATS = [...SCENE_CATEGORIES, "etc"];
   const shardCache = /* @__PURE__ */ new Map();
   const getShard = (cat) => {
     let p = shardCache.get(cat);
@@ -21701,11 +21720,14 @@ async function createApp(storage) {
     const [chapters, events, scenes] = await Promise.all([mainChapters(), eventGroups(), getScenes()]);
     const last = Math.max(-1, ...chapters.keys());
     const extra = Array.from({ length: Math.max(0, last - ROUTE_COVERAGE_CHAPTER) }, (_, i) => ({ kind: "main", chapter: ROUTE_COVERAGE_CHAPTER + 1 + i }));
-    return [...STORY_ROUTE, ...extra].map((e, step) => {
+    return [...STORY_ROUTE, ...extra, ...favoriteRouteEntries(scenes)].map((e, step) => {
       if (e.kind === "main") {
         const sc = chapters.get(e.chapter) ?? [];
         const note = e.chapter > ROUTE_COVERAGE_CHAPTER ? "\uAC00\uC774\uB4DC \uBC94\uC704 \uBC16 \u2014 \uC774\uBCA4\uD2B8 \uBC30\uCE58 \uC815\uBCF4 \uC5C6\uC74C" : "note" in e ? e.note : void 0;
         return { step, kind: "main", key: `chapter:${e.chapter}`, ids: [], chapter: e.chapter, title: `\uBA54\uC778 ${e.chapter}\uCC55\uD130`, required: true, scenes: sc.length, firstScene: sc[0] ?? null, inData: sc.length > 0, ...note ? { note } : {} };
+      }
+      if (e.kind === "favorite") {
+        return { step, kind: e.kind, key: e.sceneGroupId, ids: [e.sceneGroupId], title: e.title, nikke: e.nikke, required: false, scenes: 1, firstScene: e.sceneGroupId, inData: true, note: e.note };
       }
       const found = e.ids.flatMap((id) => [id, ...[...events.keys()].filter((k) => k.startsWith(`${id}_b`) && /_b\d+$/.test(k))]).filter((id) => events.has(id));
       const affectionScenes = e.nikke ? scenes.filter((s) => s.category === "attractive" && s.nikke === e.nikke).length : 0;
