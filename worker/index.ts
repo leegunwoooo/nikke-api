@@ -99,7 +99,9 @@ const registerUser = async (request: Request, env: Env) => {
   if (!probe.ok) return json({ error: `profile lookup failed (${probe.status})` }, 502);
   const key = `u_${crypto.randomUUID().replaceAll("-", "").slice(0, 16)}`;
   await env.AREA_KV.put(`user:${key}`, JSON.stringify({ openid, created: new Date().toISOString() }));
-  return json({ key, url: `${new URL(request.url).origin}/mcp/u/${key}` });
+  const proto = request.headers.get("x-forwarded-proto") ?? new URL(request.url).protocol.replace(":", "");
+  const host = request.headers.get("x-forwarded-host") ?? new URL(request.url).host;
+  return json({ key, url: `${proto}://${host}/mcp/u/${key}` });
 };
 
 // intl_open_id from any blablaid form (path segment, base64 openid, share URL)
