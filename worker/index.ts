@@ -335,6 +335,16 @@ export default {
         if (area) url.searchParams.set("area", area);
       }
       url.searchParams.sort(); // param order shouldn't split the cache
+      // fields order shouldn't either — ?fields=a,b and ?fields=b,a are the
+      // same response, so canonicalize before they fork the cache key
+      const f = url.searchParams.getAll("fields");
+      if (f.length) {
+        const v = [...new Set(f.flatMap((s) => s.split(",").map((x) => x.trim())).filter(Boolean))]
+          .sort()
+          .join(",");
+        url.searchParams.delete("fields");
+        if (v) url.searchParams.set("fields", v);
+      }
       key = new Request(url.toString());
       if (!refresh) {
         const hit = await edgeCache.match(key);

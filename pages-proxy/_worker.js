@@ -22164,10 +22164,11 @@ async function createApp(storage) {
   });
   async function userNikkeList(c) {
     try {
+      const lookups = loadProfileLookups();
       const res = await loadOwnedNikkes(c);
       if ("error" in res) return res.error;
       const { q, id, name, element, class: cls, burst, corporation, weapon, rarity } = c.req.query();
-      const { charRef, matchesNikkeId, matchesNikkeName } = await loadProfileLookups();
+      const { charRef, matchesNikkeId, matchesNikkeName } = await lookups;
       const n = (v) => v?.toLowerCase();
       const nikkes = res.owned.filter((ch2) => (!id || matchesNikkeId(id, ch2)) && matchesNikkeName(name ?? q ?? "", ch2)).map(ownedNikkeSummary(charRef)).filter((x) => {
         const ch2 = x.character;
@@ -22182,10 +22183,11 @@ async function createApp(storage) {
   }
   async function userNikkeDetail(c) {
     try {
+      const lookups = loadProfileLookups();
       const res = await loadOwnedNikkes(c);
       if ("error" in res) return res.error;
       const key2 = c.req.param("nameOrId") ?? "";
-      const { charRef, normalizeNikke, matchesNikke } = await loadProfileLookups();
+      const { charRef, normalizeNikke, matchesNikke } = await lookups;
       const fields = fieldsOf(c);
       const hits = res.owned.filter((ch3) => matchesNikke(key2, ch3));
       if (hits.length === 0) return c.json({ error: "not found" }, 404);
@@ -22219,6 +22221,19 @@ async function createApp(storage) {
   }
   const ROSTER_AREAS = [83, 81, 84, 82, 85];
   const ROSTER_DETAIL_BATCH = 60;
+  const mapLimit = async (items, n, fn) => {
+    const out = new Array(items.length);
+    let i = 0;
+    await Promise.all(
+      Array.from({ length: Math.min(n, items.length) }, async () => {
+        while (i < items.length) {
+          const j = i++;
+          out[j] = await fn(items[j]);
+        }
+      })
+    );
+    return out;
+  };
   const ROSTER_PRIVATE_CODES = /* @__PURE__ */ new Set([1301002, 1303002]);
   async function collectRosterArea(openid, area) {
     const body = { intl_open_id: openid, nikke_area_id: area };
@@ -22227,13 +22242,18 @@ async function createApp(storage) {
     if (!characters2?.length)
       return { failedCode: roster.code ?? 0, failedMsg: roster.msg ?? "" };
     const codes = characters2.map((x) => x.name_code);
+    const outpostP = gameApi("Game", "GetUserProfileOutpostInfo", body).then((info) => info.code === 0 ? info.data?.outpost_info ?? null : null).catch(() => null);
+    const chunks = [];
+    for (let i = 0; i < codes.length; i += ROSTER_DETAIL_BATCH)
+      chunks.push(codes.slice(i, i + ROSTER_DETAIL_BATCH));
+    const results = await mapLimit(
+      chunks,
+      2,
+      (name_codes) => gameApi("Game", "GetUserCharacterDetails", { ...body, name_codes })
+    );
     const details = [];
     const stateEffects = [];
-    for (let i = 0; i < codes.length; i += ROSTER_DETAIL_BATCH) {
-      const chunk = await gameApi("Game", "GetUserCharacterDetails", {
-        ...body,
-        name_codes: codes.slice(i, i + ROSTER_DETAIL_BATCH)
-      });
+    for (const chunk of results) {
       if (chunk.code !== 0)
         throw new Error(
           `GetUserCharacterDetails failed: ${chunk.code} ${chunk.msg ?? ""}`
@@ -22241,13 +22261,7 @@ async function createApp(storage) {
       details.push(...chunk.data?.character_details ?? []);
       stateEffects.push(...chunk.data?.state_effects ?? []);
     }
-    let outpost = null;
-    try {
-      const info = await gameApi("Game", "GetUserProfileOutpostInfo", body);
-      if (info.code === 0) outpost = info.data?.outpost_info ?? null;
-    } catch {
-    }
-    return { area, characters: characters2, details, stateEffects, outpost };
+    return { area, characters: characters2, details, stateEffects, outpost: await outpostP };
   }
   async function userRoster(c) {
     const q = openidInput(c);
@@ -22258,10 +22272,11 @@ async function createApp(storage) {
     if (area !== null && (!Number.isInteger(area) || !ROSTER_AREAS.includes(area)))
       return c.json({ error: "unsupported area" }, 400);
     try {
-      const results = [];
-      for (const a of area === null ? ROSTER_AREAS : [area]) {
-        results.push(await collectRosterArea(target.intlOpenId, a));
-      }
+      const results = await mapLimit(
+        area === null ? ROSTER_AREAS : [area],
+        2,
+        (a) => collectRosterArea(target.intlOpenId, a)
+      );
       const areas = results.filter((r) => !("failedCode" in r));
       if (areas.length === 0) {
         const failures = results;
@@ -22580,6 +22595,12 @@ var index_default = {
         if (area) url2.searchParams.set("area", area);
       }
       url2.searchParams.sort();
+      const f = url2.searchParams.getAll("fields");
+      if (f.length) {
+        const v = [...new Set(f.flatMap((s) => s.split(",").map((x) => x.trim())).filter(Boolean))].sort().join(",");
+        url2.searchParams.delete("fields");
+        if (v) url2.searchParams.set("fields", v);
+      }
       key2 = new Request(url2.toString());
       if (!refresh) {
         const hit = await edgeCache.match(key2);
