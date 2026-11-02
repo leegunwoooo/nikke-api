@@ -63,7 +63,7 @@ const FILTERS = {
 const NIKKE_DEFAULT_FIELDS = [
   "id", "resourceId", "name", "rarity", "class", "burst", "corporation", "element", "weapon",
   "details.skills", "details.backstory", "details.squad", "details.cv", "details.combat",
-  "details.attractiveScenarios", "family",
+  "details.attractiveScenarios", "details.favoriteStory", "family",
 ];
 const NIKKE_EXTRA = {
   statsPerLevel: "details.statsPerLevel",
@@ -280,7 +280,7 @@ export function buildServer(api: Fetcher, version: string, origin = "", boundBla
     {
       title: "Get NIKKE character detail",
       description:
-        "Character detail: profile, skills (rendered at Lv10), backstory, squad, CV and affection (호감도) scene ids. Add more with include. If the name matches several characters, a {count, characters} list comes back instead — call again with one of their ids.",
+        "Character detail: profile, skills (rendered at Lv10), backstory, squad, CV, affection (호감도) scene ids and the favorite-item (애장품) story scene id. Add more with include. If the name matches several characters, a {count, characters} list comes back instead — call again with one of their ids.",
       inputSchema: z.object({
         nameOrId: z.string().min(1).describe("Character name (partial, any language), id or resourceId"),
         include: z
@@ -514,7 +514,7 @@ export function buildServer(api: Fetcher, version: string, origin = "", boundBla
     {
       title: "Story reading order",
       description:
-        "The recommended order to read NIKKE's story (up to Chapter 50), from the community guide linked on the Arca Live NIKKE channel: main chapters (game numbering, 0-based) with events, side stories and affection stories slotted in, each marked required or optional (with importance) and with notes, including where other guides disagree. 'unplaced' lists events the guide doesn't position (mostly seasonal). Entries with inData=false have no script here. Credit the guide (sources.S) when presenting it.",
+        "The recommended order to read NIKKE's story (up to Chapter 50), from the community guide linked on the Arca Live NIKKE channel: main chapters (game numbering, 0-based) with events, side stories and affection stories slotted in, each marked required or optional (with importance) and with notes, including where other guides disagree. 'unplaced' lists events the guide doesn't position (mostly seasonal). Favorite-item stories (kind 'favorite') aren't in the guide: they sit optional at the very end, and that position says nothing about where they fall in the plot. Entries with inData=false have no script here. Credit the guide (sources.S) when presenting it.",
       inputSchema: z.object({}),
       annotations: READ_ONLY,
     },

@@ -933,7 +933,10 @@ async function storyRoute() {
   const [chapters, events, scenes] = await Promise.all([mainChapters(), eventGroups(), getScenes()]);
   const last = Math.max(-1, ...chapters.keys());
   const extra = Array.from({ length: Math.max(0, last - ROUTE_COVERAGE_CHAPTER) }, (_, i) => ({ kind: "main" as const, chapter: ROUTE_COVERAGE_CHAPTER + 1 + i }));
-  return [...STORY_ROUTE, ...extra].map((e, step) => {
+  // the guide doesn't cover 애장품 stories, so they go last: existing steps stay
+  // put and they never displace a chapter from `next`
+  const favorites = scenes.filter((s) => s.category === "favorite");
+  const route = [...STORY_ROUTE, ...extra].map((e, step) => {
     if (e.kind === "main") {
       const sc = chapters.get(e.chapter) ?? [];
       const note = e.chapter > ROUTE_COVERAGE_CHAPTER ? "가이드 범위 밖 — 이벤트 배치 정보 없음" : "note" in e ? e.note : undefined;
@@ -957,6 +960,22 @@ async function storyRoute() {
       ...(e.note || !inData ? { note: [e.note, inData ? "" : "이 API 데이터에는 스크립트가 없음"].filter(Boolean).join(" · ") } : {}),
     };
   });
+  return [
+    ...route,
+    ...favorites.map((s, i) => ({
+      step: route.length + i,
+      kind: "favorite" as const,
+      key: s.groupId,
+      ids: [s.groupId],
+      title: `${s.nikke} 애장품 스토리: ${s.name}`,
+      nikke: s.nikke,
+      required: false,
+      scenes: 1,
+      firstScene: s.groupId,
+      inData: true,
+      note: "가이드에 없는 항목 — 줄거리상 위치를 확인하지 않아 순서 맨 끝에 둠",
+    })),
+  ];
 }
 
 app.get("/api/story/route", async (c) => {

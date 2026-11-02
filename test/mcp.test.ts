@@ -86,6 +86,23 @@ test("favorite stories are reachable by category, nikke and line search", async 
   assert.equal((await tool("search_lines", { q: "애장품 대사", category: "favorite" })).json.count, 1);
 });
 
+test("get_nikke links the favorite story scene", async () => {
+  const n = (await tool("get_nikke", { nameOrId: "1" })).json;
+  assert.equal(n.details.favoriteStory.sceneGroupId, "d_favorite_test");
+});
+
+test("favorite stories sit optional at the end of the route, after every chapter", async () => {
+  const route = (await tool("story_route", {})).json;
+  const last = route.entries.at(-1);
+  assert.equal(last.kind, "favorite");
+  assert.equal(last.firstScene, "d_favorite_test");
+  assert.equal(last.required, false);
+  assert.equal(last.step, route.entries.length - 1);
+  assert.ok(route.entries.findLastIndex((e: any) => e.kind === "main") < route.entries.length - 1);
+  assert.deepEqual((await tool("next_story", { after: last.title })).json.next, []);
+  assert.ok((await tool("next_story", { chapter: 50, requiredOnly: true })).json.next.every((e: any) => e.kind !== "favorite"));
+});
+
 test("get_scene keeps which options were choices and which was taken", async () => {
   const { lines } = (await tool("get_scene", { groupId: "d_favorite_test" })).json;
   assert.deepEqual(lines[0], { speaker: "테스트 니케", text: "애장품 대사" });

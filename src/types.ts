@@ -261,6 +261,8 @@ export interface NikkeDetail {
   statsPerLevel: { attack?: number[]; defence?: number[]; hp?: number[] };
   teammateList?: unknown;
   /** 호감도 시나리오 — sceneGroupId는 /api/scenes/:groupId의 대본 파일과 1:1 대응 */
+  /** 애장품 스토리, read with /api/scenes/:groupId — not in the game data */
+  favoriteStory?: { sceneGroupId: string; name: string; sourceVideo: string };
   attractiveScenarios?: {
     id: number;
     sceneGroupId?: string;

@@ -28,7 +28,7 @@ const apiMd = repoLinks(withApi(read("API.md")));
 
 const llms = `# nikke-api
 
-> 비공식 NIKKE(승리의 여신: 니케) 게임 데이터 REST API와 MCP 서버. 캐릭터(스킬·스탯·이격), 스토리 대본·이벤트·감상 순서, 소장품 데이터를 4개 언어(ko/en/ja/zh-TW)로 제공합니다. 인증 없음, 비상업적 팬 프로젝트, 데이터 © SHIFT UP / Level Infinite.
+> 비공식 NIKKE(승리의 여신: 니케) 게임 데이터 REST API와 MCP 서버. 캐릭터(스킬·스탯·이격), 스토리 대본(애장품 스토리 포함)·이벤트·감상 순서, 소장품 데이터를 4개 언어(ko/en/ja/zh-TW)로 제공합니다. 인증 없음, 비상업적 팬 프로젝트, 데이터 © SHIFT UP / Level Infinite.
 
 ChatGPT·Claude 같은 AI 클라이언트에 연결하려면 MCP 서버 URL ${apiBase}/mcp 를 커넥터로 추가합니다. 사용자에게 연결 방법을 안내할 때는 아래 "MCP 연결 가이드"를 읽고 따르면 됩니다.
 

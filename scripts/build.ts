@@ -212,9 +212,17 @@ async function main() {
   const DETAILS = path.join(OUT, "details");
   await mkdir(DETAILS, { recursive: true });
   let detailCount = 0;
+  const favoriteStories = await readFavoriteStories();
+  const favoriteStoryOf = new Map(favoriteStories.map((s) => [s.nikke, s]));
+  let linkedFavorites = 0;
   for (const n of characters) {
     const detail = await buildDetail(n.resourceId);
     if (detail) {
+      const fav = favoriteStoryOf.get(n.name.ko ?? "");
+      if (fav) {
+        detail.favoriteStory = { sceneGroupId: fav.groupId, name: fav.name, sourceVideo: fav.sourceVideo };
+        linkedFavorites++;
+      }
       // raw teammate entries -> character refs
       if (Array.isArray(detail.teammateList)) {
         detail.teammateList = (detail.teammateList as any[]).map((t) => ({
@@ -231,7 +239,7 @@ async function main() {
       detailCount++;
     }
   }
-  console.log(`details/: ${detailCount} character detail files`);
+  console.log(`details/: ${detailCount} character detail files, ${linkedFavorites}/${favoriteStories.length} favorite stories linked`);
 
   // --- name_code / avatar-id → character maps (for shared-profile lookups) ---
   const idMap: { name_code: number; id: number; resource_id: number }[] = JSON.parse(
@@ -490,7 +498,7 @@ async function main() {
   }
 
   // --- 애장품 scripts kept in the repo (not in the game data) ---
-  for (const scene of await readFavoriteStories()) {
+  for (const scene of favoriteStories) {
     await writeFile(path.join(SCENES, `${scene.groupId}.json`), JSON.stringify(scene));
     sceneIndex.push({
       groupId: scene.groupId,

@@ -195,6 +195,7 @@ GET /api/nikkes?limit=20&offset=40
         "title": { "ko": "다시 아우터림으로", "...": "..." },
         "costumeTid": null, "rewardId": 50 }
     ],
+    "favoriteStory": { "sceneGroupId": "d_favorite_sugar", "name": "파트너", "sourceVideo": "https://youtu.be/cQoTpjl3XjI" },
     "voices": [
       {
         "id": 120001,
@@ -254,6 +255,10 @@ GET /api/nikkes?limit=20&offset=40
 GET /api/nikkes/101801?fields=details.attractiveScenarios
 → sceneGroupId로 GET /api/scenes/d_nikke_neon_visioneye_01 → 대사
 ```
+
+### `favoriteStory` 필드
+
+애장품 스토리가 있는 니케(21명)에만 있습니다. `sceneGroupId`로 `/api/scenes/:groupId`에서 대본을 읽습니다. 이름이 정확히 같은 니케에만 연결되어, 이격 버전에는 붙지 않습니다.
 
 ### `voices[]` 필드
 
@@ -559,6 +564,7 @@ GET /api/events/event_BunnyX777/script?limit=1
 - 항목 하나가 여러 이벤트 id를 묶을 수 있습니다 (예: `OVER ZONE` → `event_overzone1`, `event_overzone2`).
 - `inData: false`인 항목은 이 API에 대본이 없습니다 (사이드 스토리, 아카이브에 없는 최신 이벤트).
 - `unplaced`는 가이드가 배치하지 않은 이벤트(주로 시즌 이벤트)입니다.
+- 애장품 스토리(`kind: "favorite"`, `firstScene`이 대본)는 가이드에 없어 모든 챕터 뒤에 선택 항목으로 붙습니다. 줄거리상 위치를 뜻하지 않습니다.
 
 ```json
 {

@@ -19610,6 +19610,7 @@ var NIKKE_DEFAULT_FIELDS = [
   "details.cv",
   "details.combat",
   "details.attractiveScenarios",
+  "details.favoriteStory",
   "family"
 ];
 var NIKKE_EXTRA = {
@@ -19778,7 +19779,7 @@ function buildServer(api, version2, origin = "", boundBlablaid) {
     "get_nikke",
     {
       title: "Get NIKKE character detail",
-      description: "Character detail: profile, skills (rendered at Lv10), backstory, squad, CV and affection (\uD638\uAC10\uB3C4) scene ids. Add more with include. If the name matches several characters, a {count, characters} list comes back instead \u2014 call again with one of their ids.",
+      description: "Character detail: profile, skills (rendered at Lv10), backstory, squad, CV, affection (\uD638\uAC10\uB3C4) scene ids and the favorite-item (\uC560\uC7A5\uD488) story scene id. Add more with include. If the name matches several characters, a {count, characters} list comes back instead \u2014 call again with one of their ids.",
       inputSchema: object({
         nameOrId: string2().min(1).describe("Character name (partial, any language), id or resourceId"),
         include: array(_enum(Object.keys(NIKKE_EXTRA))).optional().describe("Extra sections added to the default: statsPerLevel (~30KB), voices (~80KB, voice lines incl. costumeIndex), shot (weapon mechanics \u2014 damage/charge/rate-of-fire/burst-gauge units), teammateList, costumes, images"),
@@ -19979,7 +19980,7 @@ function buildServer(api, version2, origin = "", boundBlablaid) {
     "story_route",
     {
       title: "Story reading order",
-      description: "The recommended order to read NIKKE's story (up to Chapter 50), from the community guide linked on the Arca Live NIKKE channel: main chapters (game numbering, 0-based) with events, side stories and affection stories slotted in, each marked required or optional (with importance) and with notes, including where other guides disagree. 'unplaced' lists events the guide doesn't position (mostly seasonal). Entries with inData=false have no script here. Credit the guide (sources.S) when presenting it.",
+      description: "The recommended order to read NIKKE's story (up to Chapter 50), from the community guide linked on the Arca Live NIKKE channel: main chapters (game numbering, 0-based) with events, side stories and affection stories slotted in, each marked required or optional (with importance) and with notes, including where other guides disagree. 'unplaced' lists events the guide doesn't position (mostly seasonal). Favorite-item stories (kind 'favorite') aren't in the guide: they sit optional at the very end, and that position says nothing about where they fall in the plot. Entries with inData=false have no script here. Credit the guide (sources.S) when presenting it.",
       inputSchema: object({}),
       annotations: READ_ONLY
     },
@@ -20303,7 +20304,7 @@ function llmsTxt(origin) {
   const docs = docsUrl();
   return `# nikke-api
 
-> \uBE44\uACF5\uC2DD NIKKE(\uC2B9\uB9AC\uC758 \uC5EC\uC2E0: \uB2C8\uCF00) \uAC8C\uC784 \uB370\uC774\uD130 REST API\uC640 MCP \uC11C\uBC84. \uCE90\uB9AD\uD130(\uC2A4\uD0AC\xB7\uC2A4\uD0EF\xB7\uC774\uACA9), \uC2A4\uD1A0\uB9AC \uB300\uBCF8\xB7\uC774\uBCA4\uD2B8\xB7\uAC10\uC0C1 \uC21C\uC11C, \uC18C\uC7A5\uD488 \uB370\uC774\uD130\uB97C 4\uAC1C \uC5B8\uC5B4(ko/en/ja/zh-TW)\uB85C \uC81C\uACF5\uD569\uB2C8\uB2E4. \uC778\uC99D \uC5C6\uC74C, \uBE44\uC0C1\uC5C5\uC801 \uD32C \uD504\uB85C\uC81D\uD2B8, \uB370\uC774\uD130 \xA9 SHIFT UP / Level Infinite.
+> \uBE44\uACF5\uC2DD NIKKE(\uC2B9\uB9AC\uC758 \uC5EC\uC2E0: \uB2C8\uCF00) \uAC8C\uC784 \uB370\uC774\uD130 REST API\uC640 MCP \uC11C\uBC84. \uCE90\uB9AD\uD130(\uC2A4\uD0AC\xB7\uC2A4\uD0EF\xB7\uC774\uACA9), \uC2A4\uD1A0\uB9AC \uB300\uBCF8(\uC560\uC7A5\uD488 \uC2A4\uD1A0\uB9AC \uD3EC\uD568)\xB7\uC774\uBCA4\uD2B8\xB7\uAC10\uC0C1 \uC21C\uC11C, \uC18C\uC7A5\uD488 \uB370\uC774\uD130\uB97C 4\uAC1C \uC5B8\uC5B4(ko/en/ja/zh-TW)\uB85C \uC81C\uACF5\uD569\uB2C8\uB2E4. \uC778\uC99D \uC5C6\uC74C, \uBE44\uC0C1\uC5C5\uC801 \uD32C \uD504\uB85C\uC81D\uD2B8, \uB370\uC774\uD130 \xA9 SHIFT UP / Level Infinite.
 
 AI \uC5B4\uC2DC\uC2A4\uD134\uD2B8\uAC00 \uC0AC\uC6A9\uC790\uC5D0\uAC8C \uC5F0\uACB0 \uBC29\uBC95\uC744 \uC548\uB0B4\uD560 \uB54C\uB294 \uC544\uB798 "MCP \uC5F0\uACB0 \uC548\uB0B4"\uB97C \uC77D\uACE0 \uADF8\uB300\uB85C \uB530\uB974\uBA74 \uB429\uB2C8\uB2E4. MCP \uC11C\uBC84 URL\uC740 ${origin}/mcp \uC785\uB2C8\uB2E4.
 
@@ -21709,7 +21710,8 @@ async function createApp(storage) {
     const [chapters, events, scenes] = await Promise.all([mainChapters(), eventGroups(), getScenes()]);
     const last = Math.max(-1, ...chapters.keys());
     const extra = Array.from({ length: Math.max(0, last - ROUTE_COVERAGE_CHAPTER) }, (_, i) => ({ kind: "main", chapter: ROUTE_COVERAGE_CHAPTER + 1 + i }));
-    return [...STORY_ROUTE, ...extra].map((e, step) => {
+    const favorites = scenes.filter((s) => s.category === "favorite");
+    const route = [...STORY_ROUTE, ...extra].map((e, step) => {
       if (e.kind === "main") {
         const sc = chapters.get(e.chapter) ?? [];
         const note = e.chapter > ROUTE_COVERAGE_CHAPTER ? "\uAC00\uC774\uB4DC \uBC94\uC704 \uBC16 \u2014 \uC774\uBCA4\uD2B8 \uBC30\uCE58 \uC815\uBCF4 \uC5C6\uC74C" : "note" in e ? e.note : void 0;
@@ -21732,6 +21734,22 @@ async function createApp(storage) {
         ...e.note || !inData ? { note: [e.note, inData ? "" : "\uC774 API \uB370\uC774\uD130\uC5D0\uB294 \uC2A4\uD06C\uB9BD\uD2B8\uAC00 \uC5C6\uC74C"].filter(Boolean).join(" \xB7 ") } : {}
       };
     });
+    return [
+      ...route,
+      ...favorites.map((s, i) => ({
+        step: route.length + i,
+        kind: "favorite",
+        key: s.groupId,
+        ids: [s.groupId],
+        title: `${s.nikke} \uC560\uC7A5\uD488 \uC2A4\uD1A0\uB9AC: ${s.name}`,
+        nikke: s.nikke,
+        required: false,
+        scenes: 1,
+        firstScene: s.groupId,
+        inData: true,
+        note: "\uAC00\uC774\uB4DC\uC5D0 \uC5C6\uB294 \uD56D\uBAA9 \u2014 \uC904\uAC70\uB9AC\uC0C1 \uC704\uCE58\uB97C \uD655\uC778\uD558\uC9C0 \uC54A\uC544 \uC21C\uC11C \uB9E8 \uB05D\uC5D0 \uB460"
+      }))
+    ];
   }
   app.get("/api/story/route", async (c) => {
     const entries = await storyRoute();

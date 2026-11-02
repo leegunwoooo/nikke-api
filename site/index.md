@@ -67,13 +67,13 @@ Claude Code·Cursor·VS Code 설정과 문제 해결은 [MCP 연결 가이드](/
 <div class="nk-feature">
 <h3>스토리 감상 순서</h3>
 
-메인 챕터 사이에 이벤트·사이드·호감도 스토리를 끼워 넣은 커뮤니티 추천 순서로, 지금 위치에서 다음에 볼 스토리를 알려 줍니다.
+메인 챕터 사이에 이벤트·사이드·호감도 스토리를 끼워 넣은 커뮤니티 추천 순서로, 지금 위치에서 다음에 볼 스토리를 알려 줍니다. 가이드에 없는 애장품 스토리는 맨 뒤에 선택 항목으로 붙어요.
 
 </div>
 <div class="nk-feature">
 <h3>대사 검색과 등장 씬</h3>
 
-대사 한 줄이나 화자로 전체 스토리를 검색하고, 캐릭터가 나오는 씬과 이벤트를 대사 수 순으로 찾습니다.
+대사 한 줄이나 화자로 애장품 스토리까지 전체 스토리를 검색하고, 캐릭터가 나오는 씬과 이벤트를 대사 수 순으로 찾습니다.
 
 </div>
 <div class="nk-feature">
@@ -123,7 +123,7 @@ Claude Code·Cursor·VS Code 설정과 문제 해결은 [MCP 연결 가이드](/
 
 **저작권 고지**
 
-본 프로젝트는 **비공식·비상업적 팬 프로젝트**입니다. 제공되는 모든 게임 데이터의 저작권은 **© SHIFT UP / Level Infinite**에 있으며, SHIFT UP 및 Level Infinite와 아무런 관련이 없습니다. 데이터는 공개된 [BlablaLink](https://www.blablalink.com) CDN 리소스를 그대로 참조합니다.
+본 프로젝트는 **비공식·비상업적 팬 프로젝트**입니다. 제공되는 모든 게임 데이터의 저작권은 **© SHIFT UP / Level Infinite**에 있으며, SHIFT UP 및 Level Infinite와 아무런 관련이 없습니다. 데이터는 공개된 [BlablaLink](https://www.blablalink.com) CDN 리소스를 그대로 참조합니다. 단, 애장품 스토리 대본은 게임 데이터에 없어 공개 영상 화면에서 옮겨 적은 것으로, [저장소](https://github.com/leegunwoooo/nikke-api/tree/main/content/favorite-stories)에 직접 보관합니다.
 
 </footer>
 
