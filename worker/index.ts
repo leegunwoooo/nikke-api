@@ -111,6 +111,7 @@ const adminToken = async (request: Request, env: Env) => {
   const v = await validateCreds(c);
   if (!v.ok) return json({ error: `upstream login failed — credentials expired or invalid${v.msg ? `: ${v.msg}` : ""}` }, 400);
   await env.AREA_KV.put(CREDS_KEY, JSON.stringify(c));
+  credsMemo = { v: JSON.stringify(c), at: Date.now() };
   return json({ ok: true, open_id: c.open_id, expires: c.expires });
 };
 
@@ -125,7 +126,7 @@ const registerUser = async (request: Request, env: Env) => {
   if (!openid) return json({ error: "a BlablaLink share URL or openid is required" }, 400);
   const denied = await throttled(env, request);
   if (denied) return denied;
-  const creds = await env.AREA_KV.get(CREDS_KEY);
+  const creds = await getCreds(env);
   const probe = await app.fetch(
     new Request(`https://internal/api/user/${openid}?fields=intlOpenId`, {
       headers: creds ? { [HDR_CREDS]: btoa(creds) } : {},
@@ -133,7 +134,9 @@ const registerUser = async (request: Request, env: Env) => {
   );
   if (!probe.ok) return json({ error: `profile lookup failed (${probe.status})` }, 502);
   const key = `u_${crypto.randomUUID().replaceAll("-", "").slice(0, 16)}`;
-  await env.AREA_KV.put(`user:${key}`, JSON.stringify({ openid, created: new Date().toISOString() }));
+  const stored = JSON.stringify({ openid, created: new Date().toISOString() });
+  await env.AREA_KV.put(`user:${key}`, stored);
+  keyMemo.set(key, { v: stored, at: Date.now() });
   const proto = request.headers.get("x-forwarded-proto") ?? new URL(request.url).protocol.replace(":", "");
   const host = request.headers.get("x-forwarded-host") ?? new URL(request.url).host;
   return json({ key, url: `${proto}://${host}/mcp/u/${key}` });
@@ -162,12 +165,54 @@ const userTargetOf = (url: URL) => {
   return raw ? intlOpenIdOf(raw) : null;
 };
 
+// KV reads are the scarcest free-tier quota after requests (100k/day) and
+// all three values below change rarely — creds only on manual admin reseed,
+// connector keys never, area ids only once per profile. Isolate-memory
+// memoization turns repeat reads free; worst-case staleness is TTL seconds.
+const CREDS_MEMO_MS = 60_000;
+const KEY_MEMO_MS = 3600_000;
+const AREA_MEMO_MS = 3600_000;
+let credsMemo: { v: string | null; at: number } | undefined;
+const keyMemo = new Map<string, { v: string; at: number }>();
+const areaMemo = new Map<string, { v: string; at: number }>();
+
+const getCreds = async (env: Env) => {
+  const now = Date.now();
+  if (credsMemo && now - credsMemo.at < CREDS_MEMO_MS) return credsMemo.v;
+  const v = (await env.AREA_KV?.get(CREDS_KEY)) ?? null;
+  credsMemo = { v, at: now };
+  return v;
+};
+
+// misses aren't memoized — a newly registered key must work on any isolate
+// immediately, while known keys are immutable and safe to remember
+const getConnector = async (env: Env, key: string) => {
+  const m = keyMemo.get(key);
+  const now = Date.now();
+  if (m && now - m.at < KEY_MEMO_MS) return m.v;
+  const v = await env.AREA_KV?.get(`user:${key}`);
+  if (v != null) keyMemo.set(key, { v, at: now });
+  return v ?? null;
+};
+
+const getArea = async (env: Env, openid: string) => {
+  const m = areaMemo.get(openid);
+  const now = Date.now();
+  if (m && now - m.at < AREA_MEMO_MS) return m.v;
+  const v = await env.AREA_KV?.get(openid);
+  if (v != null) areaMemo.set(openid, { v, at: now });
+  return v ?? null;
+};
+
 // per-isolate sliding window — fallback when no RATE_LIMITER binding exists
 // (Pages Functions don't support it). Per-isolate is still bounded, and the
 // real binding takes precedence when present.
 const windows = new Map<string, number[]>();
 const inMemoryLimited = (key: string, limit = 60) => {
   const now = Date.now();
+  // bound memory under IP-scan bursts — sweep dead windows only when large
+  if (windows.size > 5000)
+    for (const [k, ts] of windows) if (now - ts[ts.length - 1] > 60_000) windows.delete(k);
   const w = (windows.get(key) ?? []).filter((t) => now - t < 60_000);
   if (w.length >= limit) return true;
   w.push(now);
@@ -236,7 +281,7 @@ export default {
     // rewrite to plain /mcp. MCP is stateless POST; skip the GET cache path.
     const um = url.pathname.match(/^\/mcp\/u\/([A-Za-z0-9_-]+)$/);
     if (um) {
-      const raw = await env.AREA_KV?.get(`user:${um[1]}`);
+      const raw = await getConnector(env, um[1]);
       if (!raw) return json({ error: "unknown connector key" }, 404);
       const limited = env.RATE_LIMITER
         ? !(await env.RATE_LIMITER.limit({ key: `u:${um[1]}` })).success
@@ -245,7 +290,7 @@ export default {
       const openid = (JSON.parse(raw) as { openid: string }).openid;
       url.pathname = "/mcp";
       h.set(HDR_BLABLAID, openid);
-      const creds = await env.AREA_KV?.get(CREDS_KEY);
+      const creds = await getCreds(env);
       if (creds) h.set(HDR_CREDS, btoa(creds));
       const app = await getApp(env);
       const res = await app.fetch(new Request(url.toString(), new Request(request, { headers: h })));
@@ -265,7 +310,7 @@ export default {
       url.searchParams.delete("refresh");
       // a remembered nikke_area_id lets the origin skip one upstream call
       if (target && !url.searchParams.has("area")) {
-        const area = await env.AREA_KV?.get(target);
+        const area = await getArea(env, target);
         if (area) url.searchParams.set("area", area);
       }
       url.searchParams.sort(); // param order shouldn't split the cache
@@ -288,7 +333,7 @@ export default {
 
     // MISS/pass-through from here on — now the app and creds are needed
     if (userPath || url.pathname.startsWith("/mcp")) {
-      const creds = await env.AREA_KV?.get(CREDS_KEY);
+      const creds = await getCreds(env);
       if (creds) h.set(HDR_CREDS, btoa(creds));
     }
     request = new Request(request, { headers: h });
@@ -331,8 +376,10 @@ export default {
             try {
               const j = (await res.clone().json()) as { intlOpenId?: string; areaId?: number };
               const openid = j.intlOpenId ?? target;
-              if (typeof j.areaId === "number")
+              if (typeof j.areaId === "number") {
                 await env.AREA_KV!.put(openid, String(j.areaId), { expirationTtl: AREA_KV_TTL });
+                areaMemo.set(openid, { v: String(j.areaId), at: Date.now() });
+              }
             } catch { /* not json */ }
           })(),
         );
