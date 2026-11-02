@@ -142,7 +142,8 @@ async function post<T>(path: string, body: Record<string, unknown>): Promise<Gam
       }
       return j;
     }
-    throw new Error("blabla auth failed");
+    if (!limited) throw new Error("blabla auth failed"); // session rejected twice
+    // rate limited — the outer loop backs off and retries
   }
   if (limited) return limited;
   throw new Error("blabla auth failed");

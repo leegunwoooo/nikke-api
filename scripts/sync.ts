@@ -92,8 +92,10 @@ async function syncScenes(): Promise<number> {
       ),
     );
     const groupIds = [
-      ...new Set(blob.join("").matchAll(/"scenario_group_id"\s*:\s*"([^"]+)"/g)),
-    ].map((m) => m[1]);
+      ...new Set(
+        [...blob.join("").matchAll(/"scenario_group_id"\s*:\s*"([^"]+)"/g)].map((m) => m[1]),
+      ),
+    ];
     for (const gid of groupIds) {
       queue.push([`scene/ko/scene_detail_${gid}.json`, `scene_${gid}.json`]);
     }
