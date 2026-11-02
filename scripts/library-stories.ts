@@ -211,10 +211,10 @@ async function walkTxt(dir: string): Promise<string[]> {
   return out;
 }
 
-export async function readLibraryStories(root = path.resolve(LIBRARY_DIR)) {
+export async function readLibraryStories(root = path.resolve(LIBRARY_DIR), commit = LIBRARY_COMMIT) {
   const marker = await readFile(path.join(root, "COMMIT"), "utf8").catch(() => "");
-  if (marker.trim() !== LIBRARY_COMMIT) {
-    throw new Error(`${LIBRARY_DIR} is not at ${LIBRARY_COMMIT} — run npm run sync`);
+  if (marker.trim() !== commit) {
+    throw new Error(`${root} is not at ${commit} — run npm run sync`);
   }
   const catalog = new Map<string, { title: string; section?: string }>();
   for (const f of await readdir(path.join(root, "catalog"))) {
@@ -255,10 +255,10 @@ export async function readLibraryStories(root = path.resolve(LIBRARY_DIR)) {
 }
 
 /** Fetch the pinned archive, keeping only the scripts and their index. */
-export async function syncLibrary(fetchFn: typeof fetch = fetch, root = path.resolve(LIBRARY_DIR)): Promise<boolean> {
+export async function syncLibrary(fetchFn: typeof fetch = fetch, root = path.resolve(LIBRARY_DIR), commit = LIBRARY_COMMIT): Promise<boolean> {
   const marker = await readFile(path.join(root, "COMMIT"), "utf8").catch(() => "");
-  if (marker.trim() === LIBRARY_COMMIT && existsSync(path.join(root, "scripts"))) return false;
-  const res = await fetchFn(`https://codeload.github.com/${LIBRARY_REPO}/tar.gz/${LIBRARY_COMMIT}`);
+  if (marker.trim() === commit && existsSync(path.join(root, "scripts"))) return false;
+  const res = await fetchFn(`https://codeload.github.com/${LIBRARY_REPO}/tar.gz/${commit}`);
   if (!res.ok) throw new Error(`library download: HTTP ${res.status}`);
   const tmp = `${root}.tmp`;
   await rm(tmp, { recursive: true, force: true });
@@ -272,7 +272,7 @@ export async function syncLibrary(fetchFn: typeof fetch = fetch, root = path.res
   await rename(path.join(tmp, "data/new_scripts"), path.join(root, "catalog"));
   // the main story's index sits outside new_scripts
   await rename(path.join(tmp, "data/mainStoryScripts.ts"), path.join(root, "catalog/mainStoryScripts.ts"));
-  await writeFile(path.join(root, "COMMIT"), LIBRARY_COMMIT);
+  await writeFile(path.join(root, "COMMIT"), commit);
   await rm(tmp, { recursive: true, force: true });
   await rm(archive, { force: true });
   return true;

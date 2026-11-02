@@ -22,3 +22,8 @@
 - `data/dist`가 바뀌면(빌드 파이프라인/스키마 변경) **데이터 먼저**
   `wrangler pages deploy data/dist --project-name=nikke-api-data`로 배포한 뒤 워커를 배포한다 —
   워커가 아직 없는 파일을 참조하는 시간을 만들지 않기 위해.
+
+## 금서고 원본 갱신
+
+- `library` 씬은 `scripts/library-stories.ts`의 `LIBRARY_COMMIT`에 고정된다. 원본이 바뀌면
+  `Watch story archive` 워크플로가 이슈로 알려 주고, 값을 올린 PR을 머지하면 다음 데이터 갱신 때 배포된다.
