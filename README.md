@@ -18,6 +18,7 @@
 BlablaLink(공식 위키 도구)의 CDN 데이터를 매일 동기화합니다. 데이터 변경이 감지될 때만 자동 재배포되어 항상 최신 상태를 유지합니다. 데이터 빌드는 GitHub Actions에서 수행하고 결과물을 [`data-latest`](https://github.com/leegunwoooo/nikke-api/releases/tag/data-latest) 릴리즈 artifact로 올리므로, Vercel 배포는 tarball 하나만 받으면 됩니다.
 
 **라이브 주소**: https://nikke-api-edge.leegunwoo0325-5e6.workers.dev
+**문서 사이트**: https://nikke-api-docs.pages.dev
 
 - **4개 언어** 지원: 한국어 `ko` / 영어 `en` / 일본어 `ja` / 중국어 번체 `zh-TW`
 - 이미지·음성은 BlablaLink CDN URL로 제공 (직접 재호스팅하지 않음)
