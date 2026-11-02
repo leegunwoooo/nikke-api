@@ -104,7 +104,7 @@ const registerUser = async (request: Request, env: Env) => {
   const creds = await env.AREA_KV.get(CREDS_KEY);
   const probe = await app.fetch(
     new Request(`https://internal/api/user/${openid}?fields=intlOpenId`, {
-      headers: creds ? { [HDR_CREDS]: creds } : {},
+      headers: creds ? { [HDR_CREDS]: btoa(creds) } : {},
     }),
   );
   if (!probe.ok) return json({ error: `profile lookup failed (${probe.status})` }, 502);
@@ -204,7 +204,7 @@ export default {
       url.pathname = "/mcp";
       h.set(HDR_BLABLAID, openid);
       const creds = await env.AREA_KV?.get(CREDS_KEY);
-      if (creds) h.set(HDR_CREDS, creds);
+      if (creds) h.set(HDR_CREDS, btoa(creds));
       const app = await getApp(env);
       const res = await app.fetch(new Request(url.toString(), new Request(request, { headers: h })));
       track("PASS");
@@ -214,7 +214,7 @@ export default {
     // routes that can call the upstream game API get the latest creds injected
     if (url.pathname.startsWith("/api/user") || url.pathname.startsWith("/mcp")) {
       const creds = await env.AREA_KV?.get(CREDS_KEY);
-      if (creds) h.set(HDR_CREDS, creds);
+      if (creds) h.set(HDR_CREDS, btoa(creds));
     }
     request = new Request(request, { headers: h });
 
