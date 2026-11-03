@@ -86,7 +86,7 @@ export function parseLibraryScript(text: string, warn: (msg: string) => void = (
     if (body) {
       if (msg.system) push({ text: body, window: "Narration" });
       else if (msg.self || msg.sender === COMMANDER) push({ text: body, window: "Self" });
-      else push({ speakerName: msg.sender, text: body, window: "Speech" });
+      else push({ speakerName: msg.sender?.trim(), text: body, window: "Speech" });
     }
     msg = null;
   };
@@ -147,7 +147,7 @@ export function parseLibraryScript(text: string, warn: (msg: string) => void = (
     } else if (!IGNORED_TAG.test(t)) {
       const m = t.match(SPEECH);
       if (m?.[1] === COMMANDER) push({ text: m[2], window: "Self" });
-      else if (m) push({ speakerName: m[1], text: m[2], window: "Speech" });
+      else if (m) push({ speakerName: m[1].trim(), text: m[2], window: "Speech" });
       else push({ text: t, window: "Narration" });
     }
   }
