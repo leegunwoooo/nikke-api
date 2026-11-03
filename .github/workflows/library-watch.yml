@@ -1,0 +1,49 @@
+name: Watch story archive
+
+on:
+  schedule:
+    # 데이터 갱신(20:00 UTC)과 겹치지 않는 시간대
+    - cron: "30 21 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  watch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+
+      - run: npm ci
+
+      - name: Compare with the pinned commit
+        id: diff
+        run: npx tsx scripts/library-watch.ts "$RUNNER_TEMP/issue.md"
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      # 열린 이슈는 하나만 유지. 같은 커밋으로 이미 닫은 이슈가 있으면 다시 올리지 않는다
+      - name: Open or update the issue
+        if: steps.diff.outputs.changed == 'true'
+        run: |
+          TITLE="금서고 원본 갱신 감지"
+          ISSUES=$(gh issue list --repo "$GITHUB_REPOSITORY" --state all --limit 100 --author "app/github-actions" --search "\"$TITLE\" in:title" --json number,state,body)
+          OPEN=$(jq -r '[.[] | select(.state == "OPEN")][0].number // empty' <<< "$ISSUES")
+          SEEN=$(jq -r --arg m "library-watch:$HEAD" '[.[] | select(.body | contains($m))] | length' <<< "$ISSUES")
+          if [ -n "$OPEN" ]; then
+            gh issue edit "$OPEN" --repo "$GITHUB_REPOSITORY" --body-file "$RUNNER_TEMP/issue.md"
+          elif [ "$SEEN" = "0" ]; then
+            gh issue create --repo "$GITHUB_REPOSITORY" --title "$TITLE" --body-file "$RUNNER_TEMP/issue.md"
+          else
+            echo "$HEAD was already reported and closed"
+          fi
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          HEAD: ${{ steps.diff.outputs.head }}
