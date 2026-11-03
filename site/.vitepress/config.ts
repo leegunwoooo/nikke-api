@@ -35,6 +35,9 @@ export default defineConfig({
   sitemap: { hostname: SITE_URL },
   head: [
     ["meta", { name: "theme-color", content: "#c93a53" }],
+    // search engine ownership — removing these can drop the verified status
+    ["meta", { name: "google-site-verification", content: "4K4X4Ofw68rTasXyzV-Vj7hU9dCMpgipT-mKmVUMxik" }],
+    ["meta", { name: "naver-site-verification", content: "375c644bac557410835f3bfabca9b3c10a350745" }],
     ["link", { rel: "icon", href: `${BASE}favicon.ico`, sizes: "48x48" }],
     ["link", { rel: "icon", href: `${BASE}favicon.svg`, type: "image/svg+xml" }],
     ["link", { rel: "apple-touch-icon", href: `${BASE}apple-touch-icon.png` }],
