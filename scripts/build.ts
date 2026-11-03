@@ -374,6 +374,11 @@ async function main() {
     const key = f.replace(/^voice_map_|\.json$/g, "");
     voiceMaps.set(key, new Set(JSON.parse(await readFile(path.join(RAW, f), "utf8"))));
   }
+  // raw dialogue leaks `_x000D_` (XML-escaped CR) before line breaks —
+  // strip it (and a trailing space before it) while keeping the \n
+  const cleanLineText = (s: unknown) =>
+    typeof s === "string" ? s.replace(/ ?(?:_x000D_)+/g, "") : s;
+
   const voiceUrl = (gid: string, id: string | undefined) =>
     id && voiceMaps.get(gid.match(/d_main_\d+/)?.[0] ?? gid)?.has(id)
       ? cdnUrl(`voice/ko/${id}.mp3`)
@@ -458,7 +463,7 @@ async function main() {
       id: r.value?.id,
       speaker: r.value?.speaker,
       speakerName: r.speaker?.name_localkey?.character_name ?? r.value?.speaker,
-      text: r.quest_name,
+      text: cleanLineText(r.quest_name),
       window: r.value?.speech_window,
       speakerIcon: speakerIcon(r.value?.speaker, undefined),
       voice: voiceUrl(gid, r.value?.id),
@@ -481,7 +486,7 @@ async function main() {
       id: r.id,
       speaker: r.speaker,
       speakerName: r.speaker_detail?.name_localkey ?? r.speaker,
-      text: r.scenario_localkey,
+      text: cleanLineText(r.scenario_localkey),
       window: r.speech_window,
       background: r.set_background,
       bgm: r.play_bgm,
