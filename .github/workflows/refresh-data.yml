@@ -85,7 +85,7 @@ jobs:
       # project — refreshing data is just a static deploy, no backend rebuild
       - name: Generate file manifest
         if: steps.decide.outputs.deploy == 'yes'
-        run: node scripts/emit-manifest.mjs data/dist
+        run: npx tsx scripts/emit-manifest.ts data/dist
 
       - name: Deploy dist to Cloudflare Pages
         if: steps.decide.outputs.deploy == 'yes'

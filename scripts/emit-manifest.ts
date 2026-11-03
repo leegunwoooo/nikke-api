@@ -5,8 +5,8 @@ import { readdirSync, statSync, writeFileSync } from "node:fs";
 import path from "node:path";
 
 export function emitManifest(root = "data/dist") {
-  const out = [];
-  const walk = (dir) => {
+  const out: string[] = [];
+  const walk = (dir: string) => {
     for (const name of readdirSync(dir)) {
       const p = path.join(dir, name);
       if (statSync(p).isDirectory()) walk(p);

@@ -3,7 +3,7 @@ import { mkdirSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from "nod
 import { tmpdir } from "node:os";
 import path from "node:path";
 import { test } from "node:test";
-import { emitManifest } from "../scripts/emit-manifest.mjs";
+import { emitManifest } from "../scripts/emit-manifest.js";
 
 test("manifest lists dist files relative to the root, sorted, without itself", () => {
   const root = mkdtempSync(path.join(tmpdir(), "manifest-"));
