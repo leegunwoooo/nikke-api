@@ -69,11 +69,14 @@ const getApp = async (env: Env, ctx?: ExecutionContext): Promise<App> => {
   if (appPromise) {
     // warm isolate past the revalidation window — serve the current app
     // and refresh the stamp (and the app, if it changed) in the background
-    const check = stampOf(host).then((stamp) => {
+    const check = stampOf(host).then(async (stamp) => {
       appBuiltAt = Date.now();
       if (stamp !== null && stamp !== dataStamp) {
         dataStamp = stamp;
         appPromise = createApp(httpStorage(host));
+        // keep the rebuild inside waitUntil — ending the request earlier
+        // would let the isolate die mid-rebuild and leave a pending appPromise
+        await appPromise.catch(() => {});
       }
     });
     if (ctx) ctx.waitUntil(check);

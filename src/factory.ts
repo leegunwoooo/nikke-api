@@ -20,7 +20,14 @@ import type { Storage } from "./storage.js";
 // themselves so a transient error never becomes a permanent cache entry
 const memo = <T>(fn: () => Promise<T>) => {
   let p: Promise<T> | undefined;
-  return () => (p ??= fn().catch((e) => ((p = undefined), Promise.reject(e))));
+  return () =>
+    (p ??= Promise.race([
+      fn(),
+      // a fetch killed mid-flight (client abort / isolate teardown) would
+      // otherwise leave this promise pending forever — and every caller
+      // sharing it would hang too. Bound it so waiters retry instead.
+      new Promise<never>((_, rej) => setTimeout(() => rej(new Error("load timeout")), 30_000)),
+    ]).catch((e) => ((p = undefined), Promise.reject(e))));
 };
 
 const norm = (s: string) => s.toLowerCase().replace(/[\s:_\-·]/g, "");
@@ -854,7 +861,17 @@ app.get("/api/events/:id/script", async (c) => {
   if ("error" in pg) return c.json({ error: pg.error }, 400);
   const ids = ev.scenes.slice(pg.off, pg.off + pg.lim);
   const idx = new Map((await getScenes()).map((s) => [s.groupId, s]));
-  const scripts = await Promise.all(ids.map((g) => getScript(g).catch(() => [])));
+  // a genuinely missing scene file is an empty episode — but a fetch
+  // failure must surface as an error, or the truncated script gets
+  // cached as a 200 for a full day
+  const scripts = await Promise.all(
+    ids.map((g) =>
+      getScript(g).catch((e) => {
+        if (/HTTP 404|not found|ENOENT/.test(String(e?.message ?? e))) return [] as ScriptLine[];
+        throw e;
+      }),
+    ),
+  );
   return c.json({
     id: ev.id,
     title: ev.title,
@@ -1830,6 +1847,13 @@ app.get("/llms.txt", (c) => {
 });
 
 app.notFound((c) => c.json({ error: "not found" }, 404));
+
+// unhandled route errors still come back as JSON — a bare exception would
+// otherwise surface as an empty/non-JSON 500
+app.onError((err, c) => {
+  console.error(`[api] ${c.req.method} ${c.req.path}: ${err?.message ?? err}`);
+  return c.json({ error: "internal error" }, 500);
+});
 
 app.get("/docs", (c) =>
   c.html(`<!doctype html>

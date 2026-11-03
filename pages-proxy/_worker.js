@@ -20992,7 +20992,13 @@ function buildOpenapi(pkgVersion) {
 // src/factory.ts
 var memo3 = (fn) => {
   let p;
-  return () => p ??= fn().catch((e) => (p = void 0, Promise.reject(e)));
+  return () => p ??= Promise.race([
+    fn(),
+    // a fetch killed mid-flight (client abort / isolate teardown) would
+    // otherwise leave this promise pending forever — and every caller
+    // sharing it would hang too. Bound it so waiters retry instead.
+    new Promise((_, rej) => setTimeout(() => rej(new Error("load timeout")), 3e4))
+  ]).catch((e) => (p = void 0, Promise.reject(e)));
 };
 var norm = (s) => s.toLowerCase().replace(/[\s:_\-·]/g, "");
 var truthy = (v) => v === "1" || v === "true";
@@ -21637,7 +21643,14 @@ async function createApp(storage) {
     if ("error" in pg) return c.json({ error: pg.error }, 400);
     const ids = ev2.scenes.slice(pg.off, pg.off + pg.lim);
     const idx = new Map((await getScenes()).map((s) => [s.groupId, s]));
-    const scripts = await Promise.all(ids.map((g) => getScript(g).catch(() => [])));
+    const scripts = await Promise.all(
+      ids.map(
+        (g) => getScript(g).catch((e) => {
+          if (/HTTP 404|not found|ENOENT/.test(String(e?.message ?? e))) return [];
+          throw e;
+        })
+      )
+    );
     return c.json({
       id: ev2.id,
       title: ev2.title,
@@ -22441,6 +22454,10 @@ async function createApp(storage) {
     return c.body(llmsTxt(requestOrigin(c.req.raw)), 200, { "Content-Type": "text/markdown; charset=utf-8" });
   });
   app.notFound((c) => c.json({ error: "not found" }, 404));
+  app.onError((err, c) => {
+    console.error(`[api] ${c.req.method} ${c.req.path}: ${err?.message ?? err}`);
+    return c.json({ error: "internal error" }, 500);
+  });
   app.get(
     "/docs",
     (c) => c.html(`<!doctype html>
@@ -22504,11 +22521,13 @@ var getApp = async (env, ctx) => {
   const now = Date.now();
   if (appPromise && now - appBuiltAt < REVALIDATE_MS) return appPromise;
   if (appPromise) {
-    const check = stampOf(host).then((stamp) => {
+    const check = stampOf(host).then(async (stamp) => {
       appBuiltAt = Date.now();
       if (stamp !== null && stamp !== dataStamp) {
         dataStamp = stamp;
         appPromise = createApp(httpStorage(host));
+        await appPromise.catch(() => {
+        });
       }
     });
     if (ctx) ctx.waitUntil(check);
