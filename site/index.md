@@ -123,7 +123,7 @@ Claude Code·Cursor·VS Code 설정과 문제 해결은 [MCP 연결 가이드](/
 
 **저작권 고지**
 
-본 프로젝트는 **비공식·비상업적 팬 프로젝트**입니다. 제공되는 모든 게임 데이터의 저작권은 **© SHIFT UP / Level Infinite**에 있으며, SHIFT UP 및 Level Infinite와 아무런 관련이 없습니다. 데이터는 공개된 [BlablaLink](https://www.blablalink.com) CDN 리소스를 그대로 참조합니다. 단, 애장품 스토리 대본은 게임 데이터에 없어 공개 영상 화면에서 옮겨 적은 것으로, [저장소](https://github.com/leegunwoooo/nikke-api/tree/main/content/favorite-stories)에 직접 보관합니다. `library` 카테고리의 스토리도 게임 데이터에 없어, 커뮤니티 기록 [Nikke Forbidden Library](https://github.com/VoMiRin/Nikke-Forbidden-Library)에서 가져와 API 형식으로 변환해 제공합니다.
+본 프로젝트는 **비공식·비상업적 팬 프로젝트**입니다. 제공되는 모든 게임 데이터의 저작권은 **© SHIFT UP / Level Infinite**에 있으며, SHIFT UP 및 Level Infinite와 아무런 관련이 없습니다. 데이터는 공개된 [BlablaLink](https://www.blablalink.com) CDN 리소스를 그대로 참조합니다. 단, 애장품 스토리 대본은 게임 데이터에 없어 공개 영상 화면에서 옮겨 적은 것으로, [저장소](https://github.com/leegunwoooo/nikke-api/tree/main/content/favorite-stories)에 직접 보관합니다. `library` 카테고리의 스토리도 게임 데이터에 없어, 커뮤니티 기록 [Nikke Forbidden Library](https://github.com/VoMiRin/Nikke-Forbidden-Library)에서 가져와 API 형식으로 변환해 제공합니다. 그중 아직 기록이 없는 MARIA-n은 공개 영상 화면에서 옮겨 적었습니다.
 
 </footer>
 
