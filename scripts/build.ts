@@ -464,7 +464,9 @@ async function main() {
       speaker: r.value?.speaker,
       speakerName: r.speaker?.name_localkey?.character_name ?? r.value?.speaker,
       text: cleanLineText(r.quest_name),
-      window: r.value?.speech_window,
+      // Locale_SubScenario:* 레코드는 대사가 아닌 컷신·영상 연출 마커 —
+      // text:null로 나가는 대신 window로 구분
+      window: r.value?.speech_window ?? (typeof r.value?.scenario_localkey === "string" && r.value.scenario_localkey.startsWith("Locale_SubScenario:") ? "SubScenario" : undefined),
       speakerIcon: speakerIcon(r.value?.speaker, undefined),
       voice: voiceUrl(gid, r.value?.id),
     }));
