@@ -4,7 +4,7 @@ var __export = (target, all) => {
     __defProp(target, name, { get: all[name], enumerable: true });
 };
 
-// node_modules/hono/dist/compose.js
+// ../nikke-api-library-stories/node_modules/hono/dist/compose.js
 var compose = (middleware, onError, onNotFound) => {
   return (context, next) => {
     let index = -1;
@@ -48,10 +48,10 @@ var compose = (middleware, onError, onNotFound) => {
   };
 };
 
-// node_modules/hono/dist/request/constants.js
+// ../nikke-api-library-stories/node_modules/hono/dist/request/constants.js
 var GET_MATCH_RESULT = /* @__PURE__ */ Symbol();
 
-// node_modules/hono/dist/utils/buffer.js
+// ../nikke-api-library-stories/node_modules/hono/dist/utils/buffer.js
 var bufferToFormData = (arrayBuffer, contentType) => {
   const response = new Response(arrayBuffer, {
     headers: {
@@ -62,7 +62,7 @@ var bufferToFormData = (arrayBuffer, contentType) => {
   return response.formData();
 };
 
-// node_modules/hono/dist/utils/body.js
+// ../nikke-api-library-stories/node_modules/hono/dist/utils/body.js
 var MAX_NESTING_DEPTH = 32;
 var MAX_NESTED_OBJECTS = 1e4;
 var isRawRequest = (request) => "headers" in request;
@@ -160,7 +160,7 @@ var throwNestingLimitExceeded = () => {
   throw new Error("Nesting limit exceeded");
 };
 
-// node_modules/hono/dist/utils/url.js
+// ../nikke-api-library-stories/node_modules/hono/dist/utils/url.js
 var splitPath = (path2) => {
   const paths = path2.split("/");
   if (paths[0] === "") {
@@ -366,7 +366,7 @@ var getQueryParams = (url2, key2) => {
 };
 var decodeURIComponent_ = decodeURIComponent;
 
-// node_modules/hono/dist/request.js
+// ../nikke-api-library-stories/node_modules/hono/dist/request.js
 var HonoRequest = class {
   /**
    * `.raw` can get the raw Request object.
@@ -650,7 +650,7 @@ var HonoRequest = class {
   }
 };
 
-// node_modules/hono/dist/utils/html.js
+// ../nikke-api-library-stories/node_modules/hono/dist/utils/html.js
 var HtmlEscapedCallbackPhase = {
   Stringify: 1,
   BeforeStream: 2,
@@ -692,7 +692,7 @@ var resolveCallback = async (str, phase, preserveCallbacks, context, buffer) => 
   }
 };
 
-// node_modules/hono/dist/context.js
+// ../nikke-api-library-stories/node_modules/hono/dist/context.js
 var TEXT_PLAIN = "text/plain; charset=UTF-8";
 var setDefaultContentType = (contentType, headers) => {
   return {
@@ -1118,7 +1118,7 @@ var Context = class {
   };
 };
 
-// node_modules/hono/dist/router.js
+// ../nikke-api-library-stories/node_modules/hono/dist/router.js
 var METHOD_NAME_ALL = "ALL";
 var METHOD_NAME_ALL_LOWERCASE = "all";
 var METHODS = ["get", "post", "put", "delete", "options", "patch", "query"];
@@ -1126,10 +1126,10 @@ var MESSAGE_MATCHER_IS_ALREADY_BUILT = "Can not add a route since the matcher is
 var UnsupportedPathError = class extends Error {
 };
 
-// node_modules/hono/dist/utils/constants.js
+// ../nikke-api-library-stories/node_modules/hono/dist/utils/constants.js
 var COMPOSED_HANDLER = "__COMPOSED_HANDLER";
 
-// node_modules/hono/dist/hono-base.js
+// ../nikke-api-library-stories/node_modules/hono/dist/hono-base.js
 var notFoundHandler = (c) => {
   return c.text("404 Not Found", 404);
 };
@@ -1507,10 +1507,10 @@ var Hono = class _Hono {
   };
 };
 
-// node_modules/hono/dist/router/utils.js
+// ../nikke-api-library-stories/node_modules/hono/dist/router/utils.js
 var createNullObject = () => /* @__PURE__ */ Object.create(null);
 
-// node_modules/hono/dist/router/reg-exp-router/matcher.js
+// ../nikke-api-library-stories/node_modules/hono/dist/router/reg-exp-router/matcher.js
 var emptyParam = [];
 function match(method, path2) {
   const matchers = this.buildAllMatchers();
@@ -1531,7 +1531,7 @@ function match(method, path2) {
   return match2(method, path2);
 }
 
-// node_modules/hono/dist/router/reg-exp-router/node.js
+// ../nikke-api-library-stories/node_modules/hono/dist/router/reg-exp-router/node.js
 var LABEL_REG_EXP_STR = "[^/]+";
 var ONLY_WILDCARD_REG_EXP_STR = ".*";
 var TAIL_WILDCARD_REG_EXP_STR = "(?:|/.*)";
@@ -1638,7 +1638,7 @@ var Node = class _Node {
   }
 };
 
-// node_modules/hono/dist/router/reg-exp-router/trie.js
+// ../nikke-api-library-stories/node_modules/hono/dist/router/reg-exp-router/trie.js
 var Trie = class {
   #context = { varIndex: 0 };
   #root = new Node();
@@ -1702,7 +1702,7 @@ var Trie = class {
   }
 };
 
-// node_modules/hono/dist/router/reg-exp-router/router.js
+// ../nikke-api-library-stories/node_modules/hono/dist/router/reg-exp-router/router.js
 var wildcardRegExpCache = createNullObject();
 function buildWildcardRegExp(path2) {
   return wildcardRegExpCache[path2] ??= new RegExp(
@@ -1823,7 +1823,7 @@ var RegExpRouter = class {
   }
 };
 
-// node_modules/hono/dist/router/smart-router/router.js
+// ../nikke-api-library-stories/node_modules/hono/dist/router/smart-router/router.js
 var SmartRouter = class {
   name = "SmartRouter";
   #routers = [];
@@ -1878,7 +1878,7 @@ var SmartRouter = class {
   }
 };
 
-// node_modules/hono/dist/router/trie-router/node.js
+// ../nikke-api-library-stories/node_modules/hono/dist/router/trie-router/node.js
 var emptyParams = createNullObject();
 var order = 0;
 var Node2 = class _Node2 {
@@ -2038,7 +2038,7 @@ var Node2 = class _Node2 {
   }
 };
 
-// node_modules/hono/dist/router/trie-router/router.js
+// ../nikke-api-library-stories/node_modules/hono/dist/router/trie-router/router.js
 var TrieRouter = class {
   name = "TrieRouter";
   #node = new Node2();
@@ -2052,7 +2052,7 @@ var TrieRouter = class {
   }
 };
 
-// node_modules/hono/dist/hono.js
+// ../nikke-api-library-stories/node_modules/hono/dist/hono.js
 var Hono2 = class extends Hono {
   /**
    * Creates an instance of the Hono class.
@@ -2067,7 +2067,7 @@ var Hono2 = class extends Hono {
   }
 };
 
-// node_modules/hono/dist/middleware/cors/index.js
+// ../nikke-api-library-stories/node_modules/hono/dist/middleware/cors/index.js
 var cors = (options) => {
   const opts = {
     origin: "*",
@@ -2630,7 +2630,7 @@ function decodeOpenid(input) {
   return /^\d+$/.test(id) ? { intlOpenId: id } : null;
 }
 
-// node_modules/@modelcontextprotocol/server/dist/chunk-vYduTEsO.mjs
+// ../nikke-api-library-stories/node_modules/@modelcontextprotocol/server/dist/chunk-vYduTEsO.mjs
 var __create = Object.create;
 var __defProp2 = Object.defineProperty;
 var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
@@ -2670,7 +2670,7 @@ var __toESM = (mod, isNodeMode, target) => (target = mod != null ? __create(__ge
   enumerable: true
 }) : target, mod));
 
-// node_modules/@modelcontextprotocol/server/dist/dialects-CDpMbily.mjs
+// ../nikke-api-library-stories/node_modules/@modelcontextprotocol/server/dist/dialects-CDpMbily.mjs
 var DRAFT_2020_12_URIS = /* @__PURE__ */ new Set(["https://json-schema.org/draft/2020-12/schema", "http://json-schema.org/draft/2020-12/schema"]);
 var DRAFT_2019_09_URIS = /* @__PURE__ */ new Set(["https://json-schema.org/draft/2019-09/schema", "http://json-schema.org/draft/2019-09/schema"]);
 var DRAFT_07_URIS = /* @__PURE__ */ new Set(["https://json-schema.org/draft-07/schema", "http://json-schema.org/draft-07/schema"]);
@@ -2687,7 +2687,7 @@ function declaredDialect(schema, remedy) {
   throw new Error(`JSON Schema declares an unsupported dialect ("$schema": "${schema.$schema.slice(0, 200)}"). The default validator supports JSON Schema 2020-12, 2019-09, draft-07, and draft-06; ${remedy}`);
 }
 
-// node_modules/zod/v4/core/util.js
+// ../nikke-api-library-stories/node_modules/zod/v4/core/util.js
 var util_exports = {};
 __export(util_exports, {
   BIGINT_FORMAT_RANGES: () => BIGINT_FORMAT_RANGES,
@@ -3543,7 +3543,7 @@ function constantCatch(value) {
   return fn;
 }
 
-// node_modules/zod/v4/core/core.js
+// ../nikke-api-library-stories/node_modules/zod/v4/core/core.js
 var _a;
 var NEVER = /* @__PURE__ */ Object.freeze({
   status: "aborted"
@@ -3664,7 +3664,7 @@ function config(newConfig) {
   return globalConfig;
 }
 
-// node_modules/zod/v4/core/errors.js
+// ../nikke-api-library-stories/node_modules/zod/v4/core/errors.js
 function _getMessage() {
   const internals = this._zod;
   internals.message ?? (internals.message = JSON.stringify(internals.def, jsonStringifyReplacer, 2));
@@ -3779,7 +3779,7 @@ function formatError(error2, mapper = (issue2) => issue2.message) {
   return fieldErrors;
 }
 
-// node_modules/zod/v4/core/parse.js
+// ../nikke-api-library-stories/node_modules/zod/v4/core/parse.js
 function finalizeParams(callee, params) {
   return { callee: params?.callee ?? callee, Err: params?.Err };
 }
@@ -3927,7 +3927,7 @@ var _safeDecodeAsync = (_Err) => async (schema, value, _ctx) => {
   return _safeParseAsync(_Err)(schema, value, _ctx);
 };
 
-// node_modules/zod/v4/core/regexes.js
+// ../nikke-api-library-stories/node_modules/zod/v4/core/regexes.js
 var cuid = /^[cC][0-9a-z]{6,}$/;
 var cuid2 = /^[0-9a-z]+$/;
 var ulid = /^[0-7][0-9A-HJKMNP-TV-Za-hjkmnp-tv-z]{25}$/;
@@ -3987,7 +3987,7 @@ var _null = /^null$/i;
 var lowercase = /^[^A-Z]*$/;
 var uppercase = /^[^a-z]*$/;
 
-// node_modules/zod/v4/core/checks.js
+// ../nikke-api-library-stories/node_modules/zod/v4/core/checks.js
 var $ZodCheck = /* @__PURE__ */ $constructor("$ZodCheck", (inst, def) => {
   var _a3;
   inst._zod ?? (inst._zod = {});
@@ -4307,7 +4307,7 @@ var $ZodCheckOverwrite = /* @__PURE__ */ $constructor("$ZodCheckOverwrite", (ins
   };
 });
 
-// node_modules/zod/v4/core/doc.js
+// ../nikke-api-library-stories/node_modules/zod/v4/core/doc.js
 var Doc = class {
   constructor(args = [], closed = {}) {
     this.content = [];
@@ -4348,14 +4348,14 @@ ${content.join("\n")}
   }
 };
 
-// node_modules/zod/v4/core/versions.js
+// ../nikke-api-library-stories/node_modules/zod/v4/core/versions.js
 var version = {
   major: 4,
   minor: 6,
   patch: 7
 };
 
-// node_modules/zod/v4/core/schemas.js
+// ../nikke-api-library-stories/node_modules/zod/v4/core/schemas.js
 var $ZodType = /* @__PURE__ */ $constructor("$ZodType", (inst, def) => {
   var _a3;
   inst ?? (inst = {});
@@ -6087,7 +6087,7 @@ function handleRefineResult(result2, payload, input, inst) {
   }
 }
 
-// node_modules/zod/v4/core/memoizer.js
+// ../nikke-api-library-stories/node_modules/zod/v4/core/memoizer.js
 var $ZodCyclicError = class extends Error {
   constructor() {
     super(`Cannot parse a reference cycle that closes through a transform`);
@@ -6361,7 +6361,7 @@ function isBackEdge(ctx, value) {
   return backEdges !== void 0 && isRef(value) && backEdges.has(value);
 }
 
-// node_modules/zod/v4/locales/en.js
+// ../nikke-api-library-stories/node_modules/zod/v4/locales/en.js
 var error = () => {
   const Sizable = {
     string: { unit: "characters", verb: "to have" },
@@ -6486,7 +6486,7 @@ function en_default() {
   };
 }
 
-// node_modules/zod/v4/core/registries.js
+// ../nikke-api-library-stories/node_modules/zod/v4/core/registries.js
 var _a2;
 var $ZodRegistry = class {
   constructor() {
@@ -6534,7 +6534,7 @@ function registry() {
 (_a2 = globalThis).__zod_globalRegistry ?? (_a2.__zod_globalRegistry = registry());
 var globalRegistry = globalThis.__zod_globalRegistry;
 
-// node_modules/zod/v4/core/api.js
+// ../nikke-api-library-stories/node_modules/zod/v4/core/api.js
 function snapshotChecks(def) {
   if (def.checks)
     def.checks = [...def.checks];
@@ -7087,7 +7087,7 @@ function _check(fn, params) {
   return ch2;
 }
 
-// node_modules/zod/v4/core/to-json-schema.js
+// ../nikke-api-library-stories/node_modules/zod/v4/core/to-json-schema.js
 function assignProps(target, ...sources) {
   for (const source of sources) {
     for (const key2 of Reflect.ownKeys(source)) {
@@ -7617,7 +7617,7 @@ var createStandardJSONSchemaMethod = (schema, io, processors = {}) => (params) =
   return finalize(ctx, schema);
 };
 
-// node_modules/zod/v4/core/json-schema-processors.js
+// ../nikke-api-library-stories/node_modules/zod/v4/core/json-schema-processors.js
 var narrowMin = (agg, key2, value) => {
   if (agg[key2] === void 0 || value > agg[key2])
     agg[key2] = value;
@@ -8365,7 +8365,7 @@ function toJSONSchema(input, params) {
   return finalize(ctx, input);
 }
 
-// node_modules/zod/v4/classic/errors.js
+// ../nikke-api-library-stories/node_modules/zod/v4/classic/errors.js
 var _installedErrorProtos = /* @__PURE__ */ new WeakSet([Object.prototype, Error.prototype]);
 function _lazyMethod(proto, key2, make) {
   Object.defineProperty(proto, key2, {
@@ -8410,7 +8410,7 @@ var ZodRealError = /* @__PURE__ */ $constructor("ZodError", initializer2, void 0
   Parent: Error
 });
 
-// node_modules/zod/v4/classic/parse.js
+// ../nikke-api-library-stories/node_modules/zod/v4/classic/parse.js
 var parse = /* @__PURE__ */ _parse(ZodRealError);
 var parseAsync = /* @__PURE__ */ _parseAsync(ZodRealError);
 var safeParse = /* @__PURE__ */ _safeParse(ZodRealError);
@@ -8424,7 +8424,7 @@ var safeDecode = /* @__PURE__ */ _safeDecode(ZodRealError);
 var safeEncodeAsync = /* @__PURE__ */ _safeEncodeAsync(ZodRealError);
 var safeDecodeAsync = /* @__PURE__ */ _safeDecodeAsync(ZodRealError);
 
-// node_modules/zod/v4/classic/schemas.js
+// ../nikke-api-library-stories/node_modules/zod/v4/classic/schemas.js
 function _ensureDefaultLocale() {
   if (!globalConfig.localeError)
     config(en_default());
@@ -9458,7 +9458,7 @@ function preprocess(fn, schema) {
   });
 }
 
-// node_modules/zod/v4/classic/compat.js
+// ../nikke-api-library-stories/node_modules/zod/v4/classic/compat.js
 var ZodIssueCode = {
   invalid_type: "invalid_type",
   too_big: "too_big",
@@ -9476,7 +9476,7 @@ var ZodFirstPartyTypeKind;
 /* @__PURE__ */ (function(ZodFirstPartyTypeKind2) {
 })(ZodFirstPartyTypeKind || (ZodFirstPartyTypeKind = {}));
 
-// node_modules/zod/v4/classic/iso.js
+// ../nikke-api-library-stories/node_modules/zod/v4/classic/iso.js
 var iso_exports = {};
 __export(iso_exports, {
   ZodISODate: () => ZodISODate,
@@ -9501,7 +9501,7 @@ function duration2(params) {
   return _isoDuration(ZodISODuration, params);
 }
 
-// node_modules/zod/v4/classic/coerce.js
+// ../nikke-api-library-stories/node_modules/zod/v4/classic/coerce.js
 var coerce_exports = {};
 __export(coerce_exports, {
   bigint: () => bigint2,
@@ -9526,7 +9526,7 @@ function date3(params) {
   return _coercedDate(ZodDate, params);
 }
 
-// node_modules/@modelcontextprotocol/core/dist/schemas-DscsoNZN.mjs
+// ../nikke-api-library-stories/node_modules/@modelcontextprotocol/core/dist/schemas-DscsoNZN.mjs
 var LATEST_PROTOCOL_VERSION = "2025-11-25";
 var DEFAULT_NEGOTIATED_PROTOCOL_VERSION = "2025-03-26";
 var SUPPORTED_PROTOCOL_VERSIONS = [
@@ -10316,7 +10316,7 @@ var ServerResultSchema = union([
   SubscriptionsListenResultSchema
 ]);
 
-// node_modules/@modelcontextprotocol/core/dist/auth-UMQCo-ad.mjs
+// ../nikke-api-library-stories/node_modules/@modelcontextprotocol/core/dist/auth-UMQCo-ad.mjs
 var SafeUrlSchema = url().superRefine((val, ctx) => {
   if (!URL.canParse(val)) {
     ctx.addIssue({
@@ -10470,7 +10470,7 @@ var OAuthTokenRevocationRequestSchema = object({
   token_type_hint: string2().optional()
 }).strip();
 
-// node_modules/@modelcontextprotocol/server/dist/src-DdvbAHrR.mjs
+// ../nikke-api-library-stories/node_modules/@modelcontextprotocol/server/dist/src-DdvbAHrR.mjs
 var BRANDS = /* @__PURE__ */ Symbol.for("mcp.sdk.errorBrands");
 function stampErrorBrands(instance, ctor) {
   const brands = /* @__PURE__ */ new Set();
@@ -15601,7 +15601,7 @@ function normalizeRawShapeSchema(schema) {
   return schema;
 }
 
-// node_modules/@modelcontextprotocol/server/dist/cfWorkerProvider-hgYAfIZf.mjs
+// ../nikke-api-library-stories/node_modules/@modelcontextprotocol/server/dist/cfWorkerProvider-hgYAfIZf.mjs
 function deepCompareStrict(a, b) {
   const typeofa = typeof a;
   if (typeofa !== typeof b) return false;
@@ -16520,7 +16520,7 @@ var CfWorkerJsonSchemaValidator = class {
   }
 };
 
-// node_modules/@modelcontextprotocol/server/dist/mcp-oHn3ureC.mjs
+// ../nikke-api-library-stories/node_modules/@modelcontextprotocol/server/dist/mcp-oHn3ureC.mjs
 var COMPLETABLE_SYMBOL = /* @__PURE__ */ Symbol.for("mcp.completable");
 function isCompletable(schema) {
   return !!schema && typeof schema === "object" && COMPLETABLE_SYMBOL in schema;
@@ -18291,7 +18291,7 @@ function unwrapOptionalSchema(schema) {
   return schema.def?.innerType ?? schema;
 }
 
-// node_modules/@modelcontextprotocol/server/dist/listenRouter-Bartj63y.mjs
+// ../nikke-api-library-stories/node_modules/@modelcontextprotocol/server/dist/listenRouter-Bartj63y.mjs
 var InMemoryServerEventBus = class {
   _listeners = /* @__PURE__ */ new Set();
   /**
@@ -18527,7 +18527,7 @@ data: ${JSON.stringify({
   };
 }
 
-// node_modules/@modelcontextprotocol/server/dist/index.mjs
+// ../nikke-api-library-stories/node_modules/@modelcontextprotocol/server/dist/index.mjs
 async function invoke(server, message, ctx) {
   const transport = new PerRequestHTTPServerTransport({
     classification: ctx.classification,
@@ -19587,7 +19587,7 @@ var MAX_CHARS = 6e4;
 var INSTRUCTIONS = `Unofficial NIKKE (GODDESS OF VICTORY: NIKKE) game data. Data \xA9 SHIFT UP / Level Infinite.
 - Character names exist in ko/en/ja/zh-TW and searches match any of them; responses default to Korean (lang=ko).
 - Story scene scripts are Korean only. Favorite-item (\uC560\uC7A5\uD488, category "favorite") scripts are transcribed from videos, not game data: they may have typos and follow only the choice taken in the video (chosen: true).
-- category "library" scenes are stories the game data doesn't serve (messenger chats, lost relics, side stories, sub quests, older events), from a community archive. They have speaker names but no voice or icons. Lines inside a choice carry branch ("<block>.<option>", nested pairs for nested choices): read one branch, not all of them. next says which scene follows. Story collections are also events (source "library", ids lib_*): read_event marks those lines "[1.1] ..." and options "[\uC120\uD0DD\uC9C0 1.1] ...".
+- category "library" scenes are stories the game data doesn't serve (messenger chats, lost relics, side stories, sub quests, older events), from a community archive. MARIA-n (lib_maria_n_*) is transcribed from a video instead, so it may have typos; Part 1 only. They have speaker names but no voice or icons. Lines inside a choice carry branch ("<block>.<option>", nested pairs for nested choices): read one branch, not all of them. next says which scene follows. Story collections are also events (source "library", ids lib_*): read_event marks those lines "[1.1] ..." and options "[\uC120\uD0DD\uC9C0 1.1] ...".
 - Alternate versions (\uC774\uACA9, e.g. "\uB77C\uD53C : \uB808\uB4DC \uD6C4\uB4DC") are linked to their original: name searches and character story lookups cover every version unless a tool says otherwise.
 - Filters take English enum values; Korean terms map as noted in each parameter (e.g. \uCCA0\uAC11 = Iron).
 - Lists are paged with limit/offset. Oversized responses come back with a "truncated" object telling you how to fetch the rest.

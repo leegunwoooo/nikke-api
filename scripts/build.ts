@@ -3,7 +3,7 @@ import path from "node:path";
 import { cdnUrl } from "../src/cdn.js";
 import { compareEventScenes, eventIdOf } from "../src/events.js";
 import { readFavoriteStories } from "./favorite-stories.js";
-import { assertDistinctIds, dedupKeys, LIBRARY_EVENT_CATEGORIES, libraryEventId, readLibraryStories, selectNewScripts } from "./library-stories.js";
+import { assertDistinctIds, dedupKeys, LIBRARY_EVENT_CATEGORIES, libraryEventId, readLibraryStories, readTranscribedStories, selectNewScripts } from "./library-stories.js";
 import { mainChaptersFromList } from "./main-chapters.js";
 import type {
   Burst,
@@ -537,7 +537,8 @@ async function main() {
   const nikkeNames = new Set(characters.map((n) => n.name.ko));
   const library = await readLibraryStories();
   for (const w of library.warnings) console.log(`warn: library ${w}`);
-  const libraryScenes = selectNewScripts(library.scenes, known);
+  const librarySource = [...library.scenes, ...(await readTranscribedStories())];
+  const libraryScenes = selectNewScripts(librarySource, known);
   assertDistinctIds(libraryScenes);
   const libraryIds = new Set(libraryScenes.map((s) => s.groupId));
   for (const scene of libraryScenes) {
@@ -566,7 +567,7 @@ async function main() {
     });
     addLines(scene.groupId, "library", scene.lines);
   }
-  console.log(`library: ${libraryScenes.length}/${library.scenes.length} scenes are new`);
+  console.log(`library: ${libraryScenes.length}/${librarySource.length} scenes are new`);
   // the story route only sees main scenes with a chapter
   const unfiled = sceneIndex.filter((s) => s.category === "main" && s.chapter == null).map((s) => s.groupId);
   if (unfiled.length) console.log(`warn: main scenes not in scene_list: ${unfiled.join(", ")}`);

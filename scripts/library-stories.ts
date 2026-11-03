@@ -13,6 +13,8 @@ export const LIBRARY_REPO = "VoMiRin/Nikke-Forbidden-Library";
 export const LIBRARY_COMMIT = "70a3d0a0ac0ab13a5d613dc311427920640a3c34";
 // beside data/raw, not in it: build.ts copies whatever else is in raw into dist
 export const LIBRARY_DIR = "data/library";
+// stories neither the CDN nor the archive has yet, transcribed from public videos
+export const TRANSCRIPT_DIR = "content/library-stories";
 
 export interface LibraryLine {
   id: string;
@@ -41,6 +43,7 @@ export interface LibraryScene {
   collection: string;
   libraryCategory: string;
   section?: string;
+  sourceVideo?: string;
   next?: LibraryNext[];
   lines: LibraryLine[];
 }
@@ -260,6 +263,18 @@ export async function readLibraryStories(root = path.resolve(LIBRARY_DIR), commi
     }
   }
   return { scenes, warnings };
+}
+
+/**
+ * Build them after the archive's scenes: selectNewScripts keeps the first copy, so a
+ * transcript drops out on its own once the CDN or the archive publishes the same story.
+ */
+export async function readTranscribedStories(dir = path.resolve(TRANSCRIPT_DIR)): Promise<LibraryScene[]> {
+  const files = (await readdir(dir)).filter((f) => f.endsWith(".json")).sort();
+  const docs = await Promise.all(files.map(async (f) => JSON.parse(await readFile(path.join(dir, f), "utf8"))));
+  return docs.flatMap(({ collection, libraryCategory, sourceVideo, scenes }) =>
+    scenes.map((s: Pick<LibraryScene, "groupId" | "name" | "lines">) => ({ ...s, type: "library", collection, libraryCategory, sourceVideo })),
+  );
 }
 
 /** Fetch the pinned archive, keeping only the scripts and their index. */
