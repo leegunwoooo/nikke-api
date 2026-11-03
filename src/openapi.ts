@@ -596,46 +596,6 @@ const openapi = {
         },
       },
     },
-    "/api/user/{blablaid}/stage-lineup": {
-      get: {
-        tags: ["user"],
-        summary: "저장된 스테이지 클리어 조합 (조회 계정 본인)",
-        description:
-          "스테이지에 저장해 둔 클리어 라인업 — 슬롯별 캐릭터·레벨·개별 전투력, 클리어 시각, 총 전투력. " +
-          "주의: 업스트림이 조회 계정 본인의 저장 기록만 반환(세션 스코프) — 다른 유저의 라인업은 조회 불가, " +
-          "저장하지 않은 스테이지는 404. blablaid는 area 해석용. " +
-          "blablaid 대신 ?blablaid=도 가능 (/api/user/stage-lineup?blablaid=...)",
-        parameters: [
-          {
-            name: "blablaid",
-            in: "path",
-            required: true,
-            schema: { type: "string" },
-            description: "BlablaLink 공유 ID (base64 openid) — area 해석용",
-          },
-          {
-            name: "stage_id",
-            in: "query",
-            required: true,
-            schema: { type: "integer" },
-            description: "스테이지 테이블 id — /api/stages의 stageId (예: 6013001 = 13-1 Normal)",
-          },
-          {
-            name: "area",
-            in: "query",
-            schema: { type: "integer", enum: [83, 81, 84, 82, 85] },
-            description: "서버 area 직접 지정 시 playerInfo 조회 생략",
-          },
-        ],
-        responses: {
-          "200": { description: "{stage, clearedAt, totalCombat, squad[]}" },
-          "400": { description: "stage_id 누락/비숫자" },
-          "404": { description: "저장된 라인업 없음" },
-          "503": { description: "서버 조회 계정 미설정" },
-          "502": { description: "업스트림 실패" },
-        },
-      },
-    },
     "/api/tables": {
       get: { tags: ["misc"], summary: "원본 테이블 목록", responses: { "200": { description: "파일 목록" } } },
     },

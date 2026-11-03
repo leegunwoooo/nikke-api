@@ -28,5 +28,6 @@ site/public/robots.txt
 pages-proxy/_worker.js
 creds.json
 scripts/_probe*
+scripts/_p*.ts
 .wrangler/
 probe_*.json

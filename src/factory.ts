@@ -1452,12 +1452,10 @@ app.get("/api/user", userProfile);
 app.get("/api/user/nikke", userNikkeList);
 app.get("/api/user/nikke/:nameOrId", userNikkeDetail);
 app.get("/api/user/roster", userRoster);
-app.get("/api/user/stage-lineup", userStageLineup);
 app.get("/api/user/:blablaid", userProfile);
 app.get("/api/user/:blablaid/nikke", userNikkeList);
 app.get("/api/user/:blablaid/nikke/:nameOrId", userNikkeDetail);
 app.get("/api/user/:blablaid/roster", userRoster);
-app.get("/api/user/:blablaid/stage-lineup", userStageLineup);
 
 async function userProfile(c: Context) {
   const q = openidInput(c);
@@ -1781,77 +1779,6 @@ async function userRoster(c: Context) {
     }
     return c.json(
       pickFields({ intlOpenId: target.intlOpenId, areas }, fieldsOf(c)),
-    );
-  } catch (e) {
-    const msg = e instanceof Error ? e.message : String(e);
-    const status = msg.includes("not configured") ? 503 : 502;
-    return c.json({ error: msg }, status);
-  }
-}
-
-// saved stage-clear lineup — GetMainQuestClearLineup is session-scoped:
-// upstream ignores intl_open_id and always answers with the *lookup
-// account's own* recorded squads. blablaid here only resolves the area.
-// 1300017 = no lineup was saved for that stage.
-async function userStageLineup(c: Context) {
-  const q = openidInput(c);
-  const target = decodeOpenid(q);
-  if (!target) return c.json({ error: "invalid blablaid" }, 400);
-  const stageIdRaw = c.req.query("stage_id");
-  if (!stageIdRaw || !/^\d+$/.test(stageIdRaw))
-    return c.json({ error: "stage_id is required" }, 400);
-  try {
-    const resolved = await resolveAreaId(c, target.intlOpenId);
-    if ("error" in resolved)
-      return c.json({ error: resolved.error, code: resolved.code }, 502);
-    const stageId = Number(stageIdRaw);
-    const r = await gameApi("Game", "GetMainQuestClearLineup", {
-      intl_open_id: target.intlOpenId,
-      stage_id: stageId,
-      area_id: resolved.areaId,
-    });
-    if (r.code === 1300017)
-      return c.json({ error: "no saved lineup for this stage" }, 404);
-    if (r.code !== 0)
-      return c.json({ error: r.msg ?? "upstream error", code: r.code }, 502);
-    const d = (r.data as any) ?? {};
-    const { stageRef } = await loadProfileLookups();
-    const squad = ((d.list ?? []) as any[])
-      .sort((a, b) => (a.slot ?? 0) - (b.slot ?? 0))
-      .map((x) => {
-        const n = x.tid != null ? byId.get(Number(x.tid)) : undefined;
-        return {
-          slot: x.slot ?? 0,
-          character: n
-            ? {
-                id: n.id,
-                resourceId: n.resourceId,
-                name: n.name,
-                rarity: n.rarity,
-                class: n.class,
-                burst: n.burst,
-                corporation: n.corporation,
-                element: n.element,
-                image: n.images.icon,
-              }
-            : x.tid != null
-              ? { id: Number(x.tid) }
-              : null,
-          level: x.lv ?? 0,
-          combat: x.combat ?? 0,
-          costumeId: x.costume_id ?? 0,
-        };
-      });
-    return c.json(
-      pickFields(
-        {
-          stage: stageRef(stageId),
-          clearedAt: d.cleared_at ?? null,
-          totalCombat: squad.reduce((a, x) => a + x.combat, 0),
-          squad,
-        },
-        fieldsOf(c),
-      ),
     );
   } catch (e) {
     const msg = e instanceof Error ? e.message : String(e);

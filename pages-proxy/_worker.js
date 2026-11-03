@@ -20142,27 +20142,6 @@ function buildServer(api, version2, origin = "", boundBlablaid) {
     })
   );
   server.registerTool(
-    "get_stage_lineup",
-    {
-      title: "Get a saved stage-clear squad",
-      description: "The lineup saved for a campaign stage \u2014 the squad that cleared it (5 slots: character, level, per-member combat), clear timestamp and total combat power. IMPORTANT: upstream only serves the account's OWN saved records \u2014 a stage without a saved lineup returns 404, and other players' lineups are never visible. Live and rate limited.",
-      inputSchema: object({
-        blablaid: BLABLAID.optional(),
-        stage_id: number2().int().describe("Stage table id \u2014 from /api/stages (e.g. 6013001 = 13-1 Normal). Campaign progress stageId in get_user_profile gives the latest cleared one"),
-        area: number2().int().optional().describe("Server area (83 KR \xB7 81 JP \xB7 84 Global \xB7 82 NA \xB7 85 SEA) \u2014 resolved from the profile when omitted")
-      }),
-      annotations: LIVE
-    },
-    userTool("get_stage_lineup", (a) => {
-      const blablaid = a.blablaid ?? boundBlablaid;
-      if (a.stage_id == null)
-        return Promise.resolve(
-          text("stage_id is required (from /api/stages or profile.campaign.*.stageId)", true)
-        );
-      return blablaid ? call(api, "get_stage_lineup", `/api/user/stage-lineup${qs({ blablaid, stage_id: a.stage_id, area: a.area })}`) : needBlablaid();
-    })
-  );
-  server.registerTool(
     "search",
     {
       title: "Search everything",
@@ -20935,42 +20914,6 @@ function buildOpenapi(pkgVersion) {
             "404": { description: "\uD504\uB85C\uD544 \uBE44\uACF5\uAC1C (reason=private)" },
             "503": { description: "\uC11C\uBC84 \uC870\uD68C \uACC4\uC815 \uBBF8\uC124\uC815" },
             "502": { description: "\uC5C5\uC2A4\uD2B8\uB9BC \uC2E4\uD328 (\uC0C1\uC138 \uD638\uCD9C \uC624\uB958 \uC2DC \uC804\uCCB4 \uC2E4\uD328)" }
-          }
-        }
-      },
-      "/api/user/{blablaid}/stage-lineup": {
-        get: {
-          tags: ["user"],
-          summary: "\uC800\uC7A5\uB41C \uC2A4\uD14C\uC774\uC9C0 \uD074\uB9AC\uC5B4 \uC870\uD569 (\uC870\uD68C \uACC4\uC815 \uBCF8\uC778)",
-          description: "\uC2A4\uD14C\uC774\uC9C0\uC5D0 \uC800\uC7A5\uD574 \uB454 \uD074\uB9AC\uC5B4 \uB77C\uC778\uC5C5 \u2014 \uC2AC\uB86F\uBCC4 \uCE90\uB9AD\uD130\xB7\uB808\uBCA8\xB7\uAC1C\uBCC4 \uC804\uD22C\uB825, \uD074\uB9AC\uC5B4 \uC2DC\uAC01, \uCD1D \uC804\uD22C\uB825. \uC8FC\uC758: \uC5C5\uC2A4\uD2B8\uB9BC\uC774 \uC870\uD68C \uACC4\uC815 \uBCF8\uC778\uC758 \uC800\uC7A5 \uAE30\uB85D\uB9CC \uBC18\uD658(\uC138\uC158 \uC2A4\uCF54\uD504) \u2014 \uB2E4\uB978 \uC720\uC800\uC758 \uB77C\uC778\uC5C5\uC740 \uC870\uD68C \uBD88\uAC00, \uC800\uC7A5\uD558\uC9C0 \uC54A\uC740 \uC2A4\uD14C\uC774\uC9C0\uB294 404. blablaid\uB294 area \uD574\uC11D\uC6A9. blablaid \uB300\uC2E0 ?blablaid=\uB3C4 \uAC00\uB2A5 (/api/user/stage-lineup?blablaid=...)",
-          parameters: [
-            {
-              name: "blablaid",
-              in: "path",
-              required: true,
-              schema: { type: "string" },
-              description: "BlablaLink \uACF5\uC720 ID (base64 openid) \u2014 area \uD574\uC11D\uC6A9"
-            },
-            {
-              name: "stage_id",
-              in: "query",
-              required: true,
-              schema: { type: "integer" },
-              description: "\uC2A4\uD14C\uC774\uC9C0 \uD14C\uC774\uBE14 id \u2014 /api/stages\uC758 stageId (\uC608: 6013001 = 13-1 Normal)"
-            },
-            {
-              name: "area",
-              in: "query",
-              schema: { type: "integer", enum: [83, 81, 84, 82, 85] },
-              description: "\uC11C\uBC84 area \uC9C1\uC811 \uC9C0\uC815 \uC2DC playerInfo \uC870\uD68C \uC0DD\uB7B5"
-            }
-          ],
-          responses: {
-            "200": { description: "{stage, clearedAt, totalCombat, squad[]}" },
-            "400": { description: "stage_id \uB204\uB77D/\uBE44\uC22B\uC790" },
-            "404": { description: "\uC800\uC7A5\uB41C \uB77C\uC778\uC5C5 \uC5C6\uC74C" },
-            "503": { description: "\uC11C\uBC84 \uC870\uD68C \uACC4\uC815 \uBBF8\uC124\uC815" },
-            "502": { description: "\uC5C5\uC2A4\uD2B8\uB9BC \uC2E4\uD328" }
           }
         }
       },
@@ -22210,12 +22153,10 @@ async function createApp(storage) {
   app.get("/api/user/nikke", userNikkeList);
   app.get("/api/user/nikke/:nameOrId", userNikkeDetail);
   app.get("/api/user/roster", userRoster);
-  app.get("/api/user/stage-lineup", userStageLineup);
   app.get("/api/user/:blablaid", userProfile);
   app.get("/api/user/:blablaid/nikke", userNikkeList);
   app.get("/api/user/:blablaid/nikke/:nameOrId", userNikkeDetail);
   app.get("/api/user/:blablaid/roster", userRoster);
-  app.get("/api/user/:blablaid/stage-lineup", userStageLineup);
   async function userProfile(c) {
     const q = openidInput(c);
     const target = decodeOpenid(q);
@@ -22466,66 +22407,6 @@ async function createApp(storage) {
       }
       return c.json(
         pickFields({ intlOpenId: target.intlOpenId, areas }, fieldsOf(c))
-      );
-    } catch (e) {
-      const msg = e instanceof Error ? e.message : String(e);
-      const status = msg.includes("not configured") ? 503 : 502;
-      return c.json({ error: msg }, status);
-    }
-  }
-  async function userStageLineup(c) {
-    const q = openidInput(c);
-    const target = decodeOpenid(q);
-    if (!target) return c.json({ error: "invalid blablaid" }, 400);
-    const stageIdRaw = c.req.query("stage_id");
-    if (!stageIdRaw || !/^\d+$/.test(stageIdRaw))
-      return c.json({ error: "stage_id is required" }, 400);
-    try {
-      const resolved = await resolveAreaId(c, target.intlOpenId);
-      if ("error" in resolved)
-        return c.json({ error: resolved.error, code: resolved.code }, 502);
-      const stageId = Number(stageIdRaw);
-      const r = await gameApi("Game", "GetMainQuestClearLineup", {
-        intl_open_id: target.intlOpenId,
-        stage_id: stageId,
-        area_id: resolved.areaId
-      });
-      if (r.code === 1300017)
-        return c.json({ error: "no saved lineup for this stage" }, 404);
-      if (r.code !== 0)
-        return c.json({ error: r.msg ?? "upstream error", code: r.code }, 502);
-      const d = r.data ?? {};
-      const { stageRef } = await loadProfileLookups();
-      const squad = (d.list ?? []).sort((a, b) => (a.slot ?? 0) - (b.slot ?? 0)).map((x) => {
-        const n = x.tid != null ? byId.get(Number(x.tid)) : void 0;
-        return {
-          slot: x.slot ?? 0,
-          character: n ? {
-            id: n.id,
-            resourceId: n.resourceId,
-            name: n.name,
-            rarity: n.rarity,
-            class: n.class,
-            burst: n.burst,
-            corporation: n.corporation,
-            element: n.element,
-            image: n.images.icon
-          } : x.tid != null ? { id: Number(x.tid) } : null,
-          level: x.lv ?? 0,
-          combat: x.combat ?? 0,
-          costumeId: x.costume_id ?? 0
-        };
-      });
-      return c.json(
-        pickFields(
-          {
-            stage: stageRef(stageId),
-            clearedAt: d.cleared_at ?? null,
-            totalCombat: squad.reduce((a, x) => a + x.combat, 0),
-            squad
-          },
-          fieldsOf(c)
-        )
       );
     } catch (e) {
       const msg = e instanceof Error ? e.message : String(e);

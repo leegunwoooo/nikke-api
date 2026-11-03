@@ -43,7 +43,6 @@
 - [GET /api/user/:blablaid/nikke](#get-apiuserblablaidnikke) — 유저 보유 니케 목록 (경량)
 - [GET /api/user/:blablaid/nikke/:nameOrId](#get-apiuserblablaidnikkenameorid) — 유저 보유 니케 상세 (이름 부분 일치/id)
 - [GET /api/user/:blablaid/roster](#get-apiuserblablaidroster) — 유저 보유 니케 전체 로스터 (업스트림 원시 형태)
-- [GET /api/user/:blablaid/stage-lineup](#get-apiuserblablaidstage-lineup) — 저장된 스테이지 클리어 조합 (조회 계정 본인 기록)
 - [GET /api/cdn](#get-apicdn) — CDN 경로 → URL 변환
 - [MCP `/mcp`](#mcp-mcp) — ChatGPT/Claude 커넥터용 MCP 서버
 - [공통: 필드 선택 `?fields=`](#공통-필드-선택-fields)
@@ -1215,55 +1214,6 @@ GET /api/user/roster?blablaid=...          # 구형 쿼리 형태도 동일
 | 모든 서버 조회 실패 (기타) | 502 `{"error": ..., "code": <업스트림 코드>}` |
 | 상세 배치 호출 하나라도 실패 | 502 — 해당 서버를 조용히 버리지 않고 요청 전체를 실패시킴 |
 | 서버 조회 계정 미설정 | 503 |
-
-## GET /api/user/:blablaid/stage-lineup
-
-스테이지에 저장해 둔 **클리어 조합**을 조회합니다 — 슬롯별 캐릭터·레벨·개별 전투력과 클리어 시각, 총 전투력.
-
-> **주의**: 업스트림이 **조회 계정 본인의 저장 기록만** 반환합니다 (`intl_open_id`가 무시되는 세션 스코프). 다른 유저의 스테이지 라인업은 조회할 수 없고, 게임 내에서 라인업을 저장하지 않은 스테이지는 `404`입니다. `blablaid`는 서버 area 해석용으로만 쓰입니다.
-
-```
-GET /api/user/<blablaid>/stage-lineup?stage_id=6013001
-GET /api/user/stage-lineup?blablaid=...&stage_id=6013001   # 구형 쿼리 형태도 동일
-GET /api/user/stage-lineup?blablaid=...&stage_id=6013001&area=83   # area 지정 시 playerInfo 생략
-```
-
-`stage_id`는 [GET /api/stages](#get-apistages)의 `stageId` (예: `6013001` = 13-1 Normal) 또는 프로필의 `campaign.*.stageId` 값을 사용합니다.
-
-### 응답 예시
-
-```json
-{
-  "stage": { "stageId": 6013001, "chapter": 13, "mode": "Normal", "stage": "13-1 STAGE" },
-  "clearedAt": "1779591781",
-  "totalCombat": 31933,
-  "squad": [
-    {
-      "slot": 1,
-      "character": {
-        "id": 108201,
-        "resourceId": 82,
-        "name": { "ko": "리타", "en": "Liter", "ja": "リター" },
-        "rarity": "SSR",
-        "class": "Supporter",
-        "burst": "I",
-        "corporation": "MISSILIS",
-        "element": "Iron",
-        "image": "https://sg-tools-cdn.blablalink.com/.../....webp"
-      },
-      "level": 97,
-      "combat": 4965,
-      "costumeId": 0
-    }
-  ]
-}
-```
-
-| 상황 | 응답 |
-|------|------|
-| `stage_id` 누락/비숫자 | 400 |
-| 저장된 라인업 없음 (업스트림 1300017) | 404 `no saved lineup for this stage` |
-| 그 외 업스트림 실패 | 502 |
 
 ## GET /api/cdn
 
