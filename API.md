@@ -386,6 +386,7 @@ GET /api/scenes?category=main&limit=20&offset=0
 | `sourceVideo` | 대본을 옮긴 원본 영상 주소 (애장품만) |
 | `collection` | 묶음 이름, 예: `ARK RANGER` (`library`만) |
 | `libraryCategory` | `blabla`(메신저) / `lost_relics` / `event_lost_relics` / `side_stories` / `sub_quests` / `event_stories` / `special_stories` / `character_episodes` / `main_story` (`library`만) |
+| `chapter` / `chapterStep` | 게임 챕터 번호와 챕터 안 순서 (메인만) |
 
 ## GET /api/scenes/:groupId
 
@@ -564,7 +565,7 @@ GET /api/events/event_BunnyX777/script?limit=1
 
 메인 챕터 사이에 이벤트·사이드 스토리·호감도 스토리를 끼워 넣은 감상 순서입니다. 순서와 필수/선택 구분은 아카라이브 니케 채널에서 쓰이는 커뮤니티 가이드([ssissun.github.io/nikke-storyline](https://ssissun.github.io/nikke-storyline/))를 따르고, 다른 가이드와 배치가 갈리는 곳은 `note`에 적었습니다. 큐레이션 데이터는 [`src/story-route.ts`](src/story-route.ts)에 있습니다.
 
-- 챕터 번호는 게임 기준(0부터)입니다. 씬 groupId는 1부터라서 0챕터가 `d_main_01_*`입니다.
+- 챕터 번호는 게임 기준(0부터)입니다. 씬은 게임의 씬 목록으로 챕터에 연결합니다. `d_main_NN`은 대체로 NN챕터이지만, 0·1챕터는 모두 `d_main_01_*`이고 24·26·28챕터의 후일담 일부는 다음 챕터에 속합니다. 메인 씬의 `chapter`·`chapterStep`이 그 결과입니다.
 - 항목 하나가 여러 이벤트 id를 묶을 수 있습니다 (예: `OVER ZONE` → `event_overzone1`, `event_overzone2`).
 - `inData: false`인 항목은 이 API에 대본이 없습니다 (사이드 스토리, 아카이브에 없는 최신 이벤트).
 - `unplaced`는 가이드가 배치하지 않은 이벤트(주로 시즌 이벤트)입니다.

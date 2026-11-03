@@ -6,8 +6,8 @@
 // (S, linked from the Arca Live NIKKE channel), which covers up to Chapter 50.
 // The order, required/optional split and importance follow it; notes are
 // short paraphrases, and placements other guides disagree on say so.
-// Chapter numbers are the game's (0-based); scene groupIds are 1-based
-// (Chapter 0 = d_main_01_*).
+// Chapter numbers are the game's, starting at 0. Scenes map to them through the
+// game's scene list, not their ids: d_main_01_* holds Chapters 0 and 1.
 
 export const ROUTE_SOURCES = {
   S: {

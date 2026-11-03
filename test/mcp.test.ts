@@ -325,7 +325,7 @@ test("compare_nikkes prefers an exact name and flags ambiguity", async () => {
 test("story_route resolves the curated order against the data", async () => {
   const r = (await tool("story_route")).json;
   assert.equal(r.entries[0].key, "chapter:0");
-  assert.equal(r.entries[0].firstScene, "d_main_01_01"); // Chapter 0 = d_main_01
+  assert.equal(r.entries[0].firstScene, "d_main_01_01"); // Chapter 0 by the scene's chapter field
   const lk = r.entries.find((e: any) => e.title === "LAST KINGDOM");
   assert.equal(lk.key, "event_lastkingdom1");
   assert.equal(lk.inData, false); // fixtures have no Last Kingdom scenes

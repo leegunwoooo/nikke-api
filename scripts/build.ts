@@ -4,6 +4,7 @@ import { cdnUrl } from "../src/cdn.js";
 import { compareEventScenes, eventIdOf } from "../src/events.js";
 import { readFavoriteStories } from "./favorite-stories.js";
 import { assertDistinctIds, dedupKeys, LIBRARY_EVENT_CATEGORIES, libraryEventId, readLibraryStories, selectNewScripts } from "./library-stories.js";
+import { mainChaptersFromList } from "./main-chapters.js";
 import type {
   Burst,
   Locale,
@@ -404,12 +405,15 @@ async function main() {
     type?: string;
     nikke?: string;
     level?: number;
+    chapter?: number;
+    chapterStep?: number;
     source?: string;
     sourceVideo?: string;
     collection?: string;
     libraryCategory?: string;
     section?: string;
   }[] = [];
+  const mainChapter = mainChaptersFromList((await readJson<any[]>("scene_list_ko.json")) ?? []);
   const sceneCategory = (gid: string) =>
     gid.startsWith("d_main") ? "main"
     : gid.startsWith("event_") ? "event"
@@ -463,7 +467,7 @@ async function main() {
       path.join(SCENES, `${gid}.json`),
       JSON.stringify({ id: d.id, groupId: gid, name: d.scene_name, lines }),
     );
-    sceneIndex.push({ groupId: gid, name: d.scene_name, lines: lines.length, category: sceneCategory(gid), source: sceneSource.get(gid) });
+    sceneIndex.push({ groupId: gid, name: d.scene_name, lines: lines.length, category: sceneCategory(gid), source: sceneSource.get(gid), ...mainChapter.get(gid) });
     addLines(gid, sceneCategory(gid), lines);
   }
 
@@ -563,6 +567,9 @@ async function main() {
     addLines(scene.groupId, "library", scene.lines);
   }
   console.log(`library: ${libraryScenes.length}/${library.scenes.length} scenes are new`);
+  // the story route only sees main scenes with a chapter
+  const unfiled = sceneIndex.filter((s) => s.category === "main" && s.chapter == null).map((s) => s.groupId);
+  if (unfiled.length) console.log(`warn: main scenes not in scene_list: ${unfiled.join(", ")}`);
   await writeFile(path.join(OUT, "scenes.json"), JSON.stringify(sceneIndex));
   console.log(`scenes/: ${sceneIndex.length} dialogue files (ko)`);
 
