@@ -21719,12 +21719,10 @@ async function createApp(storage) {
   const mainChapters = async () => {
     const m = /* @__PURE__ */ new Map();
     for (const s of await getScenes()) {
-      const hit = s.category === "main" && /^d_main_(\d+)_/.exec(s.groupId);
-      if (!hit) continue;
-      const chapter = Number(hit[1]) - 1;
-      m.set(chapter, [...m.get(chapter) ?? [], s.groupId]);
+      if (s.category !== "main" || s.chapter == null) continue;
+      m.set(s.chapter, [...m.get(s.chapter) ?? [], { id: s.groupId, step: s.chapterStep ?? 0 }]);
     }
-    return m;
+    return new Map([...m].map(([chapter, list]) => [chapter, list.sort((x, y) => x.step - y.step).map((x) => x.id)]));
   };
   async function storyRoute() {
     const [chapters, events, scenes] = await Promise.all([mainChapters(), eventGroups(), getScenes()]);
