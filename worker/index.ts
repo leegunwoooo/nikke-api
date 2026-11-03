@@ -335,8 +335,13 @@ export default {
     let key: Request | undefined;
 
     // GET: serve from edge cache BEFORE touching the app or KV — a hit
-    // shouldn't spend an app init (characters.json read) or creds lookup
-    const refresh = url.searchParams.has("refresh");
+    // shouldn't spend an app init (characters.json read) or creds lookup.
+    // ?refresh bypasses the cache — keep it admin-only so anonymous callers
+    // can't burn function invocations + data fetches on repeat
+    const refresh =
+      url.searchParams.has("refresh") &&
+      !!env.ADMIN_TOKEN &&
+      request.headers.get("x-admin-token") === env.ADMIN_TOKEN;
     if (isGet) {
       url.searchParams.delete("refresh");
       // a remembered nikke_area_id lets the origin skip one upstream call

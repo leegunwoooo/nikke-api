@@ -64,7 +64,12 @@ export function httpStorage(base: string): Storage {
   let manifest: Promise<string[]> | undefined;
   return {
     async readText(rel) {
-      const r = await fetch(`${root}/${rel}`);
+      // cf.cacheTtl lets CF's edge cache dedupe these fetches across
+      // isolates — a fresh isolate still pays one fetch per file, but a
+      // burst of cold isolates only costs the data host once. 60s is well
+      // under the worker's 5min data-version revalidation, so a deploy's
+      // staleness window is bounded. (the stamp check itself stays uncached)
+      const r = await fetch(`${root}/${rel}`, { cf: { cacheTtl: 60 } } as RequestInit);
       if (!r.ok) throw new Error(`${rel}: HTTP ${r.status}`);
       return r.text();
     },

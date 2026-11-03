@@ -22430,7 +22430,7 @@ function httpStorage(base) {
   let manifest;
   return {
     async readText(rel) {
-      const r = await fetch(`${root}/${rel}`);
+      const r = await fetch(`${root}/${rel}`, { cf: { cacheTtl: 60 } });
       if (!r.ok) throw new Error(`${rel}: HTTP ${r.status}`);
       return r.text();
     },
@@ -22678,7 +22678,7 @@ var index_default = {
     const target = userPath ? userTargetOf(url2) : null;
     const isGet = request.method === "GET" || request.method === "HEAD";
     let key2;
-    const refresh = url2.searchParams.has("refresh");
+    const refresh = url2.searchParams.has("refresh") && !!env.ADMIN_TOKEN && request.headers.get("x-admin-token") === env.ADMIN_TOKEN;
     if (isGet) {
       url2.searchParams.delete("refresh");
       if (target && !url2.searchParams.has("area")) {
