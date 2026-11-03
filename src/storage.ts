@@ -1,6 +1,7 @@
-// Data file access behind a small interface — locally and on Vercel the files
-// live under NIKKE_DATA_DIR, on the Cloudflare Worker they live in R2. All
-// reads are async either way, so callers never notice the difference.
+// Data file access behind a small interface — locally the files live under
+// NIKKE_DATA_DIR, in production the worker reads them over HTTP from the
+// nikke-api-data Pages host. All reads are async either way, so callers
+// never notice the difference.
 
 export interface Storage {
   readText(rel: string): Promise<string>;
@@ -27,31 +28,6 @@ export function fsStorage(root: string): Storage {
       } catch {
         return [];
       }
-    },
-  };
-}
-
-interface R2Like {
-  get(key: string): Promise<{ text(): Promise<string> } | null>;
-  list(opts?: { prefix?: string }): Promise<{ objects: { key: string }[] }>;
-}
-
-export function r2Storage(bucket: R2Like): Storage {
-  return {
-    async readText(rel) {
-      const obj = await bucket.get(rel);
-      if (!obj) throw new Error(`not found: ${rel}`);
-      return obj.text();
-    },
-    async readJson<T>(rel: string) {
-      return JSON.parse(await this.readText(rel)) as T;
-    },
-    async list(dir) {
-      const prefix = dir.replace(/\/?$/, "/");
-      const names: string[] = [];
-      const res = await bucket.list({ prefix });
-      for (const o of res.objects) names.push(o.key.slice(prefix.length));
-      return names.filter((n) => n && !n.includes("/"));
     },
   };
 }

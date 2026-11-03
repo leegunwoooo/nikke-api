@@ -9,9 +9,8 @@
     "start": "tsx src/index.ts",
     "sync": "tsx scripts/sync.ts",
     "build": "tsx scripts/build.ts",
-    "emit:server": "tsx scripts/emit-server.ts",
     "typecheck": "tsc -p tsconfig.check.json",
-    "build:data": "npm run sync && npm run build && npm run emit:server",
+    "build:data": "npm run sync && npm run build",
     "fetch:data": "node scripts/fetch-dist.mjs",
     "emit:pages-worker": "esbuild worker/index.ts --bundle --format=esm --platform=browser --external:node:* --outfile=pages-proxy/_worker.js"
   },

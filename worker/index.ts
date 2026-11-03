@@ -430,9 +430,16 @@ export default {
             try {
               const j = (await res.clone().json()) as { intlOpenId?: string; areaId?: number };
               const openid = j.intlOpenId ?? target;
+              // KV writes are the scarce quota (1k/day free) — skip the put
+              // when the memoized mapping already agrees, since a profile
+              // MISS fires this path on every uncached lookup
               if (typeof j.areaId === "number") {
-                await env.AREA_KV!.put(openid, String(j.areaId), { expirationTtl: AREA_KV_TTL });
-                areaMemo.set(openid, { v: String(j.areaId), at: Date.now() });
+                const v = String(j.areaId);
+                const m = areaMemo.get(openid);
+                if (!m || m.v !== v || Date.now() - m.at > AREA_KV_TTL) {
+                  await env.AREA_KV!.put(openid, v, { expirationTtl: AREA_KV_TTL });
+                  areaMemo.set(openid, { v, at: Date.now() });
+                }
               }
             } catch { /* not json */ }
           })(),
