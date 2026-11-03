@@ -19731,7 +19731,9 @@ async function call(api, tool, path2, shape) {
 }
 var shapeScene = (includeMedia) => (d) => includeMedia || !Array.isArray(d?.lines) ? d : {
   ...d,
-  lines: d.lines.map((l) => ({
+  // SubScenario rows are cutscene markers (text: null) — drop them from
+  // the reading view; includeMedia returns the raw scene untouched
+  lines: d.lines.filter((l) => l.window !== "SubScenario").map((l) => ({
     speaker: l.speakerName ?? l.speaker,
     text: l.text,
     ...l.window === "Choice" ? { window: l.window } : {},
@@ -21609,7 +21611,10 @@ async function createApp(storage) {
           s: l.speakerName ?? l.speaker ?? "",
           ns: norm(l.speakerName ?? l.speaker ?? ""),
           t: l.text ?? "",
-          ...l.branch ? { branch: l.branch, choice: l.window === "Choice" } : {}
+          ...l.branch ? { branch: l.branch, choice: l.window === "Choice" } : {},
+          // SubScenario rows are cutscene markers, not dialogue — kept here so
+          // the index still matches the scene's lines[], flagged for readers
+          ...l.window === "SubScenario" ? { sub: true } : {}
         }))
       ).catch((e) => (scriptCache.delete(g), Promise.reject(e)));
       scriptCache.set(g, p);
@@ -21690,7 +21695,7 @@ async function createApp(storage) {
         groupId: g,
         name: idx.get(g)?.name ?? null,
         // a flat text needs its branches marked, or every option's lines read as one story
-        lines: scripts[i].map((l) => {
+        lines: scripts[i].filter((l) => !l.sub).map((l) => {
           const text2 = l.s && l.s !== "Narration" ? `${l.s}: ${l.t}` : l.t;
           return l.branch ? `[${l.choice ? "\uC120\uD0DD\uC9C0 " : ""}${l.branch}] ${text2}` : text2;
         })

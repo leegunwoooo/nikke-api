@@ -735,7 +735,7 @@ app.get("/api/scenes/:groupId", async (c) => {
 // need one scene's lines don't pay for the whole corpus. Per-line norm
 // strings are replaced by a per-scene joined blob (see joinLines): 450k
 // unique normalized strings took the isolate over the 128MB ceiling.
-interface ScriptLine { s: string; ns: string; t: string; branch?: string; choice?: boolean }
+interface ScriptLine { s: string; ns: string; t: string; branch?: string; choice?: boolean; sub?: boolean }
 // joint = normalized texts joined with \n (searchNorm strips whitespace,
 // so \n can never appear inside a line or a normalized query), off[i] =
 // start offset of line i. indexOf over joint + binary search replaces a
@@ -774,6 +774,9 @@ const getScript = (g: string): Promise<ScriptLine[]> => {
           ns: norm(l.speakerName ?? l.speaker ?? ""),
           t: l.text ?? "",
           ...(l.branch ? { branch: l.branch, choice: l.window === "Choice" } : {}),
+          // SubScenario rows are cutscene markers, not dialogue — kept here so
+          // the index still matches the scene's lines[], flagged for readers
+          ...(l.window === "SubScenario" ? { sub: true } : {}),
         })),
       )
       .catch((e) => (scriptCache.delete(g), Promise.reject(e)));
@@ -881,7 +884,7 @@ app.get("/api/events/:id/script", async (c) => {
       groupId: g,
       name: idx.get(g)?.name ?? null,
       // a flat text needs its branches marked, or every option's lines read as one story
-      lines: scripts[i].map((l) => {
+      lines: scripts[i].filter((l) => !l.sub).map((l) => {
         const text = l.s && l.s !== "Narration" ? `${l.s}: ${l.t}` : l.t;
         return l.branch ? `[${l.choice ? "선택지 " : ""}${l.branch}] ${text}` : text;
       }),

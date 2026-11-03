@@ -60,6 +60,12 @@ const hasFlag = (tag: string, name: string) => attr(tag, name) === "true";
 const IGNORED_TAG = /^\[(SCENE START|SCENE END|NEXT_SUBCHAPTER_BUTTON\b.*|MESSENGER_START\b.*|MESSENGER_END)\]$/;
 const SPEECH = /^(?![-ㄴ])([^:\[\]]{1,20}): (.+)$/;
 const COMMANDER = "지휘관";
+// "label : value" rows with a space before the colon are document form
+// fields/end cards, not a speaker — they render as "라벨: 값" narration.
+// Real dialogue can also carry a space before the colon ("A : ..."), so an
+// explicit label set plus the end-card value decides, not the space alone.
+const FORM_LABEL = new Set(["결과", "FB", "이름", "성별", "나이", "특징", "성격", "비고", "사유", "제목", "서명자"]);
+const END_CARD = /^(END|TO BE CONTINUED)$/;
 
 export interface ParsedScript {
   sourceId: string;
@@ -147,6 +153,8 @@ export function parseLibraryScript(text: string, warn: (msg: string) => void = (
     } else if (!IGNORED_TAG.test(t)) {
       const m = t.match(SPEECH);
       if (m?.[1] === COMMANDER) push({ text: m[2], window: "Self" });
+      else if (m && /\s$/.test(m[1]) && (FORM_LABEL.has(m[1].trim()) || END_CARD.test(m[2])))
+        push({ text: `${m[1].trim()}: ${m[2]}`, window: "Narration" });
       else if (m) push({ speakerName: m[1].trim(), text: m[2], window: "Speech" });
       else push({ text: t, window: "Narration" });
     }

@@ -499,7 +499,7 @@ GET /api/events/event_nonsensered
 
 ## GET /api/events/:id/script
 
-이벤트 하나의 대본 전체를 에피소드 순서대로 반환합니다. 대사는 `"화자: 대사"` 문자열이고 내레이션은 대사만 들어갑니다. 에피소드 단위로 `offset`/`limit`/`page`를 받습니다.
+이벤트 하나의 대본 전체를 에피소드 순서대로 반환합니다. 대사는 `"화자: 대사"` 문자열이고 내레이션은 대사만 들어갑니다. `SubScenario` 연출 마커 줄은 대사가 아니라 응답에서 빠집니다. 에피소드 단위로 `offset`/`limit`/`page`를 받습니다.
 
 ```
 GET /api/events/event_BunnyX777/script?limit=1
@@ -549,7 +549,7 @@ GET /api/events/event_BunnyX777/script?limit=1
 }
 ```
 
-이벤트 씬이면 `scene.event`(`id`·`title`)가 붙습니다. `line`은 씬 대본 안의 줄 번호(0부터)입니다.
+이벤트 씬이면 `scene.event`(`id`·`title`)가 붙습니다. `line`은 씬 `lines[]` 안의 줄 번호(0부터)입니다 — `/api/events/:id/script`와 MCP 읽기 출력에서 빠지는 `SubScenario` 마커도 자리를 차지하므로 씬 파일의 위치 그대로 가리킵니다.
 
 ## GET /api/nikkes/:id/appearances
 
