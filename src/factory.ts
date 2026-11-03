@@ -725,11 +725,36 @@ app.get("/api/scenes/:groupId", async (c) => {
 
 // every scene's dialogue reduced to speaker + text + normalized speaker,
 // read once on first use — line search scans these, and routes that only
-// need one scene's lines don't pay for the whole corpus. Text norms are
-// computed on the fly: 450k unique normalized strings would take the
-// isolate over the 128MB ceiling; ns is cheap because it references the
-// scene's already-deduped speaker array
+// need one scene's lines don't pay for the whole corpus. Per-line norm
+// strings are replaced by a per-scene joined blob (see joinLines): 450k
+// unique normalized strings took the isolate over the 128MB ceiling.
 interface ScriptLine { s: string; ns: string; t: string; branch?: string; choice?: boolean }
+// joint = normalized texts joined with \n (searchNorm strips whitespace,
+// so \n can never appear inside a line or a normalized query), off[i] =
+// start offset of line i. indexOf over joint + binary search replaces a
+// full normalize pass on every search — ~15MB vs ~100MB of norm strings.
+// Raw [speakerIdx, text] tuples are kept instead of line objects — 450k
+// wrapper objects would cost ~25MB on their own.
+interface SceneLines { sp: string[]; sns: string[]; l: [number, string][]; joint: string; off: Int32Array }
+const joinLines = (sp: string[], l: [number, string][]): SceneLines => {
+  let joint = "";
+  const off = new Int32Array(l.length);
+  l.forEach(([, t], i) => {
+    off[i] = joint.length;
+    joint += searchNorm(t) + "\n";
+  });
+  return { sp, sns: sp.map(norm), l, joint, off };
+};
+// offset → line index (largest start <= p)
+const lineOf = (starts: Int32Array, p: number): number => {
+  let lo = 0,
+    hi = starts.length - 1;
+  while (lo < hi) {
+    const m = (lo + hi + 1) >> 1;
+    starts[m] <= p ? (lo = m) : (hi = m - 1);
+  }
+  return lo;
+};
 const scriptCache = new Map<string, Promise<ScriptLine[]>>();
 const getScript = (g: string): Promise<ScriptLine[]> => {
   let p = scriptCache.get(g);
@@ -752,34 +777,38 @@ const getScript = (g: string): Promise<ScriptLine[]> => {
 // build emits one shard per scene category (lines/<cat>.json) — a
 // category-filtered search reads a single file, and even an unfiltered
 // scan is 6 parallel fetches instead of thousands of scene reads. Speaker
-// strings are deduped per scene; ns is normalized once on load (text norm
-// stays lazy — see ScriptLine).
+// strings are deduped per scene; ns is normalized once on load and text
+// norms live in each scene's joint blob — see SceneLines).
 const LINE_CATS = [...SCENE_CATEGORIES, "etc"];
-const shardCache = new Map<string, Promise<Map<string, ScriptLine[]>>>();
-const getShard = (cat: string): Promise<Map<string, ScriptLine[]>> => {
+const shardCache = new Map<string, Promise<Map<string, SceneLines>>>();
+const getShard = (cat: string): Promise<Map<string, SceneLines>> => {
   let p = shardCache.get(cat);
   if (!p) {
     p = storage
       .readText(path.join("lines", `${cat}.json`))
       .then((raw) => {
         const shard = JSON.parse(raw) as Record<string, { sp: string[]; l: [number, string][] }>;
-        const m = new Map<string, ScriptLine[]>();
-        for (const [g, scene] of Object.entries(shard)) {
-          const sns = scene.sp.map(norm);
-          m.set(
-            g,
-            scene.l.map(([si, t]) => ({ s: scene.sp[si] ?? "", ns: sns[si] ?? "", t })),
-          );
-        }
+        const m = new Map<string, SceneLines>();
+        for (const [g, scene] of Object.entries(shard)) m.set(g, joinLines(scene.sp, scene.l));
         return m;
       })
       .catch(async () => {
         // dists predating lines/ shards — read that category's scene files
-        // directly (slower, same result)
-        const m = new Map<string, ScriptLine[]>();
+        // directly (slower, same result). Re-dedupe speaker strings like
+        // the shard format so speaker checks stay index-based
+        const m = new Map<string, SceneLines>();
         const scenes = (await getScenes()).filter((s) => (s.category ?? "etc") === cat);
         await Promise.all(
-          scenes.map((s) => getScript(s.groupId).then((l) => m.set(s.groupId, l)).catch(() => {})),
+          scenes.map((s) =>
+            getScript(s.groupId)
+              .then((ls) => {
+                const sp: string[] = [];
+                const idx = new Map<string, number>();
+                for (const l of ls) if (!idx.has(l.s)) idx.set(l.s, sp.push(l.s) - 1);
+                m.set(s.groupId, joinLines(sp, ls.map((l) => [idx.get(l.s)!, l.t])));
+              })
+              .catch(() => {}),
+          ),
         );
         return m;
       });
@@ -787,13 +816,17 @@ const getShard = (cat: string): Promise<Map<string, ScriptLine[]>> => {
   }
   return p;
 };
-const getScripts = async (category?: string) => {
-  const maps = await Promise.all((category ? [category] : LINE_CATS).map(getShard));
-  if (maps.length === 1) return maps[0];
-  const all = new Map<string, ScriptLine[]>();
-  for (const m of maps) for (const [g, lines] of m) all.set(g, lines);
-  return all;
-};
+// unfiltered scans merge all shards once per app instance (the merged Map
+// only holds references) instead of rebuilding 5.3k entries per request
+let mergedLines: Promise<Map<string, SceneLines>> | undefined;
+const getScripts = (category?: string): Promise<Map<string, SceneLines>> =>
+  category
+    ? getShard(category)
+    : (mergedLines ??= Promise.all(LINE_CATS.map(getShard)).then((maps) => {
+        const all = new Map<string, SceneLines>();
+        for (const m of maps) for (const [g, s] of m) all.set(g, s);
+        return all;
+      }));
 
 // scene → story event, for labelling hits
 const eventOfScene = memo(async () => {
@@ -869,11 +902,27 @@ app.get("/api/lines", async (c) => {
   let count = 0;
   const lim = pg0.limit ? Math.min(pg0.limit, 500) : pg0.page ? 50 : Infinity;
   const off = pg0.page ? (pg0.page - 1) * lim : (pg0.offset ?? 0);
-  for (const [g, lines] of scripts) {
-    lines.forEach((l, i) => {
-      if (speaker && !(speakers ? speakers.has(l.ns) : l.ns === ns)) return;
-      if (nq && !searchNorm(l.t).includes(nq)) return;
-      if (count >= off && hits.length < lim) hits.push({ groupId: g, line: i, speaker: l.s, text: l.t });
+  for (const [g, sc] of scripts) {
+    if (!speaker && nq) {
+      // fast path — one indexOf scan over the joined normalized blob
+      let pos = 0;
+      while ((pos = sc.joint.indexOf(nq, pos)) !== -1) {
+        const i = lineOf(sc.off, pos);
+        if (count >= off && hits.length < lim)
+          hits.push({ groupId: g, line: i, speaker: sc.sp[sc.l[i][0]] ?? "", text: sc.l[i][1] });
+        count++;
+        pos++;
+      }
+      continue;
+    }
+    sc.l.forEach(([si, t], i) => {
+      const nsLine = sc.sns[si] ?? "";
+      // speaker is a normalized substring match, so "라피" also finds
+      // "라피 : 레드 후드" — family=1 additionally covers every version name
+      if (speaker && !(speakers ? speakers.has(nsLine) : nsLine.includes(ns))) return;
+      if (nq && !searchNorm(t).includes(nq)) return;
+      if (count >= off && hits.length < lim)
+        hits.push({ groupId: g, line: i, speaker: sc.sp[si] ?? "", text: t });
       count++;
     });
   }
@@ -901,8 +950,8 @@ app.get("/api/nikkes/:id/appearances", async (c) => {
   ]);
   const idx = new Map(scenes.map((s) => [s.groupId, s]));
   const rows: { groupId: string; lines: number }[] = [];
-  for (const [g, lines] of scripts) {
-    const spoken = lines.filter((l) => speakers.has(l.ns)).length;
+  for (const [g, sc] of scripts) {
+    const spoken = sc.l.filter(([si]) => speakers.has(sc.sns[si] ?? "")).length;
     if (spoken) rows.push({ groupId: g, lines: spoken });
   }
   rows.sort((a, b) => b.lines - a.lines);

@@ -528,8 +528,8 @@ GET /api/events/event_BunnyX777/script?limit=1
 | 파라미터 | 설명 | 예시 |
 |----------|------|------|
 | `q` | 대사 본문 부분 일치 (문장부호·공백 무시) | `?q=방주의 영웅` |
-| `speaker` | 화자 이름 정확히 일치 (한국어) | `?speaker=라피` |
-| `family` | `1`이면 `speaker`를 그 캐릭터의 모든 버전 이름으로 확장 | `?speaker=라피 : 레드 후드&family=1` |
+| `speaker` | 화자 이름 부분 일치 (한국어, `라피`는 `라피 : 레드 후드`도 잡음) | `?speaker=라피` |
+| `family` | `1`이면 `speaker`를 그 캐릭터의 모든 버전 이름으로 확장 | `?speaker=라피&family=1` |
 | `category` | 씬 카테고리 | `main` / `event` / `sudden` / `attractive` / `favorite` / `library` |
 | `limit` / `page` / `offset` | 페이지네이션 | `?limit=20` |
 

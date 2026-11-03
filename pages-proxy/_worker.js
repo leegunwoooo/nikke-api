@@ -21547,6 +21547,23 @@ async function createApp(storage) {
     if (fields || wantsLang(c)) return c.json(pickFields(JSON.parse(body), fields));
     return c.body(body, 200, { "Content-Type": "application/json" });
   });
+  const joinLines = (sp, l) => {
+    let joint = "";
+    const off = new Int32Array(l.length);
+    l.forEach(([, t], i) => {
+      off[i] = joint.length;
+      joint += searchNorm(t) + "\n";
+    });
+    return { sp, sns: sp.map(norm), l, joint, off };
+  };
+  const lineOf = (starts, p) => {
+    let lo = 0, hi = starts.length - 1;
+    while (lo < hi) {
+      const m = lo + hi + 1 >> 1;
+      starts[m] <= p ? lo = m : hi = m - 1;
+    }
+    return lo;
+  };
   const scriptCache = /* @__PURE__ */ new Map();
   const getScript = (g) => {
     let p = scriptCache.get(g);
@@ -21571,20 +21588,21 @@ async function createApp(storage) {
       p = storage.readText(path.join("lines", `${cat}.json`)).then((raw2) => {
         const shard = JSON.parse(raw2);
         const m = /* @__PURE__ */ new Map();
-        for (const [g, scene] of Object.entries(shard)) {
-          const sns = scene.sp.map(norm);
-          m.set(
-            g,
-            scene.l.map(([si, t]) => ({ s: scene.sp[si] ?? "", ns: sns[si] ?? "", t }))
-          );
-        }
+        for (const [g, scene] of Object.entries(shard)) m.set(g, joinLines(scene.sp, scene.l));
         return m;
       }).catch(async () => {
         const m = /* @__PURE__ */ new Map();
         const scenes = (await getScenes()).filter((s) => (s.category ?? "etc") === cat);
         await Promise.all(
-          scenes.map((s) => getScript(s.groupId).then((l) => m.set(s.groupId, l)).catch(() => {
-          }))
+          scenes.map(
+            (s) => getScript(s.groupId).then((ls) => {
+              const sp = [];
+              const idx = /* @__PURE__ */ new Map();
+              for (const l of ls) if (!idx.has(l.s)) idx.set(l.s, sp.push(l.s) - 1);
+              m.set(s.groupId, joinLines(sp, ls.map((l) => [idx.get(l.s), l.t])));
+            }).catch(() => {
+            })
+          )
         );
         return m;
       });
@@ -21592,13 +21610,12 @@ async function createApp(storage) {
     }
     return p;
   };
-  const getScripts = async (category) => {
-    const maps2 = await Promise.all((category ? [category] : LINE_CATS).map(getShard));
-    if (maps2.length === 1) return maps2[0];
+  let mergedLines;
+  const getScripts = (category) => category ? getShard(category) : mergedLines ??= Promise.all(LINE_CATS.map(getShard)).then((maps2) => {
     const all = /* @__PURE__ */ new Map();
-    for (const m of maps2) for (const [g, lines] of m) all.set(g, lines);
+    for (const m of maps2) for (const [g, s] of m) all.set(g, s);
     return all;
-  };
+  });
   const eventOfScene = memo3(async () => {
     const m = /* @__PURE__ */ new Map();
     for (const e of (await eventGroups()).values()) for (const g of e.scenes) m.set(g, { id: e.id, title: e.title });
@@ -21662,11 +21679,24 @@ async function createApp(storage) {
     let count = 0;
     const lim = pg0.limit ? Math.min(pg0.limit, 500) : pg0.page ? 50 : Infinity;
     const off = pg0.page ? (pg0.page - 1) * lim : pg0.offset ?? 0;
-    for (const [g, lines] of scripts) {
-      lines.forEach((l, i) => {
-        if (speaker && !(speakers ? speakers.has(l.ns) : l.ns === ns)) return;
-        if (nq && !searchNorm(l.t).includes(nq)) return;
-        if (count >= off && hits.length < lim) hits.push({ groupId: g, line: i, speaker: l.s, text: l.t });
+    for (const [g, sc] of scripts) {
+      if (!speaker && nq) {
+        let pos = 0;
+        while ((pos = sc.joint.indexOf(nq, pos)) !== -1) {
+          const i = lineOf(sc.off, pos);
+          if (count >= off && hits.length < lim)
+            hits.push({ groupId: g, line: i, speaker: sc.sp[sc.l[i][0]] ?? "", text: sc.l[i][1] });
+          count++;
+          pos++;
+        }
+        continue;
+      }
+      sc.l.forEach(([si, t], i) => {
+        const nsLine = sc.sns[si] ?? "";
+        if (speaker && !(speakers ? speakers.has(nsLine) : nsLine.includes(ns))) return;
+        if (nq && !searchNorm(t).includes(nq)) return;
+        if (count >= off && hits.length < lim)
+          hits.push({ groupId: g, line: i, speaker: sc.sp[si] ?? "", text: t });
         count++;
       });
     }
@@ -21692,8 +21722,8 @@ async function createApp(storage) {
     ]);
     const idx = new Map(scenes.map((s) => [s.groupId, s]));
     const rows = [];
-    for (const [g, lines] of scripts) {
-      const spoken = lines.filter((l) => speakers.has(l.ns)).length;
+    for (const [g, sc] of scripts) {
+      const spoken = sc.l.filter(([si]) => speakers.has(sc.sns[si] ?? "")).length;
       if (spoken) rows.push({ groupId: g, lines: spoken });
     }
     rows.sort((a, b) => b.lines - a.lines);
