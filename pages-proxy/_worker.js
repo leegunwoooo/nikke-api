@@ -21556,7 +21556,6 @@ async function createApp(storage) {
           s: l.speakerName ?? l.speaker ?? "",
           ns: norm(l.speakerName ?? l.speaker ?? ""),
           t: l.text ?? "",
-          nt: searchNorm(l.text ?? ""),
           ...l.branch ? { branch: l.branch, choice: l.window === "Choice" } : {}
         }))
       ).catch((e) => (scriptCache.delete(g), Promise.reject(e)));
@@ -21576,7 +21575,7 @@ async function createApp(storage) {
           const sns = scene.sp.map(norm);
           m.set(
             g,
-            scene.l.map(([si, t]) => ({ s: scene.sp[si] ?? "", ns: sns[si] ?? "", t, nt: searchNorm(t) }))
+            scene.l.map(([si, t]) => ({ s: scene.sp[si] ?? "", ns: sns[si] ?? "", t }))
           );
         }
         return m;
@@ -21666,7 +21665,7 @@ async function createApp(storage) {
     for (const [g, lines] of scripts) {
       lines.forEach((l, i) => {
         if (speaker && !(speakers ? speakers.has(l.ns) : l.ns === ns)) return;
-        if (nq && !l.nt.includes(nq)) return;
+        if (nq && !searchNorm(l.t).includes(nq)) return;
         if (count >= off && hits.length < lim) hits.push({ groupId: g, line: i, speaker: l.s, text: l.t });
         count++;
       });

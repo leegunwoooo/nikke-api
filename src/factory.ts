@@ -723,10 +723,13 @@ app.get("/api/scenes/:groupId", async (c) => {
   return c.body(body, 200, { "Content-Type": "application/json" });
 });
 
-// every scene's dialogue reduced to speaker + text + pre-normalized forms
-// (ns/nt), read once on first use — line search scans these, and routes that
-// only need one scene's lines don't pay for the whole corpus
-interface ScriptLine { s: string; ns: string; t: string; nt: string; branch?: string; choice?: boolean }
+// every scene's dialogue reduced to speaker + text + normalized speaker,
+// read once on first use — line search scans these, and routes that only
+// need one scene's lines don't pay for the whole corpus. Text norms are
+// computed on the fly: 450k unique normalized strings would take the
+// isolate over the 128MB ceiling; ns is cheap because it references the
+// scene's already-deduped speaker array
+interface ScriptLine { s: string; ns: string; t: string; branch?: string; choice?: boolean }
 const scriptCache = new Map<string, Promise<ScriptLine[]>>();
 const getScript = (g: string): Promise<ScriptLine[]> => {
   let p = scriptCache.get(g);
@@ -738,7 +741,6 @@ const getScript = (g: string): Promise<ScriptLine[]> => {
           s: l.speakerName ?? l.speaker ?? "",
           ns: norm(l.speakerName ?? l.speaker ?? ""),
           t: l.text ?? "",
-          nt: searchNorm(l.text ?? ""),
           ...(l.branch ? { branch: l.branch, choice: l.window === "Choice" } : {}),
         })),
       )
@@ -750,7 +752,8 @@ const getScript = (g: string): Promise<ScriptLine[]> => {
 // build emits one shard per scene category (lines/<cat>.json) — a
 // category-filtered search reads a single file, and even an unfiltered
 // scan is 6 parallel fetches instead of thousands of scene reads. Speaker
-// strings are deduped per scene; ns/nt are normalized once on load.
+// strings are deduped per scene; ns is normalized once on load (text norm
+// stays lazy — see ScriptLine).
 const LINE_CATS = [...SCENE_CATEGORIES, "etc"];
 const shardCache = new Map<string, Promise<Map<string, ScriptLine[]>>>();
 const getShard = (cat: string): Promise<Map<string, ScriptLine[]>> => {
@@ -765,7 +768,7 @@ const getShard = (cat: string): Promise<Map<string, ScriptLine[]>> => {
           const sns = scene.sp.map(norm);
           m.set(
             g,
-            scene.l.map(([si, t]) => ({ s: scene.sp[si] ?? "", ns: sns[si] ?? "", t, nt: searchNorm(t) })),
+            scene.l.map(([si, t]) => ({ s: scene.sp[si] ?? "", ns: sns[si] ?? "", t })),
           );
         }
         return m;
@@ -869,7 +872,7 @@ app.get("/api/lines", async (c) => {
   for (const [g, lines] of scripts) {
     lines.forEach((l, i) => {
       if (speaker && !(speakers ? speakers.has(l.ns) : l.ns === ns)) return;
-      if (nq && !l.nt.includes(nq)) return;
+      if (nq && !searchNorm(l.t).includes(nq)) return;
       if (count >= off && hits.length < lim) hits.push({ groupId: g, line: i, speaker: l.s, text: l.t });
       count++;
     });
