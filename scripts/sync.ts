@@ -2,6 +2,7 @@ import { existsSync } from "node:fs";
 import { mkdir, readdir, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { cdnUrl } from "../src/cdn.js";
+import { LIBRARY_COMMIT, syncLibrary } from "./library-stories.js";
 
 const OUT_DIR = path.resolve("data/raw");
 
@@ -261,6 +262,10 @@ async function main() {
 
   const cb = await syncCubes();
   console.log(`${cb} harmony cube files synced`);
+
+  // a pinned download either works or fails the sync, like any required input
+  const fetchedLibrary = await syncLibrary();
+  console.log(`story archive ${LIBRARY_COMMIT.slice(0, 7)} ${fetchedLibrary ? "synced" : "already present"}`);
 
   // fail loudly on partial syncs — missing inputs would otherwise be built
   // and deployed as silently broken data. zh-TW equip tables do not exist

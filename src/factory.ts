@@ -124,6 +124,8 @@ interface SceneIndexEntry {
   type?: string;
   nikke?: string;
   source?: string;
+  collection?: string;
+  libraryCategory?: string;
   chapter?: number;
   chapterStep?: number;
 }
@@ -638,7 +640,7 @@ app.get("/api/scenes", async (c) => {
   }
   if (q) {
     const nq = norm(q);
-    list = list.filter((s) => norm(s.groupId).includes(nq) || norm(s.name ?? "").includes(nq));
+    list = list.filter((s) => [s.groupId, s.name, s.collection, s.libraryCategory].some((v) => norm(v ?? "").includes(nq)));
   }
   const total = list.length;
   const pg = pageQuery(c, total);
@@ -724,7 +726,7 @@ app.get("/api/scenes/:groupId", async (c) => {
 // every scene's dialogue reduced to speaker + text + pre-normalized forms
 // (ns/nt), read once on first use — line search scans these, and routes that
 // only need one scene's lines don't pay for the whole corpus
-interface ScriptLine { s: string; ns: string; t: string; nt: string }
+interface ScriptLine { s: string; ns: string; t: string; nt: string; branch?: string; choice?: boolean }
 const scriptCache = new Map<string, Promise<ScriptLine[]>>();
 const getScript = (g: string): Promise<ScriptLine[]> => {
   let p = scriptCache.get(g);
@@ -737,6 +739,7 @@ const getScript = (g: string): Promise<ScriptLine[]> => {
           ns: norm(l.speakerName ?? l.speaker ?? ""),
           t: l.text ?? "",
           nt: searchNorm(l.text ?? ""),
+          ...(l.branch ? { branch: l.branch, choice: l.window === "Choice" } : {}),
         })),
       )
       .catch((e) => (scriptCache.delete(g), Promise.reject(e)));
@@ -799,6 +802,7 @@ const eventOfScene = memo(async () => {
 const sceneLabel = (s: SceneIndexEntry | undefined, ev?: { id: string; title: string }) => ({
   name: s?.name ?? null,
   category: s?.category ?? null,
+  ...(s?.collection ? { collection: s.collection } : {}),
   ...(s?.nikke ? { nikke: s.nikke } : {}),
   ...(ev ? { event: ev } : {}),
 });
@@ -823,7 +827,11 @@ app.get("/api/events/:id/script", async (c) => {
     episodes: ids.map((g, i) => ({
       groupId: g,
       name: idx.get(g)?.name ?? null,
-      lines: scripts[i].map((l) => (l.s && l.s !== "Narration" ? `${l.s}: ${l.t}` : l.t)),
+      // a flat text needs its branches marked, or every option's lines read as one story
+      lines: scripts[i].map((l) => {
+        const text = l.s && l.s !== "Narration" ? `${l.s}: ${l.t}` : l.t;
+        return l.branch ? `[${l.choice ? "선택지 " : ""}${l.branch}] ${text}` : text;
+      }),
     })),
   });
 });
@@ -931,6 +939,8 @@ const mainChapters = async () => {
 async function storyRoute() {
   const [chapters, events, scenes] = await Promise.all([mainChapters(), eventGroups(), getScenes()]);
   const last = Math.max(-1, ...chapters.keys());
+  // events and side stories the game data lacks can still be in the archive, under the guide's title
+  const libraryByTitle = new Map([...events.values()].filter((v) => v.source === "library").map((v) => [searchNorm(v.title), v.id]));
   const extra = Array.from({ length: Math.max(0, last - ROUTE_COVERAGE_CHAPTER) }, (_, i) => ({ kind: "main" as const, chapter: ROUTE_COVERAGE_CHAPTER + 1 + i }));
   return [...STORY_ROUTE, ...extra, ...favoriteRouteEntries(scenes)].map((e, step) => {
     if (e.kind === "main") {
@@ -943,6 +953,8 @@ async function storyRoute() {
     }
     // bonus episodes ship as their own "<id>_bNN" events — they belong to the same entry
     const found = e.ids.flatMap((id) => [id, ...[...events.keys()].filter((k) => k.startsWith(`${id}_b`) && /_b\d+$/.test(k))]).filter((id) => events.has(id));
+    const library = e.kind === "affection" ? undefined : libraryByTitle.get(searchNorm(e.title));
+    if (library) found.push(library);
     const affectionScenes = e.nikke ? scenes.filter((s) => s.category === "attractive" && s.nikke === e.nikke).length : 0;
     const inData = e.kind === "affection" ? affectionScenes > 0 : found.length > 0;
     return {
@@ -955,6 +967,8 @@ async function storyRoute() {
       required: e.required,
       ...(e.importance ? { importance: e.importance } : {}),
       ...(e.kind === "affection" ? { scenes: affectionScenes } : { episodes: found.reduce((n, id) => n + (events.get(id)?.episodes ?? 0), 0) }),
+      // archive-only entries have no event to look scenes up from in the game data
+      ...(library && found.length === 1 ? { firstScene: events.get(library)?.scenes[0] ?? null } : {}),
       inData,
       ...(e.note || !inData ? { note: [e.note, inData ? "" : "이 API 데이터에는 스크립트가 없음"].filter(Boolean).join(" · ") } : {}),
     };

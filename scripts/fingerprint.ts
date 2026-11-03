@@ -3,6 +3,7 @@ import { readdirSync, readFileSync } from "node:fs";
 import path from "node:path";
 import { cdnUrl } from "../src/cdn.js";
 import { FAVORITE_DIR } from "./favorite-stories.js";
+import { LIBRARY_COMMIT, LIBRARY_REPO } from "./library-stories.js";
 
 // Representative files whose content changes when game data updates.
 // Per-character ko roledata is added below so skill/stat-only patches are caught too.
@@ -76,6 +77,8 @@ async function main() {
 
   // repo-kept scripts go into dist too, so editing them must trigger a redeploy
   for (const f of readdirSync(FAVORITE_DIR).sort()) hash.update(readFileSync(path.join(FAVORITE_DIR, f)));
+  // so does moving the pinned story archive
+  hash.update(`${LIBRARY_REPO}@${LIBRARY_COMMIT}`);
 
   console.log(`fingerprint over ${PATHS.length} base + ${ok}/${rids.length} roledata files:`);
   console.log(hash.digest("hex"));

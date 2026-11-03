@@ -2469,7 +2469,7 @@ var favoriteRouteEntries = (scenes) => scenes.filter((s) => s.category === "favo
 }));
 
 // src/scene-categories.ts
-var SCENE_CATEGORIES = ["main", "event", "attractive", "sudden", "favorite"];
+var SCENE_CATEGORIES = ["main", "event", "attractive", "sudden", "favorite", "library"];
 
 // src/fields.ts
 function fieldsOf(c) {
@@ -19587,6 +19587,7 @@ var MAX_CHARS = 6e4;
 var INSTRUCTIONS = `Unofficial NIKKE (GODDESS OF VICTORY: NIKKE) game data. Data \xA9 SHIFT UP / Level Infinite.
 - Character names exist in ko/en/ja/zh-TW and searches match any of them; responses default to Korean (lang=ko).
 - Story scene scripts are Korean only. Favorite-item (\uC560\uC7A5\uD488, category "favorite") scripts are transcribed from videos, not game data: they may have typos and follow only the choice taken in the video (chosen: true).
+- category "library" scenes are stories the game data doesn't serve (messenger chats, lost relics, side stories, sub quests, older events), from a community archive. They have speaker names but no voice or icons. Lines inside a choice carry branch ("<block>.<option>", nested pairs for nested choices): read one branch, not all of them. next says which scene follows. Story collections are also events (source "library", ids lib_*): read_event marks those lines "[1.1] ..." and options "[\uC120\uD0DD\uC9C0 1.1] ...".
 - Alternate versions (\uC774\uACA9, e.g. "\uB77C\uD53C : \uB808\uB4DC \uD6C4\uB4DC") are linked to their original: name searches and character story lookups cover every version unless a tool says otherwise.
 - Filters take English enum values; Korean terms map as noted in each parameter (e.g. \uCCA0\uAC11 = Iron).
 - Lists are paged with limit/offset. Oversized responses come back with a "truncated" object telling you how to fetch the rest.
@@ -19723,7 +19724,10 @@ var shapeScene = (includeMedia) => (d) => includeMedia || !Array.isArray(d?.line
     speaker: l.speakerName ?? l.speaker,
     text: l.text,
     ...l.window === "Choice" ? { window: l.window } : {},
-    ...l.chosen ? { chosen: true } : {}
+    ...l.chosen ? { chosen: true } : {},
+    ...l.branch ? { branch: l.branch } : {},
+    ...l.choiceId ? { choiceId: l.choiceId } : {},
+    ...l.optionValue ? { optionValue: l.optionValue } : {}
   }))
 };
 var ICON = `data:image/svg+xml;base64,${Buffer.from(
@@ -19807,7 +19811,7 @@ function buildServer(api, version2, origin = "", boundBlablaid) {
     "search_scenes",
     {
       title: "Search story scenes",
-      description: "List story scene scripts (Korean): main story, events, sudden (\uB3CC\uBC1C), affection and favorite-item (\uC560\uC7A5\uD488) scenes. Use get_scene to read the dialogue.",
+      description: `List story scene scripts (Korean): main story, events, sudden (\uB3CC\uBC1C), affection, favorite-item (\uC560\uC7A5\uD488) and library scenes (messenger, lost relics, side stories, sub quests, events missing from the game data). q also matches a library scene's collection, e.g. "ARK RANGER" or "blabla". Use get_scene to read the dialogue.`,
       inputSchema: object({
         q: string2().optional().describe("Scene name or groupId substring"),
         category: _enum(SCENE_CATEGORIES).optional(),
@@ -19852,7 +19856,7 @@ function buildServer(api, version2, origin = "", boundBlablaid) {
     async (a) => call(
       api,
       "list_events",
-      `/api/events${qs({ q: a.q, limit: a.limit, offset: a.offset, fields: "id,title,episodes,totalLines" })}`
+      `/api/events${qs({ q: a.q, limit: a.limit, offset: a.offset, fields: "id,title,episodes,totalLines,source" })}`
     )
   );
   server.registerTool(
@@ -19913,7 +19917,7 @@ function buildServer(api, version2, origin = "", boundBlablaid) {
     "search_lines",
     {
       title: "Search story dialogue",
-      description: "Full-text search over every story line (main, events, sudden, affection, favorite items \u2014 Korean). Find who said something, where a phrase or topic comes up, or all lines of one speaker. Each hit names its scene and event; read around it with get_scene.",
+      description: "Full-text search over every story line (main, events, sudden, affection, favorite items, library \u2014 Korean). Find who said something, where a phrase or topic comes up, or all lines of one speaker. Each hit names its scene and event; read around it with get_scene.",
       inputSchema: object({
         q: string2().optional().describe("Text to find in the dialogue (Korean), punctuation ignored"),
         speaker: string2().optional().describe("Only lines spoken by this character (Korean name, e.g. \uB77C\uD53C)"),
@@ -20156,13 +20160,13 @@ function buildServer(api, version2, origin = "", boundBlablaid) {
       const [nikkes, events, scenes, favorites] = await Promise.all([
         get(`/api/nikkes?q=${q}&family=1&limit=8&lang=ko&fields=id,name`),
         get(`/api/events?q=${q}&limit=5&fields=id,title`),
-        get(`/api/scenes?q=${q}&limit=5&fields=groupId,name`),
+        get(`/api/scenes?q=${q}&limit=5&fields=groupId,name,collection`),
         get(`/api/favorites?q=${q}&limit=5&lang=ko&fields=id,name`)
       ]);
       const results = [
         ...(nikkes.characters ?? []).map((c) => ({ id: `nikke:${c.id}`, title: String(c.name), url: link(`/api/nikkes/${c.id}`) })),
         ...(events.events ?? []).map((e) => ({ id: `event:${e.id}`, title: String(e.title ?? e.id), url: link(`/api/events/${e.id}`) })),
-        ...(scenes.scenes ?? []).map((s) => ({ id: `scene:${s.groupId}`, title: String(s.name ?? s.groupId), url: link(`/api/scenes/${s.groupId}`) })),
+        ...(scenes.scenes ?? []).map((s) => ({ id: `scene:${s.groupId}`, title: [s.collection, s.name ?? s.groupId].filter(Boolean).join(" \xB7 "), url: link(`/api/scenes/${s.groupId}`) })),
         ...(favorites.favorites ?? []).map((f) => ({ id: `favorite:${f.id}`, title: String(f.name), url: link(`/api/favorites/${f.id}`) }))
       ];
       const out = JSON.stringify({ results });
@@ -20315,7 +20319,7 @@ function llmsTxt(origin) {
   const docs = docsUrl();
   return `# nikke-api
 
-> \uBE44\uACF5\uC2DD NIKKE(\uC2B9\uB9AC\uC758 \uC5EC\uC2E0: \uB2C8\uCF00) \uAC8C\uC784 \uB370\uC774\uD130 REST API\uC640 MCP \uC11C\uBC84. \uCE90\uB9AD\uD130(\uC2A4\uD0AC\xB7\uC2A4\uD0EF\xB7\uC774\uACA9), \uC2A4\uD1A0\uB9AC \uB300\uBCF8(\uC560\uC7A5\uD488 \uC2A4\uD1A0\uB9AC \uD3EC\uD568)\xB7\uC774\uBCA4\uD2B8\xB7\uAC10\uC0C1 \uC21C\uC11C, \uC18C\uC7A5\uD488 \uB370\uC774\uD130\uB97C 4\uAC1C \uC5B8\uC5B4(ko/en/ja/zh-TW)\uB85C \uC81C\uACF5\uD569\uB2C8\uB2E4. \uC778\uC99D \uC5C6\uC74C, \uBE44\uC0C1\uC5C5\uC801 \uD32C \uD504\uB85C\uC81D\uD2B8, \uB370\uC774\uD130 \xA9 SHIFT UP / Level Infinite.
+> \uBE44\uACF5\uC2DD NIKKE(\uC2B9\uB9AC\uC758 \uC5EC\uC2E0: \uB2C8\uCF00) \uAC8C\uC784 \uB370\uC774\uD130 REST API\uC640 MCP \uC11C\uBC84. \uCE90\uB9AD\uD130(\uC2A4\uD0AC\xB7\uC2A4\uD0EF\xB7\uC774\uACA9), \uC2A4\uD1A0\uB9AC \uB300\uBCF8(\uC560\uC7A5\uD488\xB7\uBA54\uC2E0\uC800\xB7\uC720\uC2E4\uBB3C\xB7\uC0AC\uC774\uB4DC \uC2A4\uD1A0\uB9AC \uD3EC\uD568)\xB7\uC774\uBCA4\uD2B8\xB7\uAC10\uC0C1 \uC21C\uC11C, \uC18C\uC7A5\uD488 \uB370\uC774\uD130\uB97C 4\uAC1C \uC5B8\uC5B4(ko/en/ja/zh-TW)\uB85C \uC81C\uACF5\uD569\uB2C8\uB2E4. \uC778\uC99D \uC5C6\uC74C, \uBE44\uC0C1\uC5C5\uC801 \uD32C \uD504\uB85C\uC81D\uD2B8, \uB370\uC774\uD130 \xA9 SHIFT UP / Level Infinite.
 
 AI \uC5B4\uC2DC\uC2A4\uD134\uD2B8\uAC00 \uC0AC\uC6A9\uC790\uC5D0\uAC8C \uC5F0\uACB0 \uBC29\uBC95\uC744 \uC548\uB0B4\uD560 \uB54C\uB294 \uC544\uB798 "MCP \uC5F0\uACB0 \uC548\uB0B4"\uB97C \uC77D\uACE0 \uADF8\uB300\uB85C \uB530\uB974\uBA74 \uB429\uB2C8\uB2E4. MCP \uC11C\uBC84 URL\uC740 ${origin}/mcp \uC785\uB2C8\uB2E4.
 
@@ -21469,7 +21473,7 @@ async function createApp(storage) {
     }
     if (q) {
       const nq = norm(q);
-      list = list.filter((s) => norm(s.groupId).includes(nq) || norm(s.name ?? "").includes(nq));
+      list = list.filter((s) => [s.groupId, s.name, s.collection, s.libraryCategory].some((v) => norm(v ?? "").includes(nq)));
     }
     const total = list.length;
     const pg = pageQuery(c, total);
@@ -21552,7 +21556,8 @@ async function createApp(storage) {
           s: l.speakerName ?? l.speaker ?? "",
           ns: norm(l.speakerName ?? l.speaker ?? ""),
           t: l.text ?? "",
-          nt: searchNorm(l.text ?? "")
+          nt: searchNorm(l.text ?? ""),
+          ...l.branch ? { branch: l.branch, choice: l.window === "Choice" } : {}
         }))
       ).catch((e) => (scriptCache.delete(g), Promise.reject(e)));
       scriptCache.set(g, p);
@@ -21603,6 +21608,7 @@ async function createApp(storage) {
   const sceneLabel = (s, ev2) => ({
     name: s?.name ?? null,
     category: s?.category ?? null,
+    ...s?.collection ? { collection: s.collection } : {},
     ...s?.nikke ? { nikke: s.nikke } : {},
     ...ev2 ? { event: ev2 } : {}
   });
@@ -21624,7 +21630,11 @@ async function createApp(storage) {
       episodes: ids.map((g, i) => ({
         groupId: g,
         name: idx.get(g)?.name ?? null,
-        lines: scripts[i].map((l) => l.s && l.s !== "Narration" ? `${l.s}: ${l.t}` : l.t)
+        // a flat text needs its branches marked, or every option's lines read as one story
+        lines: scripts[i].map((l) => {
+          const text2 = l.s && l.s !== "Narration" ? `${l.s}: ${l.t}` : l.t;
+          return l.branch ? `[${l.choice ? "\uC120\uD0DD\uC9C0 " : ""}${l.branch}] ${text2}` : text2;
+        })
       }))
     });
   });
@@ -21718,6 +21728,7 @@ async function createApp(storage) {
   async function storyRoute() {
     const [chapters, events, scenes] = await Promise.all([mainChapters(), eventGroups(), getScenes()]);
     const last = Math.max(-1, ...chapters.keys());
+    const libraryByTitle = new Map([...events.values()].filter((v) => v.source === "library").map((v) => [searchNorm(v.title), v.id]));
     const extra = Array.from({ length: Math.max(0, last - ROUTE_COVERAGE_CHAPTER) }, (_, i) => ({ kind: "main", chapter: ROUTE_COVERAGE_CHAPTER + 1 + i }));
     return [...STORY_ROUTE, ...extra, ...favoriteRouteEntries(scenes)].map((e, step) => {
       if (e.kind === "main") {
@@ -21729,6 +21740,8 @@ async function createApp(storage) {
         return { step, kind: e.kind, key: e.sceneGroupId, ids: [e.sceneGroupId], title: e.title, nikke: e.nikke, required: false, scenes: 1, firstScene: e.sceneGroupId, inData: true, note: e.note };
       }
       const found = e.ids.flatMap((id) => [id, ...[...events.keys()].filter((k) => k.startsWith(`${id}_b`) && /_b\d+$/.test(k))]).filter((id) => events.has(id));
+      const library = e.kind === "affection" ? void 0 : libraryByTitle.get(searchNorm(e.title));
+      if (library) found.push(library);
       const affectionScenes = e.nikke ? scenes.filter((s) => s.category === "attractive" && s.nikke === e.nikke).length : 0;
       const inData = e.kind === "affection" ? affectionScenes > 0 : found.length > 0;
       return {
@@ -21741,6 +21754,8 @@ async function createApp(storage) {
         required: e.required,
         ...e.importance ? { importance: e.importance } : {},
         ...e.kind === "affection" ? { scenes: affectionScenes } : { episodes: found.reduce((n, id) => n + (events.get(id)?.episodes ?? 0), 0) },
+        // archive-only entries have no event to look scenes up from in the game data
+        ...library && found.length === 1 ? { firstScene: events.get(library)?.scenes[0] ?? null } : {},
         inData,
         ...e.note || !inData ? { note: [e.note, inData ? "" : "\uC774 API \uB370\uC774\uD130\uC5D0\uB294 \uC2A4\uD06C\uB9BD\uD2B8\uAC00 \uC5C6\uC74C"].filter(Boolean).join(" \xB7 ") } : {}
       };

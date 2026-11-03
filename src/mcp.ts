@@ -17,6 +17,7 @@ const MAX_CHARS = 60_000;
 const INSTRUCTIONS = `Unofficial NIKKE (GODDESS OF VICTORY: NIKKE) game data. Data © SHIFT UP / Level Infinite.
 - Character names exist in ko/en/ja/zh-TW and searches match any of them; responses default to Korean (lang=ko).
 - Story scene scripts are Korean only. Favorite-item (애장품, category "favorite") scripts are transcribed from videos, not game data: they may have typos and follow only the choice taken in the video (chosen: true).
+- category "library" scenes are stories the game data doesn't serve (messenger chats, lost relics, side stories, sub quests, older events), from a community archive. They have speaker names but no voice or icons. Lines inside a choice carry branch ("<block>.<option>", nested pairs for nested choices): read one branch, not all of them. next says which scene follows. Story collections are also events (source "library", ids lib_*): read_event marks those lines "[1.1] ..." and options "[선택지 1.1] ...".
 - Alternate versions (이격, e.g. "라피 : 레드 후드") are linked to their original: name searches and character story lookups cover every version unless a tool says otherwise.
 - Filters take English enum values; Korean terms map as noted in each parameter (e.g. 철갑 = Iron).
 - Lists are paged with limit/offset. Oversized responses come back with a "truncated" object telling you how to fetch the rest.
@@ -204,6 +205,9 @@ const shapeScene = (includeMedia: boolean) => (d: any) =>
           text: l.text,
           ...(l.window === "Choice" ? { window: l.window } : {}),
           ...(l.chosen ? { chosen: true } : {}),
+          ...(l.branch ? { branch: l.branch } : {}),
+          ...(l.choiceId ? { choiceId: l.choiceId } : {}),
+          ...(l.optionValue ? { optionValue: l.optionValue } : {}),
         })),
       };
 
@@ -304,7 +308,7 @@ export function buildServer(api: Fetcher, version: string, origin = "", boundBla
     {
       title: "Search story scenes",
       description:
-        "List story scene scripts (Korean): main story, events, sudden (돌발), affection and favorite-item (애장품) scenes. Use get_scene to read the dialogue.",
+        "List story scene scripts (Korean): main story, events, sudden (돌발), affection, favorite-item (애장품) and library scenes (messenger, lost relics, side stories, sub quests, events missing from the game data). q also matches a library scene's collection, e.g. \"ARK RANGER\" or \"blabla\". Use get_scene to read the dialogue.",
       inputSchema: z.object({
         q: z.string().optional().describe("Scene name or groupId substring"),
         category: z.enum(SCENE_CATEGORIES).optional(),
@@ -358,7 +362,7 @@ export function buildServer(api: Fetcher, version: string, origin = "", boundBla
       call(
         api,
         "list_events",
-        `/api/events${qs({ q: a.q, limit: a.limit, offset: a.offset, fields: "id,title,episodes,totalLines" })}`,
+        `/api/events${qs({ q: a.q, limit: a.limit, offset: a.offset, fields: "id,title,episodes,totalLines,source" })}`,
       ),
   );
 
@@ -427,7 +431,7 @@ export function buildServer(api: Fetcher, version: string, origin = "", boundBla
     {
       title: "Search story dialogue",
       description:
-        "Full-text search over every story line (main, events, sudden, affection, favorite items — Korean). Find who said something, where a phrase or topic comes up, or all lines of one speaker. Each hit names its scene and event; read around it with get_scene.",
+        "Full-text search over every story line (main, events, sudden, affection, favorite items, library — Korean). Find who said something, where a phrase or topic comes up, or all lines of one speaker. Each hit names its scene and event; read around it with get_scene.",
       inputSchema: z.object({
         q: z.string().optional().describe("Text to find in the dialogue (Korean), punctuation ignored"),
         speaker: z.string().optional().describe("Only lines spoken by this character (Korean name, e.g. 라피)"),
@@ -708,13 +712,13 @@ export function buildServer(api: Fetcher, version: string, origin = "", boundBla
       const [nikkes, events, scenes, favorites] = await Promise.all([
         get(`/api/nikkes?q=${q}&family=1&limit=8&lang=ko&fields=id,name`),
         get(`/api/events?q=${q}&limit=5&fields=id,title`),
-        get(`/api/scenes?q=${q}&limit=5&fields=groupId,name`),
+        get(`/api/scenes?q=${q}&limit=5&fields=groupId,name,collection`),
         get(`/api/favorites?q=${q}&limit=5&lang=ko&fields=id,name`),
       ]);
       const results = [
         ...(nikkes.characters ?? []).map((c: any) => ({ id: `nikke:${c.id}`, title: String(c.name), url: link(`/api/nikkes/${c.id}`) })),
         ...(events.events ?? []).map((e: any) => ({ id: `event:${e.id}`, title: String(e.title ?? e.id), url: link(`/api/events/${e.id}`) })),
-        ...(scenes.scenes ?? []).map((s: any) => ({ id: `scene:${s.groupId}`, title: String(s.name ?? s.groupId), url: link(`/api/scenes/${s.groupId}`) })),
+        ...(scenes.scenes ?? []).map((s: any) => ({ id: `scene:${s.groupId}`, title: [s.collection, s.name ?? s.groupId].filter(Boolean).join(" · "), url: link(`/api/scenes/${s.groupId}`) })),
         ...(favorites.favorites ?? []).map((f: any) => ({ id: `favorite:${f.id}`, title: String(f.name), url: link(`/api/favorites/${f.id}`) })),
       ];
       const out = JSON.stringify({ results });

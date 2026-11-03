@@ -3,6 +3,7 @@ import path from "node:path";
 import { cdnUrl } from "../src/cdn.js";
 import { compareEventScenes, eventIdOf } from "../src/events.js";
 import { readFavoriteStories } from "./favorite-stories.js";
+import { assertDistinctIds, dedupKeys, LIBRARY_EVENT_CATEGORIES, libraryEventId, readLibraryStories, selectNewScripts } from "./library-stories.js";
 import { mainChaptersFromList } from "./main-chapters.js";
 import type {
   Burst,
@@ -408,6 +409,9 @@ async function main() {
     chapterStep?: number;
     source?: string;
     sourceVideo?: string;
+    collection?: string;
+    libraryCategory?: string;
+    section?: string;
   }[] = [];
   const mainChapter = mainChaptersFromList((await readJson<any[]>("scene_list_ko.json")) ?? []);
   const sceneCategory = (gid: string) =>
@@ -522,6 +526,47 @@ async function main() {
     });
     addLines(scene.groupId, "favorite", lines);
   }
+
+  // --- stories from the pinned archive that the game data above doesn't have ---
+  const known = new Set<string>();
+  for (const bucket of lineIndex.values()) {
+    for (const scene of Object.values(bucket)) {
+      for (const k of dedupKeys(scene.l.map(([, text]) => ({ text })))) known.add(k);
+    }
+  }
+  const nikkeNames = new Set(characters.map((n) => n.name.ko));
+  const library = await readLibraryStories();
+  for (const w of library.warnings) console.log(`warn: library ${w}`);
+  const libraryScenes = selectNewScripts(library.scenes, known);
+  assertDistinctIds(libraryScenes);
+  const libraryIds = new Set(libraryScenes.map((s) => s.groupId));
+  for (const scene of libraryScenes) {
+    // a route into a scene dropped as a duplicate would be a dead link
+    const next = scene.next?.filter((n) => libraryIds.has(n.groupId));
+    const { next: _next, ...rest } = scene;
+    // character episodes and 1:1 chats are titled with the character's exact name
+    const nikke =
+      (scene.libraryCategory === "character_episodes" || scene.section === "개인") && nikkeNames.has(scene.collection)
+        ? scene.collection
+        : undefined;
+    await writeFile(
+      path.join(SCENES, `${scene.groupId}.json`),
+      JSON.stringify({ ...rest, ...(nikke ? { nikke } : {}), ...(next?.length ? { next } : {}) }),
+    );
+    sceneIndex.push({
+      groupId: scene.groupId,
+      name: scene.name,
+      lines: scene.lines.length,
+      category: "library",
+      type: "library",
+      collection: scene.collection,
+      libraryCategory: scene.libraryCategory,
+      ...(scene.section ? { section: scene.section } : {}),
+      ...(nikke ? { nikke } : {}),
+    });
+    addLines(scene.groupId, "library", scene.lines);
+  }
+  console.log(`library: ${libraryScenes.length}/${library.scenes.length} scenes are new`);
   // the story route only sees main scenes with a chapter
   const unfiled = sceneIndex.filter((s) => s.category === "main" && s.chapter == null).map((s) => s.groupId);
   if (unfiled.length) console.log(`warn: main scenes not in scene_list: ${unfiled.join(", ")}`);
@@ -572,6 +617,17 @@ async function main() {
     ...e,
     scenes: e.scenes.sort(compareEventScenes),
   }));
+  const libraryEvents = new Map<string, (typeof events)[number]>();
+  for (const s of libraryScenes) {
+    if (!LIBRARY_EVENT_CATEGORIES.has(s.libraryCategory)) continue;
+    const id = libraryEventId(s.collection);
+    const e = libraryEvents.get(id) ?? { id, title: s.collection, episodes: 0, totalLines: 0, scenes: [], source: "library" };
+    e.episodes++;
+    e.totalLines += s.lines.length;
+    e.scenes.push(s.groupId);
+    libraryEvents.set(id, e);
+  }
+  events.push(...libraryEvents.values());
   await writeFile(path.join(OUT, "events.json"), JSON.stringify(events));
   console.log(`events.json: ${events.length} events`);
 
