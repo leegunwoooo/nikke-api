@@ -227,6 +227,41 @@
               ]
             }
           }
+        },
+        {
+          "name": "니케 등장 씬",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{baseUrl}}/api/nikkes/라피/appearances?limit=20",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "nikkes",
+                "라피",
+                "appearances"
+              ],
+              "query": [
+                {
+                  "key": "category",
+                  "value": "",
+                  "description": "main|event|sudden|attractive|favorite|library",
+                  "disabled": true
+                },
+                {
+                  "key": "limit",
+                  "value": "20"
+                },
+                {
+                  "key": "offset",
+                  "value": "0",
+                  "disabled": true
+                }
+              ]
+            }
+          }
         }
       ]
     },
@@ -387,6 +422,162 @@
                   "key": "fields",
                   "value": "id,scenes",
                   "disabled": true
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "대사 검색",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{baseUrl}}/api/lines?q=지휘관&limit=20",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "lines"
+              ],
+              "query": [
+                {
+                  "key": "q",
+                  "value": "지휘관",
+                  "description": "대사 본문 검색 (구두점 무시). q나 speaker 중 하나 필수"
+                },
+                {
+                  "key": "speaker",
+                  "value": "",
+                  "description": "화자 이름 부분 일치 — q 대신 쓸 수 있음",
+                  "disabled": true
+                },
+                {
+                  "key": "category",
+                  "value": "",
+                  "description": "main|event|sudden|attractive|favorite|library",
+                  "disabled": true
+                },
+                {
+                  "key": "nikke",
+                  "value": "",
+                  "description": "해당 니케가 나오는 씬으로 제한",
+                  "disabled": true
+                },
+                {
+                  "key": "family",
+                  "value": "",
+                  "description": "true면 이격 동일 캐릭터로 확장",
+                  "disabled": true
+                },
+                {
+                  "key": "limit",
+                  "value": "20"
+                },
+                {
+                  "key": "offset",
+                  "value": "0",
+                  "disabled": true
+                },
+                {
+                  "key": "page",
+                  "value": "1",
+                  "description": "1부터 — offset 대신 사용",
+                  "disabled": true
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "이벤트 전체 대본",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{baseUrl}}/api/events/event_firstaffection/script?limit=2",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "events",
+                "event_firstaffection",
+                "script"
+              ],
+              "query": [
+                {
+                  "key": "limit",
+                  "value": "2",
+                  "description": "에피소드 단위 페이지네이션"
+                },
+                {
+                  "key": "offset",
+                  "value": "0",
+                  "disabled": true
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "스토리 순서",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{baseUrl}}/api/story/route",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "story",
+                "route"
+              ]
+            }
+          }
+        },
+        {
+          "name": "다음 스토리 추천",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{baseUrl}}/api/story/next?chapter=0&limit=5",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "story",
+                "next"
+              ],
+              "query": [
+                {
+                  "key": "chapter",
+                  "value": "0",
+                  "description": "마지막으로 본 챕터"
+                },
+                {
+                  "key": "after",
+                  "value": "",
+                  "description": "해당 엔트리 다음부터",
+                  "disabled": true
+                },
+                {
+                  "key": "done",
+                  "value": "",
+                  "description": "이미 본 것 (콤마 구분)",
+                  "disabled": true
+                },
+                {
+                  "key": "required",
+                  "value": "",
+                  "description": "true면 필수만",
+                  "disabled": true
+                },
+                {
+                  "key": "limit",
+                  "value": "5",
+                  "description": "최대 20"
                 }
               ]
             }
@@ -1255,6 +1446,37 @@
                   "key": "path",
                   "value": "character/ko/nikke_list_v2.json"
                 }
+              ]
+            }
+          }
+        },
+        {
+          "name": "MCP 안내",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{baseUrl}}/mcp",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "mcp"
+              ],
+              "description": "MCP 연결 안내 (text/markdown). 실제 사용은 POST /mcp — Streamable HTTP"
+            }
+          }
+        },
+        {
+          "name": "llms.txt",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{baseUrl}}/llms.txt",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "llms.txt"
               ]
             }
           }
