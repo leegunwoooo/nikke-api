@@ -1,1 +1,1 @@
-{"groupId": "event_firstaffection_01", "lines": [{"speakerName": "Narration", "text": "비 오는 밤."}, {"speakerName": "앵커", "text": "지휘관님, 우산 가져왔어요!"}]}
+{"groupId": "event_firstaffection_01", "lines": [{"speakerName": "Narration", "text": "비 오는 밤."}, {"id": "event_firstaffection_01_sub", "text": null, "window": "SubScenario", "voice": null}, {"speakerName": "앵커", "text": "지휘관님, 우산 가져왔어요!"}]}

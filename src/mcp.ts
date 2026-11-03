@@ -215,7 +215,9 @@ const shapeScene = (includeMedia: boolean) => (d: any) =>
     ? d
     : {
         ...d,
-        lines: d.lines.map((l: any) => ({
+        // SubScenario rows are cutscene markers (text: null) — drop them from
+        // the reading view; includeMedia returns the raw scene untouched
+        lines: d.lines.filter((l: any) => l.window !== "SubScenario").map((l: any) => ({
           speaker: l.speakerName ?? l.speaker,
           text: l.text,
           ...(l.window === "Choice" ? { window: l.window } : {}),

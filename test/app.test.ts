@@ -99,12 +99,24 @@ test("/api/events groups event_* scenes per event", async () => {
   const ev = all.events.find((e: any) => e.id === "event_firstaffection");
   assert.equal(ev.episodes, 2);
   assert.deepEqual(ev.scenes, ["event_firstaffection_01", "event_firstaffection_02"]);
-  assert.equal(ev.totalLines, 4);
+  assert.equal(ev.totalLines, 5);
 
   const d = await json("/api/events/event_firstaffection");
   assert.equal(d.scenes[0].name, "추억은 갑작스럽게");
   assert.equal((await get("/api/events/event_nope")).status, 404);
   assert.ok((await json("/api/events?q=first")).count >= 1);
+});
+
+test("the script route skips SubScenario markers but /api/lines keeps their index", async () => {
+  // event_firstaffection_01 carries one mid-scene — a cutscene marker, not a
+  // line of dialogue, so reading output drops it but positions don't shift
+  const scene = await json("/api/scenes/event_firstaffection_01");
+  assert.equal(scene.lines[1].window, "SubScenario");
+  const script = await json("/api/events/event_firstaffection/script");
+  assert.deepEqual(script.episodes[0].lines, ["비 오는 밤.", "앵커: 지휘관님, 우산 가져왔어요!"]);
+  const hit = (await json("/api/lines?q=우산 가져왔어요")).lines[0];
+  assert.equal(hit.groupId, "event_firstaffection_01");
+  assert.equal(scene.lines[hit.line].text, hit.text);
 });
 
 test("event source records which scene list the group came from", async () => {

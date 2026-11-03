@@ -26,6 +26,30 @@ test("speech, commander and narration lines, with CRLF", () => {
   );
 });
 
+test("form fields and end cards (label : value) read as narration, not speech", () => {
+  const [s] = parseLibraryScript(`@@@SCRIPT_ID: a_00
+이름 : 나나
+나이 : 20
+B-SIDE IDOL : END
+REBORN EVIL : TO BE CONTINUED
+A : 진짜 대사
+보구자 : 그렇습니다
+이름: 나나`);
+  assert.deepEqual(
+    s.lines.map((l) => [l.window, l.speakerName, l.text]),
+    [
+      ["Narration", undefined, "이름: 나나"],
+      ["Narration", undefined, "나이: 20"],
+      ["Narration", undefined, "B-SIDE IDOL: END"],
+      ["Narration", undefined, "REBORN EVIL: TO BE CONTINUED"],
+      ["Speech", "A", "진짜 대사"],
+      ["Speech", "보구자", "그렇습니다"],
+      // no space before the colon — a real speaker named 이름
+      ["Speech", "이름", "나나"],
+    ],
+  );
+});
+
 test("choices keep every branch, nested ones included", () => {
   const warnings: string[] = [];
   const [s] = parseLibraryScript(
