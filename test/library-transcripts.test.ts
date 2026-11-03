@@ -21,6 +21,16 @@ test("MARIA-n part 1 has its 14 scenes, ready for the API", () => {
   }
 });
 
+test("silent lines and one-button replies stay in the script", () => {
+  const texts = (groupId: string) => scenes.find((s) => s.groupId === groupId)!.lines.map((l) => l.text);
+  const enic = texts("lib_maria_n_1_05");
+  assert.equal(enic[enic.indexOf("여기까지 맞습니까?") + 1], "…….");
+  const seven = scenes.find((s) => s.groupId === "lib_maria_n_1_13")!.lines;
+  const flee = seven.findIndex((l) => l.text === "튀자고요?");
+  assert.equal(seven[flee - 1].text, "튀자.");
+  assert.equal(seven[flee - 1].window, "Self");
+});
+
 test("no uploader's game nickname is left in the script", () => {
   const all = scenes.flatMap((s) => s.lines.map((l) => l.text)).join("\n");
   assert.equal((all.match(/@UserName/g) ?? []).length, 3);
