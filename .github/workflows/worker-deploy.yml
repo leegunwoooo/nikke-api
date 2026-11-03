@@ -1,0 +1,45 @@
+name: Deploy API worker
+
+# The Pages worker is bundled from src/ + worker/ into pages-proxy/_worker.js
+# and deployed to the nikke-api Pages project. Docs (pages.yml) and data
+# (refresh-data.yml) have their own pipelines — this covers only the worker.
+on:
+  push:
+    branches: [main]
+    paths:
+      - "src/**"
+      - "worker/**"
+      - "pages-proxy/wrangler.toml"
+      - "package.json"
+      - "package-lock.json"
+      - "tsconfig*.json"
+      - ".github/workflows/worker-deploy.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    env:
+      CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+
+      - run: npm ci
+
+      - name: Bundle worker
+        run: npm run emit:pages-worker
+
+      - name: Deploy to nikke-api Pages
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy pages-proxy --project-name=nikke-api --commit-dirty=true
