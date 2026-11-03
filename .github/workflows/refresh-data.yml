@@ -3,7 +3,10 @@ name: Refresh data (redeploy)
 on:
   schedule:
     # 매일 20:00 UTC (05:00 KST) — UTC 자정은 cron 밀집으로 수 시간 지연돼 한산한 시간대로
-    - cron: "0 20 * * *"
+    # 일요일 슬롯을 따로 두는 이유: date +%u는 실행 지연이 4h 넘으면 요일이
+    # 밀려서 강제 배포를 놓친다 — 스케줄 식별자로 판정해야 밀려도 인식됨
+    - cron: "0 20 * * 1-6"
+    - cron: "0 20 * * 0"
   workflow_dispatch:
     inputs:
       force:
@@ -54,10 +57,12 @@ jobs:
         id: decide
         run: |
           FORCE="${{ github.event.inputs.force || 'false' }}"
-          DOW=$(date +%u)  # 7 = Sunday
+          # github.event.schedule tells us WHICH cron slot fired — a delayed
+          # Sunday run still reads as the Sunday schedule, where date-based
+          # checks would already see Monday
           if [ "$FORCE" = "true" ]; then
             echo "deploy=yes" >> "$GITHUB_OUTPUT"; echo "reason=forced" >> "$GITHUB_OUTPUT"
-          elif [ "$DOW" = "7" ]; then
+          elif [ "${{ github.event.schedule }}" = "0 20 * * 0" ]; then
             echo "deploy=yes" >> "$GITHUB_OUTPUT"; echo "reason=weekly-forced" >> "$GITHUB_OUTPUT"
           elif [ "${{ steps.fp.outputs.new }}" != "${{ steps.fp.outputs.old }}" ]; then
             echo "deploy=yes" >> "$GITHUB_OUTPUT"; echo "reason=changed" >> "$GITHUB_OUTPUT"
@@ -71,6 +76,36 @@ jobs:
         if: steps.decide.outputs.deploy == 'yes'
         run: npm run sync && npm run build
 
+      # the API worker reads dist over HTTP from the nikke-api-data Pages
+      # project — refreshing data is just a static deploy, no backend rebuild
+      - name: Generate file manifest
+        if: steps.decide.outputs.deploy == 'yes'
+        run: node scripts/manifest.mjs
+
+      # verify before deploying: missing essentials or a shrunken corpus must
+      # never reach Pages (also never reach the release backup below)
+      - name: Verify dist
+        if: steps.decide.outputs.deploy == 'yes'
+        run: |
+          node -e '
+            const fs=require("fs"),path=require("path");
+            const root="data/dist";
+            const required=["characters.json","events.json","_manifest.json","name_code_map.json","lines/main.json"];
+            const missing=required.filter(f=>!fs.existsSync(path.join(root,f)));
+            const manifest=JSON.parse(fs.readFileSync(path.join(root,"_manifest.json"),"utf8"));
+            if(missing.length){console.error("missing required:",missing);process.exit(1)}
+            if(!Array.isArray(manifest)||manifest.length<3000){console.error(`manifest too small: ${manifest.length}`);process.exit(1)}
+            console.log(`verified ${manifest.length} dist files`);
+          '
+
+      - name: Deploy dist to Cloudflare Pages
+        if: steps.decide.outputs.deploy == 'yes'
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy data/dist --project-name=nikke-api-data --branch=main --commit-dirty=true
+
       - name: Upload dist to data-latest release
         if: steps.decide.outputs.deploy == 'yes'
         run: |
@@ -80,20 +115,6 @@ jobs:
           gh release upload data-latest /tmp/dist.tar.gz --clobber
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      # the API worker reads dist over HTTP from the nikke-api-data Pages
-      # project — refreshing data is just a static deploy, no backend rebuild
-      - name: Generate file manifest
-        if: steps.decide.outputs.deploy == 'yes'
-        run: node scripts/manifest.mjs
-
-      - name: Deploy dist to Cloudflare Pages
-        if: steps.decide.outputs.deploy == 'yes'
-        uses: cloudflare/wrangler-action@v3
-        with:
-          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: pages deploy data/dist --project-name=nikke-api-data --branch=main --commit-dirty=true
 
       - name: Save new fingerprint
         if: steps.decide.outputs.deploy == 'yes'

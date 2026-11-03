@@ -73,7 +73,7 @@ async function syncRoleData(): Promise<number> {
     const results = await Promise.all(
       queue.slice(i, i + CONCURRENCY).map(([p, out]) => download(p, out)),
     );
-    done += results.filter(Boolean).length;
+    done += results.filter((r) => r === "ok").length;
   }
   return done;
 }
@@ -133,7 +133,7 @@ async function syncScenes(): Promise<number> {
     const results = await Promise.all(
       queue.slice(i, i + CONCURRENCY).map(([p, out]) => download(p, out)),
     );
-    done += results.filter(Boolean).length;
+    done += results.filter((r) => r === "ok").length;
   }
   return done;
 }
@@ -166,7 +166,7 @@ async function syncFavorites(): Promise<number> {
     const results = await Promise.all(
       queue.slice(i, i + CONCURRENCY).map(([p, out]) => download(p, out)),
     );
-    done += results.filter(Boolean).length;
+    done += results.filter((r) => r === "ok").length;
   }
   return done;
 }
@@ -192,7 +192,7 @@ async function syncCubes(): Promise<number> {
     const results = await Promise.all(
       queue.slice(i, i + CONCURRENCY).map(([p, out]) => download(p, out)),
     );
-    done += results.filter(Boolean).length;
+    done += results.filter((r) => r === "ok").length;
   }
   return done;
 }
@@ -201,31 +201,47 @@ async function fetchWithRetry(url: string, init?: RequestInit, tries = 3): Promi
   let lastErr: unknown;
   for (let i = 0; i < tries; i++) {
     try {
-      return await fetch(url, init);
+      const res = await fetch(url, init);
+      // 4xx is a real answer (missing file) — only retry server errors
+      if (res.status < 500) return res;
+      lastErr = new Error(`HTTP ${res.status}`);
     } catch (e) {
       lastErr = e;
-      await new Promise((r) => setTimeout(r, 1000 * (i + 1)));
     }
+    await new Promise((r) => setTimeout(r, 1000 * (i + 1)));
   }
   throw lastErr;
 }
 
-async function download(pathTemplate: string, outName: string): Promise<boolean> {
+type DownloadResult = "ok" | "missing" | "error";
+
+// non-404 failures after retries — a genuinely missing file (404) is
+// tolerable, a persistent 5xx/parse failure means the CDN or the file is
+// sick and the build must not ship
+const syncErrors: string[] = [];
+
+async function download(pathTemplate: string, outName: string): Promise<DownloadResult> {
   const url = cdnUrl(pathTemplate);
   try {
     const res = await fetchWithRetry(url);
+    if (res.status === 404) {
+      console.log(`404  ${pathTemplate}`);
+      return "missing";
+    }
     if (!res.ok) {
       console.log(`${res.status}  ${pathTemplate}`);
-      return false;
+      syncErrors.push(pathTemplate);
+      return "error";
     }
     const body = await res.text();
     JSON.parse(body); // sanity check
     await writeFile(path.join(OUT_DIR, outName), body);
     console.log(`ok  ${outName.padEnd(40)} ${(body.length / 1024).toFixed(1).padStart(8)} KB`);
-    return true;
+    return "ok";
   } catch (e) {
     console.log(`err ${pathTemplate}: ${(e as Error).message}`);
-    return false;
+    syncErrors.push(pathTemplate);
+    return "error";
   }
 }
 
@@ -236,7 +252,7 @@ async function main() {
   const failed: string[] = [];
   const fetched = new Set<string>();
   const fetchTo = async (p: string, out: string) => {
-    if (await download(p, out)) {
+    if ((await download(p, out)) === "ok") {
       ok++;
       fetched.add(out);
     } else failed.push(out);
@@ -250,6 +266,27 @@ async function main() {
     }
   }
   console.log(`\n${ok} resources synced -> ${OUT_DIR}`);
+
+  // fail loudly on partial syncs — missing inputs would otherwise be built
+  // and deployed as silently broken data. Check right after the static
+  // downloads so a known-bad input fails in ~10s instead of after the
+  // minutes-long bulk fetch. zh-TW equip tables do not exist upstream,
+  // so they're excluded from the required set.
+  const OPTIONAL = new Set(["ItemEquipTable_zh-TW.json", "equip_option_table_zh-TW.json"]);
+  const required = [
+    ...STATIC_RESOURCES.map(([, out]) => out),
+    ...LANG_RESOURCES.flatMap(([, out]) => LOCALES.map((l) => out.replace(/\{l\}/g, l))),
+  ].filter((f) => !OPTIONAL.has(f));
+  // ko lists live at unsuffixed paths, so their LANG_RESOURCES path always 404s:
+  // a name counts as failed only if no path delivered it
+  const missing = failed.filter((f) => !OPTIONAL.has(f) && !fetched.has(f));
+  for (const f of required) {
+    if (!existsSync(path.join(OUT_DIR, f)) && !missing.includes(f)) missing.push(f);
+  }
+  if (missing.length) {
+    console.error(`sync incomplete — ${missing.length} required files missing:\n${missing.join("\n")}`);
+    process.exit(1);
+  }
 
   const n = await syncRoleData();
   console.log(`${n} roledata files synced`);
@@ -267,20 +304,6 @@ async function main() {
   const fetchedLibrary = await syncLibrary();
   console.log(`story archive ${LIBRARY_COMMIT.slice(0, 7)} ${fetchedLibrary ? "synced" : "already present"}`);
 
-  // fail loudly on partial syncs — missing inputs would otherwise be built
-  // and deployed as silently broken data. zh-TW equip tables do not exist
-  // upstream, so they're excluded from the required set.
-  const OPTIONAL = new Set(["ItemEquipTable_zh-TW.json", "equip_option_table_zh-TW.json"]);
-  const required = [
-    ...STATIC_RESOURCES.map(([, out]) => out),
-    ...LANG_RESOURCES.flatMap(([, out]) => LOCALES.map((l) => out.replace(/\{l\}/g, l))),
-  ].filter((f) => !OPTIONAL.has(f));
-  // ko lists live at unsuffixed paths, so their LANG_RESOURCES path always 404s:
-  // a name counts as failed only if no path delivered it
-  const missing = failed.filter((f) => !OPTIONAL.has(f) && !fetched.has(f));
-  for (const f of required) {
-    if (!existsSync(path.join(OUT_DIR, f)) && !missing.includes(f)) missing.push(f);
-  }
   // corpus-level sanity: a bulk-download failure leaves a plausible-looking
   // count. Expect ~824 roledata files (206 chars x 4 locales) and ~3200
   // scene bodies — fail if wildly short.
@@ -293,8 +316,8 @@ async function main() {
     console.error(`sync incomplete — corpus too small: ${short.join(", ")} (${files.length} files total)`);
     process.exit(1);
   }
-  if (missing.length) {
-    console.error(`sync incomplete — ${missing.length} required files missing:\n${missing.join("\n")}`);
+  if (syncErrors.length) {
+    console.error(`sync incomplete — ${syncErrors.length} non-404 failures:\n${syncErrors.join("\n")}`);
     process.exit(1);
   }
 }

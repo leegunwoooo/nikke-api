@@ -81,6 +81,20 @@ async function main() {
   }
   // so does moving the pinned story archive
   hash.update(`${LIBRARY_REPO}@${LIBRARY_COMMIT}`);
+  // build inputs that change dist without touching the CDN — editing them
+  // must trigger a redeploy, not wait for the weekly forced one
+  for (const f of [
+    "scripts/build.ts",
+    "scripts/library-stories.ts",
+    "src/events.ts",
+    "scripts/event-titles.json",
+  ]) {
+    try {
+      hash.update(readFileSync(f));
+    } catch {
+      // file may not exist in every checkout — absence shouldn't kill the fingerprint
+    }
+  }
 
   console.log(`fingerprint over ${PATHS.length} base + ${ok}/${rids.length} roledata files:`);
   console.log(hash.digest("hex"));
