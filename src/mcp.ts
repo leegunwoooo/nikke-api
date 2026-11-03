@@ -75,6 +75,9 @@ const NIKKE_EXTRA = {
   teammateList: "details.teammateList",
   costumes: "costumes",
   images: "images",
+  // pseudo-include — no extra API field, it only keeps the raw per-skill
+  // icon/descriptionTemplate/values that the default response strips
+  skillLevels: "",
 } as const;
 
 // routes api_get may reach — the rest have dedicated tools, and /api/user
@@ -162,6 +165,18 @@ export function fitJson(body: string, max = MAX_CHARS): { text: string; isError?
     if (render(mid).length <= max) lo = mid;
     else hi = mid - 1;
   }
+  if (lo === 0 && items.length > 0) {
+    // returning render(0) here would emit the SAME nextOffset the caller
+    // just used — an empty page that pages forever. If the non-array
+    // payload alone already exceeds the cap, or a single item does, the
+    // query is simply too wide — say so instead of looping.
+    return {
+      text: JSON.stringify({
+        error: `a single item at offset ${offset} exceeds ${max} chars — request fewer fields or a narrower query`,
+      }),
+      isError: true,
+    };
+  }
   return { text: render(lo) };
 }
 
@@ -210,6 +225,21 @@ const shapeScene = (includeMedia: boolean) => (d: any) =>
           ...(l.optionValue ? { optionValue: l.optionValue } : {}),
         })),
       };
+
+// default detail shows rendered skill descriptions — the per-level
+// icon/descriptionTemplate/values payload (~4KB/skill) is opt-in via
+// include: ["skillLevels"]
+const shapeNikke = (withSkillLevels: boolean) => (d: any) => {
+  const skills = d?.details?.skills;
+  if (withSkillLevels || !Array.isArray(skills)) return d;
+  return {
+    ...d,
+    details: {
+      ...d.details,
+      skills: skills.map(({ icon, descriptionTemplate, values, ...rest }: any) => rest),
+    },
+  };
+};
 
 // a plain glyph — the game's own art is not ours to use as a brand mark
 const ICON = `data:image/svg+xml;base64,${Buffer.from(
@@ -292,14 +322,14 @@ export function buildServer(api: Fetcher, version: string, origin = "", boundBla
         include: z
           .array(z.enum(Object.keys(NIKKE_EXTRA) as [keyof typeof NIKKE_EXTRA]))
           .optional()
-          .describe("Extra sections added to the default: statsPerLevel (~30KB), voices (~80KB, voice lines incl. costumeIndex), shot (weapon mechanics — damage/charge/rate-of-fire/burst-gauge units), statEnhance (limit-break & core bonus), teammateList, costumes, images"),
+          .describe("Extra sections added to the default: statsPerLevel (~30KB), voices (~80KB, voice lines incl. costumeIndex), shot (weapon mechanics — damage/charge/rate-of-fire/burst-gauge units), statEnhance (limit-break & core bonus), teammateList, costumes, images, skillLevels (raw skill icon/descriptionTemplate/values)"),
         lang: LANG,
       }),
       annotations: READ_ONLY,
     },
     async (a) => {
-      const fields = [...NIKKE_DEFAULT_FIELDS, ...(a.include ?? []).map((k) => NIKKE_EXTRA[k])].join(",");
-      return call(api, "get_nikke", `/api/nikkes/${enc(a.nameOrId)}${qs({ fields, lang: a.lang })}`);
+      const fields = [...NIKKE_DEFAULT_FIELDS, ...(a.include ?? []).map((k) => NIKKE_EXTRA[k]).filter(Boolean)].join(",");
+      return call(api, "get_nikke", `/api/nikkes/${enc(a.nameOrId)}${qs({ fields, lang: a.lang })}`, shapeNikke(a.include?.includes("skillLevels") ?? false));
     },
   );
 
@@ -492,7 +522,8 @@ export function buildServer(api: Fetcher, version: string, origin = "", boundBla
     },
     async (a) => {
       const started = Date.now();
-      const fields = [...NIKKE_DEFAULT_FIELDS, ...(a.include ?? []).map((k) => NIKKE_EXTRA[k])].join(",");
+      const fields = [...NIKKE_DEFAULT_FIELDS, ...(a.include ?? []).map((k) => NIKKE_EXTRA[k]).filter(Boolean)].join(",");
+      const shape = shapeNikke(a.include?.includes("skillLevels") ?? false);
       const rows = await Promise.all(
         a.nikkes.map(async (q) => {
           const get = (key: string) => api(`/api/nikkes/${enc(key)}${qs({ fields, lang: a.lang })}`);
@@ -506,7 +537,7 @@ export function buildServer(api: Fetcher, version: string, origin = "", boundBla
             res = await get(String(exact.id));
             d = await res.json();
           }
-          return d;
+          return shape(d);
         }),
       );
       const out = fitJson(JSON.stringify({ count: rows.length, nikkes: rows }));
@@ -573,7 +604,17 @@ export function buildServer(api: Fetcher, version: string, origin = "", boundBla
           true,
         );
       }
-      return call(api, "api_get", a.path);
+      // list paths return the whole table without a limit — a bare
+      // /api/stages is ~60k chars, so apply paging defaults when the
+      // caller didn't set any (detail/meta/cdn paths are exempt)
+      let path = a.path;
+      const u = new URL(path, "http://mcp");
+      if (/^\/api\/(stages|costumes|equips|cubes|avatars)\/?$/.test(u.pathname) || u.pathname === "/api/equips/options") {
+        if (!u.searchParams.has("limit")) u.searchParams.set("limit", "20");
+        if (!u.searchParams.has("lang")) u.searchParams.set("lang", "ko");
+        path = u.pathname + u.search;
+      }
+      return call(api, "api_get", path);
     },
   );
 
