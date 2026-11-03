@@ -690,6 +690,34 @@ export function buildServer(api: Fetcher, version: string, origin = "", boundBla
     }),
   );
 
+  server.registerTool(
+    "get_stage_lineup",
+    {
+      title: "Get a saved stage-clear squad",
+      description:
+        "The lineup saved for a campaign stage — the squad that cleared it (5 slots: character, level, per-member combat), clear timestamp and total combat power. IMPORTANT: upstream only serves the account's OWN saved records — a stage without a saved lineup returns 404, and other players' lineups are never visible. Live and rate limited.",
+      inputSchema: z.object({
+        blablaid: BLABLAID.optional(),
+        stage_id: z
+          .number()
+          .int()
+          .describe("Stage table id — from /api/stages (e.g. 6013001 = 13-1 Normal). Campaign progress stageId in get_user_profile gives the latest cleared one"),
+        area: z.number().int().optional().describe("Server area (83 KR · 81 JP · 84 Global · 82 NA · 85 SEA) — resolved from the profile when omitted"),
+      }),
+      annotations: LIVE,
+    },
+    userTool("get_stage_lineup", (a: { blablaid?: string; stage_id?: number; area?: number }) => {
+      const blablaid = a.blablaid ?? boundBlablaid;
+      if (a.stage_id == null)
+        return Promise.resolve(
+          text("stage_id is required (from /api/stages or profile.campaign.*.stageId)", true),
+        );
+      return blablaid
+        ? call(api, "get_stage_lineup", `/api/user/stage-lineup${qs({ blablaid, stage_id: a.stage_id, area: a.area })}`)
+        : needBlablaid();
+    }),
+  );
+
   // ChatGPT's connector/deep-research contract: search(query) -> results with
   // id/title/url, fetch(id) -> one document. Ids are "<kind>:<key>".
   server.registerTool(

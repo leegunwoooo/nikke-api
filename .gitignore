@@ -26,3 +26,7 @@ site/public/robots.txt
 .vercel
 .env*
 pages-proxy/_worker.js
+creds.json
+scripts/_probe*
+.wrangler/
+probe_*.json
