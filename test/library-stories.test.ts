@@ -101,6 +101,31 @@ test("messenger: multi-line messages, system lines, choices inside a commander m
   );
 });
 
+test("speaker names are trimmed; an all-whitespace name is omitted", () => {
+  const [s] = parseLibraryScript(`@@@SCRIPT_ID: a_00
+라피 : 공백이 붙은 이름
+[MSG SENDER=" 네온 "]
+  메신저도 마찬가지
+[MSG_END]
+[MSG SENDER="  "]
+  이름이 통째로 공백
+[MSG_END]`);
+  assert.deepEqual(
+    s.lines.map((l) => [l.window, l.speakerName]),
+    [
+      ["Speech", "라피"],
+      ["Speech", "네온"],
+      ["Speech", undefined],
+    ],
+  );
+});
+
+test("export artifacts in dialogue are cleaned", () => {
+  const [s] = parseLibraryScript("@@@SCRIPT_ID: a_00\n라피: 괜찮아._x000D_\n다음 줄");
+  assert.equal(s.lines[0].text, "괜찮아.");
+  assert.equal(s.lines[1].text, "다음 줄");
+});
+
 test("routes between scenes survive parsing", () => {
   const [s] = parseLibraryScript(`@@@SCRIPT_ID: love_02
 [CHOICE_START ID="route_s1"]

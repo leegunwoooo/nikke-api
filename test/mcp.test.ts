@@ -71,8 +71,11 @@ test("get_nikke trims by default and include adds to it", async () => {
 test("get_scene returns speaker/text lines unless media is asked for", async () => {
   const lean = (await tool("get_scene", { groupId: "d_main_01_01" })).json;
   assert.deepEqual(lean.lines[0], { speaker: "라피", text: "..." });
+  assert.equal(lean.lines.length, 2); // Marker rows are not dialogue
+  assert.deepEqual(lean.lines[1], { speaker: "라피", text: "두 번째 대사" });
   const full = (await tool("get_scene", { groupId: "d_main_01_01", includeMedia: true })).json;
   assert.equal(full.lines[0].speakerName, "라피");
+  assert.equal(full.lines[1].window, "Marker"); // includeMedia returns the raw scene
 });
 
 test("favorite stories are reachable by category, nikke and line search", async () => {

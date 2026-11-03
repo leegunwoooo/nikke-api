@@ -4,6 +4,7 @@ import { existsSync } from "node:fs";
 import { mkdir, readdir, readFile, rename, rm, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { promisify } from "node:util";
+import { cleanDialogueText } from "./story-text.js";
 
 // Stories the game CDN doesn't serve (messenger chats, lost relics, side
 // stories, older events) come from a community archive (credited in the README).
@@ -78,15 +79,15 @@ export function parseLibraryScript(text: string, warn: (msg: string) => void = (
 
   const branch = () => blocks.filter((b) => b.inOption).map((b) => `${b.n}.${b.option}`).join(".") || undefined;
   const push = (line: Omit<LibraryLine, "id" | "voice" | "branch">, at = branch()) => {
-    cur!.lines.push({ ...line, voice: null, ...(at ? { branch: at } : {}) });
+    cur!.lines.push({ ...line, text: cleanDialogueText(line.text), voice: null, ...(at ? { branch: at } : {}) });
   };
   const flushMsg = () => {
     if (!msg) return;
     const body = msg.body.join("\n");
     if (body) {
       if (msg.system) push({ text: body, window: "Narration" });
-      else if (msg.self || msg.sender === COMMANDER) push({ text: body, window: "Self" });
-      else push({ speakerName: msg.sender, text: body, window: "Speech" });
+      else if (msg.self || msg.sender.trim() === COMMANDER) push({ text: body, window: "Self" });
+      else push({ ...(msg.sender.trim() ? { speakerName: msg.sender.trim() } : {}), text: body, window: "Speech" });
     }
     msg = null;
   };
@@ -146,8 +147,8 @@ export function parseLibraryScript(text: string, warn: (msg: string) => void = (
       msg.body.push(t);
     } else if (!IGNORED_TAG.test(t)) {
       const m = t.match(SPEECH);
-      if (m?.[1] === COMMANDER) push({ text: m[2], window: "Self" });
-      else if (m) push({ speakerName: m[1], text: m[2], window: "Speech" });
+      if (m?.[1]?.trim() === COMMANDER) push({ text: m[2], window: "Self" });
+      else if (m) push({ ...(m[1].trim() ? { speakerName: m[1].trim() } : {}), text: m[2], window: "Speech" });
       else push({ text: t, window: "Narration" });
     }
   }

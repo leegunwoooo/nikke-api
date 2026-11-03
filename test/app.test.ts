@@ -99,7 +99,7 @@ test("/api/events groups event_* scenes per event", async () => {
   const ev = all.events.find((e: any) => e.id === "event_firstaffection");
   assert.equal(ev.episodes, 2);
   assert.deepEqual(ev.scenes, ["event_firstaffection_01", "event_firstaffection_02"]);
-  assert.equal(ev.totalLines, 4);
+  assert.equal(ev.totalLines, 5); // Marker rows count toward the line total
 
   const d = await json("/api/events/event_firstaffection");
   assert.equal(d.scenes[0].name, "추억은 갑작스럽게");
@@ -132,8 +132,20 @@ test("scenes index, nikke filter is case/space-insensitive", async () => {
   assert.equal((await json("/api/scenes?category=main")).count, 1);
   assert.equal((await json("/api/scenes?nikke=innocentmaid")).count, 1);
   assert.equal((await json("/api/scenes?limit=1&offset=1")).scenes[0].groupId, "attract_1_1");
-  assert.equal((await json("/api/scenes/d_main_01_01")).lines.length, 1);
+  const scene = await json("/api/scenes/d_main_01_01");
+  assert.equal(scene.lines.length, 3);
+  assert.deepEqual(scene.lines[1], { id: "d_main_01_01_mid", text: "", window: "Marker", voice: null });
   assert.equal((await get("/api/scenes/nope")).status, 404);
+});
+
+test("/api/lines hits keep pointing at their scene position", async () => {
+  // d_main_01_01 has a Marker row mid-scene — if search dropped it from the
+  // index, every hit after it would be off by one
+  const hit = (await json("/api/lines?q=두 번째")).lines[0];
+  assert.equal(hit.groupId, "d_main_01_01");
+  assert.equal(hit.line, 2);
+  const scene = await json("/api/scenes/d_main_01_01");
+  assert.equal(scene.lines[hit.line].text, hit.text);
 });
 
 test("/api/stages list + filters + detail", async () => {
@@ -312,7 +324,7 @@ test("?fields on cubes list/detail and scene detail", async () => {
   assert.equal(scene.lines, undefined);
   // without fields the raw file is streamed as-is
   const full = await json("/api/scenes/d_main_01_01");
-  assert.equal(full.lines.length, 1);
+  assert.equal(full.lines.length, 3);
 });
 
 test("?lang flattens localized objects", async () => {

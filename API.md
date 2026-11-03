@@ -437,6 +437,8 @@ GET /api/scenes/d_main_01_01_s?fields=name,lines
 | `lines[].voice` | 해당 대사의 한국어 보이스 mp3 URL. 보이스가 없는 씬에서는 `null` |
 | `lines[].background` / `lines[].bgm` | 배경·BGM 리소스 코드 (호감도 씬에만 존재) |
 
+`window: "Marker"`인 줄은 `text`가 `""`인 대사 없는 행입니다. 컷신·연출 표식으로 보이지만 게임 데이터에서 의미가 확인되지는 않았습니다. 줄 위치·`id`가 밀리지 않도록 원본 순서 그대로 남겨 둡니다 — `/api/lines` 히트의 `line`은 계속 씬 `lines[]`의 위치를 가리킵니다. 빈 `text`라 검색 히트로는 나오지 않고, `/api/events/:id/script`와 MCP 도구 출력에서는 생략합니다.
+
 호감도 씬(`groupId`가 `d_nikke_*`)은 상단에 `type: "attractive"`, `nikke`, `attractiveLevel` 필드가 추가로 붙습니다.
 
 캐릭터별 호감도 씬은 `/api/nikkes/:id` 상세의 `details.attractiveScenarios[].sceneGroupId`로 연결됩니다. 스킨 캐릭터(예: `아니스 : 스타`)는 자기 전용 그룹(`d_nikke_anis_star_*`)을 가지며, `?nikke=` 필터는 부분 일치라 `아니스`로 검색하면 모든 스킨 버전이 함께 나옵니다.

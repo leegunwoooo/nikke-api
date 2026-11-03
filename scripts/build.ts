@@ -5,6 +5,7 @@ import { compareEventScenes, eventIdOf } from "../src/events.js";
 import { readFavoriteStories } from "./favorite-stories.js";
 import { assertDistinctIds, dedupKeys, LIBRARY_EVENT_CATEGORIES, libraryEventId, readLibraryStories, readTranscribedStories, selectNewScripts } from "./library-stories.js";
 import { mainChaptersFromList } from "./main-chapters.js";
+import { cleanDialogueText } from "./story-text.js";
 import type {
   Burst,
   Locale,
@@ -458,8 +459,10 @@ async function main() {
       id: r.value?.id,
       speaker: r.value?.speaker,
       speakerName: r.speaker?.name_localkey?.character_name ?? r.value?.speaker,
-      text: r.quest_name,
-      window: r.value?.speech_window,
+      // rows without text look like staging markers (unconfirmed) — kept so line
+      // positions don't shift, flagged with window "Marker"
+      text: r.quest_name == null ? "" : cleanDialogueText(r.quest_name),
+      window: r.quest_name == null ? "Marker" : r.value?.speech_window,
       speakerIcon: speakerIcon(r.value?.speaker, undefined),
       voice: voiceUrl(gid, r.value?.id),
     }));
@@ -481,8 +484,8 @@ async function main() {
       id: r.id,
       speaker: r.speaker,
       speakerName: r.speaker_detail?.name_localkey ?? r.speaker,
-      text: r.scenario_localkey,
-      window: r.speech_window,
+      text: r.scenario_localkey == null ? "" : cleanDialogueText(r.scenario_localkey),
+      window: r.scenario_localkey == null ? "Marker" : r.speech_window,
       background: r.set_background,
       bgm: r.play_bgm,
       speakerIcon: speakerIcon(r.speaker, r.speaker_detail?.resource_id),
@@ -513,7 +516,7 @@ async function main() {
 
   // --- 애장품 scripts kept in the repo (not in the game data) ---
   for (const scene of favoriteStories) {
-    const lines = scene.lines.map((l) => ({ ...l, speakerIcon: speakerIcon(l.speaker, undefined) }));
+    const lines = scene.lines.map((l) => ({ ...l, text: cleanDialogueText(l.text), speakerIcon: speakerIcon(l.speaker, undefined) }));
     await writeFile(path.join(SCENES, `${scene.groupId}.json`), JSON.stringify({ ...scene, lines }));
     sceneIndex.push({
       groupId: scene.groupId,

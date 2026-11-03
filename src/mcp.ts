@@ -200,7 +200,8 @@ const shapeScene = (includeMedia: boolean) => (d: any) =>
     ? d
     : {
         ...d,
-        lines: d.lines.map((l: any) => ({
+        // Marker rows have no dialogue — skip them
+        lines: d.lines.filter((l: any) => l.window !== "Marker").map((l: any) => ({
           speaker: l.speakerName ?? l.speaker,
           text: l.text,
           ...(l.window === "Choice" ? { window: l.window } : {}),
