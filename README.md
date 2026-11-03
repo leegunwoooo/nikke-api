@@ -105,16 +105,21 @@ GET /api/user/<blablaid>/nikke/아니스               # 부분 일치 → 매�
 
 | 엔드포인트 | 설명 |
 |------------|------|
-| `GET /api/nikkes` | 캐릭터 목록 — `?q=` 이름 검색(전 언어 부분 일치), `?element=` `?class=` `?burst=` `?corporation=` `?weapon=` `?rarity=` 필터 (AND 결합), `?limit=`/`?offset=`/`?page=` 페이지네이션 (미지정 시 전체, 최대 500 — `count`는 잘라내기 전 전체 개수) |
+| `GET /api/nikkes` | 캐릭터 목록 — `?q=` 이름 검색(전 언어 부분 일치), `?family=` 이격 포함 확장 검색, `?element=` `?class=` `?burst=` `?corporation=` `?weapon=` `?rarity=` 필터 (AND 결합), `?limit=`/`?offset=`/`?page=` 페이지네이션 (미지정 시 전체, 최대 500 — `count`는 잘라내기 전 전체 개수) |
 | `GET /api/nikkes/:id` | 캐릭터 상세 — 스킬/스탯/배경/CV/보이스 등 `details` 포함. `:id`는 캐릭터 ID·resourceId·이름(부분 일치) 모두 가능 |
-| `GET /api/scenes` | 씬 목록 — `?category=` `?nikke=` `?q=` `?limit=`/`?offset=`/`?page=` |
+| `GET /api/scenes` | 씬 목록 — `?category=`(`main`/`event`/`sudden`/`attractive`/`favorite`/`library`) `?nikke=` `?q=` `?limit=`/`?offset=`/`?page=` |
 | `GET /api/scenes/:groupId` | 씬 대본 — 대사별 화자/아이콘/보이스 |
+| `GET /api/lines` | 대사 전문 검색 — `?q=`(구두점 무시) 또는 `?speaker=` 필수, `?category=` `?nikke=` `?family=` `?limit=`/`?offset=`/`?page=` |
+| `GET /api/nikkes/:id/appearances` | 캐릭터 등장 씬 — 대사 많은 순, 이벤트별 롤업 포함, `?category=` |
 | `GET /api/events` | 스토리 이벤트 목록 — `event_*` 씬 그룹 묶음, `?q=` `?limit=`/`?offset=`/`?page=` |
 | `GET /api/events/:id` | 이벤트 상세 — 에피소드별 씬 목록 |
+| `GET /api/events/:id/script` | 이벤트 전체 대본 — 에피소드 단위 페이지네이션 |
+| `GET /api/story/route` | 스토리 감상 순서 — 메인 챕터 사이에 이벤트·호감도를 끼워 넣은 커뮤니티 가이드 순서 |
+| `GET /api/story/next` | 다음 볼 스토리 추천 — `?chapter=` `?after=` `?done=` `?required=` `?limit=` |
 | `GET /api/stages` | 캠페인 스테이지 목록 — `?chapter=` `?mode=` `?q=` `?limit=`/`?offset=`/`?page=` |
 | `GET /api/stages/:id` | 스테이지 상세 — 권장 전투력·시나리오 키 |
 | `GET /api/costumes` | 코스튬 목록 — `?q=` `?grade=` `?nikke=` `?limit=`/`?offset=`/`?page=` |
-| `GET /api/costumes/:id` | 코스튬 상세 — tid 또는 이름(부분 일치), 소유 니케·이미지·`storyScenes`(스토리 씬) 포함 |
+| `GET /api/costumes/:id` | 코스튬 상세 — tid 또는 이름(부분 일치), 소유 니케·이미지·`storyScenes`·`voices`(그 코스튬 전용 대사+음성) 포함 |
 | `GET /api/equips` | 장비 목록 — `?q=` `?class=` `?rare=` `?slot=` `?limit=`/`?offset=`/`?page=`. 기본 스탯·옵션슬롯 확률·재련비용·설명 포함 |
 | `GET /api/equips/options` | 장비 옵션 목록 — `?q=` `?groupId=` `?rank=` `?limit=`/`?page=` |
 | `GET /api/equips/options/:id` | 장비 옵션 상세 |
