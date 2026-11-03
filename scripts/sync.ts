@@ -233,16 +233,19 @@ async function main() {
 
   let ok = 0;
   const failed: string[] = [];
-  for (const [p, out] of STATIC_RESOURCES) {
-    if (await download(p, out)) ok++;
-    else failed.push(out);
-  }
+  const fetched = new Set<string>();
+  const fetchTo = async (p: string, out: string) => {
+    if (await download(p, out)) {
+      ok++;
+      fetched.add(out);
+    } else failed.push(out);
+  };
+  for (const [p, out] of STATIC_RESOURCES) await fetchTo(p, out);
   for (const locale of LOCALES) {
     for (const [tpl, outTpl] of LANG_RESOURCES) {
       const p = tpl.replace(/\{l\}/g, locale);
       const out = outTpl.replace(/\{l\}/g, locale);
-      if (await download(p, out)) ok++;
-      else failed.push(out);
+      await fetchTo(p, out);
     }
   }
   console.log(`\n${ok} resources synced -> ${OUT_DIR}`);
@@ -267,7 +270,9 @@ async function main() {
     ...STATIC_RESOURCES.map(([, out]) => out),
     ...LANG_RESOURCES.flatMap(([, out]) => LOCALES.map((l) => out.replace(/\{l\}/g, l))),
   ].filter((f) => !OPTIONAL.has(f));
-  const missing = failed.filter((f) => !OPTIONAL.has(f));
+  // ko lists live at unsuffixed paths, so their LANG_RESOURCES path always 404s:
+  // a name counts as failed only if no path delivered it
+  const missing = failed.filter((f) => !OPTIONAL.has(f) && !fetched.has(f));
   for (const f of required) {
     if (!existsSync(path.join(OUT_DIR, f)) && !missing.includes(f)) missing.push(f);
   }
