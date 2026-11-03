@@ -431,7 +431,7 @@ GET /api/scenes/d_main_01_01_s?fields=name,lines
 |------|------|
 | `lines[].speaker` | 화자 코드 (내부 식별자) |
 | `lines[].speakerName` | 화자 이름 (한국어, 내레이션 등은 코드 그대로일 수 있음) |
-| `lines[].text` | 대사 텍스트 — `window`가 `SubScenario`인 연출 마커에서는 `null` |
+| `lines[].text` | 대사 텍스트 — `window`가 `SubScenario`인 연출 마커에서는 `null`. `@UserName`은 지휘관 이름 자리표시자(전체 218줄)이며 `@UserName님`처럼 조사가 붙은 형태도 있음 |
 | `lines[].window` | 말풍선 타입 (`Speech`, `Choice`, `Narration` 등) — `SubScenario`는 컷신·영상 등 서브씬 연출 마커 (대사 아님, `id`가 에셋 이름) |
 | `lines[].speakerIcon` | 화자 아이콘 이미지 URL (화자가 캐릭터로 매핑될 때 존재, NPC 포함) |
 | `lines[].voice` | 해당 대사의 한국어 보이스 mp3 URL. 보이스가 없는 씬에서는 `null` |
