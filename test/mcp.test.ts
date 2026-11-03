@@ -98,6 +98,19 @@ test("favorite stories are reachable by category, nikke and line search", async 
   assert.equal((await tool("search_lines", { q: "애장품 대사", category: "favorite" })).json.count, 1);
 });
 
+test("get_nikke resolves an exact name over partial matches, in any language", async () => {
+  const anchor = (await tool("get_nikke", { nameOrId: "앵커" })).json;
+  assert.equal(anchor.id, 2);
+  assert.deepEqual(anchor.alsoMatched, [{ id: 3, name: "앵커: 이노센트 메이드" }]);
+  // an English name with the default lang=ko needs the unflattened list
+  assert.equal((await tool("get_nikke", { nameOrId: "Anchor" })).json.id, 2);
+  assert.equal((await tool("get_nikke", { nameOrId: " 앵 커 " })).json.id, 2);
+  // a name that only partially matches still returns the candidate list
+  const amb = (await tool("get_nikke", { nameOrId: "앵" })).json;
+  assert.equal(amb.count, 2);
+  assert.equal(amb.characters.length, 2);
+});
+
 test("get_nikke links the favorite story scene", async () => {
   const n = (await tool("get_nikke", { nameOrId: "1" })).json;
   assert.equal(n.details.favoriteStory.sceneGroupId, "d_favorite_test");
@@ -301,11 +314,20 @@ test("이격 versions are linked to their original", async () => {
   assert.equal((await tool("search_scenes", { nikke: "앵커" })).json.count, 1);
 });
 
-test("read_event returns the whole script as speaker lines", async () => {
-  const ev = (await tool("read_event", { id: "event_firstaffection" })).json;
-  assert.equal(ev.count, 2);
-  assert.deepEqual(ev.episodes[0].lines, ["비 오는 밤.", "앵커: 지휘관님, 우산 가져왔어요!"]);
-  assert.deepEqual(ev.episodes[1].lines, []); // listed scene without a file
+test("read_event pages over the 20,000-char cap and reaches every episode", async () => {
+  // event_firstaffection_02 alone is ~19.8k chars — both episodes together
+  // pass the page cap, so the first page must hand back a nextOffset
+  const p1 = (await tool("read_event", { id: "event_firstaffection" })).json;
+  assert.equal(p1.count, 2);
+  assert.deepEqual(p1.episodes.map((e: any) => e.groupId), ["event_firstaffection_01"]);
+  assert.deepEqual(p1.episodes[0].lines, ["비 오는 밤.", "앵커: 지휘관님, 우산 가져왔어요!"]);
+  assert.equal(p1.truncated.field, "episodes");
+  assert.equal(p1.truncated.nextOffset, 1);
+  const p2 = (await tool("read_event", { id: "event_firstaffection", offset: p1.truncated.nextOffset })).json;
+  assert.equal(p2.offset, 1);
+  assert.deepEqual(p2.episodes.map((e: any) => e.groupId), ["event_firstaffection_02"]);
+  assert.equal(p2.episodes[0].lines.length, 2); // a long 라피 line + "끝."
+  assert.equal(p2.truncated, undefined);
   assert.equal((await tool("read_event", { id: "nope" })).isError, true);
 });
 

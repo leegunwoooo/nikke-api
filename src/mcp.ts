@@ -13,6 +13,10 @@ type Fetcher = (path: string) => Promise<Response>;
 // LLM context is the scarce resource — big payloads (a nikke detail is ~130KB,
 // the full stage list ~600KB) are shrunk to this many characters
 const MAX_CHARS = 60_000;
+// read_event can page on from truncated.nextOffset, so its pages stay well
+// under a model's context budget — the other tools can't continue, so a
+// lower cap would lose data instead
+const EVENT_PAGE_CHARS = 20_000;
 
 const INSTRUCTIONS = `Unofficial NIKKE (GODDESS OF VICTORY: NIKKE) game data. Data © SHIFT UP / Level Infinite.
 - Character names exist in ko/en/ja/zh-TW and searches match any of them; responses default to Korean (lang=ko).
@@ -198,12 +202,12 @@ const result = (t: string, isError = false) => {
   return text(t, isError);
 };
 
-async function call(api: Fetcher, tool: string, path: string, shape?: (data: any) => unknown) {
+async function call(api: Fetcher, tool: string, path: string, shape?: (data: any) => unknown, max = MAX_CHARS) {
   const started = Date.now();
   const res = await api(path);
   let body = await res.text();
   if (res.ok && shape) body = JSON.stringify(shape(JSON.parse(body)));
-  const out = fitJson(body);
+  const out = fitJson(body, max);
   logCall(tool, res.status, started, out.text.length);
   return result(out.text, !res.ok || out.isError);
 }
@@ -241,6 +245,22 @@ const shapeNikke = (withSkillLevels: boolean) => (d: any) => {
       skills: skills.map(({ icon, descriptionTemplate, values, ...rest }: any) => rest),
     },
   };
+};
+
+// "라피" also matches "라피 : 레드 후드", but a candidate whose name IS the
+// query wins outright — in any locale, so "Rapi" resolves with lang=ko too.
+// List rows carry name flattened to ?lang, so the other locales take one
+// extra fetch of the same list without it (no per-candidate lookups).
+const exactNameMatch = async (api: Fetcher, listPathNoLang: string, q: string, candidates: any[]) => {
+  const n = (s: unknown) => String(s).replace(/\s/g, "").toLowerCase();
+  const names = (c: any): unknown[] => (c?.name && typeof c.name === "object" ? Object.values(c.name) : [c?.name]);
+  const hit = (list: any[]) => list.find((c) => names(c).some((x) => n(x) === n(q)));
+  const exact = hit(candidates);
+  if (exact) return exact;
+  const res = await api(listPathNoLang);
+  if (!res.ok) return undefined;
+  const d: any = await res.json();
+  return Array.isArray(d?.characters) ? hit(d.characters) : undefined;
 };
 
 // a plain glyph — the game's own art is not ours to use as a brand mark
@@ -318,7 +338,7 @@ export function buildServer(api: Fetcher, version: string, origin = "", boundBla
     {
       title: "Get NIKKE character detail",
       description:
-        "Character detail: profile, skills (rendered at Lv10), backstory, squad, CV, affection (호감도) scene ids and the favorite-item (애장품) story scene id. Add more with include. If the name matches several characters, a {count, characters} list comes back instead — call again with one of their ids.",
+        "Character detail: profile, skills (rendered at Lv10), backstory, squad, CV, affection (호감도) scene ids and the favorite-item (애장품) story scene id. Add more with include. An exact character name returns that character even when others also match — the rest are listed in alsoMatched. A name that only partially matches several characters returns a {count, characters} list instead — call again with one of their ids.",
       inputSchema: z.object({
         nameOrId: z.string().min(1).describe("Character name (partial, any language), id or resourceId"),
         include: z
@@ -330,8 +350,33 @@ export function buildServer(api: Fetcher, version: string, origin = "", boundBla
       annotations: READ_ONLY,
     },
     async (a) => {
+      const started = Date.now();
       const fields = [...NIKKE_DEFAULT_FIELDS, ...(a.include ?? []).map((k) => NIKKE_EXTRA[k]).filter(Boolean)].join(",");
-      return call(api, "get_nikke", `/api/nikkes/${enc(a.nameOrId)}${qs({ fields, lang: a.lang })}`, shapeNikke(a.include?.includes("skillLevels") ?? false));
+      const shape = shapeNikke(a.include?.includes("skillLevels") ?? false);
+      const path = (key: string, lang?: string) => `/api/nikkes/${enc(key)}${qs({ fields, lang })}`;
+      let res = await api(path(a.nameOrId, a.lang));
+      let body = await res.text();
+      if (res.ok) {
+        const d: any = JSON.parse(body);
+        if (Array.isArray(d.characters)) {
+          const exact = await exactNameMatch(api, path(a.nameOrId), a.nameOrId, d.characters);
+          if (exact) {
+            res = await api(path(String(exact.id), a.lang));
+            body = await res.text();
+            if (res.ok) {
+              body = JSON.stringify({
+                ...shape(JSON.parse(body)),
+                alsoMatched: d.characters.filter((c: any) => c.id !== exact.id).map((c: any) => ({ id: c.id, name: c.name })),
+              });
+            }
+          }
+        } else {
+          body = JSON.stringify(shape(d));
+        }
+      }
+      const out = fitJson(body);
+      logCall("get_nikke", res.status, started, out.text.length);
+      return result(out.text, !res.ok || out.isError);
     },
   );
 
@@ -447,7 +492,7 @@ export function buildServer(api: Fetcher, version: string, origin = "", boundBla
     {
       title: "Read a whole story event",
       description:
-        "A story event's full script, episode by episode in story order, as 'speaker: text' lines (Korean). Use this to summarize or retell an event instead of calling get_scene per episode. Long events come back in pages — continue from truncated.nextOffset.",
+        "A story event's full script, episode by episode in story order, as 'speaker: text' lines (Korean). Use this to summarize or retell an event instead of calling get_scene per episode. Long events arrive over several pages — continue from truncated.nextOffset.",
       inputSchema: z.object({
         id: z.string().min(1).describe("Event id from list_events, e.g. event_BunnyX777"),
         offset: OFFSET.describe("First episode to return (0-based)"),
@@ -455,7 +500,7 @@ export function buildServer(api: Fetcher, version: string, origin = "", boundBla
       }),
       annotations: READ_ONLY,
     },
-    async (a) => call(api, "read_event", `/api/events/${enc(a.id)}/script${qs({ offset: a.offset, limit: a.limit })}`),
+    async (a) => call(api, "read_event", `/api/events/${enc(a.id)}/script${qs({ offset: a.offset, limit: a.limit })}`, undefined, EVENT_PAGE_CHARS),
   );
 
   server.registerTool(
@@ -534,7 +579,7 @@ export function buildServer(api: Fetcher, version: string, origin = "", boundBla
           if (!res.ok) return { query: q, error: d.error ?? `status ${res.status}` };
           if (Array.isArray(d.characters)) {
             // "라피" also matches "라피 : 레드 후드" — an exact name wins
-            const exact = d.characters.find((c: any) => String(c.name).replace(/\s/g, "") === q.replace(/\s/g, ""));
+            const exact = await exactNameMatch(api, `/api/nikkes/${enc(q)}${qs({ fields })}`, q, d.characters);
             if (!exact) return { query: q, ambiguous: d.characters.map((c: any) => ({ id: c.id, name: c.name })) };
             res = await get(String(exact.id));
             d = await res.json();
