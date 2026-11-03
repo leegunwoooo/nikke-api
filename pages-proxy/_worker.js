@@ -19584,6 +19584,7 @@ function createMcpHandler(factory, options = {}) {
 
 // src/mcp.ts
 var MAX_CHARS = 6e4;
+var EVENT_PAGE_CHARS = 2e4;
 var INSTRUCTIONS = `Unofficial NIKKE (GODDESS OF VICTORY: NIKKE) game data. Data \xA9 SHIFT UP / Level Infinite.
 - Character names exist in ko/en/ja/zh-TW and searches match any of them; responses default to Korean (lang=ko).
 - Story scene scripts are Korean only. Favorite-item (\uC560\uC7A5\uD488, category "favorite") scripts are transcribed from videos, not game data: they may have typos and follow only the choice taken in the video (chosen: true).
@@ -19720,12 +19721,12 @@ var result = (t, isError = false) => {
   }
   return text(t, isError);
 };
-async function call(api, tool, path2, shape) {
+async function call(api, tool, path2, shape, max = MAX_CHARS) {
   const started = Date.now();
   const res = await api(path2);
   let body = await res.text();
   if (res.ok && shape) body = JSON.stringify(shape(JSON.parse(body)));
-  const out = fitJson(body);
+  const out = fitJson(body, max);
   logCall(tool, res.status, started, out.text.length);
   return result(out.text, !res.ok || out.isError);
 }
@@ -19753,6 +19754,17 @@ var shapeNikke = (withSkillLevels) => (d) => {
       skills: skills.map(({ icon, descriptionTemplate, values, ...rest }) => rest)
     }
   };
+};
+var exactNameMatch = async (api, listPathNoLang, q, candidates) => {
+  const n = (s) => String(s).replace(/\s/g, "").toLowerCase();
+  const names = (c) => c?.name && typeof c.name === "object" ? Object.values(c.name) : [c?.name];
+  const hit = (list) => list.find((c) => names(c).some((x) => n(x) === n(q)));
+  const exact = hit(candidates);
+  if (exact) return exact;
+  const res = await api(listPathNoLang);
+  if (!res.ok) return void 0;
+  const d = await res.json();
+  return Array.isArray(d?.characters) ? hit(d.characters) : void 0;
 };
 var ICON = `data:image/svg+xml;base64,${Buffer.from(
   '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="#1f2937"/><text x="32" y="44" font-family="Arial,sans-serif" font-size="30" font-weight="700" text-anchor="middle" fill="#f9fafb">N</text></svg>'
@@ -19818,7 +19830,7 @@ function buildServer(api, version2, origin = "", boundBlablaid) {
     "get_nikke",
     {
       title: "Get NIKKE character detail",
-      description: "Character detail: profile, skills (rendered at Lv10), backstory, squad, CV, affection (\uD638\uAC10\uB3C4) scene ids and the favorite-item (\uC560\uC7A5\uD488) story scene id. Add more with include. If the name matches several characters, a {count, characters} list comes back instead \u2014 call again with one of their ids.",
+      description: "Character detail: profile, skills (rendered at Lv10), backstory, squad, CV, affection (\uD638\uAC10\uB3C4) scene ids and the favorite-item (\uC560\uC7A5\uD488) story scene id. Add more with include. An exact character name returns that character even when others also match \u2014 the rest are listed in alsoMatched. A name that only partially matches several characters returns a {count, characters} list instead \u2014 call again with one of their ids.",
       inputSchema: object({
         nameOrId: string2().min(1).describe("Character name (partial, any language), id or resourceId"),
         include: array(_enum(Object.keys(NIKKE_EXTRA))).optional().describe("Extra sections added to the default: statsPerLevel (~30KB), voices (~80KB, voice lines incl. costumeIndex), shot (weapon mechanics \u2014 damage/charge/rate-of-fire/burst-gauge units), statEnhance (limit-break & core bonus), teammateList, costumes, images, skillLevels (raw skill icon/descriptionTemplate/values)"),
@@ -19827,8 +19839,33 @@ function buildServer(api, version2, origin = "", boundBlablaid) {
       annotations: READ_ONLY
     },
     async (a) => {
+      const started = Date.now();
       const fields = [...NIKKE_DEFAULT_FIELDS, ...(a.include ?? []).map((k) => NIKKE_EXTRA[k]).filter(Boolean)].join(",");
-      return call(api, "get_nikke", `/api/nikkes/${enc(a.nameOrId)}${qs({ fields, lang: a.lang })}`, shapeNikke(a.include?.includes("skillLevels") ?? false));
+      const shape = shapeNikke(a.include?.includes("skillLevels") ?? false);
+      const path2 = (key2, lang) => `/api/nikkes/${enc(key2)}${qs({ fields, lang })}`;
+      let res = await api(path2(a.nameOrId, a.lang));
+      let body = await res.text();
+      if (res.ok) {
+        const d = JSON.parse(body);
+        if (Array.isArray(d.characters)) {
+          const exact = await exactNameMatch(api, path2(a.nameOrId), a.nameOrId, d.characters);
+          if (exact) {
+            res = await api(path2(String(exact.id), a.lang));
+            body = await res.text();
+            if (res.ok) {
+              body = JSON.stringify({
+                ...shape(JSON.parse(body)),
+                alsoMatched: d.characters.filter((c) => c.id !== exact.id).map((c) => ({ id: c.id, name: c.name }))
+              });
+            }
+          }
+        } else {
+          body = JSON.stringify(shape(d));
+        }
+      }
+      const out = fitJson(body);
+      logCall("get_nikke", res.status, started, out.text.length);
+      return result(out.text, !res.ok || out.isError);
     }
   );
   server.registerTool(
@@ -19927,7 +19964,7 @@ function buildServer(api, version2, origin = "", boundBlablaid) {
     "read_event",
     {
       title: "Read a whole story event",
-      description: "A story event's full script, episode by episode in story order, as 'speaker: text' lines (Korean). Use this to summarize or retell an event instead of calling get_scene per episode. Long events come back in pages \u2014 continue from truncated.nextOffset.",
+      description: "A story event's full script, episode by episode in story order, as 'speaker: text' lines (Korean). Use this to summarize or retell an event instead of calling get_scene per episode. Long events arrive over several pages \u2014 continue from truncated.nextOffset.",
       inputSchema: object({
         id: string2().min(1).describe("Event id from list_events, e.g. event_BunnyX777"),
         offset: OFFSET.describe("First episode to return (0-based)"),
@@ -19935,7 +19972,7 @@ function buildServer(api, version2, origin = "", boundBlablaid) {
       }),
       annotations: READ_ONLY
     },
-    async (a) => call(api, "read_event", `/api/events/${enc(a.id)}/script${qs({ offset: a.offset, limit: a.limit })}`)
+    async (a) => call(api, "read_event", `/api/events/${enc(a.id)}/script${qs({ offset: a.offset, limit: a.limit })}`, void 0, EVENT_PAGE_CHARS)
   );
   server.registerTool(
     "search_lines",
@@ -20003,7 +20040,7 @@ function buildServer(api, version2, origin = "", boundBlablaid) {
           let d = await res.json();
           if (!res.ok) return { query: q, error: d.error ?? `status ${res.status}` };
           if (Array.isArray(d.characters)) {
-            const exact = d.characters.find((c) => String(c.name).replace(/\s/g, "") === q.replace(/\s/g, ""));
+            const exact = await exactNameMatch(api, `/api/nikkes/${enc(q)}${qs({ fields })}`, q, d.characters);
             if (!exact) return { query: q, ambiguous: d.characters.map((c) => ({ id: c.id, name: c.name })) };
             res = await get(String(exact.id));
             d = await res.json();
