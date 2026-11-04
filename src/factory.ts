@@ -569,8 +569,8 @@ app.get("/", (c) =>
         "owned-nikke list (same filters as /api/nikkes)",
       "GET /api/user/:blablaid/nikke/:nameOrId":
         "single owned-nikke detail (nameOrId = name/id/nameCode)",
-      "GET /api/user/:blablaid/nikke-builds?names=":
-        "several owned-nikke details in one upstream call (comma-separated names/ids)",
+      "GET /api/user/:blablaid/nikke-builds?names=|all=1":
+        "several or all owned-nikke details in one upstream call (comma-separated names/ids)",
       "GET /api/user/:blablaid/roster?area=":
         "full owned roster, upstream-shaped (characters+details+stateEffects+outpost per area)",
     },
@@ -1756,18 +1756,24 @@ async function userNikkeDetail(c: Context) {
 // several owned nikkes' details from one GetUserCharacterDetails call —
 // looking them up one by one costs two upstream calls each and trips the
 // rate limit. Each name resolves like ?exact=1; only the page's name_codes
-// are fetched, so paging on stays cheap.
+// are fetched, so paging on stays cheap. ?all=1 takes every owned nikke,
+// strongest first, instead of names.
 const NIKKE_BUILDS_MAX = 50;
 async function userNikkeBuilds(c: Context) {
   try {
     const names = [...new Set((c.req.query("names") ?? "").split(",").map((s) => s.trim()).filter(Boolean))];
-    if (names.length === 0) return c.json({ error: "names required (comma-separated names or ids)" }, 400);
+    const all = !!c.req.query("all");
+    if (all && names.length) return c.json({ error: "use either names or all" }, 400);
+    if (!all && names.length === 0) return c.json({ error: "names required (comma-separated names or ids), or all=1" }, 400);
     if (names.length > NIKKE_BUILDS_MAX) return c.json({ error: `at most ${NIKKE_BUILDS_MAX} names` }, 400);
     const lookups = loadProfileLookups(); // dist reads overlap the upstream calls
     const res = await loadOwnedNikkes(c);
     if ("error" in res) return res.error;
     const { charRef, normalizeNikke, matchesNikke } = await lookups;
     const picked = new Map<number, { ch: any; alsoMatched?: { id?: number; name?: unknown }[] }>();
+    if (all) {
+      for (const ch of [...res.owned].sort((a, b) => (b.combat ?? 0) - (a.combat ?? 0))) picked.set(ch.name_code, { ch });
+    }
     const notFound: string[] = [];
     const ambiguous: { query: string; candidates: { id?: number; name?: unknown }[] }[] = [];
     for (const key of names) {
@@ -1791,18 +1797,19 @@ async function userNikkeBuilds(c: Context) {
     const pg = pageQuery(c, selected.length);
     if ("error" in pg) return c.json({ error: pg.error }, 400);
     const page = selected.slice(pg.off, pg.off + pg.lim);
-    const details = page.length
-      ? await gameApi("Game", "GetUserCharacterDetails", {
-          ...res.body,
-          name_codes: page.map((x) => x.ch.name_code),
-        })
-      : null;
-    if (details && details.code !== 0) throw new Error(details.msg ?? `detail error ${details.code}`);
+    const codes = page.map((x) => x.ch.name_code);
+    const chunks: number[][] = [];
+    for (let i = 0; i < codes.length; i += ROSTER_DETAIL_BATCH) chunks.push(codes.slice(i, i + ROSTER_DETAIL_BATCH));
+    const details = await mapLimit(chunks, 3, async (name_codes) => {
+      const d = await gameApi("Game", "GetUserCharacterDetails", { ...res.body, name_codes });
+      if (d.code !== 0) throw new Error(d.msg ?? `detail error ${d.code}`);
+      return d.data as any;
+    });
     const detailByCode = new Map<number, any>(
-      ((details?.data as any)?.character_details ?? []).map((x: any) => [x.name_code, x]),
+      details.flatMap((d) => d?.character_details ?? []).map((x: any) => [x.name_code, x]),
     );
     const effectById = new Map<string, any>(
-      (((details?.data as any)?.state_effects ?? []) as any[]).map((e: any) => [String(e.id), e]),
+      details.flatMap((d) => d?.state_effects ?? []).map((e: any) => [String(e.id), e]),
     );
     return c.json({
       count: selected.length,

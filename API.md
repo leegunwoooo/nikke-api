@@ -1118,12 +1118,14 @@ GET /api/user/<blablaid>/nikke?element=Iron&burst=III  # 도감과 동일한 속
 
 | 파라미터 | 설명 |
 |----------|------|
-| `names` | 필수. 쉼표로 구분한 이름이나 id, 최대 50개. 이름이 정확히 같은 니케를 우선합니다(`exact=1`과 같음) |
+| `names` | 쉼표로 구분한 이름이나 id, 최대 50개. 이름이 정확히 같은 니케를 우선합니다(`exact=1`과 같음) |
+| `all` | `all=1`이면 `names` 대신 보유 전원을 전투력순으로 조회합니다. `names`와 함께 쓸 수 없습니다 |
 | `offset` `limit` `page` | 찾은 니케 기준 페이지네이션 |
 | `fields` `lang` | 각 항목에 적용 |
 
 ```
 GET /api/user/<blablaid>/nikke-builds?names=라피,앵커,3017
+GET /api/user/<blablaid>/nikke-builds?all=1&fields=character.name,favoriteItem
 ```
 
 ```json

@@ -19585,6 +19585,20 @@ function createMcpHandler(factory, options = {}) {
 // src/mcp.ts
 var MAX_CHARS = 6e4;
 var EVENT_PAGE_CHARS = 2e4;
+var BUILDS_PAGE = 50;
+var noteMoreBuilds = (d) => {
+  const reached = (d?.offset ?? 0) + (d?.nikkes?.length ?? 0);
+  return d?.count > reached ? {
+    ...d,
+    truncated: {
+      field: "nikkes",
+      returned: d.nikkes.length,
+      omitted: d.count - reached,
+      nextOffset: reached,
+      hint: "more nikkes remain \u2014 call again with this offset"
+    }
+  } : d;
+};
 var INSTRUCTIONS = `Unofficial NIKKE (GODDESS OF VICTORY: NIKKE) game data. Data \xA9 SHIFT UP / Level Infinite.
 - Character names exist in ko/en/ja/zh-TW and searches match any of them; responses default to Korean (lang=ko).
 - Story scene scripts are Korean only. Favorite-item (\uC560\uC7A5\uD488, category "favorite") scripts are transcribed from videos, not game data: they may have typos and follow only the choice taken in the video (chosen: true).
@@ -20185,10 +20199,11 @@ function buildServer(api, version2, origin = "", boundBlablaid) {
     "get_user_nikke_builds",
     {
       title: "Get several of a player's NIKKEs",
-      description: "Build detail of several owned characters in one call: skill levels, equipment, cube, favorite item. Use this instead of repeated get_user_nikke calls, which trip the rate limit. Exact names win over other versions; notFound and ambiguous report names it couldn't resolve. Long answers come back in pages \u2014 continue from truncated.nextOffset. Live and rate limited.",
+      description: "Build detail of several owned characters in one call: skill levels, equipment, cube, favorite item. Omit nikkes to cover every owned character, strongest first. Use this instead of repeated get_user_nikke calls, which trip the rate limit. Exact names win over other versions; notFound and ambiguous report names it couldn't resolve. Pass fields when only some values are needed \u2014 a full build is about 1,700 characters per nikke. Long answers come back in pages \u2014 continue from truncated.nextOffset. Live and rate limited.",
       inputSchema: object({
         blablaid: BLABLAID.optional(),
-        nikkes: array(string2().min(1)).min(1).max(50).describe("Character names (any language) or ids"),
+        nikkes: array(string2().min(1)).min(1).max(50).optional().describe("Character names (any language) or ids. Omit for every owned character"),
+        fields: string2().optional().describe("Comma-separated dot paths kept per entry, e.g. 'character.name,favoriteItem'"),
         offset: OFFSET,
         lang: LANG
       }),
@@ -20196,7 +20211,7 @@ function buildServer(api, version2, origin = "", boundBlablaid) {
     },
     userTool("get_user_nikke_builds", (a) => {
       const blablaid = a.blablaid ?? boundBlablaid;
-      return blablaid ? call(api, "get_user_nikke_builds", `/api/user/nikke-builds${qs({ blablaid, names: a.nikkes.join(","), offset: a.offset, lang: a.lang })}`) : needBlablaid();
+      return blablaid ? call(api, "get_user_nikke_builds", `/api/user/nikke-builds${qs({ blablaid, ...a.nikkes ? { names: a.nikkes.join(",") } : { all: "1" }, fields: a.fields, limit: a.fields ? void 0 : BUILDS_PAGE, offset: a.offset, lang: a.lang })}`, noteMoreBuilds) : needBlablaid();
     })
   );
   server.registerTool(
@@ -20957,7 +20972,7 @@ function buildOpenapi(pkgVersion) {
         get: {
           tags: ["user"],
           summary: "\uC720\uC800 \uBCF4\uC720 \uB2C8\uCF00 \uC5EC\uB7EC \uBA85 \uC0C1\uC138",
-          description: "\uC27C\uD45C\uB85C \uAD6C\uBD84\uD55C \uC774\uB984\uC774\uB098 id\uC758 \uC0C1\uC138\uB97C \uC5C5\uC2A4\uD2B8\uB9BC \uD638\uCD9C 2\uBC88\uC73C\uB85C \uC870\uD68C. \uC774\uB984\uC774 \uC815\uD655\uD788 \uAC19\uC740 \uB2C8\uCF00 \uC6B0\uC120, \uCC3E\uC9C0 \uBABB\uD55C \uC774\uB984\uC740 notFound, \uD6C4\uBCF4\uAC00 \uC5EC\uB7FF\uC774\uBA74 ambiguous\uB85C \uBC18\uD658.",
+          description: "\uC27C\uD45C\uB85C \uAD6C\uBD84\uD55C \uC774\uB984\uC774\uB098 id, \uB610\uB294 all=1\uB85C \uBCF4\uC720 \uC804\uC6D0\uC758 \uC0C1\uC138\uB97C \uC870\uD68C. \uC774\uB984\uC774 \uC815\uD655\uD788 \uAC19\uC740 \uB2C8\uCF00 \uC6B0\uC120, \uCC3E\uC9C0 \uBABB\uD55C \uC774\uB984\uC740 notFound, \uD6C4\uBCF4\uAC00 \uC5EC\uB7FF\uC774\uBA74 ambiguous\uB85C \uBC18\uD658.",
           parameters: [
             {
               name: "blablaid",
@@ -20969,10 +20984,16 @@ function buildOpenapi(pkgVersion) {
             {
               name: "names",
               in: "query",
-              required: true,
               schema: { type: "string" },
-              description: "\uC27C\uD45C\uB85C \uAD6C\uBD84\uD55C \uC774\uB984\uC774\uB098 id, \uCD5C\uB300 50\uAC1C",
+              description: "\uC27C\uD45C\uB85C \uAD6C\uBD84\uD55C \uC774\uB984\uC774\uB098 id, \uCD5C\uB300 50\uAC1C. all\uACFC \uD568\uAED8 \uC4F8 \uC218 \uC5C6\uC74C",
               example: "\uB77C\uD53C,\uC575\uCEE4"
+            },
+            {
+              name: "all",
+              in: "query",
+              schema: { type: "string" },
+              description: "\uAC12\uC774 \uC788\uC73C\uBA74 \uBCF4\uC720 \uC804\uC6D0\uC744 \uC804\uD22C\uB825\uC21C\uC73C\uB85C \uC870\uD68C",
+              example: "1"
             }
           ],
           responses: {
@@ -20993,7 +21014,7 @@ function buildOpenapi(pkgVersion) {
                 }
               }
             },
-            "400": { description: "names \uB204\uB77D \uB610\uB294 50\uAC1C \uCD08\uACFC" }
+            "400": { description: "names\uC640 all\uC774 \uBAA8\uB450 \uC5C6\uAC70\uB098 \uD568\uAED8 \uC788\uC74C, \uB610\uB294 names 50\uAC1C \uCD08\uACFC" }
           }
         }
       },
@@ -21556,7 +21577,7 @@ async function createApp(storage) {
         "GET /api/user/:blablaid": "shared-profile lookup (blablaid = blablalink openid, or ?blablaid=/?url=)",
         "GET /api/user/:blablaid/nikke?q=": "owned-nikke list (same filters as /api/nikkes)",
         "GET /api/user/:blablaid/nikke/:nameOrId": "single owned-nikke detail (nameOrId = name/id/nameCode)",
-        "GET /api/user/:blablaid/nikke-builds?names=": "several owned-nikke details in one upstream call (comma-separated names/ids)",
+        "GET /api/user/:blablaid/nikke-builds?names=|all=1": "several or all owned-nikke details in one upstream call (comma-separated names/ids)",
         "GET /api/user/:blablaid/roster?area=": "full owned roster, upstream-shaped (characters+details+stateEffects+outpost per area)"
       },
       fields: "?fields=a,b.c on nikkes, favorites, cubes, scene detail and user-nikke routes trims each object to those (dot) paths",
@@ -22548,13 +22569,18 @@ async function createApp(storage) {
   async function userNikkeBuilds(c) {
     try {
       const names = [...new Set((c.req.query("names") ?? "").split(",").map((s) => s.trim()).filter(Boolean))];
-      if (names.length === 0) return c.json({ error: "names required (comma-separated names or ids)" }, 400);
+      const all = !!c.req.query("all");
+      if (all && names.length) return c.json({ error: "use either names or all" }, 400);
+      if (!all && names.length === 0) return c.json({ error: "names required (comma-separated names or ids), or all=1" }, 400);
       if (names.length > NIKKE_BUILDS_MAX) return c.json({ error: `at most ${NIKKE_BUILDS_MAX} names` }, 400);
       const lookups = loadProfileLookups();
       const res = await loadOwnedNikkes(c);
       if ("error" in res) return res.error;
       const { charRef, normalizeNikke, matchesNikke } = await lookups;
       const picked = /* @__PURE__ */ new Map();
+      if (all) {
+        for (const ch2 of [...res.owned].sort((a, b) => (b.combat ?? 0) - (a.combat ?? 0))) picked.set(ch2.name_code, { ch: ch2 });
+      }
       const notFound = [];
       const ambiguous = [];
       for (const key2 of names) {
@@ -22578,16 +22604,19 @@ async function createApp(storage) {
       const pg = pageQuery(c, selected.length);
       if ("error" in pg) return c.json({ error: pg.error }, 400);
       const page = selected.slice(pg.off, pg.off + pg.lim);
-      const details = page.length ? await gameApi("Game", "GetUserCharacterDetails", {
-        ...res.body,
-        name_codes: page.map((x) => x.ch.name_code)
-      }) : null;
-      if (details && details.code !== 0) throw new Error(details.msg ?? `detail error ${details.code}`);
+      const codes = page.map((x) => x.ch.name_code);
+      const chunks = [];
+      for (let i = 0; i < codes.length; i += ROSTER_DETAIL_BATCH) chunks.push(codes.slice(i, i + ROSTER_DETAIL_BATCH));
+      const details = await mapLimit(chunks, 3, async (name_codes) => {
+        const d = await gameApi("Game", "GetUserCharacterDetails", { ...res.body, name_codes });
+        if (d.code !== 0) throw new Error(d.msg ?? `detail error ${d.code}`);
+        return d.data;
+      });
       const detailByCode = new Map(
-        (details?.data?.character_details ?? []).map((x) => [x.name_code, x])
+        details.flatMap((d) => d?.character_details ?? []).map((x) => [x.name_code, x])
       );
       const effectById = new Map(
-        (details?.data?.state_effects ?? []).map((e) => [String(e.id), e])
+        details.flatMap((d) => d?.state_effects ?? []).map((e) => [String(e.id), e])
       );
       return c.json({
         count: selected.length,

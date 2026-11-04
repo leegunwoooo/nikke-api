@@ -559,6 +559,33 @@ test("owned nikke says whether the slot holds its 애장품 or a doll", async ()
   }
 });
 
+test("nikke-builds all=1 covers every owned nikke, strongest first", async () => {
+  // past one upstream batch, so the detail calls have to split
+  const owned = Array.from({ length: 250 }, (_, i) => ({ name_code: 9000 + i, lv: 1, combat: i }));
+  const stub = stubBlabla({
+    perArea: (a) => (a === 83 ? { code: 0, characters: owned } : { code: 0 }),
+    details: [{ name_code: 9249, skill1_lv: 10 }, { name_code: 9000, skill1_lv: 3 }],
+  });
+  try {
+    const r = await json("/api/user/12345/nikke-builds?area=83&all=1");
+    assert.equal(r.count, 250);
+    assert.equal(r.nikkes[0].combat, 249);
+    assert.equal(r.nikkes[249].combat, 0);
+    assert.deepEqual(stub.detailCalls, [200, 50]);
+    assert.equal(r.nikkes[0].skills.skill1, 10);
+    assert.equal(r.nikkes[249].skills.skill1, 3); // details from every batch reach their nikke
+
+    const page = await json("/api/user/12345/nikke-builds?area=83&all=1&limit=2&offset=1");
+    assert.equal(page.count, 250);
+    assert.deepEqual(page.nikkes.map((n: any) => n.combat), [248, 247]);
+    assert.deepEqual(stub.detailCalls.at(-1), 2);
+
+    assert.equal((await get("/api/user/12345/nikke-builds?all=1&names=a")).status, 400);
+  } finally {
+    stub.restore();
+  }
+});
+
 test("nikke-builds resolves several names from one detail call", async () => {
   // 3001 = 라피, 3003 = 앵커, 5016 = 앵커: 이노센트 메이드
   const stub = stubBlabla({
