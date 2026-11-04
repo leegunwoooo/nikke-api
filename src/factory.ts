@@ -52,7 +52,7 @@ export function resolvePaging(
   const limit = num(qs.limit);
   const offset = num(qs.offset);
   for (const [k, v] of Object.entries({ page, limit, offset })) {
-    if (v !== undefined && (!Number.isInteger(v) || v < 0 || (k === "page" && v < 1))) {
+    if (v !== undefined && (!Number.isInteger(v) || v < (k === "offset" ? 0 : 1))) {
       return { error: `invalid ${k}` } as const;
     }
   }
@@ -376,7 +376,8 @@ async function loadProfileLookups() {
     const a = avatarMap?.[String(iconId)];
     const n = a ? byResourceId.get(a.resourceId) : undefined;
     if (!n || !a) return { nameCode: iconId };
-    const costume = a.costumeIndex > 0 ? n.costumes[a.costumeIndex - 1] : undefined;
+    // costumes[] isn't in skinIndex order — match the index, not the position
+    const costume = a.costumeIndex > 0 ? n.costumes.find((co) => co.skinIndex === a.costumeIndex) : undefined;
     return { iconId, costumeIndex: a.costumeIndex, ...charInfo(n, costume?.images.icon) };
   };
   const cubeRef = (tid?: number, lv?: number) =>
@@ -485,6 +486,8 @@ async function loadProfileLookups() {
 
 function findByName(q: string): Nikke[] {
   const nq = norm(q);
+  // a query that normalizes to nothing would otherwise match every name
+  if (!nq) return [];
   const matches = characters.filter((c) => Object.values(c.name).some((n) => norm(n).includes(nq)));
   // exact matches first, then the rest
   return matches.sort((a, b) => {
@@ -923,7 +926,7 @@ app.get("/api/lines", async (c) => {
   if (q && !nq && !speaker) return c.json({ error: "q or speaker required" }, 400);
   const page = c.req.query("page"), limit = c.req.query("limit"), offset = c.req.query("offset");
   for (const [k, v] of Object.entries({ page, limit, offset })) {
-    if (v !== undefined && v !== "" && (!Number.isInteger(Number(v)) || Number(v) < 0 || (k === "page" && Number(v) < 1))) {
+    if (v !== undefined && v !== "" && (!Number.isInteger(Number(v)) || Number(v) < (k === "offset" ? 0 : 1))) {
       return c.json({ error: `invalid ${k}` }, 400);
     }
   }
@@ -1080,7 +1083,10 @@ app.get("/api/story/route", async (c) => {
 app.get("/api/story/next", async (c) => {
   const { chapter, after } = c.req.query();
   const done = new Set((c.req.query("done") ?? "").split(",").map((s) => searchNorm(s)).filter(Boolean));
-  const limit = Math.min(Number(c.req.query("limit") ?? 5) || 5, 20);
+  // an empty ?limit= counts as absent, like the paged lists
+  const limitN = Number(c.req.query("limit") || 5);
+  if (!Number.isInteger(limitN) || limitN < 1) return c.json({ error: "invalid limit" }, 400);
+  const limit = Math.min(limitN, 20);
   const requiredOnly = truthy(c.req.query("required"));
   const entries = await storyRoute();
   type Entry = (typeof entries)[number];
@@ -1354,7 +1360,7 @@ app.get("/api/equips/:id", async (c) => {
 // joined with the character list for owner + resolved icon image
 const avatarRow = (iconId: number, a: { resourceId: number; costumeIndex: number }) => {
   const n = byResourceId.get(a.resourceId);
-  const costume = n && a.costumeIndex > 0 ? n.costumes[a.costumeIndex - 1] : undefined;
+  const costume = n && a.costumeIndex > 0 ? n.costumes.find((co) => co.skinIndex === a.costumeIndex) : undefined;
   return {
     iconId,
     resourceId: a.resourceId,

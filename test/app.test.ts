@@ -1,5 +1,6 @@
 import assert from "node:assert/strict";
 import crypto from "node:crypto";
+import { readFileSync } from "node:fs";
 import path from "node:path";
 import { test } from "node:test";
 
@@ -272,6 +273,29 @@ test("/api/avatars list + filters + detail", async () => {
   assert.equal((await get("/api/avatars/abc")).status, 400);
 });
 
+test("avatars resolve a costume by skinIndex, not by its position in costumes[]", async () => {
+  // fixture: rapi's costumes[] is [skin 2, skin 1], anchor's is [skin 2] only
+  const { avatars } = await json("/api/avatars");
+  const row = (id: number) => avatars.find((x: any) => x.iconId === id);
+  assert.equal(row(30101).costumeIndex, 1);
+  assert.equal(row(30101).image, "cos-i");
+  // the avatar's skin isn't in costumes[] → base icon, not whatever sits at that position
+  assert.equal(row(30200).costumeIndex, 1);
+  assert.equal(row(30200).image, "i");
+  assert.equal((await json("/api/avatars/30101")).image, "cos-i");
+});
+
+test("profile icon resolves a costume by skinIndex, not by its position in costumes[]", async () => {
+  for (const [iconId, image] of [[30101, "cos-i"], [30200, "i"]] as const) {
+    const stub = stubBlabla({ basicInfo: { icon_id: iconId } });
+    try {
+      assert.equal((await json(`/api/user/${iconId}`)).profile.icon.image, image);
+    } finally {
+      stub.restore();
+    }
+  }
+});
+
 test("favorites list names the owner and filters by nikke", async () => {
   const all = (await json("/api/favorites?lang=ko")).favorites;
   assert.deepEqual(all[0].character, { id: 1, name: "라피" });
@@ -450,6 +474,7 @@ function stubBlabla(opts: {
   perArea?: (area: number) => { code: number; characters?: unknown[]; msg?: string };
   detailCode?: number;
   details?: unknown[];
+  basicInfo?: Record<string, unknown>;
 } = {}) {
   const orig = globalThis.fetch;
   const envBackup = { ...process.env };
@@ -491,7 +516,7 @@ function stubBlabla(opts: {
       });
     }
     if (url.includes("GetUserProfileBasicInfo"))
-      return Response.json({ code: 0, data: { basic_info: { nickname: "t", lv: 1, character_count: 1 } } });
+      return Response.json({ code: 0, data: { basic_info: { nickname: "t", lv: 1, character_count: 1, ...opts.basicInfo } } });
     if (url.includes("GetUserProfileOutpostInfo"))
       return Response.json({ code: 0, data: { outpost_info: { synchro_level: 400 } } });
     return Response.json({ code: -1, msg: "unmocked" });
@@ -743,6 +768,60 @@ test("resolvePaging: no params returns the full list, cap only on explicit limit
     lim: 5,
     page: 0,
   });
+});
+
+test("limit=0 is rejected instead of returning the full list", async () => {
+  const { resolvePaging } = await import("../src/app.js");
+  assert.deepEqual(resolvePaging({ limit: "0" }, 945), { error: "invalid limit" });
+  assert.deepEqual(resolvePaging({ limit: "0", page: "1" }, 945), { error: "invalid limit" });
+  assert.deepEqual(resolvePaging({ limit: "1" }, 945), { off: 0, lim: 1, page: 0 });
+  // 0 stays valid for offset, and an empty limit still means "not given"
+  assert.deepEqual(resolvePaging({ limit: "1", offset: "0" }, 945), { off: 0, lim: 1, page: 0 });
+  assert.deepEqual(resolvePaging({ limit: "" }, 945), { off: 0, lim: 945, page: 0 });
+
+  for (const url of ["/api/nikkes?limit=0", "/api/avatars?limit=0", "/api/lines?q=hello&limit=0", "/api/lines?speaker=x&limit=0"]) {
+    const res = await get(url);
+    assert.equal(res.status, 400, url);
+    assert.deepEqual(await res.json(), { error: "invalid limit" }, url);
+  }
+  assert.equal((await json("/api/nikkes?limit=1")).characters.length, 1);
+  assert.equal((await json("/api/lines?q=a&limit=1&offset=0")).offset, 0);
+});
+
+test("/api/story/next: limit must be a positive integer, default 5, cap 20", async () => {
+  for (const bad of ["0", "-1", "1.5", "abc"]) {
+    const res = await get(`/api/story/next?chapter=-1&limit=${bad}`);
+    assert.equal(res.status, 400, bad);
+    assert.deepEqual(await res.json(), { error: "invalid limit" }, bad);
+  }
+  const next = async (qs: string) => (await json(`/api/story/next?chapter=-1${qs}`)).next.length;
+  assert.equal(await next(""), 5);
+  assert.equal(await next("&limit="), 5);
+  assert.equal(await next("&limit=1"), 1);
+  assert.equal(await next("&limit=20"), 20);
+  assert.equal(await next("&limit=21"), 20);
+});
+
+test("a name query that normalizes to nothing matches no one", async () => {
+  // whitespace / separators only: no results, not every character
+  for (const q of ["%20", "%20%20", "%3A", "_-"]) {
+    const list = await json(`/api/nikkes?q=${q}`);
+    assert.equal(list.count, 0, q);
+    assert.deepEqual(list.characters, [], q);
+    assert.equal((await json(`/api/nikkes?q=${q}&family=1`)).count, 0, q);
+    assert.equal((await get(`/api/nikkes/${q}`)).status, 404, q);
+    assert.equal((await get(`/api/nikkes/${q}/appearances`)).status, 404, q);
+  }
+  // an empty q is still no filter at all
+  assert.equal((await json("/api/nikkes?q=")).count, 3);
+});
+
+test("fingerprint watches both archive lists that sync collects", () => {
+  // importing the script would run it against the CDN, so read its PATHS as text
+  const src = readFileSync(path.join(import.meta.dirname, "../scripts/fingerprint.ts"), "utf8");
+  const paths = src.slice(src.indexOf("const PATHS"), src.indexOf("];"));
+  assert.ok(paths.includes(`"archive/ko/archive_list.json"`));
+  assert.ok(paths.includes(`"scene/ko/archive_list.json"`));
 });
 
 test("/api/events ?q ignores punctuation/whitespace on both sides", async () => {

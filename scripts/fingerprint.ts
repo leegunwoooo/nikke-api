@@ -19,6 +19,7 @@ const PATHS = [
   "character/AttractiveLevelTable.json",
   "scene/ko/scene_list.json",
   "archive/ko/archive_list.json",
+  "scene/ko/archive_list.json",
   "scene/ko/sudden_list.json",
   "equip/ItemEquipTable-ko.json",
   "equip/equip_option_table_v2-ko.json",

@@ -61,7 +61,7 @@
 
 | 파라미터 | 설명 | 예시 |
 |----------|------|------|
-| `q` | 이름 부분 일치 검색 (전 언어 대상) | `?q=아니스` |
+| `q` | 이름 부분 일치 검색 (전 언어 대상). 공백·구분자만 있으면(`?q=%20`) 결과 없음, 빈 값(`?q=`)은 필터 없음 | `?q=아니스` |
 | `family` | `1`이면 검색된 캐릭터의 다른 버전(원본·이격)까지 함께 반환 — 아래 [이격 연결](#이격-연결) | `?q=레드 후드&family=1` |
 | `element` | 속성 | `Electronic`, `Iron`, `Fire`, `Wind`, `Water` |
 | `class` | 클래스 | `Attacker`, `Defender`, `Supporter` |
@@ -80,7 +80,7 @@
 
 `?page=N`(1부터)으로도 페이지를 넘길 수 있습니다 — `offset` 대신 `(page-1) * limit`이 적용되고 응답에 `page`·`totalPages`가 추가됩니다. `limit` 없이 `page`만 주면 페이지 크기 50이 기본 적용됩니다. 페이지네이션 지원 목록(`/api/nikkes`, `/api/scenes`, `/api/events`, `/api/stages`, `/api/costumes`, `/api/equips`, `/api/equips/options`, `/api/avatars`, `/api/favorites`, `/api/cubes`)에서 동일하게 동작합니다.
 
-`page`·`limit`·`offset`이 정수가 아니거나 음수이면(`page`는 0 포함) `400 invalid <param>`이 반환됩니다.
+`page`·`limit`·`offset`이 정수가 아니거나 음수이면(`page`·`limit`은 0 포함) `400 invalid <param>`이 반환됩니다.
 
 ### 요청 예시
 
@@ -607,7 +607,7 @@ GET /api/events/event_BunnyX777/script?limit=1
 | `after` | 방금 끝낸 항목 — 제목·이벤트 id·챕터 번호 | `?after=LAST KINGDOM` |
 | `done` | 이미 본 것 (콤마 구분, 제목·이벤트 id·챕터 번호) | `?done=RED ASH,event_overzone1` |
 | `required` | `1`이면 선택 스토리 제외 | `?required=1` |
-| `limit` | 개수 (기본 5, 최대 20) | `?limit=10` |
+| `limit` | 개수 (기본 5, 최대 20). 양의 정수가 아니면 `400 invalid limit` | `?limit=10` |
 
 `next`는 순서대로 다음 항목들이고, `missed`는 `done`을 줬을 때만 채워지는 "현재 위치보다 앞에 있는데 안 본 필수 스토리"입니다.
 
@@ -857,7 +857,7 @@ GET /api/equips/options/7000501?lang=ko
 | `iconId` | 아바타 아이콘 ID — 유저 프로필 `icon_id`와 같은 값 |
 | `resourceId` | 캐릭터 리소스 ID |
 | `costumeIndex` | 코스튬 인덱스 — `0`이면 기본 스킨, `/api/costumes`의 `costumeIndex`와 대응 |
-| `image` | 해석된 아이콘 URL (코스튬 인덱스가 가리키는 아이콘, 캐릭터 없으면 `null`) |
+| `image` | 해석된 아이콘 URL (`costumeIndex`와 `skinIndex`가 같은 코스튬의 아이콘, 그런 코스튬이 없으면 기본 아이콘, 캐릭터 없으면 `null`) |
 | `character` | 소유 캐릭터 요약 — NPC/미출시 아이콘은 `null` |
 
 ## GET /api/avatars/:iconId
