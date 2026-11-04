@@ -20185,10 +20185,11 @@ function buildServer(api, version2, origin = "", boundBlablaid) {
     "get_user_nikke_builds",
     {
       title: "Get several of a player's NIKKEs",
-      description: "Build detail of several owned characters in one call: skill levels, equipment, cube, favorite item. Use this instead of repeated get_user_nikke calls, which trip the rate limit. Exact names win over other versions; notFound and ambiguous report names it couldn't resolve. Long answers come back in pages \u2014 continue from truncated.nextOffset. Live and rate limited.",
+      description: "Build detail of several owned characters in one call: skill levels, equipment, cube, favorite item. Use this instead of repeated get_user_nikke calls, which trip the rate limit. Exact names win over other versions; notFound and ambiguous report names it couldn't resolve. Pass fields when only some values are needed \u2014 a full build is about 1,700 characters per nikke. Long answers come back in pages \u2014 continue from truncated.nextOffset. Live and rate limited.",
       inputSchema: object({
         blablaid: BLABLAID.optional(),
         nikkes: array(string2().min(1)).min(1).max(50).describe("Character names (any language) or ids"),
+        fields: string2().optional().describe("Comma-separated dot paths kept per entry, e.g. 'character.name,favoriteItem'"),
         offset: OFFSET,
         lang: LANG
       }),
@@ -20196,7 +20197,7 @@ function buildServer(api, version2, origin = "", boundBlablaid) {
     },
     userTool("get_user_nikke_builds", (a) => {
       const blablaid = a.blablaid ?? boundBlablaid;
-      return blablaid ? call(api, "get_user_nikke_builds", `/api/user/nikke-builds${qs({ blablaid, names: a.nikkes.join(","), offset: a.offset, lang: a.lang })}`) : needBlablaid();
+      return blablaid ? call(api, "get_user_nikke_builds", `/api/user/nikke-builds${qs({ blablaid, names: a.nikkes.join(","), fields: a.fields, offset: a.offset, lang: a.lang })}`) : needBlablaid();
     })
   );
   server.registerTool(

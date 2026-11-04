@@ -747,19 +747,20 @@ export function buildServer(api: Fetcher, version: string, origin = "", boundBla
     {
       title: "Get several of a player's NIKKEs",
       description:
-        "Build detail of several owned characters in one call: skill levels, equipment, cube, favorite item. Use this instead of repeated get_user_nikke calls, which trip the rate limit. Exact names win over other versions; notFound and ambiguous report names it couldn't resolve. Long answers come back in pages — continue from truncated.nextOffset. Live and rate limited.",
+        "Build detail of several owned characters in one call: skill levels, equipment, cube, favorite item. Use this instead of repeated get_user_nikke calls, which trip the rate limit. Exact names win over other versions; notFound and ambiguous report names it couldn't resolve. Pass fields when only some values are needed — a full build is about 1,700 characters per nikke. Long answers come back in pages — continue from truncated.nextOffset. Live and rate limited.",
       inputSchema: z.object({
         blablaid: BLABLAID.optional(),
         nikkes: z.array(z.string().min(1)).min(1).max(50).describe("Character names (any language) or ids"),
+        fields: z.string().optional().describe("Comma-separated dot paths kept per entry, e.g. 'character.name,favoriteItem'"),
         offset: OFFSET,
         lang: LANG,
       }),
       annotations: LIVE,
     },
-    userTool("get_user_nikke_builds", (a: { blablaid?: string; nikkes: string[]; offset?: number; lang: string }) => {
+    userTool("get_user_nikke_builds", (a: { blablaid?: string; nikkes: string[]; fields?: string; offset?: number; lang: string }) => {
       const blablaid = a.blablaid ?? boundBlablaid;
       return blablaid
-        ? call(api, "get_user_nikke_builds", `/api/user/nikke-builds${qs({ blablaid, names: a.nikkes.join(","), offset: a.offset, lang: a.lang })}`)
+        ? call(api, "get_user_nikke_builds", `/api/user/nikke-builds${qs({ blablaid, names: a.nikkes.join(","), fields: a.fields, offset: a.offset, lang: a.lang })}`)
         : needBlablaid();
     }),
   );

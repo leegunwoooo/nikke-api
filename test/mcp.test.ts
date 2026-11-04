@@ -361,6 +361,8 @@ test("get_user_nikke_builds passes the names through and needs a blablaid", asyn
     assert.deepEqual(r.notFound, ["없음"]);
     assert.deepEqual(asked, [[3001, 3003]]);
     assert.match((await tool("get_user_nikke_builds", { nikkes: ["라피"] })).json.error, /share link/);
+    const slim = (await tool("get_user_nikke_builds", { blablaid: "12345", nikkes: ["라피"], fields: "character.name" })).json;
+    assert.deepEqual(slim.nikkes, [{ character: { name: "라피" } }]);
   } finally {
     globalThis.fetch = orig;
     process.env = env;
