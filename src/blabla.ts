@@ -117,7 +117,7 @@ export interface GameResponse<T = unknown> {
 // upstream "request too frequently" — bursts (e.g. the roster endpoint's
 // multi-area sweep) trip this even on a healthy session. Retried with
 // backoff below; returning the last response keeps the caller's error real.
-const RATE_LIMIT_CODES = new Set([212000]);
+export const RATE_LIMIT_CODES = new Set([212000]);
 const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
 
 async function post<T>(path: string, body: Record<string, unknown>): Promise<GameResponse<T>> {

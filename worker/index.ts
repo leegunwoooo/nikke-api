@@ -347,8 +347,9 @@ export default {
       request.headers.get("x-admin-token") === env.ADMIN_TOKEN;
     if (isGet) {
       url.searchParams.delete("refresh");
-      // a remembered nikke_area_id lets the origin skip one upstream call
-      if (target && !url.searchParams.has("area")) {
+      // a remembered nikke_area_id lets the origin skip one upstream call —
+      // not on /roster, where ?area= narrows the five-server sweep to one
+      if (target && !url.searchParams.has("area") && !/^\/api\/user\/[^/]+\/roster$/.test(url.pathname)) {
         const area = await getArea(env, target);
         if (area) url.searchParams.set("area", area);
       }

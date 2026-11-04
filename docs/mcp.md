@@ -151,7 +151,7 @@ curl -X POST https://nikke-api.pages.dev/mcp \
 | `get_user_profile` | 유저 프로필 (BlablaLink 공유 링크로 조회) |
 | `get_user_nikkes` / `get_user_nikke` | 유저 보유 니케 목록(레벨·전투력·돌파·코어, 전투력순) / 한 캐릭터의 육성 상태. 이름이 정확히 일치하면 그 니케를 반환하고 나머지 버전은 `alsoMatched`로 알려줍니다 |
 | `get_user_nikke_builds` | 유저 보유 니케 여러 명의 육성 상태를 한 번에. `nikkes`를 생략하면 보유 전원을 전투력순으로 줍니다. 1명씩 여러 번 호출하면 조회 제한에 걸리므로 이쪽을 씁니다. 찾지 못한 이름은 `notFound`, 후보가 여럿이면 `ambiguous`로 알려줍니다. 일부 항목만 필요하면 `fields`(예: `character.name,favoriteItem`)로 응답을 줄일 수 있습니다 |
-| `get_user_roster` | 유저 보유 니케 **전원** (서버별 name_code·레벨·전투력·돌파·코어로 축약 — 5개 서버 순회, `area`로 한 곳만 지정 가능). 장비·옵션 등 원시 필드 전체는 REST `/api/user/:id/roster`에서 |
+| `get_user_roster` | 유저 보유 니케 **전원** (서버별 name_code·레벨·전투력·돌파·코어로 축약 — 5개 서버 순회, `area`로 한 곳만 지정 가능, 한 서버라도 레이트리밋이면 전체 실패). 장비·옵션 등 원시 필드 전체는 REST `/api/user/:id/roster`에서 |
 | `api_get` | 전용 도구가 없는 조회: 스테이지, 코스튬, 장비, 큐브, 아바타, 필터 값 (`/api/user`·`/api/tables`는 막혀 있음) |
 | `search` / `fetch` | 캐릭터·이벤트·씬·소장품 통합 검색 / id로 문서 가져오기 (ChatGPT 커넥터 규격, id 형식 `nikke:201601`·`event:event_claymore`) |
 | `read_event` | 이벤트 하나의 대본 전체를 에피소드 순서대로 (`화자: 대사`). 요약·다시 들려주기용. 긴 이벤트는 여러 페이지로 오니 `truncated.nextOffset`으로 이어 받습니다 |

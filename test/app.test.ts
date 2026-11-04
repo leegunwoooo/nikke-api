@@ -677,6 +677,59 @@ test("roster: detail-call failure aborts with 502 rather than dropping the area"
   }
 });
 
+test("roster: a rate-limited area aborts with 502 instead of a partial 200", async () => {
+  const stub = stubBlabla({
+    perArea: (a) =>
+      a === 83 ? { code: 0, characters: [{ name_code: 1, lv: 200 }] } : a === 84 ? { code: 212000, msg: "too frequently" } : { code: 0 },
+  });
+  try {
+    const res = await get("/api/user/12345/roster");
+    assert.equal(res.status, 502);
+    assert.deepEqual(await res.json(), { error: "upstream lookup failed (212000 too frequently)", code: 212000 });
+  } finally {
+    stub.restore();
+  }
+});
+
+test("roster: an unknown code only fails its own area when another succeeds", async () => {
+  const stub = stubBlabla({
+    perArea: (a) =>
+      a === 83 ? { code: 0, characters: [{ name_code: 1, lv: 200 }] } : a === 84 ? { code: 500, msg: "boom" } : { code: 0 },
+  });
+  try {
+    const res = await get("/api/user/12345/roster");
+    assert.equal(res.status, 200);
+    assert.deepEqual((await res.json()).areas.map((a: any) => a.area), [83]);
+  } finally {
+    stub.restore();
+  }
+});
+
+test("roster: an unknown code on every area stays a 502 with that code", async () => {
+  const stub = stubBlabla({ perArea: () => ({ code: 500, msg: "boom" }) });
+  try {
+    const res = await get("/api/user/12345/roster");
+    assert.equal(res.status, 502);
+    assert.deepEqual(await res.json(), { error: "upstream lookup failed (500 boom)", code: 500 });
+  } finally {
+    stub.restore();
+  }
+});
+
+test("roster: empty and private areas stay out of the bundle without failing it", async () => {
+  const stub = stubBlabla({
+    perArea: (a) =>
+      a === 83 ? { code: 0, characters: [{ name_code: 1, lv: 200 }] } : a === 84 ? { code: 1303002 } : { code: 0 },
+  });
+  try {
+    const res = await get("/api/user/12345/roster");
+    assert.equal(res.status, 200);
+    assert.deepEqual((await res.json()).areas.map((a: any) => a.area), [83]);
+  } finally {
+    stub.restore();
+  }
+});
+
 test("resolvePaging: no params returns the full list, cap only on explicit limit", async () => {
   const { resolvePaging } = await import("../src/app.js");
   // total > 500: no params → everything (the 500 cap must not apply)
