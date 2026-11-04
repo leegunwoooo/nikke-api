@@ -297,6 +297,13 @@ test("llms.txt indexes the MCP guide and API docs", async () => {
 });
 
 // keep last: the burst guard is process-wide state
+test("get_user_nikkes says what it returns", async () => {
+  const { result } = await rpc("tools/list");
+  const t = result.tools.find((x: any) => x.name === "get_user_nikkes");
+  assert.match(t.description, /combat power/);
+  assert.match(t.description, /sorted by combat power/);
+});
+
 test("live user tools are rate limited per instance", async () => {
   let limited;
   for (let i = 0; i < 31; i++) limited = await tool("get_user_profile", { blablaid: "x" });

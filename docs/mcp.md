@@ -149,7 +149,7 @@ curl -X POST https://nikke-api.pages.dev/mcp \
 | `list_events` / `get_event` | 스토리 이벤트 목록 / 에피소드 씬 목록 |
 | `search_favorites` / `get_favorite` | 소장품 목록 / 레벨별 스탯·스킬 |
 | `get_user_profile` | 유저 프로필 (BlablaLink 공유 링크로 조회) |
-| `get_user_nikkes` / `get_user_nikke` | 유저 보유 니케 목록 / 한 캐릭터의 육성 상태 |
+| `get_user_nikkes` / `get_user_nikke` | 유저 보유 니케 목록(레벨·전투력·돌파·코어, 전투력순) / 한 캐릭터의 육성 상태 |
 | `get_user_roster` | 유저 보유 니케 **전원** (서버별 name_code·레벨·전투력·돌파·코어로 축약 — 5개 서버 순회, `area`로 한 곳만 지정 가능). 장비·옵션 등 원시 필드 전체는 REST `/api/user/:id/roster`에서 |
 | `api_get` | 전용 도구가 없는 조회: 스테이지, 코스튬, 장비, 큐브, 아바타, 필터 값 (`/api/user`·`/api/tables`는 막혀 있음) |
 | `search` / `fetch` | 캐릭터·이벤트·씬·소장품 통합 검색 / id로 문서 가져오기 (ChatGPT 커넥터 규격, id 형식 `nikke:201601`·`event:event_claymore`) |

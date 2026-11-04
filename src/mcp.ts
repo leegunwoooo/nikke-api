@@ -687,7 +687,7 @@ export function buildServer(api: Fetcher, version: string, origin = "", boundBla
     {
       title: "List a player's NIKKEs",
       description:
-        "Characters a player owns with their level. Filters work like search_nikkes; use get_user_nikke for one character's full build. Live and rate limited.",
+        "Characters a player owns with level, combat power, limit break (grade) and core, sorted by combat power (highest first) — enough for names and power rankings. Filters work like search_nikkes. Use get_user_nikke for one character's full build, get_user_roster to cover every server. Live and rate limited.",
       inputSchema: z.object({
         blablaid: BLABLAID.optional(),
         name: z.string().optional().describe("Name substring, any language"),

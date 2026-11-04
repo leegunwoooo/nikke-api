@@ -20132,7 +20132,7 @@ function buildServer(api, version2, origin = "", boundBlablaid) {
     "get_user_nikkes",
     {
       title: "List a player's NIKKEs",
-      description: "Characters a player owns with their level. Filters work like search_nikkes; use get_user_nikke for one character's full build. Live and rate limited.",
+      description: "Characters a player owns with level, combat power, limit break (grade) and core, sorted by combat power (highest first) \u2014 enough for names and power rankings. Filters work like search_nikkes. Use get_user_nikke for one character's full build, get_user_roster to cover every server. Live and rate limited.",
       inputSchema: object({
         blablaid: BLABLAID.optional(),
         name: string2().optional().describe("Name substring, any language"),
