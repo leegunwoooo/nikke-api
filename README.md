@@ -83,6 +83,7 @@ BlablaLink 공유 링크(`https://www.blablalink.com/user?openid=...`)로 유저
 | 프로필 (`/api/user`) | 닉네임, 레벨, 대표 아이콘(캐릭터 이름·이미지로 해석), 팀 전투력, 캠페인/타워 진행도(스테이지명으로 해석), 기업별 보유 수, 오버클럭 기록, 대표 스쿼드 |
 | 전진기지 (`/api/user`) | 인프라 코어, 싱크로 레벨, 리사이클 룸 연구, 메모리얼 수집 수 |
 | 보유 니케 (`/api/user/<blablaid>/nikke`) | 전투력순 목록 — 니케 이름/이미지, 레벨, 코어·돌파. 필터: `id`(id·resourceId·nameCode 정확 매칭)·`name`(전 언어 부분 일치, `q`는 동일 별칭)·`element`·`class`·`burst`·`corporation`·`weapon`·`rarity` |
+| 니케 여러 명 상세 (`/api/user/<blablaid>/nikke-builds?names=`) | 쉼표로 구분한 이름이나 id, 최대 50개. 찾지 못한 이름은 `notFound`, 후보가 여럿이면 `ambiguous` |
 | 니케 상세 (`/api/user/<blablaid>/nikke/:nameOrId`) | 이름(부분 일치) 또는 id로 지정 — `/api/nikkes/:id`와 같은 방식. 단일 매칭 시 스킬 레벨, 호감도, 착용 코스튬(이름 포함), 장비(부위별 이름·티어·옵션 수치), 큐브·소장품 반환. 복수 매칭 시 목록 반환 |
 
 ```

@@ -42,6 +42,7 @@
 - [GET /api/user](#get-apiuser) — 유저 프로필 조회 (공유 링크)
 - [GET /api/user/:blablaid/nikke](#get-apiuserblablaidnikke) — 유저 보유 니케 목록 (경량)
 - [GET /api/user/:blablaid/nikke/:nameOrId](#get-apiuserblablaidnikkenameorid) — 유저 보유 니케 상세 (이름 부분 일치/id)
+- [GET /api/user/:blablaid/nikke-builds](#get-apiuserblablaidnikke-builds) — 유저 보유 니케 여러 명의 상세 일괄 조회
 - [GET /api/user/:blablaid/roster](#get-apiuserblablaidroster) — 유저 보유 니케 전체 로스터 (업스트림 원시 형태)
 - [GET /api/cdn](#get-apicdn) — CDN 경로 → URL 변환
 - [MCP `/mcp`](#mcp-mcp) — ChatGPT/Claude 커넥터용 MCP 서버
@@ -1100,6 +1101,32 @@ GET /api/user/<blablaid>/nikke?element=Iron&burst=III  # 도감과 동일한 속
 }
 ```
 
+## GET /api/user/:blablaid/nikke-builds
+
+보유 니케 **여러 명**의 상세를 한 번에 조회합니다. 항목 형태는 [단일 상세](#get-apiuserblablaidnikkenameorid)와 같습니다. 1명씩 조회하면 니케마다 업스트림 호출이 2번씩 들어가 조회 제한에 걸리기 쉬운데, 이 경로는 페이지마다 호출이 2번으로 고정됩니다.
+
+| 파라미터 | 설명 |
+|----------|------|
+| `names` | 필수. 쉼표로 구분한 이름이나 id, 최대 50개. 이름이 정확히 같은 니케를 우선합니다(`exact=1`과 같음) |
+| `offset` `limit` `page` | 찾은 니케 기준 페이지네이션 |
+| `fields` `lang` | 각 항목에 적용 |
+
+```
+GET /api/user/<blablaid>/nikke-builds?names=라피,앵커,3017
+```
+
+```json
+{
+  "count": 2,
+  "offset": 0,
+  "nikkes": [ { "character": { "id": 1, "name": { "ko": "라피" } }, "level": 200, "alsoMatched": [ { "id": 201601, "name": { "ko": "라피 : 레드 후드" } } ] } ],
+  "notFound": ["없는이름"],
+  "ambiguous": [ { "query": "라", "candidates": [ { "id": 1, "name": { "ko": "라피" } } ] } ]
+}
+```
+
+`count`는 찾은 니케 수입니다. `notFound`와 `ambiguous`는 해당 이름이 있을 때만 붙습니다.
+
 ## GET /api/user/:blablaid/nikke/:nameOrId
 
 보유 니케 **한 명**의 상세를 조회합니다 — 장비·옵션·큐브·소장품·스킬 레벨까지 포함. 매칭 방식은 [GET /api/nikkes/:id](#get-apinikkesid)와 동일합니다.
@@ -1310,6 +1337,7 @@ Content-Type: application/json
 | `/api/cubes/:id` | 상세 객체 |
 | `/api/user/:blablaid/nikke` | `nikkes[]` 각 항목 (구형 `?blablaid=` 경로도 동일) |
 | `/api/user/:blablaid/nikke/:nameOrId` | 상세 객체 (복수 매칭 시 `nikkes[]` 각 항목) |
+| `/api/user/:blablaid/nikke-builds` | `nikkes[]` 각 항목 |
 
 ```
 GET /api/nikkes?fields=id,name.ko,element

@@ -436,6 +436,7 @@ test("HEAD gets the same cache headers as GET", async () => {
 function stubBlabla(opts: {
   perArea?: (area: number) => { code: number; characters?: unknown[]; msg?: string };
   detailCode?: number;
+  details?: unknown[];
 } = {}) {
   const orig = globalThis.fetch;
   const envBackup = { ...process.env };
@@ -470,7 +471,7 @@ function stubBlabla(opts: {
         code,
         data: code === 0
           ? {
-              character_details: [{ name_code: 1, skill1_lv: 10 }],
+              character_details: opts.details ?? [{ name_code: 1, skill1_lv: 10 }],
               state_effects: [{ id: 5, function_details: [{ function_type: "StatAtk", function_value: 693 }] }],
             }
           : {},
@@ -518,6 +519,49 @@ test("owned nikke ?exact=1 prefers the exact name over other versions", async ()
     assert.equal((await json(u("앵", "&exact=1"))).count, 2);
     // a lone hit has nothing else to report
     assert.equal((await json(u("이노센트", "&exact=1"))).alsoMatched, undefined);
+  } finally {
+    stub.restore();
+  }
+});
+
+test("nikke-builds resolves several names from one detail call", async () => {
+  // 3001 = 라피, 3003 = 앵커, 5016 = 앵커: 이노센트 메이드
+  const stub = stubBlabla({
+    perArea: (a) =>
+      a === 83
+        ? { code: 0, characters: [{ name_code: 3001, lv: 50 }, { name_code: 3003, lv: 100 }, { name_code: 5016, lv: 200 }] }
+        : { code: 0 },
+    details: [
+      { name_code: 3001, skill1_lv: 7 },
+      { name_code: 3003, skill1_lv: 9 },
+    ],
+  });
+  try {
+    const u = (q: string) => `/api/user/12345/nikke-builds?area=83&lang=ko&${q}`;
+    const names = encodeURIComponent("라피,앵커,없는이름,이노,앵");
+    const r = await json(u(`names=${names}&limit=2`));
+    assert.deepEqual(stub.detailCalls, [2]); // one upstream call, not one per nikke
+    assert.equal(r.count, 3);
+    assert.deepEqual(r.nikkes.map((n: any) => n.character.id), [1, 2]);
+    assert.deepEqual(r.nikkes.map((n: any) => n.skills.skill1), [7, 9]);
+    assert.deepEqual(r.nikkes[1].alsoMatched, [{ id: 3, name: "앵커: 이노센트 메이드" }]);
+    assert.equal(r.nikkes[0].alsoMatched, undefined);
+    assert.deepEqual(r.notFound, ["없는이름"]);
+    assert.equal(r.ambiguous[0].query, "앵");
+    assert.equal(r.ambiguous[0].candidates.length, 2);
+
+    // the rest of the page costs one more call, for that page's nikkes only
+    const next = await json(u(`names=${names}&limit=2&offset=2`));
+    assert.deepEqual(next.nikkes.map((n: any) => n.character.id), [3]);
+    assert.deepEqual(stub.detailCalls, [2, 1]);
+
+    // repeating a name doesn't repeat the nikke
+    const dup = await json(u(`names=${encodeURIComponent("라피,Rapi")}`));
+    assert.equal(dup.count, 1);
+
+    assert.equal((await get("/api/user/12345/nikke-builds")).status, 400);
+    const many = Array.from({ length: 51 }, (_, i) => `n${i}`).join(",");
+    assert.equal((await get(`/api/user/12345/nikke-builds?names=${many}`)).status, 400);
   } finally {
     stub.restore();
   }

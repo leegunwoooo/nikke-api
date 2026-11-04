@@ -527,6 +527,52 @@ const openapi = {
         },
       },
     },
+    "/api/user/{blablaid}/nikke-builds": {
+      get: {
+        tags: ["user"],
+        summary: "유저 보유 니케 여러 명 상세",
+        description:
+          "쉼표로 구분한 이름이나 id의 상세를 업스트림 호출 2번으로 조회. 이름이 정확히 같은 니케 우선, " +
+          "찾지 못한 이름은 notFound, 후보가 여럿이면 ambiguous로 반환.",
+        parameters: [
+          {
+            name: "blablaid",
+            in: "path",
+            required: true,
+            schema: { type: "string" },
+            description: "BlablaLink 공유 ID (base64 openid)",
+          },
+          {
+            name: "names",
+            in: "query",
+            required: true,
+            schema: { type: "string" },
+            description: "쉼표로 구분한 이름이나 id, 최대 50개",
+            example: "라피,앵커",
+          },
+        ],
+        responses: {
+          "200": {
+            description: "보유 니케 상세 목록",
+            content: {
+              "application/json": {
+                schema: {
+                  type: "object",
+                  properties: {
+                    count: { type: "integer" },
+                    offset: { type: "integer" },
+                    nikkes: { type: "array", items: ownedNikkeDetail },
+                    notFound: { type: "array", items: { type: "string" } },
+                    ambiguous: { type: "array", items: { type: "object" } },
+                  },
+                },
+              },
+            },
+          },
+          "400": { description: "names 누락 또는 50개 초과" },
+        },
+      },
+    },
     "/api/user/{blablaid}/nikke/{nameOrId}": {
       get: {
         tags: ["user"],
@@ -672,6 +718,7 @@ for (const p of [
   "/api/cubes/{id}",
   "/api/user/{blablaid}/nikke",
   "/api/user/{blablaid}/nikke/{nameOrId}",
+  "/api/user/{blablaid}/nikke-builds",
   "/api/user/{blablaid}/roster",
 ]) {
   const op = (openapi.paths as Record<string, any>)[p]?.get;
