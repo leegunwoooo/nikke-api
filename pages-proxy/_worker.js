@@ -21211,7 +21211,7 @@ function makeNikkeMatchers(charRef) {
   const matchesNikke = (query, ch2) => !query ? true : matchesNikkeId(query, ch2) || matchesNikkeName(query, ch2);
   return { matchesNikkeId, matchesNikkeName, matchesNikke };
 }
-async function createApp(storage) {
+async function createApp(storage, options = {}) {
   const characterData = JSON.parse(
     await storage.readText(path.join("characters.json"))
   );
@@ -21285,12 +21285,12 @@ async function createApp(storage) {
     return cubeNameMap;
   });
   const loadEquipMaps = memo3(async () => {
-    const [items, options] = await Promise.all([
+    const [items, options2] = await Promise.all([
       loadDistJson("equip_item_map.json"),
       loadDistJson("equip_option_map.json")
     ]);
     equipItemMap ??= items;
-    equipOptionMap ??= options;
+    equipOptionMap ??= options2;
     return { equipItemMap, equipOptionMap };
   });
   let costumeMapData = null;
@@ -21522,7 +21522,7 @@ async function createApp(storage) {
   };
   const app = new Hono2();
   app.use("*", cors());
-  app.use("*", cacheHeaders(characterData.syncedAt));
+  app.use("*", cacheHeaders(options.buildId ? `${characterData.syncedAt}|${options.buildId}` : characterData.syncedAt));
   app.use("*", (c, next) => {
     const creds = credsFromHeader(c.req.header("x-bla-creds") ?? null);
     return creds ? blaCredsContext.run(creds, next) : next();
@@ -21628,7 +21628,7 @@ async function createApp(storage) {
   });
   app.get("/api/meta/filters", async (c) => {
     const uniq = (arr) => [...new Set(arr.filter(Boolean))];
-    const [stages, costumes, { equipItemMap: items, equipOptionMap: options }] = await Promise.all([
+    const [stages, costumes, { equipItemMap: items, equipOptionMap: options2 }] = await Promise.all([
       getStages(),
       getCostumeMap(),
       loadEquipMaps()
@@ -21646,7 +21646,7 @@ async function createApp(storage) {
       equipClasses: uniq(Object.values(items ?? {}).map((x) => x.class)),
       equipRares: uniq(Object.values(items ?? {}).map((x) => x.rare)),
       equipSlots: uniq(Object.values(items ?? {}).map((x) => x.slot)),
-      equipOptionRanks: uniq(Object.values(options ?? {}).map((x) => x.rank)).sort(
+      equipOptionRanks: uniq(Object.values(options2 ?? {}).map((x) => x.rank)).sort(
         (a, b) => a - b
       )
     });
@@ -22795,12 +22795,12 @@ function httpStorage(base) {
 
 // worker/index.ts
 var USER_TTL = 300;
-var USER_SWR = 86400;
 var AREA_KV_TTL = 30 * 86400;
 var CREDS_KEY = "bla:creds";
 var HDR_CREDS = "x-bla-creds";
 var HDR_BLABLAID = "x-registered-blablaid";
 var edgeCache = caches.default;
+var BUILD_ID = false ? void 0 : "aa95cf49a0a0";
 var DATA_HOST = "https://nikke-api-data.pages.dev";
 var REVALIDATE_MS = 3e5;
 var appPromise;
@@ -22826,7 +22826,7 @@ var getApp = async (env, ctx) => {
       appBuiltAt = Date.now();
       if (stamp !== null && stamp !== dataStamp) {
         dataStamp = stamp;
-        appPromise = createApp(httpStorage(host));
+        appPromise = createApp(httpStorage(host), { buildId: BUILD_ID });
         await appPromise.catch(() => {
         });
       }
@@ -22837,7 +22837,7 @@ var getApp = async (env, ctx) => {
     return appPromise;
   }
   appBuiltAt = now;
-  appPromise = createApp(httpStorage(host));
+  appPromise = createApp(httpStorage(host), { buildId: BUILD_ID });
   const learn = dataVersionOf(env).catch(() => {
   });
   if (ctx) ctx.waitUntil(learn);
@@ -23038,13 +23038,14 @@ var index_default = {
       url2.searchParams.sort();
       const f = url2.searchParams.getAll("fields");
       if (f.length) {
-        const v = [...new Set(f.flatMap((s) => s.split(",").map((x) => x.trim())).filter(Boolean))].sort().join(",");
+        const v2 = [...new Set(f.flatMap((s) => s.split(",").map((x) => x.trim())).filter(Boolean))].sort().join(",");
         url2.searchParams.delete("fields");
-        if (v) url2.searchParams.set("fields", v);
+        if (v2) url2.searchParams.set("fields", v2);
       }
       const dv = await dataVersionOf(env);
+      const v = [dv, BUILD_ID].filter(Boolean).join("|");
       const keyUrl = new URL(url2);
-      if (dv) keyUrl.searchParams.set("__v", dv);
+      if (v) keyUrl.searchParams.set("__v", v);
       key2 = new Request(keyUrl.toString());
       if (!refresh) {
         const hit = await edgeCache.match(key2);
@@ -23082,11 +23083,7 @@ var index_default = {
     const cacheable = res.ok && (userPath || !res.headers.get("cache-control")?.includes("no-store"));
     if (cacheable) {
       const stored = new Response(res.clone().body, res);
-      if (userPath)
-        stored.headers.set(
-          "Cache-Control",
-          `public, max-age=${USER_TTL}, s-maxage=${USER_TTL}, stale-while-revalidate=${USER_SWR}`
-        );
+      if (userPath) stored.headers.set("Cache-Control", `public, max-age=${USER_TTL}, s-maxage=${USER_TTL}`);
       ctx.waitUntil(edgeCache.put(key2, stored));
       if (target && env.AREA_KV) {
         ctx.waitUntil(
