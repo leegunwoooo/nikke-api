@@ -147,9 +147,10 @@ curl -X POST https://nikke-api.pages.dev/mcp \
 | `get_nikke` | 캐릭터 상세: 스킬(Lv10 기준), 배경, 스쿼드, CV, 호감도 씬, 애장품 스토리. 레벨별 스탯·음성·코스튬 등은 `include`로 추가 (예: `["statsPerLevel"]`). 이름이 정확히(공백·대소문자 무시, 전 언어) 일치하는 캐릭터가 있으면 그 캐릭터를 반환하고 나머지 후보는 `alsoMatched`로 알려줍니다. 부분 일치만 있으면 후보 목록이 옵니다 |
 | `search_scenes` / `get_scene` | 스토리 씬 검색 / 대본 읽기 (한국어, 호감도·애장품·`library` 스토리 포함. 기본은 화자·대사만, 선택지에는 `window`·`chosen`·`branch` 표시 — 음성·아이콘 URL은 `includeMedia`. `window:"SubScenario"`는 컷신 연출 마커로 `text`가 null이며 읽기 출력에서는 빠지고 `includeMedia`로만 보임. `/api/lines`의 `line`은 이 마커를 포함한 씬 `lines[]` 위치 그대로. 대사의 `@UserName`은 지휘관 이름 자리표시자) |
 | `list_events` / `get_event` | 스토리 이벤트 목록 / 에피소드 씬 목록 |
-| `search_favorites` / `get_favorite` | 소장품 목록 / 레벨별 스탯·스킬 |
+| `search_favorites` / `get_favorite` | 애장품·소장품 목록(애장품 주인 포함, 니케 이름으로 필터) / 레벨별 스탯·스킬 |
 | `get_user_profile` | 유저 프로필 (BlablaLink 공유 링크로 조회) |
-| `get_user_nikkes` / `get_user_nikke` | 유저 보유 니케 목록 / 한 캐릭터의 육성 상태 |
+| `get_user_nikkes` / `get_user_nikke` | 유저 보유 니케 목록(레벨·전투력·돌파·코어, 전투력순) / 한 캐릭터의 육성 상태. 이름이 정확히 일치하면 그 니케를 반환하고 나머지 버전은 `alsoMatched`로 알려줍니다 |
+| `get_user_nikke_builds` | 유저 보유 니케 여러 명의 육성 상태를 한 번에. 1명씩 여러 번 호출하면 조회 제한에 걸리므로 이쪽을 씁니다. 찾지 못한 이름은 `notFound`, 후보가 여럿이면 `ambiguous`로 알려줍니다 |
 | `get_user_roster` | 유저 보유 니케 **전원** (서버별 name_code·레벨·전투력·돌파·코어로 축약 — 5개 서버 순회, `area`로 한 곳만 지정 가능). 장비·옵션 등 원시 필드 전체는 REST `/api/user/:id/roster`에서 |
 | `api_get` | 전용 도구가 없는 조회: 스테이지, 코스튬, 장비, 큐브, 아바타, 필터 값 (`/api/user`·`/api/tables`는 막혀 있음) |
 | `search` / `fetch` | 캐릭터·이벤트·씬·소장품 통합 검색 / id로 문서 가져오기 (ChatGPT 커넥터 규격, id 형식 `nikke:201601`·`event:event_claymore`) |

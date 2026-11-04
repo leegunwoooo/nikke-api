@@ -42,6 +42,7 @@
 - [GET /api/user](#get-apiuser) — 유저 프로필 조회 (공유 링크)
 - [GET /api/user/:blablaid/nikke](#get-apiuserblablaidnikke) — 유저 보유 니케 목록 (경량)
 - [GET /api/user/:blablaid/nikke/:nameOrId](#get-apiuserblablaidnikkenameorid) — 유저 보유 니케 상세 (이름 부분 일치/id)
+- [GET /api/user/:blablaid/nikke-builds](#get-apiuserblablaidnikke-builds) — 유저 보유 니케 여러 명의 상세 일괄 조회
 - [GET /api/user/:blablaid/roster](#get-apiuserblablaidroster) — 유저 보유 니케 전체 로스터 (업스트림 원시 형태)
 - [GET /api/cdn](#get-apicdn) — CDN 경로 → URL 변환
 - [MCP `/mcp`](#mcp-mcp) — ChatGPT/Claude 커넥터용 MCP 서버
@@ -879,6 +880,7 @@ GET /api/avatars/50100
 |----------|------|------|
 | `q` | 이름 부분 일치 (전 언어) | `?q=기차` |
 | `rare` | 레어 필터 | `R` / `SR` / `SSR` |
+| `nikke` | 애장품 주인. 이름 부분 일치(전 언어), 캐릭터 id, nameCode | `?nikke=라피` |
 | `limit` | 반환 개수 제한 (최대 500) | `?limit=20` |
 | `page` | 페이지 번호 (1부터) | `?page=2` |
 | `offset` | 시작 위치 | `?offset=20` |
@@ -888,10 +890,20 @@ GET /api/avatars/50100
 {
   "count": 33,
   "favorites": [
-    { "id": 200101, "rare": "SSR", "name": { "ko": "장난감 기차 세트", ... }, "weaponType": "MG" }
+    {
+      "id": 200101,
+      "rare": "SSR",
+      "type": "Favorite",
+      "nameCode": 5020,
+      "character": { "id": 502001, "name": { "ko": "...", ... } },
+      "name": { "ko": "장난감 기차 세트", ... },
+      "weaponType": "MG"
+    }
   ]
 }
 ```
+
+`type`이 `Favorite`이면 니케 한 명의 애장품(SSR)이고 `nameCode`, `character`가 붙습니다. `Collection`은 주인이 없는 지휘관 인형(R, SR)입니다.
 
 ## GET /api/favorites/:id
 
@@ -1100,6 +1112,32 @@ GET /api/user/<blablaid>/nikke?element=Iron&burst=III  # 도감과 동일한 속
 }
 ```
 
+## GET /api/user/:blablaid/nikke-builds
+
+보유 니케 **여러 명**의 상세를 한 번에 조회합니다. 항목 형태는 [단일 상세](#get-apiuserblablaidnikkenameorid)와 같습니다. 1명씩 조회하면 니케마다 업스트림 호출이 2번씩 들어가 조회 제한에 걸리기 쉬운데, 이 경로는 페이지마다 호출이 2번으로 고정됩니다.
+
+| 파라미터 | 설명 |
+|----------|------|
+| `names` | 필수. 쉼표로 구분한 이름이나 id, 최대 50개. 이름이 정확히 같은 니케를 우선합니다(`exact=1`과 같음) |
+| `offset` `limit` `page` | 찾은 니케 기준 페이지네이션 |
+| `fields` `lang` | 각 항목에 적용 |
+
+```
+GET /api/user/<blablaid>/nikke-builds?names=라피,앵커,3017
+```
+
+```json
+{
+  "count": 2,
+  "offset": 0,
+  "nikkes": [ { "character": { "id": 1, "name": { "ko": "라피" } }, "level": 200, "alsoMatched": [ { "id": 201601, "name": { "ko": "라피 : 레드 후드" } } ] } ],
+  "notFound": ["없는이름"],
+  "ambiguous": [ { "query": "라", "candidates": [ { "id": 1, "name": { "ko": "라피" } } ] } ]
+}
+```
+
+`count`는 찾은 니케 수입니다. `notFound`와 `ambiguous`는 해당 이름이 있을 때만 붙습니다.
+
 ## GET /api/user/:blablaid/nikke/:nameOrId
 
 보유 니케 **한 명**의 상세를 조회합니다 — 장비·옵션·큐브·소장품·스킬 레벨까지 포함. 매칭 방식은 [GET /api/nikkes/:id](#get-apinikkesid)와 동일합니다.
@@ -1111,12 +1149,16 @@ GET /api/user/<blablaid>/nikke?element=Iron&burst=III  # 도감과 동일한 속
 
 매칭이 정확히 1명이면 상세 객체를, 복수면 목록(`{count, nikkes[]}`)을 반환합니다. `?fields=`로 상세 객체(또는 목록 항목)를 선택적으로 잘라낼 수 있습니다.
 
+`?exact=1`을 붙이면 복수 매칭 중 이름이 정확히 같은 니케(전 언어, 대소문자·공백·`:` 무시)가 1명일 때 그 니케의 상세를 반환하고, 나머지는 `alsoMatched: [{ id, name }]`에 담습니다. 예를 들어 `드레이크`는 `드레이크 : 그레이트 빌런`이 함께 있어도 `드레이크` 상세가 옵니다. 정확히 같은 이름이 없으면 기본 동작과 같습니다.
+
 ```
 GET /api/user/<blablaid>/nikke/아니스%20%3A%20스타   # 이름 (URL 인코딩)
 GET /api/user/<blablaid>/nikke/3017                # 캐릭터 id
 ```
 
 구형 쿼리 형태 `GET /api/user/nikke/:nameOrId?blablaid=...`·`?openid=`도 동일하게 동작합니다.
+
+`favoriteItem`은 슬롯에 낀 아이템으로, `type`이 `Favorite`이면 애장품, `Collection`이면 지휘관 인형입니다. `ownFavoriteItem`은 그 니케의 애장품이고, 게임에 아직 없으면 `null`입니다. 인형을 낀 니케가 애장품을 안 낀 것인지, 애장품이 없는 것인지는 이 값으로 구분합니다.
 
 응답 항목 형태:
 
@@ -1131,7 +1173,8 @@ GET /api/user/<blablaid>/nikke/3017                # 캐릭터 id
   "costume": null,
   "skills": { "skill1": 7, "skill2": 10, "burst": 10 },
   "attractiveLevel": 30,
-  "favoriteItem": { "id": 201701, "level": 2, "name": { "ko": "...", ... } },
+  "favoriteItem": { "id": 201701, "level": 2, "name": { "ko": "...", ... }, "type": "Favorite" },
+  "ownFavoriteItem": { "id": 201701, "name": { "ko": "...", ... } },
   "cube": { "id": 1000311, "level": 3, "name": { "ko": "...", ... } },
   "arenaCube": null,
   "equipment": {
@@ -1308,6 +1351,7 @@ Content-Type: application/json
 | `/api/cubes/:id` | 상세 객체 |
 | `/api/user/:blablaid/nikke` | `nikkes[]` 각 항목 (구형 `?blablaid=` 경로도 동일) |
 | `/api/user/:blablaid/nikke/:nameOrId` | 상세 객체 (복수 매칭 시 `nikkes[]` 각 항목) |
+| `/api/user/:blablaid/nikke-builds` | `nikkes[]` 각 항목 |
 
 ```
 GET /api/nikkes?fields=id,name.ko,element

@@ -19933,11 +19933,12 @@ function buildServer(api, version2, origin = "", boundBlablaid) {
   server.registerTool(
     "search_favorites",
     {
-      title: "Search favorite items (\uC18C\uC7A5\uD488)",
-      description: "Favorite items (\uC18C\uC7A5\uD488) list. Use get_favorite for per-level stats and skills.",
+      title: "Search favorite items (\uC560\uC7A5\uD488\xB7\uC18C\uC7A5\uD488)",
+      description: "Favorite items (\uC560\uC7A5\uD488, \uC18C\uC7A5\uD488) list with each \uC560\uC7A5\uD488's owner: type Favorite is a character's own \uC560\uC7A5\uD488 (SSR), Collection is a commander doll with no owner. Use nikke to find a character's \uC560\uC7A5\uD488, get_favorite for per-level stats and skills.",
       inputSchema: object({
         q: string2().optional(),
         rare: _enum(["SSR", "SR", "R"]).optional(),
+        nikke: string2().optional().describe("Owner: character name (partial, any language), id or nameCode"),
         limit: LIMIT,
         offset: OFFSET,
         lang: LANG
@@ -19947,7 +19948,7 @@ function buildServer(api, version2, origin = "", boundBlablaid) {
     async (a) => call(
       api,
       "search_favorites",
-      `/api/favorites${qs({ q: a.q, rare: a.rare, limit: a.limit, offset: a.offset, lang: a.lang })}`
+      `/api/favorites${qs({ q: a.q, rare: a.rare, nikke: a.nikke, limit: a.limit, offset: a.offset, lang: a.lang })}`
     )
   );
   server.registerTool(
@@ -20132,7 +20133,7 @@ function buildServer(api, version2, origin = "", boundBlablaid) {
     "get_user_nikkes",
     {
       title: "List a player's NIKKEs",
-      description: "Characters a player owns with their level. Filters work like search_nikkes; use get_user_nikke for one character's full build. Live and rate limited.",
+      description: "Characters a player owns with level, combat power, limit break (grade) and core, sorted by combat power (highest first) \u2014 enough for names and power rankings. Filters work like search_nikkes. Use get_user_nikke for one character's full build, get_user_nikke_builds for several, get_user_roster to cover every server. Live and rate limited.",
       inputSchema: object({
         blablaid: BLABLAID.optional(),
         name: string2().optional().describe("Name substring, any language"),
@@ -20167,7 +20168,7 @@ function buildServer(api, version2, origin = "", boundBlablaid) {
     "get_user_nikke",
     {
       title: "Get one of a player's NIKKEs",
-      description: "Build detail of one owned character: skill levels, equipment, cube, favorite item. If the name matches several owned characters, a list comes back \u2014 call again with an id. Live and rate limited.",
+      description: "Build detail of one owned character: skill levels, equipment, cube, favorite item. favoriteItem.type is Favorite (\uC560\uC7A5\uD488) or Collection (a commander doll, not the character's own item); ownFavoriteItem is that character's \uC560\uC7A5\uD488, null when the game has none. An exact character name returns that character even when other owned versions also match \u2014 the rest are listed in alsoMatched. A name that only partially matches several owned characters returns a list \u2014 call again with an id. Live and rate limited.",
       inputSchema: object({
         blablaid: BLABLAID.optional(),
         nameOrId: string2().min(1).describe("Character name (partial, any language) or id"),
@@ -20177,7 +20178,25 @@ function buildServer(api, version2, origin = "", boundBlablaid) {
     },
     userTool("get_user_nikke", (a) => {
       const blablaid = a.blablaid ?? boundBlablaid;
-      return blablaid ? call(api, "get_user_nikke", `/api/user/nikke/${enc(a.nameOrId)}${qs({ blablaid, lang: a.lang })}`) : needBlablaid();
+      return blablaid ? call(api, "get_user_nikke", `/api/user/nikke/${enc(a.nameOrId)}${qs({ blablaid, exact: "1", lang: a.lang })}`) : needBlablaid();
+    })
+  );
+  server.registerTool(
+    "get_user_nikke_builds",
+    {
+      title: "Get several of a player's NIKKEs",
+      description: "Build detail of several owned characters in one call: skill levels, equipment, cube, favorite item. Use this instead of repeated get_user_nikke calls, which trip the rate limit. Exact names win over other versions; notFound and ambiguous report names it couldn't resolve. Long answers come back in pages \u2014 continue from truncated.nextOffset. Live and rate limited.",
+      inputSchema: object({
+        blablaid: BLABLAID.optional(),
+        nikkes: array(string2().min(1)).min(1).max(50).describe("Character names (any language) or ids"),
+        offset: OFFSET,
+        lang: LANG
+      }),
+      annotations: LIVE
+    },
+    userTool("get_user_nikke_builds", (a) => {
+      const blablaid = a.blablaid ?? boundBlablaid;
+      return blablaid ? call(api, "get_user_nikke_builds", `/api/user/nikke-builds${qs({ blablaid, names: a.nikkes.join(","), offset: a.offset, lang: a.lang })}`) : needBlablaid();
     })
   );
   server.registerTool(
@@ -20498,7 +20517,17 @@ function buildOpenapi(pkgVersion) {
       attractiveLevel: { type: "integer" },
       favoriteItem: {
         type: ["object", "null"],
-        properties: { id: { type: "integer" }, level: { type: "integer" }, name: localized }
+        properties: {
+          id: { type: "integer" },
+          level: { type: "integer" },
+          name: localized,
+          type: { type: "string", enum: ["Favorite", "Collection"], description: "Favorite = \uC560\uC7A5\uD488, Collection = \uC9C0\uD718\uAD00 \uC778\uD615" }
+        }
+      },
+      ownFavoriteItem: {
+        type: ["object", "null"],
+        description: "\uADF8 \uB2C8\uCF00\uC758 \uC560\uC7A5\uD488. \uAC8C\uC784\uC5D0 \uC544\uC9C1 \uC5C6\uC73C\uBA74 null",
+        properties: { id: { type: "integer" }, name: localized }
       },
       cube: {
         type: ["object", "null"],
@@ -20801,6 +20830,7 @@ function buildOpenapi(pkgVersion) {
           parameters: [
             { name: "q", in: "query", schema: { type: "string" } },
             { name: "rare", in: "query", schema: { type: "string", enum: ["R", "SR", "SSR"] } },
+            { name: "nikke", in: "query", schema: { type: "string" }, description: "\uC560\uC7A5\uD488 \uC8FC\uC778: \uC774\uB984 \uBD80\uBD84 \uC77C\uCE58, \uCE90\uB9AD\uD130 id, nameCode" },
             { name: "page", in: "query", schema: { type: "integer", minimum: 1 }, description: "\uD398\uC774\uC9C0 \uBC88\uD638 (1\uBD80\uD130 \u2014 offset \uB300\uC2E0 \uC0AC\uC6A9, \uBBF8\uC9C0\uC815 limit \uC2DC \uD398\uC774\uC9C0 \uD06C\uAE30 50)" },
             { name: "limit", in: "query", schema: { type: "integer", maximum: 500 }, description: "\uCD5C\uB300 500, \uBBF8\uC9C0\uC815 \uC2DC \uC804\uCCB4" },
             { name: "offset", in: "query", schema: { type: "integer", default: 0 } }
@@ -20923,11 +20953,55 @@ function buildOpenapi(pkgVersion) {
           }
         }
       },
+      "/api/user/{blablaid}/nikke-builds": {
+        get: {
+          tags: ["user"],
+          summary: "\uC720\uC800 \uBCF4\uC720 \uB2C8\uCF00 \uC5EC\uB7EC \uBA85 \uC0C1\uC138",
+          description: "\uC27C\uD45C\uB85C \uAD6C\uBD84\uD55C \uC774\uB984\uC774\uB098 id\uC758 \uC0C1\uC138\uB97C \uC5C5\uC2A4\uD2B8\uB9BC \uD638\uCD9C 2\uBC88\uC73C\uB85C \uC870\uD68C. \uC774\uB984\uC774 \uC815\uD655\uD788 \uAC19\uC740 \uB2C8\uCF00 \uC6B0\uC120, \uCC3E\uC9C0 \uBABB\uD55C \uC774\uB984\uC740 notFound, \uD6C4\uBCF4\uAC00 \uC5EC\uB7FF\uC774\uBA74 ambiguous\uB85C \uBC18\uD658.",
+          parameters: [
+            {
+              name: "blablaid",
+              in: "path",
+              required: true,
+              schema: { type: "string" },
+              description: "BlablaLink \uACF5\uC720 ID (base64 openid)"
+            },
+            {
+              name: "names",
+              in: "query",
+              required: true,
+              schema: { type: "string" },
+              description: "\uC27C\uD45C\uB85C \uAD6C\uBD84\uD55C \uC774\uB984\uC774\uB098 id, \uCD5C\uB300 50\uAC1C",
+              example: "\uB77C\uD53C,\uC575\uCEE4"
+            }
+          ],
+          responses: {
+            "200": {
+              description: "\uBCF4\uC720 \uB2C8\uCF00 \uC0C1\uC138 \uBAA9\uB85D",
+              content: {
+                "application/json": {
+                  schema: {
+                    type: "object",
+                    properties: {
+                      count: { type: "integer" },
+                      offset: { type: "integer" },
+                      nikkes: { type: "array", items: ownedNikkeDetail },
+                      notFound: { type: "array", items: { type: "string" } },
+                      ambiguous: { type: "array", items: { type: "object" } }
+                    }
+                  }
+                }
+              }
+            },
+            "400": { description: "names \uB204\uB77D \uB610\uB294 50\uAC1C \uCD08\uACFC" }
+          }
+        }
+      },
       "/api/user/{blablaid}/nikke/{nameOrId}": {
         get: {
           tags: ["user"],
           summary: "\uC720\uC800 \uBCF4\uC720 \uB2C8\uCF00 \uB2E8\uC77C \uC0C1\uC138",
-          description: "nameOrId = \uB2C8\uCF00 \uC774\uB984(\uC804 \uC5B8\uC5B4 \uBD80\uBD84 \uC77C\uCE58)\xB7id\xB7resourceId\xB7nameCode \u2014 /api/nikkes/{id}\uC640 \uAC19\uC740 \uBC29\uC2DD. \uB2E8\uC77C \uB9E4\uCE6D \uC2DC \uC0C1\uC138(\uC2A4\uD0AC \uB808\uBCA8\xB7\uC7A5\uBE44+\uC635\uC158 \uC218\uCE58\xB7\uD050\uBE0C\xB7\uC18C\uC7A5\uD488\xB7\uCF54\uC2A4\uD2AC\xB7\uD638\uAC10\uB3C4), \uBCF5\uC218 \uB9E4\uCE6D \uC2DC \uACBD\uB7C9 \uBAA9\uB85D \uBC18\uD658.",
+          description: "nameOrId = \uB2C8\uCF00 \uC774\uB984(\uC804 \uC5B8\uC5B4 \uBD80\uBD84 \uC77C\uCE58)\xB7id\xB7resourceId\xB7nameCode \u2014 /api/nikkes/{id}\uC640 \uAC19\uC740 \uBC29\uC2DD. \uB2E8\uC77C \uB9E4\uCE6D \uC2DC \uC0C1\uC138(\uC2A4\uD0AC \uB808\uBCA8\xB7\uC7A5\uBE44+\uC635\uC158 \uC218\uCE58\xB7\uD050\uBE0C\xB7\uC18C\uC7A5\uD488\xB7\uCF54\uC2A4\uD2AC\xB7\uD638\uAC10\uB3C4), \uBCF5\uC218 \uB9E4\uCE6D \uC2DC \uACBD\uB7C9 \uBAA9\uB85D \uBC18\uD658. ?exact=1\uC774\uBA74 \uC774\uB984\uC774 \uC815\uD655\uD788 \uAC19\uC740 \uB2C8\uCF00\uB97C \uC6B0\uC120\uD558\uACE0 \uB098\uBA38\uC9C0\uB294 alsoMatched\uB85C \uC54C\uB824\uC90C.",
           parameters: [
             {
               name: "blablaid",
@@ -20943,6 +21017,13 @@ function buildOpenapi(pkgVersion) {
               schema: { type: "string" },
               description: "\uC774\uB984(\uBD80\uBD84 \uC77C\uCE58) \uB610\uB294 \uC22B\uC790 id\xB7resourceId\xB7nameCode",
               example: "\uC544\uB2C8\uC2A4 : \uC2A4\uD0C0"
+            },
+            {
+              name: "exact",
+              in: "query",
+              schema: { type: "string" },
+              description: "\uAC12\uC774 \uC788\uC73C\uBA74 \uC774\uB984\uC774 \uC815\uD655\uD788 \uAC19\uC740 \uB2C8\uCF00 \uC6B0\uC120, \uB098\uBA38\uC9C0\uB294 alsoMatched",
+              example: "1"
             }
           ],
           responses: {
@@ -21050,6 +21131,7 @@ function buildOpenapi(pkgVersion) {
     "/api/cubes/{id}",
     "/api/user/{blablaid}/nikke",
     "/api/user/{blablaid}/nikke/{nameOrId}",
+    "/api/user/{blablaid}/nikke-builds",
     "/api/user/{blablaid}/roster"
   ]) {
     const op = openapi.paths[p]?.get;
@@ -21273,9 +21355,10 @@ async function createApp(storage) {
     7: "ABNORMAL"
   };
   async function loadProfileLookups() {
-    const [ncMap, favNames, cubeNames, { equipItemMap: equipItemMap2, equipOptionMap: equipOptionMap2 }, stages, recycles] = await Promise.all([
+    const [ncMap, favNames, favs, cubeNames, { equipItemMap: equipItemMap2, equipOptionMap: equipOptionMap2 }, stages, recycles] = await Promise.all([
       loadNameCodeMap(),
       loadFavNames(),
+      getFavorites(),
       loadCubeNames(),
       loadEquipMaps(),
       loadStageMap(),
@@ -21307,7 +21390,18 @@ async function createApp(storage) {
       return { iconId, costumeIndex: a.costumeIndex, ...charInfo(n, costume?.images.icon) };
     };
     const cubeRef = (tid, lv) => !tid ? null : { id: tid, level: lv ?? 0, name: cubeNames.get(tid)?.name ?? null };
-    const favRef = (tid, lv) => !tid ? null : { id: tid, level: lv ?? 0, name: favNames.get(tid) ?? null };
+    const favType = new Map(favs.map((f) => [f.id, f.type]));
+    const favRef = (tid, lv) => {
+      if (!tid) return null;
+      const type = favType.get(tid);
+      return { id: tid, level: lv ?? 0, name: favNames.get(tid) ?? null, ...type ? { type } : {} };
+    };
+    const ownFavByCode = new Map(favs.filter((f) => f.nameCode).map((f) => [f.nameCode, f]));
+    const ownFavRef = (nameCode) => {
+      if (!favs.some((f2) => f2.type)) return {};
+      const f = ownFavByCode.get(nameCode);
+      return { ownFavoriteItem: f ? { id: f.id, name: f.name } : null };
+    };
     const costumeRef = (tid) => {
       if (!tid) return null;
       const hit = costumeOwner.get(tid);
@@ -21367,6 +21461,7 @@ async function createApp(storage) {
         skills: { skill1: d.skill1_lv ?? 0, skill2: d.skill2_lv ?? 0, burst: d.ulti_skill_lv ?? 0 },
         attractiveLevel: d.attractive_lv ?? 0,
         favoriteItem: favRef(d.favorite_item_tid, d.favorite_item_lv),
+        ...ownFavRef(ch2.name_code),
         cube: cubeRef(d.harmony_cube_tid, d.harmony_cube_lv),
         arenaCube: cubeRef(d.arena_harmony_cube_tid, d.arena_harmony_cube_lv),
         // output key is "body" to match /api/equips slot naming; upstream
@@ -21461,6 +21556,7 @@ async function createApp(storage) {
         "GET /api/user/:blablaid": "shared-profile lookup (blablaid = blablalink openid, or ?blablaid=/?url=)",
         "GET /api/user/:blablaid/nikke?q=": "owned-nikke list (same filters as /api/nikkes)",
         "GET /api/user/:blablaid/nikke/:nameOrId": "single owned-nikke detail (nameOrId = name/id/nameCode)",
+        "GET /api/user/:blablaid/nikke-builds?names=": "several owned-nikke details in one upstream call (comma-separated names/ids)",
         "GET /api/user/:blablaid/roster?area=": "full owned roster, upstream-shaped (characters+details+stateEffects+outpost per area)"
       },
       fields: "?fields=a,b.c on nikkes, favorites, cubes, scene detail and user-nikke routes trims each object to those (dot) paths",
@@ -22155,9 +22251,15 @@ async function createApp(storage) {
     return c.json(pickFields(avatarRow(Number(id), a), fieldsOf(c)));
   });
   app.get("/api/favorites", async (c) => {
-    const { q, rare } = c.req.query();
+    const { q, rare, nikke } = c.req.query();
     let list = await getFavorites();
     if (rare) list = list.filter((x) => x.rare?.toLowerCase() === rare.toLowerCase());
+    if (nikke) {
+      const nn = norm(nikke);
+      list = list.filter(
+        (x) => String(x.nameCode) === nikke || String(x.character?.id) === nikke || Object.values(x.character?.name ?? {}).some((n) => norm(n).includes(nn))
+      );
+    }
     if (q) {
       const nq = norm(q);
       list = list.filter((x) => Object.values(x.name).some((n) => norm(n).includes(nq)));
@@ -22237,10 +22339,12 @@ async function createApp(storage) {
   app.get("/api/user", userProfile);
   app.get("/api/user/nikke", userNikkeList);
   app.get("/api/user/nikke/:nameOrId", userNikkeDetail);
+  app.get("/api/user/nikke-builds", userNikkeBuilds);
   app.get("/api/user/roster", userRoster);
   app.get("/api/user/:blablaid", userProfile);
   app.get("/api/user/:blablaid/nikke", userNikkeList);
   app.get("/api/user/:blablaid/nikke/:nameOrId", userNikkeDetail);
+  app.get("/api/user/:blablaid/nikke-builds", userNikkeBuilds);
   app.get("/api/user/:blablaid/roster", userRoster);
   async function userProfile(c) {
     const q = openidInput(c);
@@ -22379,6 +22483,17 @@ async function createApp(storage) {
       return c.json({ error: msg }, status);
     }
   }
+  const pickExactOwned = (key2, hits, charRef) => {
+    const ref = (ch2) => charRef(ch2.name_code);
+    const exact = hits.filter(
+      (ch2) => Object.values(ref(ch2)?.name ?? {}).some((x) => norm(String(x)) === norm(key2))
+    );
+    if (exact.length !== 1) return null;
+    return {
+      ch: exact[0],
+      alsoMatched: hits.filter((ch2) => ch2 !== exact[0]).map((ch2) => ({ id: ref(ch2)?.id, name: ref(ch2)?.name }))
+    };
+  };
   async function userNikkeDetail(c) {
     try {
       const lookups = loadProfileLookups();
@@ -22387,8 +22502,16 @@ async function createApp(storage) {
       const key2 = c.req.param("nameOrId") ?? "";
       const { charRef, normalizeNikke, matchesNikke } = await lookups;
       const fields = fieldsOf(c);
-      const hits = res.owned.filter((ch3) => matchesNikke(key2, ch3));
+      let hits = res.owned.filter((ch3) => matchesNikke(key2, ch3));
       if (hits.length === 0) return c.json({ error: "not found" }, 404);
+      let alsoMatched;
+      if (hits.length > 1 && c.req.query("exact")) {
+        const picked = pickExactOwned(key2, hits, charRef);
+        if (picked) {
+          alsoMatched = picked.alsoMatched;
+          hits = [picked.ch];
+        }
+      }
       if (hits.length > 1)
         return c.json({
           count: hits.length,
@@ -22410,8 +22533,75 @@ async function createApp(storage) {
         (details.data?.state_effects ?? []).map((e) => [String(e.id), e])
       );
       return c.json(
-        pickFields(normalizeNikke(ch2, detailByCode.get(ch2.name_code) ?? {}, effectById), fields)
+        pickFields(
+          { ...normalizeNikke(ch2, detailByCode.get(ch2.name_code) ?? {}, effectById), ...alsoMatched ? { alsoMatched } : {} },
+          fields
+        )
       );
+    } catch (e) {
+      const msg = e instanceof Error ? e.message : String(e);
+      const status = msg.includes("not configured") ? 503 : 502;
+      return c.json({ error: msg }, status);
+    }
+  }
+  const NIKKE_BUILDS_MAX = 50;
+  async function userNikkeBuilds(c) {
+    try {
+      const names = [...new Set((c.req.query("names") ?? "").split(",").map((s) => s.trim()).filter(Boolean))];
+      if (names.length === 0) return c.json({ error: "names required (comma-separated names or ids)" }, 400);
+      if (names.length > NIKKE_BUILDS_MAX) return c.json({ error: `at most ${NIKKE_BUILDS_MAX} names` }, 400);
+      const lookups = loadProfileLookups();
+      const res = await loadOwnedNikkes(c);
+      if ("error" in res) return res.error;
+      const { charRef, normalizeNikke, matchesNikke } = await lookups;
+      const picked = /* @__PURE__ */ new Map();
+      const notFound = [];
+      const ambiguous = [];
+      for (const key2 of names) {
+        const hits = res.owned.filter((ch2) => matchesNikke(key2, ch2));
+        if (hits.length === 0) notFound.push(key2);
+        else if (hits.length === 1) picked.set(hits[0].name_code, { ch: hits[0] });
+        else {
+          const exact = pickExactOwned(key2, hits, charRef);
+          if (exact) picked.set(exact.ch.name_code, exact);
+          else
+            ambiguous.push({
+              query: key2,
+              candidates: hits.map((ch2) => {
+                const ref = charRef(ch2.name_code);
+                return { id: ref?.id, name: ref?.name };
+              })
+            });
+        }
+      }
+      const selected = [...picked.values()];
+      const pg = pageQuery(c, selected.length);
+      if ("error" in pg) return c.json({ error: pg.error }, 400);
+      const page = selected.slice(pg.off, pg.off + pg.lim);
+      const details = page.length ? await gameApi("Game", "GetUserCharacterDetails", {
+        ...res.body,
+        name_codes: page.map((x) => x.ch.name_code)
+      }) : null;
+      if (details && details.code !== 0) throw new Error(details.msg ?? `detail error ${details.code}`);
+      const detailByCode = new Map(
+        (details?.data?.character_details ?? []).map((x) => [x.name_code, x])
+      );
+      const effectById = new Map(
+        (details?.data?.state_effects ?? []).map((e) => [String(e.id), e])
+      );
+      return c.json({
+        count: selected.length,
+        offset: pg.off,
+        nikkes: pickFields(
+          page.map(({ ch: ch2, alsoMatched }) => ({
+            ...normalizeNikke(ch2, detailByCode.get(ch2.name_code) ?? {}, effectById),
+            ...alsoMatched?.length ? { alsoMatched } : {}
+          })),
+          fieldsOf(c)
+        ),
+        ...notFound.length ? { notFound } : {},
+        ...ambiguous.length ? { ambiguous } : {}
+      });
     } catch (e) {
       const msg = e instanceof Error ? e.message : String(e);
       const status = msg.includes("not configured") ? 503 : 502;

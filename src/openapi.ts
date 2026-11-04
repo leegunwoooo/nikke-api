@@ -95,7 +95,17 @@ const ownedNikkeDetail = {
     attractiveLevel: { type: "integer" },
     favoriteItem: {
       type: ["object", "null"],
-      properties: { id: { type: "integer" }, level: { type: "integer" }, name: localized },
+      properties: {
+        id: { type: "integer" },
+        level: { type: "integer" },
+        name: localized,
+        type: { type: "string", enum: ["Favorite", "Collection"], description: "Favorite = 애장품, Collection = 지휘관 인형" },
+      },
+    },
+    ownFavoriteItem: {
+      type: ["object", "null"],
+      description: "그 니케의 애장품. 게임에 아직 없으면 null",
+      properties: { id: { type: "integer" }, name: localized },
     },
     cube: {
       type: ["object", "null"],
@@ -401,6 +411,7 @@ const openapi = {
         parameters: [
           { name: "q", in: "query", schema: { type: "string" } },
           { name: "rare", in: "query", schema: { type: "string", enum: ["R", "SR", "SSR"] } },
+          { name: "nikke", in: "query", schema: { type: "string" }, description: "애장품 주인: 이름 부분 일치, 캐릭터 id, nameCode" },
           { name: "page", in: "query", schema: { type: "integer", minimum: 1 }, description: "페이지 번호 (1부터 — offset 대신 사용, 미지정 limit 시 페이지 크기 50)" },
           { name: "limit", in: "query", schema: { type: "integer", maximum: 500 }, description: "최대 500, 미지정 시 전체" },
           { name: "offset", in: "query", schema: { type: "integer", default: 0 } },
@@ -527,13 +538,60 @@ const openapi = {
         },
       },
     },
+    "/api/user/{blablaid}/nikke-builds": {
+      get: {
+        tags: ["user"],
+        summary: "유저 보유 니케 여러 명 상세",
+        description:
+          "쉼표로 구분한 이름이나 id의 상세를 업스트림 호출 2번으로 조회. 이름이 정확히 같은 니케 우선, " +
+          "찾지 못한 이름은 notFound, 후보가 여럿이면 ambiguous로 반환.",
+        parameters: [
+          {
+            name: "blablaid",
+            in: "path",
+            required: true,
+            schema: { type: "string" },
+            description: "BlablaLink 공유 ID (base64 openid)",
+          },
+          {
+            name: "names",
+            in: "query",
+            required: true,
+            schema: { type: "string" },
+            description: "쉼표로 구분한 이름이나 id, 최대 50개",
+            example: "라피,앵커",
+          },
+        ],
+        responses: {
+          "200": {
+            description: "보유 니케 상세 목록",
+            content: {
+              "application/json": {
+                schema: {
+                  type: "object",
+                  properties: {
+                    count: { type: "integer" },
+                    offset: { type: "integer" },
+                    nikkes: { type: "array", items: ownedNikkeDetail },
+                    notFound: { type: "array", items: { type: "string" } },
+                    ambiguous: { type: "array", items: { type: "object" } },
+                  },
+                },
+              },
+            },
+          },
+          "400": { description: "names 누락 또는 50개 초과" },
+        },
+      },
+    },
     "/api/user/{blablaid}/nikke/{nameOrId}": {
       get: {
         tags: ["user"],
         summary: "유저 보유 니케 단일 상세",
         description:
           "nameOrId = 니케 이름(전 언어 부분 일치)·id·resourceId·nameCode — /api/nikkes/{id}와 같은 방식. " +
-          "단일 매칭 시 상세(스킬 레벨·장비+옵션 수치·큐브·소장품·코스튬·호감도), 복수 매칭 시 경량 목록 반환.",
+          "단일 매칭 시 상세(스킬 레벨·장비+옵션 수치·큐브·소장품·코스튬·호감도), 복수 매칭 시 경량 목록 반환. " +
+          "?exact=1이면 이름이 정확히 같은 니케를 우선하고 나머지는 alsoMatched로 알려줌.",
         parameters: [
           {
             name: "blablaid",
@@ -549,6 +607,13 @@ const openapi = {
             schema: { type: "string" },
             description: "이름(부분 일치) 또는 숫자 id·resourceId·nameCode",
             example: "아니스 : 스타",
+          },
+          {
+            name: "exact",
+            in: "query",
+            schema: { type: "string" },
+            description: "값이 있으면 이름이 정확히 같은 니케 우선, 나머지는 alsoMatched",
+            example: "1",
           },
         ],
         responses: {
@@ -664,6 +729,7 @@ for (const p of [
   "/api/cubes/{id}",
   "/api/user/{blablaid}/nikke",
   "/api/user/{blablaid}/nikke/{nameOrId}",
+  "/api/user/{blablaid}/nikke-builds",
   "/api/user/{blablaid}/roster",
 ]) {
   const op = (openapi.paths as Record<string, any>)[p]?.get;

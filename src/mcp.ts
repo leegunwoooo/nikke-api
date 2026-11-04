@@ -457,11 +457,13 @@ export function buildServer(api: Fetcher, version: string, origin = "", boundBla
   server.registerTool(
     "search_favorites",
     {
-      title: "Search favorite items (소장품)",
-      description: "Favorite items (소장품) list. Use get_favorite for per-level stats and skills.",
+      title: "Search favorite items (애장품·소장품)",
+      description:
+        "Favorite items (애장품, 소장품) list with each 애장품's owner: type Favorite is a character's own 애장품 (SSR), Collection is a commander doll with no owner. Use nikke to find a character's 애장품, get_favorite for per-level stats and skills.",
       inputSchema: z.object({
         q: z.string().optional(),
         rare: z.enum(["SSR", "SR", "R"]).optional(),
+        nikke: z.string().optional().describe("Owner: character name (partial, any language), id or nameCode"),
         limit: LIMIT,
         offset: OFFSET,
         lang: LANG,
@@ -472,7 +474,7 @@ export function buildServer(api: Fetcher, version: string, origin = "", boundBla
       call(
         api,
         "search_favorites",
-        `/api/favorites${qs({ q: a.q, rare: a.rare, limit: a.limit, offset: a.offset, lang: a.lang })}`,
+        `/api/favorites${qs({ q: a.q, rare: a.rare, nikke: a.nikke, limit: a.limit, offset: a.offset, lang: a.lang })}`,
       ),
   );
 
@@ -687,7 +689,7 @@ export function buildServer(api: Fetcher, version: string, origin = "", boundBla
     {
       title: "List a player's NIKKEs",
       description:
-        "Characters a player owns with their level. Filters work like search_nikkes; use get_user_nikke for one character's full build. Live and rate limited.",
+        "Characters a player owns with level, combat power, limit break (grade) and core, sorted by combat power (highest first) — enough for names and power rankings. Filters work like search_nikkes. Use get_user_nikke for one character's full build, get_user_nikke_builds for several, get_user_roster to cover every server. Live and rate limited.",
       inputSchema: z.object({
         blablaid: BLABLAID.optional(),
         name: z.string().optional().describe("Name substring, any language"),
@@ -724,7 +726,7 @@ export function buildServer(api: Fetcher, version: string, origin = "", boundBla
     {
       title: "Get one of a player's NIKKEs",
       description:
-        "Build detail of one owned character: skill levels, equipment, cube, favorite item. If the name matches several owned characters, a list comes back — call again with an id. Live and rate limited.",
+        "Build detail of one owned character: skill levels, equipment, cube, favorite item. favoriteItem.type is Favorite (애장품) or Collection (a commander doll, not the character's own item); ownFavoriteItem is that character's 애장품, null when the game has none. An exact character name returns that character even when other owned versions also match — the rest are listed in alsoMatched. A name that only partially matches several owned characters returns a list — call again with an id. Live and rate limited.",
       inputSchema: z.object({
         blablaid: BLABLAID.optional(),
         nameOrId: z.string().min(1).describe("Character name (partial, any language) or id"),
@@ -735,7 +737,29 @@ export function buildServer(api: Fetcher, version: string, origin = "", boundBla
     userTool("get_user_nikke", (a: { blablaid?: string; nameOrId: string; lang: string }) => {
       const blablaid = a.blablaid ?? boundBlablaid;
       return blablaid
-        ? call(api, "get_user_nikke", `/api/user/nikke/${enc(a.nameOrId)}${qs({ blablaid, lang: a.lang })}`)
+        ? call(api, "get_user_nikke", `/api/user/nikke/${enc(a.nameOrId)}${qs({ blablaid, exact: "1", lang: a.lang })}`)
+        : needBlablaid();
+    }),
+  );
+
+  server.registerTool(
+    "get_user_nikke_builds",
+    {
+      title: "Get several of a player's NIKKEs",
+      description:
+        "Build detail of several owned characters in one call: skill levels, equipment, cube, favorite item. Use this instead of repeated get_user_nikke calls, which trip the rate limit. Exact names win over other versions; notFound and ambiguous report names it couldn't resolve. Long answers come back in pages — continue from truncated.nextOffset. Live and rate limited.",
+      inputSchema: z.object({
+        blablaid: BLABLAID.optional(),
+        nikkes: z.array(z.string().min(1)).min(1).max(50).describe("Character names (any language) or ids"),
+        offset: OFFSET,
+        lang: LANG,
+      }),
+      annotations: LIVE,
+    },
+    userTool("get_user_nikke_builds", (a: { blablaid?: string; nikkes: string[]; offset?: number; lang: string }) => {
+      const blablaid = a.blablaid ?? boundBlablaid;
+      return blablaid
+        ? call(api, "get_user_nikke_builds", `/api/user/nikke-builds${qs({ blablaid, names: a.nikkes.join(","), offset: a.offset, lang: a.lang })}`)
         : needBlablaid();
     }),
   );

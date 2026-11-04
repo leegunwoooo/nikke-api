@@ -272,6 +272,19 @@ test("/api/avatars list + filters + detail", async () => {
   assert.equal((await get("/api/avatars/abc")).status, 400);
 });
 
+test("favorites list names the owner and filters by nikke", async () => {
+  const all = (await json("/api/favorites?lang=ko")).favorites;
+  assert.deepEqual(all[0].character, { id: 1, name: "라피" });
+  assert.equal(all[1].type, "Collection");
+  assert.equal(all[1].character, undefined);
+  for (const nikke of ["라피", "rapi", "1", "3001"]) {
+    const r = await json(`/api/favorites?nikke=${encodeURIComponent(nikke)}`);
+    assert.deepEqual(r.favorites.map((f: any) => f.id), [100], nikke);
+  }
+  // dolls have no owner, so no name can reach them
+  assert.equal((await json(`/api/favorites?nikke=${encodeURIComponent("앵커")}`)).count, 0);
+});
+
 test("favorites + tables", async () => {
   assert.equal((await json("/api/favorites?q=tele")).count, 1);
   assert.equal((await get("/api/favorites/999")).status, 404);
@@ -436,6 +449,7 @@ test("HEAD gets the same cache headers as GET", async () => {
 function stubBlabla(opts: {
   perArea?: (area: number) => { code: number; characters?: unknown[]; msg?: string };
   detailCode?: number;
+  details?: unknown[];
 } = {}) {
   const orig = globalThis.fetch;
   const envBackup = { ...process.env };
@@ -470,7 +484,7 @@ function stubBlabla(opts: {
         code,
         data: code === 0
           ? {
-              character_details: [{ name_code: 1, skill1_lv: 10 }],
+              character_details: opts.details ?? [{ name_code: 1, skill1_lv: 10 }],
               state_effects: [{ id: 5, function_details: [{ function_type: "StatAtk", function_value: 693 }] }],
             }
           : {},
@@ -491,6 +505,102 @@ function stubBlabla(opts: {
     loginBodies,
   };
 }
+
+test("owned nikke ?exact=1 prefers the exact name over other versions", async () => {
+  // 3003 = 앵커, 5016 = 앵커: 이노센트 메이드 (fixtures/dist/name_code_map.json)
+  const stub = stubBlabla({
+    perArea: (a) =>
+      a === 83
+        ? { code: 0, characters: [{ name_code: 3003, lv: 100, combat: 1 }, { name_code: 5016, lv: 200, combat: 2 }] }
+        : { code: 0 },
+  });
+  try {
+    const u = (key: string, q = "") => `/api/user/12345/nikke/${encodeURIComponent(key)}?area=83${q}`;
+    // the default contract is unchanged: several hits return the list
+    const list = await json(u("앵커"));
+    assert.equal(list.count, 2);
+    assert.equal(stub.detailCalls.length, 0);
+
+    const hit = await json(u("앵커", "&exact=1&lang=ko"));
+    assert.equal(hit.character.id, 2);
+    assert.deepEqual(hit.alsoMatched, [{ id: 3, name: "앵커: 이노센트 메이드" }]);
+    assert.deepEqual(stub.detailCalls, [1]); // only the winner's detail is fetched
+
+    // any locale, ignoring case and spacing
+    for (const key of ["anchor", " 앵 커 "]) assert.equal((await json(u(key, "&exact=1"))).character.id, 2);
+    // a name that only partly matches still returns the list
+    assert.equal((await json(u("앵", "&exact=1"))).count, 2);
+    // a lone hit has nothing else to report
+    assert.equal((await json(u("이노센트", "&exact=1"))).alsoMatched, undefined);
+  } finally {
+    stub.restore();
+  }
+});
+
+test("owned nikke says whether the slot holds its 애장품 or a doll", async () => {
+  // 3001 = 라피 owns item 100; nothing in the fixtures belongs to 앵커 (3003)
+  const stub = stubBlabla({
+    perArea: (a) =>
+      a === 83 ? { code: 0, characters: [{ name_code: 3001, lv: 50 }, { name_code: 3003, lv: 100 }] } : { code: 0 },
+    details: [
+      { name_code: 3001, favorite_item_tid: 100, favorite_item_lv: 2 },
+      { name_code: 3003, favorite_item_tid: 101, favorite_item_lv: 1 },
+    ],
+  });
+  try {
+    const r = await json(`/api/user/12345/nikke-builds?area=83&lang=ko&names=${encodeURIComponent("라피,앵커")}`);
+    const [rapi, anchor] = r.nikkes;
+    assert.deepEqual(rapi.favoriteItem, { id: 100, level: 2, name: "망원경", type: "Favorite" });
+    assert.deepEqual(rapi.ownFavoriteItem, { id: 100, name: "망원경" });
+    assert.equal(anchor.favoriteItem.type, "Collection");
+    assert.equal(anchor.ownFavoriteItem, null); // a doll, and no 애장품 exists yet
+  } finally {
+    stub.restore();
+  }
+});
+
+test("nikke-builds resolves several names from one detail call", async () => {
+  // 3001 = 라피, 3003 = 앵커, 5016 = 앵커: 이노센트 메이드
+  const stub = stubBlabla({
+    perArea: (a) =>
+      a === 83
+        ? { code: 0, characters: [{ name_code: 3001, lv: 50 }, { name_code: 3003, lv: 100 }, { name_code: 5016, lv: 200 }] }
+        : { code: 0 },
+    details: [
+      { name_code: 3001, skill1_lv: 7 },
+      { name_code: 3003, skill1_lv: 9 },
+    ],
+  });
+  try {
+    const u = (q: string) => `/api/user/12345/nikke-builds?area=83&lang=ko&${q}`;
+    const names = encodeURIComponent("라피,앵커,없는이름,이노,앵");
+    const r = await json(u(`names=${names}&limit=2`));
+    assert.deepEqual(stub.detailCalls, [2]); // one upstream call, not one per nikke
+    assert.equal(r.count, 3);
+    assert.deepEqual(r.nikkes.map((n: any) => n.character.id), [1, 2]);
+    assert.deepEqual(r.nikkes.map((n: any) => n.skills.skill1), [7, 9]);
+    assert.deepEqual(r.nikkes[1].alsoMatched, [{ id: 3, name: "앵커: 이노센트 메이드" }]);
+    assert.equal(r.nikkes[0].alsoMatched, undefined);
+    assert.deepEqual(r.notFound, ["없는이름"]);
+    assert.equal(r.ambiguous[0].query, "앵");
+    assert.equal(r.ambiguous[0].candidates.length, 2);
+
+    // the rest of the page costs one more call, for that page's nikkes only
+    const next = await json(u(`names=${names}&limit=2&offset=2`));
+    assert.deepEqual(next.nikkes.map((n: any) => n.character.id), [3]);
+    assert.deepEqual(stub.detailCalls, [2, 1]);
+
+    // repeating a name doesn't repeat the nikke
+    const dup = await json(u(`names=${encodeURIComponent("라피,Rapi")}`));
+    assert.equal(dup.count, 1);
+
+    assert.equal((await get("/api/user/12345/nikke-builds")).status, 400);
+    const many = Array.from({ length: 51 }, (_, i) => `n${i}`).join(",");
+    assert.equal((await get(`/api/user/12345/nikke-builds?names=${many}`)).status, 400);
+  } finally {
+    stub.restore();
+  }
+});
 
 test("roster: per-area upstream bundle with batching and no-store", async () => {
   const stub = stubBlabla();

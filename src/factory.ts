@@ -149,6 +149,9 @@ interface EventEntry {
 interface FavoriteIndexEntry {
   id: number;
   rare?: string;
+  type?: string; // "Favorite" = 애장품, "Collection" = 지휘관 인형
+  nameCode?: number; // the 애장품's owner; absent on dolls
+  character?: { id: number; name: Record<string, string> };
   name: Record<string, string>;
   weaponType?: string;
 }
@@ -340,10 +343,11 @@ const CORP_NAMES: Record<number, string> = {
 
 // shared lookup context for user-profile normalization
 async function loadProfileLookups() {
-  const [ncMap, favNames, cubeNames, { equipItemMap, equipOptionMap }, stages, recycles] =
+  const [ncMap, favNames, favs, cubeNames, { equipItemMap, equipOptionMap }, stages, recycles] =
     await Promise.all([
       loadNameCodeMap(),
       loadFavNames(),
+      getFavorites(),
       loadCubeNames(),
       loadEquipMaps(),
       loadStageMap(),
@@ -377,8 +381,20 @@ async function loadProfileLookups() {
   };
   const cubeRef = (tid?: number, lv?: number) =>
     !tid ? null : { id: tid, level: lv ?? 0, name: cubeNames.get(tid)?.name ?? null };
-  const favRef = (tid?: number, lv?: number) =>
-    !tid ? null : { id: tid, level: lv ?? 0, name: favNames.get(tid) ?? null };
+  const favType = new Map(favs.map((f) => [f.id, f.type]));
+  const favRef = (tid?: number, lv?: number) => {
+    if (!tid) return null;
+    const type = favType.get(tid);
+    return { id: tid, level: lv ?? 0, name: favNames.get(tid) ?? null, ...(type ? { type } : {}) };
+  };
+  // a doll in the slot can mean the game has no 애장품 for this character yet.
+  // Older data has no type/nameCode: say nothing rather than "none exists"
+  const ownFavByCode = new Map(favs.filter((f) => f.nameCode).map((f) => [f.nameCode, f]));
+  const ownFavRef = (nameCode: number) => {
+    if (!favs.some((f) => f.type)) return {};
+    const f = ownFavByCode.get(nameCode);
+    return { ownFavoriteItem: f ? { id: f.id, name: f.name } : null };
+  };
   const costumeRef = (tid?: number | null) => {
     if (!tid) return null;
     const hit = costumeOwner.get(tid);
@@ -441,6 +457,7 @@ async function loadProfileLookups() {
       skills: { skill1: d.skill1_lv ?? 0, skill2: d.skill2_lv ?? 0, burst: d.ulti_skill_lv ?? 0 },
       attractiveLevel: d.attractive_lv ?? 0,
       favoriteItem: favRef(d.favorite_item_tid, d.favorite_item_lv),
+      ...ownFavRef(ch.name_code),
       cube: cubeRef(d.harmony_cube_tid, d.harmony_cube_lv),
       arenaCube: cubeRef(d.arena_harmony_cube_tid, d.arena_harmony_cube_lv),
       // output key is "body" to match /api/equips slot naming; upstream
@@ -552,6 +569,8 @@ app.get("/", (c) =>
         "owned-nikke list (same filters as /api/nikkes)",
       "GET /api/user/:blablaid/nikke/:nameOrId":
         "single owned-nikke detail (nameOrId = name/id/nameCode)",
+      "GET /api/user/:blablaid/nikke-builds?names=":
+        "several owned-nikke details in one upstream call (comma-separated names/ids)",
       "GET /api/user/:blablaid/roster?area=":
         "full owned roster, upstream-shaped (characters+details+stateEffects+outpost per area)",
     },
@@ -1381,9 +1400,18 @@ app.get("/api/avatars/:iconId", async (c) => {
 });
 
 app.get("/api/favorites", async (c) => {
-  const { q, rare } = c.req.query();
+  const { q, rare, nikke } = c.req.query();
   let list = await getFavorites();
   if (rare) list = list.filter((x) => x.rare?.toLowerCase() === rare.toLowerCase());
+  if (nikke) {
+    const nn = norm(nikke);
+    list = list.filter(
+      (x) =>
+        String(x.nameCode) === nikke ||
+        String(x.character?.id) === nikke ||
+        Object.values(x.character?.name ?? {}).some((n) => norm(n).includes(nn)),
+    );
+  }
   if (q) {
     const nq = norm(q);
     list = list.filter((x) => Object.values(x.name).some((n) => norm(n).includes(nq)));
@@ -1471,10 +1499,12 @@ app.get("/api/tables/:file", async (c) => {
 app.get("/api/user", userProfile);
 app.get("/api/user/nikke", userNikkeList);
 app.get("/api/user/nikke/:nameOrId", userNikkeDetail);
+app.get("/api/user/nikke-builds", userNikkeBuilds);
 app.get("/api/user/roster", userRoster);
 app.get("/api/user/:blablaid", userProfile);
 app.get("/api/user/:blablaid/nikke", userNikkeList);
 app.get("/api/user/:blablaid/nikke/:nameOrId", userNikkeDetail);
+app.get("/api/user/:blablaid/nikke-builds", userNikkeBuilds);
 app.get("/api/user/:blablaid/roster", userRoster);
 
 async function userProfile(c: Context) {
@@ -1652,8 +1682,26 @@ async function userNikkeList(c: Context) {
   }
 }
 
+// a name equal to one hit wins over the other versions (이격) — null when no
+// single hit has exactly that name
+const pickExactOwned = (key: string, hits: any[], charRef: any) => {
+  const ref = (ch: any) => charRef(ch.name_code) as any;
+  const exact = hits.filter((ch) =>
+    Object.values(ref(ch)?.name ?? {}).some((x) => norm(String(x)) === norm(key)),
+  );
+  if (exact.length !== 1) return null;
+  return {
+    ch: exact[0],
+    alsoMatched: hits
+      .filter((ch) => ch !== exact[0])
+      .map((ch) => ({ id: ref(ch)?.id, name: ref(ch)?.name })),
+  };
+};
+
 // single owned nikke detail — nameOrId is name / id / resourceId / nameCode,
-// matched like /api/nikkes/:id (fuzzy name); multiple hits return the list
+// matched like /api/nikkes/:id (fuzzy name); multiple hits return the list.
+// ?exact=1 lets a name equal to one hit win over the other versions (이격) —
+// resolved here so the caller doesn't spend a second rate-limited lookup
 async function userNikkeDetail(c: Context) {
   try {
     const lookups = loadProfileLookups(); // dist reads overlap the upstream calls
@@ -1662,8 +1710,16 @@ async function userNikkeDetail(c: Context) {
     const key = c.req.param("nameOrId") ?? "";
     const { charRef, normalizeNikke, matchesNikke } = await lookups;
     const fields = fieldsOf(c);
-    const hits = res.owned.filter((ch) => matchesNikke(key, ch));
+    let hits = res.owned.filter((ch) => matchesNikke(key, ch));
     if (hits.length === 0) return c.json({ error: "not found" }, 404);
+    let alsoMatched: { id?: number; name?: unknown }[] | undefined;
+    if (hits.length > 1 && c.req.query("exact")) {
+      const picked = pickExactOwned(key, hits, charRef);
+      if (picked) {
+        alsoMatched = picked.alsoMatched;
+        hits = [picked.ch];
+      }
+    }
     if (hits.length > 1)
       return c.json({
         count: hits.length,
@@ -1685,8 +1741,82 @@ async function userNikkeDetail(c: Context) {
       (((details.data as any)?.state_effects ?? []) as any[]).map((e: any) => [String(e.id), e]),
     );
     return c.json(
-      pickFields(normalizeNikke(ch, detailByCode.get(ch.name_code) ?? {}, effectById), fields),
+      pickFields(
+        { ...normalizeNikke(ch, detailByCode.get(ch.name_code) ?? {}, effectById), ...(alsoMatched ? { alsoMatched } : {}) },
+        fields,
+      ),
     );
+  } catch (e) {
+    const msg = e instanceof Error ? e.message : String(e);
+    const status = msg.includes("not configured") ? 503 : 502;
+    return c.json({ error: msg }, status);
+  }
+}
+
+// several owned nikkes' details from one GetUserCharacterDetails call —
+// looking them up one by one costs two upstream calls each and trips the
+// rate limit. Each name resolves like ?exact=1; only the page's name_codes
+// are fetched, so paging on stays cheap.
+const NIKKE_BUILDS_MAX = 50;
+async function userNikkeBuilds(c: Context) {
+  try {
+    const names = [...new Set((c.req.query("names") ?? "").split(",").map((s) => s.trim()).filter(Boolean))];
+    if (names.length === 0) return c.json({ error: "names required (comma-separated names or ids)" }, 400);
+    if (names.length > NIKKE_BUILDS_MAX) return c.json({ error: `at most ${NIKKE_BUILDS_MAX} names` }, 400);
+    const lookups = loadProfileLookups(); // dist reads overlap the upstream calls
+    const res = await loadOwnedNikkes(c);
+    if ("error" in res) return res.error;
+    const { charRef, normalizeNikke, matchesNikke } = await lookups;
+    const picked = new Map<number, { ch: any; alsoMatched?: { id?: number; name?: unknown }[] }>();
+    const notFound: string[] = [];
+    const ambiguous: { query: string; candidates: { id?: number; name?: unknown }[] }[] = [];
+    for (const key of names) {
+      const hits = res.owned.filter((ch) => matchesNikke(key, ch));
+      if (hits.length === 0) notFound.push(key);
+      else if (hits.length === 1) picked.set(hits[0].name_code, { ch: hits[0] });
+      else {
+        const exact = pickExactOwned(key, hits, charRef);
+        if (exact) picked.set(exact.ch.name_code, exact);
+        else
+          ambiguous.push({
+            query: key,
+            candidates: hits.map((ch) => {
+              const ref = charRef(ch.name_code) as any;
+              return { id: ref?.id, name: ref?.name };
+            }),
+          });
+      }
+    }
+    const selected = [...picked.values()];
+    const pg = pageQuery(c, selected.length);
+    if ("error" in pg) return c.json({ error: pg.error }, 400);
+    const page = selected.slice(pg.off, pg.off + pg.lim);
+    const details = page.length
+      ? await gameApi("Game", "GetUserCharacterDetails", {
+          ...res.body,
+          name_codes: page.map((x) => x.ch.name_code),
+        })
+      : null;
+    if (details && details.code !== 0) throw new Error(details.msg ?? `detail error ${details.code}`);
+    const detailByCode = new Map<number, any>(
+      ((details?.data as any)?.character_details ?? []).map((x: any) => [x.name_code, x]),
+    );
+    const effectById = new Map<string, any>(
+      (((details?.data as any)?.state_effects ?? []) as any[]).map((e: any) => [String(e.id), e]),
+    );
+    return c.json({
+      count: selected.length,
+      offset: pg.off,
+      nikkes: pickFields(
+        page.map(({ ch, alsoMatched }) => ({
+          ...normalizeNikke(ch, detailByCode.get(ch.name_code) ?? {}, effectById),
+          ...(alsoMatched?.length ? { alsoMatched } : {}),
+        })),
+        fieldsOf(c),
+      ),
+      ...(notFound.length ? { notFound } : {}),
+      ...(ambiguous.length ? { ambiguous } : {}),
+    });
   } catch (e) {
     const msg = e instanceof Error ? e.message : String(e);
     const status = msg.includes("not configured") ? 503 : 502;
