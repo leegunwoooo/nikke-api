@@ -4,8 +4,9 @@ import type { MiddlewareHandler } from "hono";
 const CACHE_CONTROL = "public, max-age=3600, s-maxage=86400, stale-while-revalidate=86400";
 
 /**
- * Data only changes on redeploy, so a weak ETag derived from the build's
- * syncedAt + request URL is enough — no need to hash response bodies.
+ * Responses only change on a data or code deploy, so a weak ETag derived from
+ * the version (syncedAt, plus the build id when bundled) + request URL is
+ * enough — no need to hash response bodies.
  */
 export function cacheHeaders(version: string): MiddlewareHandler {
   return async (c, next) => {

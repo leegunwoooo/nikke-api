@@ -1,16 +1,15 @@
 // Cloudflare Worker — serves the whole API app directly. GET responses are
 // edge-cached (data endpoints mark s-maxage=86400) so repeat reads never
 // touch the app or the data host. /api/user/* is live upstream data on a
-// shared BlablaLink account, so it gets a short USER_TTL edge cache with
-// SWR instead — repeat reads absorb at the edge instead of burning the
-// shared account's rate limit. ?refresh on any GET bypasses once.
+// shared BlablaLink account, so it gets a short USER_TTL edge cache instead —
+// repeat reads absorb at the edge instead of burning the shared account's
+// rate limit. ?refresh on any GET bypasses once.
 // ANALYTICS records one point per request (path group + HIT/MISS/PASS).
 
 import { createApp } from "../src/factory.js";
 import { httpStorage } from "../src/storage.js";
 
 const USER_TTL = 300;
-const USER_SWR = 86400;
 const AREA_KV_TTL = 30 * 86400;
 
 const CREDS_KEY = "bla:creds";
@@ -31,6 +30,10 @@ interface Env {
   RATE_LIMITER?: { limit(opts: { key: string }): Promise<{ success: boolean }> };
   AREA_KV?: { get(k: string): Promise<string | null>; put(k: string, v: string, o?: object): Promise<void> };
 }
+
+// content hash of this bundle, injected by scripts/emit-pages-worker.ts.
+// Undefined when the worker runs unbundled — caching then ignores it.
+const BUILD_ID = typeof __BUILD_ID__ === "undefined" ? undefined : __BUILD_ID__;
 
 // the whole API app runs here — built once per isolate, data reads go to
 // the Pages data host. Re-check the bundle version every few minutes so a
@@ -73,7 +76,7 @@ const getApp = async (env: Env, ctx?: ExecutionContext): Promise<App> => {
       appBuiltAt = Date.now();
       if (stamp !== null && stamp !== dataStamp) {
         dataStamp = stamp;
-        appPromise = createApp(httpStorage(host));
+        appPromise = createApp(httpStorage(host), { buildId: BUILD_ID });
         // keep the rebuild inside waitUntil — ending the request earlier
         // would let the isolate die mid-rebuild and leave a pending appPromise
         await appPromise.catch(() => {});
@@ -86,7 +89,7 @@ const getApp = async (env: Env, ctx?: ExecutionContext): Promise<App> => {
   // cold isolate — build now; learn the current stamp in the background so
   // revalidation has a baseline without a second request-path fetch
   appBuiltAt = now;
-  appPromise = createApp(httpStorage(host));
+  appPromise = createApp(httpStorage(host), { buildId: BUILD_ID });
   const learn = dataVersionOf(env).catch(() => {});
   if (ctx) ctx.waitUntil(learn);
   return appPromise;
@@ -364,11 +367,12 @@ export default {
         url.searchParams.delete("fields");
         if (v) url.searchParams.set("fields", v);
       }
-      // version-scope the cache key — a data deploy must not let this isolate
-      // keep serving pre-deploy bodies for the rest of their TTL
+      // version-scope the cache key — a data or code deploy must not let this
+      // isolate keep serving pre-deploy bodies for the rest of their TTL
       const dv = await dataVersionOf(env);
+      const v = [dv, BUILD_ID].filter(Boolean).join("|");
       const keyUrl = new URL(url);
-      if (dv) keyUrl.searchParams.set("__v", dv);
+      if (v) keyUrl.searchParams.set("__v", v);
       key = new Request(keyUrl.toString());
       if (!refresh) {
         const hit = await edgeCache.match(key);
@@ -416,13 +420,9 @@ export default {
     if (cacheable) {
       const stored = new Response(res.clone().body, res);
       // user responses arrive no-store — rewrite TTL for edge storage only;
-      // past USER_TTL the edge serves stale while it revalidates in the
-      // background, so repeat lookups stay fast for up to SWR seconds
-      if (userPath)
-        stored.headers.set(
-          "Cache-Control",
-          `public, max-age=${USER_TTL}, s-maxage=${USER_TTL}, stale-while-revalidate=${USER_SWR}`,
-        );
+      // the Cache API has no stale-while-revalidate, so past USER_TTL the next
+      // lookup is a plain miss that goes upstream
+      if (userPath) stored.headers.set("Cache-Control", `public, max-age=${USER_TTL}, s-maxage=${USER_TTL}`);
       ctx.waitUntil(edgeCache.put(key!, stored));
       // profile responses carry intlOpenId + areaId — remember the mapping
       if (target && env.AREA_KV) {

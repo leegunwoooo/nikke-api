@@ -4,6 +4,9 @@ declare class ExecutionContext {
   passThroughOnException(): void;
 }
 
+// injected at bundle time by scripts/emit-pages-worker.ts
+declare const __BUILD_ID__: string | undefined;
+
 declare const caches: {
   default: {
     match(key: Request | string): Promise<Response | undefined>;

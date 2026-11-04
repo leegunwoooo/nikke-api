@@ -1391,10 +1391,10 @@ GET /api/favorites/200101?lang=en
 
 ## 공통: 캐시 헤더
 
-데이터는 재배포 시에만 바뀌므로 성공(200) 응답에 다음 헤더가 붙습니다.
+응답은 데이터나 코드를 재배포할 때만 바뀌므로 성공(200) 응답에 다음 헤더가 붙습니다.
 
 - `Cache-Control: public, max-age=3600, s-maxage=86400, stale-while-revalidate=86400`
-- `ETag: W/"..."` — 데이터 버전(`syncedAt`) + 요청 URL 기준. `If-None-Match`로 요청하면 변경이 없을 때 `304 Not Modified`를 반환합니다.
+- `ETag: W/"..."` — 데이터 버전(`syncedAt`) + 빌드 ID(배포된 워커 번들의 내용 해시) + 요청 URL 기준. 코드만 배포해도 값이 바뀝니다. `If-None-Match`로 요청하면 변경이 없을 때 `304 Not Modified`를 반환합니다.
 - 조건부(304) 처리는 리소스가 실제로 존재하는 **200 응답에만** 적용됩니다 — 유효하지 않은 경로는 올바른 태그를내도 `404`를 반환합니다.
 
 `/api/user/*` 엔드포인트는 라이브 데이터(BlablaLink 업스트림 조회)라 캐시하지 않습니다 — 항상 `Cache-Control: no-store`가 붙고 ETag도 발급되지 않습니다.

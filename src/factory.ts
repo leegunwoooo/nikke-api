@@ -89,7 +89,7 @@ export function makeNikkeMatchers(charRef: (nameCode?: number | null) => any) {
     !query ? true : matchesNikkeId(query, ch) || matchesNikkeName(query, ch);
   return { matchesNikkeId, matchesNikkeName, matchesNikke };
 }
-export async function createApp(storage: Storage) {
+export async function createApp(storage: Storage, options: { buildId?: string } = {}) {
 interface CharacterData {
   count: number;
   syncedAt: string;
@@ -503,7 +503,8 @@ const wantsLang = (c: Context) => {
 
 const app = new Hono();
 app.use("*", cors());
-app.use("*", cacheHeaders(characterData.syncedAt));
+// a code deploy has to change the ETag too, not just a data deploy
+app.use("*", cacheHeaders(options.buildId ? `${characterData.syncedAt}|${options.buildId}` : characterData.syncedAt));
 
 // edge-injected upstream credentials (worker/index.ts) — request-scoped so a
 // forged header can only affect the request that carries it

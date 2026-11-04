@@ -9,6 +9,7 @@ on:
     paths:
       - "src/**"
       - "worker/**"
+      - "scripts/emit-pages-worker.ts"
       - "pages-proxy/wrangler.toml"
       - "package.json"
       - "package-lock.json"

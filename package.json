@@ -12,7 +12,7 @@
     "typecheck": "tsc -p tsconfig.check.json",
     "build:data": "npm run sync && npm run build",
     "fetch:data": "node scripts/fetch-dist.mjs",
-    "emit:pages-worker": "esbuild worker/index.ts --bundle --format=esm --platform=browser --external:node:* --outfile=pages-proxy/_worker.js"
+    "emit:pages-worker": "tsx scripts/emit-pages-worker.ts"
   },
   "keywords": [],
   "type": "module",
