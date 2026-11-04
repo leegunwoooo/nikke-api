@@ -9,7 +9,7 @@ import { buildFamilies } from "./family.js";
 import { favoriteRouteEntries, ROUTE_COVERAGE_CHAPTER, ROUTE_SOURCES, STORY_ROUTE } from "./story-route.js";
 import { SCENE_CATEGORIES } from "./scene-categories.js";
 import { fieldsOf, LOCALES, localize, pickFields } from "./fields.js";
-import { blaCredsContext, credsFromHeader, decodeOpenid, gameApi, playerInfo, RATE_LIMIT_CODES } from "./blabla.js";
+import { blaCredsContext, credsFromHeader, decodeOpenid, gameApi, playerInfo } from "./blabla.js";
 import { createNikkeMcp, requestOrigin } from "./mcp.js";
 import { llmsTxt, mcpGuide, type ToolInfo } from "./llms.js";
 import { buildOpenapi } from "./openapi.js";
@@ -1842,11 +1842,9 @@ async function userNikkeBuilds(c: Context) {
 // Same payload the calculator's blablalink proxy worker returns: raw
 // GetUserCharacters + GetUserCharacterDetails rows so downstream consumers
 // (e.g. the damage calculator) can apply their own interpretation without
-// losing fields the normalized endpoints drop. A rate-limited area lookup or a
-// failed detail call aborts the whole request (502) like the worker — silently
-// dropping an area that may have characters would hide real data, and the edge
-// would cache it. Any other lookup code only fails that area: what upstream
-// answers for a server without characters is unconfirmed.
+// losing fields the normalized endpoints drop. A detail-call failure aborts
+// the whole request (502) like the worker — silently dropping an area that
+// has characters would hide real data.
 const ROSTER_AREAS = [83, 81, 84, 82, 85]; // KR, JP, Global, NA, SEA
 const ROSTER_DETAIL_BATCH = 200; // upstream truncates larger name_codes lists
 
@@ -1881,18 +1879,10 @@ interface RosterFail {
   failedCode: number;
   failedMsg: string;
 }
-// carries the upstream code so the 502 body keeps its code field
-class RosterLookupError extends Error {
-  constructor(readonly code: number, msg: string) {
-    super(`upstream lookup failed (${code} ${msg})`);
-  }
-}
 
 async function collectRosterArea(openid: string, area: number): Promise<RosterArea | RosterFail> {
   const body = { intl_open_id: openid, nikke_area_id: area };
   const roster = await gameApi("Game", "GetUserCharacters", body);
-  if (RATE_LIMIT_CODES.has(roster.code))
-    throw new RosterLookupError(roster.code, roster.msg ?? "");
   const characters =
     roster.code === 0 ? ((roster.data as any)?.characters ?? null) : null;
   if (!characters?.length)
@@ -1955,7 +1945,6 @@ async function userRoster(c: Context) {
       pickFields({ intlOpenId: target.intlOpenId, areas }, fieldsOf(c)),
     );
   } catch (e) {
-    if (e instanceof RosterLookupError) return c.json({ error: e.message, code: e.code }, 502);
     const msg = e instanceof Error ? e.message : String(e);
     const status = msg.includes("not configured") ? 503 : 502;
     return c.json({ error: msg }, status);

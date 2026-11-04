@@ -20218,7 +20218,7 @@ function buildServer(api, version2, origin = "", boundBlablaid) {
     "get_user_roster",
     {
       title: "Get a player's full roster",
-      description: "Every character a player owns, condensed to name_code/level/combat/grade/core per server area \u2014 the full upstream payload (details, equips, stateEffects, outpost) is too large for a tool response, use REST /api/user/:id/roster for that. Sweeps all 5 server areas (~1.3s) \u2014 pass area to fetch one. A rate limit on any area fails the whole call rather than returning a partial roster. Live and rate limited.",
+      description: "Every character a player owns, condensed to name_code/level/combat/grade/core per server area \u2014 the full upstream payload (details, equips, stateEffects, outpost) is too large for a tool response, use REST /api/user/:id/roster for that. Sweeps all 5 server areas (~1.3s) \u2014 pass area to fetch one. Live and rate limited.",
       inputSchema: object({
         blablaid: BLABLAID.optional(),
         area: number2().int().optional().describe("Server area: 83 KR \xB7 81 JP \xB7 84 Global \xB7 82 NA \xB7 85 SEA. Omit to sweep all five")
@@ -21063,7 +21063,7 @@ function buildOpenapi(pkgVersion) {
         get: {
           tags: ["user"],
           summary: "\uC720\uC800 \uBCF4\uC720 \uB2C8\uCF00 \uC804\uCCB4 \uB85C\uC2A4\uD130 (\uC5C5\uC2A4\uD2B8\uB9BC \uC6D0\uC2DC \uD615\uD0DC)",
-          description: "\uBCF4\uC720 \uB2C8\uCF00 \uC804\uC6D0\uC758 \uC5C5\uC2A4\uD2B8\uB9BC \uC6D0\uC2DC \uBB36\uC74C \u2014 \uC11C\uBC84\uBCC4 {area, characters, details, stateEffects, outpost}. GetUserCharacterDetails\uB294 name_code 60\uAC1C\uC529 \uBC30\uCE58 \uD638\uCD9C. \uAE30\uBCF8\uC740 5\uAC1C \uC11C\uBC84(83\xB781\xB784\xB782\xB785) \uC804\uBD80 \uC870\uD68C, ?area=\uB85C \uD2B9\uC815 \uC11C\uBC84\uB9CC \uC9C0\uC815 \uAC00\uB2A5. \uD55C \uC11C\uBC84\uB77C\uB3C4 \uB808\uC774\uD2B8\uB9AC\uBC0B(212000)\uC774\uBA74 \uC804\uCCB4 502. \uADF8 \uBC16\uC758 \uCF54\uB4DC\uB294 \uD574\uB2F9 \uC11C\uBC84\uB9CC \uBE60\uC9C0\uACE0, \uB2C8\uCF00\uAC00 \uC788\uB294 \uC11C\uBC84\uAC00 \uC5C6\uC73C\uBA74 502(\uC5C5\uC2A4\uD2B8\uB9BC) \uB610\uB294 \uBE44\uACF5\uAC1C \uCF54\uB4DC\uAC00 \uC788\uC744 \uB54C 404 reason=private(\uD504\uB85C\uD544 \uBE44\uACF5\uAC1C). blablaid \uB300\uC2E0 ?blablaid=\uB3C4 \uAC00\uB2A5 (/api/user/roster?blablaid=...)",
+          description: "\uBCF4\uC720 \uB2C8\uCF00 \uC804\uC6D0\uC758 \uC5C5\uC2A4\uD2B8\uB9BC \uC6D0\uC2DC \uBB36\uC74C \u2014 \uC11C\uBC84\uBCC4 {area, characters, details, stateEffects, outpost}. GetUserCharacterDetails\uB294 name_code 60\uAC1C\uC529 \uBC30\uCE58 \uD638\uCD9C. \uAE30\uBCF8\uC740 5\uAC1C \uC11C\uBC84(83\xB781\xB784\xB782\xB785) \uC804\uBD80 \uC870\uD68C, ?area=\uB85C \uD2B9\uC815 \uC11C\uBC84\uB9CC \uC9C0\uC815 \uAC00\uB2A5. \uBAA8\uB4E0 \uC11C\uBC84 \uC870\uD68C\uAC00 \uC2E4\uD328\uD558\uBA74 502(\uC5C5\uC2A4\uD2B8\uB9BC) \uB610\uB294 404 reason=private(\uD504\uB85C\uD544 \uBE44\uACF5\uAC1C). blablaid \uB300\uC2E0 ?blablaid=\uB3C4 \uAC00\uB2A5 (/api/user/roster?blablaid=...)",
           parameters: [
             {
               name: "blablaid",
@@ -21084,7 +21084,7 @@ function buildOpenapi(pkgVersion) {
             "400": { description: "blablaid \uD615\uC2DD \uC624\uB958 / \uC9C0\uC6D0\uD558\uC9C0 \uC54A\uB294 area" },
             "404": { description: "\uD504\uB85C\uD544 \uBE44\uACF5\uAC1C (reason=private)" },
             "503": { description: "\uC11C\uBC84 \uC870\uD68C \uACC4\uC815 \uBBF8\uC124\uC815" },
-            "502": { description: "\uC5C5\uC2A4\uD2B8\uB9BC \uC2E4\uD328 (\uB808\uC774\uD2B8\uB9AC\uBC0B\xB7\uC0C1\uC138 \uD638\uCD9C \uC624\uB958 \uC2DC \uC804\uCCB4 \uC2E4\uD328)" }
+            "502": { description: "\uC5C5\uC2A4\uD2B8\uB9BC \uC2E4\uD328 (\uC0C1\uC138 \uD638\uCD9C \uC624\uB958 \uC2DC \uC804\uCCB4 \uC2E4\uD328)" }
           }
         }
       },
@@ -22656,18 +22656,9 @@ async function createApp(storage, options = {}) {
     return out;
   };
   const ROSTER_PRIVATE_CODES = /* @__PURE__ */ new Set([1301002, 1303002]);
-  class RosterLookupError extends Error {
-    constructor(code, msg) {
-      super(`upstream lookup failed (${code} ${msg})`);
-      this.code = code;
-    }
-    code;
-  }
   async function collectRosterArea(openid, area) {
     const body = { intl_open_id: openid, nikke_area_id: area };
     const roster = await gameApi("Game", "GetUserCharacters", body);
-    if (RATE_LIMIT_CODES.has(roster.code))
-      throw new RosterLookupError(roster.code, roster.msg ?? "");
     const characters2 = roster.code === 0 ? roster.data?.characters ?? null : null;
     if (!characters2?.length)
       return { failedCode: roster.code ?? 0, failedMsg: roster.msg ?? "" };
@@ -22725,7 +22716,6 @@ async function createApp(storage, options = {}) {
         pickFields({ intlOpenId: target.intlOpenId, areas }, fieldsOf(c))
       );
     } catch (e) {
-      if (e instanceof RosterLookupError) return c.json({ error: e.message, code: e.code }, 502);
       const msg = e instanceof Error ? e.message : String(e);
       const status = msg.includes("not configured") ? 503 : 502;
       return c.json({ error: msg }, status);
@@ -22803,7 +22793,7 @@ var CREDS_KEY = "bla:creds";
 var HDR_CREDS = "x-bla-creds";
 var HDR_BLABLAID = "x-registered-blablaid";
 var edgeCache = caches.default;
-var BUILD_ID = false ? void 0 : "5a3c92443d1f";
+var BUILD_ID = false ? void 0 : "9a813dc40e1c";
 var DATA_HOST = "https://nikke-api-data.pages.dev";
 var REVALIDATE_MS = 3e5;
 var appPromise;

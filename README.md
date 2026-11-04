@@ -134,7 +134,7 @@ GET /api/user/<blablaid>/nikke/아니스               # 부분 일치 → 매�
 | `GET /api/user/<blablaid>` | 유저 프로필·전진기지 조회 — BlablaLink 공유 ID (`?blablaid=`도 가능) |
 | `GET /api/user/<blablaid>/nikke` | 유저 보유 니케 목록 — `?id=`(id·resourceId·nameCode)·`?name=`(전 언어 부분 일치, `q` 동일)·`element`·`class`·`burst`·`corporation`·`weapon`·`rarity` 필터, 경량 |
 | `GET /api/user/<blablaid>/nikke/<nameOrId>` | 보유 니케 상세 — `<nameOrId>`는 이름(부분 일치) 또는 id·resourceId·nameCode. 단일 매칭 시 상세, 복수 매칭 시 목록 |
-| `GET /api/user/<blablaid>/roster` | 보유 니케 전원 일괄 — 업스트림 원시 형태(characters·details·stateEffects·outpost), 5개 서버 순회·`?area=`로 지정. 비공개 시 404 `reason=private`, 한 서버라도 레이트리밋이면 전체 502 |
+| `GET /api/user/<blablaid>/roster` | 보유 니케 전원 일괄 — 업스트림 원시 형태(characters·details·stateEffects·outpost), 5개 서버 순회·`?area=`로 지정. 비공개 시 404 `reason=private` |
 | `GET /api/tables` / `GET /api/tables/:file` | 원본 테이블 목록/조회 |
 | `GET /api/meta/filters` | 사용 가능한 필터 값 목록 (니케·스테이지·코스튬·장비 전부) |
 | `GET /api/cdn?path=` | CDN 리소스 경로 → URL 변환 |
