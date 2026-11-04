@@ -790,7 +790,7 @@ export function buildServer(api: Fetcher, version: string, origin = "", boundBla
     {
       title: "Get a player's full roster",
       description:
-        "Every character a player owns, condensed to name_code/level/combat/grade/core per server area — the full upstream payload (details, equips, stateEffects, outpost) is too large for a tool response, use REST /api/user/:id/roster for that. Sweeps all 5 server areas (~1.3s) — pass area to fetch one. Live and rate limited.",
+        "Every character a player owns, condensed to name_code/level/combat/grade/core per server area — the full upstream payload (details, equips, stateEffects, outpost) is too large for a tool response, use REST /api/user/:id/roster for that. Sweeps all 5 server areas (~1.3s) — pass area to fetch one. A rate limit on any area fails the whole call rather than returning a partial roster. Live and rate limited.",
       inputSchema: z.object({
         blablaid: BLABLAID.optional(),
         area: z
