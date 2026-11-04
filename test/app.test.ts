@@ -272,6 +272,19 @@ test("/api/avatars list + filters + detail", async () => {
   assert.equal((await get("/api/avatars/abc")).status, 400);
 });
 
+test("favorites list names the owner and filters by nikke", async () => {
+  const all = (await json("/api/favorites?lang=ko")).favorites;
+  assert.deepEqual(all[0].character, { id: 1, name: "라피" });
+  assert.equal(all[1].type, "Collection");
+  assert.equal(all[1].character, undefined);
+  for (const nikke of ["라피", "rapi", "1", "3001"]) {
+    const r = await json(`/api/favorites?nikke=${encodeURIComponent(nikke)}`);
+    assert.deepEqual(r.favorites.map((f: any) => f.id), [100], nikke);
+  }
+  // dolls have no owner, so no name can reach them
+  assert.equal((await json(`/api/favorites?nikke=${encodeURIComponent("앵커")}`)).count, 0);
+});
+
 test("favorites + tables", async () => {
   assert.equal((await json("/api/favorites?q=tele")).count, 1);
   assert.equal((await get("/api/favorites/999")).status, 404);

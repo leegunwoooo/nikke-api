@@ -368,6 +368,13 @@ test("get_user_nikke_builds passes the names through and needs a blablaid", asyn
   }
 });
 
+test("search_favorites finds a character's 애장품 without opening each one", async () => {
+  const r = (await tool("search_favorites", { nikke: "라피" })).json;
+  assert.deepEqual(r.favorites.map((f: any) => [f.id, f.character.name]), [[100, "라피"]]);
+  const { result } = await rpc("tools/list");
+  assert.match(result.tools.find((x: any) => x.name === "search_favorites").description, /애장품/);
+});
+
 test("get_user_nikkes says what it returns", async () => {
   const { result } = await rpc("tools/list");
   const t = result.tools.find((x: any) => x.name === "get_user_nikkes");

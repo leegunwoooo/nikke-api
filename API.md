@@ -880,6 +880,7 @@ GET /api/avatars/50100
 |----------|------|------|
 | `q` | 이름 부분 일치 (전 언어) | `?q=기차` |
 | `rare` | 레어 필터 | `R` / `SR` / `SSR` |
+| `nikke` | 애장품 주인. 이름 부분 일치(전 언어), 캐릭터 id, nameCode | `?nikke=라피` |
 | `limit` | 반환 개수 제한 (최대 500) | `?limit=20` |
 | `page` | 페이지 번호 (1부터) | `?page=2` |
 | `offset` | 시작 위치 | `?offset=20` |
@@ -889,10 +890,20 @@ GET /api/avatars/50100
 {
   "count": 33,
   "favorites": [
-    { "id": 200101, "rare": "SSR", "name": { "ko": "장난감 기차 세트", ... }, "weaponType": "MG" }
+    {
+      "id": 200101,
+      "rare": "SSR",
+      "type": "Favorite",
+      "nameCode": 5020,
+      "character": { "id": 502001, "name": { "ko": "...", ... } },
+      "name": { "ko": "장난감 기차 세트", ... },
+      "weaponType": "MG"
+    }
   ]
 }
 ```
+
+`type`이 `Favorite`이면 니케 한 명의 애장품(SSR)이고 `nameCode`, `character`가 붙습니다. `Collection`은 주인이 없는 지휘관 인형(R, SR)입니다.
 
 ## GET /api/favorites/:id
 

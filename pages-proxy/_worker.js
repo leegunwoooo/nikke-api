@@ -19933,11 +19933,12 @@ function buildServer(api, version2, origin = "", boundBlablaid) {
   server.registerTool(
     "search_favorites",
     {
-      title: "Search favorite items (\uC18C\uC7A5\uD488)",
-      description: "Favorite items (\uC18C\uC7A5\uD488) list. Use get_favorite for per-level stats and skills.",
+      title: "Search favorite items (\uC560\uC7A5\uD488\xB7\uC18C\uC7A5\uD488)",
+      description: "Favorite items (\uC560\uC7A5\uD488, \uC18C\uC7A5\uD488) list with each \uC560\uC7A5\uD488's owner: type Favorite is a character's own \uC560\uC7A5\uD488 (SSR), Collection is a commander doll with no owner. Use nikke to find a character's \uC560\uC7A5\uD488, get_favorite for per-level stats and skills.",
       inputSchema: object({
         q: string2().optional(),
         rare: _enum(["SSR", "SR", "R"]).optional(),
+        nikke: string2().optional().describe("Owner: character name (partial, any language), id or nameCode"),
         limit: LIMIT,
         offset: OFFSET,
         lang: LANG
@@ -19947,7 +19948,7 @@ function buildServer(api, version2, origin = "", boundBlablaid) {
     async (a) => call(
       api,
       "search_favorites",
-      `/api/favorites${qs({ q: a.q, rare: a.rare, limit: a.limit, offset: a.offset, lang: a.lang })}`
+      `/api/favorites${qs({ q: a.q, rare: a.rare, nikke: a.nikke, limit: a.limit, offset: a.offset, lang: a.lang })}`
     )
   );
   server.registerTool(
@@ -20829,6 +20830,7 @@ function buildOpenapi(pkgVersion) {
           parameters: [
             { name: "q", in: "query", schema: { type: "string" } },
             { name: "rare", in: "query", schema: { type: "string", enum: ["R", "SR", "SSR"] } },
+            { name: "nikke", in: "query", schema: { type: "string" }, description: "\uC560\uC7A5\uD488 \uC8FC\uC778: \uC774\uB984 \uBD80\uBD84 \uC77C\uCE58, \uCE90\uB9AD\uD130 id, nameCode" },
             { name: "page", in: "query", schema: { type: "integer", minimum: 1 }, description: "\uD398\uC774\uC9C0 \uBC88\uD638 (1\uBD80\uD130 \u2014 offset \uB300\uC2E0 \uC0AC\uC6A9, \uBBF8\uC9C0\uC815 limit \uC2DC \uD398\uC774\uC9C0 \uD06C\uAE30 50)" },
             { name: "limit", in: "query", schema: { type: "integer", maximum: 500 }, description: "\uCD5C\uB300 500, \uBBF8\uC9C0\uC815 \uC2DC \uC804\uCCB4" },
             { name: "offset", in: "query", schema: { type: "integer", default: 0 } }
@@ -22249,9 +22251,15 @@ async function createApp(storage) {
     return c.json(pickFields(avatarRow(Number(id), a), fieldsOf(c)));
   });
   app.get("/api/favorites", async (c) => {
-    const { q, rare } = c.req.query();
+    const { q, rare, nikke } = c.req.query();
     let list = await getFavorites();
     if (rare) list = list.filter((x) => x.rare?.toLowerCase() === rare.toLowerCase());
+    if (nikke) {
+      const nn = norm(nikke);
+      list = list.filter(
+        (x) => String(x.nameCode) === nikke || String(x.character?.id) === nikke || Object.values(x.character?.name ?? {}).some((n) => norm(n).includes(nn))
+      );
+    }
     if (q) {
       const nq = norm(q);
       list = list.filter((x) => Object.values(x.name).some((n) => norm(n).includes(nq)));

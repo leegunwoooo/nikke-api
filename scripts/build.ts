@@ -749,12 +749,14 @@ async function main() {
       skills,
     };
     await writeFile(path.join(FAVS, `${id}.json`), JSON.stringify(item));
+    const owner = item.character;
     favIndex.push({
       id,
       rare: first.favorite_rare,
       type: first.favorite_type,
       // 애장품 belong to one character; dolls have name_code 0
       ...(first.name_code ? { nameCode: first.name_code } : {}),
+      ...(owner ? { character: { id: owner.id, name: owner.name } } : {}),
       name,
       weaponType: first.weapon_type,
     });

@@ -411,6 +411,7 @@ const openapi = {
         parameters: [
           { name: "q", in: "query", schema: { type: "string" } },
           { name: "rare", in: "query", schema: { type: "string", enum: ["R", "SR", "SSR"] } },
+          { name: "nikke", in: "query", schema: { type: "string" }, description: "애장품 주인: 이름 부분 일치, 캐릭터 id, nameCode" },
           { name: "page", in: "query", schema: { type: "integer", minimum: 1 }, description: "페이지 번호 (1부터 — offset 대신 사용, 미지정 limit 시 페이지 크기 50)" },
           { name: "limit", in: "query", schema: { type: "integer", maximum: 500 }, description: "최대 500, 미지정 시 전체" },
           { name: "offset", in: "query", schema: { type: "integer", default: 0 } },

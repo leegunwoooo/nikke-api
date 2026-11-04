@@ -1,1 +1,1 @@
-[{"id": 100, "rare": "SSR", "type": "Favorite", "nameCode": 3001, "name": {"ko": "망원경", "en": "Telescope"}, "weaponType": "AR"}, {"id": 101, "rare": "R", "type": "Collection", "name": {"ko": "커피 지휘관 인형", "en": "Coffee Doll"}, "weaponType": "AR"}]
+[{"id": 100, "rare": "SSR", "type": "Favorite", "nameCode": 3001, "name": {"ko": "망원경", "en": "Telescope"}, "weaponType": "AR", "character": {"id": 1, "name": {"ko": "라피", "en": "Rapi"}}}, {"id": 101, "rare": "R", "type": "Collection", "name": {"ko": "커피 지휘관 인형", "en": "Coffee Doll"}, "weaponType": "AR"}]

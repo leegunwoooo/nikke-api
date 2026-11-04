@@ -457,11 +457,13 @@ export function buildServer(api: Fetcher, version: string, origin = "", boundBla
   server.registerTool(
     "search_favorites",
     {
-      title: "Search favorite items (소장품)",
-      description: "Favorite items (소장품) list. Use get_favorite for per-level stats and skills.",
+      title: "Search favorite items (애장품·소장품)",
+      description:
+        "Favorite items (애장품, 소장품) list with each 애장품's owner: type Favorite is a character's own 애장품 (SSR), Collection is a commander doll with no owner. Use nikke to find a character's 애장품, get_favorite for per-level stats and skills.",
       inputSchema: z.object({
         q: z.string().optional(),
         rare: z.enum(["SSR", "SR", "R"]).optional(),
+        nikke: z.string().optional().describe("Owner: character name (partial, any language), id or nameCode"),
         limit: LIMIT,
         offset: OFFSET,
         lang: LANG,
@@ -472,7 +474,7 @@ export function buildServer(api: Fetcher, version: string, origin = "", boundBla
       call(
         api,
         "search_favorites",
-        `/api/favorites${qs({ q: a.q, rare: a.rare, limit: a.limit, offset: a.offset, lang: a.lang })}`,
+        `/api/favorites${qs({ q: a.q, rare: a.rare, nikke: a.nikke, limit: a.limit, offset: a.offset, lang: a.lang })}`,
       ),
   );
 

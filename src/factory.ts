@@ -151,6 +151,7 @@ interface FavoriteIndexEntry {
   rare?: string;
   type?: string; // "Favorite" = 애장품, "Collection" = 지휘관 인형
   nameCode?: number; // the 애장품's owner; absent on dolls
+  character?: { id: number; name: Record<string, string> };
   name: Record<string, string>;
   weaponType?: string;
 }
@@ -1399,9 +1400,18 @@ app.get("/api/avatars/:iconId", async (c) => {
 });
 
 app.get("/api/favorites", async (c) => {
-  const { q, rare } = c.req.query();
+  const { q, rare, nikke } = c.req.query();
   let list = await getFavorites();
   if (rare) list = list.filter((x) => x.rare?.toLowerCase() === rare.toLowerCase());
+  if (nikke) {
+    const nn = norm(nikke);
+    list = list.filter(
+      (x) =>
+        String(x.nameCode) === nikke ||
+        String(x.character?.id) === nikke ||
+        Object.values(x.character?.name ?? {}).some((n) => norm(n).includes(nn)),
+    );
+  }
   if (q) {
     const nq = norm(q);
     list = list.filter((x) => Object.values(x.name).some((n) => norm(n).includes(nq)));

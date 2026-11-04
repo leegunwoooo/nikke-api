@@ -127,7 +127,7 @@ GET /api/user/<blablaid>/nikke/아니스               # 부분 일치 → 매�
 | `GET /api/equips/:id` | 장비 상세 |
 | `GET /api/avatars` | 아바타 아이콘 목록 — `?q=` `?resourceId=` `?orphans=` `?limit=`/`?offset=`/`?page=` |
 | `GET /api/avatars/:iconId` | 아바타 상세 — 소유 캐릭터·아이콘 이미지 |
-| `GET /api/favorites` | 소장품 목록 — `?q=` `?rare=` `?limit=`/`?offset=`/`?page=` |
+| `GET /api/favorites` | 소장품 목록 — `?q=` `?rare=` `?nikke=` `?limit=`/`?offset=`/`?page=` |
 | `GET /api/favorites/:id` | 소장품 상세 — 레벨별 스탯, 컬렉션·전용 스킬 |
 | `GET /api/cubes` | 하모니 큐브 목록 — `?q=` `?limit=`/`?offset=`/`?page=` |
 | `GET /api/cubes/:id` | 큐브 상세 — 레벨별 스탯, 큐브 스킬 |
