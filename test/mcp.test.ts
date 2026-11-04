@@ -159,6 +159,16 @@ test("filters reject values outside the enum", async () => {
   assert.equal((await tool("search_nikkes", { element: "불" })).isError, true);
 });
 
+test("api_get checks the normalized path, not the raw string", async () => {
+  for (const p of ["/api/stages/%2e%2e/tables", "/api/stages/%2E%2E/user/not-an-id", "/api/meta/.%2e/tables", "/api/stages\\%2e%2e\\tables"]) {
+    const r = await tool("api_get", { path: p });
+    assert.equal(r.isError, true, p);
+    assert.match(r.json.error, /path not allowed/, p);
+  }
+  // the query string is kept and a normal path still works
+  assert.equal((await tool("api_get", { path: "/api/stages?chapter=1&limit=1" })).json.stages.length, 1);
+});
+
 test("api_get stays inside its allowlist", async () => {
   for (const p of ["/api/user/roster?blablaid=x", "/api/tables/CharacterLevelTable.json", "/api/../etc", "/api/nikkes"]) {
     assert.equal((await tool("api_get", { path: p })).isError, true, p);

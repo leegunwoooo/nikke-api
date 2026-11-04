@@ -179,3 +179,24 @@ test("a rate-limited empty server still returns the account's roster", async () 
     stub.restore();
   }
 });
+
+test("a caller's ?area= is never remembered", async () => {
+  const id = "1000000000000000007";
+  const stub = stubFetch();
+  try {
+    const { env, kv } = envOf();
+    const first = await send(env, `/api/user/${id}?area=84`);
+    assert.equal(((await first.json()) as any).areaId, 84);
+    assert.equal(kv.get(id), undefined);
+
+    // the server's own answer is remembered, and a later ?area= can't move it
+    await (await send(env, `/api/user/${id}`)).text();
+    assert.equal(kv.get(id), "83");
+    await (await send(env, `/api/user/${id}?area=81`)).text();
+    assert.equal(kv.get(id), "83");
+    const next = await send(env, `/api/user/${id}`);
+    assert.equal(((await next.json()) as any).areaId, 83);
+  } finally {
+    stub.restore();
+  }
+});

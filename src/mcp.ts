@@ -664,7 +664,10 @@ export function buildServer(api: Fetcher, version: string, origin = "", boundBla
       annotations: READ_ONLY,
     },
     async (a) => {
-      if (a.path.includes("..") || !API_GET_ALLOWED.test(a.path)) {
+      // check what the router will actually see — the URL parser resolves
+      // percent-encoded dot segments, so the raw string can't be trusted
+      const u = new URL(a.path, "http://mcp");
+      if (a.path.includes("..") || !API_GET_ALLOWED.test(u.pathname)) {
         return text(
           JSON.stringify({
             error:
@@ -676,14 +679,11 @@ export function buildServer(api: Fetcher, version: string, origin = "", boundBla
       // list paths return the whole table without a limit — a bare
       // /api/stages is ~60k chars, so apply paging defaults when the
       // caller didn't set any (detail/meta/cdn paths are exempt)
-      let path = a.path;
-      const u = new URL(path, "http://mcp");
       if (/^\/api\/(stages|costumes|equips|cubes|avatars)\/?$/.test(u.pathname) || u.pathname === "/api/equips/options") {
         if (!u.searchParams.has("limit")) u.searchParams.set("limit", "20");
         if (!u.searchParams.has("lang")) u.searchParams.set("lang", "ko");
-        path = u.pathname + u.search;
       }
-      return call(api, "api_get", path);
+      return call(api, "api_get", u.pathname + u.search);
     },
   );
 

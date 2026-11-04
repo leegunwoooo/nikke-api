@@ -110,7 +110,7 @@ GET /api/user/<blablaid>/nikke/아니스               # 부분 일치 → 매�
 | `GET /api/nikkes/:id` | 캐릭터 상세 — 스킬/스탯/배경/CV/보이스 등 `details` 포함. `:id`는 캐릭터 ID·resourceId·이름(부분 일치) 모두 가능 |
 | `GET /api/scenes` | 씬 목록 — `?category=`(`main`/`event`/`sudden`/`attractive`/`favorite`/`library`) `?nikke=` `?q=` `?limit=`/`?offset=`/`?page=` |
 | `GET /api/scenes/:groupId` | 씬 대본 — 대사별 화자/아이콘/보이스 |
-| `GET /api/lines` | 대사 전문 검색 — `?q=`(구두점 무시) 또는 `?speaker=` 필수, `?category=` `?nikke=` `?family=` `?limit=`/`?offset=`/`?page=` |
+| `GET /api/lines` | 대사 전문 검색 — `?q=`(구두점 무시) 또는 `?speaker=` 필수, `?category=` `?nikke=` `?family=` `?limit=`(기본 50, 최대 500)/`?offset=`/`?page=` |
 | `GET /api/nikkes/:id/appearances` | 캐릭터 등장 씬 — 대사 많은 순, 이벤트별 롤업 포함, `?category=` |
 | `GET /api/events` | 스토리 이벤트 목록 — `event_*` 씬 그룹 묶음, `?q=` `?limit=`/`?offset=`/`?page=` |
 | `GET /api/events/:id` | 이벤트 상세 — 에피소드별 씬 목록 |

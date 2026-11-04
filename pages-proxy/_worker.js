@@ -20112,7 +20112,8 @@ function buildServer(api, version2, origin = "", boundBlablaid) {
       annotations: READ_ONLY
     },
     async (a) => {
-      if (a.path.includes("..") || !API_GET_ALLOWED.test(a.path)) {
+      const u = new URL(a.path, "http://mcp");
+      if (a.path.includes("..") || !API_GET_ALLOWED.test(u.pathname)) {
         return text(
           JSON.stringify({
             error: "path not allowed \u2014 api_get serves stages, costumes, equips, cubes, avatars, meta and cdn; use the dedicated tools for the rest"
@@ -20120,14 +20121,11 @@ function buildServer(api, version2, origin = "", boundBlablaid) {
           true
         );
       }
-      let path2 = a.path;
-      const u = new URL(path2, "http://mcp");
       if (/^\/api\/(stages|costumes|equips|cubes|avatars)\/?$/.test(u.pathname) || u.pathname === "/api/equips/options") {
         if (!u.searchParams.has("limit")) u.searchParams.set("limit", "20");
         if (!u.searchParams.has("lang")) u.searchParams.set("lang", "ko");
-        path2 = u.pathname + u.search;
       }
-      return call(api, "api_get", path2);
+      return call(api, "api_get", u.pathname + u.search);
     }
   );
   server.registerTool(
@@ -20673,10 +20671,10 @@ function buildOpenapi(pkgVersion) {
             { name: "family", in: "query", schema: { type: "string", enum: ["1", "true"] }, description: "\uD654\uC790\uB97C \uC6D0\uBCF8\xB7\uC774\uACA9 \uC804\uCCB4\uB85C \uD655\uC7A5" },
             { name: "category", in: "query", schema: { type: "string", enum: [...SCENE_CATEGORIES] } },
             { name: "page", in: "query", schema: { type: "integer", minimum: 1 } },
-            { name: "limit", in: "query", schema: { type: "integer", minimum: 1, maximum: 500 } },
+            { name: "limit", in: "query", schema: { type: "integer", minimum: 1, maximum: 500, default: 50 } },
             { name: "offset", in: "query", schema: { type: "integer", default: 0 } }
           ],
-          responses: { "200": { description: "\uB300\uC0AC \uBAA9\uB85D \u2014 \uC52C\xB7\uC774\uBCA4\uD2B8 \uD45C\uC2DC \uD3EC\uD568" }, "400": { description: "q\xB7speaker \uB458 \uB2E4 \uC5C6\uC74C" } }
+          responses: { "200": { description: "\uB300\uC0AC \uBAA9\uB85D \u2014 \uC52C\xB7\uC774\uBCA4\uD2B8 \uD45C\uC2DC \uD3EC\uD568. count\uB294 \uC804\uCCB4 \uC77C\uCE58 \uC218" }, "400": { description: "q\xB7speaker \uB458 \uB2E4 \uC5C6\uAC70\uB098 \uACF5\uBC31\xB7\uAD6C\uBD84\uC790\uBFD0\uC784" } }
         }
       },
       "/api/nikkes/{id}/appearances": {
@@ -21551,7 +21549,7 @@ async function createApp(storage, options = {}) {
         "GET /api/events": "story event list \u2014 event_* scene groups; filter: q",
         "GET /api/events/:id": "event detail \u2014 episode scene list",
         "GET /api/events/:id/script": "whole event script, episode by episode ('speaker: text')",
-        "GET /api/lines": "dialogue search; q (text) and/or speaker, family, category",
+        "GET /api/lines": "dialogue search; q (text) and/or speaker, family, category; 50 per page by default",
         "GET /api/nikkes/:id/appearances": "scenes and events a character speaks in (all versions)",
         "GET /api/story/route": "story reading order (community guide)",
         "GET /api/story/next": "next stories on the route; chapter|after, done, required",
@@ -21861,7 +21859,8 @@ async function createApp(storage, options = {}) {
     const { q, speaker, category } = c.req.query();
     if (!q && !speaker) return c.json({ error: "q or speaker required" }, 400);
     const nq = q ? searchNorm(q) : "";
-    if (q && !nq && !speaker) return c.json({ error: "q or speaker required" }, 400);
+    const ns = speaker ? norm(speaker) : "";
+    if (!nq && !ns) return c.json({ error: "q or speaker required" }, 400);
     const page = c.req.query("page"), limit = c.req.query("limit"), offset = c.req.query("offset");
     for (const [k, v] of Object.entries({ page, limit, offset })) {
       if (v !== void 0 && v !== "" && (!Number.isInteger(Number(v)) || Number(v) < (k === "offset" ? 0 : 1))) {
@@ -21870,7 +21869,6 @@ async function createApp(storage, options = {}) {
     }
     const fam = speaker && truthy(c.req.query("family")) ? families.byName(speaker) : void 0;
     const speakers = fam ? new Set(families.names(fam).map(norm)) : void 0;
-    const ns = speaker ? norm(speaker) : "";
     const [scenes, evOf, scripts] = await Promise.all([
       getScenes(),
       eventOfScene(),
@@ -21880,7 +21878,7 @@ async function createApp(storage, options = {}) {
     const pg0 = { page: page ? Number(page) : void 0, limit: limit ? Number(limit) : void 0, offset: offset ? Number(offset) : void 0 };
     const hits = [];
     let count = 0;
-    const lim = pg0.limit ? Math.min(pg0.limit, 500) : pg0.page ? 50 : Infinity;
+    const lim = pg0.limit ? Math.min(pg0.limit, 500) : 50;
     const off = pg0.page ? (pg0.page - 1) * lim : pg0.offset ?? 0;
     for (const [g, sc] of scripts) {
       if (!speaker && nq) {
@@ -22793,7 +22791,7 @@ var CREDS_KEY = "bla:creds";
 var HDR_CREDS = "x-bla-creds";
 var HDR_BLABLAID = "x-registered-blablaid";
 var edgeCache = caches.default;
-var BUILD_ID = false ? void 0 : "9a813dc40e1c";
+var BUILD_ID = false ? void 0 : "125348dfbbd6";
 var DATA_HOST = "https://nikke-api-data.pages.dev";
 var REVALIDATE_MS = 3e5;
 var appPromise;
@@ -23021,9 +23019,11 @@ var index_default = {
     const target = userPath ? userTargetOf(url2) : null;
     const isGet = request.method === "GET" || request.method === "HEAD";
     let key2;
+    let callerArea = false;
     const refresh = url2.searchParams.has("refresh") && !!env.ADMIN_TOKEN && request.headers.get("x-admin-token") === env.ADMIN_TOKEN;
     if (isGet) {
       url2.searchParams.delete("refresh");
+      callerArea = url2.searchParams.has("area");
       if (target && !url2.searchParams.has("area") && !/^\/api\/user\/[^/]+\/roster$/.test(url2.pathname)) {
         const area = await getArea(env, target);
         if (area) url2.searchParams.set("area", area);
@@ -23078,7 +23078,7 @@ var index_default = {
       const stored = new Response(res.clone().body, res);
       if (userPath) stored.headers.set("Cache-Control", `public, max-age=${USER_TTL}, s-maxage=${USER_TTL}`);
       ctx.waitUntil(edgeCache.put(key2, stored));
-      if (target && env.AREA_KV) {
+      if (target && env.AREA_KV && !callerArea) {
         ctx.waitUntil(
           (async () => {
             try {

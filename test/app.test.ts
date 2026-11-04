@@ -108,6 +108,35 @@ test("/api/events groups event_* scenes per event", async () => {
   assert.ok((await json("/api/events?q=first")).count >= 1);
 });
 
+test("/api/lines pages by default and rejects a query that normalizes to nothing", async () => {
+  const all = await json("/api/lines?speaker=" + encodeURIComponent("라피") + "&limit=500");
+  assert.ok(all.count > 0);
+  for (const bad of ["speaker=%20", "speaker=%20%20", "speaker=_-", "q=%20&speaker=%20", "q=!!!"]) {
+    const res = await get(`/api/lines?${bad}`);
+    assert.equal(res.status, 400, bad);
+    assert.deepEqual(await res.json(), { error: "q or speaker required" }, bad);
+  }
+});
+
+test("/api/lines returns at most 50 lines without a limit", async () => {
+  const { createApp } = await import("../src/factory.js");
+  const big = await createApp({
+    readText: async (rel: string) => {
+      if (rel.startsWith("lines/main")) return JSON.stringify({ d_main_big: { sp: ["라피"], l: Array.from({ length: 120 }, (_, i) => [0, `같은 대사 ${i}`]) } });
+      if (rel.startsWith("lines/")) return "{}";
+      return (await import("node:fs/promises")).readFile(path.join(import.meta.dirname, "fixtures/dist", rel), "utf8");
+    },
+  } as any);
+  const lines = async (qs: string) => (await (await big.request(`/api/lines?${qs}`)).json()) as any;
+  const q = `q=${encodeURIComponent("같은 대사")}`;
+  const first = await lines(q);
+  assert.equal(first.count, 120); // the total stays visible for paging on
+  assert.equal(first.lines.length, 50);
+  assert.equal((await lines(`${q}&limit=100`)).lines.length, 100);
+  assert.equal((await lines(`${q}&offset=100`)).lines.length, 20);
+  assert.equal((await lines(`${q}&page=3`)).lines.length, 20);
+});
+
 test("the script route skips SubScenario markers but /api/lines keeps their index", async () => {
   // event_firstaffection_01 carries one mid-scene — a cutscene marker, not a
   // line of dialogue, so reading output drops it but positions don't shift
