@@ -239,10 +239,10 @@ const openapi = {
           { name: "family", in: "query", schema: { type: "string", enum: ["1", "true"] }, description: "화자를 원본·이격 전체로 확장" },
           { name: "category", in: "query", schema: { type: "string", enum: [...SCENE_CATEGORIES] } },
           { name: "page", in: "query", schema: { type: "integer", minimum: 1 } },
-          { name: "limit", in: "query", schema: { type: "integer", minimum: 1, maximum: 500 } },
+          { name: "limit", in: "query", schema: { type: "integer", minimum: 1, maximum: 500, default: 50 } },
           { name: "offset", in: "query", schema: { type: "integer", default: 0 } },
         ],
-        responses: { "200": { description: "대사 목록 — 씬·이벤트 표시 포함" }, "400": { description: "q·speaker 둘 다 없음" } },
+        responses: { "200": { description: "대사 목록 — 씬·이벤트 표시 포함. count는 전체 일치 수" }, "400": { description: "q·speaker 둘 다 없거나 공백·구분자뿐임" } },
       },
     },
     "/api/nikkes/{id}/appearances": {

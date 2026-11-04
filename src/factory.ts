@@ -543,7 +543,7 @@ app.get("/", (c) =>
       "GET /api/events": "story event list — event_* scene groups; filter: q",
       "GET /api/events/:id": "event detail — episode scene list",
       "GET /api/events/:id/script": "whole event script, episode by episode ('speaker: text')",
-      "GET /api/lines": "dialogue search; q (text) and/or speaker, family, category",
+      "GET /api/lines": "dialogue search; q (text) and/or speaker, family, category; 50 per page by default",
       "GET /api/nikkes/:id/appearances": "scenes and events a character speaks in (all versions)",
       "GET /api/story/route": "story reading order (community guide)",
       "GET /api/story/next": "next stories on the route; chapter|after, done, required",
@@ -923,7 +923,8 @@ app.get("/api/lines", async (c) => {
   // cheap validation happens before any data loading — bad page/limit or a
   // query that normalizes to nothing shouldn't read a single file
   const nq = q ? searchNorm(q) : "";
-  if (q && !nq && !speaker) return c.json({ error: "q or speaker required" }, 400);
+  const ns = speaker ? norm(speaker) : "";
+  if (!nq && !ns) return c.json({ error: "q or speaker required" }, 400);
   const page = c.req.query("page"), limit = c.req.query("limit"), offset = c.req.query("offset");
   for (const [k, v] of Object.entries({ page, limit, offset })) {
     if (v !== undefined && v !== "" && (!Number.isInteger(Number(v)) || Number(v) < (k === "offset" ? 0 : 1))) {
@@ -932,7 +933,6 @@ app.get("/api/lines", async (c) => {
   }
   const fam = speaker && truthy(c.req.query("family")) ? families.byName(speaker) : undefined;
   const speakers = fam ? new Set(families.names(fam).map(norm)) : undefined;
-  const ns = speaker ? norm(speaker) : "";
   const [scenes, evOf, scripts] = await Promise.all([
     getScenes(),
     eventOfScene(),
@@ -943,7 +943,9 @@ app.get("/api/lines", async (c) => {
   const pg0 = { page: page ? Number(page) : undefined, limit: limit ? Number(limit) : undefined, offset: offset ? Number(offset) : undefined };
   const hits: { groupId: string; line: number; speaker: string; text: string }[] = [];
   let count = 0;
-  const lim = pg0.limit ? Math.min(pg0.limit, 500) : pg0.page ? 50 : Infinity;
+  // always a page — unlike the other lists, the full result here is the whole
+  // corpus (450k lines, ~78MB) for a query as short as one character
+  const lim = pg0.limit ? Math.min(pg0.limit, 500) : 50;
   const off = pg0.page ? (pg0.page - 1) * lim : (pg0.offset ?? 0);
   for (const [g, sc] of scripts) {
     if (!speaker && nq) {
