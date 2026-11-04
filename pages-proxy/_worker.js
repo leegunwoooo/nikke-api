@@ -20582,7 +20582,7 @@ function buildOpenapi(pkgVersion) {
           tags: ["nikkes"],
           summary: "\uCE90\uB9AD\uD130 \uBAA9\uB85D",
           parameters: [
-            { name: "q", in: "query", schema: { type: "string" }, description: "\uC774\uB984 \uAC80\uC0C9 (\uC804 \uC5B8\uC5B4 \uBD80\uBD84 \uC77C\uCE58)" },
+            { name: "q", in: "query", schema: { type: "string" }, description: "\uC774\uB984 \uAC80\uC0C9 (\uC804 \uC5B8\uC5B4 \uBD80\uBD84 \uC77C\uCE58). \uACF5\uBC31\xB7\uAD6C\uBD84\uC790\uB9CC \uC788\uC73C\uBA74 \uACB0\uACFC \uC5C6\uC74C, \uBE48 \uAC12\uC740 \uD544\uD130 \uC5C6\uC74C" },
             { name: "family", in: "query", schema: { type: "string", enum: ["1", "true"] }, description: "q\uB85C \uCC3E\uC740 \uCE90\uB9AD\uD130\uC758 \uB2E4\uB978 \uBC84\uC804(\uC6D0\uBCF8\xB7\uC774\uACA9)\uAE4C\uC9C0 \uD568\uAED8" },
             { name: "element", in: "query", schema: { type: "string" } },
             { name: "class", in: "query", schema: { type: "string" } },
@@ -20591,7 +20591,7 @@ function buildOpenapi(pkgVersion) {
             { name: "weapon", in: "query", schema: { type: "string" } },
             { name: "rarity", in: "query", schema: { type: "string" } },
             { name: "page", in: "query", schema: { type: "integer", minimum: 1 }, description: "\uD398\uC774\uC9C0 \uBC88\uD638 (1\uBD80\uD130 \u2014 offset \uB300\uC2E0 \uC0AC\uC6A9, \uBBF8\uC9C0\uC815 limit \uC2DC \uD398\uC774\uC9C0 \uD06C\uAE30 50)" },
-            { name: "limit", in: "query", schema: { type: "integer", maximum: 500 }, description: "\uCD5C\uB300 500, \uBBF8\uC9C0\uC815 \uC2DC \uC804\uCCB4" },
+            { name: "limit", in: "query", schema: { type: "integer", minimum: 1, maximum: 500 }, description: "\uCD5C\uB300 500, \uBBF8\uC9C0\uC815 \uC2DC \uC804\uCCB4" },
             { name: "offset", in: "query", schema: { type: "integer", default: 0 } }
           ],
           responses: { "200": { description: "\uCE90\uB9AD\uD130 \uBAA9\uB85D \u2014 count\uB294 \uC798\uB77C\uB0B4\uAE30 \uC804 \uC804\uCCB4 \uAC1C\uC218" } }
@@ -20623,7 +20623,7 @@ function buildOpenapi(pkgVersion) {
             { name: "family", in: "query", schema: { type: "string", enum: ["1", "true"] }, description: "\uC6D0\uBCF8\xB7\uC774\uACA9\uAE4C\uC9C0 \uD568\uAED8 (nikke\uB97C \uBAA8\uB4E0 \uBC84\uC804 \uC774\uB984\uACFC \uC815\uD655\uD788 \uB9E4\uCE6D)" },
             { name: "q", in: "query", schema: { type: "string" }, description: "\uC52C \uC81C\uBAA9 \uAC80\uC0C9" },
             { name: "page", in: "query", schema: { type: "integer", minimum: 1 }, description: "\uD398\uC774\uC9C0 \uBC88\uD638 (1\uBD80\uD130 \u2014 offset \uB300\uC2E0 \uC0AC\uC6A9, \uBBF8\uC9C0\uC815 limit \uC2DC \uD398\uC774\uC9C0 \uD06C\uAE30 50)" },
-            { name: "limit", in: "query", schema: { type: "integer", maximum: 500 }, description: "\uCD5C\uB300 500, \uBBF8\uC9C0\uC815 \uC2DC \uC804\uCCB4" },
+            { name: "limit", in: "query", schema: { type: "integer", minimum: 1, maximum: 500 }, description: "\uCD5C\uB300 500, \uBBF8\uC9C0\uC815 \uC2DC \uC804\uCCB4" },
             { name: "offset", in: "query", schema: { type: "integer", default: 0 } }
           ],
           responses: { "200": { description: "\uC52C \uBAA9\uB85D \u2014 count\uB294 \uC798\uB77C\uB0B4\uAE30 \uC804 \uC804\uCCB4 \uAC1C\uC218" } }
@@ -20636,7 +20636,7 @@ function buildOpenapi(pkgVersion) {
           parameters: [
             { name: "q", in: "query", schema: { type: "string" }, description: "\uC774\uBCA4\uD2B8 id \uAC80\uC0C9 (\uBD80\uBD84 \uC77C\uCE58)" },
             { name: "page", in: "query", schema: { type: "integer", minimum: 1 }, description: "\uD398\uC774\uC9C0 \uBC88\uD638 (1\uBD80\uD130 \u2014 offset \uB300\uC2E0 \uC0AC\uC6A9, \uBBF8\uC9C0\uC815 limit \uC2DC \uD398\uC774\uC9C0 \uD06C\uAE30 50)" },
-            { name: "limit", in: "query", schema: { type: "integer", maximum: 500 }, description: "\uCD5C\uB300 500, \uBBF8\uC9C0\uC815 \uC2DC \uC804\uCCB4" },
+            { name: "limit", in: "query", schema: { type: "integer", minimum: 1, maximum: 500 }, description: "\uCD5C\uB300 500, \uBBF8\uC9C0\uC815 \uC2DC \uC804\uCCB4" },
             { name: "offset", in: "query", schema: { type: "integer", default: 0 } }
           ],
           responses: { "200": { description: "\uC774\uBCA4\uD2B8 \uBAA9\uB85D \u2014 id\xB7episodes\xB7totalLines\xB7source\xB7scenes(groupId \uBC30\uC5F4)" } }
@@ -20657,7 +20657,7 @@ function buildOpenapi(pkgVersion) {
           parameters: [
             { name: "id", in: "path", required: true, schema: { type: "string" }, example: "event_firstaffection" },
             { name: "page", in: "query", schema: { type: "integer", minimum: 1 }, description: "\uC5D0\uD53C\uC18C\uB4DC \uD398\uC774\uC9C0 \uBC88\uD638" },
-            { name: "limit", in: "query", schema: { type: "integer", maximum: 500 }, description: "\uC5D0\uD53C\uC18C\uB4DC \uC218" },
+            { name: "limit", in: "query", schema: { type: "integer", minimum: 1, maximum: 500 }, description: "\uC5D0\uD53C\uC18C\uB4DC \uC218" },
             { name: "offset", in: "query", schema: { type: "integer", default: 0 } }
           ],
           responses: { "200": { description: "\uC5D0\uD53C\uC18C\uB4DC\uBCC4 \uB300\uBCF8 \u2014 count\uB294 \uC804\uCCB4 \uC5D0\uD53C\uC18C\uB4DC \uC218" }, "404": { description: "\uC5C6\uC74C" } }
@@ -20673,7 +20673,7 @@ function buildOpenapi(pkgVersion) {
             { name: "family", in: "query", schema: { type: "string", enum: ["1", "true"] }, description: "\uD654\uC790\uB97C \uC6D0\uBCF8\xB7\uC774\uACA9 \uC804\uCCB4\uB85C \uD655\uC7A5" },
             { name: "category", in: "query", schema: { type: "string", enum: [...SCENE_CATEGORIES] } },
             { name: "page", in: "query", schema: { type: "integer", minimum: 1 } },
-            { name: "limit", in: "query", schema: { type: "integer", maximum: 500 } },
+            { name: "limit", in: "query", schema: { type: "integer", minimum: 1, maximum: 500 } },
             { name: "offset", in: "query", schema: { type: "integer", default: 0 } }
           ],
           responses: { "200": { description: "\uB300\uC0AC \uBAA9\uB85D \u2014 \uC52C\xB7\uC774\uBCA4\uD2B8 \uD45C\uC2DC \uD3EC\uD568" }, "400": { description: "q\xB7speaker \uB458 \uB2E4 \uC5C6\uC74C" } }
@@ -20687,7 +20687,7 @@ function buildOpenapi(pkgVersion) {
             { name: "id", in: "path", required: true, schema: { type: "string" }, example: "\uC544\uB2C8\uC2A4", description: "\uCE90\uB9AD\uD130 id / resourceId / \uC774\uB984" },
             { name: "category", in: "query", schema: { type: "string", enum: [...SCENE_CATEGORIES] } },
             { name: "page", in: "query", schema: { type: "integer", minimum: 1 } },
-            { name: "limit", in: "query", schema: { type: "integer", maximum: 500 } },
+            { name: "limit", in: "query", schema: { type: "integer", minimum: 1, maximum: 500 } },
             { name: "offset", in: "query", schema: { type: "integer", default: 0 } }
           ],
           responses: { "200": { description: "\uB4F1\uC7A5 \uC52C\uACFC \uC774\uBCA4\uD2B8 \uC21C\uC704" }, "404": { description: "\uC5C6\uC74C" } }
@@ -20709,7 +20709,7 @@ function buildOpenapi(pkgVersion) {
             { name: "after", in: "query", schema: { type: "string" }, description: "\uBC29\uAE08 \uB05D\uB0B8 \uD56D\uBAA9 (\uC81C\uBAA9\xB7\uC774\uBCA4\uD2B8 id\xB7\uCC55\uD130 \uBC88\uD638)" },
             { name: "done", in: "query", schema: { type: "string" }, description: "\uC774\uBBF8 \uBCF8 \uAC83, \uCF64\uB9C8 \uAD6C\uBD84" },
             { name: "required", in: "query", schema: { type: "string", enum: ["1", "true"] }, description: "\uC120\uD0DD \uC2A4\uD1A0\uB9AC \uC81C\uC678" },
-            { name: "limit", in: "query", schema: { type: "integer", maximum: 20, default: 5 } }
+            { name: "limit", in: "query", schema: { type: "integer", minimum: 1, maximum: 20, default: 5 } }
           ],
           responses: { "200": { description: "next\xB7missed\xB7position" }, "400": { description: "chapter\xB7after \uC5C6\uC74C" }, "404": { description: "\uB8E8\uD2B8\uC5D0 \uC5C6\uB294 \uD56D\uBAA9" } }
         }
@@ -20731,7 +20731,7 @@ function buildOpenapi(pkgVersion) {
             { name: "chapter", in: "query", schema: { type: "integer" }, description: "\uCC55\uD130 \uBC88\uD638" },
             { name: "mode", in: "query", schema: { type: "string", enum: ["Normal", "Hard", "Story"] } },
             { name: "page", in: "query", schema: { type: "integer", minimum: 1 }, description: "\uD398\uC774\uC9C0 \uBC88\uD638 (1\uBD80\uD130 \u2014 offset \uB300\uC2E0 \uC0AC\uC6A9, \uBBF8\uC9C0\uC815 limit \uC2DC \uD398\uC774\uC9C0 \uD06C\uAE30 50)" },
-            { name: "limit", in: "query", schema: { type: "integer", maximum: 500 }, description: "\uCD5C\uB300 500, \uBBF8\uC9C0\uC815 \uC2DC \uC804\uCCB4" },
+            { name: "limit", in: "query", schema: { type: "integer", minimum: 1, maximum: 500 }, description: "\uCD5C\uB300 500, \uBBF8\uC9C0\uC815 \uC2DC \uC804\uCCB4" },
             { name: "offset", in: "query", schema: { type: "integer", default: 0 } }
           ],
           responses: { "200": { description: "\uC2A4\uD14C\uC774\uC9C0 \uBAA9\uB85D \u2014 count\uB294 \uC798\uB77C\uB0B4\uAE30 \uC804 \uC804\uCCB4 \uAC1C\uC218" } }
@@ -20754,7 +20754,7 @@ function buildOpenapi(pkgVersion) {
             { name: "grade", in: "query", schema: { type: "string" }, description: "\uCF54\uC2A4\uD2AC \uB4F1\uAE09 (Special/Event/Normal \uB4F1)" },
             { name: "nikke", in: "query", schema: { type: "string" }, description: "\uC18C\uC720 \uB2C8\uCF00 \u2014 \uC774\uB984 \uBD80\uBD84 \uC77C\uCE58 \uB610\uB294 id/resourceId" },
             { name: "page", in: "query", schema: { type: "integer", minimum: 1 }, description: "\uD398\uC774\uC9C0 \uBC88\uD638 (1\uBD80\uD130 \u2014 offset \uB300\uC2E0 \uC0AC\uC6A9, \uBBF8\uC9C0\uC815 limit \uC2DC \uD398\uC774\uC9C0 \uD06C\uAE30 50)" },
-            { name: "limit", in: "query", schema: { type: "integer", maximum: 500 }, description: "\uCD5C\uB300 500, \uBBF8\uC9C0\uC815 \uC2DC \uC804\uCCB4" },
+            { name: "limit", in: "query", schema: { type: "integer", minimum: 1, maximum: 500 }, description: "\uCD5C\uB300 500, \uBBF8\uC9C0\uC815 \uC2DC \uC804\uCCB4" },
             { name: "offset", in: "query", schema: { type: "integer", default: 0 } }
           ],
           responses: { "200": { description: "\uCF54\uC2A4\uD2AC \uBAA9\uB85D \u2014 count\uB294 \uC798\uB77C\uB0B4\uAE30 \uC804 \uC804\uCCB4 \uAC1C\uC218" } }
@@ -20778,7 +20778,7 @@ function buildOpenapi(pkgVersion) {
             { name: "rare", in: "query", schema: { type: "string" }, description: "\uB4F1\uAE09 (T7~T10 \uB4F1)" },
             { name: "slot", in: "query", schema: { type: "string", enum: ["head", "body", "arm", "leg"] }, description: "\uBD80\uC704 (\uBAB8\uD1B5\uC740 body \u2014 \uB9AC\uC18C\uC2A4 id\uC758 icn_equipment_body_*\uC5D0 \uB300\uC751)" },
             { name: "page", in: "query", schema: { type: "integer", minimum: 1 }, description: "\uD398\uC774\uC9C0 \uBC88\uD638 (1\uBD80\uD130 \u2014 offset \uB300\uC2E0 \uC0AC\uC6A9, \uBBF8\uC9C0\uC815 limit \uC2DC \uD398\uC774\uC9C0 \uD06C\uAE30 50)" },
-            { name: "limit", in: "query", schema: { type: "integer", maximum: 500 }, description: "\uCD5C\uB300 500, \uBBF8\uC9C0\uC815 \uC2DC \uC804\uCCB4" },
+            { name: "limit", in: "query", schema: { type: "integer", minimum: 1, maximum: 500 }, description: "\uCD5C\uB300 500, \uBBF8\uC9C0\uC815 \uC2DC \uC804\uCCB4" },
             { name: "offset", in: "query", schema: { type: "integer", default: 0 } }
           ],
           responses: { "200": { description: "\uC7A5\uBE44 \uBAA9\uB85D \u2014 count\uB294 \uC798\uB77C\uB0B4\uAE30 \uC804 \uC804\uCCB4 \uAC1C\uC218" } }
@@ -20793,7 +20793,7 @@ function buildOpenapi(pkgVersion) {
             { name: "groupId", in: "query", schema: { type: "integer" }, description: "\uC635\uC158 \uADF8\uB8F9 ID" },
             { name: "rank", in: "query", schema: { type: "integer" }, description: "\uC635\uC158 \uB4F1\uAE09" },
             { name: "page", in: "query", schema: { type: "integer", minimum: 1 }, description: "\uD398\uC774\uC9C0 \uBC88\uD638 (1\uBD80\uD130 \u2014 offset \uB300\uC2E0 \uC0AC\uC6A9, \uBBF8\uC9C0\uC815 limit \uC2DC \uD398\uC774\uC9C0 \uD06C\uAE30 50)" },
-            { name: "limit", in: "query", schema: { type: "integer", maximum: 500 } },
+            { name: "limit", in: "query", schema: { type: "integer", minimum: 1, maximum: 500 } },
             { name: "offset", in: "query", schema: { type: "integer", default: 0 } }
           ],
           responses: { "200": { description: "\uC635\uC158 \uBAA9\uB85D" }, "400": { description: "groupId/rank \uD615\uC2DD \uC624\uB958" } }
@@ -20824,7 +20824,7 @@ function buildOpenapi(pkgVersion) {
             { name: "resourceId", in: "query", schema: { type: "integer" }, description: "\uCE90\uB9AD\uD130 resourceId" },
             { name: "orphans", in: "query", schema: { type: "string", enum: ["true"] }, description: "true\uBA74 \uCE90\uB9AD\uD130 \uBBF8\uB9E4\uCE6D(NPC/\uBBF8\uCD9C\uC2DC) \uC544\uC774\uCF58\uB9CC" },
             { name: "page", in: "query", schema: { type: "integer", minimum: 1 }, description: "\uD398\uC774\uC9C0 \uBC88\uD638 (1\uBD80\uD130 \u2014 offset \uB300\uC2E0 \uC0AC\uC6A9, \uBBF8\uC9C0\uC815 limit \uC2DC \uD398\uC774\uC9C0 \uD06C\uAE30 50)" },
-            { name: "limit", in: "query", schema: { type: "integer", maximum: 500 }, description: "\uCD5C\uB300 500, \uBBF8\uC9C0\uC815 \uC2DC \uC804\uCCB4" },
+            { name: "limit", in: "query", schema: { type: "integer", minimum: 1, maximum: 500 }, description: "\uCD5C\uB300 500, \uBBF8\uC9C0\uC815 \uC2DC \uC804\uCCB4" },
             { name: "offset", in: "query", schema: { type: "integer", default: 0 } }
           ],
           responses: { "200": { description: "\uC544\uBC14\uD0C0 \uBAA9\uB85D \u2014 count\uB294 \uC798\uB77C\uB0B4\uAE30 \uC804 \uC804\uCCB4 \uAC1C\uC218" } }
@@ -20847,7 +20847,7 @@ function buildOpenapi(pkgVersion) {
             { name: "rare", in: "query", schema: { type: "string", enum: ["R", "SR", "SSR"] } },
             { name: "nikke", in: "query", schema: { type: "string" }, description: "\uC560\uC7A5\uD488 \uC8FC\uC778: \uC774\uB984 \uBD80\uBD84 \uC77C\uCE58, \uCE90\uB9AD\uD130 id, nameCode" },
             { name: "page", in: "query", schema: { type: "integer", minimum: 1 }, description: "\uD398\uC774\uC9C0 \uBC88\uD638 (1\uBD80\uD130 \u2014 offset \uB300\uC2E0 \uC0AC\uC6A9, \uBBF8\uC9C0\uC815 limit \uC2DC \uD398\uC774\uC9C0 \uD06C\uAE30 50)" },
-            { name: "limit", in: "query", schema: { type: "integer", maximum: 500 }, description: "\uCD5C\uB300 500, \uBBF8\uC9C0\uC815 \uC2DC \uC804\uCCB4" },
+            { name: "limit", in: "query", schema: { type: "integer", minimum: 1, maximum: 500 }, description: "\uCD5C\uB300 500, \uBBF8\uC9C0\uC815 \uC2DC \uC804\uCCB4" },
             { name: "offset", in: "query", schema: { type: "integer", default: 0 } }
           ],
           responses: { "200": { description: "\uC18C\uC7A5\uD488 \uBAA9\uB85D" } }
@@ -20868,7 +20868,7 @@ function buildOpenapi(pkgVersion) {
           parameters: [
             { name: "q", in: "query", schema: { type: "string" } },
             { name: "page", in: "query", schema: { type: "integer", minimum: 1 }, description: "\uD398\uC774\uC9C0 \uBC88\uD638 (1\uBD80\uD130 \u2014 offset \uB300\uC2E0 \uC0AC\uC6A9, \uBBF8\uC9C0\uC815 limit \uC2DC \uD398\uC774\uC9C0 \uD06C\uAE30 50)" },
-            { name: "limit", in: "query", schema: { type: "integer", maximum: 500 }, description: "\uCD5C\uB300 500, \uBBF8\uC9C0\uC815 \uC2DC \uC804\uCCB4" },
+            { name: "limit", in: "query", schema: { type: "integer", minimum: 1, maximum: 500 }, description: "\uCD5C\uB300 500, \uBBF8\uC9C0\uC815 \uC2DC \uC804\uCCB4" },
             { name: "offset", in: "query", schema: { type: "integer", default: 0 } }
           ],
           responses: { "200": { description: "\uD050\uBE0C \uBAA9\uB85D" } }
@@ -21181,7 +21181,7 @@ function resolvePaging(qs2, total) {
   const limit = num(qs2.limit);
   const offset = num(qs2.offset);
   for (const [k, v] of Object.entries({ page, limit, offset })) {
-    if (v !== void 0 && (!Number.isInteger(v) || v < 0 || k === "page" && v < 1)) {
+    if (v !== void 0 && (!Number.isInteger(v) || v < (k === "offset" ? 0 : 1))) {
       return { error: `invalid ${k}` };
     }
   }
@@ -21407,7 +21407,7 @@ async function createApp(storage, options = {}) {
       const a = avatarMap?.[String(iconId)];
       const n = a ? byResourceId.get(a.resourceId) : void 0;
       if (!n || !a) return { nameCode: iconId };
-      const costume = a.costumeIndex > 0 ? n.costumes[a.costumeIndex - 1] : void 0;
+      const costume = a.costumeIndex > 0 ? n.costumes.find((co) => co.skinIndex === a.costumeIndex) : void 0;
       return { iconId, costumeIndex: a.costumeIndex, ...charInfo(n, costume?.images.icon) };
     };
     const cubeRef = (tid, lv) => !tid ? null : { id: tid, level: lv ?? 0, name: cubeNames.get(tid)?.name ?? null };
@@ -21509,6 +21509,7 @@ async function createApp(storage, options = {}) {
   }
   function findByName(q) {
     const nq = norm(q);
+    if (!nq) return [];
     const matches = characters.filter((c) => Object.values(c.name).some((n) => norm(n).includes(nq)));
     return matches.sort((a, b) => {
       const ae = Object.values(a.name).some((n) => norm(n) === nq) ? 0 : 1;
@@ -21863,7 +21864,7 @@ async function createApp(storage, options = {}) {
     if (q && !nq && !speaker) return c.json({ error: "q or speaker required" }, 400);
     const page = c.req.query("page"), limit = c.req.query("limit"), offset = c.req.query("offset");
     for (const [k, v] of Object.entries({ page, limit, offset })) {
-      if (v !== void 0 && v !== "" && (!Number.isInteger(Number(v)) || Number(v) < 0 || k === "page" && Number(v) < 1)) {
+      if (v !== void 0 && v !== "" && (!Number.isInteger(Number(v)) || Number(v) < (k === "offset" ? 0 : 1))) {
         return c.json({ error: `invalid ${k}` }, 400);
       }
     }
@@ -22001,7 +22002,9 @@ async function createApp(storage, options = {}) {
   app.get("/api/story/next", async (c) => {
     const { chapter, after } = c.req.query();
     const done = new Set((c.req.query("done") ?? "").split(",").map((s) => searchNorm(s)).filter(Boolean));
-    const limit = Math.min(Number(c.req.query("limit") ?? 5) || 5, 20);
+    const limitN = Number(c.req.query("limit") || 5);
+    if (!Number.isInteger(limitN) || limitN < 1) return c.json({ error: "invalid limit" }, 400);
+    const limit = Math.min(limitN, 20);
     const requiredOnly = truthy(c.req.query("required"));
     const entries = await storyRoute();
     const names = (e) => [e.key, ...e.ids, e.title, ...e.kind === "main" ? [String(e.chapter)] : []].map(searchNorm);
@@ -22228,7 +22231,7 @@ async function createApp(storage, options = {}) {
   });
   const avatarRow = (iconId, a) => {
     const n = byResourceId.get(a.resourceId);
-    const costume = n && a.costumeIndex > 0 ? n.costumes[a.costumeIndex - 1] : void 0;
+    const costume = n && a.costumeIndex > 0 ? n.costumes.find((co) => co.skinIndex === a.costumeIndex) : void 0;
     return {
       iconId,
       resourceId: a.resourceId,
@@ -22800,7 +22803,7 @@ var CREDS_KEY = "bla:creds";
 var HDR_CREDS = "x-bla-creds";
 var HDR_BLABLAID = "x-registered-blablaid";
 var edgeCache = caches.default;
-var BUILD_ID = false ? void 0 : "aa95cf49a0a0";
+var BUILD_ID = false ? void 0 : "5a3c92443d1f";
 var DATA_HOST = "https://nikke-api-data.pages.dev";
 var REVALIDATE_MS = 3e5;
 var appPromise;

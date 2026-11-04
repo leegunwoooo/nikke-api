@@ -106,7 +106,7 @@ GET /api/user/<blablaid>/nikke/아니스               # 부분 일치 → 매�
 
 | 엔드포인트 | 설명 |
 |------------|------|
-| `GET /api/nikkes` | 캐릭터 목록 — `?q=` 이름 검색(전 언어 부분 일치), `?family=` 이격 포함 확장 검색, `?element=` `?class=` `?burst=` `?corporation=` `?weapon=` `?rarity=` 필터 (AND 결합), `?limit=`/`?offset=`/`?page=` 페이지네이션 (미지정 시 전체, 최대 500 — `count`는 잘라내기 전 전체 개수) |
+| `GET /api/nikkes` | 캐릭터 목록 — `?q=` 이름 검색(전 언어 부분 일치), `?family=` 이격 포함 확장 검색, `?element=` `?class=` `?burst=` `?corporation=` `?weapon=` `?rarity=` 필터 (AND 결합), `?limit=`/`?offset=`/`?page=` 페이지네이션 (미지정 시 전체, 최대 500, `limit=0`은 400 — `count`는 잘라내기 전 전체 개수). 공백뿐인 `?q=`는 결과 없음 |
 | `GET /api/nikkes/:id` | 캐릭터 상세 — 스킬/스탯/배경/CV/보이스 등 `details` 포함. `:id`는 캐릭터 ID·resourceId·이름(부분 일치) 모두 가능 |
 | `GET /api/scenes` | 씬 목록 — `?category=`(`main`/`event`/`sudden`/`attractive`/`favorite`/`library`) `?nikke=` `?q=` `?limit=`/`?offset=`/`?page=` |
 | `GET /api/scenes/:groupId` | 씬 대본 — 대사별 화자/아이콘/보이스 |
@@ -116,7 +116,7 @@ GET /api/user/<blablaid>/nikke/아니스               # 부분 일치 → 매�
 | `GET /api/events/:id` | 이벤트 상세 — 에피소드별 씬 목록 |
 | `GET /api/events/:id/script` | 이벤트 전체 대본 — 에피소드 단위 페이지네이션 |
 | `GET /api/story/route` | 스토리 감상 순서 — 메인 챕터 사이에 이벤트·호감도를 끼워 넣은 커뮤니티 가이드 순서 |
-| `GET /api/story/next` | 다음 볼 스토리 추천 — `?chapter=` `?after=` `?done=` `?required=` `?limit=` |
+| `GET /api/story/next` | 다음 볼 스토리 추천 — `?chapter=` `?after=` `?done=` `?required=` `?limit=`(기본 5, 최대 20, 양의 정수만) |
 | `GET /api/stages` | 캠페인 스테이지 목록 — `?chapter=` `?mode=` `?q=` `?limit=`/`?offset=`/`?page=` |
 | `GET /api/stages/:id` | 스테이지 상세 — 권장 전투력·시나리오 키 |
 | `GET /api/costumes` | 코스튬 목록 — `?q=` `?grade=` `?nikke=` `?limit=`/`?offset=`/`?page=` |
