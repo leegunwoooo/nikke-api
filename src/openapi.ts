@@ -543,7 +543,7 @@ const openapi = {
         tags: ["user"],
         summary: "유저 보유 니케 여러 명 상세",
         description:
-          "쉼표로 구분한 이름이나 id의 상세를 업스트림 호출 2번으로 조회. 이름이 정확히 같은 니케 우선, " +
+          "쉼표로 구분한 이름이나 id, 또는 all=1로 보유 전원의 상세를 조회. 이름이 정확히 같은 니케 우선, " +
           "찾지 못한 이름은 notFound, 후보가 여럿이면 ambiguous로 반환.",
         parameters: [
           {
@@ -556,10 +556,16 @@ const openapi = {
           {
             name: "names",
             in: "query",
-            required: true,
             schema: { type: "string" },
-            description: "쉼표로 구분한 이름이나 id, 최대 50개",
+            description: "쉼표로 구분한 이름이나 id, 최대 50개. all과 함께 쓸 수 없음",
             example: "라피,앵커",
+          },
+          {
+            name: "all",
+            in: "query",
+            schema: { type: "string" },
+            description: "값이 있으면 보유 전원을 전투력순으로 조회",
+            example: "1",
           },
         ],
         responses: {
@@ -580,7 +586,7 @@ const openapi = {
               },
             },
           },
-          "400": { description: "names 누락 또는 50개 초과" },
+          "400": { description: "names와 all이 모두 없거나 함께 있음, 또는 names 50개 초과" },
         },
       },
     },

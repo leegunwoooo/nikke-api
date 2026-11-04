@@ -363,6 +363,10 @@ test("get_user_nikke_builds passes the names through and needs a blablaid", asyn
     assert.match((await tool("get_user_nikke_builds", { nikkes: ["라피"] })).json.error, /share link/);
     const slim = (await tool("get_user_nikke_builds", { blablaid: "12345", nikkes: ["라피"], fields: "character.name" })).json;
     assert.deepEqual(slim.nikkes, [{ character: { name: "라피" } }]);
+    asked.length = 0;
+    const every = (await tool("get_user_nikke_builds", { blablaid: "12345", fields: "character.name" })).json;
+    assert.deepEqual(every.nikkes.map((n: any) => n.character.name), ["라피", "앵커"]);
+    assert.deepEqual(asked, [[3001, 3003]]);
   } finally {
     globalThis.fetch = orig;
     process.env = env;
@@ -375,6 +379,39 @@ test("search_favorites finds a character's 애장품 without opening each one", 
   assert.deepEqual(r.favorites.map((f: any) => [f.id, f.character.name]), [[100, "라피"]]);
   const { result } = await rpc("tools/list");
   assert.match(result.tools.find((x: any) => x.name === "search_favorites").description, /애장품/);
+});
+
+test("get_user_nikke_builds says how to continue when a page isn't the whole answer", async () => {
+  resetUserRateLimit();
+  resetBlaSession();
+  const orig = globalThis.fetch;
+  const env = { ...process.env };
+  process.env.BLA_OPEN_ID ??= "test-openid";
+  process.env.BLA_TOKEN ??= "test-token";
+  const owned = Array.from({ length: 60 }, (_, i) => ({ name_code: 9000 + i, lv: 1, combat: i }));
+  globalThis.fetch = (async (input: any) => {
+    const url = String(input?.url ?? input);
+    if (url.endsWith("/api/user/Login"))
+      return new Response(JSON.stringify({ code: 0 }), { headers: { "set-cookie": "game_token=t; Path=/" } });
+    if (url.includes("GetUserGamePlayerInfo")) return Response.json({ code: 0, data: { area_id: 83 } });
+    if (url.includes("GetUserCharacters")) return Response.json({ code: 0, data: { characters: owned } });
+    if (url.includes("GetUserCharacterDetails")) return Response.json({ code: 0, data: { character_details: [], state_effects: [] } });
+    return Response.json({ code: -1, msg: "unmocked" });
+  }) as typeof fetch;
+  try {
+    const first = (await tool("get_user_nikke_builds", { blablaid: "12345" })).json;
+    assert.equal(first.count, 60);
+    assert.equal(first.nikkes.length, 50);
+    assert.equal(first.truncated.nextOffset, 50);
+    assert.equal(first.truncated.omitted, 10);
+    const rest = (await tool("get_user_nikke_builds", { blablaid: "12345", offset: 50 })).json;
+    assert.equal(rest.nikkes.length, 10);
+    assert.equal(rest.truncated, undefined);
+  } finally {
+    globalThis.fetch = orig;
+    process.env = env;
+    resetUserRateLimit();
+  }
 });
 
 test("get_user_nikkes says what it returns", async () => {

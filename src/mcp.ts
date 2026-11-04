@@ -17,6 +17,26 @@ const MAX_CHARS = 60_000;
 // under a model's context budget — the other tools can't continue, so a
 // lower cap would lose data instead
 const EVENT_PAGE_CHARS = 20_000;
+// full builds overflow MAX_CHARS past roughly 35 nikkes — no point paying for
+// more details upstream than one page can return
+const BUILDS_PAGE = 50;
+// a page under MAX_CHARS gets no truncated note from fitJson, and without one
+// a model reads 50 of 131 as the whole answer
+const noteMoreBuilds = (d: any) => {
+  const reached = (d?.offset ?? 0) + (d?.nikkes?.length ?? 0);
+  return d?.count > reached
+    ? {
+        ...d,
+        truncated: {
+          field: "nikkes",
+          returned: d.nikkes.length,
+          omitted: d.count - reached,
+          nextOffset: reached,
+          hint: "more nikkes remain — call again with this offset",
+        },
+      }
+    : d;
+};
 
 const INSTRUCTIONS = `Unofficial NIKKE (GODDESS OF VICTORY: NIKKE) game data. Data © SHIFT UP / Level Infinite.
 - Character names exist in ko/en/ja/zh-TW and searches match any of them; responses default to Korean (lang=ko).
@@ -747,20 +767,20 @@ export function buildServer(api: Fetcher, version: string, origin = "", boundBla
     {
       title: "Get several of a player's NIKKEs",
       description:
-        "Build detail of several owned characters in one call: skill levels, equipment, cube, favorite item. Use this instead of repeated get_user_nikke calls, which trip the rate limit. Exact names win over other versions; notFound and ambiguous report names it couldn't resolve. Pass fields when only some values are needed — a full build is about 1,700 characters per nikke. Long answers come back in pages — continue from truncated.nextOffset. Live and rate limited.",
+        "Build detail of several owned characters in one call: skill levels, equipment, cube, favorite item. Omit nikkes to cover every owned character, strongest first. Use this instead of repeated get_user_nikke calls, which trip the rate limit. Exact names win over other versions; notFound and ambiguous report names it couldn't resolve. Pass fields when only some values are needed — a full build is about 1,700 characters per nikke. Long answers come back in pages — continue from truncated.nextOffset. Live and rate limited.",
       inputSchema: z.object({
         blablaid: BLABLAID.optional(),
-        nikkes: z.array(z.string().min(1)).min(1).max(50).describe("Character names (any language) or ids"),
+        nikkes: z.array(z.string().min(1)).min(1).max(50).optional().describe("Character names (any language) or ids. Omit for every owned character"),
         fields: z.string().optional().describe("Comma-separated dot paths kept per entry, e.g. 'character.name,favoriteItem'"),
         offset: OFFSET,
         lang: LANG,
       }),
       annotations: LIVE,
     },
-    userTool("get_user_nikke_builds", (a: { blablaid?: string; nikkes: string[]; fields?: string; offset?: number; lang: string }) => {
+    userTool("get_user_nikke_builds", (a: { blablaid?: string; nikkes?: string[]; fields?: string; offset?: number; lang: string }) => {
       const blablaid = a.blablaid ?? boundBlablaid;
       return blablaid
-        ? call(api, "get_user_nikke_builds", `/api/user/nikke-builds${qs({ blablaid, names: a.nikkes.join(","), fields: a.fields, offset: a.offset, lang: a.lang })}`)
+        ? call(api, "get_user_nikke_builds", `/api/user/nikke-builds${qs({ blablaid, ...(a.nikkes ? { names: a.nikkes.join(",") } : { all: "1" }), fields: a.fields, limit: a.fields ? undefined : BUILDS_PAGE, offset: a.offset, lang: a.lang })}`, noteMoreBuilds)
         : needBlablaid();
     }),
   );
