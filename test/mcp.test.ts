@@ -5,6 +5,7 @@ import { test } from "node:test";
 process.env.NIKKE_DATA_DIR = path.join(import.meta.dirname, "fixtures/dist");
 const { default: app } = await import("../src/app.js");
 const { fitJson, requestOrigin, resetUserRateLimit } = await import("../src/mcp.js");
+const { resetBlaSession } = await import("../src/blabla.js");
 
 // stateless 2025-era Streamable HTTP: every call is a standalone POST and the
 // JSON-RPC reply comes back as a single SSE message
@@ -297,6 +298,42 @@ test("llms.txt indexes the MCP guide and API docs", async () => {
 });
 
 // keep last: the burst guard is process-wide state
+test("get_user_nikke resolves an exact name without a second lookup", async () => {
+  resetUserRateLimit();
+  resetBlaSession();
+  const orig = globalThis.fetch;
+  const env = { ...process.env };
+  process.env.BLA_OPEN_ID ??= "test-openid";
+  process.env.BLA_TOKEN ??= "test-token";
+  const lookups: string[] = [];
+  globalThis.fetch = (async (input: any) => {
+    const url = String(input?.url ?? input);
+    if (url.endsWith("/api/user/Login"))
+      return new Response(JSON.stringify({ code: 0 }), { headers: { "set-cookie": "game_token=t; Path=/" } });
+    if (url.includes("GetUserGamePlayerInfo")) return Response.json({ code: 0, data: { area_id: 83 } });
+    if (url.includes("GetUserCharacters")) {
+      lookups.push("characters");
+      return Response.json({ code: 0, data: { characters: [{ name_code: 3003, lv: 100 }, { name_code: 5016, lv: 200 }] } });
+    }
+    if (url.includes("GetUserCharacterDetails")) {
+      lookups.push("details");
+      return Response.json({ code: 0, data: { character_details: [], state_effects: [] } });
+    }
+    return Response.json({ code: -1, msg: "unmocked" });
+  }) as typeof fetch;
+  try {
+    const hit = (await tool("get_user_nikke", { blablaid: "12345", nameOrId: "앵커" })).json;
+    assert.equal(hit.character.id, 2);
+    assert.deepEqual(hit.alsoMatched, [{ id: 3, name: "앵커: 이노센트 메이드" }]);
+    assert.deepEqual(lookups, ["characters", "details"]);
+    assert.equal((await tool("get_user_nikke", { blablaid: "12345", nameOrId: "앵" })).json.count, 2);
+  } finally {
+    globalThis.fetch = orig;
+    process.env = env;
+    resetUserRateLimit();
+  }
+});
+
 test("get_user_nikkes says what it returns", async () => {
   const { result } = await rpc("tools/list");
   const t = result.tools.find((x: any) => x.name === "get_user_nikkes");

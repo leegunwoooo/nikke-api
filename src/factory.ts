@@ -1653,7 +1653,9 @@ async function userNikkeList(c: Context) {
 }
 
 // single owned nikke detail — nameOrId is name / id / resourceId / nameCode,
-// matched like /api/nikkes/:id (fuzzy name); multiple hits return the list
+// matched like /api/nikkes/:id (fuzzy name); multiple hits return the list.
+// ?exact=1 lets a name equal to one hit win over the other versions (이격) —
+// resolved here so the caller doesn't spend a second rate-limited lookup
 async function userNikkeDetail(c: Context) {
   try {
     const lookups = loadProfileLookups(); // dist reads overlap the upstream calls
@@ -1662,8 +1664,21 @@ async function userNikkeDetail(c: Context) {
     const key = c.req.param("nameOrId") ?? "";
     const { charRef, normalizeNikke, matchesNikke } = await lookups;
     const fields = fieldsOf(c);
-    const hits = res.owned.filter((ch) => matchesNikke(key, ch));
+    let hits = res.owned.filter((ch) => matchesNikke(key, ch));
     if (hits.length === 0) return c.json({ error: "not found" }, 404);
+    let alsoMatched: { id?: number; name?: unknown }[] | undefined;
+    if (hits.length > 1 && c.req.query("exact")) {
+      const nameOf = (ch: any) => (charRef(ch.name_code) as any)?.name;
+      const exact = hits.filter((ch) =>
+        Object.values(nameOf(ch) ?? {}).some((x) => norm(String(x)) === norm(key)),
+      );
+      if (exact.length === 1) {
+        alsoMatched = hits
+          .filter((ch) => ch !== exact[0])
+          .map((ch) => ({ id: (charRef(ch.name_code) as any)?.id, name: nameOf(ch) }));
+        hits = exact;
+      }
+    }
     if (hits.length > 1)
       return c.json({
         count: hits.length,
@@ -1685,7 +1700,10 @@ async function userNikkeDetail(c: Context) {
       (((details.data as any)?.state_effects ?? []) as any[]).map((e: any) => [String(e.id), e]),
     );
     return c.json(
-      pickFields(normalizeNikke(ch, detailByCode.get(ch.name_code) ?? {}, effectById), fields),
+      pickFields(
+        { ...normalizeNikke(ch, detailByCode.get(ch.name_code) ?? {}, effectById), ...(alsoMatched ? { alsoMatched } : {}) },
+        fields,
+      ),
     );
   } catch (e) {
     const msg = e instanceof Error ? e.message : String(e);

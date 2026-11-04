@@ -1111,6 +1111,8 @@ GET /api/user/<blablaid>/nikke?element=Iron&burst=III  # 도감과 동일한 속
 
 매칭이 정확히 1명이면 상세 객체를, 복수면 목록(`{count, nikkes[]}`)을 반환합니다. `?fields=`로 상세 객체(또는 목록 항목)를 선택적으로 잘라낼 수 있습니다.
 
+`?exact=1`을 붙이면 복수 매칭 중 이름이 정확히 같은 니케(전 언어, 대소문자·공백·`:` 무시)가 1명일 때 그 니케의 상세를 반환하고, 나머지는 `alsoMatched: [{ id, name }]`에 담습니다. 예를 들어 `드레이크`는 `드레이크 : 그레이트 빌런`이 함께 있어도 `드레이크` 상세가 옵니다. 정확히 같은 이름이 없으면 기본 동작과 같습니다.
+
 ```
 GET /api/user/<blablaid>/nikke/아니스%20%3A%20스타   # 이름 (URL 인코딩)
 GET /api/user/<blablaid>/nikke/3017                # 캐릭터 id

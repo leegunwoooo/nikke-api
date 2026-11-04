@@ -20167,7 +20167,7 @@ function buildServer(api, version2, origin = "", boundBlablaid) {
     "get_user_nikke",
     {
       title: "Get one of a player's NIKKEs",
-      description: "Build detail of one owned character: skill levels, equipment, cube, favorite item. If the name matches several owned characters, a list comes back \u2014 call again with an id. Live and rate limited.",
+      description: "Build detail of one owned character: skill levels, equipment, cube, favorite item. An exact character name returns that character even when other owned versions also match \u2014 the rest are listed in alsoMatched. A name that only partially matches several owned characters returns a list \u2014 call again with an id. Live and rate limited.",
       inputSchema: object({
         blablaid: BLABLAID.optional(),
         nameOrId: string2().min(1).describe("Character name (partial, any language) or id"),
@@ -20177,7 +20177,7 @@ function buildServer(api, version2, origin = "", boundBlablaid) {
     },
     userTool("get_user_nikke", (a) => {
       const blablaid = a.blablaid ?? boundBlablaid;
-      return blablaid ? call(api, "get_user_nikke", `/api/user/nikke/${enc(a.nameOrId)}${qs({ blablaid, lang: a.lang })}`) : needBlablaid();
+      return blablaid ? call(api, "get_user_nikke", `/api/user/nikke/${enc(a.nameOrId)}${qs({ blablaid, exact: "1", lang: a.lang })}`) : needBlablaid();
     })
   );
   server.registerTool(
@@ -20927,7 +20927,7 @@ function buildOpenapi(pkgVersion) {
         get: {
           tags: ["user"],
           summary: "\uC720\uC800 \uBCF4\uC720 \uB2C8\uCF00 \uB2E8\uC77C \uC0C1\uC138",
-          description: "nameOrId = \uB2C8\uCF00 \uC774\uB984(\uC804 \uC5B8\uC5B4 \uBD80\uBD84 \uC77C\uCE58)\xB7id\xB7resourceId\xB7nameCode \u2014 /api/nikkes/{id}\uC640 \uAC19\uC740 \uBC29\uC2DD. \uB2E8\uC77C \uB9E4\uCE6D \uC2DC \uC0C1\uC138(\uC2A4\uD0AC \uB808\uBCA8\xB7\uC7A5\uBE44+\uC635\uC158 \uC218\uCE58\xB7\uD050\uBE0C\xB7\uC18C\uC7A5\uD488\xB7\uCF54\uC2A4\uD2AC\xB7\uD638\uAC10\uB3C4), \uBCF5\uC218 \uB9E4\uCE6D \uC2DC \uACBD\uB7C9 \uBAA9\uB85D \uBC18\uD658.",
+          description: "nameOrId = \uB2C8\uCF00 \uC774\uB984(\uC804 \uC5B8\uC5B4 \uBD80\uBD84 \uC77C\uCE58)\xB7id\xB7resourceId\xB7nameCode \u2014 /api/nikkes/{id}\uC640 \uAC19\uC740 \uBC29\uC2DD. \uB2E8\uC77C \uB9E4\uCE6D \uC2DC \uC0C1\uC138(\uC2A4\uD0AC \uB808\uBCA8\xB7\uC7A5\uBE44+\uC635\uC158 \uC218\uCE58\xB7\uD050\uBE0C\xB7\uC18C\uC7A5\uD488\xB7\uCF54\uC2A4\uD2AC\xB7\uD638\uAC10\uB3C4), \uBCF5\uC218 \uB9E4\uCE6D \uC2DC \uACBD\uB7C9 \uBAA9\uB85D \uBC18\uD658. ?exact=1\uC774\uBA74 \uC774\uB984\uC774 \uC815\uD655\uD788 \uAC19\uC740 \uB2C8\uCF00\uB97C \uC6B0\uC120\uD558\uACE0 \uB098\uBA38\uC9C0\uB294 alsoMatched\uB85C \uC54C\uB824\uC90C.",
           parameters: [
             {
               name: "blablaid",
@@ -20943,6 +20943,13 @@ function buildOpenapi(pkgVersion) {
               schema: { type: "string" },
               description: "\uC774\uB984(\uBD80\uBD84 \uC77C\uCE58) \uB610\uB294 \uC22B\uC790 id\xB7resourceId\xB7nameCode",
               example: "\uC544\uB2C8\uC2A4 : \uC2A4\uD0C0"
+            },
+            {
+              name: "exact",
+              in: "query",
+              schema: { type: "string" },
+              description: "\uAC12\uC774 \uC788\uC73C\uBA74 \uC774\uB984\uC774 \uC815\uD655\uD788 \uAC19\uC740 \uB2C8\uCF00 \uC6B0\uC120, \uB098\uBA38\uC9C0\uB294 alsoMatched",
+              example: "1"
             }
           ],
           responses: {
@@ -22387,8 +22394,19 @@ async function createApp(storage) {
       const key2 = c.req.param("nameOrId") ?? "";
       const { charRef, normalizeNikke, matchesNikke } = await lookups;
       const fields = fieldsOf(c);
-      const hits = res.owned.filter((ch3) => matchesNikke(key2, ch3));
+      let hits = res.owned.filter((ch3) => matchesNikke(key2, ch3));
       if (hits.length === 0) return c.json({ error: "not found" }, 404);
+      let alsoMatched;
+      if (hits.length > 1 && c.req.query("exact")) {
+        const nameOf = (ch3) => charRef(ch3.name_code)?.name;
+        const exact = hits.filter(
+          (ch3) => Object.values(nameOf(ch3) ?? {}).some((x) => norm(String(x)) === norm(key2))
+        );
+        if (exact.length === 1) {
+          alsoMatched = hits.filter((ch3) => ch3 !== exact[0]).map((ch3) => ({ id: charRef(ch3.name_code)?.id, name: nameOf(ch3) }));
+          hits = exact;
+        }
+      }
       if (hits.length > 1)
         return c.json({
           count: hits.length,
@@ -22410,7 +22428,10 @@ async function createApp(storage) {
         (details.data?.state_effects ?? []).map((e) => [String(e.id), e])
       );
       return c.json(
-        pickFields(normalizeNikke(ch2, detailByCode.get(ch2.name_code) ?? {}, effectById), fields)
+        pickFields(
+          { ...normalizeNikke(ch2, detailByCode.get(ch2.name_code) ?? {}, effectById), ...alsoMatched ? { alsoMatched } : {} },
+          fields
+        )
       );
     } catch (e) {
       const msg = e instanceof Error ? e.message : String(e);

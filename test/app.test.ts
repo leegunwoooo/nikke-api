@@ -492,6 +492,37 @@ function stubBlabla(opts: {
   };
 }
 
+test("owned nikke ?exact=1 prefers the exact name over other versions", async () => {
+  // 3003 = 앵커, 5016 = 앵커: 이노센트 메이드 (fixtures/dist/name_code_map.json)
+  const stub = stubBlabla({
+    perArea: (a) =>
+      a === 83
+        ? { code: 0, characters: [{ name_code: 3003, lv: 100, combat: 1 }, { name_code: 5016, lv: 200, combat: 2 }] }
+        : { code: 0 },
+  });
+  try {
+    const u = (key: string, q = "") => `/api/user/12345/nikke/${encodeURIComponent(key)}?area=83${q}`;
+    // the default contract is unchanged: several hits return the list
+    const list = await json(u("앵커"));
+    assert.equal(list.count, 2);
+    assert.equal(stub.detailCalls.length, 0);
+
+    const hit = await json(u("앵커", "&exact=1&lang=ko"));
+    assert.equal(hit.character.id, 2);
+    assert.deepEqual(hit.alsoMatched, [{ id: 3, name: "앵커: 이노센트 메이드" }]);
+    assert.deepEqual(stub.detailCalls, [1]); // only the winner's detail is fetched
+
+    // any locale, ignoring case and spacing
+    for (const key of ["anchor", " 앵 커 "]) assert.equal((await json(u(key, "&exact=1"))).character.id, 2);
+    // a name that only partly matches still returns the list
+    assert.equal((await json(u("앵", "&exact=1"))).count, 2);
+    // a lone hit has nothing else to report
+    assert.equal((await json(u("이노센트", "&exact=1"))).alsoMatched, undefined);
+  } finally {
+    stub.restore();
+  }
+});
+
 test("roster: per-area upstream bundle with batching and no-store", async () => {
   const stub = stubBlabla();
   try {

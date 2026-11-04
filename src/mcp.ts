@@ -724,7 +724,7 @@ export function buildServer(api: Fetcher, version: string, origin = "", boundBla
     {
       title: "Get one of a player's NIKKEs",
       description:
-        "Build detail of one owned character: skill levels, equipment, cube, favorite item. If the name matches several owned characters, a list comes back — call again with an id. Live and rate limited.",
+        "Build detail of one owned character: skill levels, equipment, cube, favorite item. An exact character name returns that character even when other owned versions also match — the rest are listed in alsoMatched. A name that only partially matches several owned characters returns a list — call again with an id. Live and rate limited.",
       inputSchema: z.object({
         blablaid: BLABLAID.optional(),
         nameOrId: z.string().min(1).describe("Character name (partial, any language) or id"),
@@ -735,7 +735,7 @@ export function buildServer(api: Fetcher, version: string, origin = "", boundBla
     userTool("get_user_nikke", (a: { blablaid?: string; nameOrId: string; lang: string }) => {
       const blablaid = a.blablaid ?? boundBlablaid;
       return blablaid
-        ? call(api, "get_user_nikke", `/api/user/nikke/${enc(a.nameOrId)}${qs({ blablaid, lang: a.lang })}`)
+        ? call(api, "get_user_nikke", `/api/user/nikke/${enc(a.nameOrId)}${qs({ blablaid, exact: "1", lang: a.lang })}`)
         : needBlablaid();
     }),
   );
