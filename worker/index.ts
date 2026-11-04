@@ -339,6 +339,7 @@ export default {
     const target = userPath ? userTargetOf(url) : null;
     const isGet = request.method === "GET" || request.method === "HEAD";
     let key: Request | undefined;
+    let callerArea = false; // ?area= came from the request, not the remembered value
 
     // GET: serve from edge cache BEFORE touching the app or KV — a hit
     // shouldn't spend an app init (characters.json read) or creds lookup.
@@ -350,6 +351,7 @@ export default {
       request.headers.get("x-admin-token") === env.ADMIN_TOKEN;
     if (isGet) {
       url.searchParams.delete("refresh");
+      callerArea = url.searchParams.has("area");
       // a remembered nikke_area_id lets the origin skip one upstream call —
       // not on /roster, where ?area= narrows the five-server sweep to one
       if (target && !url.searchParams.has("area") && !/^\/api\/user\/[^/]+\/roster$/.test(url.pathname)) {
@@ -424,8 +426,9 @@ export default {
       // lookup is a plain miss that goes upstream
       if (userPath) stored.headers.set("Cache-Control", `public, max-age=${USER_TTL}, s-maxage=${USER_TTL}`);
       ctx.waitUntil(edgeCache.put(key!, stored));
-      // profile responses carry intlOpenId + areaId — remember the mapping
-      if (target && env.AREA_KV) {
+      // profile responses carry intlOpenId + areaId — remember the mapping,
+      // but never one the caller chose: anyone could pin someone else's server
+      if (target && env.AREA_KV && !callerArea) {
         ctx.waitUntil(
           (async () => {
             try {
