@@ -149,6 +149,8 @@ interface EventEntry {
 interface FavoriteIndexEntry {
   id: number;
   rare?: string;
+  type?: string; // "Favorite" = 애장품, "Collection" = 지휘관 인형
+  nameCode?: number; // the 애장품's owner; absent on dolls
   name: Record<string, string>;
   weaponType?: string;
 }
@@ -340,10 +342,11 @@ const CORP_NAMES: Record<number, string> = {
 
 // shared lookup context for user-profile normalization
 async function loadProfileLookups() {
-  const [ncMap, favNames, cubeNames, { equipItemMap, equipOptionMap }, stages, recycles] =
+  const [ncMap, favNames, favs, cubeNames, { equipItemMap, equipOptionMap }, stages, recycles] =
     await Promise.all([
       loadNameCodeMap(),
       loadFavNames(),
+      getFavorites(),
       loadCubeNames(),
       loadEquipMaps(),
       loadStageMap(),
@@ -377,8 +380,20 @@ async function loadProfileLookups() {
   };
   const cubeRef = (tid?: number, lv?: number) =>
     !tid ? null : { id: tid, level: lv ?? 0, name: cubeNames.get(tid)?.name ?? null };
-  const favRef = (tid?: number, lv?: number) =>
-    !tid ? null : { id: tid, level: lv ?? 0, name: favNames.get(tid) ?? null };
+  const favType = new Map(favs.map((f) => [f.id, f.type]));
+  const favRef = (tid?: number, lv?: number) => {
+    if (!tid) return null;
+    const type = favType.get(tid);
+    return { id: tid, level: lv ?? 0, name: favNames.get(tid) ?? null, ...(type ? { type } : {}) };
+  };
+  // a doll in the slot can mean the game has no 애장품 for this character yet.
+  // Older data has no type/nameCode: say nothing rather than "none exists"
+  const ownFavByCode = new Map(favs.filter((f) => f.nameCode).map((f) => [f.nameCode, f]));
+  const ownFavRef = (nameCode: number) => {
+    if (!favs.some((f) => f.type)) return {};
+    const f = ownFavByCode.get(nameCode);
+    return { ownFavoriteItem: f ? { id: f.id, name: f.name } : null };
+  };
   const costumeRef = (tid?: number | null) => {
     if (!tid) return null;
     const hit = costumeOwner.get(tid);
@@ -441,6 +456,7 @@ async function loadProfileLookups() {
       skills: { skill1: d.skill1_lv ?? 0, skill2: d.skill2_lv ?? 0, burst: d.ulti_skill_lv ?? 0 },
       attractiveLevel: d.attractive_lv ?? 0,
       favoriteItem: favRef(d.favorite_item_tid, d.favorite_item_lv),
+      ...ownFavRef(ch.name_code),
       cube: cubeRef(d.harmony_cube_tid, d.harmony_cube_lv),
       arenaCube: cubeRef(d.arena_harmony_cube_tid, d.arena_harmony_cube_lv),
       // output key is "body" to match /api/equips slot naming; upstream

@@ -651,7 +651,7 @@ async function main() {
   ];
   const favIndex: {
     id: number;
-    rare?: string;
+    rare?: string; type?: string; nameCode?: number; character?: { id: number; name: Partial<Record<Locale, string>> };
     name: Partial<Record<Locale, string>>;
     weaponType?: string;
   }[] = [];
@@ -752,6 +752,9 @@ async function main() {
     favIndex.push({
       id,
       rare: first.favorite_rare,
+      type: first.favorite_type,
+      // 애장품 belong to one character; dolls have name_code 0
+      ...(first.name_code ? { nameCode: first.name_code } : {}),
       name,
       weaponType: first.weapon_type,
     });

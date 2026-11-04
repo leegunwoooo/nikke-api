@@ -20167,7 +20167,7 @@ function buildServer(api, version2, origin = "", boundBlablaid) {
     "get_user_nikke",
     {
       title: "Get one of a player's NIKKEs",
-      description: "Build detail of one owned character: skill levels, equipment, cube, favorite item. An exact character name returns that character even when other owned versions also match \u2014 the rest are listed in alsoMatched. A name that only partially matches several owned characters returns a list \u2014 call again with an id. Live and rate limited.",
+      description: "Build detail of one owned character: skill levels, equipment, cube, favorite item. favoriteItem.type is Favorite (\uC560\uC7A5\uD488) or Collection (a commander doll, not the character's own item); ownFavoriteItem is that character's \uC560\uC7A5\uD488, null when the game has none. An exact character name returns that character even when other owned versions also match \u2014 the rest are listed in alsoMatched. A name that only partially matches several owned characters returns a list \u2014 call again with an id. Live and rate limited.",
       inputSchema: object({
         blablaid: BLABLAID.optional(),
         nameOrId: string2().min(1).describe("Character name (partial, any language) or id"),
@@ -20516,7 +20516,17 @@ function buildOpenapi(pkgVersion) {
       attractiveLevel: { type: "integer" },
       favoriteItem: {
         type: ["object", "null"],
-        properties: { id: { type: "integer" }, level: { type: "integer" }, name: localized }
+        properties: {
+          id: { type: "integer" },
+          level: { type: "integer" },
+          name: localized,
+          type: { type: "string", enum: ["Favorite", "Collection"], description: "Favorite = \uC560\uC7A5\uD488, Collection = \uC9C0\uD718\uAD00 \uC778\uD615" }
+        }
+      },
+      ownFavoriteItem: {
+        type: ["object", "null"],
+        description: "\uADF8 \uB2C8\uCF00\uC758 \uC560\uC7A5\uD488. \uAC8C\uC784\uC5D0 \uC544\uC9C1 \uC5C6\uC73C\uBA74 null",
+        properties: { id: { type: "integer" }, name: localized }
       },
       cube: {
         type: ["object", "null"],
@@ -21119,6 +21129,7 @@ function buildOpenapi(pkgVersion) {
     "/api/cubes/{id}",
     "/api/user/{blablaid}/nikke",
     "/api/user/{blablaid}/nikke/{nameOrId}",
+    "/api/user/{blablaid}/nikke-builds",
     "/api/user/{blablaid}/roster"
   ]) {
     const op = openapi.paths[p]?.get;
@@ -21342,9 +21353,10 @@ async function createApp(storage) {
     7: "ABNORMAL"
   };
   async function loadProfileLookups() {
-    const [ncMap, favNames, cubeNames, { equipItemMap: equipItemMap2, equipOptionMap: equipOptionMap2 }, stages, recycles] = await Promise.all([
+    const [ncMap, favNames, favs, cubeNames, { equipItemMap: equipItemMap2, equipOptionMap: equipOptionMap2 }, stages, recycles] = await Promise.all([
       loadNameCodeMap(),
       loadFavNames(),
+      getFavorites(),
       loadCubeNames(),
       loadEquipMaps(),
       loadStageMap(),
@@ -21376,7 +21388,18 @@ async function createApp(storage) {
       return { iconId, costumeIndex: a.costumeIndex, ...charInfo(n, costume?.images.icon) };
     };
     const cubeRef = (tid, lv) => !tid ? null : { id: tid, level: lv ?? 0, name: cubeNames.get(tid)?.name ?? null };
-    const favRef = (tid, lv) => !tid ? null : { id: tid, level: lv ?? 0, name: favNames.get(tid) ?? null };
+    const favType = new Map(favs.map((f) => [f.id, f.type]));
+    const favRef = (tid, lv) => {
+      if (!tid) return null;
+      const type = favType.get(tid);
+      return { id: tid, level: lv ?? 0, name: favNames.get(tid) ?? null, ...type ? { type } : {} };
+    };
+    const ownFavByCode = new Map(favs.filter((f) => f.nameCode).map((f) => [f.nameCode, f]));
+    const ownFavRef = (nameCode) => {
+      if (!favs.some((f2) => f2.type)) return {};
+      const f = ownFavByCode.get(nameCode);
+      return { ownFavoriteItem: f ? { id: f.id, name: f.name } : null };
+    };
     const costumeRef = (tid) => {
       if (!tid) return null;
       const hit = costumeOwner.get(tid);
@@ -21436,6 +21459,7 @@ async function createApp(storage) {
         skills: { skill1: d.skill1_lv ?? 0, skill2: d.skill2_lv ?? 0, burst: d.ulti_skill_lv ?? 0 },
         attractiveLevel: d.attractive_lv ?? 0,
         favoriteItem: favRef(d.favorite_item_tid, d.favorite_item_lv),
+        ...ownFavRef(ch2.name_code),
         cube: cubeRef(d.harmony_cube_tid, d.harmony_cube_lv),
         arenaCube: cubeRef(d.arena_harmony_cube_tid, d.arena_harmony_cube_lv),
         // output key is "body" to match /api/equips slot naming; upstream

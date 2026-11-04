@@ -1147,6 +1147,8 @@ GET /api/user/<blablaid>/nikke/3017                # 캐릭터 id
 
 구형 쿼리 형태 `GET /api/user/nikke/:nameOrId?blablaid=...`·`?openid=`도 동일하게 동작합니다.
 
+`favoriteItem`은 슬롯에 낀 아이템으로, `type`이 `Favorite`이면 애장품, `Collection`이면 지휘관 인형입니다. `ownFavoriteItem`은 그 니케의 애장품이고, 게임에 아직 없으면 `null`입니다. 인형을 낀 니케가 애장품을 안 낀 것인지, 애장품이 없는 것인지는 이 값으로 구분합니다.
+
 응답 항목 형태:
 
 ```json
@@ -1160,7 +1162,8 @@ GET /api/user/<blablaid>/nikke/3017                # 캐릭터 id
   "costume": null,
   "skills": { "skill1": 7, "skill2": 10, "burst": 10 },
   "attractiveLevel": 30,
-  "favoriteItem": { "id": 201701, "level": 2, "name": { "ko": "...", ... } },
+  "favoriteItem": { "id": 201701, "level": 2, "name": { "ko": "...", ... }, "type": "Favorite" },
+  "ownFavoriteItem": { "id": 201701, "name": { "ko": "...", ... } },
   "cube": { "id": 1000311, "level": 3, "name": { "ko": "...", ... } },
   "arenaCube": null,
   "equipment": {

@@ -524,6 +524,28 @@ test("owned nikke ?exact=1 prefers the exact name over other versions", async ()
   }
 });
 
+test("owned nikke says whether the slot holds its 애장품 or a doll", async () => {
+  // 3001 = 라피 owns item 100; nothing in the fixtures belongs to 앵커 (3003)
+  const stub = stubBlabla({
+    perArea: (a) =>
+      a === 83 ? { code: 0, characters: [{ name_code: 3001, lv: 50 }, { name_code: 3003, lv: 100 }] } : { code: 0 },
+    details: [
+      { name_code: 3001, favorite_item_tid: 100, favorite_item_lv: 2 },
+      { name_code: 3003, favorite_item_tid: 101, favorite_item_lv: 1 },
+    ],
+  });
+  try {
+    const r = await json(`/api/user/12345/nikke-builds?area=83&lang=ko&names=${encodeURIComponent("라피,앵커")}`);
+    const [rapi, anchor] = r.nikkes;
+    assert.deepEqual(rapi.favoriteItem, { id: 100, level: 2, name: "망원경", type: "Favorite" });
+    assert.deepEqual(rapi.ownFavoriteItem, { id: 100, name: "망원경" });
+    assert.equal(anchor.favoriteItem.type, "Collection");
+    assert.equal(anchor.ownFavoriteItem, null); // a doll, and no 애장품 exists yet
+  } finally {
+    stub.restore();
+  }
+});
+
 test("nikke-builds resolves several names from one detail call", async () => {
   // 3001 = 라피, 3003 = 앵커, 5016 = 앵커: 이노센트 메이드
   const stub = stubBlabla({

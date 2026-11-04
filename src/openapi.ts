@@ -95,7 +95,17 @@ const ownedNikkeDetail = {
     attractiveLevel: { type: "integer" },
     favoriteItem: {
       type: ["object", "null"],
-      properties: { id: { type: "integer" }, level: { type: "integer" }, name: localized },
+      properties: {
+        id: { type: "integer" },
+        level: { type: "integer" },
+        name: localized,
+        type: { type: "string", enum: ["Favorite", "Collection"], description: "Favorite = 애장품, Collection = 지휘관 인형" },
+      },
+    },
+    ownFavoriteItem: {
+      type: ["object", "null"],
+      description: "그 니케의 애장품. 게임에 아직 없으면 null",
+      properties: { id: { type: "integer" }, name: localized },
     },
     cube: {
       type: ["object", "null"],
