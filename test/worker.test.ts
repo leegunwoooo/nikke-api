@@ -165,7 +165,7 @@ test("profile, nikke and nikke-builds still use the remembered area", async () =
   }
 });
 
-test("a rate-limited server fails the roster and leaves nothing in the edge cache", async () => {
+test("a rate-limited empty server still returns the account's roster", async () => {
   const id = "1000000000000000006";
   const stub = stubFetch((a) =>
     a === 84 ? { code: 212000, msg: "too frequently" } : a === 83 ? { code: 0, characters: [{ name_code: 1 }] } : { code: 0 },
@@ -173,9 +173,8 @@ test("a rate-limited server fails the roster and leaves nothing in the edge cach
   try {
     const { env } = envOf();
     const res = await send(env, `/api/user/${id}/roster`);
-    assert.equal(res.status, 502);
-    assert.equal(((await res.json()) as any).code, 212000);
-    assert.deepEqual([...edge.keys()].filter((k) => k.includes(id)), []);
+    assert.equal(res.status, 200);
+    assert.deepEqual(((await res.json()) as any).areas.map((a: any) => a.area), [83]);
   } finally {
     stub.restore();
   }

@@ -641,7 +641,7 @@ const openapi = {
         description:
           "보유 니케 전원의 업스트림 원시 묶음 — 서버별 {area, characters, details, stateEffects, outpost}. " +
           "GetUserCharacterDetails는 name_code 60개씩 배치 호출. 기본은 5개 서버(83·81·84·82·85) 전부 조회, ?area=로 특정 서버만 지정 가능. " +
-          "한 서버라도 레이트리밋(212000)이면 전체 502. 그 밖의 코드는 해당 서버만 빠지고, 니케가 있는 서버가 없으면 502(업스트림) 또는 비공개 코드가 있을 때 404 reason=private(프로필 비공개). " +
+          "모든 서버 조회가 실패하면 502(업스트림) 또는 404 reason=private(프로필 비공개). " +
           "blablaid 대신 ?blablaid=도 가능 (/api/user/roster?blablaid=...)",
         parameters: [
           {
@@ -663,7 +663,7 @@ const openapi = {
           "400": { description: "blablaid 형식 오류 / 지원하지 않는 area" },
           "404": { description: "프로필 비공개 (reason=private)" },
           "503": { description: "서버 조회 계정 미설정" },
-          "502": { description: "업스트림 실패 (레이트리밋·상세 호출 오류 시 전체 실패)" },
+          "502": { description: "업스트림 실패 (상세 호출 오류 시 전체 실패)" },
         },
       },
     },

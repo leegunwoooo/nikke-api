@@ -702,15 +702,27 @@ test("roster: detail-call failure aborts with 502 rather than dropping the area"
   }
 });
 
-test("roster: a rate-limited area aborts with 502 instead of a partial 200", async () => {
+test("roster: a rate-limited empty server doesn't fail the account's own server", async () => {
+  // a profile plays on one server, so another area's 212000 hides nothing
   const stub = stubBlabla({
     perArea: (a) =>
       a === 83 ? { code: 0, characters: [{ name_code: 1, lv: 200 }] } : a === 84 ? { code: 212000, msg: "too frequently" } : { code: 0 },
   });
   try {
     const res = await get("/api/user/12345/roster");
+    assert.equal(res.status, 200);
+    assert.deepEqual((await res.json()).areas.map((a: any) => a.area), [83]);
+  } finally {
+    stub.restore();
+  }
+});
+
+test("roster: a rate limit with no server answering is still a 502", async () => {
+  const stub = stubBlabla({ perArea: () => ({ code: 212000, msg: "too frequently" }) });
+  try {
+    const res = await get("/api/user/12345/roster");
     assert.equal(res.status, 502);
-    assert.deepEqual(await res.json(), { error: "upstream lookup failed (212000 too frequently)", code: 212000 });
+    assert.equal((await res.json()).code, 212000);
   } finally {
     stub.restore();
   }
