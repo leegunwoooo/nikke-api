@@ -3,7 +3,7 @@ import path from "node:path";
 import { cdnUrl } from "../src/cdn.js";
 import { compareEventScenes, eventIdOf } from "../src/events.js";
 import { readFavoriteStories } from "./favorite-stories.js";
-import { assertDistinctIds, dedupKeys, LIBRARY_EVENT_CATEGORIES, libraryEventId, readLibraryStories, readTranscribedStories, selectNewScripts } from "./library-stories.js";
+import { assertDistinctIds, dedupKeys, LIBRARY_EVENT_CATEGORIES, libraryEventId, readLibraryStories, readTranscribedStories, selectNewScripts, TRANSCRIPT_DUP_CUTOFF } from "./library-stories.js";
 import { mainChaptersFromList } from "./main-chapters.js";
 import type {
   Burst,
@@ -544,8 +544,12 @@ async function main() {
   const nikkeNames = new Set(characters.map((n) => n.name.ko));
   const library = await readLibraryStories();
   for (const w of library.warnings) console.log(`warn: library ${w}`);
-  const librarySource = [...library.scenes, ...(await readTranscribedStories())];
-  const libraryScenes = selectNewScripts(librarySource, known);
+  const transcripts = await readTranscribedStories();
+  const librarySource = [...library.scenes, ...transcripts];
+  const libraryScenes = [
+    ...selectNewScripts(library.scenes, known),
+    ...selectNewScripts(transcripts, known, TRANSCRIPT_DUP_CUTOFF),
+  ];
   assertDistinctIds(libraryScenes);
   const libraryIds = new Set(libraryScenes.map((s) => s.groupId));
   for (const scene of libraryScenes) {

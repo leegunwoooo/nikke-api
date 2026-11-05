@@ -185,6 +185,10 @@ const MIN_KEY = 8;
 export const dedupKeys = (lines: { text?: string }[]) =>
   lines.map((l) => dedupKey(l.text ?? "")).filter((k) => k.length >= MIN_KEY);
 
+// A transcript can replay main-story lines around new ones (MARIA-n part 2's
+// last scene overlaps 59%), so it drops out only when nearly all of it is published.
+export const TRANSCRIPT_DUP_CUTOFF = 0.9;
+
 /**
  * Keep only scenes we don't already have. `known` holds the game data's lines
  * and grows with what's kept, so copies inside the archive drop out too. Real
