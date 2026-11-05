@@ -2550,197 +2550,203 @@
         },
         {
           "id": "lib_maria_n_1_03_59",
-          "text": "마리아-107이 죽는다. 마리아-108이 죽는다. 마리아-109가 죽는다. 마리아-110이 죽는다. 마리아-111이 죽는다. 마리아-112가 죽는다.",
+          "text": "마리아-106이 죽는다.",
           "window": "Narration",
           "voice": null
         },
         {
           "id": "lib_maria_n_1_03_60",
+          "text": "마리아-107이 죽는다. 마리아-108이 죽는다. 마리아-109가 죽는다. 마리아-110이 죽는다. 마리아-111이 죽는다. 마리아-112가 죽는다.",
+          "window": "Narration",
+          "voice": null
+        },
+        {
+          "id": "lib_maria_n_1_03_61",
           "speakerName": "마리아-113",
           "text": "조금씩 감이 잡히고 있어요. 패턴도 눈에 보이고요.",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_03_61",
+          "id": "lib_maria_n_1_03_62",
           "speakerName": "마리아-113",
           "text": "어… 눈에 보인다뿐이지 피하지는 못 하지만요.",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_03_62",
+          "id": "lib_maria_n_1_03_63",
           "speakerName": "닥터 마리아",
           "text": "쌓인 데이터가 많아. 계속 백업할게.",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_03_63",
+          "id": "lib_maria_n_1_03_64",
           "speakerName": "마리아-113",
           "text": "예. 힘내보죠.",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_03_64",
+          "id": "lib_maria_n_1_03_65",
           "text": "마리아-124가 죽는다. 마리아-134가 죽는다. 마리아-153이 죽는다. 마리아-178이 죽는다. 마리아-191이 죽는다. 마리아-201이 죽는다.",
           "window": "Narration",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_03_65",
+          "id": "lib_maria_n_1_03_66",
           "speakerName": "마리아-202",
           "text": "이번에는 반드시.",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_03_66",
+          "id": "lib_maria_n_1_03_67",
           "speakerName": "닥터 마리아",
           "text": "응. 랩쳐도 이제 한계인 것 같아.",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_03_67",
+          "id": "lib_maria_n_1_03_68",
           "speakerName": "닥터 마리아",
           "text": "아마 운 좋으면 10번 이내에 잡을 수 있을 것 같은데.",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_03_68",
+          "id": "lib_maria_n_1_03_69",
           "speakerName": "마리아-202",
           "text": "더 운이 좋으면 이번에 잡을 수도 있겠는데요?",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_03_69",
+          "id": "lib_maria_n_1_03_70",
           "speakerName": "닥터 마리아",
           "text": "너무 무리하지 말고. 다음을 노리면 되니까.",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_03_70",
+          "id": "lib_maria_n_1_03_71",
           "speakerName": "마리아-202",
           "text": "물론이죠. 저는 무한하니까요.",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_03_71",
+          "id": "lib_maria_n_1_03_72",
           "text": "마리아-202가 로드 급 랩쳐를 쓰러뜨린다.",
           "window": "Narration",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_03_72",
+          "id": "lib_maria_n_1_03_73",
           "speakerName": "마리아-202",
           "text": "클리어.",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_03_73",
+          "id": "lib_maria_n_1_03_74",
           "speakerName": "닥터 마리아",
           "text": "잡았… 잡았다.",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_03_74",
+          "id": "lib_maria_n_1_03_75",
           "speakerName": "마리아-202",
           "text": "100대 1이었지만요.",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_03_75",
+          "id": "lib_maria_n_1_03_76",
           "speakerName": "닥터 마리아",
           "text": "그래도 뒤로 갈수록 점점 전투에 익숙해지는 게 보였어.",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_03_76",
+          "id": "lib_maria_n_1_03_77",
           "speakerName": "마리아-202",
           "text": "패턴이라는 게 있으니까요. 저도 많이 적응했죠.",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_03_77",
+          "id": "lib_maria_n_1_03_78",
           "speakerName": "닥터 마리아",
           "text": "좋아. 그럼 이제 이 루트는 뚫렸어. 굳이 길을 돌아갈 필요는 없-",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_03_78",
+          "id": "lib_maria_n_1_03_79",
           "text": "쿠우우웅-!!",
           "window": "Narration",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_03_79",
+          "id": "lib_maria_n_1_03_80",
           "text": "로드 급 랩쳐가 마리아-202의 앞에 착지한다.",
           "window": "Narration",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_03_80",
+          "id": "lib_maria_n_1_03_81",
           "speakerName": "닥터 마리아",
           "text": "…농담이겠지.",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_03_81",
+          "id": "lib_maria_n_1_03_82",
           "speakerName": "마리아-202",
           "text": "…랩쳐는 단일 객체가 아니니까요.",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_03_82",
+          "id": "lib_maria_n_1_03_83",
           "speakerName": "닥터 마리아",
           "text": "[돌아와]. 이 위치, 진짜 마가 끼었나봐. 루트에서 아예 제외해버리자.",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_03_83",
+          "id": "lib_maria_n_1_03_84",
           "speakerName": "마리아-202",
           "text": "그래도 한번은 싸워보고 돌아갈게요.",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_03_84",
+          "id": "lib_maria_n_1_03_85",
           "speakerName": "닥터 마리아",
           "text": "수련의 성과를 보고 싶은거야?",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_03_85",
+          "id": "lib_maria_n_1_03_86",
           "speakerName": "마리아-202",
           "text": "비슷한거죠.",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_03_86",
+          "id": "lib_maria_n_1_03_87",
           "speakerName": "닥터 마리아",
           "text": "좋아. 맘껏 싸워봐.",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_03_87",
+          "id": "lib_maria_n_1_03_88",
           "speakerName": "마리아-202",
           "text": "라져.",
           "window": "Speech",
@@ -3137,7 +3143,7 @@
         {
           "id": "lib_maria_n_1_04_57",
           "speakerName": "닥터 마리아",
-          "text": "그래도 다음부턴 네가 해 이번엔 나도 분위기에 휩쓸려서 얼떨결에 끝까지 한거니까.",
+          "text": "그래도 다음부턴 네가 해. 이번엔 나도 분위기에 휩쓸려서 얼떨결에 끝까지 한거니까.",
           "window": "Speech",
           "voice": null
         },
@@ -4559,159 +4565,166 @@
         {
           "id": "lib_maria_n_1_06_59",
           "speakerName": "닥터 마리아",
-          "text": "망했어, 망했다고, 망했어 망했어 망했어 망했어 망했어 망했어.",
+          "text": "망했어, 망했어.",
           "window": "Speech",
           "voice": null
         },
         {
           "id": "lib_maria_n_1_06_60",
+          "speakerName": "닥터 마리아",
+          "text": "망했어, 망했다고, 망했어 망했어 망했어 망했어 망했어 망했어.",
+          "window": "Speech",
+          "voice": null
+        },
+        {
+          "id": "lib_maria_n_1_06_61",
           "text": "닥터 마리아는 머리를 감싸쥐고 주저앉았다.",
           "window": "Narration",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_06_61",
+          "id": "lib_maria_n_1_06_62",
           "text": "시간이 얼마나 흘렀는지도 모른다.",
           "window": "Narration",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_06_62",
+          "id": "lib_maria_n_1_06_63",
           "text": "닥터 마리아는 만신창이가 된 얼굴과 몸짓으로 몸을 일으킨다.",
           "window": "Narration",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_06_63",
+          "id": "lib_maria_n_1_06_64",
           "text": "연구실의 문을 열고",
           "window": "Narration",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_06_64",
+          "id": "lib_maria_n_1_06_65",
           "text": "눈 앞에 서 있는 마리아-311을 바라본다.",
           "window": "Narration",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_06_65",
+          "id": "lib_maria_n_1_06_66",
           "speakerName": "마리아-311",
           "text": "박사님.",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_06_66",
+          "id": "lib_maria_n_1_06_67",
           "speakerName": "닥터 마리아",
           "text": "…….",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_06_67",
+          "id": "lib_maria_n_1_06_68",
           "speakerName": "마리아-311",
           "text": "괜찮으세요?",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_06_68",
+          "id": "lib_maria_n_1_06_69",
           "speakerName": "닥터 마리아",
           "text": "여기서 뭐해.",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_06_69",
+          "id": "lib_maria_n_1_06_70",
           "speakerName": "마리아-311",
           "text": "너무 안 나오시길래 기다리고 있었어요.",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_06_70",
+          "id": "lib_maria_n_1_06_71",
           "speakerName": "닥터 마리아",
           "text": "…할일도 없네, 너도.",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_06_71",
+          "id": "lib_maria_n_1_06_72",
           "speakerName": "마리아-311",
           "text": "후후. 그러게요.",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_06_72",
+          "id": "lib_maria_n_1_06_73",
           "text": "닥터 마리아는 마리아-311을 빤히 바라본다.",
           "window": "Narration",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_06_73",
+          "id": "lib_maria_n_1_06_74",
           "text": "자신과 똑같은 얼굴을 한 니케를 빤히 바라본다.",
           "window": "Narration",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_06_74",
+          "id": "lib_maria_n_1_06_75",
           "speakerName": "닥터 마리아",
           "text": "311.",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_06_75",
+          "id": "lib_maria_n_1_06_76",
           "speakerName": "마리아-311",
           "text": "예. 박사님.",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_06_76",
+          "id": "lib_maria_n_1_06_77",
           "speakerName": "닥터 마리아",
           "text": "너. 너랑 잘 지낼 수 있겠어?",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_06_77",
+          "id": "lib_maria_n_1_06_78",
           "speakerName": "마리아-311",
           "text": "…??",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_06_78",
+          "id": "lib_maria_n_1_06_79",
           "speakerName": "닥터 마리아",
           "text": "호흡이나 팀워크나 이런거 잘 맞출 수 있겠어?",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_06_79",
+          "id": "lib_maria_n_1_06_80",
           "speakerName": "마리아-311",
           "text": "무슨 말씀이신지 잘 모르겠어요.",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_06_80",
+          "id": "lib_maria_n_1_06_81",
           "speakerName": "닥터 마리아",
           "text": "…….",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_06_81",
+          "id": "lib_maria_n_1_06_82",
           "speakerName": "닥터 마리아",
           "text": "스쿼드를 꾸리자.",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_06_82",
+          "id": "lib_maria_n_1_06_83",
           "speakerName": "닥터 마리아",
           "text": "너로만 구성된 스쿼드를.",
           "window": "Speech",
@@ -5969,210 +5982,217 @@
         {
           "id": "lib_maria_n_1_08_30",
           "speakerName": "미러",
-          "text": "한시간은 좀 전에 지났는데요.",
+          "text": "…토커티브.",
           "window": "Speech",
           "voice": null
         },
         {
           "id": "lib_maria_n_1_08_31",
+          "speakerName": "미러",
+          "text": "한시간은 좀 전에 지났는데요.",
+          "window": "Speech",
+          "voice": null
+        },
+        {
+          "id": "lib_maria_n_1_08_32",
           "speakerName": "토커티브",
           "text": "[그래. 10분 전에 지났지.]",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_08_32",
+          "id": "lib_maria_n_1_08_33",
           "speakerName": "미러",
           "text": "더 재밌는 건 언제 볼 수 있죠?",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_08_33",
+          "id": "lib_maria_n_1_08_34",
           "speakerName": "토커티브",
           "text": "[참을성이 부족하군.]",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_08_34",
+          "id": "lib_maria_n_1_08_35",
           "speakerName": "토커티브",
           "text": "[왔다. 저걸 봐라.]",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_08_35",
+          "id": "lib_maria_n_1_08_36",
           "text": "수송기가 착지한다.",
           "window": "Narration",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_08_36",
+          "id": "lib_maria_n_1_08_37",
           "text": "마리아-n이 내린 뒤, 주위를 두리번거리며 이동한다.",
           "window": "Narration",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_08_37",
+          "id": "lib_maria_n_1_08_38",
           "text": "그리고 잠시 후, 랩쳐의 공격에 당해 사망한다.",
           "window": "Narration",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_08_38",
+          "id": "lib_maria_n_1_08_39",
           "text": "수송기가 돌아간다.",
           "window": "Narration",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_08_39",
+          "id": "lib_maria_n_1_08_40",
           "speakerName": "미러",
           "text": "…….",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_08_40",
+          "id": "lib_maria_n_1_08_41",
           "speakerName": "토커티브",
           "text": "[잠시만 더 기다려라.]",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_08_41",
+          "id": "lib_maria_n_1_08_42",
           "text": "1시간 후. 수송기가 착지한다.",
           "window": "Narration",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_08_42",
+          "id": "lib_maria_n_1_08_43",
           "text": "마리아-n이 내린 뒤, 주위를 두리번거리며 이동한다.",
           "window": "Narration",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_08_43",
+          "id": "lib_maria_n_1_08_44",
           "text": "그리고 잠시 후, 무너진 건물에 깔려 사망한다.",
           "window": "Narration",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_08_44",
+          "id": "lib_maria_n_1_08_45",
           "speakerName": "미러",
           "text": "…뭔가요 이건.",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_08_45",
+          "id": "lib_maria_n_1_08_46",
           "speakerName": "미러",
           "text": "기분나쁜 악몽이라도 꾸고 있는 것 같은데요.",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_08_46",
+          "id": "lib_maria_n_1_08_47",
           "speakerName": "토커티브",
           "text": "[계속 온다. 내가 본것만 해도 30번이 넘는군.]",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_08_47",
+          "id": "lib_maria_n_1_08_48",
           "speakerName": "미러",
           "text": "계속 수송기가 저 유사 인간을 싣고 오고, 유사 인간이 죽으면 똑같은 유사 인간이 다시 온다고요?",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_08_48",
+          "id": "lib_maria_n_1_08_49",
           "speakerName": "토커티브",
           "text": "[그래.]",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_08_49",
+          "id": "lib_maria_n_1_08_50",
           "speakerName": "미러",
           "text": "…어째서죠?",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_08_50",
+          "id": "lib_maria_n_1_08_51",
           "speakerName": "토커티브",
           "text": "[나야 모르지.]",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_08_51",
+          "id": "lib_maria_n_1_08_52",
           "speakerName": "토커티브",
           "text": "[그리고 죽은 유사 인간은 5일 정도 지나면 완전히 부식되어 사라진다. 흔적이 남지 않아.]",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_08_52",
+          "id": "lib_maria_n_1_08_53",
           "speakerName": "토커티브",
           "text": "[어떤가. 재밌지 않나.]",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_08_53",
+          "id": "lib_maria_n_1_08_54",
           "speakerName": "미러",
           "text": "…그건, 조금 더 지켜본 다음에 말씀드릴게요.",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_08_54",
+          "id": "lib_maria_n_1_08_55",
           "text": "미러와 토커티브는 그 자리에서 이틀동안 움직이지 않았다.",
           "window": "Narration",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_08_55",
+          "id": "lib_maria_n_1_08_56",
           "text": "그 동안 수많은 마리아-n이 나타나고, 죽음을 맞이한다.",
           "window": "Narration",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_08_56",
+          "id": "lib_maria_n_1_08_57",
           "text": "혼자일때도 있었고, 여럿일때도 있었다.",
           "window": "Narration",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_08_57",
+          "id": "lib_maria_n_1_08_58",
           "text": "랩쳐에게 죽을 때도 있었고, 사고를 당해 죽을 때도 있었고, 서로 죽일때도 있었다.",
           "window": "Narration",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_08_58",
+          "id": "lib_maria_n_1_08_59",
           "text": "미러는 그 모습을 하나도 빠짐없이 눈에 담았다.",
           "window": "Narration",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_08_59",
+          "id": "lib_maria_n_1_08_60",
           "speakerName": "토커티브",
           "text": "[자, 감상이 어떤가.]",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_08_60",
+          "id": "lib_maria_n_1_08_61",
           "speakerName": "미러",
           "text": "이건….",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_08_61",
+          "id": "lib_maria_n_1_08_62",
           "speakerName": "미러",
           "text": "재밌네요.",
           "window": "Speech",
@@ -8563,711 +8583,718 @@
         {
           "id": "lib_maria_n_1_10_78",
           "speakerName": "에닉",
-          "text": "코드네임 토커티브의 갑작스러운 제안.",
+          "text": "…….",
           "window": "Speech",
           "voice": null
         },
         {
           "id": "lib_maria_n_1_10_79",
           "speakerName": "에닉",
-          "text": "[가능하면 한 종류의 니케를 침식 상태로 만들어 지상으로 올려라.]",
+          "text": "코드네임 토커티브의 갑작스러운 제안.",
           "window": "Speech",
           "voice": null
         },
         {
           "id": "lib_maria_n_1_10_80",
           "speakerName": "에닉",
-          "text": "[그렇지 않으면 방주를 공격하겠다.]",
+          "text": "[가능하면 한 종류의 니케를 침식 상태로 만들어 지상으로 올려라.]",
           "window": "Speech",
           "voice": null
         },
         {
           "id": "lib_maria_n_1_10_81",
           "speakerName": "에닉",
-          "text": "가능하면 한 종류의. 이는 실버건 스쿼드의 마리아 모델을 지칭하는 것으로 확정.",
+          "text": "[그렇지 않으면 방주를 공격하겠다.]",
           "window": "Speech",
           "voice": null
         },
         {
           "id": "lib_maria_n_1_10_82",
           "speakerName": "에닉",
-          "text": "코드네임 토커티브는 실버건 스쿼드의 존재에 대해 파악 중임을 확정.",
+          "text": "가능하면 한 종류의. 이는 실버건 스쿼드의 마리아 모델을 지칭하는 것으로 확정.",
           "window": "Speech",
           "voice": null
         },
         {
           "id": "lib_maria_n_1_10_83",
           "speakerName": "에닉",
-          "text": "침식 상태 전환 후 올리라는 말의 의도 파악.",
+          "text": "코드네임 토커티브는 실버건 스쿼드의 존재에 대해 파악 중임을 확정.",
           "window": "Speech",
           "voice": null
         },
         {
           "id": "lib_maria_n_1_10_84",
           "speakerName": "에닉",
-          "text": "현 전황 상 침식 상태의 니케 객체수를 늘릴 이유는 없음.",
+          "text": "침식 상태 전환 후 올리라는 말의 의도 파악.",
           "window": "Speech",
           "voice": null
         },
         {
           "id": "lib_maria_n_1_10_85",
           "speakerName": "에닉",
-          "text": "랩쳐 측의 전력이 압도적이므로 가치가 없는 전술.",
+          "text": "현 전황 상 침식 상태의 니케 객체수를 늘릴 이유는 없음.",
           "window": "Speech",
           "voice": null
         },
         {
           "id": "lib_maria_n_1_10_86",
           "speakerName": "에닉",
-          "text": "헬레틱 화로 가능성을 확장.",
+          "text": "랩쳐 측의 전력이 압도적이므로 가치가 없는 전술.",
           "window": "Speech",
           "voice": null
         },
         {
           "id": "lib_maria_n_1_10_87",
           "speakerName": "에닉",
-          "text": "현 전황 상 헬레틱의 객체수를 늘릴 이유는 없음.",
+          "text": "헬레틱 화로 가능성을 확장.",
           "window": "Speech",
           "voice": null
         },
         {
           "id": "lib_maria_n_1_10_88",
           "speakerName": "에닉",
-          "text": "랩쳐 측의 전력이 압도적이므로 가치가 없는 전술.",
+          "text": "현 전황 상 헬레틱의 객체수를 늘릴 이유는 없음.",
           "window": "Speech",
           "voice": null
         },
         {
           "id": "lib_maria_n_1_10_89",
           "speakerName": "에닉",
-          "text": "현재 퀸이 부재 중이라는 것은 확정.",
+          "text": "랩쳐 측의 전력이 압도적이므로 가치가 없는 전술.",
           "window": "Speech",
           "voice": null
         },
         {
           "id": "lib_maria_n_1_10_90",
           "speakerName": "에닉",
-          "text": "또한 궤도 엘리베이터 인근에서 2회 발생한 미지의 파장을",
+          "text": "현재 퀸이 부재 중이라는 것은 확정.",
           "window": "Speech",
           "voice": null
         },
         {
           "id": "lib_maria_n_1_10_91",
           "speakerName": "에닉",
-          "text": "필그림 나유타가 제공한 파장 정보와 대조.",
+          "text": "또한 궤도 엘리베이터 인근에서 2회 발생한 미지의 파장을",
           "window": "Speech",
           "voice": null
         },
         {
           "id": "lib_maria_n_1_10_92",
           "speakerName": "에닉",
-          "text": "퀸 인자로 확정.",
+          "text": "필그림 나유타가 제공한 파장 정보와 대조.",
           "window": "Speech",
           "voice": null
         },
         {
           "id": "lib_maria_n_1_10_93",
           "speakerName": "에닉",
-          "text": "결론.",
+          "text": "퀸 인자로 확정.",
           "window": "Speech",
           "voice": null
         },
         {
           "id": "lib_maria_n_1_10_94",
           "speakerName": "에닉",
-          "text": "코드네임 토커티브는 마리아 모델을 활용해 퀸 제작을 의도.",
+          "text": "결론.",
           "window": "Speech",
           "voice": null
         },
         {
           "id": "lib_maria_n_1_10_95",
           "speakerName": "에닉",
-          "text": "성공한 2건의 케이스도 미완성, 불안정 등의 이유로 인해 폐기, 혹은 자멸한 것으로 추정.",
+          "text": "코드네임 토커티브는 마리아 모델을 활용해 퀸 제작을 의도.",
           "window": "Speech",
           "voice": null
         },
         {
           "id": "lib_maria_n_1_10_96",
           "speakerName": "에닉",
-          "text": "단, 마리아 모델을 베이스로 퀸 제작의 가능성을 확인했을 것으로 추정.",
+          "text": "성공한 2건의 케이스도 미완성, 불안정 등의 이유로 인해 폐기, 혹은 자멸한 것으로 추정.",
           "window": "Speech",
           "voice": null
         },
         {
           "id": "lib_maria_n_1_10_97",
           "speakerName": "에닉",
-          "text": "그로인해 마리아 모델에 침식을 주입해 지상으로 올릴 것을 요구.",
+          "text": "단, 마리아 모델을 베이스로 퀸 제작의 가능성을 확인했을 것으로 추정.",
           "window": "Speech",
           "voice": null
         },
         {
           "id": "lib_maria_n_1_10_98",
           "speakerName": "에닉",
-          "text": "퀸 제작이 완성될 때까지 [무한히 시도]하는 것이 목적일 것이라 확정.",
+          "text": "그로인해 마리아 모델에 침식을 주입해 지상으로 올릴 것을 요구.",
           "window": "Speech",
           "voice": null
         },
         {
           "id": "lib_maria_n_1_10_99",
           "speakerName": "에닉",
-          "text": "동결되었던 프로젝트 A.D. 재가동.",
+          "text": "퀸 제작이 완성될 때까지 [무한히 시도]하는 것이 목적일 것이라 확정.",
           "window": "Speech",
           "voice": null
         },
         {
           "id": "lib_maria_n_1_10_100",
           "speakerName": "에닉",
-          "text": "현 시간부로 공멸 인자 제작에 돌입.",
+          "text": "동결되었던 프로젝트 A.D. 재가동.",
           "window": "Speech",
           "voice": null
         },
         {
           "id": "lib_maria_n_1_10_101",
+          "speakerName": "에닉",
+          "text": "현 시간부로 공멸 인자 제작에 돌입.",
+          "window": "Speech",
+          "voice": null
+        },
+        {
+          "id": "lib_maria_n_1_10_102",
           "text": "다음 날. 닥터 마리아의 개인실.",
           "window": "Narration",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_10_102",
+          "id": "lib_maria_n_1_10_103",
           "speakerName": "닥터 마리아",
           "text": "…뭐?",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_10_103",
+          "id": "lib_maria_n_1_10_104",
           "speakerName": "에닉",
           "text": "프로젝트는 계속 진행해주십시오.",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_10_104",
+          "id": "lib_maria_n_1_10_105",
           "speakerName": "닥터 마리아",
           "text": "아니, 왜….",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_10_105",
+          "id": "lib_maria_n_1_10_106",
           "speakerName": "에닉",
           "text": "가치가 있는 프로젝트라고 판단했기 때문입니다.",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_10_106",
+          "id": "lib_maria_n_1_10_107",
           "speakerName": "에닉",
           "text": "단, 목적은 변경합니다.",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_10_107",
+          "id": "lib_maria_n_1_10_108",
           "speakerName": "닥터 마리아",
           "text": "어, 어떻게.",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_10_108",
+          "id": "lib_maria_n_1_10_109",
           "speakerName": "에닉",
           "text": "헬레틱 프로젝트로 변경합니다.",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_10_109",
+          "id": "lib_maria_n_1_10_110",
           "speakerName": "닥터 마리아",
           "text": "…무슨 말이야 그게.",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_10_110",
+          "id": "lib_maria_n_1_10_111",
           "speakerName": "에닉",
           "text": "니케 마리아 모델을 헬레틱으로 만드는 프로젝트입니다.",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_10_111",
+          "id": "lib_maria_n_1_10_112",
           "speakerName": "에닉",
           "text": "헬레틱의 생성 공정은 현재 미지의 영역입니다.",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_10_112",
+          "id": "lib_maria_n_1_10_113",
           "speakerName": "에닉",
           "text": "니케 마리아 모델이 헬레틱 화에 성공 시 해당 공정에 대한 비밀이 풀릴 가능성이 높으며.",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_10_113",
+          "id": "lib_maria_n_1_10_114",
           "speakerName": "에닉",
           "text": "이는 인류 측에 새로운 가능성을 제시할 수 있습니다.",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_10_114",
+          "id": "lib_maria_n_1_10_115",
           "speakerName": "에닉",
           "text": "이를 위해서는 두 가지 추가 공정이 필요합니다.",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_10_115",
+          "id": "lib_maria_n_1_10_116",
           "speakerName": "에닉",
           "text": "첫 번째는 니케 마리아 모델에게 침식을 건 상태로 출동시킬 것.",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_10_116",
+          "id": "lib_maria_n_1_10_117",
           "speakerName": "에닉",
           "text": "헬레틱 화의 최소 조건은 니케의 침식 상태임은 알고 계실 것이라 판단합니다.",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_10_117",
+          "id": "lib_maria_n_1_10_118",
           "speakerName": "에닉",
           "text": "니케 마리아 모델을 지상에 파견 보낸 후 침식에 온전히 노출될 것을 기다리는 것은 비용 낭비입니다.",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_10_118",
+          "id": "lib_maria_n_1_10_119",
           "speakerName": "에닉",
           "text": "현 시설에서 침식 상태로 파견 보내는 편이 비용 측면에서 압도적으로 유리합니다.",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_10_119",
+          "id": "lib_maria_n_1_10_120",
           "speakerName": "에닉",
           "text": "침식에 대한 데이터를 전송해드렸습니다. 초극비 데이터니 관리에 특별히 주의를 기울여 주시길 바랍니다.",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_10_120",
+          "id": "lib_maria_n_1_10_121",
           "speakerName": "에닉",
           "text": "두번째는-",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_10_121",
+          "id": "lib_maria_n_1_10_122",
           "speakerName": "닥터 마리아",
           "text": "지금 무슨 헛소리를 하고 있는 거야!",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_10_122",
+          "id": "lib_maria_n_1_10_123",
           "speakerName": "닥터 마리아",
           "text": "헤, 헬레틱이라니 갑자기 무슨 소리야. 나는 릴리바이스의 재현을….",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_10_123",
+          "id": "lib_maria_n_1_10_124",
           "speakerName": "에닉",
           "text": "가능성이 있습니까?",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_10_124",
+          "id": "lib_maria_n_1_10_125",
           "speakerName": "닥터 마리아",
           "text": "…….",
-          "window": "Speech",
-          "voice": null
-        },
-        {
-          "id": "lib_maria_n_1_10_125",
-          "speakerName": "에닉",
-          "text": "그렇기에 현 방향으로의 전환을 제안드리는 겁니다.",
           "window": "Speech",
           "voice": null
         },
         {
           "id": "lib_maria_n_1_10_126",
           "speakerName": "에닉",
-          "text": "무한에 가까운 목숨을 가진 니케는 현재 유일하기 때문입니다.",
+          "text": "그렇기에 현 방향으로의 전환을 제안드리는 겁니다.",
           "window": "Speech",
           "voice": null
         },
         {
           "id": "lib_maria_n_1_10_127",
           "speakerName": "에닉",
-          "text": "당신의 기술을 인류를 위해 쓸 수 있습니다.",
+          "text": "무한에 가까운 목숨을 가진 니케는 현재 유일하기 때문입니다.",
           "window": "Speech",
           "voice": null
         },
         {
           "id": "lib_maria_n_1_10_128",
           "speakerName": "에닉",
-          "text": "인류의 승리에 크게 기여하는 셈이 되겠지요.",
+          "text": "당신의 기술을 인류를 위해 쓸 수 있습니다.",
           "window": "Speech",
           "voice": null
         },
         {
           "id": "lib_maria_n_1_10_129",
-          "speakerName": "닥터 마리아",
-          "text": "…….",
+          "speakerName": "에닉",
+          "text": "인류의 승리에 크게 기여하는 셈이 되겠지요.",
           "window": "Speech",
           "voice": null
         },
         {
           "id": "lib_maria_n_1_10_130",
-          "speakerName": "에닉",
-          "text": "추가 공정 두번째에 대해 말씀드리겠습니다.",
+          "speakerName": "닥터 마리아",
+          "text": "…….",
           "window": "Speech",
           "voice": null
         },
         {
           "id": "lib_maria_n_1_10_131",
           "speakerName": "에닉",
-          "text": "앞으로의 마리아 모델의 지상 출동은 지휘관과 동행합니다.",
+          "text": "추가 공정 두번째에 대해 말씀드리겠습니다.",
           "window": "Speech",
           "voice": null
         },
         {
           "id": "lib_maria_n_1_10_132",
           "speakerName": "에닉",
-          "text": "덧붙여, 당신의 현장 개입은 중지됩니다. 감시만 가능합니다.",
+          "text": "앞으로의 마리아 모델의 지상 출동은 지휘관과 동행합니다.",
           "window": "Speech",
           "voice": null
         },
         {
           "id": "lib_maria_n_1_10_133",
+          "speakerName": "에닉",
+          "text": "덧붙여, 당신의 현장 개입은 중지됩니다. 감시만 가능합니다.",
+          "window": "Speech",
+          "voice": null
+        },
+        {
+          "id": "lib_maria_n_1_10_134",
           "speakerName": "닥터 마리아",
           "text": "지휘관이라니… 인간… 을 말하는거야?",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_10_134",
+          "id": "lib_maria_n_1_10_135",
           "speakerName": "에닉",
           "text": "그렇습니다.",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_10_135",
+          "id": "lib_maria_n_1_10_136",
           "speakerName": "닥터 마리아",
           "text": "왜, 왜….",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_10_136",
+          "id": "lib_maria_n_1_10_137",
           "speakerName": "에닉",
           "text": "현재 방주에는 인간 지휘관과 니케의 협동 작전이 필수 사항입니다.",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_10_137",
+          "id": "lib_maria_n_1_10_138",
           "speakerName": "에닉",
           "text": "실제로 인간 지휘관과 니케의 협동 작전의 성과는 매우 우수합니다.",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_10_138",
+          "id": "lib_maria_n_1_10_139",
           "speakerName": "에닉",
           "text": "평균적으로 니케 단독 작전 대비 400% 이상의 성과가 확인됩니다.",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_10_139",
+          "id": "lib_maria_n_1_10_140",
           "speakerName": "닥터 마리아",
           "text": "감시를 붙이는거라고 솔직히 말해.",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_10_140",
+          "id": "lib_maria_n_1_10_141",
           "speakerName": "에닉",
           "text": "부정하지 않겠습니다만, 제 의도는 명확합니다.",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_10_141",
+          "id": "lib_maria_n_1_10_142",
           "speakerName": "에닉",
           "text": "평범한 니케는 헬레틱이 될 수 없습니다.",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_10_142",
+          "id": "lib_maria_n_1_10_143",
           "speakerName": "에닉",
           "text": "소체가 우수한 니케일수록 헬레틱이 될 확률이 높아진다고 보는 것이 타당하겠지요.",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_10_143",
+          "id": "lib_maria_n_1_10_144",
           "speakerName": "에닉",
           "text": "지휘관의 지휘를 받은 니케 마리아 모델은 더욱 성과가 우수해질 것이며.",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_10_144",
+          "id": "lib_maria_n_1_10_145",
           "speakerName": "에닉",
           "text": "이는 헬레틱이 될 확률을 비약적으로 높여줄 것이라 기대하고 있습니다.",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_10_145",
+          "id": "lib_maria_n_1_10_146",
           "speakerName": "에닉",
           "text": "요약하자면-",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_10_146",
+          "id": "lib_maria_n_1_10_147",
           "speakerName": "에닉",
           "text": "당신은 니케 마리아 모델에게 침식을 투입한 후, 인간 지휘관과 함께 출동 시킨 후.",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_10_147",
+          "id": "lib_maria_n_1_10_148",
           "speakerName": "에닉",
           "text": "니케 마리아 모델을 우수하게 만들어.",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_10_148",
+          "id": "lib_maria_n_1_10_149",
           "speakerName": "에닉",
           "text": "헬레틱이 될 확률을 높여주시면 됩니다.",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_10_149",
+          "id": "lib_maria_n_1_10_150",
           "speakerName": "닥터 마리아",
           "text": "너, 솔직히 말해. 무슨 꿍꿍이야.",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_10_150",
+          "id": "lib_maria_n_1_10_151",
           "speakerName": "닥터 마리아",
           "text": "수상한 점이 한두 가지가 아니야. 무슨 꿍꿍이길래 이런 짓을 하는 거야.",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_10_151",
+          "id": "lib_maria_n_1_10_152",
           "speakerName": "닥터 마리아",
           "text": "내 현장 개입까지 막는다는 걸 보니까, 보통 일을 꾸미고 있는 게 아닌 것 같은데.",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_10_152",
+          "id": "lib_maria_n_1_10_153",
           "speakerName": "에닉",
           "text": "제 의도는 모두 설명 드렸습니다.",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_10_153",
+          "id": "lib_maria_n_1_10_154",
           "speakerName": "닥터 마리아",
           "text": "…그래. 말해줄 리가 없지.",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_10_154",
+          "id": "lib_maria_n_1_10_155",
           "speakerName": "닥터 마리아",
           "text": "내가 그런 미친짓을 할 것 같아?",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_10_155",
+          "id": "lib_maria_n_1_10_156",
           "speakerName": "에닉",
           "text": "물론입니다.",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_10_156",
+          "id": "lib_maria_n_1_10_157",
           "speakerName": "에닉",
           "text": "계획대로 일이 잘 풀린다면",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_10_157",
+          "id": "lib_maria_n_1_10_158",
           "speakerName": "에닉",
           "text": "당신은 인류의 구원자가 될 것이며",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_10_158",
+          "id": "lib_maria_n_1_10_159",
           "speakerName": "에닉",
           "text": "자연스럽게 에블라 박사의 오명 역시 벗겨질 테니까요.",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_10_159",
+          "id": "lib_maria_n_1_10_160",
           "speakerName": "닥터 마리아",
           "text": "…….",
-          "window": "Speech",
-          "voice": null
-        },
-        {
-          "id": "lib_maria_n_1_10_160",
-          "speakerName": "에닉",
-          "text": "지휘관은 제 측에서 파견 보내겠습니다.",
           "window": "Speech",
           "voice": null
         },
         {
           "id": "lib_maria_n_1_10_161",
           "speakerName": "에닉",
-          "text": "수송기에 탑승한 상태가 될 테니 당신과 마주칠 일은 없습니다.",
+          "text": "지휘관은 제 측에서 파견 보내겠습니다.",
           "window": "Speech",
           "voice": null
         },
         {
           "id": "lib_maria_n_1_10_162",
           "speakerName": "에닉",
-          "text": "또한, 사망 후 이틀 내에 완전 부식되어 사라지는 특별 사양이니 시체를 치우는 번거로움이 없습니다.",
+          "text": "수송기에 탑승한 상태가 될 테니 당신과 마주칠 일은 없습니다.",
           "window": "Speech",
           "voice": null
         },
         {
           "id": "lib_maria_n_1_10_163",
           "speakerName": "에닉",
-          "text": "당신은 그저 니케 마리아 모델에게 침식을 주입한 후 평소와 똑같이 출동시키면 됩니다.",
+          "text": "또한, 사망 후 이틀 내에 완전 부식되어 사라지는 특별 사양이니 시체를 치우는 번거로움이 없습니다.",
           "window": "Speech",
           "voice": null
         },
         {
           "id": "lib_maria_n_1_10_164",
           "speakerName": "에닉",
-          "text": "그리고 니케 마리아 모델이 헬레틱이 되는 것을 기다리면 되겠죠.",
+          "text": "당신은 그저 니케 마리아 모델에게 침식을 주입한 후 평소와 똑같이 출동시키면 됩니다.",
           "window": "Speech",
           "voice": null
         },
         {
           "id": "lib_maria_n_1_10_165",
+          "speakerName": "에닉",
+          "text": "그리고 니케 마리아 모델이 헬레틱이 되는 것을 기다리면 되겠죠.",
+          "window": "Speech",
+          "voice": null
+        },
+        {
+          "id": "lib_maria_n_1_10_166",
           "speakerName": "닥터 마리아",
           "text": "…너, 너. 이 연구실의 위치를 알아?",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_10_166",
+          "id": "lib_maria_n_1_10_167",
           "speakerName": "에닉",
           "text": "예. 알고 있습니다.",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_10_167",
+          "id": "lib_maria_n_1_10_168",
           "speakerName": "닥터 마리아",
           "text": "…놀아나네, 완전히.",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_10_168",
+          "id": "lib_maria_n_1_10_169",
           "speakerName": "에닉",
           "text": "내일부터 바로 시작해주십시오.",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_10_169",
+          "id": "lib_maria_n_1_10_170",
           "speakerName": "닥터 마리아",
           "text": "할거라고는 단 한마디도 하지 않았어.",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_10_170",
+          "id": "lib_maria_n_1_10_171",
           "speakerName": "에닉",
           "text": "그럼 지금 대답해 주십시오.",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_10_171",
+          "id": "lib_maria_n_1_10_172",
           "speakerName": "에닉",
           "text": "제 제안을 받아들이시겠습니까?",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_10_172",
+          "id": "lib_maria_n_1_10_173",
           "speakerName": "닥터 마리아",
           "text": "…….",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_10_173",
+          "id": "lib_maria_n_1_10_174",
           "speakerName": "닥터 마리아",
           "text": "미친 A.I. 자식.",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_10_174",
+          "id": "lib_maria_n_1_10_175",
           "speakerName": "닥터 마리아",
           "text": "어머니가 너를 만든 걸 후회하고 있을거야.",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_10_175",
+          "id": "lib_maria_n_1_10_176",
           "speakerName": "에닉",
           "text": "승낙으로 판단하겠습니다.",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_10_176",
+          "id": "lib_maria_n_1_10_177",
           "speakerName": "닥터 마리아",
           "text": "그래.",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_10_177",
+          "id": "lib_maria_n_1_10_178",
           "speakerName": "닥터 마리아",
           "text": "할게.",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_10_178",
+          "id": "lib_maria_n_1_10_179",
           "speakerName": "닥터 마리아",
           "text": "할 수밖에 없는 거잖아. 안 그래?",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_10_179",
+          "id": "lib_maria_n_1_10_180",
           "speakerName": "에닉",
           "text": "솔직하게 말씀드리면, 그렇습니다.",
           "window": "Speech",
@@ -11765,217 +11792,218 @@
         },
         {
           "id": "lib_maria_n_1_13_47",
+          "speakerName": "마리아-n",
+          "text": "왜….",
+          "window": "Speech",
+          "voice": null
+        },
+        {
+          "id": "lib_maria_n_1_13_48",
           "text": "어… 팀워크는 중요하니까?",
           "window": "Self",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_13_48",
+          "id": "lib_maria_n_1_13_49",
           "text": "어쨌든 같은 작전에 투입된 사이니까, 한명이라도 컨디션이 나쁘면 위험하잖아.",
           "window": "Self",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_13_49",
+          "id": "lib_maria_n_1_13_50",
           "speakerName": "마리아-n",
           "text": "…….",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_13_50",
+          "id": "lib_maria_n_1_13_51",
           "text": "어때? 기분은 좀 풀렸… 이런. 숙여.",
           "window": "Self",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_13_51",
+          "id": "lib_maria_n_1_13_52",
           "text": "마리아-n이 반사적으로 자세를 낮춘다.",
           "window": "Narration",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_13_52",
+          "id": "lib_maria_n_1_13_53",
           "text": "남자의 시선이 향한 곳을 바라본다.",
           "window": "Narration",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_13_53",
+          "id": "lib_maria_n_1_13_54",
           "text": "랩쳐 셋이 천천히 걸어가고 있다.",
           "window": "Narration",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_13_54",
+          "id": "lib_maria_n_1_13_55",
           "speakerName": "마리아-n",
           "text": "…엄폐물에 숨으세요. 바로 잡을게요.",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_13_55",
+          "id": "lib_maria_n_1_13_56",
           "text": "튀자.",
           "window": "Self",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_13_56",
+          "id": "lib_maria_n_1_13_57",
           "speakerName": "마리아-n",
           "text": "튀자고요?",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_13_57",
+          "id": "lib_maria_n_1_13_58",
           "text": "저쪽에서 우릴 발견하지 못 했잖아.",
           "window": "Self",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_13_58",
+          "id": "lib_maria_n_1_13_59",
           "text": "그냥 조용히 튀자.",
           "window": "Self",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_13_59",
+          "id": "lib_maria_n_1_13_60",
           "speakerName": "마리아-n",
           "text": "아니, 전투를….",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_13_60",
+          "id": "lib_maria_n_1_13_61",
           "text": "안 싸워도 되는데 뭐하러 목숨을 걸어. 튀자 빨리.",
           "window": "Self",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_13_61",
+          "id": "lib_maria_n_1_13_62",
           "text": "남자가 자세를 낮춘 채 움직인다.",
           "window": "Narration",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_13_62",
+          "id": "lib_maria_n_1_13_63",
           "text": "마리아-n이 얼떨결에 그 뒤를 따른다.",
           "window": "Narration",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_13_63",
+          "id": "lib_maria_n_1_13_64",
           "text": "잠시 후 둘은 꽃밭에서 벗어나, 수송기가 있는 쪽으로 되돌아왔다.",
           "window": "Narration",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_13_64",
+          "id": "lib_maria_n_1_13_65",
           "text": "후우. 큰일날 뻔 했네.",
           "window": "Self",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_13_65",
+          "id": "lib_maria_n_1_13_66",
           "speakerName": "마리아-n",
           "text": "…….",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_13_66",
+          "id": "lib_maria_n_1_13_67",
           "text": "아, 이거.",
           "window": "Self",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_13_67",
+          "id": "lib_maria_n_1_13_68",
           "text": "남자가 가슴 주머니를 뒤적인다.",
           "window": "Narration",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_13_68",
+          "id": "lib_maria_n_1_13_69",
           "text": "푸른색 장미 한송이를 마리아-n에게 건넨다.",
           "window": "Narration",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_13_69",
+          "id": "lib_maria_n_1_13_70",
           "speakerName": "마리아-n",
           "text": "…이건….",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_13_70",
+          "id": "lib_maria_n_1_13_71",
           "text": "기념품. 꽃밭에 갔으니 꽃 한송이 정도는 챙겨와야지.",
           "window": "Self",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_13_71",
+          "id": "lib_maria_n_1_13_72",
           "speakerName": "마리아-n",
           "text": "…….",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_13_72",
+          "id": "lib_maria_n_1_13_73",
           "text": "마리아-n이 꽃을 받아든다.",
           "window": "Narration",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_13_73",
+          "id": "lib_maria_n_1_13_74",
           "text": "살랑이는 꽃잎을 멍하니 바라본다.",
           "window": "Narration",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_13_74",
+          "id": "lib_maria_n_1_13_75",
           "text": "…기분은 좀 풀렸어?",
           "window": "Self",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_13_75",
-          "speakerName": "마리아-n",
-          "text": "…….",
-          "window": "Speech",
-          "voice": null
-        },
-        {
           "id": "lib_maria_n_1_13_76",
           "speakerName": "마리아-n",
-          "text": "그런 것 같아요.",
+          "text": "…….",
           "window": "Speech",
           "voice": null
         },
         {
           "id": "lib_maria_n_1_13_77",
           "speakerName": "마리아-n",
-          "text": "고마워요.",
+          "text": "그런 것 같아요.",
           "window": "Speech",
           "voice": null
         },
         {
           "id": "lib_maria_n_1_13_78",
+          "speakerName": "마리아-n",
+          "text": "고마워요.",
+          "window": "Speech",
+          "voice": null
+        },
+        {
+          "id": "lib_maria_n_1_13_79",
           "text": "그럼 이제 가자. 잘 부탁해.",
           "window": "Self",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_13_79",
+          "id": "lib_maria_n_1_13_80",
           "speakerName": "마리아-n",
           "text": "…예. 잘 부탁드려요.",
           "window": "Speech",
-          "voice": null
-        },
-        {
-          "id": "lib_maria_n_1_13_80",
-          "text": "투두두두두-!!",
-          "window": "Narration",
           "voice": null
         },
         {
@@ -11986,869 +12014,881 @@
         },
         {
           "id": "lib_maria_n_1_13_82",
+          "text": "투두두두두-!!",
+          "window": "Narration",
+          "voice": null
+        },
+        {
+          "id": "lib_maria_n_1_13_83",
           "speakerName": "마리아-n",
           "text": "이런 곳에 매복이라니…!",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_13_83",
+          "id": "lib_maria_n_1_13_84",
           "speakerName": "마리아-n",
           "text": "절대 머리를 들지 말아요!",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_13_84",
+          "id": "lib_maria_n_1_13_85",
           "text": "알겠어!",
           "window": "Self",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_13_85",
+          "id": "lib_maria_n_1_13_86",
           "text": "남자는 자세를 낮추고 엄폐물 뒤에 숨은 채 주위를 두리번거린다.",
           "window": "Narration",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_13_86",
+          "id": "lib_maria_n_1_13_87",
           "text": "옆의 엄폐물 아래에 뭔가가 보인다.",
           "window": "Narration",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_13_87",
+          "id": "lib_maria_n_1_13_88",
           "text": "고개를 돌려 전투 중인 마리아-n을 바라본다.",
           "window": "Narration",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_13_88",
+          "id": "lib_maria_n_1_13_89",
           "text": "필사적인 표정으로 탄환을 퍼붓고 있는 모습, 죽음의 공포에 직면해 있는 얼굴을 본다.",
           "window": "Narration",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_13_89",
+          "id": "lib_maria_n_1_13_90",
           "text": "남자는 빠르게 움직여 옆의 엄폐물로 달려간다.",
           "window": "Narration",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_13_90",
+          "id": "lib_maria_n_1_13_91",
           "speakerName": "마리아-n",
           "text": "잠깐…!",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_13_91",
+          "id": "lib_maria_n_1_13_92",
           "text": "툭. 하는 소리와 함께 상의의 옷자락이 크게 움직이는 느낌이 난다.",
           "window": "Narration",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_13_92",
+          "id": "lib_maria_n_1_13_93",
           "text": "남자는 옆의 엄폐물 뒤로 몸을 날렸고, 바닥에 널브러져 있는 수류탄을 집어든다.",
           "window": "Narration",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_13_93",
+          "id": "lib_maria_n_1_13_94",
           "text": "안전핀을 뽑고, 탄환을 쏟아붓고 있는 랩쳐의 무리를 향해 던진다.",
           "window": "Narration",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_13_94",
+          "id": "lib_maria_n_1_13_95",
           "text": "콰앙-! 하는 소리와 폭발이 터져나온다.",
           "window": "Narration",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_13_95",
+          "id": "lib_maria_n_1_13_96",
           "speakerName": "마리아-n",
           "text": "…!!",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_13_96",
+          "id": "lib_maria_n_1_13_97",
           "text": "마리아-n은 대열이 흐트러진 랩쳐의 무리를 향해 공격을 가한다.",
           "window": "Narration",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_13_97",
+          "id": "lib_maria_n_1_13_98",
           "text": "그리고 잠시 후, 마지막으로 남은 랩쳐가 부들거리다 침묵한다.",
           "window": "Narration",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_13_98",
+          "id": "lib_maria_n_1_13_99",
           "speakerName": "마리아-n",
           "text": "하아…! 하아…!",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_13_99",
+          "id": "lib_maria_n_1_13_100",
           "speakerName": "마리아-n",
           "text": "클리어.",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_13_100",
+          "id": "lib_maria_n_1_13_101",
           "text": "아… 으윽…!",
           "window": "Self",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_13_101",
+          "id": "lib_maria_n_1_13_102",
           "speakerName": "마리아-n",
           "text": "!!",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_13_102",
+          "id": "lib_maria_n_1_13_103",
           "text": "마리아-n이 남자가 누워있는 옆의 엄폐물로 달려간다. 남자의 상태를 살핀다.",
           "window": "Narration",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_13_103",
+          "id": "lib_maria_n_1_13_104",
           "speakerName": "마리아-n",
           "text": "부상 부위를 보여줘요!",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_13_104",
+          "id": "lib_maria_n_1_13_105",
           "text": "구를 때 너무 쎄게 굴렀나봐. 무릎이 아파.",
           "window": "Self",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_13_105",
+          "id": "lib_maria_n_1_13_106",
           "speakerName": "마리아-n",
           "text": "…….",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_13_106",
+          "id": "lib_maria_n_1_13_107",
           "speakerName": "마리아-n",
           "text": "다친 곳은요?",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_13_107",
+          "id": "lib_maria_n_1_13_108",
           "text": "옷에 탄환이 스쳤어.",
           "window": "Self",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_13_108",
+          "id": "lib_maria_n_1_13_109",
           "text": "우와. 이거 뭐야. 옷자락이 너덜너덜해졌어. 맞았으면 구멍 정도로 안 끝났겠는데.",
           "window": "Self",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_13_109",
+          "id": "lib_maria_n_1_13_110",
           "speakerName": "마리아-n",
           "text": "당신!! 목숨이 몇 개라도 되나요? 그런 무모한 짓을…!",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_13_110",
+          "id": "lib_maria_n_1_13_111",
           "text": "그럼 너는 목숨이 몇 개라도 돼?",
           "window": "Self",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_13_111",
+          "id": "lib_maria_n_1_13_112",
           "speakerName": "마리아-n",
           "text": "…뭐라고요?",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_13_112",
+          "id": "lib_maria_n_1_13_113",
           "text": "그렇게 필사적으로, 죽는 걸 겁내하면서 싸웠잖아.",
           "window": "Self",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_13_113",
+          "id": "lib_maria_n_1_13_114",
           "text": "그러면서 도와달라는 말 한마디를 안 했고.",
           "window": "Self",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_13_114",
+          "id": "lib_maria_n_1_13_115",
           "text": "그래서 도왔어. 힘들어 보여서.",
           "window": "Self",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_13_115",
+          "id": "lib_maria_n_1_13_116",
           "speakerName": "마리아-n",
           "text": "…….",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_13_116",
+          "id": "lib_maria_n_1_13_117",
           "speakerName": "마리아-n",
           "text": "왜요.",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_13_117",
+          "id": "lib_maria_n_1_13_118",
           "text": "왜라니… 지휘관이라면 이래야 할 것 같으니까.",
           "window": "Self",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_13_118",
+          "id": "lib_maria_n_1_13_119",
           "speakerName": "마리아-n",
           "text": "…지휘관이….",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_13_119",
+          "id": "lib_maria_n_1_13_120",
           "text": "나 지휘관이 되는게 꿈이었거든.",
           "window": "Self",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_13_120",
+          "id": "lib_maria_n_1_13_121",
           "text": "그래서 지휘관이 되면 이렇게저렇게 해야지 하고 망상 많이 했어.",
           "window": "Self",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_13_121",
+          "id": "lib_maria_n_1_13_122",
           "speakerName": "마리아-n",
           "text": "그 망상 때문에 죽을 수도 있어요. 실전과 망상은 다르다고요.",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_13_122",
+          "id": "lib_maria_n_1_13_123",
           "text": "그래도 잘 해냈잖아. 그럼 됐지 뭐.",
           "window": "Self",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_13_123",
+          "id": "lib_maria_n_1_13_124",
           "speakerName": "마리아-n",
           "text": "…….",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_13_124",
+          "id": "lib_maria_n_1_13_125",
           "speakerName": "마리아-n",
           "text": "당신. 이름이 뭔가요?",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_13_125",
+          "id": "lib_maria_n_1_13_126",
           "text": "내 이름?",
           "window": "Self",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_13_126",
+          "id": "lib_maria_n_1_13_127",
           "speakerName": "마리아-n",
           "text": "예. 언제까지나 당신이라고 부를 순 없으니까요.",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_13_127",
+          "id": "lib_maria_n_1_13_128",
           "text": "어… 글쎄.",
           "window": "Self",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_13_128",
+          "id": "lib_maria_n_1_13_129",
           "text": "다들 7호라고 부르던데.",
           "window": "Self",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_13_129",
+          "id": "lib_maria_n_1_13_130",
           "speakerName": "마리아-n",
           "text": "그럼 7호씨라고 부르면 되나요? 이상한데요.",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_13_130",
+          "id": "lib_maria_n_1_13_131",
           "text": "그건 좀 이상하긴 하다.",
           "window": "Self",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_13_131",
+          "id": "lib_maria_n_1_13_132",
           "speakerName": "마리아-n",
           "text": "…….",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_13_132",
+          "id": "lib_maria_n_1_13_133",
           "speakerName": "마리아-n",
           "text": "지휘관이 꿈이라고 했죠?",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_13_133",
+          "id": "lib_maria_n_1_13_134",
           "text": "응.",
           "window": "Self",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_13_134",
+          "id": "lib_maria_n_1_13_135",
           "text": "약속했거든. 그 아이랑.",
           "window": "Self",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_13_135",
+          "id": "lib_maria_n_1_13_136",
           "speakerName": "마리아-n",
           "text": "…그 아이… 라면 누구요?",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_13_136",
+          "id": "lib_maria_n_1_13_137",
           "text": "…음. 미안. 기억이 잘 안나.",
           "window": "Self",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_13_137",
+          "id": "lib_maria_n_1_13_138",
           "text": "그런데… 엄청.",
           "window": "Self",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_13_138",
+          "id": "lib_maria_n_1_13_139",
           "text": "소중한 사람이었다는 건 기억 나.",
           "window": "Self",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_13_139",
+          "id": "lib_maria_n_1_13_140",
           "speakerName": "마리아-n",
           "text": "…그렇군요.",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_13_140",
+          "id": "lib_maria_n_1_13_141",
           "speakerName": "마리아-n",
           "text": "…….",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_13_141",
+          "id": "lib_maria_n_1_13_142",
           "speakerName": "마리아-n",
           "text": "그럼, 지휘관이라고 부를게요.",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_13_142",
+          "id": "lib_maria_n_1_13_143",
           "text": "아니. 그건 좀.",
           "window": "Self",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_13_143",
+          "id": "lib_maria_n_1_13_144",
           "text": "어제 갓 사관학교를 졸업했는데 지휘관이라고 부르면 민망해.",
           "window": "Self",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_13_144",
+          "id": "lib_maria_n_1_13_145",
           "speakerName": "마리아-n",
           "text": "뭐 어때요. 우리 둘 뿐인데.",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_13_145",
+          "id": "lib_maria_n_1_13_146",
           "speakerName": "마리아-n",
           "text": "괜찮죠?",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_13_146",
+          "id": "lib_maria_n_1_13_147",
           "text": "…그래. 그렇게 불러줘.",
           "window": "Self",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_13_147",
+          "id": "lib_maria_n_1_13_148",
           "text": "그럼, 너는 뭐라고 부르면 돼?",
           "window": "Self",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_13_148",
+          "id": "lib_maria_n_1_13_149",
           "speakerName": "마리아-n",
           "text": "아, 저는",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_13_149",
+          "id": "lib_maria_n_1_13_150",
           "speakerName": "마리아-n",
           "text": "마리아-n이라고 불러줘요.",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_13_150",
+          "id": "lib_maria_n_1_13_151",
           "text": "특이한 이름이네. 뒤에 n이 붙고.",
           "window": "Self",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_13_151",
+          "id": "lib_maria_n_1_13_152",
           "speakerName": "마리아-n",
           "text": "형식 번호… 같은거예요.",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_13_152",
+          "id": "lib_maria_n_1_13_153",
           "text": "뭐야. 7호나 n이나.",
           "window": "Self",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_13_153",
+          "id": "lib_maria_n_1_13_154",
           "speakerName": "마리아-n",
           "text": "…….",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_13_154",
+          "id": "lib_maria_n_1_13_155",
           "text": "마리안이라고 부를게. 괜찮지?",
           "window": "Self",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_13_155",
+          "id": "lib_maria_n_1_13_156",
           "speakerName": "마리아-n",
           "text": "…….",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_13_156",
-          "speakerName": "마리안",
-          "text": "마리안.",
-          "window": "Speech",
-          "voice": null
-        },
-        {
           "id": "lib_maria_n_1_13_157",
-          "text": "응.",
+          "text": "마리안.",
           "window": "Self",
           "voice": null
         },
         {
           "id": "lib_maria_n_1_13_158",
+          "text": "응.",
+          "window": "Self",
+          "voice": null
+        },
+        {
+          "id": "lib_maria_n_1_13_159",
           "speakerName": "마리안",
           "text": "…….",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_13_159",
+          "id": "lib_maria_n_1_13_160",
           "speakerName": "마리안",
           "text": "예. 그렇게 불러줘요.",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_13_160",
+          "id": "lib_maria_n_1_13_161",
           "text": "좋아. 그럼 다시 힘내서 가볼까? 마리안.",
           "window": "Self",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_13_161",
+          "id": "lib_maria_n_1_13_162",
           "speakerName": "마리안",
           "text": "…그래요. 지휘관.",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_13_162",
+          "id": "lib_maria_n_1_13_163",
           "text": "아, 그 전에.",
           "window": "Self",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_13_163",
+          "id": "lib_maria_n_1_13_164",
           "text": "남자가 마리안의 앞에 쪼그리고 앉는다.",
           "window": "Narration",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_13_164",
+          "id": "lib_maria_n_1_13_165",
           "text": "품을 뒤적거리다가 붕대를 꺼낸다.",
           "window": "Narration",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_13_165",
+          "id": "lib_maria_n_1_13_166",
           "text": "그것을 마리안의 발목에 정성스럽게 감는다.",
           "window": "Narration",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_13_166",
+          "id": "lib_maria_n_1_13_167",
           "speakerName": "마리안",
           "text": "뭐… 하시는 건가요?",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_13_167",
+          "id": "lib_maria_n_1_13_168",
           "text": "치료중이잖아.",
           "window": "Self",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_13_168",
+          "id": "lib_maria_n_1_13_169",
           "speakerName": "마리안",
           "text": "니케에게 이런건 아무 소용이 없어요.",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_13_169",
+          "id": "lib_maria_n_1_13_170",
           "text": "아닐걸. 마음이 치유될걸.",
           "window": "Self",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_13_170",
+          "id": "lib_maria_n_1_13_171",
           "speakerName": "마리안",
           "text": "…….",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_13_171",
+          "id": "lib_maria_n_1_13_172",
           "text": "응. 다 됐다. 움직이는데 불편하진 않지?",
           "window": "Self",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_13_172",
+          "id": "lib_maria_n_1_13_173",
           "text": "드드드드드-",
           "window": "Narration",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_13_173",
+          "id": "lib_maria_n_1_13_174",
           "text": "좀 전에 침묵한 랩쳐가 진동한다.",
           "window": "Narration",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_13_174",
+          "id": "lib_maria_n_1_13_175",
           "speakerName": "마리안",
           "text": "!!",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_13_175",
+          "id": "lib_maria_n_1_13_176",
           "text": "둘의 시선이 랩쳐에게로 고정된다.",
           "window": "Narration",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_13_176",
+          "id": "lib_maria_n_1_13_177",
           "text": "랩쳐는 굉음을 뿜어내며, 삽시간에 둘에게로 돌진한다.",
           "window": "Narration",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_13_177",
+          "id": "lib_maria_n_1_13_178",
           "speakerName": "마리안",
           "text": "!! 자폭…!?",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_13_178",
+          "id": "lib_maria_n_1_13_179",
           "text": "쿳…!",
           "window": "Self",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_13_179",
+          "id": "lib_maria_n_1_13_180",
           "text": "남자가 마리안을 밀친다. 마리안이 엄폐물 너머로 고꾸라진다.",
           "window": "Narration",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_13_180",
+          "id": "lib_maria_n_1_13_181",
           "text": "진동하며 다가오는 랩쳐. 남자 역시 엄폐물 너머로 넘어가기 위해 손을 짚고, 지면을 박찬다.",
           "window": "Narration",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_13_181",
+          "id": "lib_maria_n_1_13_182",
           "text": "콰아아아앙-!!",
           "window": "Narration",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_13_182",
+          "id": "lib_maria_n_1_13_183",
           "text": "다가오던 랩쳐가 폭발을 일으킨다.",
           "window": "Narration",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_13_183",
+          "id": "lib_maria_n_1_13_184",
           "text": "마리안은 엄폐물 뒤에서 고개를 숙인다.",
           "window": "Narration",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_13_184",
+          "id": "lib_maria_n_1_13_185",
           "text": "잠시 후, 폭연이 사그라들고 마리안이 몸을 일으킨다.",
           "window": "Narration",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_13_185",
+          "id": "lib_maria_n_1_13_186",
           "text": "엄폐물을 넘어가 주위를 살핀다.",
           "window": "Narration",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_13_186",
+          "id": "lib_maria_n_1_13_187",
           "speakerName": "마리안",
           "text": "…지휘관?",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_13_187",
+          "id": "lib_maria_n_1_13_188",
           "speakerName": "마리안",
           "text": "지휘관! 어디 있나요!",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_13_188",
+          "id": "lib_maria_n_1_13_189",
           "text": "물컹.",
           "window": "Narration",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_13_189",
+          "id": "lib_maria_n_1_13_190",
           "text": "마리안이 뭔가를 밟는다.",
           "window": "Narration",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_13_190",
+          "id": "lib_maria_n_1_13_191",
           "text": "마리안은 넋나간 표정으로 움직이지 않은 채, 아래를 바라보고 있다.",
           "window": "Narration",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_13_191",
+          "id": "lib_maria_n_1_13_192",
           "text": "작은 조각만을 남기고, 남자는 흔적도 없이 사라졌다.",
           "window": "Narration",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_13_192",
+          "id": "lib_maria_n_1_13_193",
           "speakerName": "마리안",
           "text": "…아.",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_13_193",
+          "id": "lib_maria_n_1_13_194",
           "speakerName": "마리안",
           "text": "…아아아아아.",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_13_194",
+          "id": "lib_maria_n_1_13_195",
           "speakerName": "에닉",
           "text": "7호.",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_13_195",
+          "id": "lib_maria_n_1_13_196",
           "speakerName": "에닉",
           "text": "니케 마리아 모델과 동행 중, 니케 마리아 모델을 감싸다 폭사.",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_13_196",
+          "id": "lib_maria_n_1_13_197",
           "speakerName": "에닉",
           "text": "이후 감정에 큰 동요를 겪은 니케 마리아 모델은 작전을 단독 진행.",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_13_197",
+          "id": "lib_maria_n_1_13_198",
           "speakerName": "에닉",
           "text": "달성률 48.2% 지점에서 침식이 발발.",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_13_198",
+          "id": "lib_maria_n_1_13_199",
           "speakerName": "에닉",
           "text": "20시간 후, 궤도 엘리베이터 인근에서 퀸 인자 발생 후 소실 확인.",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_13_199",
+          "id": "lib_maria_n_1_13_200",
           "speakerName": "에닉",
           "text": "7호와의 동행이 달성률 및 퀸 인자 발생에 지대한 영향을 미친 것으로 판단.",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_13_200",
+          "id": "lib_maria_n_1_13_201",
           "text": "마리안은 참담한 심정으로 눈을 떴다.",
           "window": "Narration",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_13_201",
+          "id": "lib_maria_n_1_13_202",
           "text": "계단을 타고 내려간 곳에서 닥터 마리아의 모습을 확인한다.",
           "window": "Narration",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_13_202",
+          "id": "lib_maria_n_1_13_203",
           "text": "마리안은 닥터 마리아에게 이 기분을 털어놓고 싶었지만",
           "window": "Narration",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_13_203",
+          "id": "lib_maria_n_1_13_204",
           "text": "언제나와 다름없는 물체를 바라보는 그 눈빛에 말과 감정을 삼킨다.",
           "window": "Narration",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_13_204",
+          "id": "lib_maria_n_1_13_205",
           "text": "마리안은 아래를 바라보며 걸었고",
           "window": "Narration",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_13_205",
+          "id": "lib_maria_n_1_13_206",
           "text": "[강화 시술] 후 수송기에 몸을 싣는다.",
           "window": "Narration",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_13_206",
+          "id": "lib_maria_n_1_13_207",
           "text": "맞은편에 앉은 남자를 바라본다.",
           "window": "Narration",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_13_207",
+          "id": "lib_maria_n_1_13_208",
           "text": "남자는 슬쩍 미소짓는다.",
           "window": "Narration",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_13_208",
+          "id": "lib_maria_n_1_13_209",
           "text": "안녕? 마리안.",
           "window": "Self",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_13_209",
+          "id": "lib_maria_n_1_13_210",
           "speakerName": "에닉",
           "text": "이에 따라 8호 제작 계획 철회.",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_13_210",
+          "id": "lib_maria_n_1_13_211",
           "speakerName": "에닉",
           "text": "7호를 반복 투입하는 것으로 결정.",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_13_211",
+          "id": "lib_maria_n_1_13_212",
           "speakerName": "마리안",
           "text": "…….",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_13_212",
+          "id": "lib_maria_n_1_13_213",
           "speakerName": "마리안",
           "text": "…아.",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_13_213",
+          "id": "lib_maria_n_1_13_214",
           "speakerName": "마리안",
           "text": "아아아아아….",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_13_214",
+          "id": "lib_maria_n_1_13_215",
           "speakerName": "마리안",
           "text": "아아… 아하. 하, 아하.",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_13_215",
+          "id": "lib_maria_n_1_13_216",
           "speakerName": "마리안",
           "text": "…아하. 하하. 하하하하.",
           "window": "Speech",
           "voice": null
         },
         {
-          "id": "lib_maria_n_1_13_216",
+          "id": "lib_maria_n_1_13_217",
+          "speakerName": "마리안",
+          "text": "하하하하하하….",
+          "window": "Speech",
+          "voice": null
+        },
+        {
+          "id": "lib_maria_n_1_13_218",
           "text": "MARIA-n : To Be Continued….",
           "window": "Narration",
           "voice": null
