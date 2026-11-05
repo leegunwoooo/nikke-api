@@ -31,6 +31,17 @@ test("silent lines and one-button replies stay in the script", () => {
   assert.equal(seven[flee - 1].window, "Self");
 });
 
+test("short lines OCR can't read stay in the script", () => {
+  const lines = (groupId: string) => scenes.find((s) => s.groupId === groupId)!.lines;
+  const part2 = lines("lib_maria_n_2_01");
+  const why = part2.findIndex((l) => l.text === "왜… 요?");
+  assert.deepEqual([part2[why - 1].text, part2[why - 1].window], ["응.", "Self"]);
+  const last = lines("lib_maria_n_2_12");
+  assert.equal(last.at(-1)!.text, "PROJECT SILVER GUN : END");
+  assert.ok(last.some((l) => l.text === "제발… 제발…!" && l.window === "Narration"));
+  assert.ok(lines("lib_maria_n_1_13").some((l) => l.text === "하하하하하하…."));
+});
+
 test("no uploader's game nickname is left in the script", () => {
   const all = scenes.flatMap((s) => s.lines.map((l) => l.text)).join("\n");
   assert.equal((all.match(/@UserName/g) ?? []).length, 5);
