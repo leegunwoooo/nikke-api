@@ -3143,7 +3143,7 @@
         {
           "id": "lib_maria_n_1_04_57",
           "speakerName": "닥터 마리아",
-          "text": "그래도 다음부턴 네가 해 이번엔 나도 분위기에 휩쓸려서 얼떨결에 끝까지 한거니까.",
+          "text": "그래도 다음부턴 네가 해. 이번엔 나도 분위기에 휩쓸려서 얼떨결에 끝까지 한거니까.",
           "window": "Speech",
           "voice": null
         },
@@ -12497,9 +12497,8 @@
         },
         {
           "id": "lib_maria_n_1_13_157",
-          "speakerName": "마리안",
           "text": "마리안.",
-          "window": "Speech",
+          "window": "Self",
           "voice": null
         },
         {
