@@ -185,14 +185,17 @@ const MIN_KEY = 8;
 export const dedupKeys = (lines: { text?: string }[]) =>
   lines.map((l) => dedupKey(l.text ?? "")).filter((k) => k.length >= MIN_KEY);
 
-// A transcript can replay main-story lines around new ones (MARIA-n part 2's
-// last scene overlaps 59%), so it drops out only when nearly all of it is published.
+// A transcript scene can replay main-story lines around new ones (MARIA-n part 2's
+// last scene overlaps 59%), so alone it drops out only when nearly all of it is published.
 export const TRANSCRIPT_DUP_CUTOFF = 0.9;
+// A published copy can differ line by line, leaving single scenes under that cutoff.
+// Whole stories in the archive sit under 10% or above 50%, so half a file means a copy.
+export const TRANSCRIPT_FILE_DUP_CUTOFF = 0.5;
 
 /**
  * Keep only scenes we don't already have. `known` holds the game data's lines
- * and grows with what's kept, so copies inside the archive drop out too. Real
- * scenes sit near 0% or 100% overlap, so the cutoff is not sensitive.
+ * and grows with what's kept, so copies inside the archive drop out too. Most
+ * archive scenes sit near 0% or 100% overlap, so the default cutoff is not sensitive.
  */
 export function selectNewScripts<T extends { lines: { text?: string }[] }>(scripts: T[], known: Set<string>, cutoff = 0.5) {
   const kept: T[] = [];
@@ -202,6 +205,21 @@ export function selectNewScripts<T extends { lines: { text?: string }[] }>(scrip
     if (keys.length && hits / keys.length >= cutoff) continue;
     kept.push(s);
     for (const k of keys) known.add(k);
+  }
+  return kept;
+}
+
+/** Archive scenes first, so a transcript gives way to the same story published there. */
+export function selectLibraryScenes<T extends { lines: { text?: string }[]; sourceVideo?: string }>(archive: T[], transcripts: T[], known: Set<string>) {
+  const kept = selectNewScripts(archive, known);
+  // each transcript file has its own source video
+  const files = new Map<string | undefined, T[]>();
+  for (const s of transcripts) files.set(s.sourceVideo, [...(files.get(s.sourceVideo) ?? []), s]);
+  for (const scenes of files.values()) {
+    const keys = dedupKeys(scenes.flatMap((s) => s.lines));
+    const hits = keys.filter((k) => known.has(k)).length;
+    if (keys.length && hits / keys.length >= TRANSCRIPT_FILE_DUP_CUTOFF) continue;
+    kept.push(...selectNewScripts(scenes, known, TRANSCRIPT_DUP_CUTOFF));
   }
   return kept;
 }

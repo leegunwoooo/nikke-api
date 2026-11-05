@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import { test } from "node:test";
-import { dedupKeys, libraryEventId, readTranscribedStories, selectNewScripts, TRANSCRIPT_DUP_CUTOFF } from "../scripts/library-stories.js";
+import { dedupKeys, libraryEventId, readTranscribedStories, selectLibraryScenes, selectNewScripts } from "../scripts/library-stories.js";
 
 const scenes = await readTranscribedStories();
 
@@ -59,8 +59,25 @@ test("part 2's one real choice keeps both options", () => {
 test("a transcript replaying main-story lines stays until nearly all of it is published", () => {
   const scene = scenes.find((s) => s.groupId === "lib_maria_n_2_12")!;
   const keys = dedupKeys(scene.lines);
-  assert.equal(selectNewScripts([scene], new Set(keys.slice(0, Math.floor(keys.length * 0.6))), TRANSCRIPT_DUP_CUTOFF).length, 1);
-  assert.equal(selectNewScripts([scene], new Set(keys), TRANSCRIPT_DUP_CUTOFF).length, 0);
+  const kept = selectLibraryScenes([], scenes, new Set(keys.slice(0, Math.floor(keys.length * 0.6))));
+  assert.equal(kept.length, scenes.length);
+  assert.ok(!selectLibraryScenes([], scenes, new Set(keys)).includes(scene));
+});
+
+test("a published copy removes the whole transcript file, even where its lines differ", () => {
+  const part = (n: number) => scenes.filter((s) => s.groupId.startsWith(`lib_maria_n_${n}_`));
+  const keys = dedupKeys(part(1).flatMap((s) => s.lines));
+  // every scene falls under the per-scene cutoff: only 3 in 4 lines match
+  const copy = new Set(keys.filter((_, i) => i % 4));
+  assert.deepEqual(selectLibraryScenes([], scenes, copy), part(2));
+});
+
+test("archive scenes win over a transcript of the same story", () => {
+  const part1 = scenes.filter((s) => s.groupId.startsWith("lib_maria_n_1_"));
+  const archive = part1.map((s) => ({ ...s, groupId: s.groupId.replace("maria_n", "archived"), sourceVideo: undefined }));
+  const kept = selectLibraryScenes(archive, scenes, new Set());
+  assert.ok(!kept.some((s) => part1.includes(s)));
+  assert.equal(kept.length, scenes.length);
 });
 
 test("a transcript drops out once the same story is published elsewhere", () => {
