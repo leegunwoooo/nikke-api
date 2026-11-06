@@ -8140,18 +8140,26 @@ function createBurstViewer(titleOf = () => "\uBC84\uC2A4\uD2B8 \uCEF7\uC52C", fe
     const burst = burstsById.get(c.req.param("id"));
     const url2 = assets.get(c.req.param("id"))?.get(c.req.param("file"));
     if (!burst || burst.source.revision !== c.req.param("revision") || !url2) return c.text("Unknown burst asset", 404);
+    let detail = "fetch error";
     try {
       const response = await fetcher(url2, { method: c.req.method === "HEAD" ? "HEAD" : "GET", redirect: "error", signal: AbortSignal.timeout(2e4) });
-      if (!response.ok || Number(response.headers.get("content-length")) > 64 * 1024 * 1024) {
+      if (!response.ok) {
+        detail = `upstream ${response.status}`;
         await response.body?.cancel();
-        throw new Error("Unavailable asset");
+        throw new Error(detail);
+      }
+      if (Number(response.headers.get("content-length")) > 64 * 1024 * 1024) {
+        detail = "asset too large";
+        await response.body?.cancel();
+        throw new Error(detail);
       }
       const file = c.req.param("file");
       const type = file.endsWith(".atlas") ? "text/plain; charset=utf-8" : file.endsWith(".png") ? "image/png" : file.endsWith(".webp") ? "image/webp" : "application/octet-stream";
       return new Response(response.body, { headers: { "Content-Type": type, "X-Content-Type-Options": "nosniff" } });
-    } catch {
+    } catch (e) {
+      if (e instanceof Error && !detail.startsWith("upstream")) detail = e.message;
       c.header("Cache-Control", "no-store");
-      return c.text("Burst asset temporarily unavailable", 502);
+      return c.text(`Burst asset temporarily unavailable: ${detail}`, 502);
     }
   });
   return app;
@@ -28833,7 +28841,7 @@ var CREDS_KEY = "bla:creds";
 var HDR_CREDS = "x-bla-creds";
 var HDR_BLABLAID = "x-registered-blablaid";
 var edgeCache = caches.default;
-var BUILD_ID = false ? void 0 : "41045baf1626";
+var BUILD_ID = false ? void 0 : "e5ecd5b3aa49";
 var DATA_HOST = "https://nikke-api-data.pages.dev";
 var REVALIDATE_MS = 3e5;
 var appPromise;
