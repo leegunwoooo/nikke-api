@@ -2901,7 +2901,7 @@ var catalog_default = {
           duration: 6.3667
         }
       ],
-      extraLayers: [
+      bgLayers: [
         "skillcut_1"
       ]
     },
@@ -3092,7 +3092,7 @@ var catalog_default = {
           duration: 2.6667
         }
       ],
-      extraLayers: [
+      bgLayers: [
         "skillcut_1"
       ]
     },
@@ -3107,7 +3107,7 @@ var catalog_default = {
         "c094_00_skillcut.png"
       ],
       spineVersion: "4.1.20",
-      animation: "skillcut_1_OFF",
+      animation: "skillcut_2_OFF_MOVE_BIG",
       animations: [
         {
           name: "idle_1",
@@ -4045,7 +4045,7 @@ var catalog_default = {
           duration: 7.1
         }
       ],
-      extraLayers: [
+      bgLayers: [
         "skillcut_1"
       ]
     },
@@ -4484,8 +4484,10 @@ var catalog_default = {
         }
       ],
       extraLayers: [
-        "skillcut_1",
         "skillcut_3"
+      ],
+      bgLayers: [
+        "skillcut_1"
       ]
     },
     {
@@ -4952,7 +4954,7 @@ var catalog_default = {
           duration: 5
         }
       ],
-      extraLayers: [
+      bgLayers: [
         "skillcut_1"
       ]
     },
@@ -5177,7 +5179,7 @@ var catalog_default = {
           duration: 5
         }
       ],
-      extraLayers: [
+      bgLayers: [
         "skillcut_1"
       ]
     },
@@ -5599,7 +5601,7 @@ var catalog_default = {
           duration: 6.2
         }
       ],
-      extraLayers: [
+      bgLayers: [
         "skillcut_1"
       ]
     },
@@ -6164,8 +6166,10 @@ var catalog_default = {
         }
       ],
       extraLayers: [
-        "skillcut_1",
         "skillcut_3"
+      ],
+      bgLayers: [
+        "skillcut_1"
       ]
     },
     {
@@ -6986,7 +6990,7 @@ var catalog_default = {
           duration: 4.7333
         }
       ],
-      extraLayers: [
+      bgLayers: [
         "skillcut_3"
       ]
     },
@@ -7043,7 +7047,7 @@ var catalog_default = {
           duration: 4.2333
         }
       ],
-      extraLayers: [
+      bgLayers: [
         "skillcut_1"
       ]
     },
@@ -7208,7 +7212,7 @@ var catalog_default = {
           duration: 5.7
         }
       ],
-      extraLayers: [
+      bgLayers: [
         "skillcut_2"
       ]
     },
@@ -7583,7 +7587,7 @@ var catalog_default = {
           duration: 3.6667
         }
       ],
-      extraLayers: [
+      bgLayers: [
         "skillcut_1"
       ]
     },
@@ -8111,15 +8115,20 @@ function burstAnimation(names) {
   }
   return names.find((name) => /^skill[_-]?cut(?:_|\d|$)/i.test(name) && !/(?:^|_)bg(?:_|$)/i.test(name)) ?? null;
 }
-function burstPlayback(animations, preferred, overlay) {
+function burstPlayback(animations, preferred, overlay, backgrounds) {
   const names = animations.map((a) => a.name);
   const main = preferred && names.includes(preferred) ? preferred : burstAnimation(names);
   if (!main) throw new Error("No burst animation");
   const duration3 = animations.find((a) => a.name === main).duration;
   if (!Number.isFinite(duration3) || duration3 <= 0) throw new Error(`Invalid duration: ${main}`);
   const background = /(?:^|_)all(?:_|$)/i.test(main) ? void 0 : animations.find((a) => a.name === `bg_${main}` || a.name === `${main}_bg`);
+  const extraBg = (backgrounds ?? []).filter((name) => name !== background?.name);
+  for (const name of extraBg) {
+    if (!animations.some((a) => a.name === name)) throw new Error(`Missing background animation: ${name}`);
+  }
   const layers = [
     ...background ? [{ role: "background", animation: background.name }] : [],
+    ...extraBg.map((name) => ({ role: "background", animation: name })),
     { role: "main", animation: main }
   ];
   for (const name of overlay ?? []) {
@@ -8145,7 +8154,7 @@ var bySkin = new Map(catalog_default.entries.map((entry) => {
     spineVersion: entry.spineVersion,
     animation: entry.animation,
     animations: entry.animations,
-    playback: burstPlayback(entry.animations, entry.animation, entry.extraLayers),
+    playback: burstPlayback(entry.animations, entry.animation, entry.extraLayers, entry.bgLayers),
     atlas: base + entry.atlas,
     skeleton: base + entry.skeleton,
     textures: entry.textures.map((name) => ({ name, url: base + name })),
@@ -28966,7 +28975,7 @@ var CREDS_KEY = "bla:creds";
 var HDR_CREDS = "x-bla-creds";
 var HDR_BLABLAID = "x-registered-blablaid";
 var edgeCache = caches.default;
-var BUILD_ID = false ? void 0 : "fe446be07f3a";
+var BUILD_ID = false ? void 0 : "725f4bb72531";
 var DATA_HOST = "https://nikke-api-data.pages.dev";
 var REVALIDATE_MS = 3e5;
 var appPromise;

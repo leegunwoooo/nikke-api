@@ -86,9 +86,11 @@ async function main() {
       if (override?.animation && !animations.some(a => a.name === override.animation)) throw new Error(`Override missing: ${entry.id} ${override.animation}`);
       if (override?.animation) animation = override.animation;
       const extraLayers = override?.extraLayers;
-      burstPlayback(animations, animation, extraLayers); // Includes background timing validation.
+      const bgLayers = override?.bgLayers;
+      burstPlayback(animations, animation, extraLayers, bgLayers); // Includes background timing validation.
       for (const page of textures) await request(base + page, { method: "HEAD" });
-      return { ...entry, textures, spineVersion: version, animation, animations, ...(extraLayers ? { extraLayers } : {}) };
+      return { ...entry, textures, spineVersion: version, animation, animations,
+        ...(extraLayers ? { extraLayers } : {}), ...(bgLayers ? { bgLayers } : {}) };
     }));
     entries.push(...batch);
     console.log(`Verified ${entries.length}/${selected.length} bursts`);

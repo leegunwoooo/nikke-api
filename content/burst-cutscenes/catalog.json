@@ -667,7 +667,7 @@
           "duration": 6.3667
         }
       ],
-      "extraLayers": [
+      "bgLayers": [
         "skillcut_1"
       ]
     },
@@ -858,7 +858,7 @@
           "duration": 2.6667
         }
       ],
-      "extraLayers": [
+      "bgLayers": [
         "skillcut_1"
       ]
     },
@@ -873,7 +873,7 @@
         "c094_00_skillcut.png"
       ],
       "spineVersion": "4.1.20",
-      "animation": "skillcut_1_OFF",
+      "animation": "skillcut_2_OFF_MOVE_BIG",
       "animations": [
         {
           "name": "idle_1",
@@ -1811,7 +1811,7 @@
           "duration": 7.1
         }
       ],
-      "extraLayers": [
+      "bgLayers": [
         "skillcut_1"
       ]
     },
@@ -2250,8 +2250,10 @@
         }
       ],
       "extraLayers": [
-        "skillcut_1",
         "skillcut_3"
+      ],
+      "bgLayers": [
+        "skillcut_1"
       ]
     },
     {
@@ -2718,7 +2720,7 @@
           "duration": 5
         }
       ],
-      "extraLayers": [
+      "bgLayers": [
         "skillcut_1"
       ]
     },
@@ -2943,7 +2945,7 @@
           "duration": 5
         }
       ],
-      "extraLayers": [
+      "bgLayers": [
         "skillcut_1"
       ]
     },
@@ -3365,7 +3367,7 @@
           "duration": 6.2
         }
       ],
-      "extraLayers": [
+      "bgLayers": [
         "skillcut_1"
       ]
     },
@@ -3930,8 +3932,10 @@
         }
       ],
       "extraLayers": [
-        "skillcut_1",
         "skillcut_3"
+      ],
+      "bgLayers": [
+        "skillcut_1"
       ]
     },
     {
@@ -4752,7 +4756,7 @@
           "duration": 4.7333
         }
       ],
-      "extraLayers": [
+      "bgLayers": [
         "skillcut_3"
       ]
     },
@@ -4809,7 +4813,7 @@
           "duration": 4.2333
         }
       ],
-      "extraLayers": [
+      "bgLayers": [
         "skillcut_1"
       ]
     },
@@ -4974,7 +4978,7 @@
           "duration": 5.7
         }
       ],
-      "extraLayers": [
+      "bgLayers": [
         "skillcut_2"
       ]
     },
@@ -5349,7 +5353,7 @@
           "duration": 3.6667
         }
       ],
-      "extraLayers": [
+      "bgLayers": [
         "skillcut_1"
       ]
     },

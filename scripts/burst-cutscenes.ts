@@ -24,36 +24,39 @@ export interface BurstEntry {
   animations: { name: string; duration: number }[];
   /** Extra disjoint-slot tracks played on top of the main one (verified manually). */
   extraLayers?: string[];
+  /** Disjoint background planes drawn behind the main one. */
+  bgLayers?: string[];
 }
 
 // Reviewed manual composition fixes — the name-based picker cannot detect
 // empty tracks or disjoint overlay layers. Sync must preserve these.
-export const BURST_OVERRIDES: Record<string, { animation?: string; extraLayers?: string[] }> = {
+export const BURST_OVERRIDES: Record<string, { animation?: string; extraLayers?: string[]; bgLayers?: string[] }> = {
   // Full-scan verified: slot-disjoint tracks are parallel scene layers, not
   // variants. main = the largest track; the rest play on top.
   c105_00_skillcut: { animation: "skillcut_2" },                    // skillcut_1 hides all slots
   c234_00_skillcut: { animation: "skillcut_2" },                    // skillcut_1 hides all but 1 slot
   c315_00_skillcut: { extraLayers: ["skillcut_2"] },                // 12-slot late effect layer
-  c580_01_skillcut: { animation: "skillcut_2", extraLayers: ["skillcut_3"] }, // main + 2-slot overlay
   c871_00_skillcut: { animation: "skillcut_0", extraLayers: ["skillcut_1"] }, // body + mid-scene wings/fx
-  c016_00_skillcut: { animation: "skillcut_2", extraLayers: ["skillcut_1", "skillcut_3"] },
+  c016_00_skillcut: { animation: "skillcut_2", extraLayers: ["skillcut_1", "skillcut_3"] }, // RH body parts
   c017_01_skillcut: { animation: "skillcut_2", extraLayers: ["skillcut_1"] },
-  c073_00_skillcut: { animation: "skillcut_2", extraLayers: ["skillcut_1"] },
-  c093_skillcut:    { animation: "skillcut_0", extraLayers: ["skillcut_1"] },
-  c191_02_skillcut: { animation: "skillcut_2", extraLayers: ["skillcut_1"] },
+  c073_00_skillcut: { animation: "skillcut_2", bgLayers: ["skillcut_1"] },  // _1 = train interior planes
+  c093_skillcut:    { animation: "skillcut_0", bgLayers: ["skillcut_1"] },  // _1 = bg plane
+  c191_02_skillcut: { animation: "skillcut_2", bgLayers: ["skillcut_1"] },  // _1 = s1/s2 bg planes
   c200_00_skillcut: { extraLayers: ["skillcut_2"] },
-  c223_01_skillcut: { animation: "skillcut_2", extraLayers: ["skillcut_1", "skillcut_3"] },
+  c223_01_skillcut: { animation: "skillcut_2", extraLayers: ["skillcut_3"], bgLayers: ["skillcut_1"] },
   c225_00_skillcut: { extraLayers: ["skillcut_3"] },                // all + 15-slot disjoint layer
-  c262_00_skillcut: { animation: "skillcut_0", extraLayers: ["skillcut_1"] },
+  c262_00_skillcut: { animation: "skillcut_0", bgLayers: ["skillcut_1"] },  // _1 = beach/wave scene
   c262_01_skillcut: { extraLayers: ["skillcut_2"] },
-  c281_02_skillcut: { animation: "skillcut_2", extraLayers: ["skillcut_1"] },
-  c331_00_skillcut: { animation: "skillcut_2", extraLayers: ["skillcut_1"] },
+  c281_02_skillcut: { animation: "skillcut_2", bgLayers: ["skillcut_1"] },  // _1 = bg plane
+  c331_00_skillcut: { animation: "skillcut_2", bgLayers: ["skillcut_1"] },  // _1 = s2_bg plane
   c355_00_skillcut: { extraLayers: ["skillcut_2"] },
-  c411_00_skillcut: { animation: "skillcut_2", extraLayers: ["skillcut_1", "skillcut_3"] },
+  c411_00_skillcut: { animation: "skillcut_2", extraLayers: ["skillcut_3"], bgLayers: ["skillcut_1"] },
   c470_02_skillcut: { extraLayers: ["skillcut_2"] },
-  c582_00_skillcut: { animation: "skillcut_0", extraLayers: ["skillcut_1"] },
-  c620_00_skillcut: { extraLayers: ["skillcut_2"] },
-  c833_00_skillcut: { animation: "skillcut_2", extraLayers: ["skillcut_1"] },
+  c582_00_skillcut: { animation: "skillcut_0", bgLayers: ["skillcut_1"] },  // _1 = bg plane
+  c620_00_skillcut: { bgLayers: ["skillcut_2"] },                   // _2 = desk/object scene under char
+  c833_00_skillcut: { animation: "skillcut_2", bgLayers: ["skillcut_1"] },  // _1 = s1_bg0 plane
+  c094_00_skillcut: { animation: "skillcut_2_OFF_MOVE_BIG" },       // OFF variants: _2 is the real scene
+  c580_01_skillcut: { animation: "skillcut_2", bgLayers: ["skillcut_3"] },  // _3 = building planes
 };
 
 // The source really uses slillcut/skillut, and sometimes puts the skin last.

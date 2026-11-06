@@ -10,7 +10,7 @@ export function burstAnimation(names: string[]): string | null {
   return names.find(name => /^skill[_-]?cut(?:_|\d|$)/i.test(name) && !/(?:^|_)bg(?:_|$)/i.test(name)) ?? null;
 }
 
-export function burstPlayback(animations: { name: string; duration: number }[], preferred?: string, overlay?: string[]): BurstPlayback {
+export function burstPlayback(animations: { name: string; duration: number }[], preferred?: string, overlay?: string[], backgrounds?: string[]): BurstPlayback {
   // A catalog-verified pick wins — some tracks (e.g. c105's skillcut_1) hide
   // every slot, and names alone cannot tell a burst track from an empty one.
   const names = animations.map(a => a.name);
@@ -20,8 +20,15 @@ export function burstPlayback(animations: { name: string; duration: number }[], 
   if (!Number.isFinite(duration) || duration <= 0) throw new Error(`Invalid duration: ${main}`);
   const background = /(?:^|_)all(?:_|$)/i.test(main) ? undefined : animations.find(a =>
     a.name === `bg_${main}` || a.name === `${main}_bg`);
+  // Explicit background layers — full-frame planes hidden under skillcut_N
+  // names (e.g. c073's skillcut_1 is the train interior).
+  const extraBg = (backgrounds ?? []).filter(name => name !== background?.name);
+  for (const name of extraBg) {
+    if (!animations.some(a => a.name === name)) throw new Error(`Missing background animation: ${name}`);
+  }
   const layers: BurstPlayback["layers"] = [
     ...(background ? [{ role: "background" as const, animation: background.name }] : []),
+    ...extraBg.map(name => ({ role: "background" as const, animation: name })),
     { role: "main" as const, animation: main },
   ];
   // Disjoint-slot overlay tracks that join mid-scene (e.g. c871's skillcut_1)
