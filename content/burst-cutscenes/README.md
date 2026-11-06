@@ -52,3 +52,17 @@ npm run emit:pages-worker
 | `c872_skillcut_00` | `bg_skillcut_1` | `skillcut_1` |
 
 배경 애니메이션에는 캐릭터 슬롯을 숨기는 키가 있으므로 한 Skeleton의 트랙에 중첩하지 않습니다. atlas·텍스처·SkeletonData를 공유하는 독립 Skeleton을 같은 시간·카메라로 그려 하나의 화면을 만듭니다. 플레이어의 재생·정지·탐색은 모두 함께 동작합니다. 화면은 내보낸 스켈레톤 영역을 기준으로 고정하며, 영역 밖의 이동 효과 때문에 화면 전체가 축소되지 않도록 자릅니다. 게임의 카메라·후처리·음성까지 복원한 영상은 아닙니다.
+
+## 재생 트랙 수동 교정
+
+`animation` 이름만으로는 빈 트랙과 본체를 구분할 수 없습니다. 일부 파일은 `skillcut_1`이 전 슬롯을 숨기는 더미이고 `skillcut_2`가 본체이며, 어떤 파일은 본체와 별도 슬롯의 후반 오버레이로 나뉩니다. 전수 슬롯 가시성 검증으로 교정한 5개는 `scripts/burst-cutscenes.ts`의 `BURST_OVERRIDES`에 있고, 갱신 시에도 유지됩니다. `extraLayers`는 본체 위에 같은 시간축으로 덧그리는 트랙입니다.
+
+| 리소스 | 문제 | 재생 구성 |
+|---|---|---|
+| `c105_00_skillcut` | `skillcut_1` 전체 빈 트랙 | `skillcut_2` |
+| `c234_00_skillcut` | `skillcut_1` 사실상 빈 트랙(1슬롯) | `skillcut_2` |
+| `c315_00_skillcut` | `skillcut_2`가 후반 이펙트 레이어인데 미반영 | `skillcut_1` + `skillcut_2` 오버레이 |
+| `c580_01_skillcut` | `skillcut_1` 빈 트랙, `skillcut_3` 오버레이 미반영 | `skillcut_2` + `skillcut_3` 오버레이 |
+| `c871_00_skillcut` | `skillcut_1`이 전반 빈 후반 날개/이펙트 레이어 | `skillcut_0` + `skillcut_1` 오버레이 |
+
+또한 일부 스켈레톤(`c102`·`c210`·`c231`)은 attachment가 `default`가 아닌 명명 스킨(`00` 등)에 있어 `setSkin` 없이는 모든 슬롯이 비어 있습니다. 뷰어와 동기화 검증은 attachment가 없으면 스킨을 적용합니다.

@@ -11,7 +11,13 @@ export class BurstScene {
     this.duration = playback.duration;
     this.layers = playback.layers.map(layer => {
       if (!data.findAnimation(layer.animation)) throw new Error(`Missing animation: ${layer.animation}`);
-      return { skeleton: new Skeleton(data), state: new AnimationState(new AnimationStateData(data)), animation: layer.animation };
+      const skeleton = new Skeleton(data);
+      // Some skeletons keep all attachments in a named skin (e.g. "00"), not
+      // the default skin — without it every slot stays empty.
+      if (skeleton.drawOrder.every(slot => !slot.attachment) && data.skins.length) {
+        for (const skin of data.skins) skeleton.setSkin(skin);
+      }
+      return { skeleton, state: new AnimationState(new AnimationStateData(data)), animation: layer.animation };
     });
     this.seek(0);
   }

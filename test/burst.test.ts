@@ -77,7 +77,7 @@ test("every checked-in burst has unique keys and complete texture URLs", () => {
     assert.equal(new URL(burst.viewerUrl).searchParams.get("id"), entry.id);
     assert.equal(new URL(burst.viewerUrl).pathname, "/burst-viewer");
     assert.equal(new URL(burst.source.viewerUrl).searchParams.get("anim"), burst.animation);
-    assert.equal(burst.playback.layers.at(-1)?.animation, burst.animation);
+    assert.ok(burst.playback.layers.some(l => l.role === "main" && l.animation === burst.animation));
     assert.ok(burst.animations.some(a => a.name === burst.animation && a.duration > 0));
     assert.equal(burst.source.revision, catalog.commit);
   }
@@ -85,7 +85,10 @@ test("every checked-in burst has unique keys and complete texture URLs", () => {
 
 test("backgrounds are included in the playback plan, authored combined animations stay single", () => {
   const composite = catalog.entries.map(e => getBurstCutscene(e.resourceId, e.skinIndex)!).filter(b => b.playback.mode === "composite");
-  assert.deepEqual(composite.map(b => b.id), ["c063_00_skillcut", "c103_00_skillcut", "c170_04_skillcut", "c513_01_skillcut", "catalog-c852_00_skillcut", "c872_skillcut_00"]);
+  assert.deepEqual(composite.map(b => b.id), ["c063_00_skillcut", "c103_00_skillcut", "c170_04_skillcut", "c315_00_skillcut", "c513_01_skillcut", "c580_01_skillcut", "catalog-c852_00_skillcut", "c871_00_skillcut", "c872_skillcut_00"]);
+  assert.deepEqual(getBurstCutscene(871)!.playback.layers, [
+    { role: "main", animation: "skillcut_0" }, { role: "overlay", animation: "skillcut_1" },
+  ]);
   assert.deepEqual(getBurstCutscene(63)!.playback, { mode: "composite", duration: 4.7, layers: [
     { role: "background", animation: "bg_skillcut_1" }, { role: "main", animation: "skillcut_1" },
   ] });

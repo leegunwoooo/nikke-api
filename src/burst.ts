@@ -10,7 +10,7 @@ const bySkin = new Map<string, BurstCutscene>(catalog.entries.map(entry => {
     spineVersion: entry.spineVersion,
     animation: entry.animation,
     animations: entry.animations,
-    playback: burstPlayback(entry.animations),
+    playback: burstPlayback(entry.animations, entry.animation, entry.extraLayers),
     atlas: base + entry.atlas,
     skeleton: base + entry.skeleton,
     textures: entry.textures.map(name => ({ name, url: base + name })),

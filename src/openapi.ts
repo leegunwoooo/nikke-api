@@ -50,7 +50,7 @@ const burstCutscene = {
     animations: { type: "array", items: { type: "object", properties: { name: { type: "string" }, duration: { type: "number", description: "초" } } } },
     playback: { type: "object", description: "배경을 포함하는 하나의 컷신. layers 순서로 공통 좌표계에 렌더링하며, 독립 Skeleton을 같은 시간으로 재생합니다.", required: ["mode", "duration", "layers"], properties: {
       mode: { type: "string", enum: ["single", "composite"] }, duration: { type: "number" },
-      layers: { type: "array", items: { type: "object", required: ["role", "animation"], properties: { role: { type: "string", enum: ["background", "main"] }, animation: { type: "string" } } } },
+      layers: { type: "array", items: { type: "object", required: ["role", "animation"], properties: { role: { type: "string", enum: ["background", "main", "overlay"] }, animation: { type: "string" } } } },
     } },
     atlas: { type: "string", format: "uri" },
     skeleton: { type: "string", format: "uri" },

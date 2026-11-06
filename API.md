@@ -324,7 +324,7 @@ GET /api/nikkes/511/burst?lang=ko
 | `id` / `format` | 출처 리소스 ID / `"spine"` |
 | `spineVersion` | 스켈레톤에서 확인한 버전. 현재 `4.1.20`, Spine 4.1 런타임으로 재생 |
 | `animation` / `animations[]` | 기본 버스트 트랙과 원본 전체 `{ name, duration }` 목록. `duration`은 초. 전체 컷신 재생에는 `playback` 사용 |
-| `playback` | `{ mode, duration, layers }`. 원본 통합 애니메이션은 `single`, 배경이 분리된 경우 `composite`. `layers`는 뒤에서 앞으로 그릴 `{ role, animation }` 순서 |
+| `playback` | `{ mode, duration, layers }`. 원본 통합 애니메이션은 `single`, 배경·오버레이가 분리된 경우 `composite`. `layers`는 뒤에서 앞으로 그릴 `{ role: background\|main\|overlay, animation }` 순서. `overlay`는 중간에 등장하는 별도 슬롯 레이어 |
 | `atlas` / `skeleton` | atlas와 binary skeleton의 외부 URL |
 | `textures[]` | 모든 atlas 페이지의 `{ name, url }`. `name`으로 atlas의 텍스처 요청을 연결하며, PNG 한 장이라고 가정하지 않음 |
 | `viewerUrl` | 배경과 캐릭터를 함께 재생하는 니케 API 뷰어 링크. 재생·정지·탐색은 전체 컷신에 적용되며 대사 음성도 함께 재생 |

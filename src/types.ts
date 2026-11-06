@@ -49,7 +49,7 @@ export interface BurstPlayback {
   mode: "single" | "composite";
   duration: number;
   /** Back to front. Shared assets, independent skeleton poses, one clock. */
-  layers: { role: "background" | "main"; animation: string }[];
+  layers: { role: "background" | "main" | "overlay"; animation: string }[];
 }
 
 export interface BurstVoiceRef {

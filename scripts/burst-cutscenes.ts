@@ -22,7 +22,19 @@ export interface BurstEntry {
   spineVersion: string;
   animation: string;
   animations: { name: string; duration: number }[];
+  /** Extra disjoint-slot tracks played on top of the main one (verified manually). */
+  extraLayers?: string[];
 }
+
+// Reviewed manual composition fixes — the name-based picker cannot detect
+// empty tracks or disjoint overlay layers. Sync must preserve these.
+export const BURST_OVERRIDES: Record<string, { animation?: string; extraLayers?: string[] }> = {
+  c105_00_skillcut: { animation: "skillcut_2" },                    // skillcut_1 hides all slots
+  c234_00_skillcut: { animation: "skillcut_2" },                    // skillcut_1 hides all but 1 slot
+  c315_00_skillcut: { extraLayers: ["skillcut_2"] },                // 12-slot late effect layer
+  c580_01_skillcut: { animation: "skillcut_2", extraLayers: ["skillcut_3"] }, // main + 2-slot overlay
+  c871_00_skillcut: { animation: "skillcut_0", extraLayers: ["skillcut_1"] }, // body + mid-scene wings/fx
+};
 
 // The source really uses slillcut/skillut, and sometimes puts the skin last.
 // Unrecognized "skill" entries (e.g. c821_01) must not become guessed bursts.

@@ -1080,7 +1080,7 @@
         "c105_00_skillcut.png"
       ],
       "spineVersion": "4.1.20",
-      "animation": "skillcut_1",
+      "animation": "skillcut_2",
       "animations": [
         {
           "name": "idle",
@@ -2473,7 +2473,7 @@
         "c234_00_skillcut.png"
       ],
       "spineVersion": "4.1.20",
-      "animation": "skillcut_1",
+      "animation": "skillcut_2",
       "animations": [
         {
           "name": "idle_1",
@@ -3153,6 +3153,9 @@
           "name": "skillcut_2",
           "duration": 7.3333
         }
+      ],
+      "extraLayers": [
+        "skillcut_2"
       ]
     },
     {
@@ -4678,7 +4681,7 @@
         "c580_01_skillcut.png"
       ],
       "spineVersion": "4.1.20",
-      "animation": "skillcut_1",
+      "animation": "skillcut_2",
       "animations": [
         {
           "name": "idle",
@@ -4700,6 +4703,9 @@
           "name": "skillcut_3",
           "duration": 4.7333
         }
+      ],
+      "extraLayers": [
+        "skillcut_3"
       ]
     },
     {
@@ -5679,7 +5685,7 @@
         "c871_00_skillcut.png"
       ],
       "spineVersion": "4.1.20",
-      "animation": "skillcut_1",
+      "animation": "skillcut_0",
       "animations": [
         {
           "name": "idle_0",
@@ -5697,6 +5703,9 @@
           "name": "skillcut_1",
           "duration": 4.4
         }
+      ],
+      "extraLayers": [
+        "skillcut_1"
       ]
     },
     {
