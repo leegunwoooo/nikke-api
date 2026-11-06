@@ -13,6 +13,7 @@
 
 - [GET /api/nikkes](#get-apinikkes) — 캐릭터 목록
 - [GET /api/nikkes/:id](#get-apinikkesid) — 캐릭터 상세
+- [GET /api/nikkes/:id/burst](#get-apinikkesidburst) — 버스트 컷신
 - [GET /api/meta/filters](#get-apimetafilters) — 필터 값 목록
 - [GET /api/tables](#get-apitables) — 원본 테이블 목록
 - [GET /api/tables/:file](#get-apitablesfile) — 원본 테이블 조회
@@ -137,6 +138,7 @@ GET /api/nikkes?limit=20&offset=40
 | `name` | object | `{ko, en, ja, zh-TW}` 로컬라이즈된 이름 |
 | `weapon.attackType` | string | 내부 공격 타입 (`Metal`, `Energy`, `Bio`) — 공식 UI 미표시 값 |
 | `images` | object | `icon` / `medium` / `full` 이미지 (BlablaLink CDN URL) |
+| `burstCutscene` | object / null | 해당 외형의 버스트 시각 리소스와 뷰어 링크. `costumes[].burstCutscene`도 같은 형식 |
 | `skillIcons` | object | 스킬별 아이콘 URL |
 
 ---
@@ -305,6 +307,33 @@ GET /api/nikkes/아니스
 ```
 
 ---
+
+## GET /api/nikkes/:id/burst
+
+기본 외형과 코스튬별 버스트 컷신을 조회합니다. `:id`는 캐릭터 ID·resourceId·이름을 받습니다. 정확한 이름이 있으면 우선하며, 부분 일치만 여러 개면 `{ count, characters }`를 반환합니다. `?lang=ko`와 `?fields=`를 지원합니다.
+
+```http
+GET /api/nikkes/201001/burst?lang=ko
+GET /api/nikkes/511/burst?lang=ko
+```
+
+단일 응답은 `{ id, resourceId, name, burstCutscene, costumes }`입니다. `costumes[]`에는 `id`, `skinIndex`, `name`, `burstCutscene`이 있습니다. 캐릭터가 없으면 404, 캐릭터는 있지만 컷신이 미수록이면 200과 `burstCutscene: null`을 반환합니다.
+
+| 컷신 필드 | 설명 |
+|---|---|
+| `id` / `format` | 출처 리소스 ID / `"spine"` |
+| `spineVersion` | 스켈레톤에서 확인한 버전. 현재 `4.1.20`, Spine 4.1 런타임으로 재생 |
+| `animation` / `animations[]` | 버스트 재생 트랙과 전체 `{ name, duration }` 목록. `duration`은 초. 뷰어 링크도 이 트랙을 선택 |
+| `atlas` / `skeleton` | atlas와 binary skeleton의 외부 URL |
+| `textures[]` | 모든 atlas 페이지의 `{ name, url }`. `name`으로 atlas의 텍스처 요청을 연결하며, PNG 한 장이라고 가정하지 않음 |
+| `viewerUrl` | 해당 리소스를 바로 여는 ArtHub 뷰어 링크 |
+| `source` | 출처 이름, 원본 목록 URL, 고정한 Git revision |
+
+같은 필드는 캐릭터 목록·상세, `/api/nikkes/:id/spine`, 코스튬 목록·상세에서도 제공됩니다. MCP는 `get_nikke_burst` 또는 `get_nikke`의 `include: ["burstCutscene"]`로 조회합니다. 후자는 기본 외형만 추가하며 코스튬까지 필요하면 `"costumes"`도 추가합니다.
+
+**브라우저 재생은 `viewerUrl`을 사용합니다.** 2026-11-06 확인 시 외부 R2 호스트는 ArtHub 사이트 Origin을 CORS로 허용하며, `https://nikke-api.pages.dev` Origin은 허용하지 않습니다. 이 API의 CORS 설정으로 외부 파일의 정책을 바꿀 수 없습니다. 리소스 URL 자체는 서버에서 읽을 수 있지만 임의의 웹페이지에서 직접 `fetch`하여 재생할 수 있다고 가정하면 안 됩니다.
+
+자료는 [ArtHub](https://github.com/Talors1225/arthub-viewer-web)의 공개 URL 목록을 검증해 수동 갱신합니다. 게임 전체 컷신의 완전한 목록은 아닙니다. 코스튬 전용 컷신이 없으면 기본 컷신으로 대체하지 않고 `null`을 반환합니다. 이는 게임 안에 컷신이 없다는 뜻이 아닙니다. 영상·음성 합본이 아닌 시각 애니메이션 리소스이며, 음성은 `details.voices`를 별도로 사용합니다. 외부 호스트의 파일 삭제·주소 변경·CORS 정책은 이 API가 보장하지 않습니다. [수록 범위와 갱신 방법](https://github.com/leegunwoooo/nikke-api/blob/main/content/burst-cutscenes/README.md).
 
 ## GET /api/meta/filters
 

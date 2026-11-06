@@ -8,6 +8,7 @@ on:
     branches: [main]
     paths:
       - "src/**"
+      - "content/burst-cutscenes/**"
       - "worker/**"
       - "scripts/emit-pages-worker.ts"
       - "pages-proxy/wrangler.toml"

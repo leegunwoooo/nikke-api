@@ -145,6 +145,8 @@ curl -X POST https://nikke-api.pages.dev/mcp \
 |------|---------|
 | `search_nikkes` | 캐릭터 검색 (이름·속성·클래스·버스트·기업·무기·레어) |
 | `get_nikke` | 캐릭터 상세: 스킬(Lv10 기준), 배경, 스쿼드, CV, 호감도 씬, 애장품 스토리. 레벨별 스탯·음성·코스튬 등은 `include`로 추가 (예: `["statsPerLevel"]`). 이름이 정확히(공백·대소문자 무시, 전 언어) 일치하는 캐릭터가 있으면 그 캐릭터를 반환하고 나머지 후보는 `alsoMatched`로 알려줍니다. 부분 일치만 있으면 후보 목록이 옵니다 |
+| `get_nikke_burst` | 기본 외형·코스튬별 버스트 컷신: Spine atlas/skeleton/전체 텍스처와 ArtHub 뷰어 링크. 미수록은 `null`, 기본 외형 대체 없음. 음성은 별도. `get_nikke`의 `include: ["burstCutscene"]`로도 기본 컷신 조회 가능 |
+| `get_nikke_spine` | 기본 외형·코스튬별 스탠딩·사격·엄폐 Spine 리소스와 `burstCutscene` |
 | `search_scenes` / `get_scene` | 스토리 씬 검색 / 대본 읽기 (한국어, 호감도·애장품·`library` 스토리 포함. 기본은 화자·대사만, 선택지에는 `window`·`chosen`·`branch` 표시 — 음성·아이콘 URL은 `includeMedia`. `window:"SubScenario"`는 컷신 연출 마커로 `text`가 null이며 읽기 출력에서는 빠지고 `includeMedia`로만 보임. `/api/lines`의 `line`은 이 마커를 포함한 씬 `lines[]` 위치 그대로. 대사의 `@UserName`은 지휘관 이름 자리표시자) |
 | `list_events` / `get_event` | 스토리 이벤트 목록 / 에피소드 씬 목록 |
 | `search_favorites` / `get_favorite` | 애장품·소장품 목록(애장품 주인 포함, 니케 이름으로 필터) / 레벨별 스탯·스킬 |

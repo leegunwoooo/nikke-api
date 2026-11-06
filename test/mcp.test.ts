@@ -69,6 +69,21 @@ test("get_nikke trims by default and include adds to it", async () => {
   assert.equal(more.name, "라피"); // include adds, it doesn't replace the defaults
 });
 
+test("burst assets are available through the dedicated tool, include, spine and api_get", async () => {
+  const burst = await tool("get_nikke_burst", { nameOrId: "라피" });
+  assert.equal(burst.json.name, "라피");
+  assert.equal(burst.json.burstCutscene.id, "catalog-c010_00_skillcut");
+  assert.ok(burst.json.costumes.every((c: any) => c.burstCutscene === null));
+  const included = await tool("get_nikke", { nameOrId: "1", include: ["burstCutscene"] });
+  assert.deepEqual(included.json.burstCutscene, burst.json.burstCutscene);
+  assert.equal((await tool("get_nikke", { nameOrId: "1" })).json.burstCutscene, undefined);
+  assert.equal((await tool("get_nikke_burst", { nameOrId: "1", lang: "en" })).json.name, "Rapi");
+  assert.equal((await tool("get_nikke_burst", { nameOrId: "anch" })).json.count, 2);
+  assert.equal((await tool("get_nikke_burst", { nameOrId: "missing" })).isError, true);
+  assert.deepEqual((await tool("get_nikke_spine", { nameOrId: "1" })).json.burstCutscene, burst.json.burstCutscene);
+  assert.deepEqual((await tool("api_get", { path: "/api/nikkes/1/burst" })).json.burstCutscene, burst.json.burstCutscene);
+});
+
 test("get_scene returns speaker/text lines unless media is asked for", async () => {
   const lean = (await tool("get_scene", { groupId: "d_main_01_01" })).json;
   assert.deepEqual(lean.lines[0], { speaker: "라피", text: "..." });

@@ -122,6 +122,7 @@ test("/api/lines returns at most 50 lines without a limit", async () => {
   const { createApp } = await import("../src/factory.js");
   const big = await createApp({
     readText: async (rel: string) => {
+      rel = rel.replaceAll("\\", "/");
       if (rel.startsWith("lines/main")) return JSON.stringify({ d_main_big: { sp: ["라피"], l: Array.from({ length: 120 }, (_, i) => [0, `같은 대사 ${i}`]) } });
       if (rel.startsWith("lines/")) return "{}";
       return (await import("node:fs/promises")).readFile(path.join(import.meta.dirname, "fixtures/dist", rel), "utf8");

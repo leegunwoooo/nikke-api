@@ -8,6 +8,7 @@
     "dev": "tsx watch src/index.ts",
     "start": "tsx src/index.ts",
     "sync": "tsx scripts/sync.ts",
+    "sync:burst": "tsx scripts/sync-burst-cutscenes.ts",
     "build": "tsx scripts/build.ts",
     "typecheck": "tsc -p tsconfig.check.json",
     "build:data": "npm run sync && npm run build",
@@ -26,6 +27,7 @@
     "esbuild@0.28.2": true
   },
   "devDependencies": {
+    "@esotericsoftware/spine-core": "4.1.56",
     "@types/node": "^26.6.3",
     "esbuild": "^0.28.2",
     "tsx": "^4.23.15",
