@@ -8,6 +8,7 @@ import { atlasPages, burstAnimation, resourceKey, selectBursts, spineVersion, ty
 import catalog from "../content/burst-cutscenes/catalog.json" with { type: "json" };
 import fixtures from "./fixtures/dist/characters.json" with { type: "json" };
 import type { Nikke } from "../src/types.js";
+import { burstPlayback } from "../src/burst-playback.js";
 
 test("catalog maps exact resource IDs and skins, including real filename exceptions", () => {
   assert.deepEqual(resourceKey("c017_00_slillcut.skel"), { resourceId: 17, skinIndex: 0 });
@@ -48,6 +49,7 @@ test("viewer selects the burst track, not idle or a background-only track", () =
   assert.equal(burstAnimation(["idle", "skilcut_1"]), "skilcut_1");
   assert.equal(burstAnimation(["idle", "skillcut1"]), "skillcut1");
   assert.equal(burstAnimation(["skillcut_1", "skillcut_2", "all_skillcut"]), "all_skillcut");
+  assert.equal(burstAnimation(["skillcut_1", "skillcut_1_bg", "skillcut_1_all"]), "skillcut_1_all");
   assert.equal(burstAnimation(["idle", "bg_skillcut_1", "skill_cut_bg"]), null);
 });
 
@@ -73,10 +75,23 @@ test("every checked-in burst has unique keys and complete texture URLs", () => {
     assert.ok(burst.textures.length > 0);
     assert.ok(burst.textures.every(t => new URL(t.url).protocol === "https:" && t.url.endsWith(`/${t.name}`)));
     assert.equal(new URL(burst.viewerUrl).searchParams.get("id"), entry.id);
-    assert.equal(new URL(burst.viewerUrl).searchParams.get("anim"), burst.animation);
+    assert.equal(new URL(burst.viewerUrl).pathname, "/burst-viewer");
+    assert.equal(new URL(burst.source.viewerUrl).searchParams.get("anim"), burst.animation);
+    assert.equal(burst.playback.layers.at(-1)?.animation, burst.animation);
     assert.ok(burst.animations.some(a => a.name === burst.animation && a.duration > 0));
     assert.equal(burst.source.revision, catalog.commit);
   }
+});
+
+test("backgrounds are included in the playback plan, authored combined animations stay single", () => {
+  const composite = catalog.entries.map(e => getBurstCutscene(e.resourceId, e.skinIndex)!).filter(b => b.playback.mode === "composite");
+  assert.deepEqual(composite.map(b => b.id), ["c063_00_skillcut", "c103_00_skillcut", "c170_04_skillcut", "c513_01_skillcut", "catalog-c852_00_skillcut", "c872_skillcut_00"]);
+  assert.deepEqual(getBurstCutscene(63)!.playback, { mode: "composite", duration: 4.7, layers: [
+    { role: "background", animation: "bg_skillcut_1" }, { role: "main", animation: "skillcut_1" },
+  ] });
+  assert.equal(getBurstCutscene(532)!.playback.mode, "single");
+  assert.equal(getBurstCutscene(860)!.playback.layers[0].animation, "all_skillcut");
+  assert.throws(() => burstPlayback([{ name: "skillcut_1", duration: 4 }, { name: "bg_skillcut_1", duration: 8 }]), /timing/);
 });
 
 test("enrichment preserves all existing character/costume data without mutating old bundles", () => {
@@ -111,4 +126,5 @@ test("burst REST endpoint resolves names/IDs, nullable costumes, fields and loca
   assert.equal((await json("/api/costumes/10012")).burstCutscene, null);
   const spec = await json("/openapi.json");
   assert.ok(spec.paths["/api/nikkes/{id}/burst"].get.responses["200"]);
+  assert.deepEqual(rapi.burstCutscene.playback, getBurstCutscene(10)!.playback);
 });

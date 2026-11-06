@@ -5,6 +5,7 @@ import path from "node:path";
 import { cacheHeaders } from "./cache.js";
 import { cdnUrl } from "./cdn.js";
 import { getBurstCutscene, withBurstCutscenes } from "./burst.js";
+import { createBurstViewer } from "./burst-viewer.js";
 import { groupEventScenes } from "./events.js";
 import { buildFamilies } from "./family.js";
 import { favoriteRouteEntries, ROUTE_COVERAGE_CHAPTER, ROUTE_SOURCES, STORY_ROUTE } from "./story-route.js";
@@ -528,6 +529,12 @@ app.use("*", async (c, next) => {
     orig(localize(obj, lang), ...(rest as []))) as typeof c.json;
   await next();
 });
+
+app.route("/", createBurstViewer(burst => {
+  const n = [...byResourceId.values()].find(n => n.burstCutscene?.id === burst.id || n.costumes.some(co => co.burstCutscene?.id === burst.id));
+  const co = n?.costumes.find(co => co.burstCutscene?.id === burst.id);
+  return [n?.name.ko ?? n?.name.en, co?.name && (typeof co.name === "string" ? co.name : co.name.ko ?? co.name.en)].filter(Boolean).join(" · ") || "버스트 컷씬";
+}));
 
 app.get("/", (c) =>
   c.json({

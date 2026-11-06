@@ -33,18 +33,22 @@ const charRef = {
 const burstCutscene = {
   type: ["object", "null"],
   description: "해당 외형의 시각적 버스트 컷신. 미수록은 null이며 기본 외형으로 대체하지 않습니다. 음성은 별도입니다.",
-  required: ["id", "format", "spineVersion", "animation", "animations", "atlas", "skeleton", "textures", "viewerUrl", "source"],
+  required: ["id", "format", "spineVersion", "animation", "animations", "playback", "atlas", "skeleton", "textures", "viewerUrl", "source"],
   properties: {
     id: { type: "string" },
     format: { type: "string", const: "spine" },
     spineVersion: { type: "string", example: "4.1.20" },
     animation: { type: "string", example: "skillcut_1", description: "검증된 버스트 재생 트랙" },
     animations: { type: "array", items: { type: "object", properties: { name: { type: "string" }, duration: { type: "number", description: "초" } } } },
+    playback: { type: "object", description: "배경을 포함하는 하나의 컷신. layers 순서로 공통 좌표계에 렌더링하며, 독립 Skeleton을 같은 시간으로 재생합니다.", required: ["mode", "duration", "layers"], properties: {
+      mode: { type: "string", enum: ["single", "composite"] }, duration: { type: "number" },
+      layers: { type: "array", items: { type: "object", required: ["role", "animation"], properties: { role: { type: "string", enum: ["background", "main"] }, animation: { type: "string" } } } },
+    } },
     atlas: { type: "string", format: "uri" },
     skeleton: { type: "string", format: "uri" },
     textures: { type: "array", items: { type: "object", required: ["name", "url"], properties: { name: { type: "string" }, url: { type: "string", format: "uri" } } } },
-    viewerUrl: { type: "string", format: "uri" },
-    source: { type: "object", properties: { name: { type: "string" }, url: { type: "string", format: "uri" }, revision: { type: "string" } } },
+    viewerUrl: { type: "string", format: "uri", description: "배경·캐릭터를 함께 재생하는 니케 API 뷰어" },
+    source: { type: "object", properties: { name: { type: "string" }, url: { type: "string", format: "uri" }, revision: { type: "string" }, viewerUrl: { type: "string", format: "uri", description: "원본 ArtHub 뷰어" } } },
   },
 };
 const burstResult = {

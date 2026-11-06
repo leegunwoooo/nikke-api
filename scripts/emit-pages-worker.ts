@@ -2,6 +2,7 @@ import crypto from "node:crypto";
 import { mkdirSync, writeFileSync } from "node:fs";
 import path from "node:path";
 import { build } from "esbuild";
+import "./build-burst-player.js";
 
 // Bundles worker/index.ts into pages-proxy/_worker.js with a build id derived
 // from the bundle's own bytes, so same source = same output (a commit SHA would

@@ -45,18 +45,26 @@ export interface SpineSet {
   cover: SpineAsset;
 }
 
+export interface BurstPlayback {
+  mode: "single" | "composite";
+  duration: number;
+  /** Back to front. Shared assets, independent skeleton poses, one clock. */
+  layers: { role: "background" | "main"; animation: string }[];
+}
+
 export interface BurstCutscene {
   id: string;
   format: "spine";
   spineVersion: string;
   animation: string;
   animations: { name: string; duration: number }[];
+  playback: BurstPlayback;
   atlas: string;
   skeleton: string;
   /** Every atlas page, keyed by its original filename (not always one PNG). */
   textures: { name: string; url: string }[];
   viewerUrl: string;
-  source: { name: string; url: string; revision: string };
+  source: { name: string; url: string; revision: string; viewerUrl: string };
 }
 
 export interface ImageSet {

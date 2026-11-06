@@ -1,4 +1,5 @@
 /** ArtHub's reviewed catalog is an index, not a filename template. */
+export { burstAnimation } from "../src/burst-playback.js";
 export const BURST_REPO = "Talors1225/arthub-viewer-web";
 export const BURST_COMMIT = "dba1ebc764ffd74722afe6ef2acf411931abf47c";
 export const BURST_ASSET_BASE = "https://pub-bdd986c6ec274f53b01df62ac49e02e2.r2.dev/nikki/spine_carved/";
@@ -59,13 +60,6 @@ export function spineVersion(bytes: Uint8Array): string {
   const version = new TextDecoder().decode(bytes.subarray(9, 9 + length - 1));
   if (!/^4\.1\.\d+$/.test(version)) throw new Error(`Unsupported Spine version: ${version}`);
   return version;
-}
-
-export function burstAnimation(names: string[]): string | null {
-  for (const preferred of ["all_skillcut", "skillcut_all", "skillcut_1", "skill_cut", "skill_01", "skilcut_1"]) {
-    if (names.includes(preferred)) return preferred;
-  }
-  return names.find(name => /^skill[_-]?cut(?:_|\d|$)/i.test(name) && !/(?:^|_)bg(?:_|$)/i.test(name)) ?? null;
 }
 
 export function selectBursts(entries: CatalogEntry[]) {

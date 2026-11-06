@@ -1,5 +1,6 @@
 import catalog from "../content/burst-cutscenes/catalog.json" with { type: "json" };
 import type { BurstCutscene, Nikke } from "./types.js";
+import { burstPlayback } from "./burst-playback.js";
 
 const bySkin = new Map<string, BurstCutscene>(catalog.entries.map(entry => {
   const base = `${catalog.assetBase}${entry.directory}/`;
@@ -9,13 +10,17 @@ const bySkin = new Map<string, BurstCutscene>(catalog.entries.map(entry => {
     spineVersion: entry.spineVersion,
     animation: entry.animation,
     animations: entry.animations,
+    playback: burstPlayback(entry.animations),
     atlas: base + entry.atlas,
     skeleton: base + entry.skeleton,
     textures: entry.textures.map(name => ({ name, url: base + name })),
-    viewerUrl: `${catalog.viewer}?id=${encodeURIComponent(entry.id)}&anim=${encodeURIComponent(entry.animation)}`,
-    source: { name: "ArtHub", url: catalog.source, revision: catalog.commit },
+    viewerUrl: `https://nikke-api.pages.dev/burst-viewer?id=${encodeURIComponent(entry.id)}`,
+    source: { name: "ArtHub", url: catalog.source, revision: catalog.commit,
+      viewerUrl: `${catalog.viewer}?id=${encodeURIComponent(entry.id)}&anim=${encodeURIComponent(entry.animation)}` },
   }];
 }));
+
+export const burstsById = new Map([...bySkin.values()].map(burst => [burst.id, burst]));
 
 /** Exact skin only: an absent costume cutscene must not pretend to be the base. */
 export function getBurstCutscene(resourceId: number, skinIndex = 0): BurstCutscene | null {
