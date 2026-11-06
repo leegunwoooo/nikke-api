@@ -35,7 +35,7 @@ test("asset relay is limited to catalog files and forwards no client headers or 
   assert.deepEqual(new Uint8Array(await response.arrayBuffer()), new Uint8Array([1, 2, 3]));
   assert.equal(calls[0].input, burst.skeleton);
   assert.equal(calls[0].init?.headers, undefined);
-  assert.equal(calls[0].init?.redirect, "error");
+  assert.equal(calls[0].init?.redirect, "manual");
   assert.equal((await app.request(asset.replace(".skel", ".unknown"))).status, 404);
   assert.equal((await app.request(asset.replace(burst.source.revision, "other"))).status, 404);
   assert.equal((await app.request(asset.replace(burst.id, "unknown"))).status, 404);
