@@ -323,15 +323,31 @@ GET /api/nikkes/511/burst?lang=ko
 |---|---|
 | `id` / `format` | 출처 리소스 ID / `"spine"` |
 | `spineVersion` | 스켈레톤에서 확인한 버전. 현재 `4.1.20`, Spine 4.1 런타임으로 재생 |
-| `animation` / `animations[]` | 버스트 재생 트랙과 전체 `{ name, duration }` 목록. `duration`은 초. 뷰어 링크도 이 트랙을 선택 |
+| `animation` / `animations[]` | 기본 버스트 트랙과 원본 전체 `{ name, duration }` 목록. `duration`은 초. 전체 컷신 재생에는 `playback` 사용 |
+| `playback` | `{ mode, duration, layers }`. 원본 통합 애니메이션은 `single`, 배경이 분리된 경우 `composite`. `layers`는 뒤에서 앞으로 그릴 `{ role, animation }` 순서 |
 | `atlas` / `skeleton` | atlas와 binary skeleton의 외부 URL |
 | `textures[]` | 모든 atlas 페이지의 `{ name, url }`. `name`으로 atlas의 텍스처 요청을 연결하며, PNG 한 장이라고 가정하지 않음 |
-| `viewerUrl` | 해당 리소스를 바로 여는 ArtHub 뷰어 링크 |
-| `source` | 출처 이름, 원본 목록 URL, 고정한 Git revision |
+| `viewerUrl` | 배경과 캐릭터를 함께 재생하는 니케 API 뷰어 링크. 재생·정지·탐색은 전체 컷신에 적용 |
+| `source` | 출처 이름, 원본 목록 URL, 고정한 Git revision, 원본 ArtHub `viewerUrl` |
 
 같은 필드는 캐릭터 목록·상세, `/api/nikkes/:id/spine`, 코스튬 목록·상세에서도 제공됩니다. MCP는 `get_nikke_burst` 또는 `get_nikke`의 `include: ["burstCutscene"]`로 조회합니다. 후자는 기본 외형만 추가하며 코스튬까지 필요하면 `"costumes"`도 추가합니다.
 
-**브라우저 재생은 `viewerUrl`을 사용합니다.** 2026-11-06 확인 시 외부 R2 호스트는 ArtHub 사이트 Origin을 CORS로 허용하며, `https://nikke-api.pages.dev` Origin은 허용하지 않습니다. 이 API의 CORS 설정으로 외부 파일의 정책을 바꿀 수 없습니다. 리소스 URL 자체는 서버에서 읽을 수 있지만 임의의 웹페이지에서 직접 `fetch`하여 재생할 수 있다고 가정하면 안 됩니다.
+**브라우저 재생은 `viewerUrl`을 사용합니다.** `/burst-viewer?id=<컷신 id>`는 원본의 통합 애니메이션을 우선 사용합니다. 벨로타 : 펌킨 위치처럼 `skillcut_1`과 `bg_skillcut_1`이 분리된 경우에도 한 화면에서 동기화해 재생합니다. 원본의 화면 영역을 유지하고, 배경과 본체의 숨김 키가 충돌하지 않도록 각 레이어의 Skeleton 상태를 분리합니다. 하나의 Skeleton에 여러 트랙을 얹으면 캐릭터나 배경이 사라질 수 있습니다.
+
+```json
+"playback": {
+  "mode": "composite",
+  "duration": 4.7,
+  "layers": [
+    { "role": "background", "animation": "bg_skillcut_1" },
+    { "role": "main", "animation": "skillcut_1" }
+  ]
+}
+```
+
+자체 플레이어는 atlas·텍스처·SkeletonData를 공유하되 `layers`마다 별도의 Skeleton을 만들고, 동일한 시간과 카메라로 순서대로 렌더링합니다. 원본 `.skel` 파일 자체를 변환하거나 연결한 형식은 아닙니다.
+
+기존 `atlas`·`skeleton`·`textures[].url`은 외부 원본 URL입니다. 외부 R2의 CORS는 ArtHub Origin만 허용하므로 자체 뷰어는 `/burst-assets/<revision>/<id>/<파일명>`으로 카탈로그의 파일만 중계합니다. 임의 URL·미등록 파일은 받지 않으며, 성공 응답은 기존 API 엣지 캐시를 사용하고 실패는 캐시하지 않습니다. `source.viewerUrl`은 단일 원본 트랙을 확인할 때 사용합니다.
 
 자료는 [ArtHub](https://github.com/Talors1225/arthub-viewer-web)의 공개 URL 목록을 검증해 수동 갱신합니다. 게임 전체 컷신의 완전한 목록은 아닙니다. 코스튬 전용 컷신이 없으면 기본 컷신으로 대체하지 않고 `null`을 반환합니다. 이는 게임 안에 컷신이 없다는 뜻이 아닙니다. 영상·음성 합본이 아닌 시각 애니메이션 리소스이며, 음성은 `details.voices`를 별도로 사용합니다. 외부 호스트의 파일 삭제·주소 변경·CORS 정책은 이 API가 보장하지 않습니다. [수록 범위와 갱신 방법](https://github.com/leegunwoooo/nikke-api/blob/main/content/burst-cutscenes/README.md).
 

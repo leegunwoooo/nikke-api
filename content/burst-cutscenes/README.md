@@ -1,6 +1,6 @@
 # 버스트 컷신 URL 목록
 
-[ArtHub](https://github.com/Talors1225/arthub-viewer-web)의 공개 니케 리소스에서 버스트 컷신 URL 메타데이터만 가져옵니다. Spine·이미지·음성 파일은 이 저장소에 보관하지 않습니다. 원본 게임 콘텐츠의 권리는 © SHIFT UP / Level Infinite에 있습니다.
+[ArtHub](https://github.com/Talors1225/arthub-viewer-web)의 공개 니케 리소스에서 버스트 컷신 URL 메타데이터를 가져옵니다. 원본 Spine·이미지·음성 파일은 이 저장소에 보관하지 않습니다. 합성 뷰어가 요청하면 목록에 등록된 리소스만 중계하고 기존 엣지 캐시를 사용합니다. 원본 게임 콘텐츠의 권리는 © SHIFT UP / Level Infinite에 있습니다.
 
 - 원본 목록: [`nikki/nikki_chars.json`](https://github.com/Talors1225/arthub-viewer-web/blob/dba1ebc764ffd74722afe6ef2acf411931abf47c/nikki/nikki_chars.json)
 - 고정 revision: `dba1ebc764ffd74722afe6ef2acf411931abf47c`
@@ -32,8 +32,23 @@ npm run emit:pages-worker
 
 모든 atlas 페이지와 skeleton을 읽어 Spine 4.1 런타임으로 파싱하고, 버스트 애니메이션 트랙과 각 파일의 존재를 확인한 뒤에만 `catalog.json`을 교체합니다. 파일명이 특이한 레드 후드 기본 외형과 에밀리아 클럼지 메이드는 개별 검증한 매핑을 사용합니다. 실패한 갱신은 기존 목록을 덮어쓰지 않습니다. 변경된 URL 목록과 누락 항목을 검토하고 이 문서의 수록 범위를 함께 갱신합니다. 원본 호스트가 바뀌면 스크립트의 `BURST_ASSET_BASE`도 확인해야 합니다.
 
-검증용 `@esotericsoftware/spine-core`는 개발 의존성이며 [Spine Runtimes 라이선스](https://github.com/EsotericSoftware/spine-runtimes/blob/4.1/LICENSE)를 따릅니다. API 워커 번들에는 런타임을 포함하지 않습니다.
+`@esotericsoftware/spine-core`와 `spine-webgl`은 개발 의존성이며 [Spine Runtimes 라이선스](../../viewer/SPINE-LICENSE.txt)를 따릅니다. 검증은 Node에서 실행하고, 재생 런타임은 `npm run build:burst-player`로 브라우저용 파일에 번들링합니다. 워커는 생성한 플레이어 코드를 전달하며 Spine 파싱·렌더링은 브라우저에서 수행합니다. 플레이어 소스 변경 시 생성물도 커밋하며 CI에서 일치 여부를 검사합니다.
 
 목록은 워커 번들에 포함됩니다. 기존 `data/dist`를 그대로 사용하며, `content/burst-cutscenes/` 변경은 워커 배포 대상입니다. API 요청 중에 ArtHub를 호출하지 않습니다. 외부 파일 자체의 가용성은 해당 호스트에 의존합니다.
 
-2026-11-06에 Range GET으로 확인한 R2 CORS는 `https://talors1225.github.io`를 허용하고 `https://nikke-api.pages.dev`는 허용하지 않았습니다. 브라우저에서는 `viewerUrl`로 재생합니다. 원본 URL을 임의 웹사이트에서 직접 사용하는 플레이어는 별도의 호스팅 정책이 필요합니다.
+2026-11-06에 Range GET으로 확인한 R2 CORS는 `https://talors1225.github.io`를 허용하고 `https://nikke-api.pages.dev`는 허용하지 않았습니다. `viewerUrl`은 자체 합성 뷰어를 열며, `/burst-assets/<revision>/<id>/<파일명>`으로 정확히 등록된 리소스만 읽습니다. 이 경로는 임의 URL이나 다른 파일을 중계하지 않습니다. 원본 URL과 원본 뷰어는 계속 `atlas`·`skeleton`·`textures`·`source.viewerUrl`에 남습니다.
+
+## 배경 합성
+
+`playback`은 하나의 컷신에 필요한 재생 구성을 제공합니다. 원본에 `all_skillcut`·`skillcut_1_all` 같은 통합 애니메이션이 있으면 우선 선택합니다. 아래 6개는 같은 스켈레톤 안에서 배경과 본체의 애니메이션이 나뉘므로 함께 재생합니다.
+
+| 리소스 | 배경 | 본체 |
+|---|---|---|
+| `c063_00_skillcut` | `bg_skillcut_1` | `skillcut_1` |
+| `c103_00_skillcut` | `bg_skillcut_1` | `skillcut_1` |
+| `c170_04_skillcut` | `bg_skillcut_1` | `skillcut_1` |
+| `c513_01_skillcut` | `skill_cut_bg` | `skill_cut` |
+| `catalog-c852_00_skillcut` | `skillcut_bg` | `skillcut` |
+| `c872_skillcut_00` | `bg_skillcut_1` | `skillcut_1` |
+
+배경 애니메이션에는 캐릭터 슬롯을 숨기는 키가 있으므로 한 Skeleton의 트랙에 중첩하지 않습니다. atlas·텍스처·SkeletonData를 공유하는 독립 Skeleton을 같은 시간·카메라로 그려 하나의 화면을 만듭니다. 플레이어의 재생·정지·탐색은 모두 함께 동작합니다. 화면은 내보낸 스켈레톤 영역을 기준으로 고정하며, 영역 밖의 이동 효과 때문에 화면 전체가 축소되지 않도록 자릅니다. 게임의 카메라·후처리·음성까지 복원한 영상은 아닙니다.

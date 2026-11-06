@@ -1,6 +1,7 @@
 import { mkdir, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { TextureAtlas, FakeTexture, SkeletonBinary, AtlasAttachmentLoader } from "@esotericsoftware/spine-core";
+import { burstPlayback } from "../src/burst-playback.js";
 import { BURST_REPO, BURST_COMMIT, BURST_ASSET_BASE, BURST_VIEWER, atlasPages, burstAnimation, selectBursts, spineVersion, type BurstEntry, type CatalogEntry } from "./burst-cutscenes.js";
 
 // Manual, reviewed refresh. No dependency on ArtHub at API request time or
@@ -46,6 +47,7 @@ async function main() {
       const animations = skeleton.animations.map(a => ({ name: a.name, duration: Number(a.duration.toFixed(4)) }));
       const animation = burstAnimation(animations.map(a => a.name));
       if (!animation) throw new Error(`No burst animation track: ${entry.id} ${JSON.stringify(animations)}`);
+      burstPlayback(animations); // Includes background timing validation.
       for (const page of textures) await request(base + page, { method: "HEAD" });
       return { ...entry, textures, spineVersion: version, animation, animations };
     }));

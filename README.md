@@ -9,7 +9,7 @@
 >
 > - [`content/favorite-stories/`](content/favorite-stories/README.md)의 애장품 스토리: 공개 영상 화면에서 옮겨 적어 이 저장소에 보관합니다.
 > - `library` 카테고리의 스토리: 커뮤니티 기록 [Nikke Forbidden Library](https://github.com/VoMiRin/Nikke-Forbidden-Library)에서 가져와 API 형식으로 변환해 제공합니다. 단, [`content/library-stories/`](content/library-stories/README.md)의 대본은 공개 영상 화면에서 옮겨 적어 이 저장소에 보관합니다.
-> - 버스트 컷신: [ArtHub](https://github.com/Talors1225/arthub-viewer-web)의 공개 Spine 리소스 URL을 참조합니다. [검증된 URL 메타데이터](content/burst-cutscenes/README.md)만 보관하며 이미지·애니메이션 파일은 재호스팅하지 않습니다.
+> - 버스트 컷신: [ArtHub](https://github.com/Talors1225/arthub-viewer-web)의 공개 Spine 리소스를 참조합니다. [검증된 URL 메타데이터](content/burst-cutscenes/README.md)를 보관하며, 뷰어는 배경과 캐릭터를 하나의 컷신으로 재생합니다. 원본 게임 파일은 저장소에 포함하지 않고, 뷰어 요청 시 목록에 있는 파일만 중계·캐시합니다.
 >
 > 상업적 이용을 금지하며, 권리자의 요청이 있을 경우 즉시 서비스를 중단합니다.
 
@@ -38,7 +38,7 @@ BlablaLink(공식 위키 도구)의 CDN 데이터를 매일 동기화합니다. 
 |------|------|
 | 기본 정보 | ID, 이름(4개 언어), 레어도, 클래스, 버스트 스텝, 기업, 속성, 무기/공격 타입 |
 | 이미지 | 아이콘 / 미디엄 / 전신 일러스트 (CDN URL), 등급·클래스·속성 아이콘, 스킬 아이콘 |
-| 버스트 컷신 | `burstCutscene`: 기본 외형·코스튬별 Spine atlas/skeleton/전체 texture 페이지와 ArtHub 뷰어 링크. 미수록은 `null`, 음성은 별도 |
+| 버스트 컷신 | `burstCutscene`: 외형별 Spine 리소스, `playback` 합성 정보와 배경·캐릭터를 함께 재생하는 뷰어. 미수록은 `null`, 음성은 별도 |
 | 코스튬 | 스킨 캐릭터별 코스튬 목록 + 각 코스튬 이미지 세트. `/api/costumes/:id`는 그 코스튬 전용 대사+음성(`voices`)도 함께 제공 |
 | 스킬 | 슬롯별(`skill1`/`skill2`/`burst`) 이름·설명(최대 레벨 렌더링) + 원본 템플릿·레벨별 수치, 버스트 쿨타임 |
 | 스탯 | 레벨별 공격력/방어력/HP 배열 (Lv1~최대) |

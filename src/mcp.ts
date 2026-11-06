@@ -580,7 +580,7 @@ export function buildServer(api: Fetcher, version: string, origin = "", boundBla
     {
       title: "Spine animation asset URLs",
       description:
-        "Spine viewer asset URLs for a character — stand (lobby), aim (firing stance incl. fire/skill tracks) and cover (incl. reload) triplets {atlas, skeleton, texture} for the base appearance and every costume. Render with a Spine 4.1 runtime. Also includes burstCutscene visual assets from ArtHub, with all texture pages and a viewer link; null for unavailable skins. Use viewerUrl for browser burst playback; the burst asset host restricts CORS.",
+        "Spine viewer asset URLs for a character — stand (lobby), aim (firing stance incl. fire/skill tracks) and cover (incl. reload) triplets {atlas, skeleton, texture} for the base appearance and every costume. Render with a Spine 4.1 runtime. Also includes burstCutscene visual assets from ArtHub, all texture pages, playback.layers and a viewerUrl that plays the character and background together; null for unavailable skins. Use viewerUrl for browser burst playback. Raw external asset URLs retain the source host's CORS policy.",
       inputSchema: z.object({
         nameOrId: z.string().min(1).describe("Character name (any language) or id"),
       }),
@@ -593,7 +593,7 @@ export function buildServer(api: Fetcher, version: string, origin = "", boundBla
     "get_nikke_burst",
     {
       title: "Burst cutscene assets and viewer",
-      description: "Burst skill cutscene visual assets for a character and every costume: Spine atlas, skeleton, all texture pages, runtime version, animation tracks and an ArtHub viewer link that selects the burst track. Use viewerUrl for browser playback; the asset host restricts CORS. Exact skin matches only; unavailable cutscenes are null, with no base-skin fallback. Audio is separate (get_nikke include voices). Exact names win; ambiguous partial names return candidates.",
+      description: "Burst skill cutscene visual assets for a character and every costume: Spine atlas, skeleton, all texture pages, runtime version, animation tracks and playback.layers. viewerUrl plays the whole cutscene with background and character synchronized. Prefer an authored combined animation; otherwise render independent skeleton instances in layer order using the same camera and time, not multiple tracks on one skeleton. source.viewerUrl retains the original ArtHub viewer. Raw external asset URLs retain the source host's CORS policy. Exact skin matches only; unavailable cutscenes are null, with no base-skin fallback. Audio is separate (get_nikke include voices). Exact names win; ambiguous partial names return candidates.",
       inputSchema: z.object({ nameOrId: z.string().min(1).describe("Character name (any language), id or resourceId"), lang: LANG }),
       annotations: READ_ONLY,
     },
