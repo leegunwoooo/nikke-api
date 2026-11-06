@@ -8142,7 +8142,7 @@ function createBurstViewer(titleOf = () => "\uBC84\uC2A4\uD2B8 \uCEF7\uC52C", fe
     if (!burst || burst.source.revision !== c.req.param("revision") || !url2) return c.text("Unknown burst asset", 404);
     let detail = "fetch error";
     try {
-      const response = await fetcher(url2, { method: c.req.method === "HEAD" ? "HEAD" : "GET", redirect: "error", signal: AbortSignal.timeout(2e4) });
+      const response = await fetcher(url2, { method: c.req.method === "HEAD" ? "HEAD" : "GET", redirect: "manual", signal: AbortSignal.timeout(2e4) });
       if (!response.ok) {
         detail = `upstream ${response.status}`;
         await response.body?.cancel();
@@ -28841,7 +28841,7 @@ var CREDS_KEY = "bla:creds";
 var HDR_CREDS = "x-bla-creds";
 var HDR_BLABLAID = "x-registered-blablaid";
 var edgeCache = caches.default;
-var BUILD_ID = false ? void 0 : "e5ecd5b3aa49";
+var BUILD_ID = false ? void 0 : "0051b36c2244";
 var DATA_HOST = "https://nikke-api-data.pages.dev";
 var REVALIDATE_MS = 3e5;
 var appPromise;

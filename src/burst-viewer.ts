@@ -40,7 +40,8 @@ export function createBurstViewer(titleOf: (burst: BurstCutscene) => string = ()
     if (!burst || burst.source.revision !== c.req.param("revision") || !url) return c.text("Unknown burst asset", 404);
     let detail = "fetch error";
     try {
-      const response = await fetcher(url, { method: c.req.method === "HEAD" ? "HEAD" : "GET", redirect: "error", signal: AbortSignal.timeout(20_000) });
+      // "manual" because the edge rejects redirect:"error"; a 3xx is not ok.
+      const response = await fetcher(url, { method: c.req.method === "HEAD" ? "HEAD" : "GET", redirect: "manual", signal: AbortSignal.timeout(20_000) });
       if (!response.ok) {
         detail = `upstream ${response.status}`;
         await response.body?.cancel();
