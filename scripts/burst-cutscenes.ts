@@ -1,0 +1,98 @@
+/** ArtHub's reviewed catalog is an index, not a filename template. */
+export const BURST_REPO = "Talors1225/arthub-viewer-web";
+export const BURST_COMMIT = "dba1ebc764ffd74722afe6ef2acf411931abf47c";
+export const BURST_ASSET_BASE = "https://pub-bdd986c6ec274f53b01df62ac49e02e2.r2.dev/nikki/spine_carved/";
+export const BURST_VIEWER = "https://talors1225.github.io/arthub-viewer-web/nikki/viewer/cutscene.html";
+
+export interface CatalogEntry {
+  id: string;
+  resourceType: string;
+  cutscenes?: { dir: string; skel: string; atlas: string; compositeLayers?: unknown[] }[];
+}
+
+export interface BurstEntry {
+  resourceId: number;
+  skinIndex: number;
+  id: string;
+  directory: string;
+  skeleton: string;
+  atlas: string;
+  textures: string[];
+  spineVersion: string;
+  animation: string;
+  animations: { name: string; duration: number }[];
+}
+
+// The source really uses slillcut/skillut, and sometimes puts the skin last.
+// Unrecognized "skill" entries (e.g. c821_01) must not become guessed bursts.
+export function resourceKey(file: string): { resourceId: number; skinIndex: number } | null {
+  const match = /^c(\d+)(?:_(\d+))?_(?:skillcut|slillcut|skillut)(?:_(\d+))?\.skel$/.exec(file);
+  if (!match || (match[2] && match[3])) return null;
+  return { resourceId: Number(match[1]), skinIndex: Number(match[2] ?? match[3] ?? 0) };
+}
+
+export function assetName(name: string): string {
+  if (!/^[\w.-]+$/.test(name) || name === "." || name === "..") throw new Error(`Invalid asset name: ${name}`);
+  return name;
+}
+
+export function atlasPages(atlas: string): string[] {
+  const pages: string[] = [];
+  let nextPage = true;
+  for (const line of atlas.replace(/^\uFEFF/, "").split(/\r?\n/)) {
+    const text = line.trim();
+    if (!text) { nextPage = true; continue; }
+    if (nextPage) {
+      if (!/\.(png|webp)$/i.test(text)) throw new Error(`Invalid atlas page: ${text}`);
+      pages.push(assetName(text));
+      nextPage = false;
+    }
+  }
+  if (!pages.length || new Set(pages).size !== pages.length) throw new Error("Empty or duplicate atlas pages");
+  return pages;
+}
+
+/** Spine 4.1 binary header: 8-byte hash, varint length, UTF-8 version. */
+export function spineVersion(bytes: Uint8Array): string {
+  const length = bytes[8];
+  if (!length || length > 32 || bytes.length < 9 + length - 1) throw new Error("Invalid Spine header");
+  const version = new TextDecoder().decode(bytes.subarray(9, 9 + length - 1));
+  if (!/^4\.1\.\d+$/.test(version)) throw new Error(`Unsupported Spine version: ${version}`);
+  return version;
+}
+
+export function burstAnimation(names: string[]): string | null {
+  for (const preferred of ["all_skillcut", "skillcut_all", "skillcut_1", "skill_cut", "skill_01", "skilcut_1"]) {
+    if (names.includes(preferred)) return preferred;
+  }
+  return names.find(name => /^skill[_-]?cut(?:_|\d|$)/i.test(name) && !/(?:^|_)bg(?:_|$)/i.test(name)) ?? null;
+}
+
+export function selectBursts(entries: CatalogEntry[]) {
+  const selected = new Map<string, Omit<BurstEntry, "textures" | "spineVersion" | "animation" | "animations">>();
+  for (const entry of entries) {
+    if (entry.resourceType !== "skill" || entry.cutscenes?.length !== 1) continue;
+    const variant = entry.cutscenes[0];
+    // These two names were reviewed in ArtHub and verified to contain
+    // skillcut_1. Never infer a burst from an arbitrary lobby-like filename.
+    const reviewed: Record<string, { file: string; resourceId: number; skinIndex: number }> = {
+      "catalog-c470_00_z_f": { file: "c470_00_z_f.skel", resourceId: 470, skinIndex: 0 },
+      "c821_01": { file: "c821_01.skel", resourceId: 821, skinIndex: 1 },
+    };
+    const alias = reviewed[entry.id];
+    const key = resourceKey(variant.skel) ?? (alias?.file === variant.skel ? { resourceId: alias.resourceId, skinIndex: alias.skinIndex } : null);
+    if (!key) continue;
+    if (variant.compositeLayers?.length) throw new Error(`Composite burst needs explicit support: ${entry.id}`);
+    const directory = /^spine\/([\w.-]+)\/$/.exec(variant.dir)?.[1];
+    if (!directory) throw new Error(`Invalid directory: ${variant.dir}`);
+    const candidate = { ...key, id: assetName(entry.id), directory: assetName(directory), skeleton: assetName(variant.skel), atlas: assetName(variant.atlas) };
+    const k = `${key.resourceId}:${key.skinIndex}`;
+    const old = selected.get(k);
+    // Explicit skin numbers beat old unsuffixed variants; reconstructed
+    // catalog entries beat legacy duplicates. Ties must be reviewed.
+    const rank = (x: typeof candidate) => Number(/_\d+_/.test(x.skeleton)) * 2 + Number(x.id.startsWith("catalog-"));
+    if (old && rank(old) === rank(candidate)) throw new Error(`Ambiguous burst ${k}: ${old.id}, ${candidate.id}`);
+    if (!old || rank(candidate) > rank(old)) selected.set(k, candidate);
+  }
+  return [...selected.values()].sort((a, b) => a.resourceId - b.resourceId || a.skinIndex - b.skinIndex);
+}

@@ -2231,6 +2231,5841 @@ function cdnUrl(path2) {
   return `${CDN_BASE}/${obfuscatedPath(path2)}`;
 }
 
+// content/burst-cutscenes/catalog.json
+var catalog_default = {
+  source: "https://raw.githubusercontent.com/Talors1225/arthub-viewer-web/dba1ebc764ffd74722afe6ef2acf411931abf47c/nikki/nikki_chars.json",
+  commit: "dba1ebc764ffd74722afe6ef2acf411931abf47c",
+  assetBase: "https://pub-bdd986c6ec274f53b01df62ac49e02e2.r2.dev/nikki/spine_carved/",
+  viewer: "https://talors1225.github.io/arthub-viewer-web/nikki/viewer/cutscene.html",
+  entries: [
+    {
+      resourceId: 10,
+      skinIndex: 0,
+      id: "catalog-c010_00_skillcut",
+      directory: "catalog-c010_00_skillcut",
+      skeleton: "c010_00_skillcut.skel",
+      atlas: "c010_00_skillcut.atlas",
+      textures: [
+        "c010_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "Idle",
+          duration: 2.8333
+        },
+        {
+          name: "skillcut_1",
+          duration: 2.8
+        }
+      ]
+    },
+    {
+      resourceId: 11,
+      skinIndex: 0,
+      id: "c011_00_skillcut",
+      directory: "c011_00_skillcut",
+      skeleton: "c011_00_skillcut.skel",
+      atlas: "c011_00_skillcut.atlas",
+      textures: [
+        "c011_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 6.3333
+        },
+        {
+          name: "skillcut_1",
+          duration: 4.0667
+        }
+      ]
+    },
+    {
+      resourceId: 12,
+      skinIndex: 0,
+      id: "c012_00_skillcut",
+      directory: "c012_00_skillcut",
+      skeleton: "c012_00_skillcut.skel",
+      atlas: "c012_00_skillcut.atlas",
+      textures: [
+        "c012_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 6
+        },
+        {
+          name: "skillcut_1",
+          duration: 3.9333
+        }
+      ]
+    },
+    {
+      resourceId: 13,
+      skinIndex: 0,
+      id: "c013_00_skillcut",
+      directory: "c013_00_skillcut",
+      skeleton: "c013_00_skillcut.skel",
+      atlas: "c013_00_skillcut.atlas",
+      textures: [
+        "c013_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 5.3333
+        },
+        {
+          name: "skillcut_1",
+          duration: 2
+        }
+      ]
+    },
+    {
+      resourceId: 14,
+      skinIndex: 0,
+      id: "c014_00_skillcut",
+      directory: "c014_00_skillcut",
+      skeleton: "c014_00_skillcut.skel",
+      atlas: "c014_00_skillcut.atlas",
+      textures: [
+        "c014_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 3.3333
+        },
+        {
+          name: "skillcut_1",
+          duration: 3.6667
+        }
+      ]
+    },
+    {
+      resourceId: 15,
+      skinIndex: 0,
+      id: "c015_00_skillcut",
+      directory: "c015_00_skillcut",
+      skeleton: "c015_00_skillcut.skel",
+      atlas: "c015_00_skillcut.atlas",
+      textures: [
+        "c015_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 3.4667
+        },
+        {
+          name: "skillcut_1",
+          duration: 3.3333
+        },
+        {
+          name: "skillcut_2",
+          duration: 3.3333
+        }
+      ]
+    },
+    {
+      resourceId: 16,
+      skinIndex: 0,
+      id: "c016_00_skillcut",
+      directory: "c016_00_skillcut",
+      skeleton: "c016_00_skillcut.skel",
+      atlas: "c016_00_skillcut.atlas",
+      textures: [
+        "c016_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 5.3333
+        },
+        {
+          name: "skillcut_1",
+          duration: 3.2667
+        },
+        {
+          name: "skillcut_2",
+          duration: 3.2667
+        },
+        {
+          name: "skillcut_3",
+          duration: 3.2667
+        }
+      ]
+    },
+    {
+      resourceId: 16,
+      skinIndex: 1,
+      id: "c016_01_skillcut",
+      directory: "c016_01_skillcut",
+      skeleton: "c016_01_skillcut.skel",
+      atlas: "c016_01_skillcut.atlas",
+      textures: [
+        "c016_01_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_0",
+      animations: [
+        {
+          name: "idle",
+          duration: 5.0667
+        },
+        {
+          name: "skillcut_0",
+          duration: 3.6667
+        }
+      ]
+    },
+    {
+      resourceId: 16,
+      skinIndex: 2,
+      id: "c016_02_skillcut",
+      directory: "c016_02_skillcut",
+      skeleton: "c016_02_skillcut.skel",
+      atlas: "c016_02_skillcut.atlas",
+      textures: [
+        "c016_02_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_0",
+      animations: [
+        {
+          name: "idle",
+          duration: 5.3333
+        },
+        {
+          name: "skillcut_0",
+          duration: 5.5
+        }
+      ]
+    },
+    {
+      resourceId: 17,
+      skinIndex: 0,
+      id: "c017_00_slillcut",
+      directory: "c017_00_slillcut",
+      skeleton: "c017_00_slillcut.skel",
+      atlas: "c017_00_slillcut.atlas",
+      textures: [
+        "c017_00_slillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 5.3333
+        },
+        {
+          name: "skillcut_1",
+          duration: 6.4667
+        }
+      ]
+    },
+    {
+      resourceId: 17,
+      skinIndex: 1,
+      id: "c017_01_skillcut",
+      directory: "c017_01_skillcut",
+      skeleton: "c017_01_skillcut.skel",
+      atlas: "c017_01_skillcut.atlas",
+      textures: [
+        "c017_01_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 5.3333
+        },
+        {
+          name: "idle2",
+          duration: 5.3333
+        },
+        {
+          name: "skillcut_1",
+          duration: 5.9667
+        },
+        {
+          name: "skillcut_2",
+          duration: 5.8
+        }
+      ]
+    },
+    {
+      resourceId: 18,
+      skinIndex: 0,
+      id: "c018_00_skillcut",
+      directory: "c018_00_skillcut",
+      skeleton: "c018_00_skillcut.skel",
+      atlas: "c018_00_skillcut.atlas",
+      textures: [
+        "c018_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 5.3333
+        },
+        {
+          name: "skillcut_1",
+          duration: 6.1667
+        }
+      ]
+    },
+    {
+      resourceId: 22,
+      skinIndex: 0,
+      id: "c022_00_skillcut",
+      directory: "c022_00_skillcut",
+      skeleton: "c022_00_skillcut.skel",
+      atlas: "c022_00_skillcut.atlas",
+      textures: [
+        "c022_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "Idle",
+          duration: 3
+        },
+        {
+          name: "skillcut_1",
+          duration: 3.0333
+        }
+      ]
+    },
+    {
+      resourceId: 23,
+      skinIndex: 0,
+      id: "c023_00_skillcut",
+      directory: "c023_00_skillcut",
+      skeleton: "c023_00_skillcut.skel",
+      atlas: "c023_00_skillcut.atlas",
+      textures: [
+        "c023_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 5.3333
+        },
+        {
+          name: "skillcut_1",
+          duration: 4.6667
+        },
+        {
+          name: "skillcut_2",
+          duration: 4.6667
+        }
+      ]
+    },
+    {
+      resourceId: 30,
+      skinIndex: 0,
+      id: "c030_00_skillcut",
+      directory: "c030_00_skillcut",
+      skeleton: "c030_00_skillcut.skel",
+      atlas: "c030_00_skillcut.atlas",
+      textures: [
+        "c030_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "Idle",
+          duration: 6
+        },
+        {
+          name: "skillcut_1",
+          duration: 2.8667
+        }
+      ]
+    },
+    {
+      resourceId: 32,
+      skinIndex: 0,
+      id: "c032_00_skillcut",
+      directory: "c032_00_skillcut",
+      skeleton: "c032_00_skillcut.skel",
+      atlas: "c032_00_skillcut.atlas",
+      textures: [
+        "c032_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 2.6667
+        },
+        {
+          name: "skillcut_1",
+          duration: 2.6667
+        }
+      ]
+    },
+    {
+      resourceId: 33,
+      skinIndex: 0,
+      id: "c033_00_skillcut",
+      directory: "c033_00_skillcut",
+      skeleton: "c033_00_skillcut.skel",
+      atlas: "c033_00_skillcut.atlas",
+      textures: [
+        "c033_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 6.6667
+        },
+        {
+          name: "skillcut_1",
+          duration: 3.4667
+        }
+      ]
+    },
+    {
+      resourceId: 40,
+      skinIndex: 0,
+      id: "c040_00_skillcut",
+      directory: "c040_00_skillcut",
+      skeleton: "c040_00_skillcut.skel",
+      atlas: "c040_00_skillcut.atlas",
+      textures: [
+        "c040_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 6.6667
+        },
+        {
+          name: "skillcut_1",
+          duration: 4
+        }
+      ]
+    },
+    {
+      resourceId: 41,
+      skinIndex: 0,
+      id: "c041_00_skillcut",
+      directory: "c041_00_skillcut",
+      skeleton: "c041_00_skillcut.skel",
+      atlas: "c041_00_skillcut.atlas",
+      textures: [
+        "c041_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 2.6667
+        },
+        {
+          name: "skillcut_1",
+          duration: 3.4333
+        }
+      ]
+    },
+    {
+      resourceId: 43,
+      skinIndex: 0,
+      id: "c043_00_skillcut",
+      directory: "c043_00_skillcut",
+      skeleton: "c043_00_skillcut.skel",
+      atlas: "c043_00_skillcut.atlas",
+      textures: [
+        "c043_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 4
+        },
+        {
+          name: "skillcut_1",
+          duration: 3.3333
+        }
+      ]
+    },
+    {
+      resourceId: 43,
+      skinIndex: 2,
+      id: "c043_02_skillcut",
+      directory: "c043_02_skillcut",
+      skeleton: "c043_02_skillcut.skel",
+      atlas: "c043_02_skillcut.atlas",
+      textures: [
+        "c043_02_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 5.3333
+        },
+        {
+          name: "skillcut_1",
+          duration: 4.4
+        }
+      ]
+    },
+    {
+      resourceId: 62,
+      skinIndex: 0,
+      id: "c062_00_skillcut",
+      directory: "c062_00_skillcut",
+      skeleton: "c062_00_skillcut.skel",
+      atlas: "c062_00_skillcut.atlas",
+      textures: [
+        "c062_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 5.3333
+        },
+        {
+          name: "skillcut_1",
+          duration: 2.0667
+        }
+      ]
+    },
+    {
+      resourceId: 63,
+      skinIndex: 0,
+      id: "c063_00_skillcut",
+      directory: "c063_00_skillcut",
+      skeleton: "c063_00_skillcut.skel",
+      atlas: "c063_00_skillcut.atlas",
+      textures: [
+        "c063_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "bg_skillcut_1",
+          duration: 4.7
+        },
+        {
+          name: "idle",
+          duration: 5.3333
+        },
+        {
+          name: "skillcut_1",
+          duration: 4.7
+        }
+      ]
+    },
+    {
+      resourceId: 70,
+      skinIndex: 0,
+      id: "c070_00_skillcut",
+      directory: "c070_00_skillcut",
+      skeleton: "c070_00_skillcut.skel",
+      atlas: "c070_00_skillcut.atlas",
+      textures: [
+        "c070_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 13.3333
+        },
+        {
+          name: "skillcut_1",
+          duration: 3.5333
+        }
+      ]
+    },
+    {
+      resourceId: 71,
+      skinIndex: 0,
+      id: "c071_00_skillcut",
+      directory: "c071_00_skillcut",
+      skeleton: "c071_00_skillcut.skel",
+      atlas: "c071_00_skillcut.atlas",
+      textures: [
+        "c071_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 2.6667
+        },
+        {
+          name: "skillcut_1",
+          duration: 3.6667
+        }
+      ]
+    },
+    {
+      resourceId: 72,
+      skinIndex: 0,
+      id: "c072_00_skillcut",
+      directory: "c072_00_skillcut",
+      skeleton: "c072_00_skillcut.skel",
+      atlas: "c072_00_skillcut.atlas",
+      textures: [
+        "c072_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 7.3333
+        },
+        {
+          name: "skillcut_1",
+          duration: 3.3333
+        }
+      ]
+    },
+    {
+      resourceId: 73,
+      skinIndex: 0,
+      id: "c073_00_skillcut",
+      directory: "c073_00_skillcut",
+      skeleton: "c073_00_skillcut.skel",
+      atlas: "c073_00_skillcut.atlas",
+      textures: [
+        "c073_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle_1",
+          duration: 5.3333
+        },
+        {
+          name: "idle_2",
+          duration: 5.3333
+        },
+        {
+          name: "skillcut_1",
+          duration: 6.3667
+        },
+        {
+          name: "skillcut_2",
+          duration: 6.3667
+        }
+      ]
+    },
+    {
+      resourceId: 74,
+      skinIndex: 0,
+      id: "c074_00_skillcut",
+      directory: "c074_00_skillcut",
+      skeleton: "c074_00_skillcut.skel",
+      atlas: "c074_00_skillcut.atlas",
+      textures: [
+        "c074_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 5.3333
+        },
+        {
+          name: "skillcut_1",
+          duration: 6
+        }
+      ]
+    },
+    {
+      resourceId: 75,
+      skinIndex: 0,
+      id: "catalog-c075_00_skillcut",
+      directory: "catalog-c075_00_skillcut",
+      skeleton: "c075_00_skillcut.skel",
+      atlas: "c075_00_skillcut.atlas",
+      textures: [
+        "c075_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 5.3333
+        },
+        {
+          name: "skillcut_1",
+          duration: 5
+        }
+      ]
+    },
+    {
+      resourceId: 80,
+      skinIndex: 0,
+      id: "c080_00_skillcut",
+      directory: "c080_00_skillcut",
+      skeleton: "c080_00_skillcut.skel",
+      atlas: "c080_00_skillcut.atlas",
+      textures: [
+        "c080_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 6
+        },
+        {
+          name: "skillcut_1",
+          duration: 4
+        }
+      ]
+    },
+    {
+      resourceId: 82,
+      skinIndex: 0,
+      id: "c082_00_skillcut",
+      directory: "c082_00_skillcut",
+      skeleton: "c082_00_skillcut.skel",
+      atlas: "c082_00_skillcut.atlas",
+      textures: [
+        "c082_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 5.3333
+        },
+        {
+          name: "skillcut_1",
+          duration: 4
+        }
+      ]
+    },
+    {
+      resourceId: 90,
+      skinIndex: 0,
+      id: "catalog-c090_00_skillcut",
+      directory: "catalog-c090_00_skillcut",
+      skeleton: "c090_00_skillcut.skel",
+      atlas: "c090_00_skillcut.atlas",
+      textures: [
+        "c090_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 5.6667
+        },
+        {
+          name: "skillcut_1",
+          duration: 2.3333
+        }
+      ]
+    },
+    {
+      resourceId: 91,
+      skinIndex: 0,
+      id: "c091_00_skillcut",
+      directory: "c091_00_skillcut",
+      skeleton: "c091_00_skillcut.skel",
+      atlas: "c091_00_skillcut.atlas",
+      textures: [
+        "c091_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 5.3333
+        },
+        {
+          name: "skillcut_1",
+          duration: 4
+        }
+      ]
+    },
+    {
+      resourceId: 92,
+      skinIndex: 0,
+      id: "c092_00_skillcut",
+      directory: "c092_00_skillcut",
+      skeleton: "c092_00_skillcut.skel",
+      atlas: "c092_00_skillcut.atlas",
+      textures: [
+        "c092_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 9.3333
+        },
+        {
+          name: "skillcut_1",
+          duration: 3.6667
+        }
+      ]
+    },
+    {
+      resourceId: 93,
+      skinIndex: 0,
+      id: "c093_skillcut",
+      directory: "c093_skillcut",
+      skeleton: "c093_skillcut.skel",
+      atlas: "c093_skillcut.atlas",
+      textures: [
+        "c093_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 8
+        },
+        {
+          name: "skillcut_0",
+          duration: 3.6
+        },
+        {
+          name: "skillcut_1",
+          duration: 2.6667
+        }
+      ]
+    },
+    {
+      resourceId: 94,
+      skinIndex: 0,
+      id: "c094_00_skillcut",
+      directory: "c094_00_skillcut",
+      skeleton: "c094_00_skillcut.skel",
+      atlas: "c094_00_skillcut.atlas",
+      textures: [
+        "c094_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1_OFF",
+      animations: [
+        {
+          name: "idle_1",
+          duration: 4.6667
+        },
+        {
+          name: "idle_2",
+          duration: 4.6667
+        },
+        {
+          name: "idle_3",
+          duration: 4.6667
+        },
+        {
+          name: "skillcut_1_OFF",
+          duration: 4.3
+        },
+        {
+          name: "skillcut_2_OFF_MOVE_BIG",
+          duration: 4.3
+        },
+        {
+          name: "skillcut_3_OFF",
+          duration: 4.3
+        }
+      ]
+    },
+    {
+      resourceId: 95,
+      skinIndex: 0,
+      id: "c095_00_skillcut",
+      directory: "c095_00_skillcut",
+      skeleton: "c095_00_skillcut.skel",
+      atlas: "c095_00_skillcut.atlas",
+      textures: [
+        "c095_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 5
+        },
+        {
+          name: "skillcut_1",
+          duration: 4.5667
+        }
+      ]
+    },
+    {
+      resourceId: 100,
+      skinIndex: 0,
+      id: "c100_00_skillcut",
+      directory: "c100_00_skillcut",
+      skeleton: "c100_00_skillcut.skel",
+      atlas: "c100_00_skillcut.atlas",
+      textures: [
+        "c100_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 5.3333
+        },
+        {
+          name: "skillcut_1",
+          duration: 4.4667
+        }
+      ]
+    },
+    {
+      resourceId: 101,
+      skinIndex: 0,
+      id: "c101_00_skillcut",
+      directory: "c101_00_skillcut",
+      skeleton: "c101_00_skillcut.skel",
+      atlas: "c101_00_skillcut.atlas",
+      textures: [
+        "c101_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 4.6667
+        },
+        {
+          name: "skillcut_1",
+          duration: 2.2667
+        }
+      ]
+    },
+    {
+      resourceId: 101,
+      skinIndex: 1,
+      id: "c101_01_skillcut",
+      directory: "c101_01_skillcut",
+      skeleton: "c101_01_skillcut.skel",
+      atlas: "c101_01_skillcut.atlas",
+      textures: [
+        "c101_01_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 4.8
+        },
+        {
+          name: "skillcut_1",
+          duration: 2.3333
+        }
+      ]
+    },
+    {
+      resourceId: 102,
+      skinIndex: 0,
+      id: "c102_00_skillcut",
+      directory: "c102_00_skillcut",
+      skeleton: "c102_00_skillcut.skel",
+      atlas: "c102_00_skillcut.atlas",
+      textures: [
+        "c102_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 4
+        },
+        {
+          name: "skillcut_1",
+          duration: 5.5
+        },
+        {
+          name: "skillcut_2",
+          duration: 1.6667
+        },
+        {
+          name: "skillcut_3",
+          duration: 1.6667
+        },
+        {
+          name: "skillcut_4",
+          duration: 2
+        }
+      ]
+    },
+    {
+      resourceId: 103,
+      skinIndex: 0,
+      id: "c103_00_skillcut",
+      directory: "c103_00_skillcut",
+      skeleton: "c103_00_skillcut.skel",
+      atlas: "c103_00_skillcut.atlas",
+      textures: [
+        "c103_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "bg_idle",
+          duration: 5.3333
+        },
+        {
+          name: "bg_skillcut_1",
+          duration: 4.6
+        },
+        {
+          name: "idle",
+          duration: 5.3333
+        },
+        {
+          name: "skillcut_1",
+          duration: 4.6
+        }
+      ]
+    },
+    {
+      resourceId: 104,
+      skinIndex: 0,
+      id: "c104_00_skillcut",
+      directory: "c104_00_skillcut",
+      skeleton: "c104_00_skillcut.skel",
+      atlas: "c104_00_skillcut.atlas",
+      textures: [
+        "c104_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 5.3333
+        },
+        {
+          name: "skillcut_1",
+          duration: 5.5
+        }
+      ]
+    },
+    {
+      resourceId: 105,
+      skinIndex: 0,
+      id: "c105_00_skillcut",
+      directory: "c105_00_skillcut",
+      skeleton: "c105_00_skillcut.skel",
+      atlas: "c105_00_skillcut.atlas",
+      textures: [
+        "c105_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 5.3333
+        },
+        {
+          name: "skillcut_1",
+          duration: 4.9333
+        },
+        {
+          name: "skillcut_2",
+          duration: 4.9333
+        }
+      ]
+    },
+    {
+      resourceId: 110,
+      skinIndex: 0,
+      id: "c110_00_skillcut",
+      directory: "c110_00_skillcut",
+      skeleton: "c110_00_skillcut.skel",
+      atlas: "c110_00_skillcut.atlas",
+      textures: [
+        "c110_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 4.8333
+        },
+        {
+          name: "skillcut_1",
+          duration: 3.3333
+        }
+      ]
+    },
+    {
+      resourceId: 111,
+      skinIndex: 0,
+      id: "c111_00_skillcut",
+      directory: "c111_00_skillcut",
+      skeleton: "c111_00_skillcut.skel",
+      atlas: "c111_00_skillcut.atlas",
+      textures: [
+        "c111_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 5.1667
+        },
+        {
+          name: "skillcut_1",
+          duration: 4
+        }
+      ]
+    },
+    {
+      resourceId: 112,
+      skinIndex: 0,
+      id: "c112_00_skillcut",
+      directory: "c112_00_skillcut",
+      skeleton: "c112_00_skillcut.skel",
+      atlas: "c112_00_skillcut.atlas",
+      textures: [
+        "c112_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 6.6667
+        },
+        {
+          name: "skillcut_1",
+          duration: 3.5333
+        },
+        {
+          name: "x_setting",
+          duration: 0.6667
+        }
+      ]
+    },
+    {
+      resourceId: 112,
+      skinIndex: 2,
+      id: "c112_02_skillcut",
+      directory: "c112_02_skillcut",
+      skeleton: "c112_02_skillcut.skel",
+      atlas: "c112_02_skillcut.atlas",
+      textures: [
+        "c112_02_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 5.3333
+        },
+        {
+          name: "skillcut_1",
+          duration: 3.7667
+        }
+      ]
+    },
+    {
+      resourceId: 113,
+      skinIndex: 0,
+      id: "c113_00_skillcut",
+      directory: "c113_00_skillcut",
+      skeleton: "c113_00_skillcut.skel",
+      atlas: "c113_00_skillcut.atlas",
+      textures: [
+        "c113_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 5.3333
+        },
+        {
+          name: "skillcut_1",
+          duration: 5.4333
+        },
+        {
+          name: "skillcut_2",
+          duration: 5.3
+        }
+      ]
+    },
+    {
+      resourceId: 121,
+      skinIndex: 0,
+      id: "c121_00_skillcut",
+      directory: "c121_00_skillcut",
+      skeleton: "c121_00_skillcut.skel",
+      atlas: "c121_00_skillcut.atlas",
+      textures: [
+        "c121_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 6.7
+        },
+        {
+          name: "skillcut_1",
+          duration: 3.7333
+        }
+      ]
+    },
+    {
+      resourceId: 130,
+      skinIndex: 0,
+      id: "c130_00_skillcut",
+      directory: "c130_00_skillcut",
+      skeleton: "c130_00_skillcut.skel",
+      atlas: "c130_00_skillcut.atlas",
+      textures: [
+        "c130_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 2.6667
+        },
+        {
+          name: "skillcut_1",
+          duration: 4
+        }
+      ]
+    },
+    {
+      resourceId: 131,
+      skinIndex: 0,
+      id: "c131_00_skillcut",
+      directory: "c131_00_skillcut",
+      skeleton: "c131_00_skillcut.skel",
+      atlas: "c131_00_skillcut.atlas",
+      textures: [
+        "c131_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_0",
+      animations: [
+        {
+          name: "idle",
+          duration: 4.8333
+        },
+        {
+          name: "skillcut_0",
+          duration: 3.3333
+        }
+      ]
+    },
+    {
+      resourceId: 132,
+      skinIndex: 0,
+      id: "c132_00_skillcut",
+      directory: "c132_00_skillcut",
+      skeleton: "c132_00_skillcut.skel",
+      atlas: "c132_00_skillcut.atlas",
+      textures: [
+        "c132_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 3.3333
+        },
+        {
+          name: "skillcut_1",
+          duration: 2.6667
+        }
+      ]
+    },
+    {
+      resourceId: 140,
+      skinIndex: 0,
+      id: "c140_00_skillcut",
+      directory: "c140_00_skillcut",
+      skeleton: "c140_00_skillcut.skel",
+      atlas: "c140_00_skillcut.atlas",
+      textures: [
+        "c140_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 9.3333
+        },
+        {
+          name: "skillcut_1",
+          duration: 3.0667
+        }
+      ]
+    },
+    {
+      resourceId: 140,
+      skinIndex: 3,
+      id: "c140_03_skillcut",
+      directory: "c140_03_skillcut",
+      skeleton: "c140_03_skillcut.skel",
+      atlas: "c140_03_skillcut.atlas",
+      textures: [
+        "c140_03_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 5.3333
+        },
+        {
+          name: "skillcut_1",
+          duration: 4.3333
+        }
+      ]
+    },
+    {
+      resourceId: 141,
+      skinIndex: 0,
+      id: "c141_00_skillcut",
+      directory: "c141_00_skillcut",
+      skeleton: "c141_00_skillcut.skel",
+      atlas: "c141_00_skillcut.atlas",
+      textures: [
+        "c141_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 4
+        },
+        {
+          name: "skillcut_1",
+          duration: 3
+        }
+      ]
+    },
+    {
+      resourceId: 142,
+      skinIndex: 0,
+      id: "c142_00_skillcut",
+      directory: "c142_00_skillcut",
+      skeleton: "c142_00_skillcut.skel",
+      atlas: "c142_00_skillcut.atlas",
+      textures: [
+        "c142_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 8
+        },
+        {
+          name: "skillcut_1",
+          duration: 4.1667
+        }
+      ]
+    },
+    {
+      resourceId: 143,
+      skinIndex: 0,
+      id: "c143_00_skillcut",
+      directory: "c143_00_skillcut",
+      skeleton: "c143_00_skillcut.skel",
+      atlas: "c143_00_skillcut.atlas",
+      textures: [
+        "c143_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 2.6667
+        },
+        {
+          name: "skillcut_1",
+          duration: 5.3333
+        }
+      ]
+    },
+    {
+      resourceId: 150,
+      skinIndex: 0,
+      id: "c150_00_skillcut",
+      directory: "c150_00_skillcut",
+      skeleton: "c150_00_skillcut.skel",
+      atlas: "c150_00_skillcut.atlas",
+      textures: [
+        "c150_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 6.6667
+        },
+        {
+          name: "skillcut_1",
+          duration: 3.0667
+        }
+      ]
+    },
+    {
+      resourceId: 160,
+      skinIndex: 0,
+      id: "c160_00_skillcut",
+      directory: "c160_00_skillcut",
+      skeleton: "c160_00_skillcut.skel",
+      atlas: "c160_00_skillcut.atlas",
+      textures: [
+        "c160_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 6
+        },
+        {
+          name: "skillcut_1",
+          duration: 2.5
+        }
+      ]
+    },
+    {
+      resourceId: 162,
+      skinIndex: 0,
+      id: "c162_00_skillcut",
+      directory: "c162_00_skillcut",
+      skeleton: "c162_00_skillcut.skel",
+      atlas: "c162_00_skillcut.atlas",
+      textures: [
+        "c162_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 5.3333
+        },
+        {
+          name: "skillcut_1",
+          duration: 4.6333
+        }
+      ]
+    },
+    {
+      resourceId: 162,
+      skinIndex: 1,
+      id: "c162_01_skillcut",
+      directory: "c162_01_skillcut",
+      skeleton: "c162_01_skillcut.skel",
+      atlas: "c162_01_skillcut.atlas",
+      textures: [
+        "c162_01_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_0",
+      animations: [
+        {
+          name: "idle",
+          duration: 5.3333
+        },
+        {
+          name: "skillcut_0",
+          duration: 4.3333
+        }
+      ]
+    },
+    {
+      resourceId: 170,
+      skinIndex: 0,
+      id: "catalog-c170_00_skillcut",
+      directory: "catalog-c170_00_skillcut",
+      skeleton: "c170_00_skillcut.skel",
+      atlas: "c170_00_skillcut.atlas",
+      textures: [
+        "c170_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 5.3333
+        },
+        {
+          name: "skillcut_1",
+          duration: 7.6667
+        }
+      ]
+    },
+    {
+      resourceId: 170,
+      skinIndex: 4,
+      id: "c170_04_skillcut",
+      directory: "c170_04_skillcut",
+      skeleton: "c170_04_skillcut.skel",
+      atlas: "c170_04_skillcut.atlas",
+      textures: [
+        "c170_04_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "bg_idle",
+          duration: 6.6667
+        },
+        {
+          name: "bg_skillcut_1",
+          duration: 7.2
+        },
+        {
+          name: "idle",
+          duration: 6.6667
+        },
+        {
+          name: "skillcut_1",
+          duration: 7.2
+        }
+      ]
+    },
+    {
+      resourceId: 171,
+      skinIndex: 0,
+      id: "c171_00_skillcut",
+      directory: "c171_00_skillcut",
+      skeleton: "c171_00_skillcut.skel",
+      atlas: "c171_00_skillcut.atlas",
+      textures: [
+        "c171_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 8
+        },
+        {
+          name: "skillcut_1",
+          duration: 2.6667
+        }
+      ]
+    },
+    {
+      resourceId: 172,
+      skinIndex: 0,
+      id: "c172_00_skillcut",
+      directory: "c172_00_skillcut",
+      skeleton: "c172_00_skillcut.skel",
+      atlas: "c172_00_skillcut.atlas",
+      textures: [
+        "c172_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 7
+        },
+        {
+          name: "skillcut_1",
+          duration: 2.5
+        }
+      ]
+    },
+    {
+      resourceId: 180,
+      skinIndex: 0,
+      id: "c180_00_skillcut",
+      directory: "c180_00_skillcut",
+      skeleton: "c180_00_skillcut.skel",
+      atlas: "c180_00_skillcut.atlas",
+      textures: [
+        "c180_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 7.6667
+        },
+        {
+          name: "skillcut_1",
+          duration: 2.3333
+        }
+      ]
+    },
+    {
+      resourceId: 181,
+      skinIndex: 0,
+      id: "c181_00_skillcut",
+      directory: "c181_00_skillcut",
+      skeleton: "c181_00_skillcut.skel",
+      atlas: "c181_00_skillcut.atlas",
+      textures: [
+        "c181_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 6.6667
+        },
+        {
+          name: "skillcut_1",
+          duration: 3.1667
+        }
+      ]
+    },
+    {
+      resourceId: 182,
+      skinIndex: 0,
+      id: "c182_00_skillcut",
+      directory: "c182_00_skillcut",
+      skeleton: "c182_00_skillcut.skel",
+      atlas: "c182_00_skillcut.atlas",
+      textures: [
+        "c182_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 2.6667
+        },
+        {
+          name: "skillcut_1",
+          duration: 3.6
+        }
+      ]
+    },
+    {
+      resourceId: 183,
+      skinIndex: 0,
+      id: "c183_00_skillcut",
+      directory: "c183_00_skillcut",
+      skeleton: "c183_00_skillcut.skel",
+      atlas: "c183_00_skillcut.atlas",
+      textures: [
+        "c183_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 2.6667
+        },
+        {
+          name: "skillcut_1",
+          duration: 4.9
+        }
+      ]
+    },
+    {
+      resourceId: 190,
+      skinIndex: 0,
+      id: "c190_00_skillcut",
+      directory: "c190_00_skillcut",
+      skeleton: "c190_00_skillcut.skel",
+      atlas: "c190_00_skillcut.atlas",
+      textures: [
+        "c190_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_all",
+      animations: [
+        {
+          name: "idle",
+          duration: 8
+        },
+        {
+          name: "skillcut_1",
+          duration: 2.8333
+        },
+        {
+          name: "skillcut_2",
+          duration: 2.8333
+        },
+        {
+          name: "skillcut_all",
+          duration: 2.8333
+        },
+        {
+          name: "skillcut_all2",
+          duration: 2.8333
+        }
+      ]
+    },
+    {
+      resourceId: 191,
+      skinIndex: 0,
+      id: "c191_00_skillcut",
+      directory: "c191_00_skillcut",
+      skeleton: "c191_00_skillcut.skel",
+      atlas: "c191_00_skillcut.atlas",
+      textures: [
+        "c191_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 6.6667
+        },
+        {
+          name: "skillcut_1",
+          duration: 5.5
+        }
+      ]
+    },
+    {
+      resourceId: 191,
+      skinIndex: 2,
+      id: "c191_02_skillcut",
+      directory: "c191_02_skillcut",
+      skeleton: "c191_02_skillcut.skel",
+      atlas: "c191_02_skillcut.atlas",
+      textures: [
+        "c191_02_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle_1",
+          duration: 6.6667
+        },
+        {
+          name: "idle_2",
+          duration: 6.6667
+        },
+        {
+          name: "skillcut_1",
+          duration: 7.1
+        },
+        {
+          name: "skillcut_2",
+          duration: 7.1
+        }
+      ]
+    },
+    {
+      resourceId: 192,
+      skinIndex: 0,
+      id: "c192_00_skillcut",
+      directory: "c192_00_skillcut",
+      skeleton: "c192_00_skillcut.skel",
+      atlas: "c192_00_skillcut.atlas",
+      textures: [
+        "c192_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 5.3333
+        },
+        {
+          name: "skillcut_1",
+          duration: 3
+        }
+      ]
+    },
+    {
+      resourceId: 194,
+      skinIndex: 0,
+      id: "c194_skillcut",
+      directory: "c194_skillcut",
+      skeleton: "c194_skillcut.skel",
+      atlas: "c194_skillcut.atlas",
+      textures: [
+        "c194_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 2.6667
+        },
+        {
+          name: "skillcut_1",
+          duration: 4
+        }
+      ]
+    },
+    {
+      resourceId: 195,
+      skinIndex: 0,
+      id: "c195_00_skillcut",
+      directory: "c195_00_skillcut",
+      skeleton: "c195_00_skillcut.skel",
+      atlas: "c195_00_skillcut.atlas",
+      textures: [
+        "c195_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 3.3333
+        },
+        {
+          name: "skillcut_1",
+          duration: 3.6667
+        }
+      ]
+    },
+    {
+      resourceId: 200,
+      skinIndex: 0,
+      id: "c200_00_skillcut",
+      directory: "c200_00_skillcut",
+      skeleton: "c200_00_skillcut.skel",
+      atlas: "c200_00_skillcut.atlas",
+      textures: [
+        "c200_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 2.3333
+        },
+        {
+          name: "skillcut_1",
+          duration: 4.6667
+        },
+        {
+          name: "skillcut_2",
+          duration: 4.2667
+        }
+      ]
+    },
+    {
+      resourceId: 200,
+      skinIndex: 1,
+      id: "c200_01_skillcut",
+      directory: "c200_01_skillcut",
+      skeleton: "c200_01_skillcut.skel",
+      atlas: "c200_01_skillcut.atlas",
+      textures: [
+        "c200_01_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 2.6667
+        },
+        {
+          name: "skillcut_1",
+          duration: 3.3667
+        }
+      ]
+    },
+    {
+      resourceId: 201,
+      skinIndex: 0,
+      id: "c201_00_skillcut",
+      directory: "c201_00_skillcut",
+      skeleton: "c201_00_skillcut.skel",
+      atlas: "c201_00_skillcut.atlas",
+      textures: [
+        "c201_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 5.3333
+        },
+        {
+          name: "skillcut_1",
+          duration: 2.6333
+        }
+      ]
+    },
+    {
+      resourceId: 202,
+      skinIndex: 0,
+      id: "c202_00_skillcut",
+      directory: "c202_00_skillcut",
+      skeleton: "c202_00_skillcut.skel",
+      atlas: "c202_00_skillcut.atlas",
+      textures: [
+        "c202_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 8.6667
+        },
+        {
+          name: "skillcut_1",
+          duration: 3.5667
+        }
+      ]
+    },
+    {
+      resourceId: 203,
+      skinIndex: 0,
+      id: "c203_00_skillcut",
+      directory: "c203_00_skillcut",
+      skeleton: "c203_00_skillcut.skel",
+      atlas: "c203_00_skillcut.atlas",
+      textures: [
+        "c203_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 3.6667
+        },
+        {
+          name: "skillcut_1",
+          duration: 2.9333
+        }
+      ]
+    },
+    {
+      resourceId: 210,
+      skinIndex: 0,
+      id: "c210_00_skillcut",
+      directory: "c210_00_skillcut",
+      skeleton: "c210_00_skillcut.skel",
+      atlas: "c210_00_skillcut.atlas",
+      textures: [
+        "c210_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 5.3333
+        },
+        {
+          name: "skillcut_1",
+          duration: 8.2333
+        }
+      ]
+    },
+    {
+      resourceId: 212,
+      skinIndex: 0,
+      id: "c212_00_skillcut",
+      directory: "c212_00_skillcut",
+      skeleton: "c212_00_skillcut.skel",
+      atlas: "c212_00_skillcut.atlas",
+      textures: [
+        "c212_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 9.3333
+        },
+        {
+          name: "skillcut_1",
+          duration: 3.3333
+        }
+      ]
+    },
+    {
+      resourceId: 220,
+      skinIndex: 0,
+      id: "c220_00_skillcut",
+      directory: "c220_00_skillcut",
+      skeleton: "c220_00_skillcut.skel",
+      atlas: "c220_00_skillcut.atlas",
+      textures: [
+        "c220_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 4
+        },
+        {
+          name: "skillcut_1",
+          duration: 3.3333
+        },
+        {
+          name: "skillcut_2",
+          duration: 1
+        }
+      ]
+    },
+    {
+      resourceId: 221,
+      skinIndex: 0,
+      id: "c221_00_skillcut",
+      directory: "c221_00_skillcut",
+      skeleton: "c221_00_skillcut.skel",
+      atlas: "c221_00_skillcut.atlas",
+      textures: [
+        "c221_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 10
+        },
+        {
+          name: "skillcut_1",
+          duration: 2.7333
+        }
+      ]
+    },
+    {
+      resourceId: 222,
+      skinIndex: 0,
+      id: "c222_00_skillcut",
+      directory: "c222_00_skillcut",
+      skeleton: "c222_00_skillcut.skel",
+      atlas: "c222_00_skillcut.atlas",
+      textures: [
+        "c222_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 6
+        },
+        {
+          name: "skillcut_1",
+          duration: 5.5
+        }
+      ]
+    },
+    {
+      resourceId: 222,
+      skinIndex: 1,
+      id: "c222_01_skillcut",
+      directory: "c222_01_skillcut",
+      skeleton: "c222_01_skillcut.skel",
+      atlas: "c222_01_skillcut.atlas",
+      textures: [
+        "c222_01_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 5.3333
+        },
+        {
+          name: "idle_1",
+          duration: 5.3333
+        },
+        {
+          name: "idle_2",
+          duration: 5.3333
+        },
+        {
+          name: "idle_3",
+          duration: 5.3333
+        },
+        {
+          name: "idle_4",
+          duration: 5.3333
+        },
+        {
+          name: "skillcut_1",
+          duration: 4.6667
+        },
+        {
+          name: "skillcut_1_1",
+          duration: 4.6667
+        },
+        {
+          name: "skillcut_1_2",
+          duration: 4.6667
+        },
+        {
+          name: "skillcut_1_3",
+          duration: 4.6667
+        },
+        {
+          name: "skillcut_1_4",
+          duration: 4.6667
+        }
+      ]
+    },
+    {
+      resourceId: 223,
+      skinIndex: 0,
+      id: "c223_00_skillcut",
+      directory: "c223_00_skillcut",
+      skeleton: "c223_00_skillcut.skel",
+      atlas: "c223_00_skillcut.atlas",
+      textures: [
+        "c223_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_all",
+      animations: [
+        {
+          name: "idle",
+          duration: 5.3333
+        },
+        {
+          name: "idle_02",
+          duration: 5.3333
+        },
+        {
+          name: "skillcut_1",
+          duration: 7.6667
+        },
+        {
+          name: "skillcut_2",
+          duration: 7.6667
+        },
+        {
+          name: "skillcut_3",
+          duration: 7.6667
+        },
+        {
+          name: "skillcut_all",
+          duration: 7.6667
+        }
+      ]
+    },
+    {
+      resourceId: 223,
+      skinIndex: 1,
+      id: "c223_01_skillcut",
+      directory: "c223_01_skillcut",
+      skeleton: "c223_01_skillcut.skel",
+      atlas: "c223_01_skillcut.atlas",
+      textures: [
+        "c223_01_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 2.6667
+        },
+        {
+          name: "skillcut_1",
+          duration: 4.6667
+        },
+        {
+          name: "skillcut_2",
+          duration: 4.6667
+        },
+        {
+          name: "skillcut_3",
+          duration: 4.6667
+        }
+      ]
+    },
+    {
+      resourceId: 224,
+      skinIndex: 0,
+      id: "c224_00_skillcut",
+      directory: "c224_00_skillcut",
+      skeleton: "c224_00_skillcut.skel",
+      atlas: "c224_00_skillcut.atlas",
+      textures: [
+        "c224_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 10.6667
+        },
+        {
+          name: "skillcut_1",
+          duration: 3.2333
+        }
+      ]
+    },
+    {
+      resourceId: 225,
+      skinIndex: 0,
+      id: "c225_00_skillcut",
+      directory: "c225_00_skillcut",
+      skeleton: "c225_00_skillcut.skel",
+      atlas: "c225_00_skillcut.atlas",
+      textures: [
+        "c225_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_all",
+      animations: [
+        {
+          name: "idle_1",
+          duration: 2.6667
+        },
+        {
+          name: "idle_2",
+          duration: 2.6667
+        },
+        {
+          name: "idle_3",
+          duration: 2.6667
+        },
+        {
+          name: "idle_all",
+          duration: 2.6667
+        },
+        {
+          name: "skillcut_1",
+          duration: 2.6667
+        },
+        {
+          name: "skillcut_2",
+          duration: 2.6667
+        },
+        {
+          name: "skillcut_3",
+          duration: 2.2
+        },
+        {
+          name: "skillcut_all",
+          duration: 2.6667
+        }
+      ]
+    },
+    {
+      resourceId: 225,
+      skinIndex: 1,
+      id: "c225_01_skillcut",
+      directory: "c225_01_skillcut",
+      skeleton: "c225_01_skillcut.skel",
+      atlas: "c225_01_skillcut.atlas",
+      textures: [
+        "c225_01_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 13.3333
+        },
+        {
+          name: "skillcut_1",
+          duration: 5.6667
+        }
+      ]
+    },
+    {
+      resourceId: 226,
+      skinIndex: 0,
+      id: "c226_00_skillcut",
+      directory: "c226_00_skillcut",
+      skeleton: "c226_00_skillcut.skel",
+      atlas: "c226_00_skillcut.atlas",
+      textures: [
+        "c226_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 5.3333
+        },
+        {
+          name: "skillcut_1",
+          duration: 3.6333
+        }
+      ]
+    },
+    {
+      resourceId: 230,
+      skinIndex: 0,
+      id: "c230_00_skillcut",
+      directory: "c230_00_skillcut",
+      skeleton: "c230_00_skillcut.skel",
+      atlas: "c230_00_skillcut.atlas",
+      textures: [
+        "c230_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_0",
+      animations: [
+        {
+          name: "idle",
+          duration: 6
+        },
+        {
+          name: "skillcut_0",
+          duration: 2.5
+        }
+      ]
+    },
+    {
+      resourceId: 231,
+      skinIndex: 0,
+      id: "c231_00_skillcut",
+      directory: "c231_00_skillcut",
+      skeleton: "c231_00_skillcut.skel",
+      atlas: "c231_00_skillcut.atlas",
+      textures: [
+        "c231_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skill_01",
+      animations: [
+        {
+          name: "idle",
+          duration: 5.6667
+        },
+        {
+          name: "skill_01",
+          duration: 2.6667
+        }
+      ]
+    },
+    {
+      resourceId: 232,
+      skinIndex: 0,
+      id: "c232_00_skillcut",
+      directory: "c232_00_skillcut",
+      skeleton: "c232_00_skillcut.skel",
+      atlas: "c232_00_skillcut.atlas",
+      textures: [
+        "c232_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 6.8667
+        },
+        {
+          name: "skillcut_1",
+          duration: 3.5333
+        }
+      ]
+    },
+    {
+      resourceId: 233,
+      skinIndex: 0,
+      id: "c233_00_skillcut",
+      directory: "c233_00_skillcut",
+      skeleton: "c233_00_skillcut.skel",
+      atlas: "c233_00_skillcut.atlas",
+      textures: [
+        "c233_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 5.3333
+        },
+        {
+          name: "skillcut_1",
+          duration: 4
+        }
+      ]
+    },
+    {
+      resourceId: 233,
+      skinIndex: 1,
+      id: "c233_01_skillcut",
+      directory: "c233_01_skillcut",
+      skeleton: "c233_01_skillcut.skel",
+      atlas: "c233_01_skillcut.atlas",
+      textures: [
+        "c233_01_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 8
+        },
+        {
+          name: "skillcut_1",
+          duration: 4.7333
+        }
+      ]
+    },
+    {
+      resourceId: 234,
+      skinIndex: 0,
+      id: "c234_00_skillcut",
+      directory: "c234_00_skillcut",
+      skeleton: "c234_00_skillcut.skel",
+      atlas: "c234_00_skillcut.atlas",
+      textures: [
+        "c234_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle_1",
+          duration: 5.3333
+        },
+        {
+          name: "idle_2",
+          duration: 5.3333
+        },
+        {
+          name: "skillcut_1",
+          duration: 4.1333
+        },
+        {
+          name: "skillcut_2",
+          duration: 4.1333
+        }
+      ]
+    },
+    {
+      resourceId: 240,
+      skinIndex: 0,
+      id: "c240_00_skillcut",
+      directory: "c240_00_skillcut",
+      skeleton: "c240_00_skillcut.skel",
+      atlas: "c240_00_skillcut.atlas",
+      textures: [
+        "c240_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 6.6667
+        },
+        {
+          name: "skillcut_1",
+          duration: 3.0667
+        }
+      ]
+    },
+    {
+      resourceId: 241,
+      skinIndex: 0,
+      id: "c241_00_skillcut",
+      directory: "c241_00_skillcut",
+      skeleton: "c241_00_skillcut.skel",
+      atlas: "c241_00_skillcut.atlas",
+      textures: [
+        "c241_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 5.3333
+        },
+        {
+          name: "skillcut_1",
+          duration: 1.3333
+        }
+      ]
+    },
+    {
+      resourceId: 242,
+      skinIndex: 0,
+      id: "c242_00_skillcut",
+      directory: "c242_00_skillcut",
+      skeleton: "c242_00_skillcut.skel",
+      atlas: "c242_00_skillcut.atlas",
+      textures: [
+        "c242_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 4.6667
+        },
+        {
+          name: "skillcut_1",
+          duration: 6.1667
+        },
+        {
+          name: "skillcut_2",
+          duration: 2
+        },
+        {
+          name: "skillcut_3",
+          duration: 2.3333
+        }
+      ]
+    },
+    {
+      resourceId: 260,
+      skinIndex: 0,
+      id: "c260_00_skillcut",
+      directory: "c260_00_skillcut",
+      skeleton: "c260_00_skillcut.skel",
+      atlas: "c260_00_skillcut.atlas",
+      textures: [
+        "c260_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 5
+        },
+        {
+          name: "skillcut_1",
+          duration: 4
+        }
+      ]
+    },
+    {
+      resourceId: 260,
+      skinIndex: 1,
+      id: "c260_01_skillcut",
+      directory: "c260_01_skillcut",
+      skeleton: "c260_01_skillcut.skel",
+      atlas: "c260_01_skillcut.atlas",
+      textures: [
+        "c260_01_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 2.6667
+        },
+        {
+          name: "skillcut_1",
+          duration: 4.6333
+        }
+      ]
+    },
+    {
+      resourceId: 260,
+      skinIndex: 2,
+      id: "c260_02_skillcut",
+      directory: "c260_02_skillcut",
+      skeleton: "c260_02_skillcut.skel",
+      atlas: "c260_02_skillcut.atlas",
+      textures: [
+        "c260_02_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 3.3333
+        },
+        {
+          name: "skillcut_1",
+          duration: 4.4667
+        }
+      ]
+    },
+    {
+      resourceId: 261,
+      skinIndex: 0,
+      id: "c261_00_skillcut",
+      directory: "c261_00_skillcut",
+      skeleton: "c261_00_skillcut.skel",
+      atlas: "c261_00_skillcut.atlas",
+      textures: [
+        "c261_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 6.6667
+        },
+        {
+          name: "skillcut_1",
+          duration: 3.0667
+        }
+      ]
+    },
+    {
+      resourceId: 262,
+      skinIndex: 0,
+      id: "c262_00_skillcut",
+      directory: "c262_00_skillcut",
+      skeleton: "c262_00_skillcut.skel",
+      atlas: "c262_00_skillcut.atlas",
+      textures: [
+        "c262_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 5.3333
+        },
+        {
+          name: "idle_1",
+          duration: 5.3333
+        },
+        {
+          name: "skillcut_0",
+          duration: 5
+        },
+        {
+          name: "skillcut_1",
+          duration: 5
+        }
+      ]
+    },
+    {
+      resourceId: 262,
+      skinIndex: 1,
+      id: "c262_01_skillcut",
+      directory: "c262_01_skillcut",
+      skeleton: "c262_01_skillcut.skel",
+      atlas: "c262_01_skillcut.atlas",
+      textures: [
+        "c262_01_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 5.3333
+        },
+        {
+          name: "idle2",
+          duration: 5.3333
+        },
+        {
+          name: "skillcut_1",
+          duration: 6.3333
+        },
+        {
+          name: "skillcut_2",
+          duration: 6.3333
+        }
+      ]
+    },
+    {
+      resourceId: 270,
+      skinIndex: 0,
+      id: "c270_00_skillcut",
+      directory: "c270_00_skillcut",
+      skeleton: "c270_00_skillcut.skel",
+      atlas: "c270_00_skillcut.atlas",
+      textures: [
+        "c270_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 6.6667
+        },
+        {
+          name: "skillcut_1",
+          duration: 3
+        }
+      ]
+    },
+    {
+      resourceId: 270,
+      skinIndex: 3,
+      id: "c270_03_skillcut",
+      directory: "c270_03_skillcut",
+      skeleton: "c270_03_skillcut.skel",
+      atlas: "c270_03_skillcut.atlas",
+      textures: [
+        "c270_03_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 5.3333
+        },
+        {
+          name: "skillcut_1",
+          duration: 3.9667
+        }
+      ]
+    },
+    {
+      resourceId: 271,
+      skinIndex: 0,
+      id: "c271_00_skillcut",
+      directory: "c271_00_skillcut",
+      skeleton: "c271_00_skillcut.skel",
+      atlas: "c271_00_skillcut.atlas",
+      textures: [
+        "c271_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 9.3333
+        },
+        {
+          name: "skillcut_1",
+          duration: 3.7333
+        }
+      ]
+    },
+    {
+      resourceId: 272,
+      skinIndex: 0,
+      id: "c272_00_skillcut",
+      directory: "c272_00_skillcut",
+      skeleton: "c272_00_skillcut.skel",
+      atlas: "c272_00_skillcut.atlas",
+      textures: [
+        "c272_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 4.8
+        },
+        {
+          name: "skillcut_1",
+          duration: 3.3333
+        }
+      ]
+    },
+    {
+      resourceId: 272,
+      skinIndex: 1,
+      id: "c272_01_skillcut",
+      directory: "c272_01_skillcut",
+      skeleton: "c272_01_skillcut.skel",
+      atlas: "c272_01_skillcut.atlas",
+      textures: [
+        "c272_01_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 2.6667
+        },
+        {
+          name: "skillcut_1",
+          duration: 4.2
+        }
+      ]
+    },
+    {
+      resourceId: 280,
+      skinIndex: 0,
+      id: "c280_00_skillcut",
+      directory: "c280_00_skillcut",
+      skeleton: "c280_00_skillcut.skel",
+      atlas: "c280_00_skillcut.atlas",
+      textures: [
+        "c280_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 5.3333
+        },
+        {
+          name: "skillcut_1",
+          duration: 4.4
+        }
+      ]
+    },
+    {
+      resourceId: 281,
+      skinIndex: 0,
+      id: "c281_00_skillcut",
+      directory: "c281_00_skillcut",
+      skeleton: "c281_00_skillcut.skel",
+      atlas: "c281_00_skillcut.atlas",
+      textures: [
+        "c281_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 3.3333
+        },
+        {
+          name: "skillcut_1",
+          duration: 6.1
+        }
+      ]
+    },
+    {
+      resourceId: 281,
+      skinIndex: 2,
+      id: "c281_02_skillcut",
+      directory: "c281_02_skillcut",
+      skeleton: "c281_02_skillcut.skel",
+      atlas: "c281_02_skillcut.atlas",
+      textures: [
+        "c281_02_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 5.3333
+        },
+        {
+          name: "skillcut_1",
+          duration: 5
+        },
+        {
+          name: "skillcut_2",
+          duration: 5
+        }
+      ]
+    },
+    {
+      resourceId: 282,
+      skinIndex: 0,
+      id: "c282_00_skillcut",
+      directory: "c282_00_skillcut",
+      skeleton: "c282_00_skillcut.skel",
+      atlas: "c282_00_skillcut.atlas",
+      textures: [
+        "c282_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_01",
+      animations: [
+        {
+          name: "idle",
+          duration: 7.5667
+        },
+        {
+          name: "skillcut_01",
+          duration: 3.6667
+        }
+      ]
+    },
+    {
+      resourceId: 283,
+      skinIndex: 0,
+      id: "c283_00_skillcut",
+      directory: "c283_00_skillcut",
+      skeleton: "c283_00_skillcut.skel",
+      atlas: "c283_00_skillcut.atlas",
+      textures: [
+        "c283_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 4
+        },
+        {
+          name: "skillcut_1",
+          duration: 4
+        }
+      ]
+    },
+    {
+      resourceId: 284,
+      skinIndex: 0,
+      id: "c284_00_skillcut",
+      directory: "c284_00_skillcut",
+      skeleton: "c284_00_skillcut.skel",
+      atlas: "c284_00_skillcut.atlas",
+      textures: [
+        "c284_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 5.3333
+        },
+        {
+          name: "skillcut_1",
+          duration: 3.8333
+        },
+        {
+          name: "skillcut_2",
+          duration: 3.8333
+        }
+      ]
+    },
+    {
+      resourceId: 290,
+      skinIndex: 0,
+      id: "c290_00_skillcut",
+      directory: "c290_00_skillcut",
+      skeleton: "c290_00_skillcut.skel",
+      atlas: "c290_00_skillcut.atlas",
+      textures: [
+        "c290_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 11.6667
+        },
+        {
+          name: "skillcut_1",
+          duration: 4.1667
+        }
+      ]
+    },
+    {
+      resourceId: 310,
+      skinIndex: 0,
+      id: "c310_00_skillcut",
+      directory: "c310_00_skillcut",
+      skeleton: "c310_00_skillcut.skel",
+      atlas: "c310_00_skillcut.atlas",
+      textures: [
+        "c310_00_skillcut.png",
+        "c310_00_skillcut_2.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 6.6667
+        },
+        {
+          name: "skillcut_1",
+          duration: 3.9667
+        }
+      ]
+    },
+    {
+      resourceId: 311,
+      skinIndex: 0,
+      id: "c311_00_skillcut",
+      directory: "c311_00_skillcut",
+      skeleton: "c311_00_skillcut.skel",
+      atlas: "c311_00_skillcut.atlas",
+      textures: [
+        "c311_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_0",
+      animations: [
+        {
+          name: "idle",
+          duration: 9.1
+        },
+        {
+          name: "skillcut_0",
+          duration: 4.3667
+        }
+      ]
+    },
+    {
+      resourceId: 312,
+      skinIndex: 0,
+      id: "c312_00_skillcut",
+      directory: "c312_00_skillcut",
+      skeleton: "c312_00_skillcut.skel",
+      atlas: "c312_00_skillcut.atlas",
+      textures: [
+        "c312_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_0",
+      animations: [
+        {
+          name: "idle",
+          duration: 6
+        },
+        {
+          name: "skillcut_0",
+          duration: 4
+        }
+      ]
+    },
+    {
+      resourceId: 313,
+      skinIndex: 0,
+      id: "c313_00_skillcut",
+      directory: "c313_00_skillcut",
+      skeleton: "c313_00_skillcut.skel",
+      atlas: "c313_00_skillcut.atlas",
+      textures: [
+        "c313_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 3.3333
+        },
+        {
+          name: "skillcut_1",
+          duration: 3.9333
+        }
+      ]
+    },
+    {
+      resourceId: 314,
+      skinIndex: 0,
+      id: "c314_00_skillcut",
+      directory: "c314_00_skillcut",
+      skeleton: "c314_00_skillcut.skel",
+      atlas: "c314_00_skillcut.atlas",
+      textures: [
+        "c314_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 2.6667
+        },
+        {
+          name: "skillcut_1",
+          duration: 4.1333
+        }
+      ]
+    },
+    {
+      resourceId: 315,
+      skinIndex: 0,
+      id: "c315_00_skillcut",
+      directory: "c315_00_skillcut",
+      skeleton: "c315_00_skillcut.skel",
+      atlas: "c315_00_skillcut.atlas",
+      textures: [
+        "c315_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle_1",
+          duration: 9
+        },
+        {
+          name: "idle_2",
+          duration: 9
+        },
+        {
+          name: "skillcut_1",
+          duration: 7.3333
+        },
+        {
+          name: "skillcut_2",
+          duration: 7.3333
+        }
+      ]
+    },
+    {
+      resourceId: 316,
+      skinIndex: 0,
+      id: "c316_00_skillcut",
+      directory: "c316_00_skillcut",
+      skeleton: "c316_00_skillcut.skel",
+      atlas: "c316_00_skillcut.atlas",
+      textures: [
+        "c316_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 6.6667
+        },
+        {
+          name: "skillcut_1",
+          duration: 4.6333
+        }
+      ]
+    },
+    {
+      resourceId: 321,
+      skinIndex: 0,
+      id: "catalog-c321_skillcut",
+      directory: "catalog-c321_skillcut",
+      skeleton: "c321_skillcut.skel",
+      atlas: "c321_skillcut.atlas",
+      textures: [
+        "c321_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 5.3333
+        },
+        {
+          name: "skillcut_1",
+          duration: 3.4667
+        }
+      ]
+    },
+    {
+      resourceId: 321,
+      skinIndex: 1,
+      id: "c321_01_skillcut",
+      directory: "c321_01_skillcut",
+      skeleton: "c321_01_skillcut.skel",
+      atlas: "c321_01_skillcut.atlas",
+      textures: [
+        "c321_01_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 2.6667
+        },
+        {
+          name: "skillcut_1",
+          duration: 4
+        }
+      ]
+    },
+    {
+      resourceId: 322,
+      skinIndex: 0,
+      id: "c322_00_skillcut",
+      directory: "c322_00_skillcut",
+      skeleton: "c322_00_skillcut.skel",
+      atlas: "c322_00_skillcut.atlas",
+      textures: [
+        "c322_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 5.3333
+        },
+        {
+          name: "skillcut_1",
+          duration: 6.0333
+        }
+      ]
+    },
+    {
+      resourceId: 330,
+      skinIndex: 0,
+      id: "c330_00_skillcut",
+      directory: "c330_00_skillcut",
+      skeleton: "c330_00_skillcut.skel",
+      atlas: "c330_00_skillcut.atlas",
+      textures: [
+        "c330_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_all",
+      animations: [
+        {
+          name: "idle",
+          duration: 5.3333
+        },
+        {
+          name: "skillcut_1",
+          duration: 4.3
+        },
+        {
+          name: "skillcut_2",
+          duration: 4.3
+        },
+        {
+          name: "skillcut_all",
+          duration: 4.3
+        }
+      ]
+    },
+    {
+      resourceId: 330,
+      skinIndex: 1,
+      id: "c330_01_skillcut",
+      directory: "c330_01_skillcut",
+      skeleton: "c330_01_skillcut.skel",
+      atlas: "c330_01_skillcut.atlas",
+      textures: [
+        "c330_01_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 2.6667
+        },
+        {
+          name: "skillcut_1",
+          duration: 4.6
+        }
+      ]
+    },
+    {
+      resourceId: 331,
+      skinIndex: 0,
+      id: "c331_00_skillcut",
+      directory: "c331_00_skillcut",
+      skeleton: "c331_00_skillcut.skel",
+      atlas: "c331_00_skillcut.atlas",
+      textures: [
+        "c331_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 5.3333
+        },
+        {
+          name: "skillcut_1",
+          duration: 6.2
+        },
+        {
+          name: "skillcut_2",
+          duration: 6.2
+        }
+      ]
+    },
+    {
+      resourceId: 350,
+      skinIndex: 0,
+      id: "c350_00_skillcut",
+      directory: "c350_00_skillcut",
+      skeleton: "c350_00_skillcut.skel",
+      atlas: "c350_00_skillcut.atlas",
+      textures: [
+        "c350_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 6.6667
+        },
+        {
+          name: "skillcut_1",
+          duration: 5.1
+        }
+      ]
+    },
+    {
+      resourceId: 351,
+      skinIndex: 0,
+      id: "c351_00_skillcut",
+      directory: "c351_00_skillcut",
+      skeleton: "c351_00_skillcut.skel",
+      atlas: "c351_00_skillcut.atlas",
+      textures: [
+        "c351_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 10
+        },
+        {
+          name: "skillcut_1",
+          duration: 4.6667
+        }
+      ]
+    },
+    {
+      resourceId: 352,
+      skinIndex: 0,
+      id: "c352_00_skillcut",
+      directory: "c352_00_skillcut",
+      skeleton: "c352_00_skillcut.skel",
+      atlas: "c352_00_skillcut.atlas",
+      textures: [
+        "c352_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 10.6667
+        },
+        {
+          name: "skillcut_1",
+          duration: 5.4
+        }
+      ]
+    },
+    {
+      resourceId: 352,
+      skinIndex: 2,
+      id: "c352_02_skillcut",
+      directory: "c352_02_skillcut",
+      skeleton: "c352_02_skillcut.skel",
+      atlas: "c352_02_skillcut.atlas",
+      textures: [
+        "c352_02_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 2.6667
+        },
+        {
+          name: "skillcut_1",
+          duration: 5.3333
+        }
+      ]
+    },
+    {
+      resourceId: 353,
+      skinIndex: 0,
+      id: "c353_00_skillcut",
+      directory: "c353_00_skillcut",
+      skeleton: "c353_00_skillcut.skel",
+      atlas: "c353_00_skillcut.atlas",
+      textures: [
+        "c353_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_all",
+      animations: [
+        {
+          name: "idle",
+          duration: 5.3333
+        },
+        {
+          name: "skillcut_1",
+          duration: 4.5667
+        },
+        {
+          name: "skillcut_2",
+          duration: 4.5667
+        },
+        {
+          name: "skillcut_3",
+          duration: 4.5667
+        },
+        {
+          name: "skillcut_4",
+          duration: 4.5667
+        },
+        {
+          name: "skillcut_5",
+          duration: 4.5667
+        },
+        {
+          name: "skillcut_6",
+          duration: 4.5667
+        },
+        {
+          name: "skillcut_7",
+          duration: 4.5667
+        },
+        {
+          name: "skillcut_8",
+          duration: 4.5667
+        },
+        {
+          name: "skillcut_all",
+          duration: 4.5667
+        }
+      ]
+    },
+    {
+      resourceId: 354,
+      skinIndex: 0,
+      id: "c354_00_skillcut",
+      directory: "c354_00_skillcut",
+      skeleton: "c354_00_skillcut.skel",
+      atlas: "c354_00_skillcut.atlas",
+      textures: [
+        "c354_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 5.3333
+        },
+        {
+          name: "skillcut_1",
+          duration: 4
+        }
+      ]
+    },
+    {
+      resourceId: 354,
+      skinIndex: 1,
+      id: "c354_01_skillcut",
+      directory: "c354_01_skillcut",
+      skeleton: "c354_01_skillcut.skel",
+      atlas: "c354_01_skillcut.atlas",
+      textures: [
+        "c354_01_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 10.6667
+        },
+        {
+          name: "skillcut_1",
+          duration: 5.3333
+        }
+      ]
+    },
+    {
+      resourceId: 355,
+      skinIndex: 0,
+      id: "c355_00_skillcut",
+      directory: "c355_00_skillcut",
+      skeleton: "c355_00_skillcut.skel",
+      atlas: "c355_00_skillcut.atlas",
+      textures: [
+        "c355_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 3.3333
+        },
+        {
+          name: "skillcut_1",
+          duration: 5.3333
+        },
+        {
+          name: "skillcut_2",
+          duration: 3.5
+        }
+      ]
+    },
+    {
+      resourceId: 361,
+      skinIndex: 0,
+      id: "c361_00_skillcut",
+      directory: "c361_00_skillcut",
+      skeleton: "c361_00_skillcut.skel",
+      atlas: "c361_00_skillcut.atlas",
+      textures: [
+        "c361_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_all",
+      animations: [
+        {
+          name: "idle",
+          duration: 2.6667
+        },
+        {
+          name: "skillcut_1",
+          duration: 4
+        },
+        {
+          name: "skillcut_2",
+          duration: 4
+        },
+        {
+          name: "skillcut_all",
+          duration: 4
+        }
+      ]
+    },
+    {
+      resourceId: 380,
+      skinIndex: 0,
+      id: "c380_00_skillcut",
+      directory: "c380_00_skillcut",
+      skeleton: "c380_00_skillcut.skel",
+      atlas: "c380_00_skillcut.atlas",
+      textures: [
+        "c380_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut",
+      animations: [
+        {
+          name: "idle",
+          duration: 3.3333
+        },
+        {
+          name: "skillcut",
+          duration: 4.2333
+        }
+      ]
+    },
+    {
+      resourceId: 381,
+      skinIndex: 0,
+      id: "c381_00_skillcut",
+      directory: "c381_00_skillcut",
+      skeleton: "c381_00_skillcut.skel",
+      atlas: "c381_00_skillcut.atlas",
+      textures: [
+        "c381_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 3.3333
+        },
+        {
+          name: "skillcut_1",
+          duration: 3.3667
+        }
+      ]
+    },
+    {
+      resourceId: 382,
+      skinIndex: 0,
+      id: "c382_00_skillcut",
+      directory: "c382_00_skillcut",
+      skeleton: "c382_00_skillcut.skel",
+      atlas: "c382_00_skillcut.atlas",
+      textures: [
+        "c382_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 4.6667
+        },
+        {
+          name: "skillcut_1",
+          duration: 3.4333
+        }
+      ]
+    },
+    {
+      resourceId: 390,
+      skinIndex: 0,
+      id: "c390_00_skillcut",
+      directory: "c390_00_skillcut",
+      skeleton: "c390_00_skillcut.skel",
+      atlas: "c390_00_skillcut.atlas",
+      textures: [
+        "c390_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 2.6667
+        },
+        {
+          name: "skillcut_1",
+          duration: 3.7667
+        }
+      ]
+    },
+    {
+      resourceId: 391,
+      skinIndex: 0,
+      id: "c391_00_skillcut",
+      directory: "c391_00_skillcut",
+      skeleton: "c391_00_skillcut.skel",
+      atlas: "c391_00_skillcut.atlas",
+      textures: [
+        "c391_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 5.3333
+        },
+        {
+          name: "skillcut_1",
+          duration: 3.3333
+        }
+      ]
+    },
+    {
+      resourceId: 392,
+      skinIndex: 0,
+      id: "c392_00_skillcut",
+      directory: "c392_00_skillcut",
+      skeleton: "c392_00_skillcut.skel",
+      atlas: "c392_00_skillcut.atlas",
+      textures: [
+        "c392_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 2.6667
+        },
+        {
+          name: "skillcut_1",
+          duration: 2.6667
+        }
+      ]
+    },
+    {
+      resourceId: 400,
+      skinIndex: 0,
+      id: "c400_00_skillcut",
+      directory: "c400_00_skillcut",
+      skeleton: "c400_00_skillcut.skel",
+      atlas: "c400_00_skillcut.atlas",
+      textures: [
+        "c400_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 5.3333
+        },
+        {
+          name: "skillcut_1",
+          duration: 5.9333
+        }
+      ]
+    },
+    {
+      resourceId: 401,
+      skinIndex: 0,
+      id: "c401_00_skillcut",
+      directory: "c401_00_skillcut",
+      skeleton: "c401_00_skillcut.skel",
+      atlas: "c401_00_skillcut.atlas",
+      textures: [
+        "c401_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut",
+      animations: [
+        {
+          name: "idle",
+          duration: 5.3333
+        },
+        {
+          name: "skillcut",
+          duration: 2.8333
+        }
+      ]
+    },
+    {
+      resourceId: 402,
+      skinIndex: 0,
+      id: "c402_00_skillcut",
+      directory: "c402_00_skillcut",
+      skeleton: "c402_00_skillcut.skel",
+      atlas: "c402_00_skillcut.atlas",
+      textures: [
+        "c402_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut",
+      animations: [
+        {
+          name: "idle",
+          duration: 2.6667
+        },
+        {
+          name: "skillcut",
+          duration: 3.3333
+        }
+      ]
+    },
+    {
+      resourceId: 403,
+      skinIndex: 0,
+      id: "c403_00_skillcut",
+      directory: "c403_00_skillcut",
+      skeleton: "c403_00_skillcut.skel",
+      atlas: "c403_00_skillcut.atlas",
+      textures: [
+        "c403_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_01",
+      animations: [
+        {
+          name: "idle",
+          duration: 3.3333
+        },
+        {
+          name: "skillcut_01",
+          duration: 4.0667
+        }
+      ]
+    },
+    {
+      resourceId: 404,
+      skinIndex: 0,
+      id: "c404_00_skillcut",
+      directory: "c404_00_skillcut",
+      skeleton: "c404_00_skillcut.skel",
+      atlas: "c404_00_skillcut.atlas",
+      textures: [
+        "c404_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 5.3333
+        },
+        {
+          name: "skillcut_1",
+          duration: 6.3333
+        }
+      ]
+    },
+    {
+      resourceId: 405,
+      skinIndex: 0,
+      id: "c405_00_skillcut",
+      directory: "c405_00_skillcut",
+      skeleton: "c405_00_skillcut.skel",
+      atlas: "c405_00_skillcut.atlas",
+      textures: [
+        "c405_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 5.3333
+        },
+        {
+          name: "skillcut_1",
+          duration: 6.0333
+        }
+      ]
+    },
+    {
+      resourceId: 411,
+      skinIndex: 0,
+      id: "c411_00_skillcut",
+      directory: "c411_00_skillcut",
+      skeleton: "c411_00_skillcut.skel",
+      atlas: "c411_00_skillcut.atlas",
+      textures: [
+        "c411_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 6.6667
+        },
+        {
+          name: "skillcut_1",
+          duration: 4.7333
+        },
+        {
+          name: "skillcut_2",
+          duration: 4.7333
+        },
+        {
+          name: "skillcut_3",
+          duration: 4.7333
+        }
+      ]
+    },
+    {
+      resourceId: 412,
+      skinIndex: 0,
+      id: "c412_00_skillcut",
+      directory: "c412_00_skillcut",
+      skeleton: "c412_00_skillcut.skel",
+      atlas: "c412_00_skillcut.atlas",
+      textures: [
+        "c412_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 5.3333
+        },
+        {
+          name: "skillcut_1",
+          duration: 4.5
+        }
+      ]
+    },
+    {
+      resourceId: 430,
+      skinIndex: 0,
+      id: "c430_00_skillcut",
+      directory: "c430_00_skillcut",
+      skeleton: "c430_00_skillcut.skel",
+      atlas: "c430_00_skillcut.atlas",
+      textures: [
+        "c430_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut",
+      animations: [
+        {
+          name: "idle",
+          duration: 5.3333
+        },
+        {
+          name: "skillcut",
+          duration: 5.1667
+        }
+      ]
+    },
+    {
+      resourceId: 430,
+      skinIndex: 2,
+      id: "c430_02_skillcut",
+      directory: "c430_02_skillcut",
+      skeleton: "c430_02_skillcut.skel",
+      atlas: "c430_02_skillcut.atlas",
+      textures: [
+        "c430_02_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 3.2
+        },
+        {
+          name: "skillcut_1",
+          duration: 3.6667
+        }
+      ]
+    },
+    {
+      resourceId: 431,
+      skinIndex: 0,
+      id: "c431_00_skillcut",
+      directory: "c431_00_skillcut",
+      skeleton: "c431_00_skillcut.skel",
+      atlas: "c431_00_skillcut.atlas",
+      textures: [
+        "c431_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut",
+      animations: [
+        {
+          name: "idle",
+          duration: 4
+        },
+        {
+          name: "skillcut",
+          duration: 4
+        }
+      ]
+    },
+    {
+      resourceId: 432,
+      skinIndex: 0,
+      id: "c432_00_skillcut",
+      directory: "c432_00_skillcut",
+      skeleton: "c432_00_skillcut.skel",
+      atlas: "c432_00_skillcut.atlas",
+      textures: [
+        "c432_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 11.6667
+        },
+        {
+          name: "skillcut_1",
+          duration: 2.3667
+        }
+      ]
+    },
+    {
+      resourceId: 441,
+      skinIndex: 0,
+      id: "c441_00_skillcut",
+      directory: "c441_00_skillcut",
+      skeleton: "c441_00_skillcut.skel",
+      atlas: "c441_00_skillcut.atlas",
+      textures: [
+        "c441_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 5.3333
+        },
+        {
+          name: "skillcut_1",
+          duration: 4
+        }
+      ]
+    },
+    {
+      resourceId: 450,
+      skinIndex: 0,
+      id: "c450_00_skillcut",
+      directory: "c450_00_skillcut",
+      skeleton: "c450_00_skillcut.skel",
+      atlas: "c450_00_skillcut.atlas",
+      textures: [
+        "c450_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 4.6667
+        },
+        {
+          name: "skillcut_1",
+          duration: 4.4333
+        }
+      ]
+    },
+    {
+      resourceId: 450,
+      skinIndex: 2,
+      id: "c450_02_skillcut",
+      directory: "c450_02_skillcut",
+      skeleton: "c450_02_skillcut.skel",
+      atlas: "c450_02_skillcut.atlas",
+      textures: [
+        "c450_02_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 5.3333
+        },
+        {
+          name: "skillcut_1",
+          duration: 5
+        }
+      ]
+    },
+    {
+      resourceId: 451,
+      skinIndex: 0,
+      id: "c451_00_skillcut",
+      directory: "c451_00_skillcut",
+      skeleton: "c451_skillcut.skel",
+      atlas: "c451_00_skillcut.atlas",
+      textures: [
+        "c451_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 3.3333
+        },
+        {
+          name: "skillcut_1",
+          duration: 4.3667
+        }
+      ]
+    },
+    {
+      resourceId: 470,
+      skinIndex: 0,
+      id: "catalog-c470_00_z_f",
+      directory: "catalog-c470_00_z_f",
+      skeleton: "c470_00_z_f.skel",
+      atlas: "c470_00_z_f.atlas",
+      textures: [
+        "c470_00_z_f.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 2.6667
+        },
+        {
+          name: "skillcut_1",
+          duration: 3.8333
+        }
+      ]
+    },
+    {
+      resourceId: 470,
+      skinIndex: 1,
+      id: "c470_01_skillcut",
+      directory: "c470_01_skillcut",
+      skeleton: "c470_01_skillcut.skel",
+      atlas: "c470_01_skillcut.atlas",
+      textures: [
+        "c470_01_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 5.3333
+        },
+        {
+          name: "skillcut_1",
+          duration: 4.1333
+        }
+      ]
+    },
+    {
+      resourceId: 470,
+      skinIndex: 2,
+      id: "c470_02_skillcut",
+      directory: "c470_02_skillcut",
+      skeleton: "c470_02_skillcut.skel",
+      atlas: "c470_02_skillcut.atlas",
+      textures: [
+        "c470_02_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 5.3333
+        },
+        {
+          name: "idle2",
+          duration: 5.3333
+        },
+        {
+          name: "skillcut_1",
+          duration: 6.6667
+        },
+        {
+          name: "skillcut_2",
+          duration: 6.6667
+        }
+      ]
+    },
+    {
+      resourceId: 471,
+      skinIndex: 0,
+      id: "c471_00_skillcut",
+      directory: "c471_00_skillcut",
+      skeleton: "c471_00_skillcut.skel",
+      atlas: "c471_00_skillcut.atlas",
+      textures: [
+        "c471_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle_1",
+          duration: 4
+        },
+        {
+          name: "idle_2",
+          duration: 4
+        },
+        {
+          name: "idle_all",
+          duration: 4
+        },
+        {
+          name: "skillcut_0",
+          duration: 5.4333
+        },
+        {
+          name: "skillcut_1",
+          duration: 5.4333
+        },
+        {
+          name: "skillcut_2",
+          duration: 5.4333
+        }
+      ]
+    },
+    {
+      resourceId: 500,
+      skinIndex: 0,
+      id: "c500_00_skillcut",
+      directory: "c500_00_skillcut",
+      skeleton: "c500_skillcut.skel",
+      atlas: "c500_00_skillcut.atlas",
+      textures: [
+        "c500_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 2.6667
+        },
+        {
+          name: "skillcut_1",
+          duration: 4.0333
+        }
+      ]
+    },
+    {
+      resourceId: 501,
+      skinIndex: 0,
+      id: "c501_00_skillcut",
+      directory: "c501_00_skillcut",
+      skeleton: "c501_00_skillcut.skel",
+      atlas: "c501_00_skillcut.atlas",
+      textures: [
+        "c501_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 6.6667
+        },
+        {
+          name: "skillcut_1",
+          duration: 4.8667
+        }
+      ]
+    },
+    {
+      resourceId: 502,
+      skinIndex: 0,
+      id: "c502_00_skillcut",
+      directory: "c502_00_skillcut",
+      skeleton: "c502_00_skillcut.skel",
+      atlas: "c502_00_skillcut.atlas",
+      textures: [
+        "c502_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 5.3333
+        },
+        {
+          name: "skillcut_1",
+          duration: 5.1333
+        }
+      ]
+    },
+    {
+      resourceId: 511,
+      skinIndex: 0,
+      id: "c511_00_skillcut",
+      directory: "c511_00_skillcut",
+      skeleton: "c511_00_skillcut.skel",
+      atlas: "c511_00_skillcut.atlas",
+      textures: [
+        "c511_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 4
+        },
+        {
+          name: "skillcut_1",
+          duration: 3.3333
+        }
+      ]
+    },
+    {
+      resourceId: 511,
+      skinIndex: 1,
+      id: "c511_01_skillcut",
+      directory: "c511_01_skillcut",
+      skeleton: "c511_01_skillcut.skel",
+      atlas: "c511_01_skillcut.atlas",
+      textures: [
+        "c511_01_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_0",
+      animations: [
+        {
+          name: "idle",
+          duration: 5.0667
+        },
+        {
+          name: "skillcut_0",
+          duration: 3.6667
+        }
+      ]
+    },
+    {
+      resourceId: 511,
+      skinIndex: 3,
+      id: "c511_03_skillcut",
+      directory: "c511_03_skillcut",
+      skeleton: "c511_03_skillcut.skel",
+      atlas: "c511_03_skillcut.atlas",
+      textures: [
+        "c511_03_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 5.3333
+        },
+        {
+          name: "skillcut_1",
+          duration: 5.3
+        }
+      ]
+    },
+    {
+      resourceId: 513,
+      skinIndex: 0,
+      id: "c513_00_skillcut",
+      directory: "c513_00_skillcut",
+      skeleton: "c513_00_skillcut.skel",
+      atlas: "c513_00_skillcut.atlas",
+      textures: [
+        "c513_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 9.3333
+        },
+        {
+          name: "skillcut_1",
+          duration: 4.3
+        }
+      ]
+    },
+    {
+      resourceId: 513,
+      skinIndex: 1,
+      id: "c513_01_skillcut",
+      directory: "c513_01_skillcut",
+      skeleton: "c513_01_skillcut.skel",
+      atlas: "c513_01_skillcut.atlas",
+      textures: [
+        "c513_01_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skill_cut",
+      animations: [
+        {
+          name: "idle",
+          duration: 5.3333
+        },
+        {
+          name: "idle_bg",
+          duration: 5.3333
+        },
+        {
+          name: "skill_cut",
+          duration: 4.3333
+        },
+        {
+          name: "skill_cut_bg",
+          duration: 4.3333
+        }
+      ]
+    },
+    {
+      resourceId: 513,
+      skinIndex: 3,
+      id: "c513_03_skillcut",
+      directory: "c513_03_skillcut",
+      skeleton: "c513_03_skillcut.skel",
+      atlas: "c513_03_skillcut.atlas",
+      textures: [
+        "c513_03_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_all",
+      animations: [
+        {
+          name: "idle_1",
+          duration: 5.3333
+        },
+        {
+          name: "idle_2",
+          duration: 5.3333
+        },
+        {
+          name: "idle_all",
+          duration: 5.3333
+        },
+        {
+          name: "skillcut_1",
+          duration: 6.5
+        },
+        {
+          name: "skillcut_2",
+          duration: 6.5
+        },
+        {
+          name: "skillcut_all",
+          duration: 6.5
+        }
+      ]
+    },
+    {
+      resourceId: 514,
+      skinIndex: 0,
+      id: "c514_00_skillcut",
+      directory: "c514_00_skillcut",
+      skeleton: "c514_00_skillcut.skel",
+      atlas: "c514_00_skillcut.atlas",
+      textures: [
+        "c514_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 5.3333
+        },
+        {
+          name: "skillcut_1",
+          duration: 4.9
+        }
+      ]
+    },
+    {
+      resourceId: 515,
+      skinIndex: 0,
+      id: "c515_00_skillcut",
+      directory: "c515_00_skillcut",
+      skeleton: "c515_00_skillcut.skel",
+      atlas: "c515_00_skillcut.atlas",
+      textures: [
+        "c515_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 3.3333
+        },
+        {
+          name: "skillcut_1",
+          duration: 5.4333
+        }
+      ]
+    },
+    {
+      resourceId: 520,
+      skinIndex: 0,
+      id: "c520_00_skillcut",
+      directory: "c520_00_skillcut",
+      skeleton: "c520_00_skillcut.skel",
+      atlas: "c520_00_skillcut.atlas",
+      textures: [
+        "c520_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 2.6667
+        },
+        {
+          name: "skillcut_1",
+          duration: 4.5333
+        }
+      ]
+    },
+    {
+      resourceId: 521,
+      skinIndex: 0,
+      id: "c521_00_skillcut",
+      directory: "c521_00_skillcut",
+      skeleton: "c521_00_skillcut.skel",
+      atlas: "c521_00_skillcut.atlas",
+      textures: [
+        "c521_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_0",
+      animations: [
+        {
+          name: "idle",
+          duration: 4
+        },
+        {
+          name: "skillcut_0",
+          duration: 3.6667
+        }
+      ]
+    },
+    {
+      resourceId: 532,
+      skinIndex: 0,
+      id: "c532_00_skillcut",
+      directory: "c532_00_skillcut",
+      skeleton: "c532_00_skillcut.skel",
+      atlas: "c532_00_skillcut.atlas",
+      textures: [
+        "c532_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1_all",
+      animations: [
+        {
+          name: "idle_all",
+          duration: 2.6667
+        },
+        {
+          name: "idle_bg",
+          duration: 2.6667
+        },
+        {
+          name: "idle_character",
+          duration: 2.6667
+        },
+        {
+          name: "skillcut_1_all",
+          duration: 3.9667
+        },
+        {
+          name: "skillcut_1_bg",
+          duration: 3.9667
+        },
+        {
+          name: "skillcut_1_character",
+          duration: 3.9667
+        }
+      ]
+    },
+    {
+      resourceId: 550,
+      skinIndex: 0,
+      id: "c550_00_skillcut",
+      directory: "c550_00_skillcut",
+      skeleton: "c550_00_skillcut.skel",
+      atlas: "c550_00_skillcut.atlas",
+      textures: [
+        "c550_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 5.3333
+        },
+        {
+          name: "skillcut_1",
+          duration: 2.9333
+        }
+      ]
+    },
+    {
+      resourceId: 551,
+      skinIndex: 0,
+      id: "c551_00_skillcut",
+      directory: "c551_00_skillcut",
+      skeleton: "c551_00_skillcut.skel",
+      atlas: "c551_00_skillcut.atlas",
+      textures: [
+        "c551_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 2.6667
+        },
+        {
+          name: "skillcut_1",
+          duration: 4.1667
+        }
+      ]
+    },
+    {
+      resourceId: 570,
+      skinIndex: 0,
+      id: "c570_00_skillcut",
+      directory: "c570_00_skillcut",
+      skeleton: "c570_00_skillcut.skel",
+      atlas: "c570_00_skillcut.atlas",
+      textures: [
+        "c570_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_0",
+      animations: [
+        {
+          name: "idle_0",
+          duration: 4.8
+        },
+        {
+          name: "idle_1",
+          duration: 4.8
+        },
+        {
+          name: "skillcut_0",
+          duration: 3.2333
+        }
+      ]
+    },
+    {
+      resourceId: 580,
+      skinIndex: 0,
+      id: "c580_00_skillcut",
+      directory: "c580_00_skillcut",
+      skeleton: "c580_00_skillcut.skel",
+      atlas: "c580_00_skillcut.atlas",
+      textures: [
+        "c580_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_0",
+      animations: [
+        {
+          name: "idle",
+          duration: 3.2
+        },
+        {
+          name: "skillcut_0",
+          duration: 2.7
+        }
+      ]
+    },
+    {
+      resourceId: 580,
+      skinIndex: 1,
+      id: "c580_01_skillcut",
+      directory: "c580_01_skillcut",
+      skeleton: "c580_01_skillcut.skel",
+      atlas: "c580_01_skillcut.atlas",
+      textures: [
+        "c580_01_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 4
+        },
+        {
+          name: "idle2",
+          duration: 4
+        },
+        {
+          name: "skillcut_1",
+          duration: 4.7333
+        },
+        {
+          name: "skillcut_2",
+          duration: 4.7333
+        },
+        {
+          name: "skillcut_3",
+          duration: 4.7333
+        }
+      ]
+    },
+    {
+      resourceId: 581,
+      skinIndex: 0,
+      id: "c581_00_skillcut",
+      directory: "c581_00_skillcut",
+      skeleton: "c581_00_skillcut.skel",
+      atlas: "c581_00_skillcut.atlas",
+      textures: [
+        "c581_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 3.3333
+        },
+        {
+          name: "skillcut_1",
+          duration: 4.7667
+        }
+      ]
+    },
+    {
+      resourceId: 582,
+      skinIndex: 0,
+      id: "c582_00_skillcut",
+      directory: "c582_00_skillcut",
+      skeleton: "c582_00_skillcut.skel",
+      atlas: "c582_00_skillcut.atlas",
+      textures: [
+        "c582_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle_0",
+          duration: 6.4
+        },
+        {
+          name: "idle_1",
+          duration: 6.4
+        },
+        {
+          name: "skillcut_0",
+          duration: 4.2333
+        },
+        {
+          name: "skillcut_1",
+          duration: 4.2333
+        }
+      ]
+    },
+    {
+      resourceId: 583,
+      skinIndex: 0,
+      id: "c583_00_skillcut",
+      directory: "c583_00_skillcut",
+      skeleton: "c583_00_skillcut.skel",
+      atlas: "c583_00_skillcut.atlas",
+      textures: [
+        "c583_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_all",
+      animations: [
+        {
+          name: "idle_1",
+          duration: 5.3333
+        },
+        {
+          name: "idle_2",
+          duration: 5.3333
+        },
+        {
+          name: "idle_all",
+          duration: 5.3333
+        },
+        {
+          name: "skillcut_1",
+          duration: 5.3333
+        },
+        {
+          name: "skillcut_2",
+          duration: 5.3333
+        },
+        {
+          name: "skillcut_all",
+          duration: 5.3333
+        }
+      ]
+    },
+    {
+      resourceId: 590,
+      skinIndex: 0,
+      id: "c590_00_skillcut",
+      directory: "c590_00_skillcut",
+      skeleton: "c590_00_skillcut.skel",
+      atlas: "c590_00_skillcut.atlas",
+      textures: [
+        "c590_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 5.3333
+        },
+        {
+          name: "skillcut_1",
+          duration: 4
+        },
+        {
+          name: "skillcut_2",
+          duration: 4
+        }
+      ]
+    },
+    {
+      resourceId: 600,
+      skinIndex: 0,
+      id: "c600_00_skillcut",
+      directory: "c600_00_skillcut",
+      skeleton: "c600_00_skillcut.skel",
+      atlas: "c600_00_skillcut.atlas",
+      textures: [
+        "c600_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 3.3333
+        },
+        {
+          name: "skillcut_1",
+          duration: 3.9
+        }
+      ]
+    },
+    {
+      resourceId: 601,
+      skinIndex: 0,
+      id: "c601_00_skillcut",
+      directory: "c601_00_skillcut",
+      skeleton: "c601_00_skillcut.skel",
+      atlas: "c601_00_skillcut.atlas",
+      textures: [
+        "c601_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 5.3333
+        },
+        {
+          name: "skillcut_1",
+          duration: 4.6667
+        }
+      ]
+    },
+    {
+      resourceId: 610,
+      skinIndex: 0,
+      id: "c610_00_skillcut",
+      directory: "c610_00_skillcut",
+      skeleton: "c610_00_skillcut.skel",
+      atlas: "c610_00_skillcut.atlas",
+      textures: [
+        "c610_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 3.3333
+        },
+        {
+          name: "skillcut_1",
+          duration: 2.6333
+        }
+      ]
+    },
+    {
+      resourceId: 620,
+      skinIndex: 0,
+      id: "c620_00_skillcut",
+      directory: "c620_00_skillcut",
+      skeleton: "c620_00_skillcut.skel",
+      atlas: "c620_00_skillcut.atlas",
+      textures: [
+        "c620_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 5.3333
+        },
+        {
+          name: "skillcut_1",
+          duration: 5.7
+        },
+        {
+          name: "skillcut_2",
+          duration: 5.7
+        }
+      ]
+    },
+    {
+      resourceId: 800,
+      skinIndex: 0,
+      id: "c800_00_skillcut",
+      directory: "c800_00_skillcut",
+      skeleton: "c800_00_skillcut.skel",
+      atlas: "c800_00_skillcut.atlas",
+      textures: [
+        "c800_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 7.3333
+        },
+        {
+          name: "skillcut_1",
+          duration: 3.8
+        }
+      ]
+    },
+    {
+      resourceId: 801,
+      skinIndex: 0,
+      id: "c801_00_skillcut",
+      directory: "c801_00_skillcut",
+      skeleton: "c801_00_skillcut.skel",
+      atlas: "c801_00_skillcut.atlas",
+      textures: [
+        "c801_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 2.6667
+        },
+        {
+          name: "skillcut_1",
+          duration: 2
+        }
+      ]
+    },
+    {
+      resourceId: 802,
+      skinIndex: 0,
+      id: "c802_00_skillcut",
+      directory: "c802_00_skillcut",
+      skeleton: "c802_00_skillcut.skel",
+      atlas: "c802_00_skillcut.atlas",
+      textures: [
+        "c802_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 3.3333
+        },
+        {
+          name: "skillcut_1",
+          duration: 3.6667
+        }
+      ]
+    },
+    {
+      resourceId: 810,
+      skinIndex: 0,
+      id: "c810_00_skillcut",
+      directory: "c810_00_skillcut",
+      skeleton: "c810_00_skillcut.skel",
+      atlas: "c810_00_skillcut.atlas",
+      textures: [
+        "c810_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 2.6667
+        },
+        {
+          name: "skillcut_1",
+          duration: 2.8333
+        }
+      ]
+    },
+    {
+      resourceId: 810,
+      skinIndex: 2,
+      id: "c810_02_skillcut",
+      directory: "c810_02_skillcut",
+      skeleton: "c810_02_skillcut.skel",
+      atlas: "c810_02_skillcut.atlas",
+      textures: [
+        "c810_02_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 3.3333
+        },
+        {
+          name: "skillcut_1",
+          duration: 3.6333
+        }
+      ]
+    },
+    {
+      resourceId: 811,
+      skinIndex: 0,
+      id: "c811_skillcut",
+      directory: "c811_skillcut",
+      skeleton: "c811_skillcut.skel",
+      atlas: "c811_skillcut.atlas",
+      textures: [
+        "c811_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_0",
+      animations: [
+        {
+          name: "idle",
+          duration: 2
+        },
+        {
+          name: "skillcut_0",
+          duration: 3.3333
+        }
+      ]
+    },
+    {
+      resourceId: 812,
+      skinIndex: 0,
+      id: "c812_00_skillcut",
+      directory: "c812_00_skillcut",
+      skeleton: "c812_00_skillcut.skel",
+      atlas: "c812_00_skillcut.atlas",
+      textures: [
+        "c812_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skilcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 2.6667
+        },
+        {
+          name: "skilcut_1",
+          duration: 3.6
+        }
+      ]
+    },
+    {
+      resourceId: 820,
+      skinIndex: 0,
+      id: "c820_00_skillcut",
+      directory: "c820_00_skillcut",
+      skeleton: "c820_00_skillcut.skel",
+      atlas: "c820_00_skillcut.atlas",
+      textures: [
+        "c820_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 2.6667
+        },
+        {
+          name: "skillcut_1",
+          duration: 2.5
+        }
+      ]
+    },
+    {
+      resourceId: 821,
+      skinIndex: 0,
+      id: "c821_skillcut",
+      directory: "c821_skillcut",
+      skeleton: "c821_skillcut.skel",
+      atlas: "c821_skillcut.atlas",
+      textures: [
+        "c821_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 2.6667
+        },
+        {
+          name: "skillcut_1",
+          duration: 4.6
+        }
+      ]
+    },
+    {
+      resourceId: 821,
+      skinIndex: 1,
+      id: "c821_01",
+      directory: "c821_01",
+      skeleton: "c821_01.skel",
+      atlas: "c821_01.atlas",
+      textures: [
+        "c821_01.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 6.6667
+        },
+        {
+          name: "skillcut_1",
+          duration: 3.7
+        }
+      ]
+    },
+    {
+      resourceId: 822,
+      skinIndex: 0,
+      id: "c822_00_skillcut",
+      directory: "c822_00_skillcut",
+      skeleton: "c822_00_skillcut.skel",
+      atlas: "c822_00_skillcut.atlas",
+      textures: [
+        "c822_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 6.6667
+        },
+        {
+          name: "skillcut_1",
+          duration: 3.0667
+        }
+      ]
+    },
+    {
+      resourceId: 830,
+      skinIndex: 0,
+      id: "c830_00_skillcut",
+      directory: "c830_00_skillcut",
+      skeleton: "c830_00_skillcut.skel",
+      atlas: "c830_00_skillcut.atlas",
+      textures: [
+        "c830_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_0",
+      animations: [
+        {
+          name: "idle",
+          duration: 3.2
+        },
+        {
+          name: "skillcut_0",
+          duration: 3.4667
+        }
+      ]
+    },
+    {
+      resourceId: 830,
+      skinIndex: 3,
+      id: "c830_03_skillcut",
+      directory: "c830_03_skillcut",
+      skeleton: "c830_03_skillcut.skel",
+      atlas: "c830_03_skillcut.atlas",
+      textures: [
+        "c830_03_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 5.3333
+        },
+        {
+          name: "skillcut_1",
+          duration: 3.0333
+        }
+      ]
+    },
+    {
+      resourceId: 831,
+      skinIndex: 0,
+      id: "c831_00_skillcut",
+      directory: "c831_00_skillcut",
+      skeleton: "c831_00_skillcut.skel",
+      atlas: "c831_00_skillcut.atlas",
+      textures: [
+        "c831_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 6.6667
+        },
+        {
+          name: "skillcut_1",
+          duration: 4.0333
+        }
+      ]
+    },
+    {
+      resourceId: 832,
+      skinIndex: 0,
+      id: "c832_00_skillcut",
+      directory: "c832_00_skillcut",
+      skeleton: "c832_00_skillcut.skel",
+      atlas: "c832_00_skillcut.atlas",
+      textures: [
+        "c832_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 5.3333
+        },
+        {
+          name: "skillcut_1",
+          duration: 4
+        }
+      ]
+    },
+    {
+      resourceId: 833,
+      skinIndex: 0,
+      id: "c833_00_skillcut",
+      directory: "c833_00_skillcut",
+      skeleton: "c833_00_skillcut.skel",
+      atlas: "c833_00_skillcut.atlas",
+      textures: [
+        "c833_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 5.3333
+        },
+        {
+          name: "skillcut_1",
+          duration: 3.6667
+        },
+        {
+          name: "skillcut_2",
+          duration: 3.6667
+        }
+      ]
+    },
+    {
+      resourceId: 834,
+      skinIndex: 0,
+      id: "c834_00_skillcut",
+      directory: "c834_00_skillcut",
+      skeleton: "c834_00_skillcut.skel",
+      atlas: "c834_00_skillcut.atlas",
+      textures: [
+        "c834_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 4
+        },
+        {
+          name: "skillcut_1",
+          duration: 4
+        }
+      ]
+    },
+    {
+      resourceId: 835,
+      skinIndex: 0,
+      id: "c835_00_skillcut",
+      directory: "c835_00_skillcut",
+      skeleton: "c835_00_skillcut.skel",
+      atlas: "c835_00_skillcut.atlas",
+      textures: [
+        "c835_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 2.6667
+        },
+        {
+          name: "skillcut_1",
+          duration: 4
+        }
+      ]
+    },
+    {
+      resourceId: 836,
+      skinIndex: 0,
+      id: "c836_00_skillcut",
+      directory: "c836_00_skillcut",
+      skeleton: "c836_00_skillcut.skel",
+      atlas: "c836_00_skillcut.atlas",
+      textures: [
+        "c836_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 2.6667
+        },
+        {
+          name: "skillcut_1",
+          duration: 3.1333
+        }
+      ]
+    },
+    {
+      resourceId: 840,
+      skinIndex: 0,
+      id: "c840_skillcut_00",
+      directory: "c840_skillcut_00",
+      skeleton: "c840_skillcut_00.skel",
+      atlas: "c840_skillcut_00.atlas",
+      textures: [
+        "c840_skillcut_00.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 5.3333
+        },
+        {
+          name: "skillcut_1",
+          duration: 4
+        }
+      ]
+    },
+    {
+      resourceId: 841,
+      skinIndex: 0,
+      id: "c841_00_skillcut",
+      directory: "c841_00_skillcut",
+      skeleton: "c841_00_skillcut.skel",
+      atlas: "c841_00_skillcut.atlas",
+      textures: [
+        "c841_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 3.3333
+        },
+        {
+          name: "skillcut_1",
+          duration: 3.5
+        }
+      ]
+    },
+    {
+      resourceId: 842,
+      skinIndex: 0,
+      id: "c842_00_skillcut",
+      directory: "c842_00_skillcut",
+      skeleton: "c842_00_skillcut.skel",
+      atlas: "c842_00_skillcut.atlas",
+      textures: [
+        "c842_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_0",
+      animations: [
+        {
+          name: "idle",
+          duration: 8
+        },
+        {
+          name: "skillcut_0",
+          duration: 2.3333
+        }
+      ]
+    },
+    {
+      resourceId: 850,
+      skinIndex: 0,
+      id: "catalog-c850_00_skillcut",
+      directory: "catalog-c850_00_skillcut",
+      skeleton: "c850_00_skillcut.skel",
+      atlas: "c850_00_skillcut.atlas",
+      textures: [
+        "c850_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 2.6667
+        },
+        {
+          name: "skillcut_1",
+          duration: 3.3333
+        }
+      ]
+    },
+    {
+      resourceId: 850,
+      skinIndex: 3,
+      id: "c850_03_skillcut",
+      directory: "c850_03_skillcut",
+      skeleton: "c850_03_skillcut.skel",
+      atlas: "c850_03_skillcut.atlas",
+      textures: [
+        "c850_03_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 4
+        },
+        {
+          name: "idle_1-1",
+          duration: 4
+        },
+        {
+          name: "idle_1-2",
+          duration: 4
+        },
+        {
+          name: "skillcut_1",
+          duration: 4
+        },
+        {
+          name: "skillcut_1-1",
+          duration: 4
+        },
+        {
+          name: "skillcut_1-2",
+          duration: 4
+        }
+      ]
+    },
+    {
+      resourceId: 851,
+      skinIndex: 0,
+      id: "c851_00_skillut",
+      directory: "c851_00_skillut",
+      skeleton: "c851_00_skillut.skel",
+      atlas: "c851_00_skillut.atlas",
+      textures: [
+        "c851_00_skillut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut1",
+      animations: [
+        {
+          name: "idle",
+          duration: 5.3333
+        },
+        {
+          name: "skillcut1",
+          duration: 3.5667
+        }
+      ]
+    },
+    {
+      resourceId: 852,
+      skinIndex: 0,
+      id: "catalog-c852_00_skillcut",
+      directory: "catalog-c852_00_skillcut",
+      skeleton: "c852_00_skillcut.skel",
+      atlas: "c852_00_skillcut.atlas",
+      textures: [
+        "c852_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut",
+      animations: [
+        {
+          name: "idle",
+          duration: 5.3333
+        },
+        {
+          name: "idle_bg",
+          duration: 5.3333
+        },
+        {
+          name: "skillcut",
+          duration: 4.2333
+        },
+        {
+          name: "skillcut_bg",
+          duration: 4.2333
+        }
+      ]
+    },
+    {
+      resourceId: 860,
+      skinIndex: 0,
+      id: "c860_00_skillcut",
+      directory: "c860_00_skillcut",
+      skeleton: "c860_00_skillcut.skel",
+      atlas: "c860_00_skillcut.atlas",
+      textures: [
+        "c860_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "all_skillcut",
+      animations: [
+        {
+          name: "all_idle",
+          duration: 5.3333
+        },
+        {
+          name: "all_skillcut",
+          duration: 5.6667
+        },
+        {
+          name: "idle_1",
+          duration: 5.3333
+        },
+        {
+          name: "idle_2",
+          duration: 5.3333
+        },
+        {
+          name: "skillcut_1",
+          duration: 5.6667
+        },
+        {
+          name: "skillcut_2",
+          duration: 5.6667
+        }
+      ]
+    },
+    {
+      resourceId: 861,
+      skinIndex: 0,
+      id: "c861_00_skillcut",
+      directory: "c861_00_skillcut",
+      skeleton: "c861_00_skillcut.skel",
+      atlas: "c861_00_skillcut.atlas",
+      textures: [
+        "c861_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_all",
+      animations: [
+        {
+          name: "idle_1",
+          duration: 2.6667
+        },
+        {
+          name: "idle_all",
+          duration: 2.6667
+        },
+        {
+          name: "skillcut_1",
+          duration: 6.4
+        },
+        {
+          name: "skillcut_2",
+          duration: 6.4
+        },
+        {
+          name: "skillcut_all",
+          duration: 6.4
+        }
+      ]
+    },
+    {
+      resourceId: 862,
+      skinIndex: 0,
+      id: "c862_00_skillcut",
+      directory: "c862_00_skillcut",
+      skeleton: "c862_00_skillcut.skel",
+      atlas: "c862_00_skillcut.atlas",
+      textures: [
+        "c862_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 5.3333
+        },
+        {
+          name: "skillcut_1",
+          duration: 3
+        }
+      ]
+    },
+    {
+      resourceId: 870,
+      skinIndex: 0,
+      id: "c870_00_skillcut",
+      directory: "c870_00_skillcut",
+      skeleton: "c870_00_skillcut.skel",
+      atlas: "c870_00_skillcut.atlas",
+      textures: [
+        "c870_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 3.3333
+        },
+        {
+          name: "skillcut_1",
+          duration: 4.4333
+        },
+        {
+          name: "skillcut_2",
+          duration: 4.4333
+        }
+      ]
+    },
+    {
+      resourceId: 871,
+      skinIndex: 0,
+      id: "c871_00_skillcut",
+      directory: "c871_00_skillcut",
+      skeleton: "c871_00_skillcut.skel",
+      atlas: "c871_00_skillcut.atlas",
+      textures: [
+        "c871_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle_0",
+          duration: 5.3333
+        },
+        {
+          name: "idle_1",
+          duration: 5.3333
+        },
+        {
+          name: "skillcut_0",
+          duration: 4.4
+        },
+        {
+          name: "skillcut_1",
+          duration: 4.4
+        }
+      ]
+    },
+    {
+      resourceId: 872,
+      skinIndex: 0,
+      id: "c872_skillcut_00",
+      directory: "c872_skillcut_00",
+      skeleton: "c872_skillcut_00.skel",
+      atlas: "c872_skillcut_00.atlas",
+      textures: [
+        "c872_skillcut_00.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "bg_idle",
+          duration: 5.3333
+        },
+        {
+          name: "bg_skillcut_1",
+          duration: 4.1
+        },
+        {
+          name: "idle",
+          duration: 5.3333
+        },
+        {
+          name: "skillcut_1",
+          duration: 4.1
+        }
+      ]
+    },
+    {
+      resourceId: 901,
+      skinIndex: 0,
+      id: "c901_00_skillcut",
+      directory: "c901_00_skillcut",
+      skeleton: "c901_00_skillcut.skel",
+      atlas: "c901_00_skillcut.atlas",
+      textures: [
+        "c901_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 4.6667
+        },
+        {
+          name: "skillcut_1",
+          duration: 3.5333
+        }
+      ]
+    },
+    {
+      resourceId: 907,
+      skinIndex: 0,
+      id: "c907_00_skillcut",
+      directory: "c907_00_skillcut",
+      skeleton: "c907_00_skillcut.skel",
+      atlas: "c907_00_skillcut.atlas",
+      textures: [
+        "c907_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 2.6
+        },
+        {
+          name: "skillcut_1",
+          duration: 4.9
+        }
+      ]
+    },
+    {
+      resourceId: 993,
+      skinIndex: 0,
+      id: "c993_00_skillcut",
+      directory: "c993_00_skillcut",
+      skeleton: "c993_00_skillcut.skel",
+      atlas: "c993_00_skillcut.atlas",
+      textures: [
+        "c993_00_skillcut.png"
+      ],
+      spineVersion: "4.1.20",
+      animation: "skillcut_1",
+      animations: [
+        {
+          name: "idle",
+          duration: 5.3333
+        },
+        {
+          name: "skillcut_1",
+          duration: 7.6
+        }
+      ]
+    }
+  ]
+};
+
+// src/burst.ts
+var bySkin = new Map(catalog_default.entries.map((entry) => {
+  const base = `${catalog_default.assetBase}${entry.directory}/`;
+  return [`${entry.resourceId}:${entry.skinIndex}`, {
+    id: entry.id,
+    format: "spine",
+    spineVersion: entry.spineVersion,
+    animation: entry.animation,
+    animations: entry.animations,
+    atlas: base + entry.atlas,
+    skeleton: base + entry.skeleton,
+    textures: entry.textures.map((name) => ({ name, url: base + name })),
+    viewerUrl: `${catalog_default.viewer}?id=${encodeURIComponent(entry.id)}&anim=${encodeURIComponent(entry.animation)}`,
+    source: { name: "ArtHub", url: catalog_default.source, revision: catalog_default.commit }
+  }];
+}));
+function getBurstCutscene(resourceId, skinIndex = 0) {
+  return bySkin.get(`${resourceId}:${skinIndex}`) ?? null;
+}
+function withBurstCutscenes(nikke) {
+  return {
+    ...nikke,
+    burstCutscene: getBurstCutscene(nikke.resourceId),
+    costumes: nikke.costumes.map((costume) => ({
+      ...costume,
+      burstCutscene: getBurstCutscene(nikke.resourceId, costume.skinIndex)
+    }))
+  };
+}
+
 // src/events.ts
 var eventIdOf = (gid) => {
   let prev = gid;
@@ -19648,11 +25483,12 @@ var NIKKE_EXTRA = {
   costumes: "costumes",
   images: "images",
   spine: "spine",
+  burstCutscene: "burstCutscene",
   // pseudo-include — no extra API field, it only keeps the raw per-skill
   // icon/descriptionTemplate/values that the default response strips
   skillLevels: ""
 };
-var API_GET_ALLOWED = /^\/api\/(stages|costumes|equips|avatars|cubes|meta|cdn|nikkes\/[^/?]+\/spine)(\/|\?|$)/;
+var API_GET_ALLOWED = /^\/api\/(stages|costumes|equips|avatars|cubes|meta|cdn|nikkes\/[^/?]+\/(spine|burst))(\/|\?|$)/;
 var READ_ONLY = { readOnlyHint: true, idempotentHint: true, openWorldHint: false };
 var LIVE = { readOnlyHint: true, idempotentHint: true, openWorldHint: true };
 var USER_CALLS_PER_MINUTE = 30;
@@ -19848,7 +25684,7 @@ function buildServer(api, version2, origin = "", boundBlablaid) {
       description: "Character detail: profile, skills (rendered at Lv10), backstory, squad, CV, affection (\uD638\uAC10\uB3C4) scene ids and the favorite-item (\uC560\uC7A5\uD488) story scene id. Add more with include. An exact character name returns that character even when others also match \u2014 the rest are listed in alsoMatched. A name that only partially matches several characters returns a {count, characters} list instead \u2014 call again with one of their ids.",
       inputSchema: object({
         nameOrId: string2().min(1).describe("Character name (partial, any language), id or resourceId"),
-        include: array(_enum(Object.keys(NIKKE_EXTRA))).optional().describe("Extra sections added to the default: statsPerLevel (~30KB), voices (~80KB, voice lines incl. costumeIndex), shot (weapon mechanics \u2014 damage/charge/rate-of-fire/burst-gauge units), statEnhance (limit-break & core bonus), teammateList, costumes, images, spine (Spine animation asset URLs \u2014 atlas/skeleton/texture for stand/aim/cover stances, per costume), skillLevels (raw skill icon/descriptionTemplate/values)"),
+        include: array(_enum(Object.keys(NIKKE_EXTRA))).optional().describe("Extra sections added to the default: statsPerLevel (~30KB), voices (~80KB, voice lines incl. costumeIndex), shot (weapon mechanics \u2014 damage/charge/rate-of-fire/burst-gauge units), statEnhance (limit-break & core bonus), teammateList, costumes, images, spine (Spine asset URLs for stand/aim/cover), burstCutscene (base burst visual assets and viewer link; use get_nikke_burst for costumes too), skillLevels (raw skill icon/descriptionTemplate/values)"),
         lang: LANG
       }),
       annotations: READ_ONLY
@@ -20037,13 +25873,23 @@ function buildServer(api, version2, origin = "", boundBlablaid) {
     "get_nikke_spine",
     {
       title: "Spine animation asset URLs",
-      description: "Spine viewer asset URLs for a character \u2014 stand (lobby), aim (firing stance incl. fire/skill tracks) and cover (incl. reload) triplets {atlas, skeleton, texture} for the base appearance and every costume. Render with a Spine 4.1 runtime.",
+      description: "Spine viewer asset URLs for a character \u2014 stand (lobby), aim (firing stance incl. fire/skill tracks) and cover (incl. reload) triplets {atlas, skeleton, texture} for the base appearance and every costume. Render with a Spine 4.1 runtime. Also includes burstCutscene visual assets from ArtHub, with all texture pages and a viewer link; null for unavailable skins. Use viewerUrl for browser burst playback; the burst asset host restricts CORS.",
       inputSchema: object({
         nameOrId: string2().min(1).describe("Character name (any language) or id")
       }),
       annotations: READ_ONLY
     },
     async (a) => call(api, "get_nikke_spine", `/api/nikkes/${enc(a.nameOrId)}/spine`)
+  );
+  server.registerTool(
+    "get_nikke_burst",
+    {
+      title: "Burst cutscene assets and viewer",
+      description: "Burst skill cutscene visual assets for a character and every costume: Spine atlas, skeleton, all texture pages, runtime version, animation tracks and an ArtHub viewer link that selects the burst track. Use viewerUrl for browser playback; the asset host restricts CORS. Exact skin matches only; unavailable cutscenes are null, with no base-skin fallback. Audio is separate (get_nikke include voices). Exact names win; ambiguous partial names return candidates.",
+      inputSchema: object({ nameOrId: string2().min(1).describe("Character name (any language), id or resourceId"), lang: LANG }),
+      annotations: READ_ONLY
+    },
+    async (a) => call(api, "get_nikke_burst", `/api/nikkes/${enc(a.nameOrId)}/burst${qs({ lang: a.lang ?? "ko" })}`)
   );
   server.registerTool(
     "compare_nikkes",
@@ -20481,6 +26327,34 @@ function buildOpenapi(pkgVersion) {
       image: { type: "string", format: "uri" }
     }
   };
+  const burstCutscene = {
+    type: ["object", "null"],
+    description: "\uD574\uB2F9 \uC678\uD615\uC758 \uC2DC\uAC01\uC801 \uBC84\uC2A4\uD2B8 \uCEF7\uC2E0. \uBBF8\uC218\uB85D\uC740 null\uC774\uBA70 \uAE30\uBCF8 \uC678\uD615\uC73C\uB85C \uB300\uCCB4\uD558\uC9C0 \uC54A\uC2B5\uB2C8\uB2E4. \uC74C\uC131\uC740 \uBCC4\uB3C4\uC785\uB2C8\uB2E4.",
+    required: ["id", "format", "spineVersion", "animation", "animations", "atlas", "skeleton", "textures", "viewerUrl", "source"],
+    properties: {
+      id: { type: "string" },
+      format: { type: "string", const: "spine" },
+      spineVersion: { type: "string", example: "4.1.20" },
+      animation: { type: "string", example: "skillcut_1", description: "\uAC80\uC99D\uB41C \uBC84\uC2A4\uD2B8 \uC7AC\uC0DD \uD2B8\uB799" },
+      animations: { type: "array", items: { type: "object", properties: { name: { type: "string" }, duration: { type: "number", description: "\uCD08" } } } },
+      atlas: { type: "string", format: "uri" },
+      skeleton: { type: "string", format: "uri" },
+      textures: { type: "array", items: { type: "object", required: ["name", "url"], properties: { name: { type: "string" }, url: { type: "string", format: "uri" } } } },
+      viewerUrl: { type: "string", format: "uri" },
+      source: { type: "object", properties: { name: { type: "string" }, url: { type: "string", format: "uri" }, revision: { type: "string" } } }
+    }
+  };
+  const burstResult = {
+    type: "object",
+    required: ["id", "resourceId", "name", "burstCutscene", "costumes"],
+    properties: {
+      id: { type: "integer" },
+      resourceId: { type: "integer" },
+      name: { oneOf: [localized, { type: "string" }] },
+      burstCutscene,
+      costumes: { type: "array", items: { type: "object", properties: { id: { type: "integer" }, skinIndex: { type: "integer" }, name: { oneOf: [localized, { type: "string" }] }, burstCutscene } } }
+    }
+  };
   const ownedNikkeSummary = {
     type: "object",
     description: "\uBAA9\uB85D \uBAA8\uB4DC(q \uC5C6\uC74C) \uD56D\uBAA9 \u2014 \uACBD\uB7C9",
@@ -20622,6 +26496,22 @@ function buildOpenapi(pkgVersion) {
             }
           ],
           responses: { "200": { description: "\uCE90\uB9AD\uD130 \uC0C1\uC138" }, "404": { description: "\uC5C6\uC74C" } }
+        }
+      },
+      "/api/nikkes/{id}/burst": {
+        get: {
+          tags: ["nikkes"],
+          summary: "\uAE30\uBCF8 \uC678\uD615\xB7\uCF54\uC2A4\uD2AC\uBCC4 \uBC84\uC2A4\uD2B8 \uCEF7\uC2E0 \uB9AC\uC18C\uC2A4\uC640 \uBDF0\uC5B4 \uB9C1\uD06C",
+          description: "ArtHub\uC758 \uAC80\uC99D\uB41C URL \uBAA9\uB85D\uC744 \uCC38\uC870\uD569\uB2C8\uB2E4. \uC815\uD655\uD55C \uC774\uB984\uC744 \uC6B0\uC120\uD558\uBA70, \uBD80\uBD84 \uC77C\uCE58 \uD6C4\uBCF4\uAC00 \uC5EC\uB7EC \uAC1C\uBA74 \uBAA9\uB85D\uC744 \uBC18\uD658\uD569\uB2C8\uB2E4. \uBBF8\uC218\uB85D \uCE90\uB9AD\uD130/\uCF54\uC2A4\uD2AC\uC740 burstCutscene: null\uC785\uB2C8\uB2E4.",
+          parameters: [
+            { name: "id", in: "path", required: true, schema: { type: "string" }, description: "\uCE90\uB9AD\uD130 ID / resourceId / \uC774\uB984", example: "\uB77C\uD53C" },
+            { name: "lang", in: "query", schema: { type: "string", enum: ["ko", "en", "ja", "zh-TW"] } },
+            { name: "fields", in: "query", schema: { type: "string" } }
+          ],
+          responses: {
+            "200": { description: "\uCEF7\uC2E0 \uB9AC\uC18C\uC2A4 \uB610\uB294 \uC774\uB984 \uD6C4\uBCF4 \uBAA9\uB85D", content: { "application/json": { schema: { oneOf: [burstResult, { type: "object", required: ["count", "characters"], properties: { count: { type: "integer" }, characters: { type: "array", items: burstResult } } }] } } } },
+            "404": { description: "\uCE90\uB9AD\uD130 \uC5C6\uC74C" }
+          }
         }
       },
       "/api/scenes": {
@@ -21226,7 +27116,7 @@ async function createApp(storage, options = {}) {
   const characterData = JSON.parse(
     await storage.readText(path.join("characters.json"))
   );
-  const characters = characterData.characters;
+  const characters = characterData.characters.map(withBurstCutscenes);
   const byId = new Map(characters.map((c) => [c.id, c]));
   const byResourceId = new Map(characters.map((c) => [c.resourceId, c]));
   const families = buildFamilies(characters);
@@ -21329,6 +27219,7 @@ async function createApp(storage, options = {}) {
       grade: co.grade ?? null,
       costumeIndex: co.costumeIndex ?? 0,
       images: owned?.costume.images ?? null,
+      burstCutscene: Number.isInteger(co.costumeIndex) ? getBurstCutscene(co.resourceId, co.costumeIndex) : null,
       character: n ? { id: n.id, resourceId: n.resourceId, name: n.name, rarity: n.rarity } : null,
       storyScenes: storyScenesOf(tid, scenes)
     };
@@ -21563,7 +27454,8 @@ async function createApp(storage, options = {}) {
         "GET /api/events/:id": "event detail \u2014 episode scene list",
         "GET /api/events/:id/script": "whole event script, episode by episode ('speaker: text')",
         "GET /api/lines": "dialogue search; q (text) and/or speaker, family, category; 50 per page by default",
-        "GET /api/nikkes/:id/spine": "Spine animation asset URLs (stand/aim/cover, per costume)",
+        "GET /api/nikkes/:id/spine": "Spine animation asset URLs (stand/aim/cover) and burstCutscene, per costume",
+        "GET /api/nikkes/:id/burst": "Burst cutscene asset URLs and viewer links (base and exact costumes; missing = null)",
         "GET /api/nikkes/:id/appearances": "scenes and events a character speaks in (all versions)",
         "GET /api/story/route": "story reading order (community guide)",
         "GET /api/story/next": "next stories on the route; chapter|after, done, required",
@@ -21932,13 +27824,31 @@ async function createApp(storage, options = {}) {
       resourceId: n.resourceId,
       name: n.name,
       spine: n.spine ?? null,
+      burstCutscene: n.burstCutscene ?? null,
       costumes: n.costumes.map((co) => ({
         id: co.id,
         skinIndex: co.skinIndex,
         name: co.name,
-        spine: co.spine ?? null
+        spine: co.spine ?? null,
+        burstCutscene: co.burstCutscene ?? null
       }))
     });
+  });
+  app.get("/api/nikkes/:id/burst", (c) => {
+    const key2 = c.req.param("id");
+    const hit = /^\d+$/.test(key2) ? byId.get(Number(key2)) ?? byResourceId.get(Number(key2)) : void 0;
+    const hits = hit ? [hit] : findByName(key2);
+    const exact = hits.find((n) => Object.values(n.name).some((name) => norm(name) === norm(key2)));
+    const row = (n) => ({
+      id: n.id,
+      resourceId: n.resourceId,
+      name: n.name,
+      burstCutscene: n.burstCutscene ?? null,
+      costumes: n.costumes.map((co) => ({ id: co.id, skinIndex: co.skinIndex, name: co.name, burstCutscene: co.burstCutscene ?? null }))
+    });
+    if (exact || hits.length === 1) return c.json(pickFields(row(exact ?? hits[0]), fieldsOf(c)));
+    if (hits.length > 1) return c.json({ count: hits.length, characters: pickFields(hits.map(row), fieldsOf(c)) });
+    return c.json({ error: "not found" }, 404);
   });
   app.get("/api/nikkes/:id/appearances", async (c) => {
     const key2 = c.req.param("id");
@@ -22822,7 +28732,7 @@ var CREDS_KEY = "bla:creds";
 var HDR_CREDS = "x-bla-creds";
 var HDR_BLABLAID = "x-registered-blablaid";
 var edgeCache = caches.default;
-var BUILD_ID = false ? void 0 : "e623c8317d12";
+var BUILD_ID = false ? void 0 : "a3f2a49f22d8";
 var DATA_HOST = "https://nikke-api-data.pages.dev";
 var REVALIDATE_MS = 3e5;
 var appPromise;

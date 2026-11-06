@@ -45,6 +45,20 @@ export interface SpineSet {
   cover: SpineAsset;
 }
 
+export interface BurstCutscene {
+  id: string;
+  format: "spine";
+  spineVersion: string;
+  animation: string;
+  animations: { name: string; duration: number }[];
+  atlas: string;
+  skeleton: string;
+  /** Every atlas page, keyed by its original filename (not always one PNG). */
+  textures: { name: string; url: string }[];
+  viewerUrl: string;
+  source: { name: string; url: string; revision: string };
+}
+
 export interface ImageSet {
   icon: string;
   medium: string;
@@ -66,6 +80,7 @@ export interface Nikke {
     skinIndex: number;
     images: ImageSet;
     spine?: SpineSet;
+    burstCutscene?: BurstCutscene | null;
     name?: Localized<string>;
     description?: Localized<string>;
     grade?: string;
@@ -74,6 +89,8 @@ export interface Nikke {
   images: ImageSet;
   /** spine assets for skinIndex 0 (base appearance) */
   spine?: SpineSet;
+  /** Visual burst cutscene for the exact skin; null when not in the catalog. */
+  burstCutscene?: BurstCutscene | null;
   icons: { grade: string; class: string; element?: string };
   skillIcons: { skill1?: string; skill2?: string; burst?: string };
 }

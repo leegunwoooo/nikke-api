@@ -100,6 +100,7 @@ const NIKKE_EXTRA = {
   costumes: "costumes",
   images: "images",
   spine: "spine",
+  burstCutscene: "burstCutscene",
   // pseudo-include — no extra API field, it only keeps the raw per-skill
   // icon/descriptionTemplate/values that the default response strips
   skillLevels: "",
@@ -107,7 +108,7 @@ const NIKKE_EXTRA = {
 
 // routes api_get may reach — the rest have dedicated tools, and /api/user
 // (live upstream calls) and /api/tables (multi-MB raw dumps) stay closed
-const API_GET_ALLOWED = /^\/api\/(stages|costumes|equips|avatars|cubes|meta|cdn|nikkes\/[^/?]+\/spine)(\/|\?|$)/;
+const API_GET_ALLOWED = /^\/api\/(stages|costumes|equips|avatars|cubes|meta|cdn|nikkes\/[^/?]+\/(spine|burst))(\/|\?|$)/;
 
 const READ_ONLY = { readOnlyHint: true, idempotentHint: true, openWorldHint: false } as const;
 // live account data — upstream game API calls through the server's
@@ -365,7 +366,7 @@ export function buildServer(api: Fetcher, version: string, origin = "", boundBla
         include: z
           .array(z.enum(Object.keys(NIKKE_EXTRA) as [keyof typeof NIKKE_EXTRA]))
           .optional()
-          .describe("Extra sections added to the default: statsPerLevel (~30KB), voices (~80KB, voice lines incl. costumeIndex), shot (weapon mechanics — damage/charge/rate-of-fire/burst-gauge units), statEnhance (limit-break & core bonus), teammateList, costumes, images, spine (Spine animation asset URLs — atlas/skeleton/texture for stand/aim/cover stances, per costume), skillLevels (raw skill icon/descriptionTemplate/values)"),
+          .describe("Extra sections added to the default: statsPerLevel (~30KB), voices (~80KB, voice lines incl. costumeIndex), shot (weapon mechanics — damage/charge/rate-of-fire/burst-gauge units), statEnhance (limit-break & core bonus), teammateList, costumes, images, spine (Spine asset URLs for stand/aim/cover), burstCutscene (base burst visual assets and viewer link; use get_nikke_burst for costumes too), skillLevels (raw skill icon/descriptionTemplate/values)"),
         lang: LANG,
       }),
       annotations: READ_ONLY,
@@ -579,13 +580,24 @@ export function buildServer(api: Fetcher, version: string, origin = "", boundBla
     {
       title: "Spine animation asset URLs",
       description:
-        "Spine viewer asset URLs for a character — stand (lobby), aim (firing stance incl. fire/skill tracks) and cover (incl. reload) triplets {atlas, skeleton, texture} for the base appearance and every costume. Render with a Spine 4.1 runtime.",
+        "Spine viewer asset URLs for a character — stand (lobby), aim (firing stance incl. fire/skill tracks) and cover (incl. reload) triplets {atlas, skeleton, texture} for the base appearance and every costume. Render with a Spine 4.1 runtime. Also includes burstCutscene visual assets from ArtHub, with all texture pages and a viewer link; null for unavailable skins. Use viewerUrl for browser burst playback; the burst asset host restricts CORS.",
       inputSchema: z.object({
         nameOrId: z.string().min(1).describe("Character name (any language) or id"),
       }),
       annotations: READ_ONLY,
     },
     async (a) => call(api, "get_nikke_spine", `/api/nikkes/${enc(a.nameOrId)}/spine`),
+  );
+
+  server.registerTool(
+    "get_nikke_burst",
+    {
+      title: "Burst cutscene assets and viewer",
+      description: "Burst skill cutscene visual assets for a character and every costume: Spine atlas, skeleton, all texture pages, runtime version, animation tracks and an ArtHub viewer link that selects the burst track. Use viewerUrl for browser playback; the asset host restricts CORS. Exact skin matches only; unavailable cutscenes are null, with no base-skin fallback. Audio is separate (get_nikke include voices). Exact names win; ambiguous partial names return candidates.",
+      inputSchema: z.object({ nameOrId: z.string().min(1).describe("Character name (any language), id or resourceId"), lang: LANG }),
+      annotations: READ_ONLY,
+    },
+    async (a) => call(api, "get_nikke_burst", `/api/nikkes/${enc(a.nameOrId)}/burst${qs({ lang: a.lang ?? "ko" })}`),
   );
 
   server.registerTool(

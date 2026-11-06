@@ -30,6 +30,33 @@ const charRef = {
   },
 };
 
+const burstCutscene = {
+  type: ["object", "null"],
+  description: "해당 외형의 시각적 버스트 컷신. 미수록은 null이며 기본 외형으로 대체하지 않습니다. 음성은 별도입니다.",
+  required: ["id", "format", "spineVersion", "animation", "animations", "atlas", "skeleton", "textures", "viewerUrl", "source"],
+  properties: {
+    id: { type: "string" },
+    format: { type: "string", const: "spine" },
+    spineVersion: { type: "string", example: "4.1.20" },
+    animation: { type: "string", example: "skillcut_1", description: "검증된 버스트 재생 트랙" },
+    animations: { type: "array", items: { type: "object", properties: { name: { type: "string" }, duration: { type: "number", description: "초" } } } },
+    atlas: { type: "string", format: "uri" },
+    skeleton: { type: "string", format: "uri" },
+    textures: { type: "array", items: { type: "object", required: ["name", "url"], properties: { name: { type: "string" }, url: { type: "string", format: "uri" } } } },
+    viewerUrl: { type: "string", format: "uri" },
+    source: { type: "object", properties: { name: { type: "string" }, url: { type: "string", format: "uri" }, revision: { type: "string" } } },
+  },
+};
+const burstResult = {
+  type: "object",
+  required: ["id", "resourceId", "name", "burstCutscene", "costumes"],
+  properties: {
+    id: { type: "integer" }, resourceId: { type: "integer" }, name: { oneOf: [localized, { type: "string" }] },
+    burstCutscene,
+    costumes: { type: "array", items: { type: "object", properties: { id: { type: "integer" }, skinIndex: { type: "integer" }, name: { oneOf: [localized, { type: "string" }] }, burstCutscene } } },
+  },
+};
+
 const ownedNikkeSummary = {
   type: "object",
   description: "목록 모드(q 없음) 항목 — 경량",
@@ -177,6 +204,22 @@ const openapi = {
           },
         ],
         responses: { "200": { description: "캐릭터 상세" }, "404": { description: "없음" } },
+      },
+    },
+    "/api/nikkes/{id}/burst": {
+      get: {
+        tags: ["nikkes"],
+        summary: "기본 외형·코스튬별 버스트 컷신 리소스와 뷰어 링크",
+        description: "ArtHub의 검증된 URL 목록을 참조합니다. 정확한 이름을 우선하며, 부분 일치 후보가 여러 개면 목록을 반환합니다. 미수록 캐릭터/코스튬은 burstCutscene: null입니다.",
+        parameters: [
+          { name: "id", in: "path", required: true, schema: { type: "string" }, description: "캐릭터 ID / resourceId / 이름", example: "라피" },
+          { name: "lang", in: "query", schema: { type: "string", enum: ["ko", "en", "ja", "zh-TW"] } },
+          { name: "fields", in: "query", schema: { type: "string" } },
+        ],
+        responses: {
+          "200": { description: "컷신 리소스 또는 이름 후보 목록", content: { "application/json": { schema: { oneOf: [burstResult, { type: "object", required: ["count", "characters"], properties: { count: { type: "integer" }, characters: { type: "array", items: burstResult } } }] } } } },
+          "404": { description: "캐릭터 없음" },
+        },
       },
     },
     "/api/scenes": {

@@ -4,6 +4,7 @@ import { cors } from "hono/cors";
 import path from "node:path";
 import { cacheHeaders } from "./cache.js";
 import { cdnUrl } from "./cdn.js";
+import { getBurstCutscene, withBurstCutscenes } from "./burst.js";
 import { groupEventScenes } from "./events.js";
 import { buildFamilies } from "./family.js";
 import { favoriteRouteEntries, ROUTE_COVERAGE_CHAPTER, ROUTE_SOURCES, STORY_ROUTE } from "./story-route.js";
@@ -100,7 +101,7 @@ interface CharacterData {
 const characterData: CharacterData = JSON.parse(
   await storage.readText(path.join("characters.json")),
 );
-const characters = characterData.characters;
+const characters = characterData.characters.map(withBurstCutscenes);
 const byId = new Map(characters.map((c) => [c.id, c]));
 const byResourceId = new Map(characters.map((c) => [c.resourceId, c]));
 const families = buildFamilies(characters);
@@ -273,6 +274,7 @@ const costumeRow = (tid: number, co: any, scenes: SceneIndexEntry[] = []) => {
     grade: co.grade ?? null,
     costumeIndex: co.costumeIndex ?? 0,
     images: owned?.costume.images ?? null,
+    burstCutscene: Number.isInteger(co.costumeIndex) ? getBurstCutscene(co.resourceId, co.costumeIndex) : null,
     character: n ? { id: n.id, resourceId: n.resourceId, name: n.name, rarity: n.rarity } : null,
     storyScenes: storyScenesOf(tid, scenes),
   };
@@ -544,7 +546,8 @@ app.get("/", (c) =>
       "GET /api/events/:id": "event detail — episode scene list",
       "GET /api/events/:id/script": "whole event script, episode by episode ('speaker: text')",
       "GET /api/lines": "dialogue search; q (text) and/or speaker, family, category; 50 per page by default",
-      "GET /api/nikkes/:id/spine": "Spine animation asset URLs (stand/aim/cover, per costume)",
+      "GET /api/nikkes/:id/spine": "Spine animation asset URLs (stand/aim/cover) and burstCutscene, per costume",
+      "GET /api/nikkes/:id/burst": "Burst cutscene asset URLs and viewer links (base and exact costumes; missing = null)",
       "GET /api/nikkes/:id/appearances": "scenes and events a character speaks in (all versions)",
       "GET /api/story/route": "story reading order (community guide)",
       "GET /api/story/next": "next stories on the route; chapter|after, done, required",
@@ -981,7 +984,7 @@ app.get("/api/lines", async (c) => {
   });
 });
 
-// Spine viewer assets per skin: stand + combat aim/cover stances.
+// Spine viewer assets per skin, with separately sourced burst cutscenes.
 app.get("/api/nikkes/:id/spine", async (c) => {
   const key = c.req.param("id");
   const n = /^\d+$/.test(key) ? byId.get(Number(key)) ?? byResourceId.get(Number(key)) : findByName(key)[0];
@@ -991,13 +994,32 @@ app.get("/api/nikkes/:id/spine", async (c) => {
     resourceId: n.resourceId,
     name: n.name,
     spine: n.spine ?? null,
+    burstCutscene: n.burstCutscene ?? null,
     costumes: n.costumes.map((co) => ({
       id: co.id,
       skinIndex: co.skinIndex,
       name: co.name,
       spine: co.spine ?? null,
+      burstCutscene: co.burstCutscene ?? null,
     })),
   });
+});
+
+app.get("/api/nikkes/:id/burst", (c) => {
+  const key = c.req.param("id");
+  const hit = /^\d+$/.test(key) ? byId.get(Number(key)) ?? byResourceId.get(Number(key)) : undefined;
+  const hits = hit ? [hit] : findByName(key);
+  const exact = hits.find(n => Object.values(n.name).some(name => norm(name) === norm(key)));
+  const row = (n: Nikke) => ({
+    id: n.id,
+    resourceId: n.resourceId,
+    name: n.name,
+    burstCutscene: n.burstCutscene ?? null,
+    costumes: n.costumes.map(co => ({ id: co.id, skinIndex: co.skinIndex, name: co.name, burstCutscene: co.burstCutscene ?? null })),
+  });
+  if (exact || hits.length === 1) return c.json(pickFields(row(exact ?? hits[0]), fieldsOf(c)));
+  if (hits.length > 1) return c.json({ count: hits.length, characters: pickFields(hits.map(row), fieldsOf(c)) });
+  return c.json({ error: "not found" }, 404);
 });
 
 // every scene a character speaks in (all versions of them), most lines first

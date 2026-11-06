@@ -5,10 +5,11 @@
 >
 > 본 프로젝트는 **비공식·비상업적 팬 프로젝트**입니다. 이 API를 통해 제공되는 모든 게임 데이터, 캐릭터 정보, 이미지, 텍스트 등 콘텐츠의 저작권 및 지적재산권은 **© SHIFT UP / Level Infinite**에 있습니다.
 >
-> 본 프로젝트는 SHIFT UP 및 Level Infinite와 아무런 관련이 없으며, 공인·후원·승인받은 서비스가 아닙니다. 데이터는 공개된 [BlablaLink](https://www.blablalink.com) CDN 리소스를 그대로 참조하여 제공하며, 재호스팅·수정하지 않습니다. 단, 다음 스토리 대본은 예외로, 게임 데이터에 없어 별도로 수집해 제공합니다.
+> 본 프로젝트는 SHIFT UP 및 Level Infinite와 아무런 관련이 없으며, 공인·후원·승인받은 서비스가 아닙니다. 기본 데이터는 공개된 [BlablaLink](https://www.blablalink.com) CDN 리소스를 참조합니다. 다음 데이터는 별도 공개 자료에서 가져옵니다.
 >
 > - [`content/favorite-stories/`](content/favorite-stories/README.md)의 애장품 스토리: 공개 영상 화면에서 옮겨 적어 이 저장소에 보관합니다.
 > - `library` 카테고리의 스토리: 커뮤니티 기록 [Nikke Forbidden Library](https://github.com/VoMiRin/Nikke-Forbidden-Library)에서 가져와 API 형식으로 변환해 제공합니다. 단, [`content/library-stories/`](content/library-stories/README.md)의 대본은 공개 영상 화면에서 옮겨 적어 이 저장소에 보관합니다.
+> - 버스트 컷신: [ArtHub](https://github.com/Talors1225/arthub-viewer-web)의 공개 Spine 리소스 URL을 참조합니다. [검증된 URL 메타데이터](content/burst-cutscenes/README.md)만 보관하며 이미지·애니메이션 파일은 재호스팅하지 않습니다.
 >
 > 상업적 이용을 금지하며, 권리자의 요청이 있을 경우 즉시 서비스를 중단합니다.
 
@@ -37,6 +38,7 @@ BlablaLink(공식 위키 도구)의 CDN 데이터를 매일 동기화합니다. 
 |------|------|
 | 기본 정보 | ID, 이름(4개 언어), 레어도, 클래스, 버스트 스텝, 기업, 속성, 무기/공격 타입 |
 | 이미지 | 아이콘 / 미디엄 / 전신 일러스트 (CDN URL), 등급·클래스·속성 아이콘, 스킬 아이콘 |
+| 버스트 컷신 | `burstCutscene`: 기본 외형·코스튬별 Spine atlas/skeleton/전체 texture 페이지와 ArtHub 뷰어 링크. 미수록은 `null`, 음성은 별도 |
 | 코스튬 | 스킨 캐릭터별 코스튬 목록 + 각 코스튬 이미지 세트. `/api/costumes/:id`는 그 코스튬 전용 대사+음성(`voices`)도 함께 제공 |
 | 스킬 | 슬롯별(`skill1`/`skill2`/`burst`) 이름·설명(최대 레벨 렌더링) + 원본 템플릿·레벨별 수치, 버스트 쿨타임 |
 | 스탯 | 레벨별 공격력/방어력/HP 배열 (Lv1~최대) |
@@ -108,6 +110,8 @@ GET /api/user/<blablaid>/nikke/아니스               # 부분 일치 → 매�
 |------------|------|
 | `GET /api/nikkes` | 캐릭터 목록 — `?q=` 이름 검색(전 언어 부분 일치), `?family=` 이격 포함 확장 검색, `?element=` `?class=` `?burst=` `?corporation=` `?weapon=` `?rarity=` 필터 (AND 결합), `?limit=`/`?offset=`/`?page=` 페이지네이션 (미지정 시 전체, 최대 500, `limit=0`은 400 — `count`는 잘라내기 전 전체 개수). 공백뿐인 `?q=`는 결과 없음 |
 | `GET /api/nikkes/:id` | 캐릭터 상세 — 스킬/스탯/배경/CV/보이스 등 `details` 포함. `:id`는 캐릭터 ID·resourceId·이름(부분 일치) 모두 가능 |
+| `GET /api/nikkes/:id/burst` | 버스트 컷신 리소스·뷰어 링크 — 기본 외형과 각 코스튬. 정확한 이름 우선, 복수 부분 일치 시 후보 목록 |
+| `GET /api/nikkes/:id/spine` | 스탠딩·사격·엄폐 Spine 리소스와 `burstCutscene` — 기본 외형과 각 코스튬 |
 | `GET /api/scenes` | 씬 목록 — `?category=`(`main`/`event`/`sudden`/`attractive`/`favorite`/`library`) `?nikke=` `?q=` `?limit=`/`?offset=`/`?page=` |
 | `GET /api/scenes/:groupId` | 씬 대본 — 대사별 화자/아이콘/보이스 |
 | `GET /api/lines` | 대사 전문 검색 — `?q=`(구두점 무시) 또는 `?speaker=` 필수, `?category=` `?nikke=` `?family=` `?limit=`(기본 50, 최대 500)/`?offset=`/`?page=` |
