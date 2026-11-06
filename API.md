@@ -350,7 +350,7 @@ GET /api/nikkes/511/burst?lang=ko
 
 기존 `atlas`·`skeleton`·`textures[].url`은 외부 원본 URL입니다. 외부 R2의 CORS는 ArtHub Origin만 허용하므로 자체 뷰어는 `/burst-assets/<revision>/<id>/<파일명>`으로 카탈로그의 파일만 중계합니다. 임의 URL·미등록 파일은 받지 않으며, 성공 응답은 기존 API 엣지 캐시를 사용하고 실패는 캐시하지 않습니다. `source.viewerUrl`은 단일 원본 트랙을 확인할 때 사용합니다.
 
-자료는 [ArtHub](https://github.com/Talors1225/arthub-viewer-web)의 공개 URL 목록을 검증해 수동 갱신합니다. 게임 전체 컷신의 완전한 목록은 아닙니다. 코스튬 전용 컷신이 없으면 기본 컷신으로 대체하지 않고 `null`을 반환합니다. 이는 게임 안에 컷신이 없다는 뜻이 아닙니다. 영상·음성 합본이 아닌 시각 애니메이션 리소스입니다. 버스트 관련 대사·음성은 `voice`로 제공하고, 나머지 음성은 `details.voices`를 별도로 사용합니다. 외부 호스트의 파일 삭제·주소 변경·CORS 정책은 이 API가 보장하지 않습니다. [수록 범위와 갱신 방법](https://github.com/leegunwoooo/nikke-api/blob/main/content/burst-cutscenes/README.md).
+자료는 [ArtHub](https://github.com/Talors1225/arthub-viewer-web)의 공개 URL 목록을 검증해 수동 갱신합니다. 게임 전체 컷신의 완전한 목록은 아닙니다. 코스튬 전용 컷신이 없으면 기본 외형의 컷신을 반환하고, 기본 외형도 미수록이면 `null`을 반환합니다. 미수록이라고 해서 게임 안에 컷신이 없다는 뜻은 아닙니다. 영상·음성 합본이 아닌 시각 애니메이션 리소스입니다. 버스트 관련 대사·음성은 `voice`로 제공하고, 나머지 음성은 `details.voices`를 별도로 사용합니다. 외부 호스트의 파일 삭제·주소 변경·CORS 정책은 이 API가 보장하지 않습니다. [수록 범위와 갱신 방법](https://github.com/leegunwoooo/nikke-api/blob/main/content/burst-cutscenes/README.md).
 
 ## GET /api/meta/filters
 

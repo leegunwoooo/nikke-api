@@ -280,7 +280,7 @@ const costumeRow = (tid: number, co: any, scenes: SceneIndexEntry[] = []) => {
     grade: co.grade ?? null,
     costumeIndex: co.costumeIndex ?? 0,
     images: owned?.costume.images ?? null,
-    burstCutscene: Number.isInteger(co.costumeIndex) ? getBurstCutscene(co.resourceId, co.costumeIndex) : null,
+    burstCutscene: Number.isInteger(co.costumeIndex) ? (getBurstCutscene(co.resourceId, co.costumeIndex) ?? getBurstCutscene(co.resourceId)) : null,
     character: n ? { id: n.id, resourceId: n.resourceId, name: n.name, rarity: n.rarity } : null,
     storyScenes: storyScenesOf(tid, scenes),
   };
@@ -1250,7 +1250,9 @@ const costumeWithVoices = async (tid: number, row: object) => {
   const detail = owner ? ((await getDetail(owner.nikke.id)) as { voices?: DetailVoice[] } | null) : null;
   const voices = (detail?.voices ?? []).filter((v) => v.costumeIndex === owner?.costume.skinIndex);
   const burst = (row as { burstCutscene?: BurstCutscene | null }).burstCutscene;
-  const enriched = burst && owner ? { ...burst, voice: burstVoiceFor(detail?.voices, owner.costume.skinIndex) } : burst;
+  const own = burstVoiceFor(detail?.voices, owner?.costume.skinIndex ?? 0);
+  const baseV = burstVoiceFor(detail?.voices, 0);
+  const enriched = burst && owner ? { ...burst, voice: { burst: own.burst ?? baseV.burst, ready: own.ready ?? baseV.ready, full: own.full ?? baseV.full } } : burst;
   return { ...row, burstCutscene: enriched ?? null, voices };
 };
 

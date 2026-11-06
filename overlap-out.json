@@ -1,0 +1,940 @@
+[
+ {
+  "id": "c015_00_skillcut",
+  "chosen": "skillcut_1",
+  "mainVis": 160,
+  "cands": [
+   {
+    "name": "skillcut_2",
+    "dur": 3.3333334922790527,
+    "vis": 160,
+    "overlap": 160,
+    "ratio": 1
+   }
+  ]
+ },
+ {
+  "id": "c016_00_skillcut",
+  "chosen": "skillcut_1",
+  "mainVis": 75,
+  "cands": [
+   {
+    "name": "skillcut_2",
+    "dur": 3.266666889190674,
+    "vis": 134,
+    "overlap": 0,
+    "ratio": 0
+   },
+   {
+    "name": "skillcut_3",
+    "dur": 3.266666889190674,
+    "vis": 13,
+    "overlap": 0,
+    "ratio": 0
+   }
+  ]
+ },
+ {
+  "id": "c017_01_skillcut",
+  "chosen": "skillcut_1",
+  "mainVis": 0,
+  "cands": [
+   {
+    "name": "skillcut_2",
+    "dur": 5.800000190734863,
+    "vis": 25,
+    "overlap": 0,
+    "ratio": 0
+   }
+  ]
+ },
+ {
+  "id": "c063_00_skillcut",
+  "chosen": "skillcut_1",
+  "mainVis": 183,
+  "cands": [
+   {
+    "name": "bg_skillcut_1",
+    "dur": 4.700000286102295,
+    "vis": 1,
+    "overlap": 0,
+    "ratio": 0
+   }
+  ]
+ },
+ {
+  "id": "c073_00_skillcut",
+  "chosen": "skillcut_1",
+  "mainVis": 5,
+  "cands": [
+   {
+    "name": "skillcut_2",
+    "dur": 6.366666793823242,
+    "vis": 146,
+    "overlap": 0,
+    "ratio": 0
+   }
+  ]
+ },
+ {
+  "id": "c093_skillcut",
+  "chosen": "skillcut_1",
+  "mainVis": 1,
+  "cands": [
+   {
+    "name": "skillcut_0",
+    "dur": 3.6000001430511475,
+    "vis": 138,
+    "overlap": 0,
+    "ratio": 0
+   }
+  ]
+ },
+ {
+  "id": "c094_00_skillcut",
+  "chosen": "skillcut_1_OFF",
+  "mainVis": 23,
+  "cands": [
+   {
+    "name": "skillcut_2_OFF_MOVE_BIG",
+    "dur": 4.300000190734863,
+    "vis": 219,
+    "overlap": 19,
+    "ratio": 0.09
+   },
+   {
+    "name": "skillcut_3_OFF",
+    "dur": 4.300000190734863,
+    "vis": 39,
+    "overlap": 19,
+    "ratio": 0.49
+   }
+  ]
+ },
+ {
+  "id": "c103_00_skillcut",
+  "chosen": "skillcut_1",
+  "mainVis": 179,
+  "cands": [
+   {
+    "name": "bg_idle",
+    "dur": 5.333333492279053,
+    "vis": 1,
+    "overlap": 0,
+    "ratio": 0
+   },
+   {
+    "name": "bg_skillcut_1",
+    "dur": 4.600000381469727,
+    "vis": 1,
+    "overlap": 0,
+    "ratio": 0
+   }
+  ]
+ },
+ {
+  "id": "c112_00_skillcut",
+  "chosen": "skillcut_1",
+  "mainVis": 126,
+  "cands": [
+   {
+    "name": "x_setting",
+    "dur": 0.6666666865348816,
+    "vis": 113,
+    "overlap": 112,
+    "ratio": 0.99
+   }
+  ]
+ },
+ {
+  "id": "c113_00_skillcut",
+  "chosen": "skillcut_1",
+  "mainVis": 183,
+  "cands": [
+   {
+    "name": "skillcut_2",
+    "dur": 5.300000190734863,
+    "vis": 0,
+    "overlap": 0,
+    "ratio": 0
+   }
+  ]
+ },
+ {
+  "id": "c170_04_skillcut",
+  "chosen": "skillcut_1",
+  "mainVis": 120,
+  "cands": [
+   {
+    "name": "bg_idle",
+    "dur": 6.6666669845581055,
+    "vis": 10,
+    "overlap": 0,
+    "ratio": 0
+   },
+   {
+    "name": "bg_skillcut_1",
+    "dur": 7.200000286102295,
+    "vis": 12,
+    "overlap": 0,
+    "ratio": 0
+   }
+  ]
+ },
+ {
+  "id": "c190_00_skillcut",
+  "chosen": "skillcut_all",
+  "mainVis": 96,
+  "cands": [
+   {
+    "name": "skillcut_1",
+    "dur": 2.8333334922790527,
+    "vis": 88,
+    "overlap": 88,
+    "ratio": 1
+   },
+   {
+    "name": "skillcut_2",
+    "dur": 2.8333334922790527,
+    "vis": 8,
+    "overlap": 8,
+    "ratio": 1
+   },
+   {
+    "name": "skillcut_all2",
+    "dur": 2.8333334922790527,
+    "vis": 96,
+    "overlap": 96,
+    "ratio": 1
+   }
+  ]
+ },
+ {
+  "id": "c191_02_skillcut",
+  "chosen": "skillcut_1",
+  "mainVis": 1,
+  "cands": [
+   {
+    "name": "skillcut_2",
+    "dur": 7.100000381469727,
+    "vis": 134,
+    "overlap": 0,
+    "ratio": 0
+   }
+  ]
+ },
+ {
+  "id": "c200_00_skillcut",
+  "chosen": "skillcut_1",
+  "mainVis": 118,
+  "cands": [
+   {
+    "name": "skillcut_2",
+    "dur": 4.266666889190674,
+    "vis": 70,
+    "overlap": 1,
+    "ratio": 0.01
+   }
+  ]
+ },
+ {
+  "id": "c220_00_skillcut",
+  "chosen": "skillcut_1",
+  "mainVis": 55,
+  "cands": [
+   {
+    "name": "skillcut_2",
+    "dur": 1,
+    "vis": 55,
+    "overlap": 55,
+    "ratio": 1
+   }
+  ]
+ },
+ {
+  "id": "c222_01_skillcut",
+  "chosen": "skillcut_1",
+  "mainVis": 134,
+  "cands": [
+   {
+    "name": "skillcut_1_1",
+    "dur": 4.6666669845581055,
+    "vis": 116,
+    "overlap": 116,
+    "ratio": 1
+   },
+   {
+    "name": "skillcut_1_2",
+    "dur": 4.6666669845581055,
+    "vis": 14,
+    "overlap": 14,
+    "ratio": 1
+   },
+   {
+    "name": "skillcut_1_3",
+    "dur": 4.6666669845581055,
+    "vis": 3,
+    "overlap": 3,
+    "ratio": 1
+   },
+   {
+    "name": "skillcut_1_4",
+    "dur": 4.6666669845581055,
+    "vis": 1,
+    "overlap": 1,
+    "ratio": 1
+   }
+  ]
+ },
+ {
+  "id": "c223_00_skillcut",
+  "chosen": "skillcut_all",
+  "mainVis": 12,
+  "cands": [
+   {
+    "name": "skillcut_1",
+    "dur": 7.6666669845581055,
+    "vis": 12,
+    "overlap": 12,
+    "ratio": 1
+   },
+   {
+    "name": "skillcut_2",
+    "dur": 7.6666669845581055,
+    "vis": 12,
+    "overlap": 12,
+    "ratio": 1
+   },
+   {
+    "name": "skillcut_3",
+    "dur": 7.6666669845581055,
+    "vis": 12,
+    "overlap": 12,
+    "ratio": 1
+   }
+  ]
+ },
+ {
+  "id": "c223_01_skillcut",
+  "chosen": "skillcut_1",
+  "mainVis": 1,
+  "cands": [
+   {
+    "name": "skillcut_2",
+    "dur": 4.6666669845581055,
+    "vis": 38,
+    "overlap": 0,
+    "ratio": 0
+   },
+   {
+    "name": "skillcut_3",
+    "dur": 4.6666669845581055,
+    "vis": 14,
+    "overlap": 0,
+    "ratio": 0
+   }
+  ]
+ },
+ {
+  "id": "c225_00_skillcut",
+  "chosen": "skillcut_all",
+  "mainVis": 133,
+  "cands": [
+   {
+    "name": "skillcut_1",
+    "dur": 2.6666667461395264,
+    "vis": 119,
+    "overlap": 119,
+    "ratio": 1
+   },
+   {
+    "name": "skillcut_2",
+    "dur": 2.6666667461395264,
+    "vis": 9,
+    "overlap": 8,
+    "ratio": 0.89
+   },
+   {
+    "name": "skillcut_3",
+    "dur": 2.200000047683716,
+    "vis": 15,
+    "overlap": 2,
+    "ratio": 0.13
+   }
+  ]
+ },
+ {
+  "id": "c234_00_skillcut",
+  "chosen": "skillcut_1",
+  "mainVis": 1,
+  "cands": [
+   {
+    "name": "skillcut_2",
+    "dur": 4.133333683013916,
+    "vis": 305,
+    "overlap": 0,
+    "ratio": 0
+   }
+  ]
+ },
+ {
+  "id": "c242_00_skillcut",
+  "chosen": "skillcut_1",
+  "mainVis": 113,
+  "cands": [
+   {
+    "name": "skillcut_2",
+    "dur": 2,
+    "vis": 6,
+    "overlap": 6,
+    "ratio": 1
+   },
+   {
+    "name": "skillcut_3",
+    "dur": 2.3333334922790527,
+    "vis": 119,
+    "overlap": 113,
+    "ratio": 0.95
+   }
+  ]
+ },
+ {
+  "id": "c262_00_skillcut",
+  "chosen": "skillcut_1",
+  "mainVis": 36,
+  "cands": [
+   {
+    "name": "skillcut_0",
+    "dur": 5.000000476837158,
+    "vis": 112,
+    "overlap": 0,
+    "ratio": 0
+   }
+  ]
+ },
+ {
+  "id": "c262_01_skillcut",
+  "chosen": "skillcut_1",
+  "mainVis": 298,
+  "cands": [
+   {
+    "name": "skillcut_2",
+    "dur": 6.333333492279053,
+    "vis": 33,
+    "overlap": 1,
+    "ratio": 0.03
+   }
+  ]
+ },
+ {
+  "id": "c281_02_skillcut",
+  "chosen": "skillcut_1",
+  "mainVis": 3,
+  "cands": [
+   {
+    "name": "skillcut_2",
+    "dur": 5.000000476837158,
+    "vis": 166,
+    "overlap": 0,
+    "ratio": 0
+   }
+  ]
+ },
+ {
+  "id": "c284_00_skillcut",
+  "chosen": "skillcut_1",
+  "mainVis": 139,
+  "cands": [
+   {
+    "name": "skillcut_2",
+    "dur": 3.8333334922790527,
+    "vis": 139,
+    "overlap": 139,
+    "ratio": 1
+   }
+  ]
+ },
+ {
+  "id": "c315_00_skillcut",
+  "chosen": "skillcut_1",
+  "mainVis": 138,
+  "cands": [
+   {
+    "name": "skillcut_2",
+    "dur": 7.333333492279053,
+    "vis": 12,
+    "overlap": 0,
+    "ratio": 0
+   }
+  ]
+ },
+ {
+  "id": "c330_00_skillcut",
+  "chosen": "skillcut_all",
+  "mainVis": 158,
+  "cands": [
+   {
+    "name": "skillcut_1",
+    "dur": 4.300000190734863,
+    "vis": 156,
+    "overlap": 156,
+    "ratio": 1
+   },
+   {
+    "name": "skillcut_2",
+    "dur": 4.300000190734863,
+    "vis": 0,
+    "overlap": 0,
+    "ratio": 0
+   }
+  ]
+ },
+ {
+  "id": "c331_00_skillcut",
+  "chosen": "skillcut_1",
+  "mainVis": 1,
+  "cands": [
+   {
+    "name": "skillcut_2",
+    "dur": 6.200000286102295,
+    "vis": 141,
+    "overlap": 0,
+    "ratio": 0
+   }
+  ]
+ },
+ {
+  "id": "c353_00_skillcut",
+  "chosen": "skillcut_all",
+  "mainVis": 41,
+  "cands": [
+   {
+    "name": "skillcut_1",
+    "dur": 4.566667079925537,
+    "vis": 41,
+    "overlap": 41,
+    "ratio": 1
+   },
+   {
+    "name": "skillcut_2",
+    "dur": 4.566667079925537,
+    "vis": 41,
+    "overlap": 41,
+    "ratio": 1
+   },
+   {
+    "name": "skillcut_3",
+    "dur": 4.566667079925537,
+    "vis": 38,
+    "overlap": 38,
+    "ratio": 1
+   },
+   {
+    "name": "skillcut_4",
+    "dur": 4.566667079925537,
+    "vis": 28,
+    "overlap": 27,
+    "ratio": 0.96
+   },
+   {
+    "name": "skillcut_5",
+    "dur": 4.566667079925537,
+    "vis": 26,
+    "overlap": 26,
+    "ratio": 1
+   },
+   {
+    "name": "skillcut_6",
+    "dur": 4.566667079925537,
+    "vis": 5,
+    "overlap": 5,
+    "ratio": 1
+   },
+   {
+    "name": "skillcut_7",
+    "dur": 4.566667079925537,
+    "vis": 12,
+    "overlap": 12,
+    "ratio": 1
+   },
+   {
+    "name": "skillcut_8",
+    "dur": 4.566667079925537,
+    "vis": 12,
+    "overlap": 12,
+    "ratio": 1
+   }
+  ]
+ },
+ {
+  "id": "c355_00_skillcut",
+  "chosen": "skillcut_1",
+  "mainVis": 119,
+  "cands": [
+   {
+    "name": "skillcut_2",
+    "dur": 3.500000238418579,
+    "vis": 15,
+    "overlap": 0,
+    "ratio": 0
+   }
+  ]
+ },
+ {
+  "id": "c361_00_skillcut",
+  "chosen": "skillcut_all",
+  "mainVis": 84,
+  "cands": [
+   {
+    "name": "skillcut_1",
+    "dur": 4,
+    "vis": 84,
+    "overlap": 84,
+    "ratio": 1
+   },
+   {
+    "name": "skillcut_2",
+    "dur": 4,
+    "vis": 84,
+    "overlap": 84,
+    "ratio": 1
+   }
+  ]
+ },
+ {
+  "id": "c411_00_skillcut",
+  "chosen": "skillcut_1",
+  "mainVis": 1,
+  "cands": [
+   {
+    "name": "skillcut_2",
+    "dur": 4.733333587646484,
+    "vis": 237,
+    "overlap": 0,
+    "ratio": 0
+   },
+   {
+    "name": "skillcut_3",
+    "dur": 4.733333587646484,
+    "vis": 42,
+    "overlap": 0,
+    "ratio": 0
+   }
+  ]
+ },
+ {
+  "id": "c470_02_skillcut",
+  "chosen": "skillcut_1",
+  "mainVis": 108,
+  "cands": [
+   {
+    "name": "skillcut_2",
+    "dur": 6.6666669845581055,
+    "vis": 16,
+    "overlap": 0,
+    "ratio": 0
+   }
+  ]
+ },
+ {
+  "id": "c471_00_skillcut",
+  "chosen": "skillcut_1",
+  "mainVis": 246,
+  "cands": [
+   {
+    "name": "skillcut_0",
+    "dur": 5.433333396911621,
+    "vis": 252,
+    "overlap": 246,
+    "ratio": 0.98
+   },
+   {
+    "name": "skillcut_2",
+    "dur": 5.433333396911621,
+    "vis": 30,
+    "overlap": 30,
+    "ratio": 1
+   }
+  ]
+ },
+ {
+  "id": "c513_01_skillcut",
+  "chosen": "skill_cut",
+  "mainVis": 179,
+  "cands": [
+   {
+    "name": "skill_cut_bg",
+    "dur": 4.333333492279053,
+    "vis": 4,
+    "overlap": 3,
+    "ratio": 0.75
+   }
+  ]
+ },
+ {
+  "id": "c513_03_skillcut",
+  "chosen": "skillcut_all",
+  "mainVis": 267,
+  "cands": [
+   {
+    "name": "skillcut_1",
+    "dur": 6.500000476837158,
+    "vis": 62,
+    "overlap": 62,
+    "ratio": 1
+   },
+   {
+    "name": "skillcut_2",
+    "dur": 6.500000476837158,
+    "vis": 198,
+    "overlap": 198,
+    "ratio": 1
+   }
+  ]
+ },
+ {
+  "id": "c532_00_skillcut",
+  "chosen": "skillcut_1_all",
+  "mainVis": 78,
+  "cands": [
+   {
+    "name": "skillcut_1_bg",
+    "dur": 3.9666669368743896,
+    "vis": 2,
+    "overlap": 2,
+    "ratio": 1
+   },
+   {
+    "name": "skillcut_1_character",
+    "dur": 3.9666669368743896,
+    "vis": 77,
+    "overlap": 77,
+    "ratio": 1
+   }
+  ]
+ },
+ {
+  "id": "c580_01_skillcut",
+  "chosen": "skillcut_1",
+  "mainVis": 0,
+  "cands": [
+   {
+    "name": "skillcut_2",
+    "dur": 4.733333587646484,
+    "vis": 252,
+    "overlap": 0,
+    "ratio": 0
+   },
+   {
+    "name": "skillcut_3",
+    "dur": 4.733333587646484,
+    "vis": 2,
+    "overlap": 0,
+    "ratio": 0
+   }
+  ]
+ },
+ {
+  "id": "c582_00_skillcut",
+  "chosen": "skillcut_1",
+  "mainVis": 1,
+  "cands": [
+   {
+    "name": "skillcut_0",
+    "dur": 4.233333587646484,
+    "vis": 185,
+    "overlap": 0,
+    "ratio": 0
+   }
+  ]
+ },
+ {
+  "id": "c583_00_skillcut",
+  "chosen": "skillcut_all",
+  "mainVis": 264,
+  "cands": [
+   {
+    "name": "skillcut_1",
+    "dur": 5.333333492279053,
+    "vis": 250,
+    "overlap": 250,
+    "ratio": 1
+   },
+   {
+    "name": "skillcut_2",
+    "dur": 5.333333492279053,
+    "vis": 10,
+    "overlap": 10,
+    "ratio": 1
+   }
+  ]
+ },
+ {
+  "id": "c590_00_skillcut",
+  "chosen": "skillcut_1",
+  "mainVis": 122,
+  "cands": [
+   {
+    "name": "skillcut_2",
+    "dur": 4,
+    "vis": 3,
+    "overlap": 1,
+    "ratio": 0.33
+   }
+  ]
+ },
+ {
+  "id": "c620_00_skillcut",
+  "chosen": "skillcut_1",
+  "mainVis": 207,
+  "cands": [
+   {
+    "name": "skillcut_2",
+    "dur": 5.700000286102295,
+    "vis": 36,
+    "overlap": 1,
+    "ratio": 0.03
+   }
+  ]
+ },
+ {
+  "id": "c833_00_skillcut",
+  "chosen": "skillcut_1",
+  "mainVis": 1,
+  "cands": [
+   {
+    "name": "skillcut_2",
+    "dur": 3.6666667461395264,
+    "vis": 108,
+    "overlap": 0,
+    "ratio": 0
+   }
+  ]
+ },
+ {
+  "id": "c850_03_skillcut",
+  "chosen": "skillcut_1",
+  "mainVis": 191,
+  "cands": [
+   {
+    "name": "skillcut_1-1",
+    "dur": 4,
+    "vis": 0,
+    "overlap": 0,
+    "ratio": 0
+   },
+   {
+    "name": "skillcut_1-2",
+    "dur": 4,
+    "vis": 193,
+    "overlap": 191,
+    "ratio": 0.99
+   }
+  ]
+ },
+ {
+  "id": "catalog-c852_00_skillcut",
+  "chosen": "skillcut",
+  "mainVis": 159,
+  "cands": [
+   {
+    "name": "skillcut_bg",
+    "dur": 4.233333587646484,
+    "vis": 1,
+    "overlap": 0,
+    "ratio": 0
+   }
+  ]
+ },
+ {
+  "id": "c860_00_skillcut",
+  "chosen": "all_skillcut",
+  "mainVis": 164,
+  "cands": [
+   {
+    "name": "all_idle",
+    "dur": 5.333333492279053,
+    "vis": 161,
+    "overlap": 161,
+    "ratio": 1
+   },
+   {
+    "name": "skillcut_1",
+    "dur": 5.6666669845581055,
+    "vis": 163,
+    "overlap": 163,
+    "ratio": 1
+   },
+   {
+    "name": "skillcut_2",
+    "dur": 5.6666669845581055,
+    "vis": 1,
+    "overlap": 1,
+    "ratio": 1
+   }
+  ]
+ },
+ {
+  "id": "c861_00_skillcut",
+  "chosen": "skillcut_all",
+  "mainVis": 93,
+  "cands": [
+   {
+    "name": "skillcut_1",
+    "dur": 6.40000057220459,
+    "vis": 92,
+    "overlap": 92,
+    "ratio": 1
+   },
+   {
+    "name": "skillcut_2",
+    "dur": 6.40000057220459,
+    "vis": 1,
+    "overlap": 1,
+    "ratio": 1
+   }
+  ]
+ },
+ {
+  "id": "c870_00_skillcut",
+  "chosen": "skillcut_1",
+  "mainVis": 33,
+  "cands": [
+   {
+    "name": "skillcut_2",
+    "dur": 4.433333396911621,
+    "vis": 14,
+    "overlap": 12,
+    "ratio": 0.86
+   }
+  ]
+ },
+ {
+  "id": "c871_00_skillcut",
+  "chosen": "skillcut_1",
+  "mainVis": 92,
+  "cands": [
+   {
+    "name": "skillcut_0",
+    "dur": 4.400000095367432,
+    "vis": 89,
+    "overlap": 0,
+    "ratio": 0
+   }
+  ]
+ },
+ {
+  "id": "c872_skillcut_00",
+  "chosen": "skillcut_1",
+  "mainVis": 118,
+  "cands": [
+   {
+    "name": "bg_idle",
+    "dur": 5.333333492279053,
+    "vis": 44,
+    "overlap": 0,
+    "ratio": 0
+   }
+  ]
+ }
+]

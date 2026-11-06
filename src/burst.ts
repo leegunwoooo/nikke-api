@@ -28,13 +28,15 @@ export function getBurstCutscene(resourceId: number, skinIndex = 0): BurstCutsce
 }
 
 // Added at load time so old data bundles work without waiting for a refresh.
+// A costume with no dedicated cutscene falls back to the base appearance's.
 export function withBurstCutscenes(nikke: Nikke): Nikke {
+  const base = getBurstCutscene(nikke.resourceId);
   return {
     ...nikke,
-    burstCutscene: getBurstCutscene(nikke.resourceId),
+    burstCutscene: base,
     costumes: nikke.costumes.map(costume => ({
       ...costume,
-      burstCutscene: getBurstCutscene(nikke.resourceId, costume.skinIndex),
+      burstCutscene: getBurstCutscene(nikke.resourceId, costume.skinIndex) ?? base,
     })),
   };
 }
@@ -58,14 +60,16 @@ export const burstVoiceFor = (voices: DetailVoice[] | undefined, skinIndex: numb
   full: pickVoice(voices, skinIndex, /_FullBurst_\d+$/),
 });
 
-/** Attach burst voice lines per skin from the detail file.
- * Skins with no matching line keep null slots. */
+/** Attach burst voice lines per skin from the detail file. Each slot falls
+ * back to the base appearance's line when the skin has none. */
 export function withBurstVoices(nikke: Nikke, detail: { voices?: DetailVoice[] } | null): Nikke {
   const voices = detail?.voices;
-  const attach = (b: BurstCutscene | null | undefined, skinIndex: number) => b && ({
-    ...b,
-    voice: burstVoiceFor(voices, skinIndex),
-  });
+  const base = burstVoiceFor(voices, 0);
+  const attach = (b: BurstCutscene | null | undefined, skinIndex: number) => {
+    if (!b) return null;
+    const own = burstVoiceFor(voices, skinIndex);
+    return { ...b, voice: { burst: own.burst ?? base.burst, ready: own.ready ?? base.ready, full: own.full ?? base.full } };
+  };
   return {
     ...nikke,
     burstCutscene: attach(nikke.burstCutscene, 0) ?? null,

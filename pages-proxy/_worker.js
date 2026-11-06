@@ -2391,7 +2391,7 @@ var catalog_default = {
         "c016_00_skillcut.png"
       ],
       spineVersion: "4.1.20",
-      animation: "skillcut_1",
+      animation: "skillcut_2",
       animations: [
         {
           name: "idle",
@@ -2409,6 +2409,10 @@ var catalog_default = {
           name: "skillcut_3",
           duration: 3.2667
         }
+      ],
+      extraLayers: [
+        "skillcut_1",
+        "skillcut_3"
       ]
     },
     {
@@ -2491,7 +2495,7 @@ var catalog_default = {
         "c017_01_skillcut.png"
       ],
       spineVersion: "4.1.20",
-      animation: "skillcut_1",
+      animation: "skillcut_2",
       animations: [
         {
           name: "idle",
@@ -2509,6 +2513,9 @@ var catalog_default = {
           name: "skillcut_2",
           duration: 5.8
         }
+      ],
+      extraLayers: [
+        "skillcut_1"
       ]
     },
     {
@@ -2875,7 +2882,7 @@ var catalog_default = {
         "c073_00_skillcut.png"
       ],
       spineVersion: "4.1.20",
-      animation: "skillcut_1",
+      animation: "skillcut_2",
       animations: [
         {
           name: "idle_1",
@@ -2893,6 +2900,9 @@ var catalog_default = {
           name: "skillcut_2",
           duration: 6.3667
         }
+      ],
+      extraLayers: [
+        "skillcut_1"
       ]
     },
     {
@@ -3067,7 +3077,7 @@ var catalog_default = {
         "c093_skillcut.png"
       ],
       spineVersion: "4.1.20",
-      animation: "skillcut_1",
+      animation: "skillcut_0",
       animations: [
         {
           name: "idle",
@@ -3081,6 +3091,9 @@ var catalog_default = {
           name: "skillcut_1",
           duration: 2.6667
         }
+      ],
+      extraLayers: [
+        "skillcut_1"
       ]
     },
     {
@@ -4013,7 +4026,7 @@ var catalog_default = {
         "c191_02_skillcut.png"
       ],
       spineVersion: "4.1.20",
-      animation: "skillcut_1",
+      animation: "skillcut_2",
       animations: [
         {
           name: "idle_1",
@@ -4031,6 +4044,9 @@ var catalog_default = {
           name: "skillcut_2",
           duration: 7.1
         }
+      ],
+      extraLayers: [
+        "skillcut_1"
       ]
     },
     {
@@ -4127,6 +4143,9 @@ var catalog_default = {
           name: "skillcut_2",
           duration: 4.2667
         }
+      ],
+      extraLayers: [
+        "skillcut_2"
       ]
     },
     {
@@ -4445,7 +4464,7 @@ var catalog_default = {
         "c223_01_skillcut.png"
       ],
       spineVersion: "4.1.20",
-      animation: "skillcut_1",
+      animation: "skillcut_2",
       animations: [
         {
           name: "idle",
@@ -4463,6 +4482,10 @@ var catalog_default = {
           name: "skillcut_3",
           duration: 4.6667
         }
+      ],
+      extraLayers: [
+        "skillcut_1",
+        "skillcut_3"
       ]
     },
     {
@@ -4533,6 +4556,9 @@ var catalog_default = {
           name: "skillcut_all",
           duration: 2.6667
         }
+      ],
+      extraLayers: [
+        "skillcut_3"
       ]
     },
     {
@@ -4907,7 +4933,7 @@ var catalog_default = {
         "c262_00_skillcut.png"
       ],
       spineVersion: "4.1.20",
-      animation: "skillcut_1",
+      animation: "skillcut_0",
       animations: [
         {
           name: "idle",
@@ -4925,6 +4951,9 @@ var catalog_default = {
           name: "skillcut_1",
           duration: 5
         }
+      ],
+      extraLayers: [
+        "skillcut_1"
       ]
     },
     {
@@ -4956,6 +4985,9 @@ var catalog_default = {
           name: "skillcut_2",
           duration: 6.3333
         }
+      ],
+      extraLayers: [
+        "skillcut_2"
       ]
     },
     {
@@ -5130,7 +5162,7 @@ var catalog_default = {
         "c281_02_skillcut.png"
       ],
       spineVersion: "4.1.20",
-      animation: "skillcut_1",
+      animation: "skillcut_2",
       animations: [
         {
           name: "idle",
@@ -5144,6 +5176,9 @@ var catalog_default = {
           name: "skillcut_2",
           duration: 5
         }
+      ],
+      extraLayers: [
+        "skillcut_1"
       ]
     },
     {
@@ -5549,7 +5584,7 @@ var catalog_default = {
         "c331_00_skillcut.png"
       ],
       spineVersion: "4.1.20",
-      animation: "skillcut_1",
+      animation: "skillcut_2",
       animations: [
         {
           name: "idle",
@@ -5563,6 +5598,9 @@ var catalog_default = {
           name: "skillcut_2",
           duration: 6.2
         }
+      ],
+      extraLayers: [
+        "skillcut_1"
       ]
     },
     {
@@ -5783,6 +5821,9 @@ var catalog_default = {
           name: "skillcut_2",
           duration: 3.5
         }
+      ],
+      extraLayers: [
+        "skillcut_2"
       ]
     },
     {
@@ -6103,7 +6144,7 @@ var catalog_default = {
         "c411_00_skillcut.png"
       ],
       spineVersion: "4.1.20",
-      animation: "skillcut_1",
+      animation: "skillcut_2",
       animations: [
         {
           name: "idle",
@@ -6121,6 +6162,10 @@ var catalog_default = {
           name: "skillcut_3",
           duration: 4.7333
         }
+      ],
+      extraLayers: [
+        "skillcut_1",
+        "skillcut_3"
       ]
     },
     {
@@ -6405,6 +6450,9 @@ var catalog_default = {
           name: "skillcut_2",
           duration: 6.6667
         }
+      ],
+      extraLayers: [
+        "skillcut_2"
       ]
     },
     {
@@ -6976,7 +7024,7 @@ var catalog_default = {
         "c582_00_skillcut.png"
       ],
       spineVersion: "4.1.20",
-      animation: "skillcut_1",
+      animation: "skillcut_0",
       animations: [
         {
           name: "idle_0",
@@ -6994,6 +7042,9 @@ var catalog_default = {
           name: "skillcut_1",
           duration: 4.2333
         }
+      ],
+      extraLayers: [
+        "skillcut_1"
       ]
     },
     {
@@ -7156,6 +7207,9 @@ var catalog_default = {
           name: "skillcut_2",
           duration: 5.7
         }
+      ],
+      extraLayers: [
+        "skillcut_2"
       ]
     },
     {
@@ -7514,7 +7568,7 @@ var catalog_default = {
         "c833_00_skillcut.png"
       ],
       spineVersion: "4.1.20",
-      animation: "skillcut_1",
+      animation: "skillcut_2",
       animations: [
         {
           name: "idle",
@@ -7528,6 +7582,9 @@ var catalog_default = {
           name: "skillcut_2",
           duration: 3.6667
         }
+      ],
+      extraLayers: [
+        "skillcut_1"
       ]
     },
     {
@@ -8066,9 +8123,7 @@ function burstPlayback(animations, preferred, overlay) {
     { role: "main", animation: main }
   ];
   for (const name of overlay ?? []) {
-    const extra = animations.find((a) => a.name === name);
-    if (!extra) throw new Error(`Missing overlay animation: ${name}`);
-    if (Math.abs(extra.duration - duration3) > 0.02) throw new Error(`Overlay timing needs review: ${main}, ${name}`);
+    if (!animations.some((a) => a.name === name)) throw new Error(`Missing overlay animation: ${name}`);
     layers.push({ role: "overlay", animation: name });
   }
   if (background && Math.abs(background.duration - duration3) > 0.02) {
@@ -8108,12 +8163,13 @@ function getBurstCutscene(resourceId, skinIndex = 0) {
   return bySkin.get(`${resourceId}:${skinIndex}`) ?? null;
 }
 function withBurstCutscenes(nikke) {
+  const base = getBurstCutscene(nikke.resourceId);
   return {
     ...nikke,
-    burstCutscene: getBurstCutscene(nikke.resourceId),
+    burstCutscene: base,
     costumes: nikke.costumes.map((costume) => ({
       ...costume,
-      burstCutscene: getBurstCutscene(nikke.resourceId, costume.skinIndex)
+      burstCutscene: getBurstCutscene(nikke.resourceId, costume.skinIndex) ?? base
     }))
   };
 }
@@ -8128,9 +8184,11 @@ var burstVoiceFor = (voices, skinIndex) => ({
 });
 function withBurstVoices(nikke, detail) {
   const voices = detail?.voices;
-  const attach = (b, skinIndex) => b && {
-    ...b,
-    voice: burstVoiceFor(voices, skinIndex)
+  const base = burstVoiceFor(voices, 0);
+  const attach = (b, skinIndex) => {
+    if (!b) return null;
+    const own2 = burstVoiceFor(voices, skinIndex);
+    return { ...b, voice: { burst: own2.burst ?? base.burst, ready: own2.ready ?? base.ready, full: own2.full ?? base.full } };
   };
   return {
     ...nikke,
@@ -26023,7 +26081,7 @@ function buildServer(api, version2, origin = "", boundBlablaid) {
     "get_nikke_burst",
     {
       title: "Burst cutscene assets and viewer",
-      description: "Burst skill cutscene visual assets for a character and every costume: Spine atlas, skeleton, all texture pages, runtime version, animation tracks and playback.layers. voice.burst/ready/full hold the skin's burst-related lines \u2014 Korean text and audio URL (the viewer plays voice.burst alongside the cutscene). viewerUrl plays the whole cutscene with background and character synchronized. Prefer an authored combined animation; otherwise render independent skeleton instances in layer order using the same camera and time, not multiple tracks on one skeleton. source.viewerUrl retains the original ArtHub viewer. Raw external asset URLs retain the source host's CORS policy. Exact skin matches only; unavailable cutscenes are null, with no base-skin fallback. Non-burst voice lines are separate (get_nikke include voices). Exact names win; ambiguous partial names return candidates.",
+      description: "Burst skill cutscene visual assets for a character and every costume: Spine atlas, skeleton, all texture pages, runtime version, animation tracks and playback.layers. voice.burst/ready/full hold the skin's burst-related lines \u2014 Korean text and audio URL (the viewer plays voice.burst alongside the cutscene). viewerUrl plays the whole cutscene with background and character synchronized. Prefer an authored combined animation; otherwise render independent skeleton instances in layer order using the same camera and time, not multiple tracks on one skeleton. source.viewerUrl retains the original ArtHub viewer. Raw external asset URLs retain the source host's CORS policy. Costumes without a dedicated cutscene fall back to the base appearance's; null only when the character has none at all. Non-burst voice lines are separate (get_nikke include voices). Exact names win; ambiguous partial names return candidates.",
       inputSchema: object({ nameOrId: string2().min(1).describe("Character name (any language), id or resourceId"), lang: LANG }),
       annotations: READ_ONLY
     },
@@ -26474,7 +26532,7 @@ function buildOpenapi(pkgVersion) {
   };
   const burstCutscene = {
     type: ["object", "null"],
-    description: "\uD574\uB2F9 \uC678\uD615\uC758 \uC2DC\uAC01\uC801 \uBC84\uC2A4\uD2B8 \uCEF7\uC2E0. \uBBF8\uC218\uB85D\uC740 null\uC774\uBA70 \uAE30\uBCF8 \uC678\uD615\uC73C\uB85C \uB300\uCCB4\uD558\uC9C0 \uC54A\uC2B5\uB2C8\uB2E4. voice\uB294 \uBC84\uC2A4\uD2B8 \uAD00\uB828 \uB300\uC0AC\xB7\uC74C\uC131\uC785\uB2C8\uB2E4.",
+    description: "\uD574\uB2F9 \uC678\uD615\uC758 \uC2DC\uAC01\uC801 \uBC84\uC2A4\uD2B8 \uCEF7\uC2E0. \uCF54\uC2A4\uD2AC \uC804\uC6A9 \uCEF7\uC2E0\uC774 \uC5C6\uC73C\uBA74 \uAE30\uBCF8 \uC678\uD615\uC758 \uCEF7\uC2E0\uC73C\uB85C \uB300\uCCB4\uD558\uACE0, \uAE30\uBCF8\uB3C4 \uC5C6\uC73C\uBA74 null\uC785\uB2C8\uB2E4. voice\uB294 \uBC84\uC2A4\uD2B8 \uAD00\uB828 \uB300\uC0AC\xB7\uC74C\uC131\uC785\uB2C8\uB2E4.",
     required: ["id", "format", "spineVersion", "animation", "animations", "playback", "atlas", "skeleton", "textures", "viewerUrl", "source"],
     properties: {
       id: { type: "string" },
@@ -27379,7 +27437,7 @@ async function createApp(storage, options = {}) {
       grade: co.grade ?? null,
       costumeIndex: co.costumeIndex ?? 0,
       images: owned?.costume.images ?? null,
-      burstCutscene: Number.isInteger(co.costumeIndex) ? getBurstCutscene(co.resourceId, co.costumeIndex) : null,
+      burstCutscene: Number.isInteger(co.costumeIndex) ? getBurstCutscene(co.resourceId, co.costumeIndex) ?? getBurstCutscene(co.resourceId) : null,
       character: n ? { id: n.id, resourceId: n.resourceId, name: n.name, rarity: n.rarity } : null,
       storyScenes: storyScenesOf(tid, scenes)
     };
@@ -28205,7 +28263,9 @@ async function createApp(storage, options = {}) {
     const detail = owner ? await getDetail(owner.nikke.id) : null;
     const voices = (detail?.voices ?? []).filter((v) => v.costumeIndex === owner?.costume.skinIndex);
     const burst = row.burstCutscene;
-    const enriched = burst && owner ? { ...burst, voice: burstVoiceFor(detail?.voices, owner.costume.skinIndex) } : burst;
+    const own2 = burstVoiceFor(detail?.voices, owner?.costume.skinIndex ?? 0);
+    const baseV = burstVoiceFor(detail?.voices, 0);
+    const enriched = burst && owner ? { ...burst, voice: { burst: own2.burst ?? baseV.burst, ready: own2.ready ?? baseV.ready, full: own2.full ?? baseV.full } } : burst;
     return { ...row, burstCutscene: enriched ?? null, voices };
   };
   app.get("/api/costumes/:id", async (c) => {
@@ -28906,7 +28966,7 @@ var CREDS_KEY = "bla:creds";
 var HDR_CREDS = "x-bla-creds";
 var HDR_BLABLAID = "x-registered-blablaid";
 var edgeCache = caches.default;
-var BUILD_ID = false ? void 0 : "1e27218c2fac";
+var BUILD_ID = false ? void 0 : "fe446be07f3a";
 var DATA_HOST = "https://nikke-api-data.pages.dev";
 var REVALIDATE_MS = 3e5;
 var appPromise;

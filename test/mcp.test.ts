@@ -75,7 +75,7 @@ test("burst assets are available through the dedicated tool, include, spine and 
   assert.equal(burst.json.burstCutscene.id, "catalog-c010_00_skillcut");
   assert.equal(new URL(burst.json.burstCutscene.viewerUrl).pathname, "/burst-viewer");
   assert.deepEqual(burst.json.burstCutscene.playback.layers, [{ role: "main", animation: "skillcut_1" }]);
-  assert.ok(burst.json.costumes.every((c: any) => c.burstCutscene === null));
+  assert.ok(burst.json.costumes.every((c: any) => c.burstCutscene?.id === burst.json.burstCutscene.id));
   const included = await tool("get_nikke", { nameOrId: "1", include: ["burstCutscene"] });
   assert.deepEqual(included.json.burstCutscene, burst.json.burstCutscene);
   assert.equal((await tool("get_nikke", { nameOrId: "1" })).json.burstCutscene, undefined);

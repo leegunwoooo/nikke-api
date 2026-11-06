@@ -85,7 +85,7 @@ test("every checked-in burst has unique keys and complete texture URLs", () => {
 
 test("backgrounds are included in the playback plan, authored combined animations stay single", () => {
   const composite = catalog.entries.map(e => getBurstCutscene(e.resourceId, e.skinIndex)!).filter(b => b.playback.mode === "composite");
-  assert.deepEqual(composite.map(b => b.id), ["c063_00_skillcut", "c103_00_skillcut", "c170_04_skillcut", "c315_00_skillcut", "c513_01_skillcut", "c580_01_skillcut", "catalog-c852_00_skillcut", "c871_00_skillcut", "c872_skillcut_00"]);
+  assert.deepEqual(composite.map(b => b.id), ["c016_00_skillcut","c017_01_skillcut","c063_00_skillcut","c073_00_skillcut","c093_skillcut","c103_00_skillcut","c170_04_skillcut","c191_02_skillcut","c200_00_skillcut","c223_01_skillcut","c225_00_skillcut","c262_00_skillcut","c262_01_skillcut","c281_02_skillcut","c315_00_skillcut","c331_00_skillcut","c355_00_skillcut","c411_00_skillcut","c470_02_skillcut","c513_01_skillcut","c580_01_skillcut","c582_00_skillcut","c620_00_skillcut","c833_00_skillcut","catalog-c852_00_skillcut","c871_00_skillcut","c872_skillcut_00"]);
   assert.deepEqual(getBurstCutscene(871)!.playback.layers, [
     { role: "main", animation: "skillcut_0" }, { role: "overlay", animation: "skillcut_1" },
   ]);
@@ -117,7 +117,7 @@ test("burst REST endpoint resolves names/IDs, nullable costumes, fields and loca
   assert.equal(rapi.name, "라피");
   assert.equal(rapi.burstCutscene.id, "catalog-c010_00_skillcut");
   assert.equal(rapi.costumes[0].skinIndex, 2); // fixture deliberately not sorted by skin
-  assert.ok(rapi.costumes.every((c: any) => c.burstCutscene === null));
+  assert.ok(rapi.costumes.every((c: any) => c.burstCutscene?.id === rapi.burstCutscene.id)); // costumes fall back to base
   assert.deepEqual((await json("/api/nikkes/10/burst?lang=ko")).burstCutscene, rapi.burstCutscene);
   assert.equal((await json("/api/nikkes/anchor/burst")).id, 2); // exact name wins
   assert.equal((await json("/api/nikkes/anch/burst")).count, 2);
@@ -126,7 +126,7 @@ test("burst REST endpoint resolves names/IDs, nullable costumes, fields and loca
   assert.deepEqual(await json("/api/nikkes/1/burst?fields=id,burstCutscene.id"), { id: 1, burstCutscene: { id: "catalog-c010_00_skillcut" } });
   assert.equal((await json("/api/nikkes/1/spine")).burstCutscene.id, rapi.burstCutscene.id);
   assert.equal((await json("/api/nikkes/1")).burstCutscene.id, rapi.burstCutscene.id);
-  assert.equal((await json("/api/costumes/10012")).burstCutscene, null);
+  assert.equal((await json("/api/costumes/10012")).burstCutscene.id, rapi.burstCutscene.id);
   const spec = await json("/openapi.json");
   assert.ok(spec.paths["/api/nikkes/{id}/burst"].get.responses["200"]);
   assert.deepEqual(rapi.burstCutscene.playback, getBurstCutscene(10)!.playback);

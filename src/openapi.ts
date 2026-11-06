@@ -40,7 +40,7 @@ const voiceRef = {
 
 const burstCutscene = {
   type: ["object", "null"],
-  description: "해당 외형의 시각적 버스트 컷신. 미수록은 null이며 기본 외형으로 대체하지 않습니다. voice는 버스트 관련 대사·음성입니다.",
+  description: "해당 외형의 시각적 버스트 컷신. 코스튬 전용 컷신이 없으면 기본 외형의 컷신으로 대체하고, 기본도 없으면 null입니다. voice는 버스트 관련 대사·음성입니다.",
   required: ["id", "format", "spineVersion", "animation", "animations", "playback", "atlas", "skeleton", "textures", "viewerUrl", "source"],
   properties: {
     id: { type: "string" },

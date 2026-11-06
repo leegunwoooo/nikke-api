@@ -25,11 +25,10 @@ export function burstPlayback(animations: { name: string; duration: number }[], 
     { role: "main" as const, animation: main },
   ];
   // Disjoint-slot overlay tracks that join mid-scene (e.g. c871's skillcut_1)
-  // share the timeline and draw on top of the main layer.
+  // share the timeline and draw on top of the main layer. They may be shorter
+  // or longer than the main track — their slots just go dark when they end.
   for (const name of overlay ?? []) {
-    const extra = animations.find(a => a.name === name);
-    if (!extra) throw new Error(`Missing overlay animation: ${name}`);
-    if (Math.abs(extra.duration - duration) > 0.02) throw new Error(`Overlay timing needs review: ${main}, ${name}`);
+    if (!animations.some(a => a.name === name)) throw new Error(`Missing overlay animation: ${name}`);
     layers.push({ role: "overlay" as const, animation: name });
   }
   if (background && Math.abs(background.duration - duration) > 0.02) {

@@ -29,11 +29,31 @@ export interface BurstEntry {
 // Reviewed manual composition fixes — the name-based picker cannot detect
 // empty tracks or disjoint overlay layers. Sync must preserve these.
 export const BURST_OVERRIDES: Record<string, { animation?: string; extraLayers?: string[] }> = {
+  // Full-scan verified: slot-disjoint tracks are parallel scene layers, not
+  // variants. main = the largest track; the rest play on top.
   c105_00_skillcut: { animation: "skillcut_2" },                    // skillcut_1 hides all slots
   c234_00_skillcut: { animation: "skillcut_2" },                    // skillcut_1 hides all but 1 slot
   c315_00_skillcut: { extraLayers: ["skillcut_2"] },                // 12-slot late effect layer
   c580_01_skillcut: { animation: "skillcut_2", extraLayers: ["skillcut_3"] }, // main + 2-slot overlay
   c871_00_skillcut: { animation: "skillcut_0", extraLayers: ["skillcut_1"] }, // body + mid-scene wings/fx
+  c016_00_skillcut: { animation: "skillcut_2", extraLayers: ["skillcut_1", "skillcut_3"] },
+  c017_01_skillcut: { animation: "skillcut_2", extraLayers: ["skillcut_1"] },
+  c073_00_skillcut: { animation: "skillcut_2", extraLayers: ["skillcut_1"] },
+  c093_skillcut:    { animation: "skillcut_0", extraLayers: ["skillcut_1"] },
+  c191_02_skillcut: { animation: "skillcut_2", extraLayers: ["skillcut_1"] },
+  c200_00_skillcut: { extraLayers: ["skillcut_2"] },
+  c223_01_skillcut: { animation: "skillcut_2", extraLayers: ["skillcut_1", "skillcut_3"] },
+  c225_00_skillcut: { extraLayers: ["skillcut_3"] },                // all + 15-slot disjoint layer
+  c262_00_skillcut: { animation: "skillcut_0", extraLayers: ["skillcut_1"] },
+  c262_01_skillcut: { extraLayers: ["skillcut_2"] },
+  c281_02_skillcut: { animation: "skillcut_2", extraLayers: ["skillcut_1"] },
+  c331_00_skillcut: { animation: "skillcut_2", extraLayers: ["skillcut_1"] },
+  c355_00_skillcut: { extraLayers: ["skillcut_2"] },
+  c411_00_skillcut: { animation: "skillcut_2", extraLayers: ["skillcut_1", "skillcut_3"] },
+  c470_02_skillcut: { extraLayers: ["skillcut_2"] },
+  c582_00_skillcut: { animation: "skillcut_0", extraLayers: ["skillcut_1"] },
+  c620_00_skillcut: { extraLayers: ["skillcut_2"] },
+  c833_00_skillcut: { animation: "skillcut_2", extraLayers: ["skillcut_1"] },
 };
 
 // The source really uses slillcut/skillut, and sometimes puts the skin last.
