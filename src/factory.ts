@@ -105,6 +105,11 @@ const characterData: CharacterData = JSON.parse(
 const characters = characterData.characters.map(withBurstCutscenes);
 const byId = new Map(characters.map((c) => [c.id, c]));
 const byResourceId = new Map(characters.map((c) => [c.resourceId, c]));
+const burstOwner = new Map<string, { nikke: Nikke; skinIndex: number }>();
+for (const n of characters) {
+  if (n.burstCutscene) burstOwner.set(n.burstCutscene.id, { nikke: n, skinIndex: 0 });
+  for (const co of n.costumes) if (co.burstCutscene) burstOwner.set(co.burstCutscene.id, { nikke: n, skinIndex: co.skinIndex });
+}
 const families = buildFamilies(characters);
 const detailCache = new Map<number, Promise<unknown>>();
 
@@ -531,9 +536,14 @@ app.use("*", async (c, next) => {
 });
 
 app.route("/", createBurstViewer(burst => {
-  const n = [...byResourceId.values()].find(n => n.burstCutscene?.id === burst.id || n.costumes.some(co => co.burstCutscene?.id === burst.id));
-  const co = n?.costumes.find(co => co.burstCutscene?.id === burst.id);
-  return [n?.name.ko ?? n?.name.en, co?.name && (typeof co.name === "string" ? co.name : co.name.ko ?? co.name.en)].filter(Boolean).join(" · ") || "버스트 컷씬";
+  const owner = burstOwner.get(burst.id);
+  const co = owner?.nikke.costumes.find(co => co.skinIndex === owner.skinIndex);
+  return [owner?.nikke.name.ko ?? owner?.nikke.name.en, co?.name && (typeof co.name === "string" ? co.name : co.name.ko ?? co.name.en)].filter(Boolean).join(" · ") || "버스트 컷씬";
+}, fetch, async burst => {
+  const owner = burstOwner.get(burst.id);
+  if (!owner) return undefined;
+  const detail = await getDetail(owner.nikke.id) as { voices?: DetailVoice[] } | null;
+  return burstVoiceFor(detail?.voices, owner.skinIndex);
 }));
 
 app.get("/", (c) =>

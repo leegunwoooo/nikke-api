@@ -9,16 +9,17 @@ const assets = new Map([...burstsById.values()].map(b => [b.id, new Map([
   [filename(b.atlas), b.atlas], [filename(b.skeleton), b.skeleton], ...b.textures.map(t => [t.name, t.url] as [string, string]),
 ])]));
 
-export function createBurstViewer(titleOf: (burst: BurstCutscene) => string = () => "버스트 컷씬", fetcher: typeof fetch = fetch) {
+export function createBurstViewer(titleOf: (burst: BurstCutscene) => string = () => "버스트 컷씬", fetcher: typeof fetch = fetch,
+  voiceOf: (burst: BurstCutscene) => Promise<BurstCutscene["voice"] | undefined> = async () => undefined) {
   const app = new Hono();
   app.get("/burst-player.js", c => c.body(BURST_PLAYER, 200, { "Content-Type": "text/javascript; charset=utf-8" }));
 
-  app.get("/burst-viewer", c => {
+  app.get("/burst-viewer", async c => {
     const burst = burstsById.get(c.req.query("id") ?? "");
     if (!burst) return c.text("컷씬을 찾을 수 없어요.", 404);
     const asset = (name: string) => `/burst-assets/${burst.source.revision}/${encodeURIComponent(burst.id)}/${encodeURIComponent(name)}`;
     const config = { ...burst, atlas: asset(filename(burst.atlas)), skeleton: asset(filename(burst.skeleton)),
-      textures: burst.textures.map(t => ({ name: t.name, url: asset(t.name) })) };
+      textures: burst.textures.map(t => ({ name: t.name, url: asset(t.name) })), voice: await voiceOf(burst) };
     const title = escapeHtml(titleOf(burst));
     c.header("Content-Security-Policy", "default-src 'none'; script-src 'self'; style-src 'unsafe-inline'; img-src 'self' blob:; connect-src 'self'; media-src https://sg-tools-cdn.blablalink.com; base-uri 'none'");
     return c.html(`<!doctype html>

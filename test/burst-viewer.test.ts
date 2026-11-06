@@ -9,7 +9,8 @@ const burst = getBurstCutscene(63)!;
 const asset = `/burst-assets/${burst.source.revision}/${burst.id}/c063_00_skillcut.skel`;
 
 test("viewer serves one complete scene with local asset URLs and escapes the title", async () => {
-  const app = createBurstViewer(() => '<img src=x onerror="bad()">');
+  const voice = { burst: { text: "대사", audio: "https://sg-tools-cdn.blablalink.com/a/v.mp3" }, ready: null, full: null };
+  const app = createBurstViewer(() => '<img src=x onerror="bad()">', fetch, async () => voice);
   const response = await app.request(`/burst-viewer?id=${burst.id}`);
   assert.equal(response.status, 200);
   const html = await response.text();
@@ -18,6 +19,7 @@ test("viewer serves one complete scene with local asset URLs and escapes the tit
   const config = JSON.parse(html.match(/<script id="burst-data" type="application\/json">([^<]*)<\/script>/)![1]);
   assert.equal(config.skeleton, asset);
   assert.deepEqual(config.playback, burst.playback);
+  assert.deepEqual(config.voice, voice);
   assert.ok(config.textures.every((t: any) => t.url.startsWith("/burst-assets/")));
   assert.equal((await app.request("/burst-viewer?id=missing")).status, 404);
   const player = await app.request("/burst-player.js");

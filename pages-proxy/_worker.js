@@ -8133,10 +8133,10 @@ var assets = new Map([...burstsById.values()].map((b) => [b.id, new Map([
   [filename(b.skeleton), b.skeleton],
   ...b.textures.map((t) => [t.name, t.url])
 ])]));
-function createBurstViewer(titleOf = () => "\uBC84\uC2A4\uD2B8 \uCEF7\uC52C", fetcher = fetch) {
+function createBurstViewer(titleOf = () => "\uBC84\uC2A4\uD2B8 \uCEF7\uC52C", fetcher = fetch, voiceOf = async () => void 0) {
   const app = new Hono2();
   app.get("/burst-player.js", (c) => c.body(BURST_PLAYER, 200, { "Content-Type": "text/javascript; charset=utf-8" }));
-  app.get("/burst-viewer", (c) => {
+  app.get("/burst-viewer", async (c) => {
     const burst = burstsById.get(c.req.query("id") ?? "");
     if (!burst) return c.text("\uCEF7\uC52C\uC744 \uCC3E\uC744 \uC218 \uC5C6\uC5B4\uC694.", 404);
     const asset = (name) => `/burst-assets/${burst.source.revision}/${encodeURIComponent(burst.id)}/${encodeURIComponent(name)}`;
@@ -8144,7 +8144,8 @@ function createBurstViewer(titleOf = () => "\uBC84\uC2A4\uD2B8 \uCEF7\uC52C", fe
       ...burst,
       atlas: asset(filename(burst.atlas)),
       skeleton: asset(filename(burst.skeleton)),
-      textures: burst.textures.map((t) => ({ name: t.name, url: asset(t.name) }))
+      textures: burst.textures.map((t) => ({ name: t.name, url: asset(t.name) })),
+      voice: await voiceOf(burst)
     };
     const title = escapeHtml(titleOf(burst));
     c.header("Content-Security-Policy", "default-src 'none'; script-src 'self'; style-src 'unsafe-inline'; img-src 'self' blob:; connect-src 'self'; media-src https://sg-tools-cdn.blablalink.com; base-uri 'none'");
@@ -27256,6 +27257,11 @@ async function createApp(storage, options = {}) {
   const characters = characterData.characters.map(withBurstCutscenes);
   const byId = new Map(characters.map((c) => [c.id, c]));
   const byResourceId = new Map(characters.map((c) => [c.resourceId, c]));
+  const burstOwner = /* @__PURE__ */ new Map();
+  for (const n of characters) {
+    if (n.burstCutscene) burstOwner.set(n.burstCutscene.id, { nikke: n, skinIndex: 0 });
+    for (const co of n.costumes) if (co.burstCutscene) burstOwner.set(co.burstCutscene.id, { nikke: n, skinIndex: co.skinIndex });
+  }
   const families = buildFamilies(characters);
   const detailCache = /* @__PURE__ */ new Map();
   async function getDetail(id) {
@@ -27575,9 +27581,14 @@ async function createApp(storage, options = {}) {
     await next();
   });
   app.route("/", createBurstViewer((burst) => {
-    const n = [...byResourceId.values()].find((n2) => n2.burstCutscene?.id === burst.id || n2.costumes.some((co2) => co2.burstCutscene?.id === burst.id));
-    const co = n?.costumes.find((co2) => co2.burstCutscene?.id === burst.id);
-    return [n?.name.ko ?? n?.name.en, co?.name && (typeof co.name === "string" ? co.name : co.name.ko ?? co.name.en)].filter(Boolean).join(" \xB7 ") || "\uBC84\uC2A4\uD2B8 \uCEF7\uC52C";
+    const owner = burstOwner.get(burst.id);
+    const co = owner?.nikke.costumes.find((co2) => co2.skinIndex === owner.skinIndex);
+    return [owner?.nikke.name.ko ?? owner?.nikke.name.en, co?.name && (typeof co.name === "string" ? co.name : co.name.ko ?? co.name.en)].filter(Boolean).join(" \xB7 ") || "\uBC84\uC2A4\uD2B8 \uCEF7\uC52C";
+  }, fetch, async (burst) => {
+    const owner = burstOwner.get(burst.id);
+    if (!owner) return void 0;
+    const detail = await getDetail(owner.nikke.id);
+    return burstVoiceFor(detail?.voices, owner.skinIndex);
   }));
   app.get(
     "/",
@@ -28878,7 +28889,7 @@ var CREDS_KEY = "bla:creds";
 var HDR_CREDS = "x-bla-creds";
 var HDR_BLABLAID = "x-registered-blablaid";
 var edgeCache = caches.default;
-var BUILD_ID = false ? void 0 : "005011d5b007";
+var BUILD_ID = false ? void 0 : "a64b8fbe0e4b";
 var DATA_HOST = "https://nikke-api-data.pages.dev";
 var REVALIDATE_MS = 3e5;
 var appPromise;
