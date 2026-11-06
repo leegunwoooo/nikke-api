@@ -99,6 +99,7 @@ const NIKKE_EXTRA = {
   teammateList: "details.teammateList",
   costumes: "costumes",
   images: "images",
+  spine: "spine",
   // pseudo-include — no extra API field, it only keeps the raw per-skill
   // icon/descriptionTemplate/values that the default response strips
   skillLevels: "",
@@ -364,7 +365,7 @@ export function buildServer(api: Fetcher, version: string, origin = "", boundBla
         include: z
           .array(z.enum(Object.keys(NIKKE_EXTRA) as [keyof typeof NIKKE_EXTRA]))
           .optional()
-          .describe("Extra sections added to the default: statsPerLevel (~30KB), voices (~80KB, voice lines incl. costumeIndex), shot (weapon mechanics — damage/charge/rate-of-fire/burst-gauge units), statEnhance (limit-break & core bonus), teammateList, costumes, images, skillLevels (raw skill icon/descriptionTemplate/values)"),
+          .describe("Extra sections added to the default: statsPerLevel (~30KB), voices (~80KB, voice lines incl. costumeIndex), shot (weapon mechanics — damage/charge/rate-of-fire/burst-gauge units), statEnhance (limit-break & core bonus), teammateList, costumes, images, spine (Spine animation asset URLs — atlas/skeleton/texture for stand/aim/cover stances, per costume), skillLevels (raw skill icon/descriptionTemplate/values)"),
         lang: LANG,
       }),
       annotations: READ_ONLY,

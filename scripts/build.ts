@@ -46,6 +46,23 @@ function images(resourceId: number, skinIndex: number) {
   };
 }
 
+// Spine viewer assets: {atlas.txt, skel.bytes, png} per stance — same hash
+// scheme as the site's getSpineUrl (spine/ stand + combat aim/cover).
+function spineAssets(resourceId: number, skinIndex: number) {
+  const rid = pad(resourceId, 3);
+  const skin = pad(skinIndex, 2);
+  const asset = (dir: string, file: string) => ({
+    atlas: cdnUrl(`spine/${dir}/${file}.atlas.txt`),
+    skeleton: cdnUrl(`spine/${dir}/${file}.skel.bytes`),
+    texture: cdnUrl(`spine/${dir}/${file}.png`),
+  });
+  return {
+    stand: asset(`stand/c${rid}/${skin}`, `c${rid}_${skin}`),
+    aim: asset(`combat/c${rid}/${skin}/aim`, `c${rid}_aim_${skin}`),
+    cover: asset(`combat/c${rid}/${skin}/cover`, `c${rid}_cover_${skin}`),
+  };
+}
+
 const icon = (iconPath: string, name: string) => cdnUrl(`icon/${iconPath}/${name}.webp`);
 
 const GRADE_ICON: Record<string, string> = { SSR: "003", SR: "002", R: "001" };
@@ -91,8 +108,10 @@ async function main() {
             id: c.id,
             skinIndex: c.costume_index,
             images: images(r.resource_id, c.costume_index),
+            spine: spineAssets(r.resource_id, c.costume_index),
           })),
           images: images(r.resource_id, 0),
+          spine: spineAssets(r.resource_id, 0),
           icons: {
             grade: icon("atlas_common_grade", `ele_grade_icon_${GRADE_ICON[r.original_rare]}`),
             class: icon("atlas_common_class", `icn_class_${r.class.toLowerCase()}`),
@@ -113,6 +132,7 @@ async function main() {
             id: c.id,
             skinIndex: c.costume_index,
             images: images(r.resource_id, c.costume_index),
+            spine: spineAssets(r.resource_id, c.costume_index),
           });
         }
       }

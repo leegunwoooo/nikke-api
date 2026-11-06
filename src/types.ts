@@ -30,6 +30,21 @@ export interface RawNikke {
   costumes?: { id: number; costume_index: number }[];
 }
 
+export interface SpineAsset {
+  atlas: string;
+  skeleton: string;
+  texture: string;
+}
+
+export interface SpineSet {
+  /** standing / lobby animations (idle, idle_02, ...) */
+  stand: SpineAsset;
+  /** combat aim stance (aim_fire_*, x_aim_skill_*) */
+  aim: SpineAsset;
+  /** combat cover stance (cover_idle, cover_reload, cover_hit, ...) */
+  cover: SpineAsset;
+}
+
 export interface ImageSet {
   icon: string;
   medium: string;
@@ -50,12 +65,15 @@ export interface Nikke {
     id: number;
     skinIndex: number;
     images: ImageSet;
+    spine?: SpineSet;
     name?: Localized<string>;
     description?: Localized<string>;
     grade?: string;
     shopType?: string;
   }[];
   images: ImageSet;
+  /** spine assets for skinIndex 0 (base appearance) */
+  spine?: SpineSet;
   icons: { grade: string; class: string; element?: string };
   skillIcons: { skill1?: string; skill2?: string; burst?: string };
 }
