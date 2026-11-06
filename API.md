@@ -327,8 +327,9 @@ GET /api/nikkes/511/burst?lang=ko
 | `playback` | `{ mode, duration, layers }`. 원본 통합 애니메이션은 `single`, 배경이 분리된 경우 `composite`. `layers`는 뒤에서 앞으로 그릴 `{ role, animation }` 순서 |
 | `atlas` / `skeleton` | atlas와 binary skeleton의 외부 URL |
 | `textures[]` | 모든 atlas 페이지의 `{ name, url }`. `name`으로 atlas의 텍스처 요청을 연결하며, PNG 한 장이라고 가정하지 않음 |
-| `viewerUrl` | 배경과 캐릭터를 함께 재생하는 니케 API 뷰어 링크. 재생·정지·탐색은 전체 컷신에 적용 |
+| `viewerUrl` | 배경과 캐릭터를 함께 재생하는 니케 API 뷰어 링크. 재생·정지·탐색은 전체 컷신에 적용되며 대사 음성도 함께 재생 |
 | `source` | 출처 이름, 원본 목록 URL, 고정한 Git revision, 원본 ArtHub `viewerUrl` |
+| `voice` | 외형별 버스트 대사·음성. `burst`(컷신 대사)·`ready`(준비)·`full`(풀버스트) 슬롯에 각각 `{ text, audio }` (한국어). 상세 파일을 읽는 경로에서만 제공되며 목록 응답에는 없음. 없는 대사는 `null` |
 
 같은 필드는 캐릭터 목록·상세, `/api/nikkes/:id/spine`, 코스튬 목록·상세에서도 제공됩니다. MCP는 `get_nikke_burst` 또는 `get_nikke`의 `include: ["burstCutscene"]`로 조회합니다. 후자는 기본 외형만 추가하며 코스튬까지 필요하면 `"costumes"`도 추가합니다.
 
@@ -349,7 +350,7 @@ GET /api/nikkes/511/burst?lang=ko
 
 기존 `atlas`·`skeleton`·`textures[].url`은 외부 원본 URL입니다. 외부 R2의 CORS는 ArtHub Origin만 허용하므로 자체 뷰어는 `/burst-assets/<revision>/<id>/<파일명>`으로 카탈로그의 파일만 중계합니다. 임의 URL·미등록 파일은 받지 않으며, 성공 응답은 기존 API 엣지 캐시를 사용하고 실패는 캐시하지 않습니다. `source.viewerUrl`은 단일 원본 트랙을 확인할 때 사용합니다.
 
-자료는 [ArtHub](https://github.com/Talors1225/arthub-viewer-web)의 공개 URL 목록을 검증해 수동 갱신합니다. 게임 전체 컷신의 완전한 목록은 아닙니다. 코스튬 전용 컷신이 없으면 기본 컷신으로 대체하지 않고 `null`을 반환합니다. 이는 게임 안에 컷신이 없다는 뜻이 아닙니다. 영상·음성 합본이 아닌 시각 애니메이션 리소스이며, 음성은 `details.voices`를 별도로 사용합니다. 외부 호스트의 파일 삭제·주소 변경·CORS 정책은 이 API가 보장하지 않습니다. [수록 범위와 갱신 방법](https://github.com/leegunwoooo/nikke-api/blob/main/content/burst-cutscenes/README.md).
+자료는 [ArtHub](https://github.com/Talors1225/arthub-viewer-web)의 공개 URL 목록을 검증해 수동 갱신합니다. 게임 전체 컷신의 완전한 목록은 아닙니다. 코스튬 전용 컷신이 없으면 기본 컷신으로 대체하지 않고 `null`을 반환합니다. 이는 게임 안에 컷신이 없다는 뜻이 아닙니다. 영상·음성 합본이 아닌 시각 애니메이션 리소스입니다. 버스트 관련 대사·음성은 `voice`로 제공하고, 나머지 음성은 `details.voices`를 별도로 사용합니다. 외부 호스트의 파일 삭제·주소 변경·CORS 정책은 이 API가 보장하지 않습니다. [수록 범위와 갱신 방법](https://github.com/leegunwoooo/nikke-api/blob/main/content/burst-cutscenes/README.md).
 
 ## GET /api/meta/filters
 

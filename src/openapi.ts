@@ -30,9 +30,17 @@ const charRef = {
   },
 };
 
+const voiceRef = {
+  type: "object",
+  properties: {
+    text: { type: "string", description: "한국어 대사" },
+    audio: { type: "string", format: "uri", description: "한국어 음성 URL" },
+  },
+};
+
 const burstCutscene = {
   type: ["object", "null"],
-  description: "해당 외형의 시각적 버스트 컷신. 미수록은 null이며 기본 외형으로 대체하지 않습니다. 음성은 별도입니다.",
+  description: "해당 외형의 시각적 버스트 컷신. 미수록은 null이며 기본 외형으로 대체하지 않습니다. voice는 버스트 관련 대사·음성입니다.",
   required: ["id", "format", "spineVersion", "animation", "animations", "playback", "atlas", "skeleton", "textures", "viewerUrl", "source"],
   properties: {
     id: { type: "string" },
@@ -49,6 +57,11 @@ const burstCutscene = {
     textures: { type: "array", items: { type: "object", required: ["name", "url"], properties: { name: { type: "string" }, url: { type: "string", format: "uri" } } } },
     viewerUrl: { type: "string", format: "uri", description: "배경·캐릭터를 함께 재생하는 니케 API 뷰어" },
     source: { type: "object", properties: { name: { type: "string" }, url: { type: "string", format: "uri" }, revision: { type: "string" }, viewerUrl: { type: "string", format: "uri", description: "원본 ArtHub 뷰어" } } },
+    voice: { type: "object", description: "외형별 버스트 관련 대사·음성. burst는 컷신 대사, ready는 준비 대사, full은 풀버스트 대사. 상세 파일을 읽지 않는 목록 응답에는 없습니다.", properties: {
+      burst: { oneOf: [voiceRef, { type: "null" }] },
+      ready: { oneOf: [voiceRef, { type: "null" }] },
+      full: { oneOf: [voiceRef, { type: "null" }] },
+    } },
   },
 };
 const burstResult = {

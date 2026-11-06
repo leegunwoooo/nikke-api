@@ -4,7 +4,7 @@ import { cors } from "hono/cors";
 import path from "node:path";
 import { cacheHeaders } from "./cache.js";
 import { cdnUrl } from "./cdn.js";
-import { getBurstCutscene, withBurstCutscenes } from "./burst.js";
+import { burstVoiceFor, getBurstCutscene, withBurstCutscenes, withBurstVoices, type DetailVoice } from "./burst.js";
 import { createBurstViewer } from "./burst-viewer.js";
 import { groupEventScenes } from "./events.js";
 import { buildFamilies } from "./family.js";
@@ -15,7 +15,7 @@ import { blaCredsContext, credsFromHeader, decodeOpenid, gameApi, playerInfo } f
 import { createNikkeMcp, requestOrigin } from "./mcp.js";
 import { llmsTxt, mcpGuide, type ToolInfo } from "./llms.js";
 import { buildOpenapi } from "./openapi.js";
-import type { Nikke } from "./types.js";
+import type { BurstCutscene, Nikke } from "./types.js";
 import type { Storage } from "./storage.js";
 
 // share one in-flight load across concurrent callers; failures evict
@@ -122,7 +122,7 @@ async function getDetail(id: number): Promise<unknown | null> {
 
 async function withDetail(n: Nikke): Promise<unknown> {
   const details = await getDetail(n.id);
-  return details ? { ...n, details } : n;
+  return details ? { ...withBurstVoices(n, details as { voices?: DetailVoice[] }), details } : n;
 }
 
 interface SceneIndexEntry {
@@ -994,8 +994,9 @@ app.get("/api/lines", async (c) => {
 // Spine viewer assets per skin, with separately sourced burst cutscenes.
 app.get("/api/nikkes/:id/spine", async (c) => {
   const key = c.req.param("id");
-  const n = /^\d+$/.test(key) ? byId.get(Number(key)) ?? byResourceId.get(Number(key)) : findByName(key)[0];
-  if (!n) return c.json({ error: "not found" }, 404);
+  const found = /^\d+$/.test(key) ? byId.get(Number(key)) ?? byResourceId.get(Number(key)) : findByName(key)[0];
+  if (!found) return c.json({ error: "not found" }, 404);
+  const n = withBurstVoices(found, await getDetail(found.id) as { voices?: DetailVoice[] } | null);
   return c.json({
     id: n.id,
     resourceId: n.resourceId,
@@ -1012,11 +1013,12 @@ app.get("/api/nikkes/:id/spine", async (c) => {
   });
 });
 
-app.get("/api/nikkes/:id/burst", (c) => {
+app.get("/api/nikkes/:id/burst", async (c) => {
   const key = c.req.param("id");
   const hit = /^\d+$/.test(key) ? byId.get(Number(key)) ?? byResourceId.get(Number(key)) : undefined;
   const hits = hit ? [hit] : findByName(key);
   const exact = hits.find(n => Object.values(n.name).some(name => norm(name) === norm(key)));
+  const voiced = async (n: Nikke) => withBurstVoices(n, await getDetail(n.id) as { voices?: DetailVoice[] } | null);
   const row = (n: Nikke) => ({
     id: n.id,
     resourceId: n.resourceId,
@@ -1024,8 +1026,8 @@ app.get("/api/nikkes/:id/burst", (c) => {
     burstCutscene: n.burstCutscene ?? null,
     costumes: n.costumes.map(co => ({ id: co.id, skinIndex: co.skinIndex, name: co.name, burstCutscene: co.burstCutscene ?? null })),
   });
-  if (exact || hits.length === 1) return c.json(pickFields(row(exact ?? hits[0]), fieldsOf(c)));
-  if (hits.length > 1) return c.json({ count: hits.length, characters: pickFields(hits.map(row), fieldsOf(c)) });
+  if (exact || hits.length === 1) return c.json(pickFields(row(await voiced(exact ?? hits[0])), fieldsOf(c)));
+  if (hits.length > 1) return c.json({ count: hits.length, characters: pickFields(await Promise.all(hits.map(async n => row(await voiced(n)))), fieldsOf(c)) });
   return c.json({ error: "not found" }, 404);
 });
 
@@ -1235,9 +1237,11 @@ app.get("/api/costumes", async (c) => {
 // file. Costumes without unique lines get voices: [].
 const costumeWithVoices = async (tid: number, row: object) => {
   const owner = costumeOwner.get(tid);
-  const detail = owner ? ((await getDetail(owner.nikke.id)) as { voices?: { costumeIndex?: number }[] } | null) : null;
+  const detail = owner ? ((await getDetail(owner.nikke.id)) as { voices?: DetailVoice[] } | null) : null;
   const voices = (detail?.voices ?? []).filter((v) => v.costumeIndex === owner?.costume.skinIndex);
-  return { ...row, voices };
+  const burst = (row as { burstCutscene?: BurstCutscene | null }).burstCutscene;
+  const enriched = burst && owner ? { ...burst, voice: burstVoiceFor(detail?.voices, owner.costume.skinIndex) } : burst;
+  return { ...row, burstCutscene: enriched ?? null, voices };
 };
 
 app.get("/api/costumes/:id", async (c) => {

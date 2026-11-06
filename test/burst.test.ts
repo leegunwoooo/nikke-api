@@ -115,7 +115,7 @@ test("burst REST endpoint resolves names/IDs, nullable costumes, fields and loca
   assert.equal(rapi.burstCutscene.id, "catalog-c010_00_skillcut");
   assert.equal(rapi.costumes[0].skinIndex, 2); // fixture deliberately not sorted by skin
   assert.ok(rapi.costumes.every((c: any) => c.burstCutscene === null));
-  assert.deepEqual((await json("/api/nikkes/10/burst")).burstCutscene, rapi.burstCutscene);
+  assert.deepEqual((await json("/api/nikkes/10/burst?lang=ko")).burstCutscene, rapi.burstCutscene);
   assert.equal((await json("/api/nikkes/anchor/burst")).id, 2); // exact name wins
   assert.equal((await json("/api/nikkes/anch/burst")).count, 2);
   assert.equal((await app.request("/api/nikkes/unknown/burst")).status, 404);
@@ -127,4 +127,18 @@ test("burst REST endpoint resolves names/IDs, nullable costumes, fields and loca
   const spec = await json("/openapi.json");
   assert.ok(spec.paths["/api/nikkes/{id}/burst"].get.responses["200"]);
   assert.deepEqual(rapi.burstCutscene.playback, getBurstCutscene(10)!.playback);
+});
+
+test("burst voices attach per skin from the detail file", async () => {
+  const rapi = await json("/api/nikkes/1/burst");
+  const voice = rapi.burstCutscene.voice;
+  assert.equal(voice.burst.text, "화력 집중!");
+  assert.equal(voice.burst.audio, "https://sg-tools-cdn.blablalink.com/a/burst_ko.mp3");
+  assert.equal(voice.ready.text, "레디.");
+  assert.equal(voice.full.audio, "https://sg-tools-cdn.blablalink.com/a/full_ko.mp3");
+  // same voice data on spine and character detail responses
+  assert.equal((await json("/api/nikkes/1/spine")).burstCutscene.voice.burst.audio, voice.burst.audio);
+  assert.equal((await json("/api/nikkes/1")).burstCutscene.voice.burst.audio, voice.burst.audio);
+  // a costume-indexed line never leaks into the base appearance's voice
+  assert.notEqual(voice.burst.audio, "https://sg-tools-cdn.blablalink.com/a/costume_burst_ko.mp3");
 });

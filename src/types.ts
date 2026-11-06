@@ -52,6 +52,13 @@ export interface BurstPlayback {
   layers: { role: "background" | "main"; animation: string }[];
 }
 
+export interface BurstVoiceRef {
+  /** Korean line text */
+  text?: string;
+  /** Korean audio URL */
+  audio?: string;
+}
+
 export interface BurstCutscene {
   id: string;
   format: "spine";
@@ -65,6 +72,13 @@ export interface BurstCutscene {
   textures: { name: string; url: string }[];
   viewerUrl: string;
   source: { name: string; url: string; revision: string; viewerUrl: string };
+  /**
+   * Burst-related voice lines for this skin, from the character's detail file.
+   * `burst` is the cutscene line (*_Ult_Skill_N), `ready` the charge line,
+   * `full` the full-burst shout. Absent when the detail file wasn't loaded
+   * (e.g. list responses); individual slots are null when the skin has none.
+   */
+  voice?: { burst: BurstVoiceRef | null; ready: BurstVoiceRef | null; full: BurstVoiceRef | null };
 }
 
 export interface ImageSet {

@@ -20,7 +20,7 @@ export function createBurstViewer(titleOf: (burst: BurstCutscene) => string = ()
     const config = { ...burst, atlas: asset(filename(burst.atlas)), skeleton: asset(filename(burst.skeleton)),
       textures: burst.textures.map(t => ({ name: t.name, url: asset(t.name) })) };
     const title = escapeHtml(titleOf(burst));
-    c.header("Content-Security-Policy", "default-src 'none'; script-src 'self'; style-src 'unsafe-inline'; img-src 'self' blob:; connect-src 'self'; base-uri 'none'");
+    c.header("Content-Security-Policy", "default-src 'none'; script-src 'self'; style-src 'unsafe-inline'; img-src 'self' blob:; connect-src 'self'; media-src https://sg-tools-cdn.blablalink.com; base-uri 'none'");
     return c.html(`<!doctype html>
 <html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${title} · 버스트 컷씬</title>
 <style>

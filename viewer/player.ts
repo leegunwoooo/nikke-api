@@ -38,6 +38,20 @@ async function main() {
   }));
   const data = new SkeletonBinary(new AtlasAttachmentLoader(atlas)).readSkeletonData(new Uint8Array(bytes));
   const scene = new BurstScene(data, burst.playback);
+
+  // Burst voice line (Korean). Audio plays along the same timeline; browsers
+  // require a user gesture, so blocked playback retries on the next press.
+  const voiceAudio = burst.voice?.burst?.audio ? new Audio(burst.voice.burst.audio) : null;
+  let voiceBlocked = false;
+  const playVoice = () => {
+    if (!voiceAudio || voiceBlocked) return;
+    if (Number.isFinite(voiceAudio.duration) && time >= voiceAudio.duration) return;
+    if (Math.abs(voiceAudio.currentTime - time) > 0.15) voiceAudio.currentTime = time;
+    voiceAudio.play().catch(() => {
+      voiceBlocked = true;
+      status.textContent = "화면을 한 번 누르면 대사 음성이 재생돼요.";
+    });
+  };
   // Off-screen particles/transition art can extend far beyond the composition.
   // Keep the exported frame fixed instead of zooming out to include those parts.
   let minX = data.x, minY = data.y, maxX = data.x + data.width, maxY = data.y + data.height;
@@ -80,12 +94,27 @@ async function main() {
   };
   play.disabled = false; seek.disabled = false; $("restart").removeAttribute("disabled");
   seek.max = String(scene.duration);
-  play.onclick = () => { playing = !playing; play.textContent = playing ? "일시정지" : "재생"; last = performance.now(); };
-  seek.oninput = () => { time = Number(seek.value); playing = false; play.textContent = "재생"; draw(); };
-  $("restart").onclick = () => { time = 0; playing = true; play.textContent = "일시정지"; last = performance.now(); draw(); };
+  play.onclick = () => {
+    playing = !playing;
+    play.textContent = playing ? "일시정지" : "재생";
+    last = performance.now();
+    if (playing) playVoice(); else voiceAudio?.pause();
+  };
+  seek.oninput = () => { time = Number(seek.value); playing = false; play.textContent = "재생"; voiceAudio?.pause(); draw(); };
+  $("restart").onclick = () => {
+    time = 0; playing = true; play.textContent = "일시정지"; last = performance.now();
+    if (voiceAudio) { voiceAudio.currentTime = 0; voiceBlocked = false; playVoice(); }
+    draw();
+  };
+  addEventListener("pointerdown", () => {
+    if (voiceBlocked && playing) { voiceBlocked = false; playVoice(); }
+  }, true);
+  playVoice();
   const frame = (now: number) => {
     if (playing && !document.hidden) {
+      const prev = time;
       time = (time + Math.min((now - last) / 1000, 0.1)) % scene.duration;
+      if (time < prev && voiceAudio && !voiceAudio.paused) voiceAudio.currentTime = 0;
       draw();
     }
     last = now;

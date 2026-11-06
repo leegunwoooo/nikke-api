@@ -1,1 +1,105 @@
-{"skills": [{"name": "s1", "description": "d"}], "background": "bg", "attractiveScenarios": [{"id": 1, "sceneGroupId": "d_nikke_test_01", "level": 1, "title": {"ko": "테스트 에피소드", "en": "Test Episode"}, "costumeTid": null, "rewardId": 50}], "favoriteStory": {"sceneGroupId": "d_favorite_test", "name": "애장품 테스트", "sourceVideo": "https://youtu.be/test"}}
+{
+  "skills": [
+    {
+      "name": "s1",
+      "description": "d"
+    }
+  ],
+  "background": "bg",
+  "attractiveScenarios": [
+    {
+      "id": 1,
+      "sceneGroupId": "d_nikke_test_01",
+      "level": 1,
+      "title": {
+        "ko": "테스트 에피소드",
+        "en": "Test Episode"
+      },
+      "costumeTid": null,
+      "rewardId": 50
+    }
+  ],
+  "favoriteStory": {
+    "sceneGroupId": "d_favorite_test",
+    "name": "애장품 테스트",
+    "sourceVideo": "https://youtu.be/test"
+  },
+  "voices": [
+    {
+      "id": 1,
+      "costumeIndex": 0,
+      "speechId": "c010_Ult_Skill_Ready_1",
+      "label": {
+        "ko": "버스트 준비"
+      },
+      "text": {
+        "ko": "레디.",
+        "en": "Ready."
+      },
+      "voice": {
+        "ko": "https://sg-tools-cdn.blablalink.com/a/ready_ko.mp3",
+        "en": "https://sg-tools-cdn.blablalink.com/a/ready_en.mp3"
+      }
+    },
+    {
+      "id": 2,
+      "costumeIndex": 0,
+      "speechId": "c010_Ult_Skill_1",
+      "label": {
+        "ko": "버스트 스킬"
+      },
+      "text": {
+        "ko": "화력 집중!",
+        "en": "Focus fire!"
+      },
+      "voice": {
+        "ko": "https://sg-tools-cdn.blablalink.com/a/burst_ko.mp3",
+        "en": "https://sg-tools-cdn.blablalink.com/a/burst_en.mp3",
+        "ja": "https://sg-tools-cdn.blablalink.com/a/burst_ja.mp3"
+      }
+    },
+    {
+      "id": 3,
+      "costumeIndex": 0,
+      "speechId": "c010_FullBurst_1",
+      "label": {
+        "ko": "풀 버스트"
+      },
+      "text": {
+        "ko": "일제 사격!",
+        "en": "All units, fire!"
+      },
+      "voice": {
+        "ko": "https://sg-tools-cdn.blablalink.com/a/full_ko.mp3"
+      }
+    },
+    {
+      "id": 4,
+      "costumeIndex": 2,
+      "speechId": "c010_Ult_Skill_1",
+      "label": {
+        "ko": "버스트 스킬"
+      },
+      "text": {
+        "ko": "코스튬 버스트 대사"
+      },
+      "voice": {
+        "ko": "https://sg-tools-cdn.blablalink.com/a/costume_burst_ko.mp3"
+      }
+    },
+    {
+      "id": 5,
+      "costumeIndex": 0,
+      "speechId": "c010_Lobby_Touch_1",
+      "label": {
+        "ko": "로비"
+      },
+      "text": {
+        "ko": "로비 대사"
+      },
+      "voice": {
+        "ko": "https://sg-tools-cdn.blablalink.com/a/lobby_ko.mp3"
+      }
+    }
+  ]
+}
