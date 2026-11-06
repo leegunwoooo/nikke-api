@@ -107,7 +107,7 @@ const NIKKE_EXTRA = {
 
 // routes api_get may reach — the rest have dedicated tools, and /api/user
 // (live upstream calls) and /api/tables (multi-MB raw dumps) stay closed
-const API_GET_ALLOWED = /^\/api\/(stages|costumes|equips|avatars|cubes|meta|cdn)(\/|\?|$)/;
+const API_GET_ALLOWED = /^\/api\/(stages|costumes|equips|avatars|cubes|meta|cdn|nikkes\/[^/?]+\/spine)(\/|\?|$)/;
 
 const READ_ONLY = { readOnlyHint: true, idempotentHint: true, openWorldHint: false } as const;
 // live account data — upstream game API calls through the server's
@@ -572,6 +572,20 @@ export function buildServer(api: Fetcher, version: string, origin = "", boundBla
         "nikke_appearances",
         `/api/nikkes/${enc(a.nameOrId)}/appearances${qs({ category: a.category, limit: a.limit, offset: a.offset })}`,
       ),
+  );
+
+  server.registerTool(
+    "get_nikke_spine",
+    {
+      title: "Spine animation asset URLs",
+      description:
+        "Spine viewer asset URLs for a character — stand (lobby), aim (firing stance incl. fire/skill tracks) and cover (incl. reload) triplets {atlas, skeleton, texture} for the base appearance and every costume. Render with a Spine 4.1 runtime.",
+      inputSchema: z.object({
+        nameOrId: z.string().min(1).describe("Character name (any language) or id"),
+      }),
+      annotations: READ_ONLY,
+    },
+    async (a) => call(api, "get_nikke_spine", `/api/nikkes/${enc(a.nameOrId)}/spine`),
   );
 
   server.registerTool(

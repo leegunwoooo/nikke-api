@@ -19647,11 +19647,12 @@ var NIKKE_EXTRA = {
   teammateList: "details.teammateList",
   costumes: "costumes",
   images: "images",
+  spine: "spine",
   // pseudo-include — no extra API field, it only keeps the raw per-skill
   // icon/descriptionTemplate/values that the default response strips
   skillLevels: ""
 };
-var API_GET_ALLOWED = /^\/api\/(stages|costumes|equips|avatars|cubes|meta|cdn)(\/|\?|$)/;
+var API_GET_ALLOWED = /^\/api\/(stages|costumes|equips|avatars|cubes|meta|cdn|nikkes\/[^/?]+\/spine)(\/|\?|$)/;
 var READ_ONLY = { readOnlyHint: true, idempotentHint: true, openWorldHint: false };
 var LIVE = { readOnlyHint: true, idempotentHint: true, openWorldHint: true };
 var USER_CALLS_PER_MINUTE = 30;
@@ -19847,7 +19848,7 @@ function buildServer(api, version2, origin = "", boundBlablaid) {
       description: "Character detail: profile, skills (rendered at Lv10), backstory, squad, CV, affection (\uD638\uAC10\uB3C4) scene ids and the favorite-item (\uC560\uC7A5\uD488) story scene id. Add more with include. An exact character name returns that character even when others also match \u2014 the rest are listed in alsoMatched. A name that only partially matches several characters returns a {count, characters} list instead \u2014 call again with one of their ids.",
       inputSchema: object({
         nameOrId: string2().min(1).describe("Character name (partial, any language), id or resourceId"),
-        include: array(_enum(Object.keys(NIKKE_EXTRA))).optional().describe("Extra sections added to the default: statsPerLevel (~30KB), voices (~80KB, voice lines incl. costumeIndex), shot (weapon mechanics \u2014 damage/charge/rate-of-fire/burst-gauge units), statEnhance (limit-break & core bonus), teammateList, costumes, images, skillLevels (raw skill icon/descriptionTemplate/values)"),
+        include: array(_enum(Object.keys(NIKKE_EXTRA))).optional().describe("Extra sections added to the default: statsPerLevel (~30KB), voices (~80KB, voice lines incl. costumeIndex), shot (weapon mechanics \u2014 damage/charge/rate-of-fire/burst-gauge units), statEnhance (limit-break & core bonus), teammateList, costumes, images, spine (Spine animation asset URLs \u2014 atlas/skeleton/texture for stand/aim/cover stances, per costume), skillLevels (raw skill icon/descriptionTemplate/values)"),
         lang: LANG
       }),
       annotations: READ_ONLY
@@ -20031,6 +20032,18 @@ function buildServer(api, version2, origin = "", boundBlablaid) {
       "nikke_appearances",
       `/api/nikkes/${enc(a.nameOrId)}/appearances${qs({ category: a.category, limit: a.limit, offset: a.offset })}`
     )
+  );
+  server.registerTool(
+    "get_nikke_spine",
+    {
+      title: "Spine animation asset URLs",
+      description: "Spine viewer asset URLs for a character \u2014 stand (lobby), aim (firing stance incl. fire/skill tracks) and cover (incl. reload) triplets {atlas, skeleton, texture} for the base appearance and every costume. Render with a Spine 4.1 runtime.",
+      inputSchema: object({
+        nameOrId: string2().min(1).describe("Character name (any language) or id")
+      }),
+      annotations: READ_ONLY
+    },
+    async (a) => call(api, "get_nikke_spine", `/api/nikkes/${enc(a.nameOrId)}/spine`)
   );
   server.registerTool(
     "compare_nikkes",
@@ -21550,6 +21563,7 @@ async function createApp(storage, options = {}) {
         "GET /api/events/:id": "event detail \u2014 episode scene list",
         "GET /api/events/:id/script": "whole event script, episode by episode ('speaker: text')",
         "GET /api/lines": "dialogue search; q (text) and/or speaker, family, category; 50 per page by default",
+        "GET /api/nikkes/:id/spine": "Spine animation asset URLs (stand/aim/cover, per costume)",
         "GET /api/nikkes/:id/appearances": "scenes and events a character speaks in (all versions)",
         "GET /api/story/route": "story reading order (community guide)",
         "GET /api/story/next": "next stories on the route; chapter|after, done, required",
@@ -21907,6 +21921,23 @@ async function createApp(storage, options = {}) {
       count,
       offset: pg.off,
       lines: hits.map((h) => ({ ...h, scene: sceneLabel(idx.get(h.groupId), evOf.get(h.groupId)) }))
+    });
+  });
+  app.get("/api/nikkes/:id/spine", async (c) => {
+    const key2 = c.req.param("id");
+    const n = /^\d+$/.test(key2) ? byId.get(Number(key2)) ?? byResourceId.get(Number(key2)) : findByName(key2)[0];
+    if (!n) return c.json({ error: "not found" }, 404);
+    return c.json({
+      id: n.id,
+      resourceId: n.resourceId,
+      name: n.name,
+      spine: n.spine ?? null,
+      costumes: n.costumes.map((co) => ({
+        id: co.id,
+        skinIndex: co.skinIndex,
+        name: co.name,
+        spine: co.spine ?? null
+      }))
     });
   });
   app.get("/api/nikkes/:id/appearances", async (c) => {
@@ -22791,7 +22822,7 @@ var CREDS_KEY = "bla:creds";
 var HDR_CREDS = "x-bla-creds";
 var HDR_BLABLAID = "x-registered-blablaid";
 var edgeCache = caches.default;
-var BUILD_ID = false ? void 0 : "7516e8457ee8";
+var BUILD_ID = false ? void 0 : "e623c8317d12";
 var DATA_HOST = "https://nikke-api-data.pages.dev";
 var REVALIDATE_MS = 3e5;
 var appPromise;

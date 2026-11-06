@@ -544,6 +544,7 @@ app.get("/", (c) =>
       "GET /api/events/:id": "event detail — episode scene list",
       "GET /api/events/:id/script": "whole event script, episode by episode ('speaker: text')",
       "GET /api/lines": "dialogue search; q (text) and/or speaker, family, category; 50 per page by default",
+      "GET /api/nikkes/:id/spine": "Spine animation asset URLs (stand/aim/cover, per costume)",
       "GET /api/nikkes/:id/appearances": "scenes and events a character speaks in (all versions)",
       "GET /api/story/route": "story reading order (community guide)",
       "GET /api/story/next": "next stories on the route; chapter|after, done, required",
@@ -977,6 +978,25 @@ app.get("/api/lines", async (c) => {
     count,
     offset: pg.off,
     lines: hits.map((h) => ({ ...h, scene: sceneLabel(idx.get(h.groupId), evOf.get(h.groupId)) })),
+  });
+});
+
+// Spine viewer assets per skin: stand + combat aim/cover stances.
+app.get("/api/nikkes/:id/spine", async (c) => {
+  const key = c.req.param("id");
+  const n = /^\d+$/.test(key) ? byId.get(Number(key)) ?? byResourceId.get(Number(key)) : findByName(key)[0];
+  if (!n) return c.json({ error: "not found" }, 404);
+  return c.json({
+    id: n.id,
+    resourceId: n.resourceId,
+    name: n.name,
+    spine: n.spine ?? null,
+    costumes: n.costumes.map((co) => ({
+      id: co.id,
+      skinIndex: co.skinIndex,
+      name: co.name,
+      spine: co.spine ?? null,
+    })),
   });
 });
 
