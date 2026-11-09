@@ -27223,7 +27223,8 @@ function buildOpenapi(pkgVersion) {
           parameters: [
             { name: "file", in: "path", required: true, schema: { type: "string" }, example: "character_id_map.json" },
             { name: "limit", in: "query", schema: { type: "integer" }, description: "\uD398\uC774\uC9C0 \uD06C\uAE30 (\uBC30\uC5F4 \uD14C\uC774\uBE14 \uC804\uC6A9)" },
-            { name: "offset", in: "query", schema: { type: "integer" }, description: "\uAC74\uB108\uB6F8 \uD589 \uC218" }
+            { name: "offset", in: "query", schema: { type: "integer" }, description: "\uAC74\uB108\uB6F8 \uD589 \uC218" },
+            { name: "fields", in: "query", schema: { type: "string" }, description: "\uD589 \uD544\uB4DC \uCD94\uB9AC\uAE30 (\uC27C\uD45C \uAD6C\uBD84 dot \uACBD\uB85C, \uD398\uC774\uC9C0\uB124\uC774\uC158\uACFC \uD568\uAED8)" }
           ],
           responses: { "200": { description: "\uC6D0\uBCF8 JSON \uB610\uB294 {count,offset,rows[]}" }, "404": { description: "\uC5C6\uC74C" } }
         }
@@ -28549,7 +28550,11 @@ async function createApp(storage, options = {}) {
         if (!Array.isArray(rows)) return c.json({ error: "not a list table" }, 400);
         const pg = pageQuery(c, rows.length);
         if ("error" in pg) return c.json({ error: pg.error }, 400);
-        return c.json({ count: rows.length, offset: pg.off, rows: rows.slice(pg.off, pg.off + pg.lim) });
+        return c.json({
+          count: rows.length,
+          offset: pg.off,
+          rows: pickFields(rows.slice(pg.off, pg.off + pg.lim), fieldsOf(c))
+        });
       }
       if (wantsLang(c)) return c.json(JSON.parse(body));
       return c.body(body, 200, { "Content-Type": "application/json" });
@@ -28990,7 +28995,7 @@ var CREDS_KEY = "bla:creds";
 var HDR_CREDS = "x-bla-creds";
 var HDR_BLABLAID = "x-registered-blablaid";
 var edgeCache = caches.default;
-var BUILD_ID = false ? void 0 : "b5c9a9260fae";
+var BUILD_ID = false ? void 0 : "f78e102e6790";
 var DATA_HOST = "https://nikke-api-data.pages.dev";
 var REVALIDATE_MS = 3e5;
 var appPromise;

@@ -1571,7 +1571,11 @@ app.get("/api/tables/:file", async (c) => {
       if (!Array.isArray(rows)) return c.json({ error: "not a list table" }, 400);
       const pg = pageQuery(c, rows.length);
       if ("error" in pg) return c.json({ error: pg.error }, 400);
-      return c.json({ count: rows.length, offset: pg.off, rows: rows.slice(pg.off, pg.off + pg.lim) });
+      return c.json({
+        count: rows.length,
+        offset: pg.off,
+        rows: pickFields(rows.slice(pg.off, pg.off + pg.lim), fieldsOf(c)),
+      });
     }
     if (wantsLang(c)) return c.json(JSON.parse(body));
     return c.body(body, 200, { "Content-Type": "application/json" });

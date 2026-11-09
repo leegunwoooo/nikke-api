@@ -738,6 +738,7 @@ const openapi = {
           { name: "file", in: "path", required: true, schema: { type: "string" }, example: "character_id_map.json" },
           { name: "limit", in: "query", schema: { type: "integer" }, description: "페이지 크기 (배열 테이블 전용)" },
           { name: "offset", in: "query", schema: { type: "integer" }, description: "건너뛸 행 수" },
+          { name: "fields", in: "query", schema: { type: "string" }, description: "행 필드 추리기 (쉼표 구분 dot 경로, 페이지네이션과 함께)" },
         ],
         responses: { "200": { description: "원본 JSON 또는 {count,offset,rows[]}" }, "404": { description: "없음" } },
       },

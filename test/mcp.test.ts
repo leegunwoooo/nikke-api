@@ -202,6 +202,8 @@ test("api_get reaches tables and pages them", async () => {
   assert.equal(j.count, 4);
   const r2 = await tool("api_get", { path: "/api/tables/stage_list.json?offset=3&limit=3" });
   assert.equal((r2.json as typeof j).rows.length, 1);
+  const r3 = await tool("api_get", { path: "/api/tables/stage_list.json?limit=1&fields=id" });
+  assert.deepEqual((r3.json as typeof j).rows, [{ id: 6000001 }]);
 });
 
 test("mcp errors surface as isError", async () => {

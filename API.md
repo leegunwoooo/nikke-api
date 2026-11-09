@@ -392,10 +392,10 @@ GET /api/nikkes/511/burst?lang=ko
 GET /api/tables/CharacterLevelTable.json
 ```
 
-최상위가 배열인 테이블은 `?offset=`/`?limit=`으로 페이지네이션할 수 있습니다 — 이 경우 `{count, offset, rows[]}`로 응답합니다 (`tower_list.json` 7850행 같은 큰 테이블용).
+최상위가 배열 또는 `{records:[]}`인 테이블은 `?offset=`/`?limit=`으로 페이지네이션할 수 있습니다 — 이 경우 `{count, offset, rows[]}`로 응답합니다 (`tower_list.json` 7850행 같은 큰 테이블용). `?fields=a,b.c`로 각 행의 필드를 추릴 수도 있습니다.
 
 ```
-GET /api/tables/tower_list.json?offset=0&limit=100
+GET /api/tables/tower_list.json?offset=0&limit=100&fields=stage_id,standard_battle_power
 ```
 
 ## GET /api/scenes
