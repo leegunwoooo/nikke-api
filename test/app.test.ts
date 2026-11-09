@@ -339,6 +339,26 @@ test("favorites list names the owner and filters by nikke", async () => {
   assert.equal((await json(`/api/favorites?nikke=${encodeURIComponent("앵커")}`)).count, 0);
 });
 
+test("archives expose the record-room hierarchy with event links", async () => {
+  const list = await app.request("/api/archives");
+  const j = await list.json() as any;
+  assert.equal(j.count, 2);
+  const a = j.archives.find((x: any) => x.id === 100);
+  assert.equal(a.type, "StoryEvent");
+  assert.equal(a.startDate, "2022-11-10T06:30:00");
+  const kid = a.children[0];
+  assert.equal(kid.album.name, "STORY");
+  assert.equal(kid.section.name, "이벤트 앨범");
+  assert.equal(kid.event, "event_nocallerid"); // derived from scene groupIds
+  assert.equal(kid.scenes[0].groupId, "event_nocallerid_prologue");
+  const flat = await app.request("/api/archives/1000100");
+  const b = await flat.json() as any;
+  assert.equal(b.children[0].section.eventName, "Locale_Event:EVENT_QUEST_FIRSTAFFECTION");
+  assert.equal(b.children[0].event, "event_firstaffection");
+  assert.equal((await app.request("/api/archives?lang=fr")).status, 400);
+  assert.equal((await app.request("/api/archives/nope")).status, 400);
+});
+
 test("favorites + tables", async () => {
   assert.equal((await json("/api/favorites?q=tele")).count, 1);
   assert.equal((await get("/api/favorites/999")).status, 404);
@@ -346,6 +366,8 @@ test("favorites + tables", async () => {
     "ItemEquipTable_en.json",
     "ItemEquipTable_ja.json",
     "ItemEquipTable_ko.json",
+    "archive_list_ko.json",
+    "scene_archive_list_ko.json",
     "stage_list.json",
     "tower_list.json",
   ]);

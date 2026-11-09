@@ -25693,7 +25693,7 @@ var NIKKE_EXTRA = {
   // icon/descriptionTemplate/values that the default response strips
   skillLevels: ""
 };
-var API_GET_ALLOWED = /^\/api\/(stages|costumes|equips|avatars|cubes|meta|cdn|tables|nikkes\/[^/?]+\/(spine|burst))(\/|\?|$)/;
+var API_GET_ALLOWED = /^\/api\/(stages|costumes|equips|avatars|cubes|meta|cdn|tables|archives|nikkes\/[^/?]+\/(spine|burst))(\/|\?|$)/;
 var READ_ONLY = { readOnlyHint: true, idempotentHint: true, openWorldHint: false };
 var LIVE = { readOnlyHint: true, idempotentHint: true, openWorldHint: true };
 var USER_CALLS_PER_MINUTE = 30;
@@ -26169,7 +26169,7 @@ function buildServer(api, version2, origin = "", boundBlablaid) {
     "api_get",
     {
       title: "Call another read endpoint",
-      description: "GET the endpoints without a dedicated tool: /api/stages (?chapter=&mode=), /api/stages/:id, /api/costumes (?nikke=&grade=), /api/costumes/:id, /api/equips, /api/equips/options, /api/cubes, /api/avatars, /api/meta/filters, /api/tables and /api/tables/:file (raw synced tables \u2014 tower_list, stage_list, CharacterLevelTable etc.; page big ones with ?limit=&offset=). Add lang=ko to flatten names. See /openapi.json for parameters.",
+      description: "GET the endpoints without a dedicated tool: /api/stages (?chapter=&mode=), /api/stages/:id, /api/costumes (?nikke=&grade=), /api/costumes/:id, /api/equips, /api/equips/options, /api/cubes, /api/avatars, /api/meta/filters, /api/archives (?type=, in-game record-room hierarchy), /api/tables and /api/tables/:file (raw synced tables \u2014 tower_list, stage_list, CharacterLevelTable etc.; page big ones with ?limit=&offset=). Add lang=ko to flatten names. See /openapi.json for parameters.",
       inputSchema: object({
         path: string2().startsWith("/api/").describe("Path with query string, e.g. /api/stages?chapter=1&lang=ko")
       }),
@@ -26180,7 +26180,7 @@ function buildServer(api, version2, origin = "", boundBlablaid) {
       if (a.path.includes("..") || !API_GET_ALLOWED.test(u.pathname)) {
         return text(
           JSON.stringify({
-            error: "path not allowed \u2014 api_get serves stages, costumes, equips, cubes, avatars, meta, cdn and tables; use the dedicated tools for the rest"
+            error: "path not allowed \u2014 api_get serves stages, costumes, equips, cubes, avatars, meta, cdn, tables and archives; use the dedicated tools for the rest"
           }),
           true
         );
@@ -27216,6 +27216,33 @@ function buildOpenapi(pkgVersion) {
       "/api/tables": {
         get: { tags: ["misc"], summary: "\uC6D0\uBCF8 \uD14C\uC774\uBE14 \uBAA9\uB85D", responses: { "200": { description: "\uD30C\uC77C \uBAA9\uB85D" } } }
       },
+      "/api/archives": {
+        get: {
+          tags: ["misc"],
+          summary: "\uAE30\uB85D\uC2E4(\uC544\uCE74\uC774\uBE0C) \uC568\uBC94 \uACC4\uCE35 \u2014 \uC774\uBCA4\uD2B8\xB7\uAE30\uAC04\xB7\uC52C \uBAA9\uB85D",
+          parameters: [
+            { name: "type", in: "query", schema: { type: "string" }, description: "event_system_type \uD544\uD130 (StoryEvent \uB4F1)" },
+            { name: "limit", in: "query", schema: { type: "integer", minimum: 1, maximum: 500 } },
+            { name: "offset", in: "query", schema: { type: "integer", default: 0 } },
+            { name: "page", in: "query", schema: { type: "integer", minimum: 1 } },
+            { name: "lang", in: "query", schema: { type: "string", enum: ["ko", "en", "ja", "zh-TW"] } },
+            { name: "fields", in: "query", schema: { type: "string" } }
+          ],
+          responses: { "200": { description: "\uC544\uCE74\uC774\uBE0C \uBAA9\uB85D" } }
+        }
+      },
+      "/api/archives/{id}": {
+        get: {
+          tags: ["misc"],
+          summary: "\uC544\uCE74\uC774\uBE0C \uB2E8\uAC74",
+          parameters: [
+            { name: "id", in: "path", required: true, schema: { type: "integer" } },
+            { name: "lang", in: "query", schema: { type: "string", enum: ["ko", "en", "ja", "zh-TW"] } },
+            { name: "fields", in: "query", schema: { type: "string" } }
+          ],
+          responses: { "200": { description: "\uC544\uCE74\uC774\uBE0C \uC0C1\uC138" }, "404": { description: "\uC5C6\uC74C" } }
+        }
+      },
       "/api/tables/{file}": {
         get: {
           tags: ["misc"],
@@ -27717,6 +27744,8 @@ async function createApp(storage, options = {}) {
         "GET /api/favorites/:id": "\uC18C\uC7A5\uD488 detail \u2014 per-level stats, skills",
         "GET /api/cubes": "\uD558\uBAA8\uB2C8 \uD050\uBE0C list; filter: q",
         "GET /api/cubes/:id": "\uD050\uBE0C detail \u2014 per-level stats, skills",
+        "GET /api/archives": "in-game record-room (archive) album hierarchy \u2014 events, dates, scenes",
+        "GET /api/archives/:id": "one archive entry by id",
         "GET /api/tables": "list raw table files",
         "GET /api/tables/:file": "raw synced table JSON",
         "GET /api/cdn?path=": "resolve a Blablalink CDN resource path to its URL",
@@ -28562,6 +28591,94 @@ async function createApp(storage, options = {}) {
       return c.json({ error: "not found" }, 404);
     }
   });
+  const archiveCache = /* @__PURE__ */ new Map();
+  const getArchives = (lang) => {
+    let p = archiveCache.get(lang);
+    if (!p) {
+      p = (async () => {
+        const [archives, sceneArchives] = await Promise.all([
+          storage.readText(path.join("tables", `archive_list_${lang}.json`)).then(JSON.parse).catch(() => []),
+          storage.readText(path.join("tables", `scene_archive_list_${lang}.json`)).then(JSON.parse).catch(() => [])
+        ]);
+        const dateById = /* @__PURE__ */ new Map();
+        const dateByEvent = /* @__PURE__ */ new Map();
+        for (const e of sceneArchives) {
+          const ev2 = e.record_main_archive_event_id?.event?.value;
+          const d = { start: ev2?.event_start_date ?? null, end: ev2?.event_end_date ?? null };
+          dateById.set(e.id, d);
+          const v = e.record_main_archive_event_id?.value;
+          if (v != null) dateByEvent.set(v, d);
+        }
+        return archives.map((e) => {
+          const main = e.record_main_archive_event_id ?? {};
+          const ev2 = main.event ?? {};
+          const kids = ev2.child?.value ?? [];
+          const dates = dateById.get(e.id) ?? dateByEvent.get(main.value);
+          return {
+            id: e.id,
+            eventId: main.value ?? null,
+            type: ev2.value?.event_system_type ?? kids[0]?.value?.event_system_type ?? null,
+            ...dates && (dates.start || dates.end) ? { startDate: dates.start, endDate: dates.end } : {},
+            children: kids.map((k) => {
+              const sc = k.story?.album?.scene;
+              const scv = sc?.value ?? sc;
+              const sub = sc?.sub_category_id && typeof sc.sub_category_id === "object" ? sc.sub_category_id : scv?.sub_category_id;
+              const scenes = (sub?.scenes?.value ?? []).map((s) => ({
+                groupId: s.value?.scenario_group_id ?? null,
+                name: s.scenario_name_localkey?.scenario_name ?? null
+              }));
+              const section = scv ? {
+                id: scv.id ?? null,
+                subCategoryId: sub?.value ?? (typeof scv?.sub_category_id === "number" ? scv.sub_category_id : null),
+                name: sc?.sub_category_name_localkey?.chapter_name ?? scv.sub_category_name_localkey?.chapter_name ?? null,
+                thumbnail: scv.sub_category_thumbnail ?? null,
+                eventId: scv.event_id ?? null,
+                eventName: scv.event_name_localkey ?? null,
+                uiPrefab: scv.ui_prefab ?? null
+              } : null;
+              return {
+                id: k.value?.id ?? null,
+                type: k.value?.event_system_type ?? null,
+                order: k.value?.archive_story_progress_group_order ?? null,
+                progressLocale: k.value?.archive_story_progress_locale ?? null,
+                album: k.story?.value ? { id: k.story.value.id ?? null, name: k.story.name_value ?? null, categoryGroup: k.story.value.album_category_group ?? null } : null,
+                section,
+                ...scenes[0]?.groupId ? { event: eventIdOf(scenes[0].groupId) } : {},
+                scenes
+              };
+            })
+          };
+        });
+      })();
+      archiveCache.set(lang, p);
+    }
+    return p;
+  };
+  app.get("/api/archives", async (c) => {
+    const lang = c.req.query("lang") ?? "ko";
+    if (!LOCALES.has(lang)) return c.json({ error: "invalid lang" }, 400);
+    let list = await getArchives(lang);
+    const type = c.req.query("type");
+    if (type) list = list.filter((a) => norm(a.type ?? "") === norm(type));
+    const total = list.length;
+    const pg = pageQuery(c, total);
+    if ("error" in pg) return c.json({ error: pg.error }, 400);
+    return c.json({
+      count: total,
+      offset: pg.off,
+      ...pg.page ? { page: pg.page, totalPages: Math.ceil(total / pg.lim) } : {},
+      archives: pickFields(list.slice(pg.off, pg.off + pg.lim), fieldsOf(c))
+    });
+  });
+  app.get("/api/archives/:id", async (c) => {
+    const lang = c.req.query("lang") ?? "ko";
+    if (!LOCALES.has(lang)) return c.json({ error: "invalid lang" }, 400);
+    const id = c.req.param("id");
+    if (!/^\d+$/.test(id)) return c.json({ error: "invalid id" }, 400);
+    const a = (await getArchives(lang)).find((x) => x.id === Number(id));
+    if (!a) return c.json({ error: "not found" }, 404);
+    return c.json(pickFields(a, fieldsOf(c)));
+  });
   app.get("/api/user", userProfile);
   app.get("/api/user/nikke", userNikkeList);
   app.get("/api/user/nikke/:nameOrId", userNikkeDetail);
@@ -28995,7 +29112,7 @@ var CREDS_KEY = "bla:creds";
 var HDR_CREDS = "x-bla-creds";
 var HDR_BLABLAID = "x-registered-blablaid";
 var edgeCache = caches.default;
-var BUILD_ID = false ? void 0 : "f78e102e6790";
+var BUILD_ID = false ? void 0 : "156fada7521c";
 var DATA_HOST = "https://nikke-api-data.pages.dev";
 var REVALIDATE_MS = 3e5;
 var appPromise;

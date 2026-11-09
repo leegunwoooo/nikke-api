@@ -730,6 +730,33 @@ const openapi = {
     "/api/tables": {
       get: { tags: ["misc"], summary: "원본 테이블 목록", responses: { "200": { description: "파일 목록" } } },
     },
+    "/api/archives": {
+      get: {
+        tags: ["misc"],
+        summary: "기록실(아카이브) 앨범 계층 — 이벤트·기간·씬 목록",
+        parameters: [
+          { name: "type", in: "query", schema: { type: "string" }, description: "event_system_type 필터 (StoryEvent 등)" },
+          { name: "limit", in: "query", schema: { type: "integer", minimum: 1, maximum: 500 } },
+          { name: "offset", in: "query", schema: { type: "integer", default: 0 } },
+          { name: "page", in: "query", schema: { type: "integer", minimum: 1 } },
+          { name: "lang", in: "query", schema: { type: "string", enum: ["ko", "en", "ja", "zh-TW"] } },
+          { name: "fields", in: "query", schema: { type: "string" } },
+        ],
+        responses: { "200": { description: "아카이브 목록" } },
+      },
+    },
+    "/api/archives/{id}": {
+      get: {
+        tags: ["misc"],
+        summary: "아카이브 단건",
+        parameters: [
+          { name: "id", in: "path", required: true, schema: { type: "integer" } },
+          { name: "lang", in: "query", schema: { type: "string", enum: ["ko", "en", "ja", "zh-TW"] } },
+          { name: "fields", in: "query", schema: { type: "string" } },
+        ],
+        responses: { "200": { description: "아카이브 상세" }, "404": { description: "없음" } },
+      },
+    },
     "/api/tables/{file}": {
       get: {
         tags: ["misc"],

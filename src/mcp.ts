@@ -109,7 +109,7 @@ const NIKKE_EXTRA = {
 // routes api_get may reach — the rest have dedicated tools, and /api/user
 // (live upstream calls) stays closed; /api/tables is allowed but big raw
 // tables need ?limit/offset to fit a tool response
-const API_GET_ALLOWED = /^\/api\/(stages|costumes|equips|avatars|cubes|meta|cdn|tables|nikkes\/[^/?]+\/(spine|burst))(\/|\?|$)/;
+const API_GET_ALLOWED = /^\/api\/(stages|costumes|equips|avatars|cubes|meta|cdn|tables|archives|nikkes\/[^/?]+\/(spine|burst))(\/|\?|$)/;
 
 const READ_ONLY = { readOnlyHint: true, idempotentHint: true, openWorldHint: false } as const;
 // live account data — upstream game API calls through the server's
@@ -685,7 +685,7 @@ export function buildServer(api: Fetcher, version: string, origin = "", boundBla
     {
       title: "Call another read endpoint",
       description:
-        "GET the endpoints without a dedicated tool: /api/stages (?chapter=&mode=), /api/stages/:id, /api/costumes (?nikke=&grade=), /api/costumes/:id, /api/equips, /api/equips/options, /api/cubes, /api/avatars, /api/meta/filters, /api/tables and /api/tables/:file (raw synced tables — tower_list, stage_list, CharacterLevelTable etc.; page big ones with ?limit=&offset=). Add lang=ko to flatten names. See /openapi.json for parameters.",
+        "GET the endpoints without a dedicated tool: /api/stages (?chapter=&mode=), /api/stages/:id, /api/costumes (?nikke=&grade=), /api/costumes/:id, /api/equips, /api/equips/options, /api/cubes, /api/avatars, /api/meta/filters, /api/archives (?type=, in-game record-room hierarchy), /api/tables and /api/tables/:file (raw synced tables — tower_list, stage_list, CharacterLevelTable etc.; page big ones with ?limit=&offset=). Add lang=ko to flatten names. See /openapi.json for parameters.",
       inputSchema: z.object({
         path: z.string().startsWith("/api/").describe("Path with query string, e.g. /api/stages?chapter=1&lang=ko"),
       }),
@@ -699,7 +699,7 @@ export function buildServer(api: Fetcher, version: string, origin = "", boundBla
         return text(
           JSON.stringify({
             error:
-              "path not allowed — api_get serves stages, costumes, equips, cubes, avatars, meta, cdn and tables; use the dedicated tools for the rest",
+              "path not allowed — api_get serves stages, costumes, equips, cubes, avatars, meta, cdn, tables and archives; use the dedicated tools for the rest",
           }),
           true,
         );

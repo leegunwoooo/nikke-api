@@ -1,0 +1,247 @@
+[
+ {
+  "id": 100,
+  "record_main_archive_event_id": {
+   "value": 40001,
+   "event": {
+    "value": {
+     "id": 40001,
+     "event_system_type": "StoryEvent",
+     "archive_story_progress_group_order": 1,
+     "archive_story_progress_locale": "Locale_System:PROGRESS_STORY_TYPE_01",
+     "event_start_date": "2022-11-10T06:30:00",
+     "event_end_date": "2022-11-23T19:59:59"
+    },
+    "child": {
+     "value": [
+      {
+       "value": {
+        "id": 40001,
+        "event_system_type": "StoryEvent",
+        "archive_story_progress_group_order": 1,
+        "archive_story_progress_locale": "Locale_System:PROGRESS_STORY_TYPE_01"
+       },
+       "story": {
+        "value": {
+         "id": 10001,
+         "name": "Locale_System:PROGRESS_STORY_TYPE_01",
+         "album_category_group": 1000
+        },
+        "name_value": "STORY",
+        "album": {
+         "value": {
+          "id": 10001
+         },
+         "scene": {
+          "value": {
+           "id": 1000101,
+           "sub_category_id": 90001,
+           "sub_category_name_localtable": "Locale_System",
+           "sub_category_name_localkey": "Locale_System:ALBUM_CATEGORY_NAME_STORY_EVENT",
+           "category_group_id": 10001,
+           "sub_category_thumbnail": "img_album_structure_toyshop"
+          },
+          "sub_category_name_localtable": "Locale_System",
+          "sub_category_name_localkey": {
+           "value": "Locale_System:ALBUM_CATEGORY_NAME_STORY_EVENT",
+           "chapter_name": "이벤트 앨범"
+          },
+          "category_group_id": 10001,
+          "sub_category_thumbnail": "img_album_structure_toyshop",
+          "sub_category_id": {
+           "value": 90001,
+           "scenes": {
+            "value": [
+             {
+              "value": {
+               "scenario_name_localtable": "Locale_SubScenario",
+               "scenario_name_localkey": "Locale_SubScenario:event_nocallerid_prologue_title",
+               "scenario_group_id": "event_nocallerid_prologue"
+              },
+              "scenario_name_localkey": {
+               "value": "Locale_SubScenario:event_nocallerid_prologue_title",
+               "scenario_name": "소문"
+              }
+             },
+             {
+              "value": {
+               "scenario_name_localtable": "Locale_SubScenario",
+               "scenario_name_localkey": "Locale_SubScenario:event_nocallerid_01_title_a",
+               "scenario_group_id": "event_nocallerid_01_s"
+              },
+              "scenario_name_localkey": {
+               "value": "Locale_SubScenario:event_nocallerid_01_title_a",
+               "scenario_name": "발신자 불명 : A"
+              }
+             },
+             {
+              "value": {
+               "scenario_name_localtable": "Locale_SubScenario",
+               "scenario_name_localkey": "Locale_SubScenario:event_nocallerid_01_title_b",
+               "scenario_group_id": "event_nocallerid_01_e"
+              },
+              "scenario_name_localkey": {
+               "value": "Locale_SubScenario:event_nocallerid_01_title_b",
+               "scenario_name": "발신자 불명 : B"
+              }
+             },
+             {
+              "value": {
+               "scenario_name_localtable": "Locale_SubScenario",
+               "scenario_name_localkey": "Locale_SubScenario:event_nocallerid_02_title_a",
+               "scenario_group_id": "event_nocallerid_02_s"
+              },
+              "scenario_name_localkey": {
+               "value": "Locale_SubScenario:event_nocallerid_02_title_a",
+               "scenario_name": "기대감 : A"
+              }
+             },
+             {
+              "value": {
+               "scenario_name_localtable": "Locale_SubScenario",
+               "scenario_name_localkey": "Locale_SubScenario:event_nocallerid_02_title_b",
+               "scenario_group_id": "event_nocallerid_02_e"
+              },
+              "scenario_name_localkey": {
+               "value": "Locale_SubScenario:event_nocallerid_02_title_b",
+               "scenario_name": "기대감 : B"
+              }
+             },
+             {
+              "value": {
+               "scenario_name_localtable": "Locale_SubScenario",
+               "scenario_name_localkey": "Locale_SubScenario:event_nocallerid_intermission_title",
+               "scenario_group_id": "event_nocallerid_intermission_01"
+              },
+              "scenario_name_localkey": {
+               "value": "Locale_SubScenario:event_nocallerid_intermission_title",
+               "scenario_name": "푸른 불빛"
+              }
+             },
+             {
+              "value": {
+               "scenario_name_localtable": "Locale_SubScenario",
+               "scenario_name_localkey": "Locale_SubScenario:event_nocallerid_03_title_a",
+               "scenario_group_id": "event_nocallerid_03_s"
+              },
+              "scenario_name_localkey": {
+               "value": "Locale_SubScenario:event_nocallerid_03_title_a",
+               "scenario_name": "아무도 없는 마을 : A"
+              }
+             },
+             {
+              "value": {
+               "scenario_name_localtable": "Locale_SubScenario",
+               "scenario_name_localkey": "Locale_SubScenario:event_nocallerid_03_title_b",
+               "scenario_group_id": "event_nocallerid_03_e"
+              },
+              "scenario_name_localkey": {
+               "value": "Locale_SubScenario:event_nocallerid_03_title_b",
+               "scenario_name": "아무도 없는 마을 : B"
+              }
+             },
+             {
+              "value": {
+               "scenario_name_localtable": "Locale_SubScenario",
+               "scenario_name_localkey": "Locale_SubScenario:event_nocallerid_04_title_a",
+               "scenario_group_id": "event_nocallerid_04_s"
+              },
+              "scenario_name_localkey": {
+               "value": "Locale_SubScenario:event_nocallerid_04_title_a",
+               "scenario_name": "조용히 잠든 도시 : A"
+              }
+             },
+             {
+              "value": {
+               "scenario_name_localtable": "Locale_SubScenario",
+               "scenario_name_localkey": "Locale_SubScenario:event_nocallerid_04_title_b",
+               "scenario_group_id": "event_nocallerid_04_e"
+              },
+              "scenario_name_localkey": {
+               "value": "Locale_SubScenario:event_nocallerid_04_title_b",
+               "scenario_name": "조용히 잠든 도시 : B"
+              }
+             },
+             {
+              "value": {
+               "scenario_name_localtable": "Locale_SubScenario",
+               "scenario_name_localkey": "Locale_SubScenario:event_nocallerid_05_title_a",
+               "scenario_group_id": "event_nocallerid_05_s"
+              },
+              "scenario_name_localkey": {
+               "value": "Locale_SubScenario:event_nocallerid_05_title_a",
+               "scenario_name": "모두가 행복한 나라 : A"
+              }
+             },
+             {
+              "value": {
+               "scenario_name_localtable": "Locale_SubScenario",
+               "scenario_name_localkey": "Locale_SubScenario:event_nocallerid_05_title_b",
+               "scenario_group_id": "event_nocallerid_05_e"
+              },
+              "scenario_name_localkey": {
+               "value": "Locale_SubScenario:event_nocallerid_05_title_b",
+               "scenario_name": "모두가 행복한 나라 : B"
+              }
+             },
+             {
+              "value": {
+               "scenario_name_localtable": "Locale_SubScenario",
+               "scenario_name_localkey": "Locale_SubScenario:event_nocallerid_epilogue_title",
+               "scenario_group_id": "event_nocallerid_epilogue"
+              },
+              "scenario_name_localkey": {
+               "value": "Locale_SubScenario:event_nocallerid_epilogue_title",
+               "scenario_name": "말도 안 되는 일"
+              }
+             }
+            ]
+           }
+          }
+         }
+        }
+       },
+       "content_name": {
+        "value": "",
+        "content_name_locale": ""
+       }
+      }
+     ]
+    }
+   }
+  },
+  "record_slot_bg_addressable": "event_archive_nocallerid",
+  "record_unlock_bg_addressable": "event_archive_nocallerid",
+  "record_list_order": 1,
+  "record_title_locale": {
+   "value": "Locale_System:RECORD_EVENT_TITLE_1",
+   "chapter_name": "NO CALLER ID"
+  }
+ },
+ {
+  "id": 1000100,
+  "record_main_archive_event_id": {
+   "value": 130002,
+   "event": {
+    "value": {
+     "id": 130002,
+     "event_system_type": "EventQuest",
+     "archive_story_progress_group_order": 1,
+     "archive_story_progress_locale": "Locale_System:PROGRESS_STORY_TYPE_01",
+     "event_start_date": "2023-08-23T15:00:00",
+     "event_end_date": "2023-08-31T14:59:59"
+    },
+    "child": {
+     "value": []
+    }
+   }
+  },
+  "record_slot_bg_addressable": "event_archive_firstaffection",
+  "record_unlock_bg_addressable": "event_archive_firstaffection",
+  "record_list_order": 10001,
+  "record_title_locale": {
+   "value": "Locale_Event:EVENT_QUEST_FIRSTAFFECTION",
+   "chapter_name": "FIRST AFFECTION"
+  }
+ }
+]

@@ -6,7 +6,7 @@ import { cacheHeaders } from "./cache.js";
 import { cdnUrl } from "./cdn.js";
 import { burstVoiceFor, getBurstCutscene, withBurstCutscenes, withBurstVoices, type DetailVoice } from "./burst.js";
 import { createBurstViewer } from "./burst-viewer.js";
-import { groupEventScenes } from "./events.js";
+import { eventIdOf, groupEventScenes } from "./events.js";
 import { buildFamilies } from "./family.js";
 import { favoriteRouteEntries, ROUTE_COVERAGE_CHAPTER, ROUTE_SOURCES, STORY_ROUTE } from "./story-route.js";
 import { SCENE_CATEGORIES } from "./scene-categories.js";
@@ -582,6 +582,8 @@ app.get("/", (c) =>
       "GET /api/favorites/:id": "소장품 detail — per-level stats, skills",
       "GET /api/cubes": "하모니 큐브 list; filter: q",
       "GET /api/cubes/:id": "큐브 detail — per-level stats, skills",
+      "GET /api/archives": "in-game record-room (archive) album hierarchy — events, dates, scenes",
+      "GET /api/archives/:id": "one archive entry by id",
       "GET /api/tables": "list raw table files",
       "GET /api/tables/:file": "raw synced table JSON",
       "GET /api/cdn?path=": "resolve a Blablalink CDN resource path to its URL",
@@ -1582,6 +1584,123 @@ app.get("/api/tables/:file", async (c) => {
   } catch {
     return c.json({ error: "not found" }, 404);
   }
+});
+
+// 지휘부 기록실 — the in-game archive browser's own hierarchy: album
+// categories → archive events → progress groups → scenes. scene_archive_list
+// is the same table plus event dates, merged here by entry id.
+// Tables are per-locale like scenes; ?lang= picks the file.
+type ArchiveSection = {
+  id: number | null;
+  subCategoryId: number | null;
+  name: string | null;
+  thumbnail: string | null;
+  eventId: number | null;
+  eventName: string | null;
+  uiPrefab: string | null;
+};
+const archiveCache = new Map<string, Promise<unknown[]>>();
+const getArchives = (lang: string) => {
+  let p = archiveCache.get(lang);
+  if (!p) {
+    p = (async () => {
+      const [archives, sceneArchives] = await Promise.all([
+        storage.readText(path.join("tables", `archive_list_${lang}.json`)).then(JSON.parse).catch(() => []),
+        storage.readText(path.join("tables", `scene_archive_list_${lang}.json`)).then(JSON.parse).catch(() => []),
+      ]);
+      const dateById = new Map<number, { start: string | null; end: string | null }>();
+      const dateByEvent = new Map<number, { start: string | null; end: string | null }>();
+      for (const e of sceneArchives as any[]) {
+        const ev = e.record_main_archive_event_id?.event?.value;
+        const d = { start: ev?.event_start_date ?? null, end: ev?.event_end_date ?? null };
+        dateById.set(e.id, d);
+        const v = e.record_main_archive_event_id?.value;
+        if (v != null) dateByEvent.set(v, d);
+      }
+      return (archives as any[]).map((e) => {
+        const main = e.record_main_archive_event_id ?? {};
+        const ev = main.event ?? {};
+        const kids = ev.child?.value ?? [];
+        const dates = dateById.get(e.id) ?? dateByEvent.get(main.value);
+        return {
+          id: e.id,
+          eventId: main.value ?? null,
+          type: ev.value?.event_system_type ?? kids[0]?.value?.event_system_type ?? null,
+          ...(dates && (dates.start || dates.end) ? { startDate: dates.start, endDate: dates.end } : {}),
+          children: kids.map((k: any) => {
+            // shape A wraps nodes in {value:…}; the 1000xxx entries (shape B)
+            // keep the same fields flat under album.scene
+            const sc = k.story?.album?.scene;
+            const scv: any = sc?.value ?? sc;
+            // shape A: scenes live in sc.sub_category_id (sibling of sc.value,
+            // where sub_category_id is just the numeric id); shape B puts the
+            // {value,scenes} holder inside the flat scene record
+            const sub: any =
+              sc?.sub_category_id && typeof sc.sub_category_id === "object"
+                ? sc.sub_category_id
+                : scv?.sub_category_id;
+            const scenes = (sub?.scenes?.value ?? []).map((s: any) => ({
+              groupId: s.value?.scenario_group_id ?? null,
+              name: s.scenario_name_localkey?.scenario_name ?? null,
+            }));
+            const section: ArchiveSection | null = scv
+              ? {
+                  id: scv.id ?? null,
+                  subCategoryId:
+                    sub?.value ?? (typeof scv?.sub_category_id === "number" ? scv.sub_category_id : null),
+                  name: sc?.sub_category_name_localkey?.chapter_name ?? scv.sub_category_name_localkey?.chapter_name ?? null,
+                  thumbnail: scv.sub_category_thumbnail ?? null,
+                  eventId: scv.event_id ?? null,
+                  eventName: scv.event_name_localkey ?? null,
+                  uiPrefab: scv.ui_prefab ?? null,
+                }
+              : null;
+            return {
+              id: k.value?.id ?? null,
+              type: k.value?.event_system_type ?? null,
+              order: k.value?.archive_story_progress_group_order ?? null,
+              progressLocale: k.value?.archive_story_progress_locale ?? null,
+              album: k.story?.value
+                ? { id: k.story.value.id ?? null, name: k.story.name_value ?? null, categoryGroup: k.story.value.album_category_group ?? null }
+                : null,
+              section,
+              ...(scenes[0]?.groupId ? { event: eventIdOf(scenes[0].groupId) } : {}),
+              scenes,
+            };
+          }),
+        };
+      });
+    })();
+    archiveCache.set(lang, p);
+  }
+  return p;
+};
+
+app.get("/api/archives", async (c) => {
+  const lang = c.req.query("lang") ?? "ko";
+  if (!LOCALES.has(lang)) return c.json({ error: "invalid lang" }, 400);
+  let list = await getArchives(lang);
+  const type = c.req.query("type");
+  if (type) list = list.filter((a: any) => norm(a.type ?? "") === norm(type));
+  const total = list.length;
+  const pg = pageQuery(c, total);
+  if ("error" in pg) return c.json({ error: pg.error }, 400);
+  return c.json({
+    count: total,
+    offset: pg.off,
+    ...(pg.page ? { page: pg.page, totalPages: Math.ceil(total / pg.lim) } : {}),
+    archives: pickFields(list.slice(pg.off, pg.off + pg.lim), fieldsOf(c)),
+  });
+});
+
+app.get("/api/archives/:id", async (c) => {
+  const lang = c.req.query("lang") ?? "ko";
+  if (!LOCALES.has(lang)) return c.json({ error: "invalid lang" }, 400);
+  const id = c.req.param("id");
+  if (!/^\d+$/.test(id)) return c.json({ error: "invalid id" }, 400);
+  const a = (await getArchives(lang)).find((x: any) => x.id === Number(id));
+  if (!a) return c.json({ error: "not found" }, 404);
+  return c.json(pickFields(a, fieldsOf(c)));
 });
 
 // static /api/user/nikke must be registered before /api/user/:blablaid — the

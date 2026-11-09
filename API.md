@@ -15,6 +15,8 @@
 - [GET /api/nikkes/:id](#get-apinikkesid) — 캐릭터 상세
 - [GET /api/nikkes/:id/burst](#get-apinikkesidburst) — 버스트 컷신
 - [GET /api/meta/filters](#get-apimetafilters) — 필터 값 목록
+- [GET /api/archives](#get-apiarchives) — 기록실(아카이브) 앨범 계층
+- [GET /api/archives/:id](#get-apiarchivesid) — 아카이브 단건
 - [GET /api/tables](#get-apitables) — 원본 테이블 목록
 - [GET /api/tables/:file](#get-apitablesfile) — 원본 테이블 조회
 - [GET /api/scenes](#get-apiscenes) — 스토리 씬 목록 (한국어)
@@ -375,6 +377,38 @@ GET /api/nikkes/511/burst?lang=ko
 ```
 
 ---
+
+## GET /api/archives
+
+인게임 **지휘부 기록실**의 앨범 계층을 반환합니다 — 앨범 카테고리 → 아카이브 이벤트 → 진행 그룹 → 씬 목록. 이벤트 기간(`startDate`/`endDate`)과 `children[].event`(씬 그룹에서 파생한 `/api/events` id)로 기존 이벤트·씬 API와 연결됩니다.
+
+| 파라미터 | 설명 |
+|---|---|
+| `type` | `event_system_type` 필터 (예: `StoryEvent`) |
+| `limit` / `offset` / `page` | 페이지네이션 |
+| `fields` | dot 경로 필드 추리기 |
+| `lang` | `ko`(기본)·`en`·`ja`·`zh-TW` — 파일별 다국어 |
+
+```json
+{
+  "count": 65,
+  "archives": [{
+    "id": 100, "eventId": 40001, "type": "StoryEvent",
+    "startDate": "2022-11-10T06:30:00", "endDate": "2022-11-23T19:59:59",
+    "children": [{
+      "id": 40001, "type": "StoryEvent", "order": 1,
+      "album": { "id": 10001, "name": "STORY", "categoryGroup": 1000 },
+      "section": { "id": 1000101, "name": "이벤트 앨범", "thumbnail": "img_album_structure_toyshop" },
+      "event": "event_nocallerid",
+      "scenes": [{ "groupId": "event_nocallerid_prologue", "name": "소문" }]
+    }]
+  }]
+}
+```
+
+## GET /api/archives/:id
+
+아카이브 한 건을 반환합니다. `GET /api/archives/100`
 
 ## GET /api/tables
 
@@ -1354,7 +1388,7 @@ https://nikke-api.pages.dev/mcp
 | `nikke_appearances` | `/api/nikkes/:id/appearances` |
 | `compare_nikkes` | `/api/nikkes/:id`를 2–4명에 대해 호출해 한 응답으로 묶음 |
 | `story_route` / `next_story` | `/api/story/route`, `/api/story/next` |
-| `api_get` | 전용 도구가 없는 조회 (스테이지·코스튬·장비·큐브·아바타·필터 값·원본 테이블). `/api/user`는 막혀 있음 |
+| `api_get` | 전용 도구가 없는 조회 (스테이지·코스튬·장비·큐브·아바타·필터 값·기록실·원본 테이블). `/api/user`는 막혀 있음 |
 | `search` / `fetch` | 통합 검색 / id로 문서 가져오기 (ChatGPT 커넥터 규격) |
 
 모든 도구는 기본 `lang=ko`로 응답합니다. 이름 검색·호감도 씬·대사 검색은 기본으로 이격까지 묶어서 찾습니다(`family`, 끄려면 `false`). 60,000자를 넘는 응답은 목록 뒤쪽을 덜어내고 `truncated`(`nextOffset` 포함)를 붙여 돌려줍니다. 클라이언트별 연결 방법은 [docs/mcp.md](docs/mcp.md)를 보세요.
