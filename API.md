@@ -392,6 +392,12 @@ GET /api/nikkes/511/burst?lang=ko
 GET /api/tables/CharacterLevelTable.json
 ```
 
+최상위가 배열인 테이블은 `?offset=`/`?limit=`으로 페이지네이션할 수 있습니다 — 이 경우 `{count, offset, rows[]}`로 응답합니다 (`tower_list.json` 7850행 같은 큰 테이블용).
+
+```
+GET /api/tables/tower_list.json?offset=0&limit=100
+```
+
 ## GET /api/scenes
 
 스토리 씬 목록을 반환합니다 (한국어). 메인/이벤트/돌발 스토리 + **호감도(Attractive) 시나리오** + **애장품 스토리 21편** + **게임 데이터에 없는 스토리(`library`) 약 2000편** 포함 — 약 5300개 그룹.
@@ -1348,7 +1354,7 @@ https://nikke-api.pages.dev/mcp
 | `nikke_appearances` | `/api/nikkes/:id/appearances` |
 | `compare_nikkes` | `/api/nikkes/:id`를 2–4명에 대해 호출해 한 응답으로 묶음 |
 | `story_route` / `next_story` | `/api/story/route`, `/api/story/next` |
-| `api_get` | 전용 도구가 없는 조회 (스테이지·코스튬·장비·큐브·아바타·필터 값). `/api/user`·`/api/tables`는 막혀 있음 |
+| `api_get` | 전용 도구가 없는 조회 (스테이지·코스튬·장비·큐브·아바타·필터 값·원본 테이블). `/api/user`는 막혀 있음 |
 | `search` / `fetch` | 통합 검색 / id로 문서 가져오기 (ChatGPT 커넥터 규격) |
 
 모든 도구는 기본 `lang=ko`로 응답합니다. 이름 검색·호감도 씬·대사 검색은 기본으로 이격까지 묶어서 찾습니다(`family`, 끄려면 `false`). 60,000자를 넘는 응답은 목록 뒤쪽을 덜어내고 `truncated`(`nextOffset` 포함)를 붙여 돌려줍니다. 클라이언트별 연결 방법은 [docs/mcp.md](docs/mcp.md)를 보세요.

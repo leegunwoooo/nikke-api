@@ -178,7 +178,7 @@ test("filters reject values outside the enum", async () => {
 });
 
 test("api_get checks the normalized path, not the raw string", async () => {
-  for (const p of ["/api/stages/%2e%2e/tables", "/api/stages/%2E%2E/user/not-an-id", "/api/meta/.%2e/tables", "/api/stages\\%2e%2e\\tables"]) {
+  for (const p of ["/api/stages/%2e%2e/nikkes", "/api/stages/%2E%2E/user/not-an-id", "/api/meta/.%2e/user", "/api/stages\\%2e%2e\\user"]) {
     const r = await tool("api_get", { path: p });
     assert.equal(r.isError, true, p);
     assert.match(r.json.error, /path not allowed/, p);
@@ -188,10 +188,20 @@ test("api_get checks the normalized path, not the raw string", async () => {
 });
 
 test("api_get stays inside its allowlist", async () => {
-  for (const p of ["/api/user/roster?blablaid=x", "/api/tables/CharacterLevelTable.json", "/api/../etc", "/api/nikkes"]) {
+  for (const p of ["/api/user/roster?blablaid=x", "/api/../etc", "/api/nikkes"]) {
     assert.equal((await tool("api_get", { path: p })).isError, true, p);
   }
   assert.equal((await tool("api_get", { path: "/openapi.json" })).isError, true); // schema: must start with /api/
+});
+
+test("api_get reaches tables and pages them", async () => {
+  const r = await tool("api_get", { path: "/api/tables/stage_list.json?limit=3" });
+  assert.notEqual(r.isError, true);
+  const j = r.json as { count: number; offset: number; rows: { id: number }[] };
+  assert.equal(j.rows.length, 3);
+  assert.equal(j.count, 4);
+  const r2 = await tool("api_get", { path: "/api/tables/stage_list.json?offset=3&limit=3" });
+  assert.equal((r2.json as typeof j).rows.length, 1);
 });
 
 test("mcp errors surface as isError", async () => {

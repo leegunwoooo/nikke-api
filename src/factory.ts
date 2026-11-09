@@ -1561,6 +1561,18 @@ app.get("/api/tables/:file", async (c) => {
   if (!/^[\w.-]+\.json$/.test(file)) return c.json({ error: "invalid file" }, 400);
   try {
     const body = await storage.readText(path.join("tables", file));
+    // ?offset/&limit= page top-level arrays and {records:[]} tables —
+    // the raw tables are up to ~8k rows, too large for a single MCP
+    // tool response
+    const off = c.req.query("offset"), lim = c.req.query("limit");
+    if (off != null || lim != null) {
+      const data = JSON.parse(body);
+      const rows = Array.isArray(data) ? data : (data as { records?: unknown[] })?.records;
+      if (!Array.isArray(rows)) return c.json({ error: "not a list table" }, 400);
+      const pg = pageQuery(c, rows.length);
+      if ("error" in pg) return c.json({ error: pg.error }, 400);
+      return c.json({ count: rows.length, offset: pg.off, rows: rows.slice(pg.off, pg.off + pg.lim) });
+    }
     if (wantsLang(c)) return c.json(JSON.parse(body));
     return c.body(body, 200, { "Content-Type": "application/json" });
   } catch {

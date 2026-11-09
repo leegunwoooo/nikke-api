@@ -25693,7 +25693,7 @@ var NIKKE_EXTRA = {
   // icon/descriptionTemplate/values that the default response strips
   skillLevels: ""
 };
-var API_GET_ALLOWED = /^\/api\/(stages|costumes|equips|avatars|cubes|meta|cdn|nikkes\/[^/?]+\/(spine|burst))(\/|\?|$)/;
+var API_GET_ALLOWED = /^\/api\/(stages|costumes|equips|avatars|cubes|meta|cdn|tables|nikkes\/[^/?]+\/(spine|burst))(\/|\?|$)/;
 var READ_ONLY = { readOnlyHint: true, idempotentHint: true, openWorldHint: false };
 var LIVE = { readOnlyHint: true, idempotentHint: true, openWorldHint: true };
 var USER_CALLS_PER_MINUTE = 30;
@@ -26169,7 +26169,7 @@ function buildServer(api, version2, origin = "", boundBlablaid) {
     "api_get",
     {
       title: "Call another read endpoint",
-      description: "GET the endpoints without a dedicated tool: /api/stages (?chapter=&mode=), /api/stages/:id, /api/costumes (?nikke=&grade=), /api/costumes/:id, /api/equips, /api/equips/options, /api/cubes, /api/avatars, /api/meta/filters. Add lang=ko to flatten names. See /openapi.json for parameters.",
+      description: "GET the endpoints without a dedicated tool: /api/stages (?chapter=&mode=), /api/stages/:id, /api/costumes (?nikke=&grade=), /api/costumes/:id, /api/equips, /api/equips/options, /api/cubes, /api/avatars, /api/meta/filters, /api/tables and /api/tables/:file (raw synced tables \u2014 tower_list, stage_list, CharacterLevelTable etc.; page big ones with ?limit=&offset=). Add lang=ko to flatten names. See /openapi.json for parameters.",
       inputSchema: object({
         path: string2().startsWith("/api/").describe("Path with query string, e.g. /api/stages?chapter=1&lang=ko")
       }),
@@ -26180,7 +26180,7 @@ function buildServer(api, version2, origin = "", boundBlablaid) {
       if (a.path.includes("..") || !API_GET_ALLOWED.test(u.pathname)) {
         return text(
           JSON.stringify({
-            error: "path not allowed \u2014 api_get serves stages, costumes, equips, cubes, avatars, meta and cdn; use the dedicated tools for the rest"
+            error: "path not allowed \u2014 api_get serves stages, costumes, equips, cubes, avatars, meta, cdn and tables; use the dedicated tools for the rest"
           }),
           true
         );
@@ -26189,6 +26189,8 @@ function buildServer(api, version2, origin = "", boundBlablaid) {
         if (!u.searchParams.has("limit")) u.searchParams.set("limit", "20");
         if (!u.searchParams.has("lang")) u.searchParams.set("lang", "ko");
       }
+      if (/^\/api\/tables\/.+/.test(u.pathname) && !u.searchParams.has("limit"))
+        u.searchParams.set("limit", "100");
       return call(api, "api_get", u.pathname + u.search);
     }
   );
@@ -27217,9 +27219,13 @@ function buildOpenapi(pkgVersion) {
       "/api/tables/{file}": {
         get: {
           tags: ["misc"],
-          summary: "\uC6D0\uBCF8 \uD14C\uC774\uBE14 JSON",
-          parameters: [{ name: "file", in: "path", required: true, schema: { type: "string" }, example: "character_id_map.json" }],
-          responses: { "200": { description: "\uC6D0\uBCF8 JSON" }, "404": { description: "\uC5C6\uC74C" } }
+          summary: "\uC6D0\uBCF8 \uD14C\uC774\uBE14 JSON \u2014 ?offset/&limit= \uC9C0\uC815 \uC2DC \uBC30\uC5F4 \uD14C\uC774\uBE14 \uD398\uC774\uC9C0\uB124\uC774\uC158",
+          parameters: [
+            { name: "file", in: "path", required: true, schema: { type: "string" }, example: "character_id_map.json" },
+            { name: "limit", in: "query", schema: { type: "integer" }, description: "\uD398\uC774\uC9C0 \uD06C\uAE30 (\uBC30\uC5F4 \uD14C\uC774\uBE14 \uC804\uC6A9)" },
+            { name: "offset", in: "query", schema: { type: "integer" }, description: "\uAC74\uB108\uB6F8 \uD589 \uC218" }
+          ],
+          responses: { "200": { description: "\uC6D0\uBCF8 JSON \uB610\uB294 {count,offset,rows[]}" }, "404": { description: "\uC5C6\uC74C" } }
         }
       },
       "/api/meta/filters": {
@@ -28536,6 +28542,15 @@ async function createApp(storage, options = {}) {
     if (!/^[\w.-]+\.json$/.test(file)) return c.json({ error: "invalid file" }, 400);
     try {
       const body = await storage.readText(path.join("tables", file));
+      const off = c.req.query("offset"), lim = c.req.query("limit");
+      if (off != null || lim != null) {
+        const data = JSON.parse(body);
+        const rows = Array.isArray(data) ? data : data?.records;
+        if (!Array.isArray(rows)) return c.json({ error: "not a list table" }, 400);
+        const pg = pageQuery(c, rows.length);
+        if ("error" in pg) return c.json({ error: pg.error }, 400);
+        return c.json({ count: rows.length, offset: pg.off, rows: rows.slice(pg.off, pg.off + pg.lim) });
+      }
       if (wantsLang(c)) return c.json(JSON.parse(body));
       return c.body(body, 200, { "Content-Type": "application/json" });
     } catch {
@@ -28975,7 +28990,7 @@ var CREDS_KEY = "bla:creds";
 var HDR_CREDS = "x-bla-creds";
 var HDR_BLABLAID = "x-registered-blablaid";
 var edgeCache = caches.default;
-var BUILD_ID = false ? void 0 : "725f4bb72531";
+var BUILD_ID = false ? void 0 : "b5c9a9260fae";
 var DATA_HOST = "https://nikke-api-data.pages.dev";
 var REVALIDATE_MS = 3e5;
 var appPromise;

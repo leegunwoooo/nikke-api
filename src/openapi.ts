@@ -733,9 +733,13 @@ const openapi = {
     "/api/tables/{file}": {
       get: {
         tags: ["misc"],
-        summary: "원본 테이블 JSON",
-        parameters: [{ name: "file", in: "path", required: true, schema: { type: "string" }, example: "character_id_map.json" }],
-        responses: { "200": { description: "원본 JSON" }, "404": { description: "없음" } },
+        summary: "원본 테이블 JSON — ?offset/&limit= 지정 시 배열 테이블 페이지네이션",
+        parameters: [
+          { name: "file", in: "path", required: true, schema: { type: "string" }, example: "character_id_map.json" },
+          { name: "limit", in: "query", schema: { type: "integer" }, description: "페이지 크기 (배열 테이블 전용)" },
+          { name: "offset", in: "query", schema: { type: "integer" }, description: "건너뛸 행 수" },
+        ],
+        responses: { "200": { description: "원본 JSON 또는 {count,offset,rows[]}" }, "404": { description: "없음" } },
       },
     },
     "/api/meta/filters": {
