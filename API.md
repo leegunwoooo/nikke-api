@@ -366,26 +366,37 @@ GET /api/nikkes/라피/spine
 
 `{ id, resourceId, name, spine, burstCutscene, costumes }`를 반환합니다. `spine`과 `costumes[].spine`은 `stand`(로비)·`aim`(사격 자세)·`cover`(엄폐)의 `{ atlas, skeleton, texture }` 트리플릿이며 Spine 4.1 런타임으로 재생합니다.
 
-각 `stand`에는 로비 idle을 미리 렌더한 GIF 링크가 붙습니다:
+각 `stand`에는 미리 렌더한 로비 애니메이션 GIF 링크가 붙습니다 — `gif`는 idle 단축키, `gifs`는 렌더된 애니메이션 전체의 맵입니다:
 
 ```json
 "stand": {
   "atlas": "…",
   "skeleton": "…",
   "texture": "…",
-  "gif": { "url": "https://cdn.jsdelivr.net/gh/leegunwoooo/nikke-api-media@main/spine-gif/10_0.gif", "bytes": 1331238 }
+  "gif": { "url": "https://cdn.jsdelivr.net/gh/leegunwoooo/nikke-api-media@main/spine-gif/10_0.gif", "bytes": 1331238 },
+  "gifs": {
+    "idle": { "url": "…/spine-gif/10_0.gif", "bytes": 1331238 },
+    "action": { "url": "…/spine-gif/10_0_action.gif", "bytes": 2100000 }
+  }
 }
 ```
 
-GIF는 [nikke-api-media](https://github.com/leegunwoooo/nikke-api-media) 저장소에 있는 파일이고 jsDelivr가 서빙하므로 `<img>`에 바로 쓸 수 있습니다. `scripts/render-spine-gifs.ts`가 생성하며, 아직 렌더가 없는 스킨은 `gif` 키가 빠집니다.
+| 애니메이션 | 설명 |
+|---|---|
+| `idle` | 로비 대기 모션 |
+| `action` | 로비 터치 리액션 |
+
+GIF는 [nikke-api-media](https://github.com/leegunwoooo/nikke-api-media) 저장소에 있는 파일이고 jsDelivr가 서빙하므로 `<img>`에 바로 쓸 수 있습니다. `scripts/render-spine-gifs.ts`가 생성하며, 아직 렌더가 없는 스킨은 `gif`/`gifs` 키가 빠집니다.
 
 ## GET /api/nikkes/:id/spine.gif
 
-로비 idle GIF로 바로 리다이렉트합니다 — `?skin=`에 코스튬 `skinIndex`(미지정 시 0=기본 외형).
+로비 애니메이션 GIF로 바로 리다이렉트합니다 — `?skin=`에 코스튬 `skinIndex`(미지정 시 0=기본 외형), `?anim=`에 애니메이션 이름(미지정 시 `idle`).
 
 ```http
-GET /api/nikkes/라피/spine.gif          # → 302 …/spine-gif/10_0.gif
-GET /api/nikkes/라피/spine.gif?skin=1   # → 302 …/spine-gif/10_1.gif
+GET /api/nikkes/라피/spine.gif                  # → 302 …/spine-gif/10_0.gif
+GET /api/nikkes/라피/spine.gif?skin=1           # → 302 …/spine-gif/10_1.gif
+GET /api/nikkes/라피/spine.gif?anim=action      # → 302 …/spine-gif/10_0_action.gif
+GET /api/nikkes/라피/spine.gif?skin=1&anim=action
 ```
 
 렌더가 없는 스킨이면 404, `skin`이 정수가 아니면 400입니다. gif 매니페스트를 읽지 못하는 상태(데이터 배포가 워커보다 늦는 짧은 창)에는 503을 반환하니 잠시 후 재시도하면 됩니다 — `/api/nikkes/:id/spine`는 같은 상황에서 `gif` 필드만 빼고 정상 응답합니다. MCP의 `api_get`으로 호출하면 `{ "redirect": "<url>" }`이 반환됩니다.

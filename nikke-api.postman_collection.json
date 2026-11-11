@@ -283,10 +283,10 @@
           }
         },
         {
-          "name": "로비 idle GIF",
+          "name": "로비 애니메이션 GIF",
           "request": {
             "method": "GET",
-            "description": "미리 렌더된 로비 idle GIF로 302 리다이렉트 — 캐릭터 ID·resourceId·이름 모두 가능",
+            "description": "미리 렌더된 로비 애니메이션 GIF로 302 리다이렉트 — idle(대기, 기본)/action(터치 리액션). 캐릭터 ID·resourceId·이름 모두 가능",
             "url": {
               "raw": "{{baseUrl}}/api/nikkes/라피/spine.gif",
               "host": [
@@ -304,6 +304,12 @@
                   "value": "",
                   "disabled": true,
                   "description": "코스튬 skinIndex (미지정 시 0=기본 외형). 없는 스킨은 404"
+                },
+                {
+                  "key": "anim",
+                  "value": "",
+                  "disabled": true,
+                  "description": "애니메이션 — idle(미지정 시) 또는 action(터치 리액션). 목록은 /spine 응답의 stand.gifs"
                 }
               ]
             }

@@ -243,7 +243,7 @@ const openapi = {
       get: {
         tags: ["nikkes"],
         summary: "외형별 Spine 에셋 URL과 로비 idle GIF 링크",
-        description: "stand(로비)·aim(사격 자세)·cover(엄폐)의 {atlas, skeleton, texture} 트리플릿을 기본 외형과 코스튬별로 반환합니다. stand.gif는 미리 렌더된 로비 idle GIF(jsDelivr)를 가리키며 렌더가 없는 스킨은 생략됩니다.",
+        description: "stand(로비)·aim(사격 자세)·cover(엄폐)의 {atlas, skeleton, texture} 트리플릿을 기본 외형과 코스튬별로 반환합니다. stand.gif는 미리 렌더된 로비 idle GIF(jsDelivr)를 가리키고 stand.gifs는 idle·action(터치 리액션) 등 렌더된 애니메이션 전체의 {url, bytes} 맵입니다. 렌더가 없는 스킨은 생략됩니다.",
         parameters: [
           { name: "id", in: "path", required: true, schema: { type: "string" }, description: "캐릭터 ID / resourceId / 이름", example: "라피" },
         ],
@@ -254,10 +254,11 @@ const openapi = {
       get: {
         tags: ["nikkes"],
         summary: "로비 idle GIF로 302 리다이렉트",
-        description: "미리 렌더된 로비 idle GIF(nikke-api-media repo, jsDelivr 경유)로 리다이렉트합니다. ?skin=으로 코스튬 스킨 인덱스를 지정하며 미지정 시 0(기본 외형)입니다.",
+        description: "미리 렌더된 로비 애니메이션 GIF(nikke-api-media repo, jsDelivr 경유)로 리다이렉트합니다. ?skin=으로 코스튬 스킨 인덱스를, ?anim=으로 애니메이션(idle=로비 대기, action=터치 리액션)을 지정하며 미지정 시 각각 0/idle입니다.",
         parameters: [
           { name: "id", in: "path", required: true, schema: { type: "string" }, description: "캐릭터 ID / resourceId / 이름", example: "라피" },
           { name: "skin", in: "query", schema: { type: "integer", default: 0 }, description: "코스튬 skinIndex (0=기본 외형)" },
+          { name: "anim", in: "query", schema: { type: "string", default: "idle" }, description: "애니메이션 이름 — idle(로비 대기), action(터치 리액션). 렌더 목록은 spine 응답의 stand.gifs" },
         ],
         responses: { "302": { description: "GIF 파일로 리다이렉트" }, "400": { description: "잘못된 skin" }, "404": { description: "캐릭터 없음 또는 렌더 없음" }, "503": { description: "gif 매니페스트 일시 불가 — 재시도" } },
       },

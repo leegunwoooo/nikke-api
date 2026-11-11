@@ -589,7 +589,7 @@ export function buildServer(api: Fetcher, version: string, origin = "", boundBla
     {
       title: "Spine animation asset URLs",
       description:
-        "Spine viewer asset URLs for a character — stand (lobby), aim (firing stance incl. fire/skill tracks) and cover (incl. reload) triplets {atlas, skeleton, texture} for the base appearance and every costume. Render with a Spine 4.1 runtime. Each stand also gets gif {url, bytes}: a pre-rendered lobby idle animation hosted on jsDelivr, usable directly in <img>. Also includes burstCutscene visual assets from ArtHub, all texture pages, playback.layers and a viewerUrl that plays the character and background together; null for unavailable skins. Use viewerUrl for browser burst playback. Raw external asset URLs retain the source host's CORS policy.",
+        "Spine viewer asset URLs for a character — stand (lobby), aim (firing stance incl. fire/skill tracks) and cover (incl. reload) triplets {atlas, skeleton, texture} for the base appearance and every costume. Render with a Spine 4.1 runtime. Each stand also gets gif {url, bytes} (idle) and gifs: a map of every pre-rendered lobby animation on jsDelivr — idle (대기) and action (터치 리액션), usable directly in <img>. Also includes burstCutscene visual assets from ArtHub, all texture pages, playback.layers and a viewerUrl that plays the character and background together; null for unavailable skins. Use viewerUrl for browser burst playback. Raw external asset URLs retain the source host's CORS policy.",
       inputSchema: z.object({
         nameOrId: z.string().min(1).describe("Character name (any language) or id"),
       }),
@@ -693,7 +693,7 @@ export function buildServer(api: Fetcher, version: string, origin = "", boundBla
     {
       title: "Call another read endpoint",
       description:
-        "GET the endpoints without a dedicated tool: /api/stages (?chapter=&mode=), /api/stages/:id, /api/costumes (?nikke=&grade=), /api/costumes/:id, /api/equips, /api/equips/options, /api/cubes, /api/avatars, /api/meta/filters, /api/archives (?type=, in-game record-room hierarchy), /api/tables and /api/tables/:file (raw synced tables — tower_list, stage_list, CharacterLevelTable etc.; page big ones with ?limit=&offset=), /api/nikkes/:id/spine (asset urls; stand.gif = pre-rendered lobby idle gif) and /api/nikkes/:id/spine.gif?skin= (comes back as a {redirect} to the jsDelivr file). Add lang=ko to flatten names. See /openapi.json for parameters.",
+        "GET the endpoints without a dedicated tool: /api/stages (?chapter=&mode=), /api/stages/:id, /api/costumes (?nikke=&grade=), /api/costumes/:id, /api/equips, /api/equips/options, /api/cubes, /api/avatars, /api/meta/filters, /api/archives (?type=, in-game record-room hierarchy), /api/tables and /api/tables/:file (raw synced tables — tower_list, stage_list, CharacterLevelTable etc.; page big ones with ?limit=&offset=), /api/nikkes/:id/spine (asset urls; stand.gif = pre-rendered lobby idle gif) and /api/nikkes/:id/spine.gif?skin=&anim= (idle=로비 대기, action=터치 리액션; comes back as a {redirect} to the jsDelivr file). Add lang=ko to flatten names. See /openapi.json for parameters.",
       inputSchema: z.object({
         path: z.string().startsWith("/api/").describe("Path with query string, e.g. /api/stages?chapter=1&lang=ko"),
       }),

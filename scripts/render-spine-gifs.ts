@@ -30,6 +30,8 @@ const FPS = Number(arg("fps", "20"));
 const PAD = 0.92; // bounds fill this fraction of the canvas
 const RID = arg("rid")?.replace(/^c/i, "");
 const ONLY = arg("only")?.split(",");
+const ANIMS = arg("anims", "idle")!.split(","); // idle | action | …
+const gifName = (key: string, anim: string) => (anim === "idle" ? key : `${key}_${anim}`);
 const FORMAT = arg("format", "gif") === "webp" ? "webp" : "gif";
 const OUT_DIR = arg("out", join("..", "nikke-api-media", `spine-${FORMAT}`))!;
 const MANIFEST = join("data", "dist", `spine-${FORMAT}-manifest.json`);
@@ -49,8 +51,9 @@ const fetchBuf = async (url: string): Promise<Uint8Array> => {
   }
 };
 
-const pickIdle = (data: spine.SkeletonData) => {
+const pickAnim = (data: spine.SkeletonData, name: string) => {
   const anims = data.animations;
+  if (name !== "idle") return anims.find((a) => a.name === name);
   return (
     anims.find((a) => a.name === "idle") ??
     anims.find((a) => a.name === "idle_02") ??
@@ -59,7 +62,7 @@ const pickIdle = (data: spine.SkeletonData) => {
   );
 };
 
-async function renderAnim(stand: { atlas: string; skeleton: string; texture: string }): Promise<Uint8Array> {
+async function loadStand(stand: { atlas: string; skeleton: string; texture: string }): Promise<spine.SkeletonData> {
   const [atlasBuf, skelBuf] = await Promise.all([
     fetchBuf(stand.atlas),
     fetchBuf(stand.skeleton),
@@ -72,9 +75,12 @@ async function renderAnim(stand: { atlas: string; skeleton: string; texture: str
   );
   for (const [i, page] of atlas.pages.entries())
     page.setTexture(new spine.CanvasTexture(await loadImage(Buffer.from(pngs[i])) as any));
-  const data = new spine.SkeletonBinary(new spine.AtlasAttachmentLoader(atlas)).readSkeletonData(skelBuf);
-  const anim = pickIdle(data);
-  if (!anim) throw new Error("no animations in skeleton");
+  return new spine.SkeletonBinary(new spine.AtlasAttachmentLoader(atlas)).readSkeletonData(skelBuf);
+}
+
+async function renderAnim(data: spine.SkeletonData, animName: string): Promise<Uint8Array> {
+  const anim = pickAnim(data, animName);
+  if (!anim) throw new Error(`animation '${animName}' not in skeleton`);
 
   const skeleton = new spine.Skeleton(data);
   const skinName = data.skins.find((s) => s.name === "default")?.name ?? data.skins[0]?.name;
@@ -188,16 +194,26 @@ const manifest: Record<string, { bytes: number }> =
 let done = 0, failed = 0;
 for (const j of shardJobs) {
   const key = `${j.rid}_${j.skin}`;
-  const out = join(OUT_DIR, `${key}.${FORMAT}`);
+  let data: spine.SkeletonData;
   try {
-    const buf = await renderAnim(j.stand);
-    writeFileSync(out, Buffer.from(buf));
-    manifest[key] = { bytes: buf.length };
-    done++;
-    if (done % 10 === 0 || shardJobs.length < 20) console.log(`${done}/${shardJobs.length} ${key} (${(buf.length / 1024).toFixed(0)}KB)`);
+    data = await loadStand(j.stand);
   } catch (e: any) {
     failed++;
     console.warn(`FAIL ${key}: ${e.message}`);
+    continue;
+  }
+  for (const anim of ANIMS) {
+    const name = gifName(key, anim);
+    try {
+      const buf = await renderAnim(data, anim);
+      writeFileSync(join(OUT_DIR, `${name}.${FORMAT}`), Buffer.from(buf));
+      manifest[name] = { bytes: buf.length };
+      done++;
+      if (done % 10 === 0 || shardJobs.length * ANIMS.length < 20) console.log(`${done}/${shardJobs.length * ANIMS.length} ${name} (${(buf.length / 1024).toFixed(0)}KB)`);
+    } catch (e: any) {
+      failed++;
+      console.warn(`FAIL ${name}: ${e.message}`);
+    }
   }
 }
 mkdirSync(join("data", "dist"), { recursive: true });

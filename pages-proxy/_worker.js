@@ -26084,7 +26084,7 @@ function buildServer(api, version2, origin = "", boundBlablaid) {
     "get_nikke_spine",
     {
       title: "Spine animation asset URLs",
-      description: "Spine viewer asset URLs for a character \u2014 stand (lobby), aim (firing stance incl. fire/skill tracks) and cover (incl. reload) triplets {atlas, skeleton, texture} for the base appearance and every costume. Render with a Spine 4.1 runtime. Each stand also gets gif {url, bytes}: a pre-rendered lobby idle animation hosted on jsDelivr, usable directly in <img>. Also includes burstCutscene visual assets from ArtHub, all texture pages, playback.layers and a viewerUrl that plays the character and background together; null for unavailable skins. Use viewerUrl for browser burst playback. Raw external asset URLs retain the source host's CORS policy.",
+      description: "Spine viewer asset URLs for a character \u2014 stand (lobby), aim (firing stance incl. fire/skill tracks) and cover (incl. reload) triplets {atlas, skeleton, texture} for the base appearance and every costume. Render with a Spine 4.1 runtime. Each stand also gets gif {url, bytes} (idle) and gifs: a map of every pre-rendered lobby animation on jsDelivr \u2014 idle (\uB300\uAE30) and action (\uD130\uCE58 \uB9AC\uC561\uC158), usable directly in <img>. Also includes burstCutscene visual assets from ArtHub, all texture pages, playback.layers and a viewerUrl that plays the character and background together; null for unavailable skins. Use viewerUrl for browser burst playback. Raw external asset URLs retain the source host's CORS policy.",
       inputSchema: object({
         nameOrId: string2().min(1).describe("Character name (any language) or id")
       }),
@@ -26175,7 +26175,7 @@ function buildServer(api, version2, origin = "", boundBlablaid) {
     "api_get",
     {
       title: "Call another read endpoint",
-      description: "GET the endpoints without a dedicated tool: /api/stages (?chapter=&mode=), /api/stages/:id, /api/costumes (?nikke=&grade=), /api/costumes/:id, /api/equips, /api/equips/options, /api/cubes, /api/avatars, /api/meta/filters, /api/archives (?type=, in-game record-room hierarchy), /api/tables and /api/tables/:file (raw synced tables \u2014 tower_list, stage_list, CharacterLevelTable etc.; page big ones with ?limit=&offset=), /api/nikkes/:id/spine (asset urls; stand.gif = pre-rendered lobby idle gif) and /api/nikkes/:id/spine.gif?skin= (comes back as a {redirect} to the jsDelivr file). Add lang=ko to flatten names. See /openapi.json for parameters.",
+      description: "GET the endpoints without a dedicated tool: /api/stages (?chapter=&mode=), /api/stages/:id, /api/costumes (?nikke=&grade=), /api/costumes/:id, /api/equips, /api/equips/options, /api/cubes, /api/avatars, /api/meta/filters, /api/archives (?type=, in-game record-room hierarchy), /api/tables and /api/tables/:file (raw synced tables \u2014 tower_list, stage_list, CharacterLevelTable etc.; page big ones with ?limit=&offset=), /api/nikkes/:id/spine (asset urls; stand.gif = pre-rendered lobby idle gif) and /api/nikkes/:id/spine.gif?skin=&anim= (idle=\uB85C\uBE44 \uB300\uAE30, action=\uD130\uCE58 \uB9AC\uC561\uC158; comes back as a {redirect} to the jsDelivr file). Add lang=ko to flatten names. See /openapi.json for parameters.",
       inputSchema: object({
         path: string2().startsWith("/api/").describe("Path with query string, e.g. /api/stages?chapter=1&lang=ko")
       }),
@@ -26748,7 +26748,7 @@ function buildOpenapi(pkgVersion) {
         get: {
           tags: ["nikkes"],
           summary: "\uC678\uD615\uBCC4 Spine \uC5D0\uC14B URL\uACFC \uB85C\uBE44 idle GIF \uB9C1\uD06C",
-          description: "stand(\uB85C\uBE44)\xB7aim(\uC0AC\uACA9 \uC790\uC138)\xB7cover(\uC5C4\uD3D0)\uC758 {atlas, skeleton, texture} \uD2B8\uB9AC\uD50C\uB9BF\uC744 \uAE30\uBCF8 \uC678\uD615\uACFC \uCF54\uC2A4\uD2AC\uBCC4\uB85C \uBC18\uD658\uD569\uB2C8\uB2E4. stand.gif\uB294 \uBBF8\uB9AC \uB80C\uB354\uB41C \uB85C\uBE44 idle GIF(jsDelivr)\uB97C \uAC00\uB9AC\uD0A4\uBA70 \uB80C\uB354\uAC00 \uC5C6\uB294 \uC2A4\uD0A8\uC740 \uC0DD\uB7B5\uB429\uB2C8\uB2E4.",
+          description: "stand(\uB85C\uBE44)\xB7aim(\uC0AC\uACA9 \uC790\uC138)\xB7cover(\uC5C4\uD3D0)\uC758 {atlas, skeleton, texture} \uD2B8\uB9AC\uD50C\uB9BF\uC744 \uAE30\uBCF8 \uC678\uD615\uACFC \uCF54\uC2A4\uD2AC\uBCC4\uB85C \uBC18\uD658\uD569\uB2C8\uB2E4. stand.gif\uB294 \uBBF8\uB9AC \uB80C\uB354\uB41C \uB85C\uBE44 idle GIF(jsDelivr)\uB97C \uAC00\uB9AC\uD0A4\uACE0 stand.gifs\uB294 idle\xB7action(\uD130\uCE58 \uB9AC\uC561\uC158) \uB4F1 \uB80C\uB354\uB41C \uC560\uB2C8\uBA54\uC774\uC158 \uC804\uCCB4\uC758 {url, bytes} \uB9F5\uC785\uB2C8\uB2E4. \uB80C\uB354\uAC00 \uC5C6\uB294 \uC2A4\uD0A8\uC740 \uC0DD\uB7B5\uB429\uB2C8\uB2E4.",
           parameters: [
             { name: "id", in: "path", required: true, schema: { type: "string" }, description: "\uCE90\uB9AD\uD130 ID / resourceId / \uC774\uB984", example: "\uB77C\uD53C" }
           ],
@@ -26759,10 +26759,11 @@ function buildOpenapi(pkgVersion) {
         get: {
           tags: ["nikkes"],
           summary: "\uB85C\uBE44 idle GIF\uB85C 302 \uB9AC\uB2E4\uC774\uB809\uD2B8",
-          description: "\uBBF8\uB9AC \uB80C\uB354\uB41C \uB85C\uBE44 idle GIF(nikke-api-media repo, jsDelivr \uACBD\uC720)\uB85C \uB9AC\uB2E4\uC774\uB809\uD2B8\uD569\uB2C8\uB2E4. ?skin=\uC73C\uB85C \uCF54\uC2A4\uD2AC \uC2A4\uD0A8 \uC778\uB371\uC2A4\uB97C \uC9C0\uC815\uD558\uBA70 \uBBF8\uC9C0\uC815 \uC2DC 0(\uAE30\uBCF8 \uC678\uD615)\uC785\uB2C8\uB2E4.",
+          description: "\uBBF8\uB9AC \uB80C\uB354\uB41C \uB85C\uBE44 \uC560\uB2C8\uBA54\uC774\uC158 GIF(nikke-api-media repo, jsDelivr \uACBD\uC720)\uB85C \uB9AC\uB2E4\uC774\uB809\uD2B8\uD569\uB2C8\uB2E4. ?skin=\uC73C\uB85C \uCF54\uC2A4\uD2AC \uC2A4\uD0A8 \uC778\uB371\uC2A4\uB97C, ?anim=\uC73C\uB85C \uC560\uB2C8\uBA54\uC774\uC158(idle=\uB85C\uBE44 \uB300\uAE30, action=\uD130\uCE58 \uB9AC\uC561\uC158)\uC744 \uC9C0\uC815\uD558\uBA70 \uBBF8\uC9C0\uC815 \uC2DC \uAC01\uAC01 0/idle\uC785\uB2C8\uB2E4.",
           parameters: [
             { name: "id", in: "path", required: true, schema: { type: "string" }, description: "\uCE90\uB9AD\uD130 ID / resourceId / \uC774\uB984", example: "\uB77C\uD53C" },
-            { name: "skin", in: "query", schema: { type: "integer", default: 0 }, description: "\uCF54\uC2A4\uD2AC skinIndex (0=\uAE30\uBCF8 \uC678\uD615)" }
+            { name: "skin", in: "query", schema: { type: "integer", default: 0 }, description: "\uCF54\uC2A4\uD2AC skinIndex (0=\uAE30\uBCF8 \uC678\uD615)" },
+            { name: "anim", in: "query", schema: { type: "string", default: "idle" }, description: "\uC560\uB2C8\uBA54\uC774\uC158 \uC774\uB984 \u2014 idle(\uB85C\uBE44 \uB300\uAE30), action(\uD130\uCE58 \uB9AC\uC561\uC158). \uB80C\uB354 \uBAA9\uB85D\uC740 spine \uC751\uB2F5\uC758 stand.gifs" }
           ],
           responses: { "302": { description: "GIF \uD30C\uC77C\uB85C \uB9AC\uB2E4\uC774\uB809\uD2B8" }, "400": { description: "\uC798\uBABB\uB41C skin" }, "404": { description: "\uCE90\uB9AD\uD130 \uC5C6\uC74C \uB610\uB294 \uB80C\uB354 \uC5C6\uC74C" }, "503": { description: "gif \uB9E4\uB2C8\uD398\uC2A4\uD2B8 \uC77C\uC2DC \uBD88\uAC00 \u2014 \uC7AC\uC2DC\uB3C4" } }
         }
@@ -27436,9 +27437,19 @@ async function createApp(storage, options = {}) {
   const MEDIA_BASE = "https://cdn.jsdelivr.net/gh/leegunwoooo/nikke-api-media@main";
   let gifManifestCache;
   const getGifManifest = () => gifManifestCache ??= storage.readJson("spine-gif-manifest.json").catch((e) => (gifManifestCache = void 0, Promise.reject(e)));
-  const spineGif = (m, resourceId, skinIndex) => {
-    const e = m[`${resourceId}_${skinIndex}`];
-    return e ? { url: `${MEDIA_BASE}/spine-gif/${resourceId}_${skinIndex}.gif`, bytes: e.bytes } : void 0;
+  const spineGif = (m, resourceId, skinIndex, anim = "idle") => {
+    const key2 = anim === "idle" ? `${resourceId}_${skinIndex}` : `${resourceId}_${skinIndex}_${anim}`;
+    const e = m[key2];
+    return e ? { url: `${MEDIA_BASE}/spine-gif/${key2}.gif`, bytes: e.bytes } : void 0;
+  };
+  const spineGifs = (m, resourceId, skinIndex) => {
+    const base = `${resourceId}_${skinIndex}`;
+    const gifs = {};
+    for (const [k, e] of Object.entries(m)) {
+      const anim = k === base ? "idle" : k.startsWith(`${base}_`) ? k.slice(base.length + 1) : void 0;
+      if (anim) gifs[anim] = { url: `${MEDIA_BASE}/spine-gif/${k}.gif`, bytes: e.bytes };
+    }
+    return Object.keys(gifs).length ? gifs : void 0;
   };
   let nameCodeMap = null;
   let avatarMap = null;
@@ -28131,7 +28142,7 @@ async function createApp(storage, options = {}) {
     if (!found) return c.json({ error: "not found" }, 404);
     const n = withBurstVoices(found, await getDetail(found.id));
     const gm = await getGifManifest().catch(() => ({}));
-    const withGif = (sp, skinIndex) => sp?.stand ? { ...sp, stand: { ...sp.stand, gif: spineGif(gm, n.resourceId, skinIndex) } } : sp;
+    const withGif = (sp, skinIndex) => sp?.stand ? { ...sp, stand: { ...sp.stand, gif: spineGif(gm, n.resourceId, skinIndex), gifs: spineGifs(gm, n.resourceId, skinIndex) } } : sp;
     return c.json({
       id: n.id,
       resourceId: n.resourceId,
@@ -28153,9 +28164,11 @@ async function createApp(storage, options = {}) {
     if (!found) return c.json({ error: "not found" }, 404);
     const skin = Number(c.req.query("skin") ?? "0");
     if (!Number.isInteger(skin) || skin < 0) return c.json({ error: "invalid skin" }, 400);
+    const anim = c.req.query("anim") ?? "idle";
+    if (!/^\w+$/.test(anim)) return c.json({ error: "invalid anim" }, 400);
     const gm = await getGifManifest().catch(() => null);
     if (!gm) return c.json({ error: "gif manifest unavailable \u2014 retry shortly" }, 503);
-    const g = spineGif(gm, found.resourceId, skin);
+    const g = spineGif(gm, found.resourceId, skin, anim);
     if (!g) return c.json({ error: "no rendered gif for this skin" }, 404);
     return c.redirect(g.url, 302);
   });
@@ -29163,7 +29176,7 @@ var CREDS_KEY = "bla:creds";
 var HDR_CREDS = "x-bla-creds";
 var HDR_BLABLAID = "x-registered-blablaid";
 var edgeCache = caches.default;
-var BUILD_ID = false ? void 0 : "7412c40d4f21";
+var BUILD_ID = false ? void 0 : "36a6baf3f14a";
 var DATA_HOST = "https://nikke-api-data.pages.dev";
 var REVALIDATE_MS = 3e5;
 var appPromise;

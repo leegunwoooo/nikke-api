@@ -194,11 +194,21 @@ const getGifManifest = () =>
   (gifManifestCache ??= storage
     .readJson<GifManifest>("spine-gif-manifest.json")
     .catch((e) => ((gifManifestCache = undefined), Promise.reject(e))));
-const spineGif = (m: GifManifest, resourceId: number, skinIndex: number) => {
-  const e = m[`${resourceId}_${skinIndex}`];
-  return e
-    ? { url: `${MEDIA_BASE}/spine-gif/${resourceId}_${skinIndex}.gif`, bytes: e.bytes }
-    : undefined;
+const spineGif = (m: GifManifest, resourceId: number, skinIndex: number, anim = "idle") => {
+  const key = anim === "idle" ? `${resourceId}_${skinIndex}` : `${resourceId}_${skinIndex}_${anim}`;
+  const e = m[key];
+  return e ? { url: `${MEDIA_BASE}/spine-gif/${key}.gif`, bytes: e.bytes } : undefined;
+};
+// every rendered animation for one skin, keyed by anim name ("idle" for the
+// plain <rid>_<skin> file — the rest carry a _<anim> suffix)
+const spineGifs = (m: GifManifest, resourceId: number, skinIndex: number) => {
+  const base = `${resourceId}_${skinIndex}`;
+  const gifs: Record<string, { url: string; bytes: number }> = {};
+  for (const [k, e] of Object.entries(m)) {
+    const anim = k === base ? "idle" : k.startsWith(`${base}_`) ? k.slice(base.length + 1) : undefined;
+    if (anim) gifs[anim] = { url: `${MEDIA_BASE}/spine-gif/${k}.gif`, bytes: e.bytes };
+  }
+  return Object.keys(gifs).length ? gifs : undefined;
 };
 
 
@@ -1034,7 +1044,7 @@ app.get("/api/nikkes/:id/spine", async (c) => {
   const gm = await getGifManifest().catch(() => ({} as GifManifest));
   const withGif = (sp: Nikke["spine"], skinIndex: number) =>
     sp?.stand
-      ? { ...sp, stand: { ...sp.stand, gif: spineGif(gm, n.resourceId, skinIndex) } }
+      ? { ...sp, stand: { ...sp.stand, gif: spineGif(gm, n.resourceId, skinIndex), gifs: spineGifs(gm, n.resourceId, skinIndex) } }
       : sp;
   return c.json({
     id: n.id,
@@ -1060,9 +1070,11 @@ app.get("/api/nikkes/:id/spine.gif", async (c) => {
   if (!found) return c.json({ error: "not found" }, 404);
   const skin = Number(c.req.query("skin") ?? "0");
   if (!Number.isInteger(skin) || skin < 0) return c.json({ error: "invalid skin" }, 400);
+  const anim = c.req.query("anim") ?? "idle";
+  if (!/^\w+$/.test(anim)) return c.json({ error: "invalid anim" }, 400);
   const gm = await getGifManifest().catch(() => null);
   if (!gm) return c.json({ error: "gif manifest unavailable — retry shortly" }, 503);
-  const g = spineGif(gm, found.resourceId, skin);
+  const g = spineGif(gm, found.resourceId, skin, anim);
   if (!g) return c.json({ error: "no rendered gif for this skin" }, 404);
   return c.redirect(g.url, 302);
 });
