@@ -25,10 +25,11 @@ const arg = (name: string, dflt?: string) => {
   const i = process.argv.indexOf(`--${name}`);
   return i >= 0 ? process.argv[i + 1] : dflt;
 };
-const SIZE = Number(arg("size", 384));
-const FPS = Number(arg("fps", 20));
+const SIZE = Number(arg("size", "384"));
+const FPS = Number(arg("fps", "20"));
 const PAD = 0.92; // bounds fill this fraction of the canvas
 const RID = arg("rid")?.replace(/^c/i, "");
+const ONLY = arg("only")?.split(",");
 const FORMAT = arg("format", "gif") === "webp" ? "webp" : "gif";
 const OUT_DIR = arg("out", join("..", "nikke-api-media", `spine-${FORMAT}`))!;
 const MANIFEST = join("data", "dist", `spine-${FORMAT}-manifest.json`);
@@ -59,15 +60,18 @@ const pickIdle = (data: spine.SkeletonData) => {
 };
 
 async function renderAnim(stand: { atlas: string; skeleton: string; texture: string }): Promise<Uint8Array> {
-  const [atlasBuf, skelBuf, pngBuf] = await Promise.all([
+  const [atlasBuf, skelBuf] = await Promise.all([
     fetchBuf(stand.atlas),
     fetchBuf(stand.skeleton),
-    fetchBuf(stand.texture),
   ]);
-  const img = await loadImage(Buffer.from(pngBuf));
-  const texture = new spine.CanvasTexture(img as any);
   const atlas = new spine.TextureAtlas(new TextDecoder().decode(atlasBuf));
-  for (const page of atlas.pages) page.setTexture(texture);
+  // an atlas may span several PNG pages (e.g. Snow White's bag) — fetch each
+  // page's own file next to `texture`, whose basename is the first page's
+  const pngs = await Promise.all(
+    atlas.pages.map((page) => fetchBuf(new URL(page.name, stand.texture).href)),
+  );
+  for (const [i, page] of atlas.pages.entries())
+    page.setTexture(new spine.CanvasTexture(await loadImage(Buffer.from(pngs[i])) as any));
   const data = new spine.SkeletonBinary(new spine.AtlasAttachmentLoader(atlas)).readSkeletonData(skelBuf);
   const anim = pickIdle(data);
   if (!anim) throw new Error("no animations in skeleton");
@@ -168,11 +172,19 @@ for (const c of chars) {
   for (const cos of c.costumes ?? [])
     if (cos.spine?.stand) jobs.push({ rid: String(rid), skin: cos.skinIndex, stand: cos.spine.stand });
 }
-const shardJobs = jobs.filter((_, i) => i % SHARD[1] === SHARD[0]);
+const picked = ONLY ? jobs.filter((j) => ONLY.includes(`${j.rid}_${j.skin}`)) : jobs;
+const shardJobs = picked.filter((_, i) => i % SHARD[1] === SHARD[0]);
 
 mkdirSync(OUT_DIR, { recursive: true });
 const manifestPath = SHARD[1] === 1 ? MANIFEST : `${MANIFEST}.part${SHARD[0]}`;
-const manifest: Record<string, { bytes: number }> = {};
+// a partial (--only/--rid) run updates the shared manifest instead of
+// replacing it, so unrelated entries survive a re-render
+const loadManifest = (): Record<string, { bytes: number }> => {
+  try { return JSON.parse(readFileSync(MANIFEST, "utf8")); }
+  catch { return {}; }
+};
+const manifest: Record<string, { bytes: number }> =
+  (ONLY || RID) && SHARD[1] === 1 ? loadManifest() : {};
 let done = 0, failed = 0;
 for (const j of shardJobs) {
   const key = `${j.rid}_${j.skin}`;
