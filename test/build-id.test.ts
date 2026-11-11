@@ -124,6 +124,22 @@ test("the bundled worker keys the edge cache and the ETag on its build id", asyn
   assert.equal(hit.headers.get("ETag"), expected);
 });
 
+test("burst asset relays are keyed on their revision path, not the data/build version", async () => {
+  bundled();
+  store.clear();
+  const { default: worker } = await import(pathToFileURL(bundlePath).href);
+  const { burstsById } = await import("../src/burst.js");
+  const b = [...burstsById.values()][0];
+  const file = new URL(b.atlas).pathname.split("/").at(-1)!;
+  const asset = `/burst-assets/${b.source.revision}/${encodeURIComponent(b.id)}/${encodeURIComponent(file)}`;
+
+  const miss = await call(worker, asset);
+  assert.equal(miss.headers.get("x-edge-cache"), "MISS");
+  // no __v: a data refresh or worker deploy keeps the stored asset
+  assert.equal(storedFor(new URL(`https://x${asset}`).pathname).v, null);
+  assert.equal((await call(worker, asset)).headers.get("x-edge-cache"), "HIT");
+});
+
 test("user responses are stored for USER_TTL with no stale-while-revalidate", async () => {
   bundled();
   store.clear();

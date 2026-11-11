@@ -370,9 +370,13 @@ export default {
         if (v) url.searchParams.set("fields", v);
       }
       // version-scope the cache key — a data or code deploy must not let this
-      // isolate keep serving pre-deploy bodies for the rest of their TTL
-      const dv = await dataVersionOf(env);
-      const v = [dv, BUILD_ID].filter(Boolean).join("|");
+      // isolate keep serving pre-deploy bodies for the rest of their TTL.
+      // /burst-assets/<revision>/… is already pinned to the ArtHub revision
+      // and relays upstream bytes unchanged, so a deploy must not throw away
+      // those (up to 64 MB) entries and re-fetch them from the source CDN
+      const pinned = url.pathname.startsWith("/burst-assets/");
+      const dv = pinned ? null : await dataVersionOf(env);
+      const v = pinned ? "" : [dv, BUILD_ID].filter(Boolean).join("|");
       const keyUrl = new URL(url);
       if (v) keyUrl.searchParams.set("__v", v);
       key = new Request(keyUrl.toString());

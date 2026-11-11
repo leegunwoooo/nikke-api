@@ -710,9 +710,10 @@ app.get("/api/nikkes/:id", async (c) => {
   const key = c.req.param("id");
   const fields = fieldsOf(c);
   const needDetail = !fields || fields.some((f) => f === "details" || f.startsWith("details."));
-  const bgm = wantsBurstGif(fields) ? await getBurstGifManifest().catch(() => null) : null;
+  // started up front so the manifest and detail reads overlap
+  const bgmP = wantsBurstGif(fields) ? getBurstGifManifest().catch(() => null) : Promise.resolve(null);
   const one = async (n: Nikke) => {
-    const d = needDetail ? ((await withDetail(n)) as object) : (n as object);
+    const [d, bgm] = await Promise.all([needDetail ? (withDetail(n) as Promise<object>) : (n as object), bgmP]);
     const out = bgm ? withBurstGifs(d as { burstCutscene?: any; costumes?: any[] }, bgm, n.resourceId) : d;
     return c.json(pickFields({ ...out, family: families.view(families.of(n)) }, fields));
   };
@@ -723,11 +724,13 @@ app.get("/api/nikkes/:id", async (c) => {
   }
   const hits = findByName(key);
   if (hits.length === 1) return one(hits[0]);
-  if (hits.length > 1)
+  if (hits.length > 1) {
+    const bgm = await bgmP;
     return c.json({
       count: hits.length,
       characters: pickFields(bgm ? hits.map((x) => withBurstGifs(x, bgm, x.resourceId)) : hits, fields),
     });
+  }
   return c.json({ error: "not found" }, 404);
 });
 
@@ -1087,9 +1090,12 @@ app.get("/api/nikkes/:id/spine", async (c) => {
   const key = c.req.param("id");
   const found = /^\d+$/.test(key) ? byId.get(Number(key)) ?? byResourceId.get(Number(key)) : findByName(key)[0];
   if (!found) return c.json({ error: "not found" }, 404);
-  const n = withBurstVoices(found, await getDetail(found.id) as { voices?: DetailVoice[] } | null);
-  const gm = await getGifManifest().catch(() => ({} as GifManifest));
-  const bgm = await getBurstGifManifest().catch(() => ({} as GifManifest));
+  const [detail, gm, bgm] = await Promise.all([
+    getDetail(found.id) as Promise<{ voices?: DetailVoice[] } | null>,
+    getGifManifest().catch(() => ({} as GifManifest)),
+    getBurstGifManifest().catch(() => ({} as GifManifest)),
+  ]);
+  const n = withBurstVoices(found, detail);
   const withGif = (sp: Nikke["spine"], skinIndex: number) =>
     sp?.stand
       ? { ...sp, stand: { ...sp.stand, gif: spineGif(gm, n.resourceId, skinIndex), gifs: spineGifs(gm, n.resourceId, skinIndex) } }
@@ -1147,17 +1153,24 @@ app.get("/api/nikkes/:id/burst", async (c) => {
   const hit = /^\d+$/.test(key) ? byId.get(Number(key)) ?? byResourceId.get(Number(key)) : undefined;
   const hits = hit ? [hit] : findByName(key);
   const exact = hits.find(n => Object.values(n.name).some(name => norm(name) === norm(key)));
-  const bgm = await getBurstGifManifest().catch(() => ({} as GifManifest));
+  // started up front so the manifest and detail reads overlap
+  const bgmP = getBurstGifManifest().catch(() => ({} as GifManifest));
   const voiced = async (n: Nikke) => withBurstVoices(n, await getDetail(n.id) as { voices?: DetailVoice[] } | null);
-  const row = (n: Nikke) => ({
+  const row = (n: Nikke, bgm: GifManifest) => ({
     id: n.id,
     resourceId: n.resourceId,
     name: n.name,
     burstCutscene: withBurstGif(n.burstCutscene ?? null, bgm, n.resourceId, 0),
     costumes: n.costumes.map(co => ({ id: co.id, skinIndex: co.skinIndex, name: co.name, burstCutscene: withBurstGif(co.burstCutscene ?? null, bgm, n.resourceId, co.skinIndex) })),
   });
-  if (exact || hits.length === 1) return c.json(pickFields(row(await voiced(exact ?? hits[0])), fieldsOf(c)));
-  if (hits.length > 1) return c.json({ count: hits.length, characters: pickFields(await Promise.all(hits.map(async n => row(await voiced(n)))), fieldsOf(c)) });
+  if (exact || hits.length === 1) {
+    const [n, bgm] = await Promise.all([voiced(exact ?? hits[0]), bgmP]);
+    return c.json(pickFields(row(n, bgm), fieldsOf(c)));
+  }
+  if (hits.length > 1) {
+    const [ns, bgm] = await Promise.all([Promise.all(hits.map(voiced)), bgmP]);
+    return c.json({ count: hits.length, characters: pickFields(ns.map(n => row(n, bgm)), fieldsOf(c)) });
+  }
   return c.json({ error: "not found" }, 404);
 });
 
