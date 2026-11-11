@@ -388,7 +388,7 @@ GET /api/nikkes/라피/spine.gif          # → 302 …/spine-gif/10_0.gif
 GET /api/nikkes/라피/spine.gif?skin=1   # → 302 …/spine-gif/10_1.gif
 ```
 
-렌더가 없는 스킨이면 404, `skin`이 정수가 아니면 400입니다. MCP의 `api_get`으로 호출하면 `{ "redirect": "<url>" }`이 반환됩니다.
+렌더가 없는 스킨이면 404, `skin`이 정수가 아니면 400입니다. gif 매니페스트를 읽지 못하는 상태(데이터 배포가 워커보다 늦는 짧은 창)에는 503을 반환하니 잠시 후 재시도하면 됩니다 — `/api/nikkes/:id/spine`는 같은 상황에서 `gif` 필드만 빼고 정상 응답합니다. MCP의 `api_get`으로 호출하면 `{ "redirect": "<url>" }`이 반환됩니다.
 
 ## GET /api/meta/filters
 

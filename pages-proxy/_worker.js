@@ -26764,7 +26764,7 @@ function buildOpenapi(pkgVersion) {
             { name: "id", in: "path", required: true, schema: { type: "string" }, description: "\uCE90\uB9AD\uD130 ID / resourceId / \uC774\uB984", example: "\uB77C\uD53C" },
             { name: "skin", in: "query", schema: { type: "integer", default: 0 }, description: "\uCF54\uC2A4\uD2AC skinIndex (0=\uAE30\uBCF8 \uC678\uD615)" }
           ],
-          responses: { "302": { description: "GIF \uD30C\uC77C\uB85C \uB9AC\uB2E4\uC774\uB809\uD2B8" }, "400": { description: "\uC798\uBABB\uB41C skin" }, "404": { description: "\uCE90\uB9AD\uD130 \uC5C6\uC74C \uB610\uB294 \uB80C\uB354 \uC5C6\uC74C" } }
+          responses: { "302": { description: "GIF \uD30C\uC77C\uB85C \uB9AC\uB2E4\uC774\uB809\uD2B8" }, "400": { description: "\uC798\uBABB\uB41C skin" }, "404": { description: "\uCE90\uB9AD\uD130 \uC5C6\uC74C \uB610\uB294 \uB80C\uB354 \uC5C6\uC74C" }, "503": { description: "gif \uB9E4\uB2C8\uD398\uC2A4\uD2B8 \uC77C\uC2DC \uBD88\uAC00 \u2014 \uC7AC\uC2DC\uB3C4" } }
         }
       },
       "/api/scenes": {
@@ -27435,7 +27435,7 @@ async function createApp(storage, options = {}) {
   );
   const MEDIA_BASE = "https://cdn.jsdelivr.net/gh/leegunwoooo/nikke-api-media@main";
   let gifManifestCache;
-  const getGifManifest = () => gifManifestCache ??= storage.readJson("spine-gif-manifest.json").catch(() => (gifManifestCache = void 0, {}));
+  const getGifManifest = () => gifManifestCache ??= storage.readJson("spine-gif-manifest.json").catch((e) => (gifManifestCache = void 0, Promise.reject(e)));
   const spineGif = (m, resourceId, skinIndex) => {
     const e = m[`${resourceId}_${skinIndex}`];
     return e ? { url: `${MEDIA_BASE}/spine-gif/${resourceId}_${skinIndex}.gif`, bytes: e.bytes } : void 0;
@@ -28130,7 +28130,7 @@ async function createApp(storage, options = {}) {
     const found = /^\d+$/.test(key2) ? byId.get(Number(key2)) ?? byResourceId.get(Number(key2)) : findByName(key2)[0];
     if (!found) return c.json({ error: "not found" }, 404);
     const n = withBurstVoices(found, await getDetail(found.id));
-    const gm = await getGifManifest();
+    const gm = await getGifManifest().catch(() => ({}));
     const withGif = (sp, skinIndex) => sp?.stand ? { ...sp, stand: { ...sp.stand, gif: spineGif(gm, n.resourceId, skinIndex) } } : sp;
     return c.json({
       id: n.id,
@@ -28153,7 +28153,9 @@ async function createApp(storage, options = {}) {
     if (!found) return c.json({ error: "not found" }, 404);
     const skin = Number(c.req.query("skin") ?? "0");
     if (!Number.isInteger(skin) || skin < 0) return c.json({ error: "invalid skin" }, 400);
-    const g = spineGif(await getGifManifest(), found.resourceId, skin);
+    const gm = await getGifManifest().catch(() => null);
+    if (!gm) return c.json({ error: "gif manifest unavailable \u2014 retry shortly" }, 503);
+    const g = spineGif(gm, found.resourceId, skin);
     if (!g) return c.json({ error: "no rendered gif for this skin" }, 404);
     return c.redirect(g.url, 302);
   });
@@ -29161,7 +29163,7 @@ var CREDS_KEY = "bla:creds";
 var HDR_CREDS = "x-bla-creds";
 var HDR_BLABLAID = "x-registered-blablaid";
 var edgeCache = caches.default;
-var BUILD_ID = false ? void 0 : "4ed92bab77b7";
+var BUILD_ID = false ? void 0 : "7412c40d4f21";
 var DATA_HOST = "https://nikke-api-data.pages.dev";
 var REVALIDATE_MS = 3e5;
 var appPromise;

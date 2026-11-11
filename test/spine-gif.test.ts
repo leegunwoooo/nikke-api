@@ -1,4 +1,5 @@
 import assert from "node:assert/strict";
+import { rename } from "node:fs/promises";
 import path from "node:path";
 import { test } from "node:test";
 
@@ -13,6 +14,24 @@ const json = async (url: string) => {
 };
 
 const GIF_BASE = "https://cdn.jsdelivr.net/gh/leegunwoooo/nikke-api-media@main/spine-gif";
+
+// must run before any successful manifest read: a missing manifest is an
+// unavailable dependency, not "no gif for this skin" (deploy-order gap)
+test("spine.gif answers 503 while the gif manifest can't be read", async () => {
+  const dir = path.join(import.meta.dirname, "fixtures/dist");
+  const f = path.join(dir, "spine-gif-manifest.json");
+  await rename(f, `${f}.bak`);
+  try {
+    const res = await get("/api/nikkes/1/spine.gif");
+    assert.equal(res.status, 503);
+    // the JSON spine route degrades instead of failing
+    const spine = await get("/api/nikkes/1/spine");
+    assert.equal(spine.status, 200);
+    assert.equal((await spine.json()).spine.stand.gif, undefined);
+  } finally {
+    await rename(`${f}.bak`, f);
+  }
+});
 
 test("spine response attaches gif urls where the manifest has a render", async () => {
   const r = await json("/api/nikkes/1/spine");

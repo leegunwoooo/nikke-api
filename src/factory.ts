@@ -187,10 +187,13 @@ const getCubes = lazyIndex<{ id: number; rare?: string; name: Record<string, str
 const MEDIA_BASE = "https://cdn.jsdelivr.net/gh/leegunwoooo/nikke-api-media@main";
 type GifManifest = Record<string, { bytes: number }>;
 let gifManifestCache: Promise<GifManifest> | undefined;
+// propagates read errors: the spine.gif route turns them into 503 so a
+// deploy-order gap (worker before the manifest file) isn't mistaken for
+// "this skin has no gif". the /spine JSON route degrades instead
 const getGifManifest = () =>
   (gifManifestCache ??= storage
     .readJson<GifManifest>("spine-gif-manifest.json")
-    .catch(() => ((gifManifestCache = undefined), {} as GifManifest)));
+    .catch((e) => ((gifManifestCache = undefined), Promise.reject(e))));
 const spineGif = (m: GifManifest, resourceId: number, skinIndex: number) => {
   const e = m[`${resourceId}_${skinIndex}`];
   return e
@@ -1028,7 +1031,7 @@ app.get("/api/nikkes/:id/spine", async (c) => {
   const found = /^\d+$/.test(key) ? byId.get(Number(key)) ?? byResourceId.get(Number(key)) : findByName(key)[0];
   if (!found) return c.json({ error: "not found" }, 404);
   const n = withBurstVoices(found, await getDetail(found.id) as { voices?: DetailVoice[] } | null);
-  const gm = await getGifManifest();
+  const gm = await getGifManifest().catch(() => ({} as GifManifest));
   const withGif = (sp: Nikke["spine"], skinIndex: number) =>
     sp?.stand
       ? { ...sp, stand: { ...sp.stand, gif: spineGif(gm, n.resourceId, skinIndex) } }
@@ -1057,7 +1060,9 @@ app.get("/api/nikkes/:id/spine.gif", async (c) => {
   if (!found) return c.json({ error: "not found" }, 404);
   const skin = Number(c.req.query("skin") ?? "0");
   if (!Number.isInteger(skin) || skin < 0) return c.json({ error: "invalid skin" }, 400);
-  const g = spineGif(await getGifManifest(), found.resourceId, skin);
+  const gm = await getGifManifest().catch(() => null);
+  if (!gm) return c.json({ error: "gif manifest unavailable — retry shortly" }, 503);
+  const g = spineGif(gm, found.resourceId, skin);
   if (!g) return c.json({ error: "no rendered gif for this skin" }, 404);
   return c.redirect(g.url, 302);
 });

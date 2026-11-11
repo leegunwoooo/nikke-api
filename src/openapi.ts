@@ -259,7 +259,7 @@ const openapi = {
           { name: "id", in: "path", required: true, schema: { type: "string" }, description: "캐릭터 ID / resourceId / 이름", example: "라피" },
           { name: "skin", in: "query", schema: { type: "integer", default: 0 }, description: "코스튬 skinIndex (0=기본 외형)" },
         ],
-        responses: { "302": { description: "GIF 파일로 리다이렉트" }, "400": { description: "잘못된 skin" }, "404": { description: "캐릭터 없음 또는 렌더 없음" } },
+        responses: { "302": { description: "GIF 파일로 리다이렉트" }, "400": { description: "잘못된 skin" }, "404": { description: "캐릭터 없음 또는 렌더 없음" }, "503": { description: "gif 매니페스트 일시 불가 — 재시도" } },
       },
     },
     "/api/scenes": {
