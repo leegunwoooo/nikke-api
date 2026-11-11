@@ -4,6 +4,9 @@ import { burstPlayback } from "./burst-playback.js";
 
 const bySkin = new Map<string, BurstCutscene>(catalog.entries.map(entry => {
   const base = `${catalog.assetBase}${entry.directory}/`;
+  // content-hashed bursts/ entries carry an absolute URL per logical filename
+  const files = (entry as { files?: Record<string, string> }).files;
+  const url = (name: string) => files?.[name] ?? base + name;
   return [`${entry.resourceId}:${entry.skinIndex}`, {
     id: entry.id,
     format: "spine",
@@ -11,9 +14,9 @@ const bySkin = new Map<string, BurstCutscene>(catalog.entries.map(entry => {
     animation: entry.animation,
     animations: entry.animations,
     playback: burstPlayback(entry.animations, entry.animation, entry.extraLayers, entry.bgLayers),
-    atlas: base + entry.atlas,
-    skeleton: base + entry.skeleton,
-    textures: entry.textures.map(name => ({ name, url: base + name })),
+    atlas: url(entry.atlas),
+    skeleton: url(entry.skeleton),
+    textures: entry.textures.map(name => ({ name, url: url(name) })),
     viewerUrl: `https://nikke-api.pages.dev/burst-viewer?id=${encodeURIComponent(entry.id)}`,
     source: { name: "ArtHub", url: catalog.source, revision: catalog.commit,
       viewerUrl: `${catalog.viewer}?id=${encodeURIComponent(entry.id)}&anim=${encodeURIComponent(entry.animation)}` },

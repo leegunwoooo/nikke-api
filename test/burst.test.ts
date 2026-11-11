@@ -23,7 +23,7 @@ test("catalog maps exact resource IDs and skins, including real filename excepti
   assert.equal(getBurstCutscene(470)?.id, "catalog-c470_00_z_f");
   assert.equal(getBurstCutscene(821, 1)?.id, "c821_01");
   assert.equal(getBurstCutscene(511, 2), null); // no pretending the costume has its own burst
-  assert.equal(getBurstCutscene(19), null); // newer character not in the pinned source
+  assert.equal(getBurstCutscene(19)?.id, "c019_00_skillcut"); // added in the Nov 9 ArtHub update
   assert.equal(getBurstCutscene(999999), null);
 });
 
@@ -73,7 +73,8 @@ test("every checked-in burst has unique keys and complete texture URLs", () => {
   for (const entry of catalog.entries) {
     const burst = getBurstCutscene(entry.resourceId, entry.skinIndex)!;
     assert.ok(burst.textures.length > 0);
-    assert.ok(burst.textures.every(t => new URL(t.url).protocol === "https:" && t.url.endsWith(`/${t.name}`)));
+    const files = (entry as { files?: Record<string, string> }).files;
+    assert.ok(burst.textures.every(t => new URL(t.url).protocol === "https:" && (files ? t.url === files[t.name] : t.url.endsWith(`/${t.name}`))));
     assert.equal(new URL(burst.viewerUrl).searchParams.get("id"), entry.id);
     assert.equal(new URL(burst.viewerUrl).pathname, "/burst-viewer");
     assert.equal(new URL(burst.source.viewerUrl).searchParams.get("anim"), burst.animation);

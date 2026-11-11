@@ -109,13 +109,15 @@ interface BurstEntry {
   animations: { name: string; duration: number }[];
   extraLayers?: string[];
   bgLayers?: string[];
+  files?: Record<string, string>;
 }
 
 async function loadCutscene(entry: BurstEntry): Promise<spine.SkeletonData> {
   const base = `${catalog.assetBase}${entry.directory}/`;
+  const urlOf = (name: string) => entry.files?.[name] ?? base + name;
   const [atlasBuf, skelBuf] = await Promise.all([
-    fetchBuf(base + entry.atlas),
-    fetchBuf(base + entry.skeleton),
+    fetchBuf(urlOf(entry.atlas)),
+    fetchBuf(urlOf(entry.skeleton)),
   ]);
   const atlas = new spine.TextureAtlas(new TextDecoder().decode(atlasBuf));
   // tolerate upstream skeletons that reference regions missing from the atlas —
@@ -137,7 +139,7 @@ async function loadCutscene(entry: BurstEntry): Promise<spine.SkeletonData> {
   // textures come from the catalog, but page names are authoritative —
   // an atlas may span several PNGs and each needs its own file
   const pngs = await Promise.all(
-    atlas.pages.map((page) => fetchBuf(new URL(page.name, base + entry.textures[0]).href)),
+    atlas.pages.map((page) => fetchBuf(entry.files?.[page.name] ?? new URL(page.name, base + entry.textures[0]).href)),
   );
   for (const [i, page] of atlas.pages.entries())
     page.setTexture(new spine.CanvasTexture(await loadImage(Buffer.from(pngs[i])) as any));

@@ -3,12 +3,21 @@ export { burstAnimation } from "../src/burst-playback.js";
 export const BURST_REPO = "Talors1225/arthub-viewer-web";
 export const BURST_COMMIT = "dba1ebc764ffd74722afe6ef2acf411931abf47c";
 export const BURST_ASSET_BASE = "https://pub-bdd986c6ec274f53b01df62ac49e02e2.r2.dev/nikki/spine_carved/";
+// newer catalog entries point at content-hashed objects under nikki/bursts/
+export const BURST_ORIGIN = "https://pub-bdd986c6ec274f53b01df62ac49e02e2.r2.dev/";
 export const BURST_VIEWER = "https://talors1225.github.io/arthub-viewer-web/nikki/viewer/cutscene.html";
 
 export interface CatalogEntry {
   id: string;
   resourceType: string;
-  cutscenes?: { dir: string; skel: string; atlas: string; compositeLayers?: unknown[] }[];
+  cutscenes?: {
+    dir: string;
+    skel: string;
+    atlas: string;
+    compositeLayers?: { activeWhen?: string[]; animationMap?: Record<string, string> }[];
+    // "bursts/" entries: logical names map to content-hashed object paths
+    nativeBurst?: { atlas: string; skeleton: string; pages: Record<string, string>; skin?: string };
+  }[];
 }
 
 export interface BurstEntry {
@@ -26,6 +35,8 @@ export interface BurstEntry {
   extraLayers?: string[];
   /** Disjoint background planes drawn behind the main one. */
   bgLayers?: string[];
+  /** Logical filename → absolute URL, for content-hashed bursts/ entries. */
+  files?: Record<string, string>;
 }
 
 // Reviewed manual composition fixes — the name-based picker cannot detect
@@ -111,15 +122,39 @@ export function selectBursts(entries: CatalogEntry[]) {
     const alias = reviewed[entry.id];
     const key = resourceKey(variant.skel) ?? (alias?.file === variant.skel ? { resourceId: alias.resourceId, skinIndex: alias.skinIndex } : null);
     if (!key) continue;
-    if (variant.compositeLayers?.length) throw new Error(`Composite burst needs explicit support: ${entry.id}`);
-    const directory = /^spine\/([\w.-]+)\/$/.exec(variant.dir)?.[1];
-    if (!directory) throw new Error(`Invalid directory: ${variant.dir}`);
-    const candidate = { ...key, id: assetName(entry.id), directory: assetName(directory), skeleton: assetName(variant.skel), atlas: assetName(variant.atlas) };
+    // Layers that only attach to non-skillcut tracks (e.g. an idle backdrop)
+    // never overlap the burst itself. Skillcut-overlapping layers match the
+    // manually reviewed BURST_OVERRIDES — only unreviewed composites fail.
+    const burstLayers = (variant.compositeLayers ?? []).filter((l) => !l.activeWhen?.length || l.activeWhen.some((a) => /skill[_-]?cut/i.test(a)));
+    // bg_<main>/<main>_bg mappings are what burstPlayback auto-detects anyway —
+    // a layer with no skillcut mapping at all still needs manual review
+    const autoCovered = burstLayers.length > 0 && burstLayers.every((l) => {
+      const mapped = Object.entries(l.animationMap ?? {}).filter(([base]) => /skill[_-]?cut/i.test(base));
+      return mapped.length > 0 && mapped.every(([base, track]) => track === `bg_${base}` || track === `${base}_bg`);
+    });
+    if (burstLayers.length && !autoCovered && !BURST_OVERRIDES[entry.id]) throw new Error(`Composite burst needs explicit support: ${entry.id}`);
+    const native = variant.nativeBurst;
+    let directory: string;
+    let files: Record<string, string> | undefined;
+    if (variant.dir === "bursts/") {
+      if (!native) throw new Error(`bursts/ entry without nativeBurst: ${entry.id}`);
+      const paths = { [variant.atlas]: native.atlas, [variant.skel]: native.skeleton, ...native.pages };
+      files = Object.fromEntries(Object.entries(paths).map(([name, p]) => {
+        if (!/^[\w./-]+$/.test(p)) throw new Error(`Invalid nativeBurst path: ${p}`);
+        return [name, BURST_ORIGIN + p];
+      }));
+      directory = "bursts";
+    } else {
+      directory = /^spine\/([\w.-]+)\/$/.exec(variant.dir)?.[1] ?? (() => { throw new Error(`Invalid directory: ${variant.dir}`); })();
+    }
+    const candidate = { ...key, id: assetName(entry.id), directory: assetName(directory), skeleton: assetName(variant.skel), atlas: assetName(variant.atlas), ...(files ? { files } : {}) };
     const k = `${key.resourceId}:${key.skinIndex}`;
     const old = selected.get(k);
     // Explicit skin numbers beat old unsuffixed variants; reconstructed
-    // catalog entries beat legacy duplicates. Ties must be reviewed.
-    const rank = (x: typeof candidate) => Number(/_\d+_/.test(x.skeleton)) * 2 + Number(x.id.startsWith("catalog-"));
+    // catalog entries beat legacy duplicates, and spine/ paths beat the
+    // content-hashed bursts/ mirror of the same cutscene. Ties must be reviewed.
+    const rank = (x: typeof candidate) =>
+      Number(/_\d+_/.test(x.skeleton)) * 2 + Number(x.id.startsWith("catalog-")) + Number(x.directory !== "bursts");
     if (old && rank(old) === rank(candidate)) throw new Error(`Ambiguous burst ${k}: ${old.id}, ${candidate.id}`);
     if (!old || rank(candidate) > rank(old)) selected.set(k, candidate);
   }

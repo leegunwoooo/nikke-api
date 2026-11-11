@@ -1,6 +1,6 @@
 {
-  "source": "https://raw.githubusercontent.com/Talors1225/arthub-viewer-web/dba1ebc764ffd74722afe6ef2acf411931abf47c/nikki/nikki_chars.json",
-  "commit": "dba1ebc764ffd74722afe6ef2acf411931abf47c",
+  "source": "https://raw.githubusercontent.com/Talors1225/arthub-viewer-web/47893f32524c2c14d3d311beb4752da5319db557/nikki/nikki_chars.json",
+  "commit": "47893f32524c2c14d3d311beb4752da5319db557",
   "assetBase": "https://pub-bdd986c6ec274f53b01df62ac49e02e2.r2.dev/nikki/spine_carved/",
   "viewer": "https://talors1225.github.io/arthub-viewer-web/nikki/viewer/cutscene.html",
   "entries": [
@@ -304,6 +304,62 @@
         {
           "name": "skillcut_1",
           "duration": 6.1667
+        }
+      ]
+    },
+    {
+      "resourceId": 19,
+      "skinIndex": 0,
+      "id": "c019_00_skillcut",
+      "directory": "bursts",
+      "skeleton": "c019_00_skillcut.skel",
+      "atlas": "c019_00_skillcut.atlas",
+      "files": {
+        "c019_00_skillcut.atlas": "https://pub-bdd986c6ec274f53b01df62ac49e02e2.r2.dev/nikki/bursts/objects/19330a8c742fbf1413e56cf708952656616c112f95e430cbd0b333de2e8a5b96.atlas",
+        "c019_00_skillcut.skel": "https://pub-bdd986c6ec274f53b01df62ac49e02e2.r2.dev/nikki/bursts/objects/bd6b1679bafb05ce332b67e944ec781f9b51dbe5bd3dc4af9f3957371217ead7.skel",
+        "c019_00_skillcut.png": "https://pub-bdd986c6ec274f53b01df62ac49e02e2.r2.dev/nikki/bursts/objects/94d0a1426f5ebcf4aeb0c933a9e714d88ba339b6bbf719e46139b76d9806a9be.png"
+      },
+      "textures": [
+        "c019_00_skillcut.png"
+      ],
+      "spineVersion": "4.1.20",
+      "animation": "skillcut_0",
+      "animations": [
+        {
+          "name": "idle",
+          "duration": 8
+        },
+        {
+          "name": "skillcut_0",
+          "duration": 3
+        }
+      ]
+    },
+    {
+      "resourceId": 19,
+      "skinIndex": 1,
+      "id": "c019_01_skillcut",
+      "directory": "bursts",
+      "skeleton": "c019_01_skillcut.skel",
+      "atlas": "c019_01_skillcut.atlas",
+      "files": {
+        "c019_01_skillcut.atlas": "https://pub-bdd986c6ec274f53b01df62ac49e02e2.r2.dev/nikki/bursts/objects/3ff8f01b0d936cfdf871d0a1d070b46dcb94a3766238a4280954ae9bc05ffd9d.atlas",
+        "c019_01_skillcut.skel": "https://pub-bdd986c6ec274f53b01df62ac49e02e2.r2.dev/nikki/bursts/objects/13f0499e652c5c4feb16bfb80b4bedc22dcf4836f6641a8d1cd875548828f5e2.skel",
+        "c019_01_skillcut.png": "https://pub-bdd986c6ec274f53b01df62ac49e02e2.r2.dev/nikki/bursts/objects/980d53038ef90e2fea599545fcb00ae6bc3fa48696f1ed0c2f332f9a923a7f6d.png"
+      },
+      "textures": [
+        "c019_01_skillcut.png"
+      ],
+      "spineVersion": "4.1.20",
+      "animation": "skillcut_01",
+      "animations": [
+        {
+          "name": "idle",
+          "duration": 6.6667
+        },
+        {
+          "name": "skillcut_01",
+          "duration": 4.8667
         }
       ]
     },
@@ -997,9 +1053,14 @@
       "resourceId": 102,
       "skinIndex": 0,
       "id": "c102_00_skillcut",
-      "directory": "c102_00_skillcut",
+      "directory": "bursts",
       "skeleton": "c102_00_skillcut.skel",
       "atlas": "c102_00_skillcut.atlas",
+      "files": {
+        "c102_00_skillcut.atlas": "https://pub-bdd986c6ec274f53b01df62ac49e02e2.r2.dev/nikki/spine_carved/c102_00_skillcut/c102_00_skillcut.atlas",
+        "c102_00_skillcut.skel": "https://pub-bdd986c6ec274f53b01df62ac49e02e2.r2.dev/nikki/spine_carved/c102_00_skillcut/c102_00_skillcut.skel",
+        "c102_00_skillcut.png": "https://pub-bdd986c6ec274f53b01df62ac49e02e2.r2.dev/nikki/spine_carved/c102_00_skillcut/c102_00_skillcut.png"
+      },
       "textures": [
         "c102_00_skillcut.png"
       ],
@@ -2010,9 +2071,14 @@
       "resourceId": 210,
       "skinIndex": 0,
       "id": "c210_00_skillcut",
-      "directory": "c210_00_skillcut",
+      "directory": "bursts",
       "skeleton": "c210_00_skillcut.skel",
       "atlas": "c210_00_skillcut.atlas",
+      "files": {
+        "c210_00_skillcut.atlas": "https://pub-bdd986c6ec274f53b01df62ac49e02e2.r2.dev/nikki/spine_carved/c210_00_skillcut/c210_00_skillcut.atlas",
+        "c210_00_skillcut.skel": "https://pub-bdd986c6ec274f53b01df62ac49e02e2.r2.dev/nikki/spine_carved/c210_00_skillcut/c210_00_skillcut.skel",
+        "c210_00_skillcut.png": "https://pub-bdd986c6ec274f53b01df62ac49e02e2.r2.dev/nikki/spine_carved/c210_00_skillcut/c210_00_skillcut.png"
+      },
       "textures": [
         "c210_00_skillcut.png"
       ],
@@ -4261,6 +4327,98 @@
         {
           "name": "skillcut_2",
           "duration": 5.4333
+        }
+      ]
+    },
+    {
+      "resourceId": 471,
+      "skinIndex": 1,
+      "id": "c471_01_skillcut",
+      "directory": "bursts",
+      "skeleton": "c471_01_skillcut.skel",
+      "atlas": "c471_01_skillcut.atlas",
+      "files": {
+        "c471_01_skillcut.atlas": "https://pub-bdd986c6ec274f53b01df62ac49e02e2.r2.dev/nikki/bursts/objects/7c617f2d59a67580fc4ffd3755602cfa2276997034b042d69b9b87639eec8e7c.atlas",
+        "c471_01_skillcut.skel": "https://pub-bdd986c6ec274f53b01df62ac49e02e2.r2.dev/nikki/bursts/objects/1fc84eb60d28cb3021cd123e1d2e45c0c82629b69859f188d3d16381991d615a.skel",
+        "c471_01_skillcut.png": "https://pub-bdd986c6ec274f53b01df62ac49e02e2.r2.dev/nikki/bursts/objects/8b2291fca19a5761e72ddb07bafbf950d27205b4956e79060713a1d05f3df545.png"
+      },
+      "textures": [
+        "c471_01_skillcut.png"
+      ],
+      "spineVersion": "4.1.20",
+      "animation": "skillcut_1",
+      "animations": [
+        {
+          "name": "idle",
+          "duration": 5.3333
+        },
+        {
+          "name": "skillcut_1",
+          "duration": 6.6667
+        }
+      ]
+    },
+    {
+      "resourceId": 472,
+      "skinIndex": 0,
+      "id": "c472_00_skillcut",
+      "directory": "bursts",
+      "skeleton": "c472_00_skillcut.skel",
+      "atlas": "c472_00_skillcut.atlas",
+      "files": {
+        "c472_00_skillcut.atlas": "https://pub-bdd986c6ec274f53b01df62ac49e02e2.r2.dev/nikki/bursts/objects/9ea1b5692d797fbdcedc1f60a2ed89daa38ec6c57c5780130a19f28fdd5a9f91.atlas",
+        "c472_00_skillcut.skel": "https://pub-bdd986c6ec274f53b01df62ac49e02e2.r2.dev/nikki/bursts/objects/95c402eb2f985302f063fe97aabd058e35f2d860519952d72211ebe14935d2e1.skel",
+        "c472_00_skillcut.png": "https://pub-bdd986c6ec274f53b01df62ac49e02e2.r2.dev/nikki/bursts/objects/5628d2fe2739b38ad8041bc2fefa47566b00032adb8cf155432e3b81cbbb67e3.png"
+      },
+      "textures": [
+        "c472_00_skillcut.png"
+      ],
+      "spineVersion": "4.1.20",
+      "animation": "skillcut_1",
+      "animations": [
+        {
+          "name": "idle",
+          "duration": 5.3333
+        },
+        {
+          "name": "skillcut_1",
+          "duration": 4.7333
+        }
+      ]
+    },
+    {
+      "resourceId": 473,
+      "skinIndex": 0,
+      "id": "c473_00_skillcut",
+      "directory": "bursts",
+      "skeleton": "c473_00_skillcut.skel",
+      "atlas": "c473_00_skillcut.atlas",
+      "files": {
+        "c473_00_skillcut.atlas": "https://pub-bdd986c6ec274f53b01df62ac49e02e2.r2.dev/nikki/bursts/objects/89e53621686ce2b880f81d8903ac4b56eec2f2348b80e29941a7156660868040.atlas",
+        "c473_00_skillcut.skel": "https://pub-bdd986c6ec274f53b01df62ac49e02e2.r2.dev/nikki/bursts/objects/10daa05768c31563d5206b4c4ab856dddef4568dbc1b6fab81b857c8599bc47c.skel",
+        "c473_00_skillcut.png": "https://pub-bdd986c6ec274f53b01df62ac49e02e2.r2.dev/nikki/bursts/objects/b5a4c80d7212e7bb03ae57070de9b3cfc4e2564f99a2c9ea6b98a630f536be46.png"
+      },
+      "textures": [
+        "c473_00_skillcut.png"
+      ],
+      "spineVersion": "4.1.20",
+      "animation": "skillcut_1",
+      "animations": [
+        {
+          "name": "idle",
+          "duration": 5.3333
+        },
+        {
+          "name": "idle1",
+          "duration": 5.3333
+        },
+        {
+          "name": "skillcut_1",
+          "duration": 6
+        },
+        {
+          "name": "skillcut_2",
+          "duration": 8
         }
       ]
     },

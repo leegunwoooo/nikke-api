@@ -69,9 +69,10 @@ async function main() {
   for (let i = 0; i < selected.length; i += 4) {
     const batch = await Promise.all(selected.slice(i, i + 4).map(async entry => {
       const base = `${BURST_ASSET_BASE}${entry.directory}/`;
-      const atlas = await (await request(base + entry.atlas)).text();
+      const urlOf = (name: string) => entry.files?.[name] ?? base + name;
+      const atlas = await (await request(urlOf(entry.atlas))).text();
       const textures = atlasPages(atlas);
-      const bytes = new Uint8Array(await (await request(base + entry.skeleton)).arrayBuffer());
+      const bytes = new Uint8Array(await (await request(urlOf(entry.skeleton))).arrayBuffer());
       const version = spineVersion(bytes);
       const parsedAtlas = new TextureAtlas(atlas);
       for (const page of parsedAtlas.pages) {
@@ -88,7 +89,7 @@ async function main() {
       const extraLayers = override?.extraLayers;
       const bgLayers = override?.bgLayers;
       burstPlayback(animations, animation, extraLayers, bgLayers); // Includes background timing validation.
-      for (const page of textures) await request(base + page, { method: "HEAD" });
+      for (const page of textures) await request(urlOf(page), { method: "HEAD" });
       return { ...entry, textures, spineVersion: version, animation, animations,
         ...(extraLayers ? { extraLayers } : {}), ...(bgLayers ? { bgLayers } : {}) };
     }));
