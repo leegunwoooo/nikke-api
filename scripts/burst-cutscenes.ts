@@ -14,7 +14,7 @@ export interface CatalogEntry {
     dir: string;
     skel: string;
     atlas: string;
-    compositeLayers?: { activeWhen?: string[]; animationMap?: Record<string, string> }[];
+    compositeLayers?: { activeWhen?: string[]; animationMap?: Record<string, string>; drawOrder?: number; previewTransform?: [number, number, number] }[];
     // "bursts/" entries: logical names map to content-hashed object paths
     nativeBurst?: { atlas: string; skeleton: string; pages: Record<string, string>; skin?: string };
   }[];
@@ -37,6 +37,10 @@ export interface BurstEntry {
   bgLayers?: string[];
   /** Logical filename → absolute URL, for content-hashed bursts/ entries. */
   files?: Record<string, string>;
+  /** ArtHub compositeLayers — the game's own layer plan (track + z-order + transform). */
+  composite?: { animation: string; role: "background" | "overlay"; transform?: [number, number, number] }[];
+  /** The skillcut track the composite layers pair with — wins over name guesses. */
+  compositeMain?: string;
 }
 
 // Reviewed manual composition fixes — the name-based picker cannot detect
@@ -123,16 +127,25 @@ export function selectBursts(entries: CatalogEntry[]) {
     const key = resourceKey(variant.skel) ?? (alias?.file === variant.skel ? { resourceId: alias.resourceId, skinIndex: alias.skinIndex } : null);
     if (!key) continue;
     // Layers that only attach to non-skillcut tracks (e.g. an idle backdrop)
-    // never overlap the burst itself. Skillcut-overlapping layers match the
-    // manually reviewed BURST_OVERRIDES — only unreviewed composites fail.
-    const burstLayers = (variant.compositeLayers ?? []).filter((l) => !l.activeWhen?.length || l.activeWhen.some((a) => /skill[_-]?cut/i.test(a)));
-    // bg_<main>/<main>_bg mappings are what burstPlayback auto-detects anyway —
-    // a layer with no skillcut mapping at all still needs manual review
-    const autoCovered = burstLayers.length > 0 && burstLayers.every((l) => {
-      const mapped = Object.entries(l.animationMap ?? {}).filter(([base]) => /skill[_-]?cut/i.test(base));
-      return mapped.length > 0 && mapped.every(([base, track]) => track === `bg_${base}` || track === `${base}_bg`);
-    });
-    if (burstLayers.length && !autoCovered && !BURST_OVERRIDES[entry.id]) throw new Error(`Composite burst needs explicit support: ${entry.id}`);
+    // never overlap the burst itself. Skillcut-active compositeLayers are the
+    // game's own composition data — derive the layer plan instead of guessing.
+    const active = (variant.compositeLayers ?? []).filter((l) => !l.activeWhen?.length || l.activeWhen.some((a) => /skill[_-]?cut/i.test(a)));
+    let composite: BurstEntry["composite"];
+    let compositeMain: string | undefined;
+    if (active.length) {
+      const mapped = active.map((l) => ({
+        ...l,
+        pairs: Object.entries(l.animationMap ?? {}).filter(([base]) => /skill[_-]?cut/i.test(base)),
+      }));
+      const mains = [...new Set(mapped.flatMap((l) => l.pairs.map(([b]) => b)))];
+      if (mains.length !== 1 || mapped.some((l) => !l.pairs.length)) throw new Error(`Composite burst needs explicit support: ${entry.id}`);
+      compositeMain = mains[0];
+      composite = mapped.map((l) => ({
+        animation: l.pairs.find(([b]) => b === compositeMain)![1],
+        role: ((l.drawOrder ?? 0) < 0 ? "background" : "overlay") as "background" | "overlay",
+        ...(l.previewTransform ? { transform: l.previewTransform } : {}),
+      }));
+    }
     const native = variant.nativeBurst;
     let directory: string;
     let files: Record<string, string> | undefined;
@@ -147,7 +160,7 @@ export function selectBursts(entries: CatalogEntry[]) {
     } else {
       directory = /^spine\/([\w.-]+)\/$/.exec(variant.dir)?.[1] ?? (() => { throw new Error(`Invalid directory: ${variant.dir}`); })();
     }
-    const candidate = { ...key, id: assetName(entry.id), directory: assetName(directory), skeleton: assetName(variant.skel), atlas: assetName(variant.atlas), ...(files ? { files } : {}) };
+    const candidate = { ...key, id: assetName(entry.id), directory: assetName(directory), skeleton: assetName(variant.skel), atlas: assetName(variant.atlas), ...(files ? { files } : {}), ...(composite ? { composite, compositeMain } : {}) };
     const k = `${key.resourceId}:${key.skinIndex}`;
     const old = selected.get(k);
     // Explicit skin numbers beat old unsuffixed variants; reconstructed

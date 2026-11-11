@@ -257,11 +257,23 @@
       "directory": "c017_01_skillcut",
       "skeleton": "c017_01_skillcut.skel",
       "atlas": "c017_01_skillcut.atlas",
+      "composite": [
+        {
+          "animation": "skillcut_2",
+          "role": "background",
+          "transform": [
+            67,
+            0,
+            1
+          ]
+        }
+      ],
+      "compositeMain": "skillcut_1",
       "textures": [
         "c017_01_skillcut.png"
       ],
       "spineVersion": "4.1.20",
-      "animation": "skillcut_2",
+      "animation": "skillcut_1",
       "animations": [
         {
           "name": "idle",
@@ -279,9 +291,6 @@
           "name": "skillcut_2",
           "duration": 5.8
         }
-      ],
-      "extraLayers": [
-        "skillcut_1"
       ]
     },
     {
@@ -700,6 +709,18 @@
       "directory": "c073_00_skillcut",
       "skeleton": "c073_00_skillcut.skel",
       "atlas": "c073_00_skillcut.atlas",
+      "composite": [
+        {
+          "animation": "skillcut_1",
+          "role": "background",
+          "transform": [
+            0,
+            -158,
+            1
+          ]
+        }
+      ],
+      "compositeMain": "skillcut_2",
       "textures": [
         "c073_00_skillcut.png"
       ],
@@ -722,9 +743,6 @@
           "name": "skillcut_2",
           "duration": 6.3667
         }
-      ],
-      "bgLayers": [
-        "skillcut_1"
       ]
     },
     {
@@ -925,6 +943,27 @@
       "directory": "c094_00_skillcut",
       "skeleton": "c094_00_skillcut.skel",
       "atlas": "c094_00_skillcut.atlas",
+      "composite": [
+        {
+          "animation": "skillcut_1_OFF",
+          "role": "background",
+          "transform": [
+            -38,
+            -128,
+            1
+          ]
+        },
+        {
+          "animation": "skillcut_3_OFF",
+          "role": "overlay",
+          "transform": [
+            0,
+            0,
+            1
+          ]
+        }
+      ],
+      "compositeMain": "skillcut_2_OFF_MOVE_BIG",
       "textures": [
         "c094_00_skillcut.png"
       ],
@@ -1096,6 +1135,18 @@
       "directory": "c103_00_skillcut",
       "skeleton": "c103_00_skillcut.skel",
       "atlas": "c103_00_skillcut.atlas",
+      "composite": [
+        {
+          "animation": "bg_skillcut_1",
+          "role": "background",
+          "transform": [
+            7.122,
+            27.113,
+            0.981
+          ]
+        }
+      ],
+      "compositeMain": "skillcut_1",
       "textures": [
         "c103_00_skillcut.png"
       ],
@@ -1622,6 +1673,18 @@
       "directory": "c170_04_skillcut",
       "skeleton": "c170_04_skillcut.skel",
       "atlas": "c170_04_skillcut.atlas",
+      "composite": [
+        {
+          "animation": "bg_skillcut_1",
+          "role": "background",
+          "transform": [
+            0,
+            0,
+            1
+          ]
+        }
+      ],
+      "compositeMain": "skillcut_1",
       "textures": [
         "c170_04_skillcut.png"
       ],
@@ -1849,11 +1912,23 @@
       "directory": "c191_02_skillcut",
       "skeleton": "c191_02_skillcut.skel",
       "atlas": "c191_02_skillcut.atlas",
+      "composite": [
+        {
+          "animation": "skillcut_2",
+          "role": "overlay",
+          "transform": [
+            0,
+            0,
+            1
+          ]
+        }
+      ],
+      "compositeMain": "skillcut_1",
       "textures": [
         "c191_02_skillcut.png"
       ],
       "spineVersion": "4.1.20",
-      "animation": "skillcut_2",
+      "animation": "skillcut_1",
       "animations": [
         {
           "name": "idle_1",
@@ -1871,9 +1946,6 @@
           "name": "skillcut_2",
           "duration": 7.1
         }
-      ],
-      "bgLayers": [
-        "skillcut_1"
       ]
     },
     {
@@ -2563,6 +2635,18 @@
       "directory": "c234_00_skillcut",
       "skeleton": "c234_00_skillcut.skel",
       "atlas": "c234_00_skillcut.atlas",
+      "composite": [
+        {
+          "animation": "skillcut_1",
+          "role": "background",
+          "transform": [
+            0,
+            -25.999,
+            1.023
+          ]
+        }
+      ],
+      "compositeMain": "skillcut_2",
       "textures": [
         "c234_00_skillcut.png"
       ],
@@ -2763,6 +2847,18 @@
       "directory": "c262_00_skillcut",
       "skeleton": "c262_00_skillcut.skel",
       "atlas": "c262_00_skillcut.atlas",
+      "composite": [
+        {
+          "animation": "skillcut_1",
+          "role": "background",
+          "transform": [
+            0,
+            0,
+            1
+          ]
+        }
+      ],
+      "compositeMain": "skillcut_0",
       "textures": [
         "c262_00_skillcut.png"
       ],
@@ -2785,9 +2881,6 @@
           "name": "skillcut_1",
           "duration": 5
         }
-      ],
-      "bgLayers": [
-        "skillcut_1"
       ]
     },
     {
@@ -2797,6 +2890,18 @@
       "directory": "c262_01_skillcut",
       "skeleton": "c262_01_skillcut.skel",
       "atlas": "c262_01_skillcut.atlas",
+      "composite": [
+        {
+          "animation": "skillcut_2",
+          "role": "background",
+          "transform": [
+            -92,
+            7,
+            1
+          ]
+        }
+      ],
+      "compositeMain": "skillcut_1",
       "textures": [
         "c262_01_skillcut.png"
       ],
@@ -2819,9 +2924,6 @@
           "name": "skillcut_2",
           "duration": 6.3333
         }
-      ],
-      "extraLayers": [
-        "skillcut_2"
       ]
     },
     {
@@ -4264,6 +4366,18 @@
       "directory": "c470_02_skillcut",
       "skeleton": "c470_02_skillcut.skel",
       "atlas": "c470_02_skillcut.atlas",
+      "composite": [
+        {
+          "animation": "skillcut_2",
+          "role": "overlay",
+          "transform": [
+            42.857,
+            -325.714,
+            1.302
+          ]
+        }
+      ],
+      "compositeMain": "skillcut_1",
       "textures": [
         "c470_02_skillcut.png"
       ],
@@ -4286,9 +4400,6 @@
           "name": "skillcut_2",
           "duration": 6.6667
         }
-      ],
-      "extraLayers": [
-        "skillcut_2"
       ]
     },
     {
@@ -4887,6 +4998,18 @@
       "directory": "c580_01_skillcut",
       "skeleton": "c580_01_skillcut.skel",
       "atlas": "c580_01_skillcut.atlas",
+      "composite": [
+        {
+          "animation": "skillcut_3",
+          "role": "background",
+          "transform": [
+            -65.455,
+            118.182,
+            0.973
+          ]
+        }
+      ],
+      "compositeMain": "skillcut_2",
       "textures": [
         "c580_01_skillcut.png"
       ],
@@ -4913,9 +5036,6 @@
           "name": "skillcut_3",
           "duration": 4.7333
         }
-      ],
-      "bgLayers": [
-        "skillcut_3"
       ]
     },
     {
@@ -4948,6 +5068,18 @@
       "directory": "c582_00_skillcut",
       "skeleton": "c582_00_skillcut.skel",
       "atlas": "c582_00_skillcut.atlas",
+      "composite": [
+        {
+          "animation": "skillcut_1",
+          "role": "background",
+          "transform": [
+            48.467,
+            -0.726,
+            0.995
+          ]
+        }
+      ],
+      "compositeMain": "skillcut_0",
       "textures": [
         "c582_00_skillcut.png"
       ],
@@ -4970,9 +5102,6 @@
           "name": "skillcut_1",
           "duration": 4.2333
         }
-      ],
-      "bgLayers": [
-        "skillcut_1"
       ]
     },
     {
@@ -5900,6 +6029,18 @@
       "directory": "c871_00_skillcut",
       "skeleton": "c871_00_skillcut.skel",
       "atlas": "c871_00_skillcut.atlas",
+      "composite": [
+        {
+          "animation": "skillcut_1",
+          "role": "background",
+          "transform": [
+            0,
+            146.474,
+            0.879
+          ]
+        }
+      ],
+      "compositeMain": "skillcut_0",
       "textures": [
         "c871_00_skillcut.png"
       ],
@@ -5922,9 +6063,6 @@
           "name": "skillcut_1",
           "duration": 4.4
         }
-      ],
-      "extraLayers": [
-        "skillcut_1"
       ]
     },
     {
@@ -5934,6 +6072,18 @@
       "directory": "c872_skillcut_00",
       "skeleton": "c872_skillcut_00.skel",
       "atlas": "c872_skillcut_00.atlas",
+      "composite": [
+        {
+          "animation": "bg_skillcut_1",
+          "role": "overlay",
+          "transform": [
+            -30.435,
+            67.6,
+            0.958
+          ]
+        }
+      ],
+      "compositeMain": "skillcut_1",
       "textures": [
         "c872_skillcut_00.png"
       ],

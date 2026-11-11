@@ -57,6 +57,8 @@ npm run emit:pages-worker
 
 `animation` 이름만으로는 빈 트랙·병렬 레이어·대체 변형을 구분할 수 없습니다. 전수 슬롯 검증(전 구간 커버리지 + 슬롯 겹침 분석)으로 확인한 결과, 슬롯이 겹치지 않는(`<15%`) 복수 트랙은 **같은 씬의 병렬 레이어**이며 본체 위에 같이 그려야 하고, 슬롯이 크게 겹치는 트랙은 **대체 변형**이라 하나만 재생합니다. 교정된 23개는 `scripts/burst-cutscenes.ts`의 `BURST_OVERRIDES`에 있고 갱신 시에도 유지됩니다. `extraLayers`는 본체 위에 같은 시간축으로 덧그리는 트랙이며, 길이가 본체와 달라도 됩니다(끝나면 그 슬롯은 사라짐).
 
+그 후 ArtHub 목록이 `compositeLayers` 메타데이터를 추가하면서, 메타가 있는 항목은 수동 추정 대신 출처의 레이어 계획을 그대로 씁니다. `compositeLayers`는 각 레이어의 재생 트랙(`animationMap`), z순서(`drawOrder` — 음수는 본체 뒤, 양수는 앞), 위치·크기(`previewTransform` = `[x, y, scale]` 스켈레톤 공간)를 담고, 카탈로그의 `composite`/`compositeMain`으로 저장됩니다. `compositeMain`이 있는 항목은 `BURST_OVERRIDES`보다 메타데이터가 우선입니다.
+
 | 리소스 | 문제 | 재생 구성 |
 |---|---|---|
 | `c105_00_skillcut` | `skillcut_1` 전체 빈 트랙 | `skillcut_2` |

@@ -4,7 +4,7 @@ import type { BurstPlayback } from "../src/types.js";
 /** One playback operation for the whole cutscene. Poses must remain independent:
  * background animations explicitly hide character slots and vice versa. */
 export class BurstScene {
-  readonly layers: { skeleton: Skeleton; state: AnimationState; animation: string }[];
+  readonly layers: { skeleton: Skeleton; state: AnimationState; animation: string; transform?: [number, number, number] }[];
   readonly duration: number;
 
   constructor(data: SkeletonData, playback: BurstPlayback) {
@@ -17,7 +17,7 @@ export class BurstScene {
       if (skeleton.drawOrder.every(slot => !slot.attachment) && data.skins.length) {
         for (const skin of data.skins) skeleton.setSkin(skin);
       }
-      return { skeleton, state: new AnimationState(new AnimationStateData(data)), animation: layer.animation };
+      return { skeleton, state: new AnimationState(new AnimationStateData(data)), animation: layer.animation, transform: layer.transform };
     });
     this.seek(0);
   }
@@ -30,6 +30,14 @@ export class BurstScene {
       const track = layer.state.setAnimation(0, layer.animation, false);
       track.trackTime = t;
       layer.state.apply(layer.skeleton);
+      // Catalog composite transforms position reused-skeleton layers
+      // (ArtHub previewTransform = [x, y, scale] in skeleton space).
+      if (layer.transform) {
+        layer.skeleton.x = layer.transform[0];
+        layer.skeleton.y = layer.transform[1];
+        layer.skeleton.scaleX = layer.transform[2];
+        layer.skeleton.scaleY = layer.transform[2];
+      }
       layer.skeleton.updateWorldTransform();
     }
   }

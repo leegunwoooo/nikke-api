@@ -86,9 +86,10 @@ test("every checked-in burst has unique keys and complete texture URLs", () => {
 
 test("backgrounds are included in the playback plan, authored combined animations stay single", () => {
   const composite = catalog.entries.map(e => getBurstCutscene(e.resourceId, e.skinIndex)!).filter(b => b.playback.mode === "composite");
-  assert.deepEqual(composite.map(b => b.id), ["c016_00_skillcut","c017_01_skillcut","c063_00_skillcut","c073_00_skillcut","c093_skillcut","c103_00_skillcut","c170_04_skillcut","c191_02_skillcut","c200_00_skillcut","c223_01_skillcut","c225_00_skillcut","c262_00_skillcut","c262_01_skillcut","c281_02_skillcut","c315_00_skillcut","c331_00_skillcut","c355_00_skillcut","c411_00_skillcut","c470_02_skillcut","c513_01_skillcut","c580_01_skillcut","c582_00_skillcut","c620_00_skillcut","c833_00_skillcut","catalog-c852_00_skillcut","c871_00_skillcut","c872_skillcut_00"]);
+  assert.deepEqual(composite.map(b => b.id), ["c016_00_skillcut","c017_01_skillcut","c063_00_skillcut","c073_00_skillcut","c093_skillcut","c094_00_skillcut","c103_00_skillcut","c170_04_skillcut","c191_02_skillcut","c200_00_skillcut","c223_01_skillcut","c225_00_skillcut","c234_00_skillcut","c262_00_skillcut","c262_01_skillcut","c281_02_skillcut","c315_00_skillcut","c331_00_skillcut","c355_00_skillcut","c411_00_skillcut","c470_02_skillcut","c513_01_skillcut","c580_01_skillcut","c582_00_skillcut","c620_00_skillcut","c833_00_skillcut","catalog-c852_00_skillcut","c871_00_skillcut","c872_skillcut_00"]);
+  // ArtHub compositeLayers name the real main track and each layer's transform
   assert.deepEqual(getBurstCutscene(871)!.playback.layers, [
-    { role: "main", animation: "skillcut_0" }, { role: "overlay", animation: "skillcut_1" },
+    { role: "background", animation: "skillcut_1", transform: [0, 146.474, 0.879] }, { role: "main", animation: "skillcut_0" },
   ]);
   assert.deepEqual(getBurstCutscene(63)!.playback, { mode: "composite", duration: 4.7, layers: [
     { role: "background", animation: "bg_skillcut_1" }, { role: "main", animation: "skillcut_1" },

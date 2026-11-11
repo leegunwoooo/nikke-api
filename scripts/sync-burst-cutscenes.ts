@@ -82,13 +82,15 @@ async function main() {
       const skeleton = new SkeletonBinary(new AtlasAttachmentLoader(parsedAtlas)).readSkeletonData(bytes);
       const animations = skeleton.animations.map(a => ({ name: a.name, duration: Number(a.duration.toFixed(4)) }));
       const override = BURST_OVERRIDES[entry.id];
-      let animation = visibleBurst(skeleton, animations);
+      // ArtHub compositeLayers carry the game's own main track — manual
+      // overrides and name guesses only apply to entries without them.
+      let animation = entry.compositeMain ?? visibleBurst(skeleton, animations);
       if (!animation) throw new Error(`No visible burst animation track: ${entry.id} ${JSON.stringify(animations)}`);
       if (override?.animation && !animations.some(a => a.name === override.animation)) throw new Error(`Override missing: ${entry.id} ${override.animation}`);
-      if (override?.animation) animation = override.animation;
-      const extraLayers = override?.extraLayers;
-      const bgLayers = override?.bgLayers;
-      burstPlayback(animations, animation, extraLayers, bgLayers); // Includes background timing validation.
+      if (override?.animation && !entry.compositeMain) animation = override.animation;
+      const extraLayers = entry.compositeMain ? undefined : override?.extraLayers;
+      const bgLayers = entry.compositeMain ? undefined : override?.bgLayers;
+      burstPlayback(animations, animation, extraLayers, bgLayers, entry.composite); // Includes background timing validation.
       for (const page of textures) await request(urlOf(page), { method: "HEAD" });
       return { ...entry, textures, spineVersion: version, animation, animations,
         ...(extraLayers ? { extraLayers } : {}), ...(bgLayers ? { bgLayers } : {}) };

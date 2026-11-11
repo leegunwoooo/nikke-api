@@ -48,8 +48,10 @@ export interface SpineSet {
 export interface BurstPlayback {
   mode: "single" | "composite";
   duration: number;
-  /** Back to front. Shared assets, independent skeleton poses, one clock. */
-  layers: { role: "background" | "main" | "overlay"; animation: string }[];
+  /** Back to front. Shared assets, independent skeleton poses, one clock.
+   *  transform offsets the layer in skeleton space [x, y, scale] — ArtHub's
+   *  composite metadata positions reused-skeleton layers this way. */
+  layers: { role: "background" | "main" | "overlay"; animation: string; transform?: [number, number, number] }[];
 }
 
 export interface BurstVoiceRef {

@@ -1,5 +1,5 @@
 // Renders the lobby (stand) idle animation of every nikke skin to an
-// animated image. Spine 4.1 canvas renderer + @napi-rs/canvas — no
+// animated image. Spine 4.1 canvas renderer + @napi-rs/canvas ??no
 // browser needed. Output goes to the sibling nikke-api-media repo clone
 // (served through jsDelivr), while a small size manifest is written into
 // data/dist so the API can attach gif URLs to spine data.
@@ -20,6 +20,90 @@ import * as spine from "@esotericsoftware/spine-canvas";
 import gifenc from "gifenc";
 import nodeWebpmux from "node-webpmux";
 const { Image } = nodeWebpmux;
+
+// game atlases are premultiplied-alpha but the canvas renderer blends
+// straight-alpha ??un-multiply or translucent edges render twice as dark
+async function loadTextureImage(buf: Buffer, pma: boolean) {
+  const img = (await loadImage(buf)) as any;
+  if (!pma) return img;
+  const c = createCanvas(img.width, img.height);
+  const x = c.getContext("2d");
+  x.drawImage(img, 0, 0);
+  const id = x.getImageData(0, 0, img.width, img.height);
+  const px = id.data;
+  for (let i = 0; i < px.length; i += 4) {
+    const a = px[i + 3];
+    if (!a || a === 255) continue;
+    px[i] = Math.min(255, Math.round((px[i] * 255) / a));
+    px[i + 1] = Math.min(255, Math.round((px[i + 1] * 255) / a));
+    px[i + 2] = Math.min(255, Math.round((px[i + 2] * 255) / a));
+  }
+  x.putImageData(id, 0, 0);
+  return c;
+}
+// spine-canvas tracks slot.data.blendMode but never applies it ??additive /
+// multiply / screen slots render as source-over, so glow parts draw dark.
+// Reapply each blend run as a canvas composite operation.
+const BLEND_OPS: Record<number, GlobalCompositeOperation> = {
+  [spine.BlendMode.Normal]: "source-over",
+  [spine.BlendMode.Additive]: "lighter",
+  [spine.BlendMode.Multiply]: "multiply",
+  [spine.BlendMode.Screen]: "screen",
+};
+
+// drawTriangles is private in the typings (public at runtime) ??patch the
+// instance so draw() picks up the blend-aware version.
+function blendRenderer(ctx: CanvasRenderingContext2D): spine.SkeletonRenderer {
+  const renderer = new spine.SkeletonRenderer(ctx);
+  const r = renderer as any;
+  r.drawTriangles = (skeleton: spine.Skeleton) => {
+    const c = r.ctx as CanvasRenderingContext2D;
+    const color = r.tempColor as spine.Color;
+    const skeletonColor = skeleton.color;
+    const drawOrder = skeleton.drawOrder;
+    let blendMode: spine.BlendMode | null = null;
+    let vertices = r.vertices as Float32Array;
+    let triangles: number[] = [];
+    for (let i = 0, n = drawOrder.length; i < n; i++) {
+      const slot = drawOrder[i];
+      const attachment = slot.getAttachment();
+      let texture: any;
+      if (attachment instanceof spine.RegionAttachment) {
+        vertices = r.computeRegionVertices(slot, attachment, false);
+        triangles = spine.SkeletonRenderer.QUAD_TRIANGLES;
+        texture = (attachment.region as any).texture.getImage();
+      } else if (attachment instanceof spine.MeshAttachment) {
+        vertices = r.computeMeshVertices(slot, attachment, false);
+        triangles = attachment.triangles;
+        texture = (attachment.region as any).texture.getImage();
+      } else continue;
+      if (!texture) continue;
+      if (slot.data.blendMode !== blendMode) {
+        blendMode = slot.data.blendMode;
+        c.globalCompositeOperation = BLEND_OPS[blendMode] ?? "source-over";
+      }
+      const slotColor = slot.color;
+      const attachmentColor = attachment.color;
+      color.set(
+        skeletonColor.r * slotColor.r * attachmentColor.r,
+        skeletonColor.g * slotColor.g * attachmentColor.g,
+        skeletonColor.b * slotColor.b * attachmentColor.b,
+        skeletonColor.a * slotColor.a * attachmentColor.a);
+      c.globalAlpha = color.a;
+      for (let j = 0; j < triangles.length; j += 3) {
+        const t1 = triangles[j] * 8, t2 = triangles[j + 1] * 8, t3 = triangles[j + 2] * 8;
+        r.drawTriangle(texture,
+          vertices[t1], vertices[t1 + 1], vertices[t1 + 6], vertices[t1 + 7],
+          vertices[t2], vertices[t2 + 1], vertices[t2 + 6], vertices[t2 + 7],
+          vertices[t3], vertices[t3 + 1], vertices[t3 + 6], vertices[t3 + 7]);
+      }
+    }
+    c.globalAlpha = 1;
+    c.globalCompositeOperation = "source-over";
+  };
+  return renderer;
+}
+
 const { GIFEncoder, quantize, applyPalette } = gifenc;
 type GifManifest = Record<string, { bytes: number; ref?: string }>;
 
@@ -34,7 +118,7 @@ const FPS = Number(arg("fps", "20"));
 const PAD = 0.92; // bounds fill this fraction of the canvas
 const RID = arg("rid")?.replace(/^c/i, "");
 const ONLY = arg("only")?.split(",");
-const ANIMS = arg("anims", "idle")!.split(","); // idle | action | …
+const ANIMS = arg("anims", "idle")!.split(","); // idle | action | delight | ...
 const gifName = (key: string, anim: string) => (anim === "idle" ? key : `${key}_${anim}`);
 const FORMAT = arg("format", "gif") === "webp" ? "webp" : "gif";
 const OUT_DIR = arg("out", join("..", "nikke-api-media", `spine-${FORMAT}`))!;
@@ -72,8 +156,7 @@ async function loadStand(stand: { atlas: string; skeleton: string; texture: stri
     fetchBuf(stand.skeleton),
   ]);
   const atlas = new spine.TextureAtlas(new TextDecoder().decode(atlasBuf));
-  // a few upstream skeletons reference regions that aren't in the atlas —
-  // give them a flagged degenerate region so the loader doesn't die; the
+  // a few upstream skeletons reference regions that aren't in the atlas ??  // give them a flagged degenerate region so the loader doesn't die; the
   // slots that end up with it get hidden before rendering
   const missing: string[] = [];
   const dummy = new spine.TextureAtlasRegion(atlas.pages[0], "__missing__") as any;
@@ -88,13 +171,13 @@ async function loadStand(stand: { atlas: string; skeleton: string; texture: stri
     missing.push(name);
     return dummy;
   };
-  // an atlas may span several PNG pages (e.g. Snow White's bag) — fetch each
+  // an atlas may span several PNG pages (e.g. Snow White's bag) ??fetch each
   // page's own file next to `texture`, whose basename is the first page's
   const pngs = await Promise.all(
     atlas.pages.map((page) => fetchBuf(new URL(page.name, stand.texture).href)),
   );
   for (const [i, page] of atlas.pages.entries())
-    page.setTexture(new spine.CanvasTexture(await loadImage(Buffer.from(pngs[i])) as any));
+    page.setTexture(new spine.CanvasTexture(await loadTextureImage(Buffer.from(pngs[i]), (page as any).pma) as any));
   const data = new spine.SkeletonBinary(new spine.AtlasAttachmentLoader(atlas)).readSkeletonData(skelBuf);
   if (missing.length) {
     console.warn(`  missing atlas regions tolerated: ${[...new Set(missing)].join(", ")}`);
@@ -112,14 +195,14 @@ async function renderAnim(data: spine.SkeletonData, animName: string): Promise<U
   if (skinName) skeleton.setSkinByName(skinName);
   skeleton.setSlotsToSetupPose();
   // attachments that fell back to the missing-region dummy are hidden by
-  // region identity — animations can slot them back in at any point, so the
+  // region identity ??animations can slot them back in at any point, so the
   // check re-runs after every state.apply below
   const isMissing = (att: any) => att?.region?._missing === true;
   const stateData = new spine.AnimationStateData(data);
   const state = new spine.AnimationState(stateData);
   state.setAnimation(0, anim.name, true);
 
-  // pose once and measure the visual AABB — SkeletonBounds only sees
+  // pose once and measure the visual AABB ??SkeletonBounds only sees
   // BoundingBoxAttachment (hitboxes), which these skeletons don't have
   state.update(1 / FPS);
   state.apply(skeleton);
@@ -148,8 +231,8 @@ async function renderAnim(data: spine.SkeletonData, animName: string): Promise<U
 
   const canvas = createCanvas(SIZE, SIZE);
   const ctx = canvas.getContext("2d");
-  const renderer = new spine.SkeletonRenderer(ctx as unknown as CanvasRenderingContext2D);
-  // canvas renderer defaults to quad-only draws — mesh attachments need this
+  const renderer = blendRenderer(ctx as unknown as CanvasRenderingContext2D);
+  // canvas renderer defaults to quad-only draws ??mesh attachments need this
   renderer.triangleRendering = true;
   const frameCount = Math.max(1, Math.round(anim.duration * FPS));
   const delay = 1000 / FPS;
@@ -164,7 +247,7 @@ async function renderAnim(data: spine.SkeletonData, animName: string): Promise<U
     ctx.clearRect(0, 0, SIZE, SIZE);
     ctx.save();
     ctx.translate(SIZE / 2, SIZE / 2);
-    ctx.scale(scale, -scale); // spine y-up → canvas y-down
+    ctx.scale(scale, -scale); // spine y-up ??canvas y-down
     ctx.translate(-cx, -cy);
     renderer.draw(skeleton);
     ctx.restore();
@@ -188,7 +271,7 @@ async function renderAnim(data: spine.SkeletonData, animName: string): Promise<U
 }
 
 // stamp the media repo's HEAD commit so the API can pin gif urls to an
-// immutable @<sha> — @main urls get 7-day browser caching and serve stale
+// immutable @<sha> ??@main urls get 7-day browser caching and serve stale
 // renders long after a fix is pushed
 const mediaRef = () => {
   try {
@@ -210,7 +293,7 @@ if (arg("merge")) {
     Object.assign(merged, JSON.parse(readFileSync(`${MANIFEST}.part${k}`, "utf8")));
   mkdirSync(join("data", "dist"), { recursive: true });
   writeFileSync(MANIFEST, JSON.stringify(stampVersion(merged)));
-  console.log(`merged ${parts} parts → ${MANIFEST} (${Object.keys(merged).length} entries)`);
+  console.log(`merged ${parts} parts ??${MANIFEST} (${Object.keys(merged).length} entries)`);
   process.exit(0);
 }
 
@@ -223,7 +306,7 @@ if (arg("resync")) {
       m[f.slice(0, -(FORMAT.length + 1))] = { bytes: statSync(join(OUT_DIR, f)).size };
   mkdirSync(join("data", "dist"), { recursive: true });
   writeFileSync(MANIFEST, JSON.stringify(stampVersion(m)));
-  console.log(`resynced → ${MANIFEST} (${Object.keys(m).length} entries)`);
+  console.log(`resynced ??${MANIFEST} (${Object.keys(m).length} entries)`);
   process.exit(0);
 }
 
@@ -278,5 +361,5 @@ for (const j of shardJobs) {
 }
 mkdirSync(join("data", "dist"), { recursive: true });
 writeFileSync(manifestPath, JSON.stringify(SHARD[1] === 1 ? stampVersion(manifest) : manifest));
-console.log(`done ${done} ok / ${failed} failed → ${OUT_DIR}`);
-if (SHARD[1] !== 1) console.log(`manifest part → ${manifestPath} (merge with other shards before use)`);
+console.log(`done ${done} ok / ${failed} failed ??${OUT_DIR}`);
+if (SHARD[1] !== 1) console.log(`manifest part ??${manifestPath} (merge with other shards before use)`);

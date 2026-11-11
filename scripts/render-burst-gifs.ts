@@ -1,8 +1,8 @@
 // Renders every burst cutscene in content/burst-cutscenes/catalog.json to an
-// animated GIF — same headless approach as render-spine-gifs.ts (spine-canvas
+// animated GIF ??same headless approach as render-spine-gifs.ts (spine-canvas
 // + @napi-rs/canvas), but cutscenes are multi-layer: the viewer plays one
 // Skeleton per playback layer on a shared timeline, so we do the same and
-// composite the layers in order (backgrounds → main → overlays).
+// composite the layers in order (backgrounds ??main ??overlays).
 //
 //   npx tsx scripts/render-burst-gifs.ts                      # all cutscenes
 //   npx tsx scripts/render-burst-gifs.ts --rid 10             # one character
@@ -33,11 +33,13 @@ const arg = (name: string, dflt?: string) => {
   return v === undefined || v.startsWith("--") ? "1" : v;
 };
 const SIZE = Number(arg("size", "512"));
-const SS = Number(arg("ss", "4")); // supersample factor — hides mesh seams
+const SS = Number(arg("ss", "4")); // supersample factor ??hides mesh seams
 const FPS = Number(arg("fps", "20"));
 const PAD = 0.94; // bounds fill this fraction of the canvas
 const RID = arg("rid")?.replace(/^c/i, "");
 const ONLY = arg("only")?.split(",");
+// --dump 20,40 dumps those frame numbers as _<key>_f<n>.png for visual checks
+const DUMP = (arg("dump")?.split(",").map(Number) ?? []).filter((n) => Number.isInteger(n));
 const OUT_DIR = arg("out", join("..", "nikke-api-media", "burst-gif"))!;
 const MANIFEST = join("data", "dist", "burst-gif-manifest.json");
 const SHARD = (() => {
@@ -59,7 +61,7 @@ const fetchBuf = async (url: string): Promise<ArrayBuffer> => {
 };
 
 // stamp the media repo's HEAD commit so the API can pin gif urls to an
-// immutable @<sha> — @main urls get 7-day browser caching and serve stale
+// immutable @<sha> ??@main urls get 7-day browser caching and serve stale
 // renders long after a fix is pushed
 const mediaRef = () => {
   try {
@@ -81,7 +83,7 @@ if (arg("merge")) {
     Object.assign(merged, JSON.parse(readFileSync(`${MANIFEST}.part${k}`, "utf8")));
   mkdirSync(join("data", "dist"), { recursive: true });
   writeFileSync(MANIFEST, JSON.stringify(stampVersion(merged)));
-  console.log(`merged ${parts} parts → ${MANIFEST} (${Object.keys(merged).length} entries)`);
+  console.log(`merged ${parts} parts ??${MANIFEST} (${Object.keys(merged).length} entries)`);
   process.exit(0);
 }
 
@@ -93,7 +95,7 @@ if (arg("resync")) {
     if (f.endsWith(".gif")) m[f.slice(0, -4)] = { bytes: statSync(join(OUT_DIR, f)).size };
   mkdirSync(join("data", "dist"), { recursive: true });
   writeFileSync(MANIFEST, JSON.stringify(stampVersion(m)));
-  console.log(`resynced → ${MANIFEST} (${Object.keys(m).length} entries)`);
+  console.log(`resynced ??${MANIFEST} (${Object.keys(m).length} entries)`);
   process.exit(0);
 }
 
@@ -110,6 +112,8 @@ interface BurstEntry {
   extraLayers?: string[];
   bgLayers?: string[];
   files?: Record<string, string>;
+  composite?: { animation: string; role: "background" | "overlay"; transform?: [number, number, number] }[];
+  compositeMain?: string;
 }
 
 async function loadCutscene(entry: BurstEntry): Promise<spine.SkeletonData> {
@@ -120,7 +124,7 @@ async function loadCutscene(entry: BurstEntry): Promise<spine.SkeletonData> {
     fetchBuf(urlOf(entry.skeleton)),
   ]);
   const atlas = new spine.TextureAtlas(new TextDecoder().decode(atlasBuf));
-  // tolerate upstream skeletons that reference regions missing from the atlas —
+  // tolerate upstream skeletons that reference regions missing from the atlas ??
   // a flagged degenerate region keeps the loader alive and the affected
   // attachments get hidden at render time
   const missing: string[] = [];
@@ -136,30 +140,116 @@ async function loadCutscene(entry: BurstEntry): Promise<spine.SkeletonData> {
     missing.push(name);
     return dummy;
   };
-  // textures come from the catalog, but page names are authoritative —
+  // textures come from the catalog, but page names are authoritative ??
   // an atlas may span several PNGs and each needs its own file
   const pngs = await Promise.all(
     atlas.pages.map((page) => fetchBuf(entry.files?.[page.name] ?? new URL(page.name, base + entry.textures[0]).href)),
   );
   for (const [i, page] of atlas.pages.entries())
-    page.setTexture(new spine.CanvasTexture(await loadImage(Buffer.from(pngs[i])) as any));
+    page.setTexture(new spine.CanvasTexture(await loadTextureImage(Buffer.from(pngs[i]), (page as any).pma) as any));
   const data = new spine.SkeletonBinary(new spine.AtlasAttachmentLoader(atlas)).readSkeletonData(new Uint8Array(skelBuf));
   if (missing.length)
     console.warn(`  missing atlas regions tolerated: ${[...new Set(missing)].join(", ")}`);
   return data;
 }
 
+// the game ships premultiplied-alpha atlases but the canvas renderer blends
+// straight-alpha ??un-multiply so translucent areas (eyeshadow, lashes)
+// don't render twice as dark
+async function loadTextureImage(buf: Buffer, pma: boolean) {
+  const img = (await loadImage(buf)) as any;
+  if (!pma) return img;
+  const c = createCanvas(img.width, img.height);
+  const x = c.getContext("2d");
+  x.drawImage(img, 0, 0);
+  const id = x.getImageData(0, 0, img.width, img.height);
+  const px = id.data;
+  for (let i = 0; i < px.length; i += 4) {
+    const a = px[i + 3];
+    if (!a || a === 255) continue;
+    px[i] = Math.min(255, Math.round((px[i] * 255) / a));
+    px[i + 1] = Math.min(255, Math.round((px[i + 1] * 255) / a));
+    px[i + 2] = Math.min(255, Math.round((px[i + 2] * 255) / a));
+  }
+  x.putImageData(id, 0, 0);
+  return c;
+}
+
+// spine-canvas tracks slot.data.blendMode but never applies it ??additive /
+// multiply / screen slots render as source-over, so glow and shading planes
+// draw as dark rectangles (and translucent slots look twice as dark on pma
+// atlases). Reapply each blend run as a canvas composite operation.
+const BLEND_OPS: Record<number, GlobalCompositeOperation> = {
+  [spine.BlendMode.Normal]: "source-over",
+  [spine.BlendMode.Additive]: "lighter",
+  [spine.BlendMode.Multiply]: "multiply",
+  [spine.BlendMode.Screen]: "screen",
+};
+
+// drawTriangles is private in the typings (public at runtime) ??patch the
+// instance so draw() picks up the blend-aware version.
+function blendRenderer(ctx: CanvasRenderingContext2D): spine.SkeletonRenderer {
+  const renderer = new spine.SkeletonRenderer(ctx);
+  const r = renderer as any;
+  r.drawTriangles = (skeleton: spine.Skeleton) => {
+    const c = r.ctx as CanvasRenderingContext2D;
+    const color = r.tempColor as spine.Color;
+    const skeletonColor = skeleton.color;
+    const drawOrder = skeleton.drawOrder;
+    let blendMode: spine.BlendMode | null = null;
+    let vertices = r.vertices as Float32Array;
+    let triangles: number[] = [];
+    for (let i = 0, n = drawOrder.length; i < n; i++) {
+      const slot = drawOrder[i];
+      const attachment = slot.getAttachment();
+      let texture: any;
+      if (attachment instanceof spine.RegionAttachment) {
+        vertices = r.computeRegionVertices(slot, attachment, false);
+        triangles = spine.SkeletonRenderer.QUAD_TRIANGLES;
+        texture = (attachment.region as any).texture.getImage();
+      } else if (attachment instanceof spine.MeshAttachment) {
+        vertices = r.computeMeshVertices(slot, attachment, false);
+        triangles = attachment.triangles;
+        texture = (attachment.region as any).texture.getImage();
+      } else continue;
+      if (!texture) continue;
+      if (slot.data.blendMode !== blendMode) {
+        blendMode = slot.data.blendMode;
+        c.globalCompositeOperation = BLEND_OPS[blendMode] ?? "source-over";
+      }
+      const slotColor = slot.color;
+      const attachmentColor = attachment.color;
+      color.set(
+        skeletonColor.r * slotColor.r * attachmentColor.r,
+        skeletonColor.g * slotColor.g * attachmentColor.g,
+        skeletonColor.b * slotColor.b * attachmentColor.b,
+        skeletonColor.a * slotColor.a * attachmentColor.a);
+      c.globalAlpha = color.a;
+      for (let j = 0; j < triangles.length; j += 3) {
+        const t1 = triangles[j] * 8, t2 = triangles[j + 1] * 8, t3 = triangles[j + 2] * 8;
+        r.drawTriangle(texture,
+          vertices[t1], vertices[t1 + 1], vertices[t1 + 6], vertices[t1 + 7],
+          vertices[t2], vertices[t2 + 1], vertices[t2 + 6], vertices[t2 + 7],
+          vertices[t3], vertices[t3 + 1], vertices[t3 + 6], vertices[t3 + 7]);
+      }
+    }
+    c.globalAlpha = 1;
+    c.globalCompositeOperation = "source-over";
+  };
+  return renderer;
+}
+
 // mirrors viewer/burst-scene.ts: one Skeleton per layer on a shared timeline
-interface SceneLayer { skeleton: spine.Skeleton; state: spine.AnimationState; animation: string }
+interface SceneLayer { skeleton: spine.Skeleton; state: spine.AnimationState; animation: string; transform?: [number, number, number] }
 
 function makeScene(data: spine.SkeletonData, entry: BurstEntry): { layers: SceneLayer[]; duration: number } {
-  const playback = burstPlayback(entry.animations, entry.animation, entry.extraLayers, entry.bgLayers);
+  const playback = burstPlayback(entry.animations, entry.animation, entry.extraLayers, entry.bgLayers, entry.composite);
   const layers = playback.layers.map((layer) => {
     const skeleton = new spine.Skeleton(data);
     if (skeleton.drawOrder.every((slot) => !slot.attachment) && data.skins.length)
       for (const skin of data.skins) skeleton.setSkin(skin);
     const state = new spine.AnimationState(new spine.AnimationStateData(data));
-    return { skeleton, state, animation: layer.animation };
+    return { skeleton, state, animation: layer.animation, transform: layer.transform };
   });
   return { layers, duration: playback.duration };
 }
@@ -171,13 +261,19 @@ const seek = (layers: SceneLayer[], t: number) => {
     const track = layer.state.setAnimation(0, layer.animation, false);
     track.trackTime = t;
     layer.state.apply(layer.skeleton);
+    if (layer.transform) {
+      layer.skeleton.x = layer.transform[0];
+      layer.skeleton.y = layer.transform[1];
+      layer.skeleton.scaleX = layer.transform[2];
+      layer.skeleton.scaleY = layer.transform[2];
+    }
     layer.skeleton.updateWorldTransform();
   }
 };
 
 const isMissing = (att: any) => att?.region?._missing === true;
 
-// visual bounds of one layer's skeleton — unioned across all layers so the
+// visual bounds of one layer's skeleton ??unioned across all layers so the
 // background planes stay in frame instead of cropping to the character
 function measureBounds(skeleton: spine.Skeleton) {
   let minX = Infinity, minY = Infinity, maxX = -Infinity, maxY = -Infinity;
@@ -202,7 +298,7 @@ function measureBounds(skeleton: spine.Skeleton) {
 async function renderBurst(data: spine.SkeletonData, entry: BurstEntry): Promise<Uint8Array> {
   const { layers, duration } = makeScene(data, entry);
   // characters often enter mid-cutscene (the first seconds can be bg-only),
-  // so a single-timestamp bound may be empty or miss the widest pose — union
+  // so a single-timestamp bound may be empty or miss the widest pose ??union
   // the main layer's visible bounds across the whole timeline. Background
   // planes span tens of thousands of world units, so unioning them would
   // shrink the character to a dot; they still draw inside the frame
@@ -221,11 +317,11 @@ async function renderBurst(data: spine.SkeletonData, entry: BurstEntry): Promise
   const cx = minX + bw / 2;
   const cy = minY + bh / 2;
 
-  // render large then downscale — the canvas renderer leaves visible seams
+  // render large then downscale ??the canvas renderer leaves visible seams
   // along mesh triangle edges on big planes, and supersampling blurs them out
   const hi = createCanvas(SIZE * SS, SIZE * SS);
   const hctx = hi.getContext("2d");
-  const renderer = new spine.SkeletonRenderer(hctx as unknown as CanvasRenderingContext2D);
+  const renderer = blendRenderer(hctx as unknown as CanvasRenderingContext2D);
   renderer.triangleRendering = true;
   const canvas = createCanvas(SIZE, SIZE);
   const ctx = canvas.getContext("2d");
@@ -236,7 +332,7 @@ async function renderBurst(data: spine.SkeletonData, entry: BurstEntry): Promise
   const gif = GIFEncoder();
   for (let f = 0; f < frameCount; f++) {
     seek(layers, f / FPS);
-    // burst is a cinematic, not a sticker — keep the scene background and
+    // burst is a cinematic, not a sticker ??keep the scene background and
     // letterbox what the cutscene itself doesn't cover (like the game does)
     hctx.fillStyle = "#000";
     hctx.fillRect(0, 0, SIZE * SS, SIZE * SS);
@@ -252,6 +348,7 @@ async function renderBurst(data: spine.SkeletonData, entry: BurstEntry): Promise
     ctx.fillStyle = "#000";
     ctx.fillRect(0, 0, SIZE, SIZE);
     ctx.drawImage(hi as any, 0, 0, SIZE, SIZE);
+    if (DUMP.length && DUMP.includes(f)) writeFileSync(join(OUT_DIR, `_${entry.resourceId}_${entry.skinIndex}_f${f}.png`), canvas.toBuffer("image/png"));
     const { data: rgba } = ctx.getImageData(0, 0, SIZE, SIZE);
     const palette = quantize(rgba, 256, { format: "rgb565" });
     const index = applyPalette(rgba, palette, "rgb565");
@@ -292,5 +389,5 @@ for (const entry of shardJobs) {
 }
 mkdirSync(join("data", "dist"), { recursive: true });
 writeFileSync(manifestPath, JSON.stringify(SHARD[1] === 1 ? stampVersion(manifest) : manifest));
-console.log(`done ${done} ok / ${failed} failed → ${OUT_DIR}`);
-if (SHARD[1] !== 1) console.log(`manifest part → ${manifestPath} (merge with other shards before use)`);
+console.log(`done ${done} ok / ${failed} failed ??${OUT_DIR}`);
+if (SHARD[1] !== 1) console.log(`manifest part ??${manifestPath} (merge with other shards before use)`);
