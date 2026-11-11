@@ -72,6 +72,22 @@ async function loadStand(stand: { atlas: string; skeleton: string; texture: stri
     fetchBuf(stand.skeleton),
   ]);
   const atlas = new spine.TextureAtlas(new TextDecoder().decode(atlasBuf));
+  // a few upstream skeletons reference regions that aren't in the atlas —
+  // give them a flagged degenerate region so the loader doesn't die; the
+  // slots that end up with it get hidden before rendering
+  const missing: string[] = [];
+  const dummy = new spine.TextureAtlasRegion(atlas.pages[0], "__missing__") as any;
+  dummy.u = dummy.v = dummy.u2 = dummy.v2 = 0;
+  dummy.width = dummy.height = dummy.originalWidth = dummy.originalHeight = 1;
+  dummy.offsetX = dummy.offsetY = 0;
+  dummy._missing = true;
+  const origFind = atlas.findRegion.bind(atlas);
+  (atlas as any).findRegion = (name: string) => {
+    const r = origFind(name);
+    if (r) return r;
+    missing.push(name);
+    return dummy;
+  };
   // an atlas may span several PNG pages (e.g. Snow White's bag) — fetch each
   // page's own file next to `texture`, whose basename is the first page's
   const pngs = await Promise.all(
@@ -79,7 +95,12 @@ async function loadStand(stand: { atlas: string; skeleton: string; texture: stri
   );
   for (const [i, page] of atlas.pages.entries())
     page.setTexture(new spine.CanvasTexture(await loadImage(Buffer.from(pngs[i])) as any));
-  return new spine.SkeletonBinary(new spine.AtlasAttachmentLoader(atlas)).readSkeletonData(skelBuf);
+  const data = new spine.SkeletonBinary(new spine.AtlasAttachmentLoader(atlas)).readSkeletonData(skelBuf);
+  if (missing.length) {
+    console.warn(`  missing atlas regions tolerated: ${[...new Set(missing)].join(", ")}`);
+    (data as any)._missingRegionDummy = dummy;
+  }
+  return data;
 }
 
 async function renderAnim(data: spine.SkeletonData, animName: string): Promise<Uint8Array> {
@@ -90,6 +111,10 @@ async function renderAnim(data: spine.SkeletonData, animName: string): Promise<U
   const skinName = data.skins.find((s) => s.name === "default")?.name ?? data.skins[0]?.name;
   if (skinName) skeleton.setSkinByName(skinName);
   skeleton.setSlotsToSetupPose();
+  // attachments that fell back to the missing-region dummy are hidden by
+  // region identity — animations can slot them back in at any point, so the
+  // check re-runs after every state.apply below
+  const isMissing = (att: any) => att?.region?._missing === true;
   const stateData = new spine.AnimationStateData(data);
   const state = new spine.AnimationState(stateData);
   state.setAnimation(0, anim.name, true);
@@ -98,6 +123,7 @@ async function renderAnim(data: spine.SkeletonData, animName: string): Promise<U
   // BoundingBoxAttachment (hitboxes), which these skeletons don't have
   state.update(1 / FPS);
   state.apply(skeleton);
+  for (const slot of skeleton.slots) if (isMissing(slot.getAttachment())) slot.setAttachment(null);
   skeleton.updateWorldTransform();
   let minX = Infinity, minY = Infinity, maxX = -Infinity, maxY = -Infinity;
   for (const slot of skeleton.slots) {
@@ -132,6 +158,8 @@ async function renderAnim(data: spine.SkeletonData, animName: string): Promise<U
   for (let f = 0; f < frameCount; f++) {
     state.update(0);
     state.apply(skeleton);
+    // attachment timelines can resurrect a missing-region attachment mid-anim
+    for (const slot of skeleton.slots) if (isMissing(slot.getAttachment())) slot.setAttachment(null);
     skeleton.updateWorldTransform();
     ctx.clearRect(0, 0, SIZE, SIZE);
     ctx.save();
