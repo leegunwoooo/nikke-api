@@ -69,3 +69,20 @@ test("spine.gif?anim= picks another rendered animation", async () => {
   assert.equal((await get("/api/nikkes/1/spine.gif?anim=delight")).status, 404);
   assert.equal((await get("/api/nikkes/1/spine.gif?anim=../../x")).status, 400);
 });
+
+const BURST_GIF_BASE = `${GIF_BASE}`.replace("spine-gif", "burst-gif");
+
+test("burst gif links attach to burstCutscene and redirect by skin", async () => {
+  const r = await json("/api/nikkes/1/burst");
+  assert.equal(r.burstCutscene.gif.url, `${BURST_GIF_BASE}/10_0.gif`);
+  // a costume without its own cutscene gets the base gif under its own skin key —
+  // none rendered for 10_1, so it is simply omitted
+  const bySkin = Object.fromEntries((r.costumes ?? []).map((c: any) => [c.skinIndex, c]));
+  if (bySkin[1]?.burstCutscene) assert.equal(bySkin[1].burstCutscene.gif, undefined);
+  const redir = await get("/api/nikkes/rapi/burst.gif");
+  assert.equal(redir.status, 302);
+  assert.equal(redir.headers.get("location"), `${BURST_GIF_BASE}/10_0.gif`);
+  assert.equal((await get("/api/nikkes/1/burst.gif?skin=1")).status, 404);
+  assert.equal((await get("/api/nikkes/1/burst.gif?skin=abc")).status, 400);
+  assert.equal((await get("/api/nikkes/nobody/burst.gif")).status, 404);
+});

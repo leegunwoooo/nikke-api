@@ -227,7 +227,7 @@ const openapi = {
       get: {
         tags: ["nikkes"],
         summary: "기본 외형·코스튬별 버스트 컷신 리소스와 뷰어 링크",
-        description: "ArtHub의 검증된 URL 목록을 참조합니다. 정확한 이름을 우선하며, 부분 일치 후보가 여러 개면 목록을 반환합니다. 미수록 캐릭터/코스튬은 burstCutscene: null입니다.",
+        description: "ArtHub의 검증된 URL 목록을 참조합니다. 정확한 이름을 우선하며, 부분 일치 후보가 여러 개면 목록을 반환합니다. 미수록 캐릭터/코스튬은 burstCutscene: null입니다. 각 burstCutscene.gif는 미리 렌더된 컷신 GIF(nikke-api-media, jsDelivr)를 가리키며 렌더가 없는 스킨은 생략됩니다.",
         parameters: [
           { name: "id", in: "path", required: true, schema: { type: "string" }, description: "캐릭터 ID / resourceId / 이름", example: "라피" },
           { name: "lang", in: "query", schema: { type: "string", enum: ["ko", "en", "ja", "zh-TW"] } },
@@ -237,6 +237,18 @@ const openapi = {
           "200": { description: "컷신 리소스 또는 이름 후보 목록", content: { "application/json": { schema: { oneOf: [burstResult, { type: "object", required: ["count", "characters"], properties: { count: { type: "integer" }, characters: { type: "array", items: burstResult } } }] } } } },
           "404": { description: "캐릭터 없음" },
         },
+      },
+    },
+    "/api/nikkes/{id}/burst.gif": {
+      get: {
+        tags: ["nikkes"],
+        summary: "버스트 컷신 GIF로 302 리다이렉트",
+        description: "미리 렌더된 버스트 컷신 GIF(nikke-api-media repo의 burst-gif/, jsDelivr 경유)로 리다이렉트합니다. ?skin=으로 코스튬 스킨 인덱스를 지정하며 미지정 시 0(기본 외형)입니다.",
+        parameters: [
+          { name: "id", in: "path", required: true, schema: { type: "string" }, description: "캐릭터 ID / resourceId / 이름", example: "라피" },
+          { name: "skin", in: "query", schema: { type: "integer", default: 0 }, description: "코스튬 skinIndex (0=기본 외형)" },
+        ],
+        responses: { "302": { description: "GIF 파일로 리다이렉트" }, "400": { description: "잘못된 skin" }, "404": { description: "캐릭터 없음 또는 렌더 없음" }, "503": { description: "gif 매니페스트 일시 불가 — 재시도" } },
       },
     },
     "/api/nikkes/{id}/spine": {

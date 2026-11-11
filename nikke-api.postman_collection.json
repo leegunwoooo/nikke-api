@@ -314,6 +314,35 @@
               ]
             }
           }
+        },
+        {
+          "name": "버스트 컷신 GIF",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/nikkes/라피/burst.gif",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "nikkes",
+                "라피",
+                "burst.gif"
+              ],
+              "query": [
+                {
+                  "key": "skin",
+                  "value": "0",
+                  "disabled": true,
+                  "description": "코스튬 skinIndex (기본 외형 = 0)"
+                }
+              ],
+              "description": "미리 렌더된 버스트 컷신 GIF로 302 리다이렉트. 배경·메인·오버레이가 합성된 전체 컷신. 렌더 없는 스킨은 404, URL은 미디어 커밋에 고정(@<sha>)"
+            }
+          },
+          "response": []
         }
       ]
     },

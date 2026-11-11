@@ -14,6 +14,7 @@
 - [GET /api/nikkes](#get-apinikkes) — 캐릭터 목록
 - [GET /api/nikkes/:id](#get-apinikkesid) — 캐릭터 상세
 - [GET /api/nikkes/:id/burst](#get-apinikkesidburst) — 버스트 컷신
+- [GET /api/nikkes/:id/burst.gif](#get-apinikkesidburstgif) — 컷신 GIF 리다이렉트
 - [GET /api/nikkes/:id/spine](#get-apinikkesidspine) — Spine 에셋 + 로비 idle GIF 링크
 - [GET /api/nikkes/:id/spine.gif](#get-apinikkesidspinegif) — 로비 idle GIF로 리다이렉트
 - [GET /api/meta/filters](#get-apimetafilters) — 필터 값 목록
@@ -333,6 +334,7 @@ GET /api/nikkes/511/burst?lang=ko
 | `textures[]` | 모든 atlas 페이지의 `{ name, url }`. `name`으로 atlas의 텍스처 요청을 연결하며, PNG 한 장이라고 가정하지 않음 |
 | `viewerUrl` | 배경과 캐릭터를 함께 재생하는 니케 API 뷰어 링크. 재생·정지·탐색은 전체 컷신에 적용되며 대사 음성도 함께 재생 |
 | `source` | 출처 이름, 원본 목록 URL, 고정한 Git revision, 원본 ArtHub `viewerUrl` |
+| `gif` | 미리 렌더된 컷신 GIF `{url, bytes}` — nikke-api-media repo의 `burst-gif/`를 jsDelivr가 서빙, `<img>`에 바로 사용 가능. 렌더가 없는 스킨은 생략 |
 | `voice` | 외형별 버스트 대사·음성. `burst`(컷신 대사)·`ready`(준비)·`full`(풀버스트) 슬롯에 각각 `{ text, audio }` (한국어). 상세 파일을 읽는 경로에서만 제공되며 목록 응답에는 없음. 없는 대사는 `null` |
 
 같은 필드는 캐릭터 목록·상세, `/api/nikkes/:id/spine`, 코스튬 목록·상세에서도 제공됩니다. MCP는 `get_nikke_burst` 또는 `get_nikke`의 `include: ["burstCutscene"]`로 조회합니다. 후자는 기본 외형만 추가하며 코스튬까지 필요하면 `"costumes"`도 추가합니다.
@@ -355,6 +357,17 @@ GET /api/nikkes/511/burst?lang=ko
 기존 `atlas`·`skeleton`·`textures[].url`은 외부 원본 URL입니다. 외부 R2의 CORS는 ArtHub Origin만 허용하므로 자체 뷰어는 `/burst-assets/<revision>/<id>/<파일명>`으로 카탈로그의 파일만 중계합니다. 임의 URL·미등록 파일은 받지 않으며, 성공 응답은 기존 API 엣지 캐시를 사용하고 실패는 캐시하지 않습니다. `source.viewerUrl`은 단일 원본 트랙을 확인할 때 사용합니다.
 
 자료는 [ArtHub](https://github.com/Talors1225/arthub-viewer-web)의 공개 URL 목록을 검증해 수동 갱신합니다. 게임 전체 컷신의 완전한 목록은 아닙니다. 코스튬 전용 컷신이 없으면 기본 외형의 컷신을 반환하고, 기본 외형도 미수록이면 `null`을 반환합니다. 미수록이라고 해서 게임 안에 컷신이 없다는 뜻은 아닙니다. 영상·음성 합본이 아닌 시각 애니메이션 리소스입니다. 버스트 관련 대사·음성은 `voice`로 제공하고, 나머지 음성은 `details.voices`를 별도로 사용합니다. 외부 호스트의 파일 삭제·주소 변경·CORS 정책은 이 API가 보장하지 않습니다. [수록 범위와 갱신 방법](https://github.com/leegunwoooo/nikke-api/blob/main/content/burst-cutscenes/README.md).
+
+## GET /api/nikkes/:id/burst.gif
+
+미리 렌더된 버스트 컷신 GIF로 바로 리다이렉트합니다 — `?skin=`에 코스튬 `skinIndex`(미지정 시 0=기본 외형).
+
+```http
+GET /api/nikkes/라피/burst.gif          # → 302 …/burst-gif/10_0.gif
+GET /api/nikkes/라피/burst.gif?skin=1   # → 302 …/burst-gif/10_1.gif
+```
+
+`scripts/render-burst-gifs.ts`가 뷰어와 같은 방식(레이어별 Skeleton·공통 타임라인)으로 렌더합니다 — 배경·메인·오버레이가 합성된 전체 컷신이며 캐릭터가 중간에 등장하는 컷신도 앞부분 배경 장면이 그대로 재생됩니다. 렌더가 없는 스킨이면 404, `skin`이 정수가 아니면 400, gif 매니페스트를 읽지 못하는 짧은 창에는 503입니다. MCP의 `api_get`으로 호출하면 `{ "redirect": "<url>" }`이 반환됩니다.
 
 ## GET /api/nikkes/:id/spine
 

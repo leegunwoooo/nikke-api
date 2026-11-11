@@ -109,7 +109,7 @@ const NIKKE_EXTRA = {
 // routes api_get may reach — the rest have dedicated tools, and /api/user
 // (live upstream calls) stays closed; /api/tables is allowed but big raw
 // tables need ?limit/offset to fit a tool response
-const API_GET_ALLOWED = /^\/api\/(stages|costumes|equips|avatars|cubes|meta|cdn|tables|archives|nikkes\/[^/?]+\/(spine|spine\.gif|burst))(\/|\?|$)/;
+const API_GET_ALLOWED = /^\/api\/(stages|costumes|equips|avatars|cubes|meta|cdn|tables|archives|nikkes\/[^/?]+\/(spine|spine\.gif|burst|burst\.gif))(\/|\?|$)/;
 
 const READ_ONLY = { readOnlyHint: true, idempotentHint: true, openWorldHint: false } as const;
 // live account data — upstream game API calls through the server's
@@ -602,7 +602,7 @@ export function buildServer(api: Fetcher, version: string, origin = "", boundBla
     "get_nikke_burst",
     {
       title: "Burst cutscene assets and viewer",
-      description: "Burst skill cutscene visual assets for a character and every costume: Spine atlas, skeleton, all texture pages, runtime version, animation tracks and playback.layers. voice.burst/ready/full hold the skin's burst-related lines — Korean text and audio URL (the viewer plays voice.burst alongside the cutscene). viewerUrl plays the whole cutscene with background and character synchronized. Prefer an authored combined animation; otherwise render independent skeleton instances in layer order using the same camera and time, not multiple tracks on one skeleton. source.viewerUrl retains the original ArtHub viewer. Raw external asset URLs retain the source host's CORS policy. Costumes without a dedicated cutscene fall back to the base appearance's; null only when the character has none at all. Non-burst voice lines are separate (get_nikke include voices). Exact names win; ambiguous partial names return candidates.",
+      description: "Burst skill cutscene visual assets for a character and every costume: Spine atlas, skeleton, all texture pages, runtime version, animation tracks and playback.layers. gif {url, bytes} is a pre-rendered cutscene GIF on jsDelivr usable directly in <img> (absent for unrendered skins). voice.burst/ready/full hold the skin's burst-related lines — Korean text and audio URL (the viewer plays voice.burst alongside the cutscene). viewerUrl plays the whole cutscene with background and character synchronized. Prefer an authored combined animation; otherwise render independent skeleton instances in layer order using the same camera and time, not multiple tracks on one skeleton. source.viewerUrl retains the original ArtHub viewer. Raw external asset URLs retain the source host's CORS policy. Costumes without a dedicated cutscene fall back to the base appearance's; null only when the character has none at all. Non-burst voice lines are separate (get_nikke include voices). Exact names win; ambiguous partial names return candidates.",
       inputSchema: z.object({ nameOrId: z.string().min(1).describe("Character name (any language), id or resourceId"), lang: LANG }),
       annotations: READ_ONLY,
     },
@@ -693,7 +693,7 @@ export function buildServer(api: Fetcher, version: string, origin = "", boundBla
     {
       title: "Call another read endpoint",
       description:
-        "GET the endpoints without a dedicated tool: /api/stages (?chapter=&mode=), /api/stages/:id, /api/costumes (?nikke=&grade=), /api/costumes/:id, /api/equips, /api/equips/options, /api/cubes, /api/avatars, /api/meta/filters, /api/archives (?type=, in-game record-room hierarchy), /api/tables and /api/tables/:file (raw synced tables — tower_list, stage_list, CharacterLevelTable etc.; page big ones with ?limit=&offset=), /api/nikkes/:id/spine (asset urls; stand.gif = pre-rendered lobby idle gif) and /api/nikkes/:id/spine.gif?skin=&anim= (idle=로비 대기, action=터치 리액션; comes back as a {redirect} to the jsDelivr file). Add lang=ko to flatten names. See /openapi.json for parameters.",
+        "GET the endpoints without a dedicated tool: /api/stages (?chapter=&mode=), /api/stages/:id, /api/costumes (?nikke=&grade=), /api/costumes/:id, /api/equips, /api/equips/options, /api/cubes, /api/avatars, /api/meta/filters, /api/archives (?type=, in-game record-room hierarchy), /api/tables and /api/tables/:file (raw synced tables — tower_list, stage_list, CharacterLevelTable etc.; page big ones with ?limit=&offset=), /api/nikkes/:id/spine (asset urls; stand.gif = pre-rendered lobby idle gif) and /api/nikkes/:id/spine.gif?skin=&anim= (idle=로비 대기, action=터치 리액션) and /api/nikkes/:id/burst.gif?skin= (pre-rendered burst cutscene; both come back as a {redirect} to the jsDelivr file). Add lang=ko to flatten names. See /openapi.json for parameters.",
       inputSchema: z.object({
         path: z.string().startsWith("/api/").describe("Path with query string, e.g. /api/stages?chapter=1&lang=ko"),
       }),

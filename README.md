@@ -110,7 +110,8 @@ GET /api/user/<blablaid>/nikke/아니스               # 부분 일치 → 매�
 |------------|------|
 | `GET /api/nikkes` | 캐릭터 목록 — `?q=` 이름 검색(전 언어 부분 일치), `?family=` 이격 포함 확장 검색, `?element=` `?class=` `?burst=` `?corporation=` `?weapon=` `?rarity=` 필터 (AND 결합), `?limit=`/`?offset=`/`?page=` 페이지네이션 (미지정 시 전체, 최대 500, `limit=0`은 400 — `count`는 잘라내기 전 전체 개수). 공백뿐인 `?q=`는 결과 없음 |
 | `GET /api/nikkes/:id` | 캐릭터 상세 — 스킬/스탯/배경/CV/보이스 등 `details` 포함. `:id`는 캐릭터 ID·resourceId·이름(부분 일치) 모두 가능 |
-| `GET /api/nikkes/:id/burst` | 버스트 컷신 리소스·뷰어 링크 — 기본 외형과 각 코스튬. 정확한 이름 우선, 복수 부분 일치 시 후보 목록 |
+| `GET /api/nikkes/:id/burst` | 버스트 컷신 리소스·뷰어 링크 — 기본 외형과 각 코스튬. `burstCutscene.gif`에 미리 렌더된 컷신 GIF(jsDelivr). 정확한 이름 우선, 복수 부분 일치 시 후보 목록 |
+| `GET /api/nikkes/:id/burst.gif` | 버스트 컷신 GIF로 302 리다이렉트 — `?skin=` 코스튬 선택 |
 | `GET /api/nikkes/:id/spine` | 스탠딩·사격·엄폐 Spine 리소스와 `burstCutscene` — 기본 외형과 각 코스튬. `stand.gif`/`stand.gifs`에 미리 렌더된 로비 애니메이션 GIF 링크(jsDelivr) |
 | `GET /api/nikkes/:id/spine.gif` | 로비 애니메이션 GIF로 302 리다이렉트 — `?skin=` 코스튬 선택, `?anim=` 애니메이션(`idle` 대기, `action` 터치 리액션) |
 | `GET /api/scenes` | 씬 목록 — `?category=`(`main`/`event`/`sudden`/`attractive`/`favorite`/`library`) `?nikke=` `?q=` `?limit=`/`?offset=`/`?page=` |

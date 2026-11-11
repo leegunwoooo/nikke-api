@@ -187,22 +187,21 @@ const getCubes = lazyIndex<{ id: number; rare?: string; name: Record<string, str
 const MEDIA_BASE = "https://cdn.jsdelivr.net/gh/leegunwoooo/nikke-api-media@";
 type GifEntry = { bytes: number; ref?: string };
 type GifManifest = Record<string, GifEntry>;
-let gifManifestCache: { at: number; p: Promise<GifManifest> } | undefined;
-// TTL-bound: the manifest changes whenever media re-renders, but the app's
+// TTL-bound: manifests change whenever media re-renders, but the app's
 // data-stamp watch only covers characters.json — without this a warm isolate
 // would serve the pre-render manifest forever. Read errors propagate so the
-// spine.gif route can answer 503 instead of "no gif for this skin".
+// *.gif routes can answer 503 instead of "no gif for this skin".
 const GIF_MANIFEST_TTL = 300_000;
-const getGifManifest = () => {
-  if (!gifManifestCache || Date.now() - gifManifestCache.at > GIF_MANIFEST_TTL)
-    gifManifestCache = {
-      at: Date.now(),
-      p: storage.readJson<GifManifest>("spine-gif-manifest.json"),
-    };
-  return gifManifestCache.p.catch(
-    (e) => ((gifManifestCache = undefined), Promise.reject(e)),
-  );
+const gifManifestLoader = (file: string) => {
+  let cache: { at: number; p: Promise<GifManifest> } | undefined;
+  return () => {
+    if (!cache || Date.now() - cache.at > GIF_MANIFEST_TTL)
+      cache = { at: Date.now(), p: storage.readJson<GifManifest>(file) };
+    return cache.p.catch((e) => ((cache = undefined), Promise.reject(e)));
+  };
 };
+const getGifManifest = gifManifestLoader("spine-gif-manifest.json");
+const getBurstGifManifest = gifManifestLoader("burst-gif-manifest.json");
 // urls are pinned to the media commit recorded in the manifest — @main would
 // hand browsers a 7-day cache of stale renders after every re-render push
 const gifBase = (m: GifManifest) => MEDIA_BASE + (m["version"]?.ref ?? "main");
@@ -223,6 +222,31 @@ const spineGifs = (m: GifManifest, resourceId: number, skinIndex: number) => {
   }
   return Object.keys(gifs).length ? gifs : undefined;
 };
+const burstGif = (m: GifManifest, resourceId: number, skinIndex: number) => {
+  const e = m[`${resourceId}_${skinIndex}`];
+  return e ? { url: `${gifBase(m)}/burst-gif/${resourceId}_${skinIndex}.gif`, bytes: e.bytes } : undefined;
+};
+const withBurstGif = <T extends object | null | undefined>(
+  burst: T, m: GifManifest, resourceId: number, skinIndex: number,
+): T => (burst ? ({ ...burst, gif: burstGif(m, resourceId, skinIndex) } as T) : burst);
+// every burstCutscene a character-shaped object would serialize gets its gif —
+// keeps /api/nikkes and /api/nikkes/:id consistent with the /burst route
+const wantsBurstGif = (fields: string[] | undefined) =>
+  !fields || fields.some((f) => f === "burstCutscene" || f === "costumes" || f.startsWith("costumes."));
+const withBurstGifs = <T extends { burstCutscene?: any; costumes?: any[] }>(
+  o: T, m: GifManifest, resourceId: number,
+): T => ({
+  ...o,
+  ...(o.burstCutscene !== undefined ? { burstCutscene: withBurstGif(o.burstCutscene, m, resourceId, 0) } : {}),
+  ...(o.costumes
+    ? {
+        costumes: o.costumes.map((co: any) => ({
+          ...co,
+          burstCutscene: withBurstGif(co.burstCutscene ?? null, m, resourceId, co.skinIndex),
+        })),
+      }
+    : {}),
+});
 
 
 // --- profile normalization helpers ---
@@ -607,8 +631,9 @@ app.get("/", (c) =>
       "GET /api/events/:id/script": "whole event script, episode by episode ('speaker: text')",
       "GET /api/lines": "dialogue search; q (text) and/or speaker, family, category; 50 per page by default",
       "GET /api/nikkes/:id/spine": "Spine animation asset URLs (stand/aim/cover) and burstCutscene, per costume; stand.gif points to a pre-rendered lobby idle gif",
-      "GET /api/nikkes/:id/spine.gif?skin=": "302 redirect to the pre-rendered lobby idle gif on jsDelivr",
-      "GET /api/nikkes/:id/burst": "Burst cutscene asset URLs and viewer links (base and exact costumes; missing = null)",
+      "GET /api/nikkes/:id/spine.gif?skin=&anim=": "302 redirect to a pre-rendered lobby animation gif on jsDelivr (idle, action)",
+      "GET /api/nikkes/:id/burst": "Burst cutscene asset URLs, viewer links and pre-rendered gif links (base and exact costumes; missing = null)",
+      "GET /api/nikkes/:id/burst.gif?skin=": "302 redirect to the pre-rendered burst cutscene gif on jsDelivr",
       "GET /api/nikkes/:id/appearances": "scenes and events a character speaks in (all versions)",
       "GET /api/story/route": "story reading order (community guide)",
       "GET /api/story/next": "next stories on the route; chapter|after, done, required",
@@ -651,7 +676,7 @@ app.get("/", (c) =>
   }),
 );
 
-app.get("/api/nikkes", (c) => {
+app.get("/api/nikkes", async (c) => {
   const { q, element, class: cls, burst, corporation, weapon, rarity, limit, offset } = c.req.query();
   let list = characters;
   if (q) list = findByName(q);
@@ -670,11 +695,14 @@ app.get("/api/nikkes", (c) => {
   const total = list.length;
   const pg = pageQuery(c, total);
   if ("error" in pg) return c.json({ error: pg.error }, 400);
+  const fields = fieldsOf(c);
+  const bgm = wantsBurstGif(fields) ? await getBurstGifManifest().catch(() => null) : null;
+  const rows = list.slice(pg.off, pg.off + pg.lim);
   return c.json({
     count: total,
     offset: pg.off,
     ...(pg.page ? { page: pg.page, totalPages: Math.ceil(total / pg.lim) } : {}),
-    characters: pickFields(list.slice(pg.off, pg.off + pg.lim), fieldsOf(c)),
+    characters: pickFields(bgm ? rows.map((x) => withBurstGifs(x, bgm, x.resourceId)) : rows, fields),
   });
 });
 
@@ -682,9 +710,11 @@ app.get("/api/nikkes/:id", async (c) => {
   const key = c.req.param("id");
   const fields = fieldsOf(c);
   const needDetail = !fields || fields.some((f) => f === "details" || f.startsWith("details."));
+  const bgm = wantsBurstGif(fields) ? await getBurstGifManifest().catch(() => null) : null;
   const one = async (n: Nikke) => {
     const d = needDetail ? ((await withDetail(n)) as object) : (n as object);
-    return c.json(pickFields({ ...d, family: families.view(families.of(n)) }, fields));
+    const out = bgm ? withBurstGifs(d as { burstCutscene?: any; costumes?: any[] }, bgm, n.resourceId) : d;
+    return c.json(pickFields({ ...out, family: families.view(families.of(n)) }, fields));
   };
   if (/^\d+$/.test(key)) {
     const n = Number(key);
@@ -693,7 +723,11 @@ app.get("/api/nikkes/:id", async (c) => {
   }
   const hits = findByName(key);
   if (hits.length === 1) return one(hits[0]);
-  if (hits.length > 1) return c.json({ count: hits.length, characters: pickFields(hits, fields) });
+  if (hits.length > 1)
+    return c.json({
+      count: hits.length,
+      characters: pickFields(bgm ? hits.map((x) => withBurstGifs(x, bgm, x.resourceId)) : hits, fields),
+    });
   return c.json({ error: "not found" }, 404);
 });
 
@@ -1055,6 +1089,7 @@ app.get("/api/nikkes/:id/spine", async (c) => {
   if (!found) return c.json({ error: "not found" }, 404);
   const n = withBurstVoices(found, await getDetail(found.id) as { voices?: DetailVoice[] } | null);
   const gm = await getGifManifest().catch(() => ({} as GifManifest));
+  const bgm = await getBurstGifManifest().catch(() => ({} as GifManifest));
   const withGif = (sp: Nikke["spine"], skinIndex: number) =>
     sp?.stand
       ? { ...sp, stand: { ...sp.stand, gif: spineGif(gm, n.resourceId, skinIndex), gifs: spineGifs(gm, n.resourceId, skinIndex) } }
@@ -1064,13 +1099,13 @@ app.get("/api/nikkes/:id/spine", async (c) => {
     resourceId: n.resourceId,
     name: n.name,
     spine: withGif(n.spine, 0) ?? null,
-    burstCutscene: n.burstCutscene ?? null,
+    burstCutscene: withBurstGif(n.burstCutscene ?? null, bgm, n.resourceId, 0),
     costumes: n.costumes.map((co) => ({
       id: co.id,
       skinIndex: co.skinIndex,
       name: co.name,
       spine: withGif(co.spine, co.skinIndex) ?? null,
-      burstCutscene: co.burstCutscene ?? null,
+      burstCutscene: withBurstGif(co.burstCutscene ?? null, bgm, n.resourceId, co.skinIndex),
     })),
   });
 });
@@ -1092,18 +1127,34 @@ app.get("/api/nikkes/:id/spine.gif", async (c) => {
   return c.redirect(g.url, 302);
 });
 
+// Pre-rendered burst cutscene gif — same story as spine.gif: bytes live on
+// jsDelivr (nikke-api-media/burst-gif), the API only redirects.
+app.get("/api/nikkes/:id/burst.gif", async (c) => {
+  const key = c.req.param("id");
+  const found = /^\d+$/.test(key) ? byId.get(Number(key)) ?? byResourceId.get(Number(key)) : findByName(key)[0];
+  if (!found) return c.json({ error: "not found" }, 404);
+  const skin = Number(c.req.query("skin") ?? "0");
+  if (!Number.isInteger(skin) || skin < 0) return c.json({ error: "invalid skin" }, 400);
+  const bgm = await getBurstGifManifest().catch(() => null);
+  if (!bgm) return c.json({ error: "gif manifest unavailable — retry shortly" }, 503);
+  const g = burstGif(bgm, found.resourceId, skin);
+  if (!g) return c.json({ error: "no rendered gif for this skin" }, 404);
+  return c.redirect(g.url, 302);
+});
+
 app.get("/api/nikkes/:id/burst", async (c) => {
   const key = c.req.param("id");
   const hit = /^\d+$/.test(key) ? byId.get(Number(key)) ?? byResourceId.get(Number(key)) : undefined;
   const hits = hit ? [hit] : findByName(key);
   const exact = hits.find(n => Object.values(n.name).some(name => norm(name) === norm(key)));
+  const bgm = await getBurstGifManifest().catch(() => ({} as GifManifest));
   const voiced = async (n: Nikke) => withBurstVoices(n, await getDetail(n.id) as { voices?: DetailVoice[] } | null);
   const row = (n: Nikke) => ({
     id: n.id,
     resourceId: n.resourceId,
     name: n.name,
-    burstCutscene: n.burstCutscene ?? null,
-    costumes: n.costumes.map(co => ({ id: co.id, skinIndex: co.skinIndex, name: co.name, burstCutscene: co.burstCutscene ?? null })),
+    burstCutscene: withBurstGif(n.burstCutscene ?? null, bgm, n.resourceId, 0),
+    costumes: n.costumes.map(co => ({ id: co.id, skinIndex: co.skinIndex, name: co.name, burstCutscene: withBurstGif(co.burstCutscene ?? null, bgm, n.resourceId, co.skinIndex) })),
   });
   if (exact || hits.length === 1) return c.json(pickFields(row(await voiced(exact ?? hits[0])), fieldsOf(c)));
   if (hits.length > 1) return c.json({ count: hits.length, characters: pickFields(await Promise.all(hits.map(async n => row(await voiced(n)))), fieldsOf(c)) });
