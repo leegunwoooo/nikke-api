@@ -29564,7 +29564,7 @@ var CREDS_KEY = "bla:creds";
 var HDR_CREDS = "x-bla-creds";
 var HDR_BLABLAID = "x-registered-blablaid";
 var edgeCache = caches.default;
-var BUILD_ID = false ? void 0 : "787f01c11476";
+var BUILD_ID = false ? void 0 : "45900ae5da23";
 var DATA_HOST = "https://nikke-api-data.pages.dev";
 var REVALIDATE_MS = 3e5;
 var appPromise;
@@ -29808,8 +29808,9 @@ var index_default = {
         url2.searchParams.delete("fields");
         if (v2) url2.searchParams.set("fields", v2);
       }
-      const dv = await dataVersionOf(env);
-      const v = [dv, BUILD_ID].filter(Boolean).join("|");
+      const pinned = url2.pathname.startsWith("/burst-assets/");
+      const dv = pinned ? null : await dataVersionOf(env);
+      const v = pinned ? "" : [dv, BUILD_ID].filter(Boolean).join("|");
       const keyUrl = new URL(url2);
       if (v) keyUrl.searchParams.set("__v", v);
       key2 = new Request(keyUrl.toString());
