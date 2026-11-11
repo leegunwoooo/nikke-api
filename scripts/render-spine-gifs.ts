@@ -12,7 +12,8 @@
 // Prefers the `idle` track; falls back to idle_02/idle_half, then the
 // first animation in the skeleton.
 
-import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
+import { mkdirSync, readdirSync, readFileSync, statSync, writeFileSync } from "node:fs";
+import { execSync } from "node:child_process";
 import { join } from "node:path";
 import { createCanvas, loadImage } from "@napi-rs/canvas";
 import * as spine from "@esotericsoftware/spine-canvas";
@@ -20,10 +21,13 @@ import gifenc from "gifenc";
 import nodeWebpmux from "node-webpmux";
 const { Image } = nodeWebpmux;
 const { GIFEncoder, quantize, applyPalette } = gifenc;
+type GifManifest = Record<string, { bytes: number; ref?: string }>;
 
 const arg = (name: string, dflt?: string) => {
   const i = process.argv.indexOf(`--${name}`);
-  return i >= 0 ? process.argv[i + 1] : dflt;
+  if (i < 0) return dflt;
+  const v = process.argv[i + 1];
+  return v === undefined || v.startsWith("--") ? "1" : v;
 };
 const SIZE = Number(arg("size", "384"));
 const FPS = Number(arg("fps", "20"));
@@ -155,15 +159,43 @@ async function renderAnim(data: spine.SkeletonData, animName: string): Promise<U
   return new Uint8Array(webp);
 }
 
+// stamp the media repo's HEAD commit so the API can pin gif urls to an
+// immutable @<sha> — @main urls get 7-day browser caching and serve stale
+// renders long after a fix is pushed
+const mediaRef = () => {
+  try {
+    return execSync(`git -C "${join(OUT_DIR, "..")}" rev-parse HEAD`, { stdio: ["ignore", "pipe", "ignore"] })
+      .toString().trim();
+  } catch { return undefined; }
+};
+const stampVersion = (m: GifManifest) => {
+  const ref = mediaRef();
+  if (ref) m["version"] = { bytes: 0, ref };
+  return m;
+};
+
 // `--merge N`: merge part manifests written by `--shard k/N` runs, then exit
 if (arg("merge")) {
   const parts = Number(arg("merge"));
-  const merged: Record<string, { bytes: number }> = {};
+  const merged: GifManifest = {};
   for (let k = 0; k < parts; k++)
     Object.assign(merged, JSON.parse(readFileSync(`${MANIFEST}.part${k}`, "utf8")));
   mkdirSync(join("data", "dist"), { recursive: true });
-  writeFileSync(MANIFEST, JSON.stringify(merged));
+  writeFileSync(MANIFEST, JSON.stringify(stampVersion(merged)));
   console.log(`merged ${parts} parts → ${MANIFEST} (${Object.keys(merged).length} entries)`);
+  process.exit(0);
+}
+
+// `--resync`: rebuild the manifest from the files actually in OUT_DIR (fixes
+// drift after manual pushes) and stamp the media repo commit, then exit
+if (arg("resync")) {
+  const m: GifManifest = {};
+  for (const f of readdirSync(OUT_DIR))
+    if (f.endsWith(`.${FORMAT}`))
+      m[f.slice(0, -(FORMAT.length + 1))] = { bytes: statSync(join(OUT_DIR, f)).size };
+  mkdirSync(join("data", "dist"), { recursive: true });
+  writeFileSync(MANIFEST, JSON.stringify(stampVersion(m)));
+  console.log(`resynced → ${MANIFEST} (${Object.keys(m).length} entries)`);
   process.exit(0);
 }
 
@@ -185,11 +217,11 @@ mkdirSync(OUT_DIR, { recursive: true });
 const manifestPath = SHARD[1] === 1 ? MANIFEST : `${MANIFEST}.part${SHARD[0]}`;
 // a partial (--only/--rid) run updates the shared manifest instead of
 // replacing it, so unrelated entries survive a re-render
-const loadManifest = (): Record<string, { bytes: number }> => {
+const loadManifest = (): GifManifest => {
   try { return JSON.parse(readFileSync(MANIFEST, "utf8")); }
   catch { return {}; }
 };
-const manifest: Record<string, { bytes: number }> =
+const manifest: GifManifest =
   (ONLY || RID) && SHARD[1] === 1 ? loadManifest() : {};
 let done = 0, failed = 0;
 for (const j of shardJobs) {
@@ -217,6 +249,6 @@ for (const j of shardJobs) {
   }
 }
 mkdirSync(join("data", "dist"), { recursive: true });
-writeFileSync(manifestPath, JSON.stringify(manifest));
+writeFileSync(manifestPath, JSON.stringify(SHARD[1] === 1 ? stampVersion(manifest) : manifest));
 console.log(`done ${done} ok / ${failed} failed → ${OUT_DIR}`);
 if (SHARD[1] !== 1) console.log(`manifest part → ${manifestPath} (merge with other shards before use)`);

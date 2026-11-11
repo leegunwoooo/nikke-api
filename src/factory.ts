@@ -184,8 +184,9 @@ const getCubes = lazyIndex<{ id: number; rare?: string; name: Record<string, str
 // pre-rendered lobby idle animations live in the nikke-api-media repo and
 // are served through jsDelivr — the API only needs the manifest to know
 // which "<resourceId>_<skinIndex>" files exist
-const MEDIA_BASE = "https://cdn.jsdelivr.net/gh/leegunwoooo/nikke-api-media@main";
-type GifManifest = Record<string, { bytes: number }>;
+const MEDIA_BASE = "https://cdn.jsdelivr.net/gh/leegunwoooo/nikke-api-media@";
+type GifEntry = { bytes: number; ref?: string };
+type GifManifest = Record<string, GifEntry>;
 let gifManifestCache: Promise<GifManifest> | undefined;
 // propagates read errors: the spine.gif route turns them into 503 so a
 // deploy-order gap (worker before the manifest file) isn't mistaken for
@@ -194,19 +195,23 @@ const getGifManifest = () =>
   (gifManifestCache ??= storage
     .readJson<GifManifest>("spine-gif-manifest.json")
     .catch((e) => ((gifManifestCache = undefined), Promise.reject(e))));
+// urls are pinned to the media commit recorded in the manifest — @main would
+// hand browsers a 7-day cache of stale renders after every re-render push
+const gifBase = (m: GifManifest) => MEDIA_BASE + (m["version"]?.ref ?? "main");
 const spineGif = (m: GifManifest, resourceId: number, skinIndex: number, anim = "idle") => {
   const key = anim === "idle" ? `${resourceId}_${skinIndex}` : `${resourceId}_${skinIndex}_${anim}`;
   const e = m[key];
-  return e ? { url: `${MEDIA_BASE}/spine-gif/${key}.gif`, bytes: e.bytes } : undefined;
+  return e ? { url: `${gifBase(m)}/spine-gif/${key}.gif`, bytes: e.bytes } : undefined;
 };
 // every rendered animation for one skin, keyed by anim name ("idle" for the
 // plain <rid>_<skin> file — the rest carry a _<anim> suffix)
 const spineGifs = (m: GifManifest, resourceId: number, skinIndex: number) => {
   const base = `${resourceId}_${skinIndex}`;
+  const urlBase = gifBase(m);
   const gifs: Record<string, { url: string; bytes: number }> = {};
   for (const [k, e] of Object.entries(m)) {
     const anim = k === base ? "idle" : k.startsWith(`${base}_`) ? k.slice(base.length + 1) : undefined;
-    if (anim) gifs[anim] = { url: `${MEDIA_BASE}/spine-gif/${k}.gif`, bytes: e.bytes };
+    if (anim) gifs[anim] = { url: `${urlBase}/spine-gif/${k}.gif`, bytes: e.bytes };
   }
   return Object.keys(gifs).length ? gifs : undefined;
 };

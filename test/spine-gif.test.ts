@@ -13,7 +13,9 @@ const json = async (url: string) => {
   return res.json() as Promise<any>;
 };
 
-const GIF_BASE = "https://cdn.jsdelivr.net/gh/leegunwoooo/nikke-api-media@main/spine-gif";
+// the fixture manifest pins @deadbeef — urls must follow the recorded media
+// commit, not @main, so jsDelivr's 7-day cache can't serve stale renders
+const GIF_BASE = "https://cdn.jsdelivr.net/gh/leegunwoooo/nikke-api-media@deadbeef/spine-gif";
 
 // must run before any successful manifest read: a missing manifest is an
 // unavailable dependency, not "no gif for this skin" (deploy-order gap)

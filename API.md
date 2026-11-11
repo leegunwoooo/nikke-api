@@ -386,7 +386,7 @@ GET /api/nikkes/라피/spine
 | `idle` | 로비 대기 모션 |
 | `action` | 로비 터치 리액션 |
 
-GIF는 [nikke-api-media](https://github.com/leegunwoooo/nikke-api-media) 저장소에 있는 파일이고 jsDelivr가 서빙하므로 `<img>`에 바로 쓸 수 있습니다. `scripts/render-spine-gifs.ts`가 생성하며, 아직 렌더가 없는 스킨은 `gif`/`gifs` 키가 빠집니다.
+GIF는 [nikke-api-media](https://github.com/leegunwoooo/nikke-api-media) 저장소에 있는 파일이고 jsDelivr가 서빙하므로 `<img>`에 바로 쓸 수 있습니다. URL은 렌더를 올린 미디어 커밋에 고정(`@<sha>`) — 재렌더가 푸시되면 매니페스트와 함께 새 URL이 나가므로 jsDelivr의 7일 브라우저 캐시에 옛 파일이 남는 일이 없습니다. `scripts/render-spine-gifs.ts`가 생성하며, 아직 렌더가 없는 스킨은 `gif`/`gifs` 키가 빠집니다.
 
 ## GET /api/nikkes/:id/spine.gif
 

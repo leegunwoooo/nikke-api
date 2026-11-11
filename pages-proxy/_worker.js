@@ -27434,20 +27434,22 @@ async function createApp(storage, options = {}) {
   const getCubes = lazyIndex(
     "cubes.json"
   );
-  const MEDIA_BASE = "https://cdn.jsdelivr.net/gh/leegunwoooo/nikke-api-media@main";
+  const MEDIA_BASE = "https://cdn.jsdelivr.net/gh/leegunwoooo/nikke-api-media@";
   let gifManifestCache;
   const getGifManifest = () => gifManifestCache ??= storage.readJson("spine-gif-manifest.json").catch((e) => (gifManifestCache = void 0, Promise.reject(e)));
+  const gifBase = (m) => MEDIA_BASE + (m["version"]?.ref ?? "main");
   const spineGif = (m, resourceId, skinIndex, anim = "idle") => {
     const key2 = anim === "idle" ? `${resourceId}_${skinIndex}` : `${resourceId}_${skinIndex}_${anim}`;
     const e = m[key2];
-    return e ? { url: `${MEDIA_BASE}/spine-gif/${key2}.gif`, bytes: e.bytes } : void 0;
+    return e ? { url: `${gifBase(m)}/spine-gif/${key2}.gif`, bytes: e.bytes } : void 0;
   };
   const spineGifs = (m, resourceId, skinIndex) => {
     const base = `${resourceId}_${skinIndex}`;
+    const urlBase = gifBase(m);
     const gifs = {};
     for (const [k, e] of Object.entries(m)) {
       const anim = k === base ? "idle" : k.startsWith(`${base}_`) ? k.slice(base.length + 1) : void 0;
-      if (anim) gifs[anim] = { url: `${MEDIA_BASE}/spine-gif/${k}.gif`, bytes: e.bytes };
+      if (anim) gifs[anim] = { url: `${urlBase}/spine-gif/${k}.gif`, bytes: e.bytes };
     }
     return Object.keys(gifs).length ? gifs : void 0;
   };
@@ -29176,7 +29178,7 @@ var CREDS_KEY = "bla:creds";
 var HDR_CREDS = "x-bla-creds";
 var HDR_BLABLAID = "x-registered-blablaid";
 var edgeCache = caches.default;
-var BUILD_ID = false ? void 0 : "36a6baf3f14a";
+var BUILD_ID = false ? void 0 : "0f0253257930";
 var DATA_HOST = "https://nikke-api-data.pages.dev";
 var REVALIDATE_MS = 3e5;
 var appPromise;
