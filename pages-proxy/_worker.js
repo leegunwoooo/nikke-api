@@ -27436,7 +27436,17 @@ async function createApp(storage, options = {}) {
   );
   const MEDIA_BASE = "https://cdn.jsdelivr.net/gh/leegunwoooo/nikke-api-media@";
   let gifManifestCache;
-  const getGifManifest = () => gifManifestCache ??= storage.readJson("spine-gif-manifest.json").catch((e) => (gifManifestCache = void 0, Promise.reject(e)));
+  const GIF_MANIFEST_TTL = 3e5;
+  const getGifManifest = () => {
+    if (!gifManifestCache || Date.now() - gifManifestCache.at > GIF_MANIFEST_TTL)
+      gifManifestCache = {
+        at: Date.now(),
+        p: storage.readJson("spine-gif-manifest.json")
+      };
+    return gifManifestCache.p.catch(
+      (e) => (gifManifestCache = void 0, Promise.reject(e))
+    );
+  };
   const gifBase = (m) => MEDIA_BASE + (m["version"]?.ref ?? "main");
   const spineGif = (m, resourceId, skinIndex, anim = "idle") => {
     const key2 = anim === "idle" ? `${resourceId}_${skinIndex}` : `${resourceId}_${skinIndex}_${anim}`;
@@ -29178,7 +29188,7 @@ var CREDS_KEY = "bla:creds";
 var HDR_CREDS = "x-bla-creds";
 var HDR_BLABLAID = "x-registered-blablaid";
 var edgeCache = caches.default;
-var BUILD_ID = false ? void 0 : "0f0253257930";
+var BUILD_ID = false ? void 0 : "cd99dc7b81a1";
 var DATA_HOST = "https://nikke-api-data.pages.dev";
 var REVALIDATE_MS = 3e5;
 var appPromise;

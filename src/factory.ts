@@ -187,14 +187,22 @@ const getCubes = lazyIndex<{ id: number; rare?: string; name: Record<string, str
 const MEDIA_BASE = "https://cdn.jsdelivr.net/gh/leegunwoooo/nikke-api-media@";
 type GifEntry = { bytes: number; ref?: string };
 type GifManifest = Record<string, GifEntry>;
-let gifManifestCache: Promise<GifManifest> | undefined;
-// propagates read errors: the spine.gif route turns them into 503 so a
-// deploy-order gap (worker before the manifest file) isn't mistaken for
-// "this skin has no gif". the /spine JSON route degrades instead
-const getGifManifest = () =>
-  (gifManifestCache ??= storage
-    .readJson<GifManifest>("spine-gif-manifest.json")
-    .catch((e) => ((gifManifestCache = undefined), Promise.reject(e))));
+let gifManifestCache: { at: number; p: Promise<GifManifest> } | undefined;
+// TTL-bound: the manifest changes whenever media re-renders, but the app's
+// data-stamp watch only covers characters.json — without this a warm isolate
+// would serve the pre-render manifest forever. Read errors propagate so the
+// spine.gif route can answer 503 instead of "no gif for this skin".
+const GIF_MANIFEST_TTL = 300_000;
+const getGifManifest = () => {
+  if (!gifManifestCache || Date.now() - gifManifestCache.at > GIF_MANIFEST_TTL)
+    gifManifestCache = {
+      at: Date.now(),
+      p: storage.readJson<GifManifest>("spine-gif-manifest.json"),
+    };
+  return gifManifestCache.p.catch(
+    (e) => ((gifManifestCache = undefined), Promise.reject(e)),
+  );
+};
 // urls are pinned to the media commit recorded in the manifest — @main would
 // hand browsers a 7-day cache of stale renders after every re-render push
 const gifBase = (m: GifManifest) => MEDIA_BASE + (m["version"]?.ref ?? "main");
