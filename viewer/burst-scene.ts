@@ -4,7 +4,7 @@ import type { BurstPlayback } from "../src/types.js";
 /** One playback operation for the whole cutscene. Poses must remain independent:
  * background animations explicitly hide character slots and vice versa. */
 export class BurstScene {
-  readonly layers: { skeleton: Skeleton; state: AnimationState; animation: string; transform?: [number, number, number] }[];
+  readonly layers: { skeleton: Skeleton; state: AnimationState; animation: string; role: "background" | "main" | "overlay"; transform?: [number, number, number] }[];
   readonly duration: number;
 
   constructor(data: SkeletonData, playback: BurstPlayback) {
@@ -17,7 +17,7 @@ export class BurstScene {
       if (skeleton.drawOrder.every(slot => !slot.attachment) && data.skins.length) {
         for (const skin of data.skins) skeleton.setSkin(skin);
       }
-      return { skeleton, state: new AnimationState(new AnimationStateData(data)), animation: layer.animation, transform: layer.transform };
+      return { skeleton, state: new AnimationState(new AnimationStateData(data)), animation: layer.animation, role: layer.role, transform: layer.transform };
     });
     this.seek(0);
   }
@@ -44,7 +44,7 @@ export class BurstScene {
 
   /** Fit the main scene, so a large backdrop does not shrink the character. */
   bounds() {
-    const skeleton = this.layers[this.layers.length - 1].skeleton;
+    const skeleton = (this.layers.find(l => l.role === "main") ?? this.layers[this.layers.length - 1]).skeleton;
     let minX = Infinity, minY = Infinity, maxX = -Infinity, maxY = -Infinity;
     const vertices: number[] = [];
     for (const slot of skeleton.drawOrder) {
