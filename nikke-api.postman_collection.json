@@ -1,7 +1,7 @@
 {
   "info": {
     "name": "nikke-api",
-    "description": "Unofficial NIKKE data API — https://github.com/leegunwoooo/nikke-api\n\n모든 엔드포인트에 공통으로 `lang`(ko|en|ja|zh-TW, 미지정 시 객체 전체)와 `fields`(응답 필드 선택, 쉼표 구분) 쿼리 파라미터를 사용할 수 있습니다.",
+    "description": "Unofficial NIKKE data API — https://github.com/leegunwoooo/nikke-api\n\n모든 엔드포인트에 공통으로 `lang`(ko|en|ja|zh-TW, 미지정 시 객체 전체)와 `fields`(응답 필드 선택, 쉼표 구분) 쿼리 파라미터를 사용할 수 있습니다 (302 리다이렉트인 /api/nikkes/:id/spine.gif 제외).",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
   },
   "variable": [
@@ -258,6 +258,52 @@
                   "key": "offset",
                   "value": "0",
                   "disabled": true
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "Spine 에셋 (로비 GIF 링크)",
+          "request": {
+            "method": "GET",
+            "description": "외형별 stand·aim·cover Spine 리소스 {atlas, skeleton, texture}와 burstCutscene. 각 stand.gif에 미리 렌더된 로비 idle GIF {url, bytes} — jsDelivr(nikke-api-media) 서빙, <img>에 바로 사용 가능. 렌더 없는 스킨은 gif 생략.",
+            "url": {
+              "raw": "{{baseUrl}}/api/nikkes/라피/spine",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "nikkes",
+                "라피",
+                "spine"
+              ]
+            }
+          }
+        },
+        {
+          "name": "로비 idle GIF",
+          "request": {
+            "method": "GET",
+            "description": "미리 렌더된 로비 idle GIF로 302 리다이렉트 — 캐릭터 ID·resourceId·이름 모두 가능",
+            "url": {
+              "raw": "{{baseUrl}}/api/nikkes/라피/spine.gif",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "nikkes",
+                "라피",
+                "spine.gif"
+              ],
+              "query": [
+                {
+                  "key": "skin",
+                  "value": "",
+                  "disabled": true,
+                  "description": "코스튬 skinIndex (미지정 시 0=기본 외형). 없는 스킨은 404"
                 }
               ]
             }
