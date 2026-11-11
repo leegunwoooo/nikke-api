@@ -177,8 +177,8 @@ const seek = (layers: SceneLayer[], t: number) => {
 
 const isMissing = (att: any) => att?.region?._missing === true;
 
-// visual bounds of the MAIN layer (last) — the viewer fits the main scene so
-// a large backdrop doesn't shrink the character
+// visual bounds of one layer's skeleton — unioned across all layers so the
+// background planes stay in frame instead of cropping to the character
 function measureBounds(skeleton: spine.Skeleton) {
   let minX = Infinity, minY = Infinity, maxX = -Infinity, maxY = -Infinity;
   for (const slot of skeleton.drawOrder) {
@@ -203,7 +203,9 @@ async function renderBurst(data: spine.SkeletonData, entry: BurstEntry): Promise
   const { layers, duration } = makeScene(data, entry);
   // characters often enter mid-cutscene (the first seconds can be bg-only),
   // so a single-timestamp bound may be empty or miss the widest pose — union
-  // the main layer's visible bounds across the whole timeline
+  // the main layer's visible bounds across the whole timeline. Background
+  // planes span tens of thousands of world units, so unioning them would
+  // shrink the character to a dot; they still draw inside the frame
   let minX = Infinity, minY = Infinity, maxX = -Infinity, maxY = -Infinity;
   for (let t = 0; t <= duration; t += 0.5) {
     seek(layers, t);
@@ -234,7 +236,10 @@ async function renderBurst(data: spine.SkeletonData, entry: BurstEntry): Promise
   const gif = GIFEncoder();
   for (let f = 0; f < frameCount; f++) {
     seek(layers, f / FPS);
-    hctx.clearRect(0, 0, SIZE * SS, SIZE * SS);
+    // burst is a cinematic, not a sticker — keep the scene background and
+    // letterbox what the cutscene itself doesn't cover (like the game does)
+    hctx.fillStyle = "#000";
+    hctx.fillRect(0, 0, SIZE * SS, SIZE * SS);
     hctx.save();
     hctx.translate((SIZE * SS) / 2, (SIZE * SS) / 2);
     hctx.scale(scale * SS, -scale * SS);
@@ -244,12 +249,13 @@ async function renderBurst(data: spine.SkeletonData, entry: BurstEntry): Promise
       renderer.draw(layer.skeleton);
     }
     hctx.restore();
-    ctx.clearRect(0, 0, SIZE, SIZE);
+    ctx.fillStyle = "#000";
+    ctx.fillRect(0, 0, SIZE, SIZE);
     ctx.drawImage(hi as any, 0, 0, SIZE, SIZE);
     const { data: rgba } = ctx.getImageData(0, 0, SIZE, SIZE);
-    const palette = quantize(rgba, 256, { format: "rgba4444" });
-    const index = applyPalette(rgba, palette, "rgba4444");
-    gif.writeFrame(index, SIZE, SIZE, { palette, delay, transparent: true, transparentIndex: 0 });
+    const palette = quantize(rgba, 256, { format: "rgb565" });
+    const index = applyPalette(rgba, palette, "rgb565");
+    gif.writeFrame(index, SIZE, SIZE, { palette, delay });
   }
   gif.finish();
   return gif.bytes();
