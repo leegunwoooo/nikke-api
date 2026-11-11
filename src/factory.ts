@@ -181,6 +181,23 @@ const getCubes = lazyIndex<{ id: number; rare?: string; name: Record<string, str
   "cubes.json",
 );
 
+// pre-rendered lobby idle animations live in the nikke-api-media repo and
+// are served through jsDelivr — the API only needs the manifest to know
+// which "<resourceId>_<skinIndex>" files exist
+const MEDIA_BASE = "https://cdn.jsdelivr.net/gh/leegunwoooo/nikke-api-media@main";
+type GifManifest = Record<string, { bytes: number }>;
+let gifManifestCache: Promise<GifManifest> | undefined;
+const getGifManifest = () =>
+  (gifManifestCache ??= storage
+    .readJson<GifManifest>("spine-gif-manifest.json")
+    .catch(() => ((gifManifestCache = undefined), {} as GifManifest)));
+const spineGif = (m: GifManifest, resourceId: number, skinIndex: number) => {
+  const e = m[`${resourceId}_${skinIndex}`];
+  return e
+    ? { url: `${MEDIA_BASE}/spine-gif/${resourceId}_${skinIndex}.gif`, bytes: e.bytes }
+    : undefined;
+};
+
 
 // --- profile normalization helpers ---
 let nameCodeMap: Record<string, number> | null = null;
@@ -563,7 +580,8 @@ app.get("/", (c) =>
       "GET /api/events/:id": "event detail — episode scene list",
       "GET /api/events/:id/script": "whole event script, episode by episode ('speaker: text')",
       "GET /api/lines": "dialogue search; q (text) and/or speaker, family, category; 50 per page by default",
-      "GET /api/nikkes/:id/spine": "Spine animation asset URLs (stand/aim/cover) and burstCutscene, per costume",
+      "GET /api/nikkes/:id/spine": "Spine animation asset URLs (stand/aim/cover) and burstCutscene, per costume; stand.gif points to a pre-rendered lobby idle gif",
+      "GET /api/nikkes/:id/spine.gif?skin=": "302 redirect to the pre-rendered lobby idle gif on jsDelivr",
       "GET /api/nikkes/:id/burst": "Burst cutscene asset URLs and viewer links (base and exact costumes; missing = null)",
       "GET /api/nikkes/:id/appearances": "scenes and events a character speaks in (all versions)",
       "GET /api/story/route": "story reading order (community guide)",
@@ -1004,25 +1022,44 @@ app.get("/api/lines", async (c) => {
 });
 
 // Spine viewer assets per skin, with separately sourced burst cutscenes.
+// stand entries get a `gif` link when a pre-rendered lobby animation exists.
 app.get("/api/nikkes/:id/spine", async (c) => {
   const key = c.req.param("id");
   const found = /^\d+$/.test(key) ? byId.get(Number(key)) ?? byResourceId.get(Number(key)) : findByName(key)[0];
   if (!found) return c.json({ error: "not found" }, 404);
   const n = withBurstVoices(found, await getDetail(found.id) as { voices?: DetailVoice[] } | null);
+  const gm = await getGifManifest();
+  const withGif = (sp: Nikke["spine"], skinIndex: number) =>
+    sp?.stand
+      ? { ...sp, stand: { ...sp.stand, gif: spineGif(gm, n.resourceId, skinIndex) } }
+      : sp;
   return c.json({
     id: n.id,
     resourceId: n.resourceId,
     name: n.name,
-    spine: n.spine ?? null,
+    spine: withGif(n.spine, 0) ?? null,
     burstCutscene: n.burstCutscene ?? null,
     costumes: n.costumes.map((co) => ({
       id: co.id,
       skinIndex: co.skinIndex,
       name: co.name,
-      spine: co.spine ?? null,
+      spine: withGif(co.spine, co.skinIndex) ?? null,
       burstCutscene: co.burstCutscene ?? null,
     })),
   });
+});
+
+// Pre-rendered lobby idle gif — the bytes live on jsDelivr (nikke-api-media),
+// so this hands out a redirect rather than proxying them.
+app.get("/api/nikkes/:id/spine.gif", async (c) => {
+  const key = c.req.param("id");
+  const found = /^\d+$/.test(key) ? byId.get(Number(key)) ?? byResourceId.get(Number(key)) : findByName(key)[0];
+  if (!found) return c.json({ error: "not found" }, 404);
+  const skin = Number(c.req.query("skin") ?? "0");
+  if (!Number.isInteger(skin) || skin < 0) return c.json({ error: "invalid skin" }, 400);
+  const g = spineGif(await getGifManifest(), found.resourceId, skin);
+  if (!g) return c.json({ error: "no rendered gif for this skin" }, 404);
+  return c.redirect(g.url, 302);
 });
 
 app.get("/api/nikkes/:id/burst", async (c) => {

@@ -87,6 +87,15 @@ test("burst assets are available through the dedicated tool, include, spine and 
   assert.deepEqual((await tool("api_get", { path: "/api/nikkes/1/burst?lang=ko" })).json.burstCutscene, burst.json.burstCutscene);
 });
 
+test("spine gif surfaces through api_get as a redirect, not binary", async () => {
+  const spine = (await tool("api_get", { path: "/api/nikkes/1/spine" })).json;
+  assert.equal(spine.spine.stand.gif.url, "https://cdn.jsdelivr.net/gh/leegunwoooo/nikke-api-media@main/spine-gif/10_0.gif");
+  const r = await tool("api_get", { path: "/api/nikkes/1/spine.gif?skin=1" });
+  assert.notEqual(r.isError, true);
+  assert.equal(r.json.redirect, "https://cdn.jsdelivr.net/gh/leegunwoooo/nikke-api-media@main/spine-gif/10_1.gif");
+  assert.equal((await tool("api_get", { path: "/api/nikkes/1/spine.gif?skin=9" })).isError, true);
+});
+
 test("get_scene returns speaker/text lines unless media is asked for", async () => {
   const lean = (await tool("get_scene", { groupId: "d_main_01_01" })).json;
   assert.deepEqual(lean.lines[0], { speaker: "라피", text: "..." });

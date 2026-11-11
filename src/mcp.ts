@@ -109,7 +109,7 @@ const NIKKE_EXTRA = {
 // routes api_get may reach — the rest have dedicated tools, and /api/user
 // (live upstream calls) stays closed; /api/tables is allowed but big raw
 // tables need ?limit/offset to fit a tool response
-const API_GET_ALLOWED = /^\/api\/(stages|costumes|equips|avatars|cubes|meta|cdn|tables|archives|nikkes\/[^/?]+\/(spine|burst))(\/|\?|$)/;
+const API_GET_ALLOWED = /^\/api\/(stages|costumes|equips|avatars|cubes|meta|cdn|tables|archives|nikkes\/[^/?]+\/(spine|spine\.gif|burst))(\/|\?|$)/;
 
 const READ_ONLY = { readOnlyHint: true, idempotentHint: true, openWorldHint: false } as const;
 // live account data — upstream game API calls through the server's
@@ -228,6 +228,14 @@ const result = (t: string, isError = false) => {
 async function call(api: Fetcher, tool: string, path: string, shape?: (data: any) => unknown, max = MAX_CHARS) {
   const started = Date.now();
   const res = await api(path);
+  // redirect endpoints (e.g. /api/nikkes/:id/spine.gif) hand out the target
+  // URL — a tool result should surface the link, not follow into binary
+  if (res.status >= 300 && res.status < 400) {
+    const location = res.headers.get("location") ?? "";
+    const out = { text: JSON.stringify({ redirect: location }) };
+    logCall(tool, res.status, started, out.text.length);
+    return result(out.text, !location);
+  }
   let body = await res.text();
   if (res.ok && shape) body = JSON.stringify(shape(JSON.parse(body)));
   const out = fitJson(body, max);
@@ -581,7 +589,7 @@ export function buildServer(api: Fetcher, version: string, origin = "", boundBla
     {
       title: "Spine animation asset URLs",
       description:
-        "Spine viewer asset URLs for a character — stand (lobby), aim (firing stance incl. fire/skill tracks) and cover (incl. reload) triplets {atlas, skeleton, texture} for the base appearance and every costume. Render with a Spine 4.1 runtime. Also includes burstCutscene visual assets from ArtHub, all texture pages, playback.layers and a viewerUrl that plays the character and background together; null for unavailable skins. Use viewerUrl for browser burst playback. Raw external asset URLs retain the source host's CORS policy.",
+        "Spine viewer asset URLs for a character — stand (lobby), aim (firing stance incl. fire/skill tracks) and cover (incl. reload) triplets {atlas, skeleton, texture} for the base appearance and every costume. Render with a Spine 4.1 runtime. Each stand also gets gif {url, bytes}: a pre-rendered lobby idle animation hosted on jsDelivr, usable directly in <img>. Also includes burstCutscene visual assets from ArtHub, all texture pages, playback.layers and a viewerUrl that plays the character and background together; null for unavailable skins. Use viewerUrl for browser burst playback. Raw external asset URLs retain the source host's CORS policy.",
       inputSchema: z.object({
         nameOrId: z.string().min(1).describe("Character name (any language) or id"),
       }),
@@ -685,7 +693,7 @@ export function buildServer(api: Fetcher, version: string, origin = "", boundBla
     {
       title: "Call another read endpoint",
       description:
-        "GET the endpoints without a dedicated tool: /api/stages (?chapter=&mode=), /api/stages/:id, /api/costumes (?nikke=&grade=), /api/costumes/:id, /api/equips, /api/equips/options, /api/cubes, /api/avatars, /api/meta/filters, /api/archives (?type=, in-game record-room hierarchy), /api/tables and /api/tables/:file (raw synced tables — tower_list, stage_list, CharacterLevelTable etc.; page big ones with ?limit=&offset=). Add lang=ko to flatten names. See /openapi.json for parameters.",
+        "GET the endpoints without a dedicated tool: /api/stages (?chapter=&mode=), /api/stages/:id, /api/costumes (?nikke=&grade=), /api/costumes/:id, /api/equips, /api/equips/options, /api/cubes, /api/avatars, /api/meta/filters, /api/archives (?type=, in-game record-room hierarchy), /api/tables and /api/tables/:file (raw synced tables — tower_list, stage_list, CharacterLevelTable etc.; page big ones with ?limit=&offset=), /api/nikkes/:id/spine (asset urls; stand.gif = pre-rendered lobby idle gif) and /api/nikkes/:id/spine.gif?skin= (comes back as a {redirect} to the jsDelivr file). Add lang=ko to flatten names. See /openapi.json for parameters.",
       inputSchema: z.object({
         path: z.string().startsWith("/api/").describe("Path with query string, e.g. /api/stages?chapter=1&lang=ko"),
       }),
@@ -699,7 +707,7 @@ export function buildServer(api: Fetcher, version: string, origin = "", boundBla
         return text(
           JSON.stringify({
             error:
-              "path not allowed — api_get serves stages, costumes, equips, cubes, avatars, meta, cdn, tables and archives; use the dedicated tools for the rest",
+              "path not allowed — api_get serves stages, costumes, equips, cubes, avatars, meta, cdn, tables, archives and nikke spine/burst asset paths; use the dedicated tools for the rest",
           }),
           true,
         );

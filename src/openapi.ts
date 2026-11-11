@@ -239,6 +239,29 @@ const openapi = {
         },
       },
     },
+    "/api/nikkes/{id}/spine": {
+      get: {
+        tags: ["nikkes"],
+        summary: "외형별 Spine 에셋 URL과 로비 idle GIF 링크",
+        description: "stand(로비)·aim(사격 자세)·cover(엄폐)의 {atlas, skeleton, texture} 트리플릿을 기본 외형과 코스튬별로 반환합니다. stand.gif는 미리 렌더된 로비 idle GIF(jsDelivr)를 가리키며 렌더가 없는 스킨은 생략됩니다.",
+        parameters: [
+          { name: "id", in: "path", required: true, schema: { type: "string" }, description: "캐릭터 ID / resourceId / 이름", example: "라피" },
+        ],
+        responses: { "200": { description: "Spine 에셋 또는 이름 후보 목록" }, "404": { description: "캐릭터 없음" } },
+      },
+    },
+    "/api/nikkes/{id}/spine.gif": {
+      get: {
+        tags: ["nikkes"],
+        summary: "로비 idle GIF로 302 리다이렉트",
+        description: "미리 렌더된 로비 idle GIF(nikke-api-media repo, jsDelivr 경유)로 리다이렉트합니다. ?skin=으로 코스튬 스킨 인덱스를 지정하며 미지정 시 0(기본 외형)입니다.",
+        parameters: [
+          { name: "id", in: "path", required: true, schema: { type: "string" }, description: "캐릭터 ID / resourceId / 이름", example: "라피" },
+          { name: "skin", in: "query", schema: { type: "integer", default: 0 }, description: "코스튬 skinIndex (0=기본 외형)" },
+        ],
+        responses: { "302": { description: "GIF 파일로 리다이렉트" }, "400": { description: "잘못된 skin" }, "404": { description: "캐릭터 없음 또는 렌더 없음" } },
+      },
+    },
     "/api/scenes": {
       get: {
         tags: ["scenes"],

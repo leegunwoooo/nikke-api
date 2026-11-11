@@ -14,6 +14,8 @@
 - [GET /api/nikkes](#get-apinikkes) — 캐릭터 목록
 - [GET /api/nikkes/:id](#get-apinikkesid) — 캐릭터 상세
 - [GET /api/nikkes/:id/burst](#get-apinikkesidburst) — 버스트 컷신
+- [GET /api/nikkes/:id/spine](#get-apinikkesidspine) — Spine 에셋 + 로비 idle GIF 링크
+- [GET /api/nikkes/:id/spine.gif](#get-apinikkesidspinegif) — 로비 idle GIF로 리다이렉트
 - [GET /api/meta/filters](#get-apimetafilters) — 필터 값 목록
 - [GET /api/archives](#get-apiarchives) — 기록실(아카이브) 앨범 계층
 - [GET /api/archives/:id](#get-apiarchivesid) — 아카이브 단건
@@ -353,6 +355,40 @@ GET /api/nikkes/511/burst?lang=ko
 기존 `atlas`·`skeleton`·`textures[].url`은 외부 원본 URL입니다. 외부 R2의 CORS는 ArtHub Origin만 허용하므로 자체 뷰어는 `/burst-assets/<revision>/<id>/<파일명>`으로 카탈로그의 파일만 중계합니다. 임의 URL·미등록 파일은 받지 않으며, 성공 응답은 기존 API 엣지 캐시를 사용하고 실패는 캐시하지 않습니다. `source.viewerUrl`은 단일 원본 트랙을 확인할 때 사용합니다.
 
 자료는 [ArtHub](https://github.com/Talors1225/arthub-viewer-web)의 공개 URL 목록을 검증해 수동 갱신합니다. 게임 전체 컷신의 완전한 목록은 아닙니다. 코스튬 전용 컷신이 없으면 기본 외형의 컷신을 반환하고, 기본 외형도 미수록이면 `null`을 반환합니다. 미수록이라고 해서 게임 안에 컷신이 없다는 뜻은 아닙니다. 영상·음성 합본이 아닌 시각 애니메이션 리소스입니다. 버스트 관련 대사·음성은 `voice`로 제공하고, 나머지 음성은 `details.voices`를 별도로 사용합니다. 외부 호스트의 파일 삭제·주소 변경·CORS 정책은 이 API가 보장하지 않습니다. [수록 범위와 갱신 방법](https://github.com/leegunwoooo/nikke-api/blob/main/content/burst-cutscenes/README.md).
+
+## GET /api/nikkes/:id/spine
+
+외형별 Spine 뷰어 에셋을 조회합니다. `:id`는 캐릭터 ID·resourceId·이름을 받습니다.
+
+```http
+GET /api/nikkes/라피/spine
+```
+
+`{ id, resourceId, name, spine, burstCutscene, costumes }`를 반환합니다. `spine`과 `costumes[].spine`은 `stand`(로비)·`aim`(사격 자세)·`cover`(엄폐)의 `{ atlas, skeleton, texture }` 트리플릿이며 Spine 4.1 런타임으로 재생합니다.
+
+각 `stand`에는 로비 idle을 미리 렌더한 GIF 링크가 붙습니다:
+
+```json
+"stand": {
+  "atlas": "…",
+  "skeleton": "…",
+  "texture": "…",
+  "gif": { "url": "https://cdn.jsdelivr.net/gh/leegunwoooo/nikke-api-media@main/spine-gif/10_0.gif", "bytes": 1331238 }
+}
+```
+
+GIF는 [nikke-api-media](https://github.com/leegunwoooo/nikke-api-media) 저장소에 있는 파일이고 jsDelivr가 서빙하므로 `<img>`에 바로 쓸 수 있습니다. `scripts/render-spine-gifs.ts`가 생성하며, 아직 렌더가 없는 스킨은 `gif` 키가 빠집니다.
+
+## GET /api/nikkes/:id/spine.gif
+
+로비 idle GIF로 바로 리다이렉트합니다 — `?skin=`에 코스튬 `skinIndex`(미지정 시 0=기본 외형).
+
+```http
+GET /api/nikkes/라피/spine.gif          # → 302 …/spine-gif/10_0.gif
+GET /api/nikkes/라피/spine.gif?skin=1   # → 302 …/spine-gif/10_1.gif
+```
+
+렌더가 없는 스킨이면 404, `skin`이 정수가 아니면 400입니다. MCP의 `api_get`으로 호출하면 `{ "redirect": "<url>" }`이 반환됩니다.
 
 ## GET /api/meta/filters
 

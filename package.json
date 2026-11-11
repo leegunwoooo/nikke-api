@@ -28,10 +28,14 @@
     "esbuild@0.28.2": true
   },
   "devDependencies": {
+    "@esotericsoftware/spine-canvas": "^4.1.56",
     "@esotericsoftware/spine-core": "4.1.56",
     "@esotericsoftware/spine-webgl": "4.1.56",
+    "@napi-rs/canvas": "^0.1.81",
     "@types/node": "^26.6.3",
     "esbuild": "^0.28.2",
+    "gifenc": "^1.0.3",
+    "node-webpmux": "^3.2.1",
     "tsx": "^4.23.15",
     "typescript": "^7.0.2"
   }
