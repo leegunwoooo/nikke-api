@@ -11,7 +11,7 @@ const edge = new Map<string, Response>();
     put: async (k: Request, r: Response) => void edge.set(k.url, r.clone()),
   },
 };
-const { default: worker } = await import("../worker/index.js");
+const { default: worker, resetWorkerMemos } = await import("../worker/index.js");
 const { resetBlaSession } = await import("../src/blabla.js");
 
 const DIST = path.join(import.meta.dirname, "fixtures/dist");
@@ -75,10 +75,14 @@ function envOf(seed: Record<string, string> = {}) {
 }
 
 // runs one request and waits for its waitUntil work (edge put, KV write)
-async function send(env: any, pathAndQuery: string) {
+async function send(env: any, pathAndQuery: string, headers: Record<string, string> = {}) {
   const pending: Promise<unknown>[] = [];
   const ctx = { waitUntil: (p: Promise<unknown>) => void pending.push(p) } as any;
-  const res: Response = await worker.fetch(new Request(`https://api.test${pathAndQuery}`), env, ctx);
+  const res: Response = await worker.fetch(
+    new Request(`https://api.test${pathAndQuery}`, { headers }),
+    env,
+    ctx,
+  );
   await Promise.all(pending);
   return res;
 }
@@ -196,6 +200,71 @@ test("a caller's ?area= is never remembered", async () => {
     assert.equal(kv.get(id), "83");
     const next = await send(env, `/api/user/${id}`);
     assert.equal(((await next.json()) as any).areaId, 83);
+  } finally {
+    stub.restore();
+  }
+});
+
+// a corrupted creds value must read as "not configured" — btoa() of a
+// non-Latin1 string throws, which used to 500 every user/mcp request
+test("corrupted creds in KV never 500 a request", async () => {
+  const id = "1000000000000000008";
+  const stub = stubFetch();
+  try {
+    for (const raw of ["not json", JSON.stringify({ open_id: "한글", token: "한글" })]) {
+      resetWorkerMemos();
+      const { env } = envOf({ "bla:creds": raw });
+      const res = await send(env, `/api/user/${id}`);
+      assert.equal(res.status, 503, `${raw} -> ${res.status}`);
+      assert.match(((await res.json()) as any).error ?? "", /\w+/);
+    }
+  } finally {
+    stub.restore();
+    resetWorkerMemos();
+  }
+});
+
+test("a corrupted connector value answers a clean error, not a parse crash", async () => {
+  resetWorkerMemos();
+  const { env } = envOf({ "user:u_corrupt": '{"openid":' });
+  for (let i = 0; i < 2; i++) {
+    const res = await send(env, "/mcp/u/u_corrupt");
+    assert.equal(res.status, 500);
+    assert.match(((await res.json()) as any).error, /unreadable/);
+  }
+  resetWorkerMemos();
+});
+
+test("/mcp/u rate limit keys on the caller IP, not the URL key", async () => {
+  resetWorkerMemos();
+  const keys: string[] = [];
+  const { env } = envOf({ "user:u_aaaa": JSON.stringify({ openid: "1000000000000000009" }) });
+  env.RATE_LIMITER = {
+    limit: async ({ key }: { key: string }) => (keys.push(key), { success: true }),
+  };
+  await send(env, "/mcp/u/u_aaaa", { "cf-connecting-ip": "203.0.113.7" });
+  await send(env, "/mcp/u/u_bbbb", { "cf-connecting-ip": "203.0.113.7" });
+  await send(env, "/mcp/u/u_cccc");
+  assert.deepEqual(keys, ["u:203.0.113.7", "u:203.0.113.7", "u:unknown"]);
+  resetWorkerMemos();
+});
+
+// an unreadable manifest is not "no tables" — a 200 with [] would be edge
+// cached for a day
+test("/api/tables answers a non-cacheable 503 when the manifest read fails", async () => {
+  resetWorkerMemos();
+  const stub = stubFetch();
+  const inner = globalThis.fetch;
+  globalThis.fetch = (async (input: any, init?: any) => {
+    const url = String(input?.url ?? input);
+    if (url.endsWith("/_manifest.json")) return new Response("bad", { status: 500 });
+    return inner(input, init);
+  }) as typeof fetch;
+  try {
+    const { env } = envOf();
+    const res = await send(env, "/api/tables");
+    assert.equal(res.status, 503);
+    assert.equal(res.headers.get("cache-control"), null);
   } finally {
     stub.restore();
   }
