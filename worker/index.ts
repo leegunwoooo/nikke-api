@@ -155,9 +155,30 @@ const validateCreds = async (c: NonNullable<ReturnType<typeof credsOf>>) => {
   return { ok: j.code === 0, msg: j.msg };
 };
 
+// constant-time compare — a plain !== on the admin token leaks its prefix
+// through response timing to anyone who can hammer the endpoint
+const safeEqual = (a: string, b: string) => {
+  const ab = new TextEncoder().encode(a);
+  const bb = new TextEncoder().encode(b);
+  let d = ab.length ^ bb.length;
+  for (let i = 0; i < ab.length; i++) d |= ab[i] ^ (bb[i] ?? 0);
+  return d === 0;
+};
+
 // POST /admin/token {creds} — validate upstream, then KV. GET = masked status.
 const adminToken = async (request: Request, env: Env) => {
-  if (!env.ADMIN_TOKEN || request.headers.get("x-admin-token") !== env.ADMIN_TOKEN)
+  // limit before auth — every POST spends a BlablaLink login, and an unlimited
+  // endpoint is a free oracle for guessing the admin token
+  const ip = request.headers.get("cf-connecting-ip") ?? "unknown";
+  const limited = env.RATE_LIMITER
+    ? !(await env.RATE_LIMITER.limit({ key: `admin:${ip}` })).success
+    : inMemoryLimited(`admin:${ip}`, 10);
+  if (limited)
+    return new Response(JSON.stringify({ error: "rate limited — retry shortly" }), {
+      status: 429,
+      headers: { "content-type": "application/json", "retry-after": "60" },
+    });
+  if (!env.ADMIN_TOKEN || !safeEqual(request.headers.get("x-admin-token") ?? "", env.ADMIN_TOKEN))
     return json({ error: "unauthorized" }, 401);
   if (!env.AREA_KV) return json({ error: "KV not configured" }, 500);
   if (request.method === "GET") {
