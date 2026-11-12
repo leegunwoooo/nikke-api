@@ -29564,7 +29564,7 @@ var CREDS_KEY = "bla:creds";
 var HDR_CREDS = "x-bla-creds";
 var HDR_BLABLAID = "x-registered-blablaid";
 var edgeCache = caches.default;
-var BUILD_ID = false ? void 0 : "d4a210472297";
+var BUILD_ID = false ? void 0 : "d8056302109b";
 var DATA_HOST = "https://nikke-api-data.pages.dev";
 var REVALIDATE_MS = 3e5;
 var appPromise;
@@ -29590,8 +29590,10 @@ var getApp = async (env, ctx) => {
       appBuiltAt = Date.now();
       if (stamp !== null && stamp !== dataStamp) {
         dataStamp = stamp;
-        appPromise = createApp(httpStorage(host), { buildId: BUILD_ID });
-        await appPromise.catch(() => {
+        const rebuilt = createApp(httpStorage(host), { buildId: BUILD_ID });
+        appPromise = rebuilt;
+        await rebuilt.catch(() => {
+          if (appPromise === rebuilt) appPromise = void 0;
         });
       }
     });
@@ -29601,7 +29603,11 @@ var getApp = async (env, ctx) => {
     return appPromise;
   }
   appBuiltAt = now;
-  appPromise = createApp(httpStorage(host), { buildId: BUILD_ID });
+  const built = createApp(httpStorage(host), { buildId: BUILD_ID });
+  appPromise = built;
+  built.catch(() => {
+    if (appPromise === built) appPromise = void 0;
+  });
   const learn = dataVersionOf(env).catch(() => {
   });
   if (ctx) ctx.waitUntil(learn);

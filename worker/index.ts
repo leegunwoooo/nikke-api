@@ -76,10 +76,13 @@ const getApp = async (env: Env, ctx?: ExecutionContext): Promise<App> => {
       appBuiltAt = Date.now();
       if (stamp !== null && stamp !== dataStamp) {
         dataStamp = stamp;
-        appPromise = createApp(httpStorage(host), { buildId: BUILD_ID });
+        const rebuilt = createApp(httpStorage(host), { buildId: BUILD_ID });
+        appPromise = rebuilt;
         // keep the rebuild inside waitUntil — ending the request earlier
         // would let the isolate die mid-rebuild and leave a pending appPromise
-        await appPromise.catch(() => {});
+        await rebuilt.catch(() => {
+          if (appPromise === rebuilt) appPromise = undefined;
+        });
       }
     });
     if (ctx) ctx.waitUntil(check);
@@ -89,7 +92,13 @@ const getApp = async (env: Env, ctx?: ExecutionContext): Promise<App> => {
   // cold isolate — build now; learn the current stamp in the background so
   // revalidation has a baseline without a second request-path fetch
   appBuiltAt = now;
-  appPromise = createApp(httpStorage(host), { buildId: BUILD_ID });
+  const built = createApp(httpStorage(host), { buildId: BUILD_ID });
+  appPromise = built;
+  // a failed build must not stay cached — a rejected appPromise would 500
+  // every request in this isolate until it's evicted; retry on the next one
+  built.catch(() => {
+    if (appPromise === built) appPromise = undefined;
+  });
   const learn = dataVersionOf(env).catch(() => {});
   if (ctx) ctx.waitUntil(learn);
   return appPromise;
