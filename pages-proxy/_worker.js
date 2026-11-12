@@ -26336,7 +26336,7 @@ function buildServer(api, version2, origin = "", boundBlablaid) {
     "get_favorite",
     {
       title: "Get favorite item detail",
-      description: "Favorite item (\uC18C\uC7A5\uD488) detail: stats per level, collection and exclusive skills.",
+      description: "Favorite item (\uC18C\uC7A5\uD488) detail: stats per level, collection and exclusive skills. Levels are as shown in game \u2014 \uC560\uC7A5\uD488 (Favorite) 1\u20133, dolls (Collection) 0\u201315 \u2014 the same scale as get_user_nikke favoriteItem.level.",
       inputSchema: object({ id: string2().min(1), lang: LANG }),
       annotations: READ_ONLY
     },
@@ -26571,7 +26571,7 @@ function buildServer(api, version2, origin = "", boundBlablaid) {
     "get_user_nikke",
     {
       title: "Get one of a player's NIKKEs",
-      description: "Build detail of one owned character: skill levels, equipment, cube, favorite item. favoriteItem.type is Favorite (\uC560\uC7A5\uD488) or Collection (a commander doll, not the character's own item); ownFavoriteItem is that character's \uC560\uC7A5\uD488, null when the game has none. An exact character name returns that character even when other owned versions also match \u2014 the rest are listed in alsoMatched. A name that only partially matches several owned characters returns a list \u2014 call again with an id. Live and rate limited.",
+      description: "Build detail of one owned character: skill levels, equipment, cube, favorite item. favoriteItem.type is Favorite (\uC560\uC7A5\uD488, level = phase 1\u20133) or Collection (a commander doll, level 0\u201315; not the character's own item); ownFavoriteItem is that character's \uC560\uC7A5\uD488, null when the game has none. An exact character name returns that character even when other owned versions also match \u2014 the rest are listed in alsoMatched. A name that only partially matches several owned characters returns a list \u2014 call again with an id. Live and rate limited.",
       inputSchema: object({
         blablaid: BLABLAID.optional(),
         nameOrId: string2().min(1).describe("Character name (partial, any language) or id"),
@@ -27679,6 +27679,9 @@ function buildOpenapi(pkgVersion) {
   return openapi;
 }
 
+// src/favorite-level.ts
+var favLevelBase = (type) => type === "Favorite" ? 1 : 0;
+
 // src/factory.ts
 var memo3 = (fn) => {
   let p;
@@ -27983,7 +27986,7 @@ async function createApp(storage, options = {}) {
     const favRef = (tid, lv) => {
       if (!tid) return null;
       const type = favType.get(tid);
-      return { id: tid, level: lv ?? 0, name: favNames.get(tid) ?? null, ...type ? { type } : {} };
+      return { id: tid, level: (lv ?? 0) + favLevelBase(type), name: favNames.get(tid) ?? null, ...type ? { type } : {} };
     };
     const ownFavByCode = new Map(favs.filter((f) => f.nameCode).map((f) => [f.nameCode, f]));
     const ownFavRef = (nameCode) => {
@@ -29573,7 +29576,7 @@ var CREDS_KEY = "bla:creds";
 var HDR_CREDS = "x-bla-creds";
 var HDR_BLABLAID = "x-registered-blablaid";
 var edgeCache = caches.default;
-var BUILD_ID = false ? void 0 : "2058a3eb2067";
+var BUILD_ID = false ? void 0 : "4508a2131a17";
 var DATA_HOST = "https://nikke-api-data.pages.dev";
 var REVALIDATE_MS = 3e5;
 var BUILD_TIMEOUT_MS = 3e4;

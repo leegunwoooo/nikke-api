@@ -627,9 +627,11 @@ test("owned nikke says whether the slot holds its 애장품 or a doll", async ()
   try {
     const r = await json(`/api/user/12345/nikke-builds?area=83&lang=ko&names=${encodeURIComponent("라피,앵커")}`);
     const [rapi, anchor] = r.nikkes;
-    assert.deepEqual(rapi.favoriteItem, { id: 100, level: 2, name: "망원경", type: "Favorite" });
+    // upstream levels are 0-based: 애장품 raw 2 is phase 3 in game, a doll's raw 1 is Lv 1
+    assert.deepEqual(rapi.favoriteItem, { id: 100, level: 3, name: "망원경", type: "Favorite" });
     assert.deepEqual(rapi.ownFavoriteItem, { id: 100, name: "망원경" });
     assert.equal(anchor.favoriteItem.type, "Collection");
+    assert.equal(anchor.favoriteItem.level, 1);
     assert.equal(anchor.ownFavoriteItem, null); // a doll, and no 애장품 exists yet
   } finally {
     stub.restore();

@@ -518,7 +518,7 @@ export function buildServer(api: Fetcher, version: string, origin = "", boundBla
     "get_favorite",
     {
       title: "Get favorite item detail",
-      description: "Favorite item (소장품) detail: stats per level, collection and exclusive skills.",
+      description: "Favorite item (소장품) detail: stats per level, collection and exclusive skills. Levels are as shown in game — 애장품 (Favorite) 1–3, dolls (Collection) 0–15 — the same scale as get_user_nikke favoriteItem.level.",
       inputSchema: z.object({ id: z.string().min(1), lang: LANG }),
       annotations: READ_ONLY,
     },
@@ -790,7 +790,7 @@ export function buildServer(api: Fetcher, version: string, origin = "", boundBla
     {
       title: "Get one of a player's NIKKEs",
       description:
-        "Build detail of one owned character: skill levels, equipment, cube, favorite item. favoriteItem.type is Favorite (애장품) or Collection (a commander doll, not the character's own item); ownFavoriteItem is that character's 애장품, null when the game has none. An exact character name returns that character even when other owned versions also match — the rest are listed in alsoMatched. A name that only partially matches several owned characters returns a list — call again with an id. Live and rate limited.",
+        "Build detail of one owned character: skill levels, equipment, cube, favorite item. favoriteItem.type is Favorite (애장품, level = phase 1–3) or Collection (a commander doll, level 0–15; not the character's own item); ownFavoriteItem is that character's 애장품, null when the game has none. An exact character name returns that character even when other owned versions also match — the rest are listed in alsoMatched. A name that only partially matches several owned characters returns a list — call again with an id. Live and rate limited.",
       inputSchema: z.object({
         blablaid: BLABLAID.optional(),
         nameOrId: z.string().min(1).describe("Character name (partial, any language) or id"),

@@ -5,6 +5,7 @@ import { compareEventScenes, eventIdOf } from "../src/events.js";
 import { readFavoriteStories } from "./favorite-stories.js";
 import { assertDistinctIds, dedupKeys, LIBRARY_EVENT_CATEGORIES, libraryEventId, readLibraryStories, readTranscribedStories, selectLibraryScenes } from "./library-stories.js";
 import { mainChaptersFromList } from "./main-chapters.js";
+import { favLevelBase } from "../src/favorite-level.js";
 import type {
   Burst,
   Locale,
@@ -735,8 +736,11 @@ async function main() {
       if (r.name_localkey) name[l] = r.name_localkey;
       if (r.description_localkey) description[l] = r.description_localkey;
     });
+    // levels as the game shows them: 애장품 (Favorite) phases 1–3, commander
+    // dolls (Collection) 0–15 — the raw arrays and max_level are 0-based for both
+    const levelBase = favLevelBase(first.favorite_type);
     const stats = first.atk.map((_: number, i: number) => ({
-      level: i + 1,
+      level: i + levelBase,
       atk: first.atk[i],
       def: first.def[i],
       hp: first.hp[i],
@@ -758,7 +762,7 @@ async function main() {
       rare: first.favorite_rare,
       type: first.favorite_type,
       weaponType: first.weapon_type,
-      maxLevel: first.max_level,
+      maxLevel: first.max_level != null ? first.max_level + levelBase : first.max_level,
       name,
       description,
       images: {
