@@ -41,7 +41,7 @@
     "esbuild@0.28.2": true
   },
   "devDependencies": {
-    "@esotericsoftware/spine-canvas": "^4.1.56",
+    "@esotericsoftware/spine-canvas": "4.1.56",
     "@esotericsoftware/spine-core": "4.1.56",
     "@esotericsoftware/spine-webgl": "4.1.56",
     "@napi-rs/canvas": "^0.1.81",
