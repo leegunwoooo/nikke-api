@@ -1090,7 +1090,7 @@ GET /api/avatars/50100
     "name": { "ko": "디젤", ... }, "rarity": "SSR", "image": "https://..." },
   "rare": "SSR",
   "weaponType": "MG",
-  "maxLevel": 2,
+  "maxLevel": 3,
   "name": { "ko": "장난감 기차 세트", "en": "Toy Train Set", ... },
   "description": { "ko": "추억에 갇혀있던 장난감 기차는...", ... },
   "images": { "icon": "...", "prop": "..." },
@@ -1104,6 +1104,7 @@ GET /api/avatars/50100
 
 | 필드 | 설명 |
 |------|------|
+| `level` / `maxLevel` | 게임 표기 기준 — 애장품(`type: Favorite`)은 **1~3단계**, 소장품(지휘관 인형, `type: Collection`)은 **0~15**. 유저 조회의 `favoriteItem.level`과 같은 기준입니다 |
 | `stats[]` | 레벨별 스탯 — `level`, `atk`, `def`, `hp`, `power`, `grade`, `collectionSkillLevel`(컬렉션 스킬 레벨), `itemSkillLevel`(소장품 스킬 레벨) |
 | `skills[].kind` | `collection` = 수집 효과 스킬, `item` = 소장품 전용 스킬 (`slot`/`unlocksAt` = 강화 단계 — SSR 전용품 1·2·3단계에서 각각 해금) |
 | `skills[].descriptions` | 최대 레벨 기준 렌더링된 설명 (언어별) |
@@ -1333,7 +1334,7 @@ GET /api/user/<blablaid>/nikke/3017                # 캐릭터 id
 
 구형 쿼리 형태 `GET /api/user/nikke/:nameOrId?blablaid=...`·`?openid=`도 동일하게 동작합니다.
 
-`favoriteItem`은 슬롯에 낀 아이템으로, `type`이 `Favorite`이면 애장품, `Collection`이면 지휘관 인형입니다. `ownFavoriteItem`은 그 니케의 애장품이고, 게임에 아직 없으면 `null`입니다. 인형을 낀 니케가 애장품을 안 낀 것인지, 애장품이 없는 것인지는 이 값으로 구분합니다.
+`favoriteItem`은 슬롯에 낀 아이템으로, `type`이 `Favorite`이면 애장품, `Collection`이면 지휘관 인형입니다. `level`은 게임 표기 그대로입니다 — 애장품 1~3단계, 인형 0~15 (업스트림 원본은 둘 다 0부터라 애장품만 +1). `ownFavoriteItem`은 그 니케의 애장품이고, 게임에 아직 없으면 `null`입니다. 인형을 낀 니케가 애장품을 안 낀 것인지, 애장품이 없는 것인지는 이 값으로 구분합니다.
 
 응답 항목 형태:
 
@@ -1348,7 +1349,7 @@ GET /api/user/<blablaid>/nikke/3017                # 캐릭터 id
   "costume": null,
   "skills": { "skill1": 7, "skill2": 10, "burst": 10 },
   "attractiveLevel": 30,
-  "favoriteItem": { "id": 201701, "level": 2, "name": { "ko": "...", ... }, "type": "Favorite" },
+  "favoriteItem": { "id": 201701, "level": 3, "name": { "ko": "...", ... }, "type": "Favorite" },
   "ownFavoriteItem": { "id": 201701, "name": { "ko": "...", ... } },
   "cube": { "id": 1000311, "level": 3, "name": { "ko": "...", ... } },
   "arenaCube": null,

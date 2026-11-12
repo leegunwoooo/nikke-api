@@ -15,6 +15,7 @@ import { blaCredsContext, credsFromHeader, decodeOpenid, gameApi, playerInfo } f
 import { createNikkeMcp, requestOrigin } from "./mcp.js";
 import { llmsTxt, mcpGuide, type ToolInfo } from "./llms.js";
 import { buildOpenapi } from "./openapi.js";
+import { favLevelBase } from "./favorite-level.js";
 import type { BurstCutscene, Nikke } from "./types.js";
 import type { Storage } from "./storage.js";
 
@@ -461,7 +462,7 @@ async function loadProfileLookups() {
   const favRef = (tid?: number, lv?: number) => {
     if (!tid) return null;
     const type = favType.get(tid);
-    return { id: tid, level: lv ?? 0, name: favNames.get(tid) ?? null, ...(type ? { type } : {}) };
+    return { id: tid, level: (lv ?? 0) + favLevelBase(type), name: favNames.get(tid) ?? null, ...(type ? { type } : {}) };
   };
   // a doll in the slot can mean the game has no 애장품 for this character yet.
   // Older data has no type/nameCode: say nothing rather than "none exists"
