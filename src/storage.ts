@@ -53,7 +53,13 @@ export function httpStorage(base: string): Storage {
       return JSON.parse(await this.readText(rel)) as T;
     },
     async list(dir) {
-      const files = await (manifest ??= this.readJson<string[]>("_manifest.json").catch(() => []));
+      // a failed manifest read must not be cached for the isolate's lifetime —
+      // drop it so the next call retries instead of staying empty forever
+      manifest ??= this.readJson<string[]>("_manifest.json").catch(() => {
+        manifest = undefined;
+        return [];
+      });
+      const files = await manifest;
       const prefix = dir.replace(/\/?$/, "/");
       return files
         .filter((f) => f.startsWith(prefix) && !f.slice(prefix.length).includes("/"))

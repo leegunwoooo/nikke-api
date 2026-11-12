@@ -29550,7 +29550,11 @@ function httpStorage(base) {
       return JSON.parse(await this.readText(rel));
     },
     async list(dir) {
-      const files = await (manifest ??= this.readJson("_manifest.json").catch(() => []));
+      manifest ??= this.readJson("_manifest.json").catch(() => {
+        manifest = void 0;
+        return [];
+      });
+      const files = await manifest;
       const prefix = dir.replace(/\/?$/, "/");
       return files.filter((f) => f.startsWith(prefix) && !f.slice(prefix.length).includes("/")).map((f) => f.slice(prefix.length));
     }
@@ -29564,7 +29568,7 @@ var CREDS_KEY = "bla:creds";
 var HDR_CREDS = "x-bla-creds";
 var HDR_BLABLAID = "x-registered-blablaid";
 var edgeCache = caches.default;
-var BUILD_ID = false ? void 0 : "d8056302109b";
+var BUILD_ID = false ? void 0 : "1c720d420d54";
 var DATA_HOST = "https://nikke-api-data.pages.dev";
 var REVALIDATE_MS = 3e5;
 var appPromise;
