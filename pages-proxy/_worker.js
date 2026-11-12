@@ -29016,7 +29016,7 @@ async function createApp(storage, options = {}) {
       const files = await storage.list("tables");
       return c.json({ files });
     } catch {
-      return c.json({ files: [] });
+      return c.json({ error: "table list unavailable \u2014 retry shortly" }, 503);
     }
   });
   app.get("/api/tables/:file", async (c) => {
@@ -29550,9 +29550,9 @@ function httpStorage(base) {
       return JSON.parse(await this.readText(rel));
     },
     async list(dir) {
-      manifest ??= this.readJson("_manifest.json").catch(() => {
+      manifest ??= this.readJson("_manifest.json").catch((e) => {
         manifest = void 0;
-        return [];
+        throw e;
       });
       const files = await manifest;
       const prefix = dir.replace(/\/?$/, "/");
@@ -29568,12 +29568,17 @@ var CREDS_KEY = "bla:creds";
 var HDR_CREDS = "x-bla-creds";
 var HDR_BLABLAID = "x-registered-blablaid";
 var edgeCache = caches.default;
-var BUILD_ID = false ? void 0 : "1c720d420d54";
+var BUILD_ID = false ? void 0 : "1c7b116a9bf3";
 var DATA_HOST = "https://nikke-api-data.pages.dev";
 var REVALIDATE_MS = 3e5;
+var BUILD_TIMEOUT_MS = 3e4;
 var appPromise;
 var appBuiltAt = 0;
 var dataStamp = "";
+var bounded = (p, ms = BUILD_TIMEOUT_MS) => Promise.race([
+  p,
+  new Promise((_, rej) => setTimeout(() => rej(new Error("app build timeout")), ms))
+]);
 var stampOf = (host) => fetch(`${host}/characters.json`).then((r) => r.json()).then((j) => `${j.syncedAt}|${j.version}`).catch(() => null);
 var stampPromise;
 var dataVersionOf = (env) => {
@@ -29593,12 +29598,15 @@ var getApp = async (env, ctx) => {
     const check = stampOf(host).then(async (stamp) => {
       appBuiltAt = Date.now();
       if (stamp !== null && stamp !== dataStamp) {
-        dataStamp = stamp;
-        const rebuilt = createApp(httpStorage(host), { buildId: BUILD_ID });
-        appPromise = rebuilt;
-        await rebuilt.catch(() => {
-          if (appPromise === rebuilt) appPromise = void 0;
-        });
+        const rebuilt = bounded(createApp(httpStorage(host), { buildId: BUILD_ID }));
+        await rebuilt.then(
+          () => {
+            appPromise = rebuilt;
+            dataStamp = stamp;
+          },
+          () => {
+          }
+        );
       }
     });
     if (ctx) ctx.waitUntil(check);
@@ -29607,7 +29615,7 @@ var getApp = async (env, ctx) => {
     return appPromise;
   }
   appBuiltAt = now;
-  const built = createApp(httpStorage(host), { buildId: BUILD_ID });
+  const built = bounded(createApp(httpStorage(host), { buildId: BUILD_ID }));
   appPromise = built;
   built.catch(() => {
     if (appPromise === built) appPromise = void 0;
@@ -29718,10 +29726,26 @@ var AREA_MEMO_MS = 36e5;
 var credsMemo;
 var keyMemo = /* @__PURE__ */ new Map();
 var areaMemo = /* @__PURE__ */ new Map();
+var resetWorkerMemos = () => {
+  credsMemo = void 0;
+  keyMemo.clear();
+  areaMemo.clear();
+};
+var LATIN1 = /^[\x00-\xff]*$/;
+var credsOfRaw = (raw2) => {
+  if (!raw2) return null;
+  try {
+    const c = credsOf(JSON.parse(raw2));
+    const v = c ? JSON.stringify(c) : null;
+    return v && LATIN1.test(v) ? v : null;
+  } catch {
+    return null;
+  }
+};
 var getCreds = async (env) => {
   const now = Date.now();
   if (credsMemo && now - credsMemo.at < CREDS_MEMO_MS) return credsMemo.v;
-  const v = await env.AREA_KV?.get(CREDS_KEY) ?? null;
+  const v = credsOfRaw(await env.AREA_KV?.get(CREDS_KEY) ?? null);
   credsMemo = { v, at: now };
   return v;
 };
@@ -29791,11 +29815,20 @@ var index_default = {
     }
     const um = url2.pathname.match(/^\/mcp\/u\/([A-Za-z0-9_-]+)$/);
     if (um) {
-      const limited = env.RATE_LIMITER ? !(await env.RATE_LIMITER.limit({ key: `u:${um[1]}` })).success : inMemoryLimited(`u:${um[1]}`);
+      const ip = request.headers.get("cf-connecting-ip") ?? "unknown";
+      const limited = env.RATE_LIMITER ? !(await env.RATE_LIMITER.limit({ key: `u:${ip}` })).success : inMemoryLimited(`u:${ip}`);
       if (limited) return json({ error: "rate limited \u2014 retry shortly" }, 429);
       const raw2 = await getConnector(env, um[1]);
       if (!raw2) return json({ error: "unknown connector key" }, 404);
-      const openid = JSON.parse(raw2).openid;
+      let openid;
+      try {
+        const stored = JSON.parse(raw2);
+        if (typeof stored.openid !== "string" || !/^\d+$/.test(stored.openid)) throw new Error("bad");
+        openid = stored.openid;
+      } catch {
+        keyMemo.delete(um[1]);
+        return json({ error: "connector key unreadable \u2014 register again" }, 500);
+      }
       url2.pathname = "/mcp";
       h.set(HDR_BLABLAID, openid);
       const creds = await getCreds(env);
@@ -29894,7 +29927,8 @@ var index_default = {
   }
 };
 export {
-  index_default as default
+  index_default as default,
+  resetWorkerMemos
 };
 /*! Bundled license information:
 
