@@ -13,6 +13,9 @@ import type {
   NikkeDetail,
   RawNikke,
   RawRoleData,
+  RawSkillCost,
+  NikkeSkillCosts,
+  SkillLevelCost,
   RawSkillDetail,
   Skill,
   SkillIconMap,
@@ -1035,6 +1038,40 @@ function buildShot(roles: (RawRoleData | null)[]): NikkeDetail["shot"] {
   };
 }
 
+// roledata *_cost_detail → per-level materials. Empty slots (item_id 0/null)
+// are dropped; material names are merged across locales once per character.
+function buildSkillCosts(roles: (RawRoleData | null)[]): NikkeSkillCosts | undefined {
+  const materials: NikkeSkillCosts["materials"] = {};
+  const levels = (pick: (r: RawRoleData) => (RawSkillCost | null)[] | undefined): SkillLevelCost[] => {
+    roles.forEach((r, li) => {
+      for (const step of (r && pick(r)) ?? []) {
+        for (const c of step?.costs ?? []) {
+          if (!c.item_id || !c.item_value) continue;
+          const m = (materials[c.item_id] ??= { name: {}, ...(c.item_rare ? { rare: c.item_rare } : {}) });
+          if (c.name_localkey) m.name[LOCALES[li]] = c.name_localkey;
+        }
+      }
+    });
+    const first = roles.find((r) => r && pick(r));
+    return ((first && pick(first)) ?? []).flatMap((step, i) => {
+      if (!step) return [];
+      const level = step.id % 100;
+      if (level !== i + 2) throw new Error(`skill cost ${step.id}: expected level ${i + 2}`);
+      const costs = (step.costs ?? [])
+        .filter((c) => c.item_id && c.item_value)
+        .map((c) => ({ id: c.item_id!, count: c.item_value! }));
+      return [{ level, costs }];
+    });
+  };
+  const out = {
+    skill1: levels((r) => r.skill1_cost_detail),
+    skill2: levels((r) => r.skill2_cost_detail),
+    burst: levels((r) => r.ulti_skill_cost_detail),
+  };
+  if (!out.skill1.length && !out.skill2.length && !out.burst.length) return undefined;
+  return { materials, ...out };
+}
+
 async function buildDetail(resourceId: number): Promise<NikkeDetail | null> {
   const roles = await Promise.all(
     LOCALES.map((l) => readJson<RawRoleData>(`roledata_${resourceId}_${l}.json`)),
@@ -1140,6 +1177,7 @@ async function buildDetail(resourceId: number): Promise<NikkeDetail | null> {
     attractiveScenarios: mergeAttractiveScenarios(roles),
     voices: voices.length ? voices : undefined,
     shot: buildShot(roles),
+    skillCosts: buildSkillCosts(roles),
     statEnhance: first.stat_enhance_detail
       ? {
           id: first.stat_enhance_detail.id ?? first.stat_enhance_id,

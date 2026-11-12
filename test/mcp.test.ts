@@ -69,6 +69,16 @@ test("get_nikke trims by default and include adds to it", async () => {
   assert.equal(more.name, "라피"); // include adds, it doesn't replace the defaults
 });
 
+test("get_nikke leaves skillCosts out by default and include adds it", async () => {
+  const base = (await tool("get_nikke", { nameOrId: "1" })).json;
+  assert.equal(base.details.skillCosts, undefined);
+  const { skillCosts } = (await tool("get_nikke", { nameOrId: "1", include: ["skillCosts"] })).json.details;
+  assert.deepEqual(skillCosts.skill1.map((s: { level: number }) => s.level), [2, 3, 4, 5, 6, 7, 8, 9, 10]);
+  // every material a level uses is named in the shared materials map
+  for (const s of [...skillCosts.skill1, ...skillCosts.skill2, ...skillCosts.burst])
+    for (const c of s.costs) assert.equal(typeof skillCosts.materials[c.id]?.name, "string", String(c.id)); // localized to lang
+});
+
 test("burst assets are available through the dedicated tool, include, spine and api_get", async () => {
   const burst = await tool("get_nikke_burst", { nameOrId: "라피" });
   assert.equal(burst.json.name, "라피");

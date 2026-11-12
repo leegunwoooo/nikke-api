@@ -96,6 +96,7 @@ const NIKKE_EXTRA = {
   voices: "details.voices",
   shot: "details.shot",
   statEnhance: "details.statEnhance",
+  skillCosts: "details.skillCosts",
   teammateList: "details.teammateList",
   costumes: "costumes",
   images: "images",
@@ -379,7 +380,7 @@ export function buildServer(api: Fetcher, version: string, origin = "", boundBla
         include: z
           .array(z.enum(Object.keys(NIKKE_EXTRA) as [keyof typeof NIKKE_EXTRA]))
           .optional()
-          .describe("Extra sections added to the default: statsPerLevel (~30KB), voices (~80KB, voice lines incl. costumeIndex), shot (weapon mechanics — damage/charge/rate-of-fire/burst-gauge units), statEnhance (limit-break & core bonus), teammateList, costumes, images, spine (Spine asset URLs for stand/aim/cover), burstCutscene (base burst visual assets and viewer link; use get_nikke_burst for costumes too), skillLevels (raw skill icon/descriptionTemplate/values)"),
+          .describe("Extra sections added to the default: statsPerLevel (~30KB), voices (~80KB, voice lines incl. costumeIndex), shot (weapon mechanics — damage/charge/rate-of-fire/burst-gauge units), statEnhance (limit-break & core bonus), skillCosts (per-level skill/burst upgrade materials — manuals, code manual; ~4KB), teammateList, costumes, images, spine (Spine asset URLs for stand/aim/cover), burstCutscene (base burst visual assets and viewer link; use get_nikke_burst for costumes too), skillLevels (raw skill icon/descriptionTemplate/values)"),
         lang: LANG,
       }),
       annotations: READ_ONLY,
