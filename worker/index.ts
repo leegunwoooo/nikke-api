@@ -318,12 +318,14 @@ export default {
     // rewrite to plain /mcp. MCP is stateless POST; skip the GET cache path.
     const um = url.pathname.match(/^\/mcp\/u\/([A-Za-z0-9_-]+)$/);
     if (um) {
-      const raw = await getConnector(env, um[1]);
-      if (!raw) return json({ error: "unknown connector key" }, 404);
+      // limit before the KV read — a throttled caller must not spend the
+      // scarcest quota (KV reads) on a key that gets rejected anyway
       const limited = env.RATE_LIMITER
         ? !(await env.RATE_LIMITER.limit({ key: `u:${um[1]}` })).success
         : inMemoryLimited(`u:${um[1]}`);
       if (limited) return json({ error: "rate limited — retry shortly" }, 429);
+      const raw = await getConnector(env, um[1]);
+      if (!raw) return json({ error: "unknown connector key" }, 404);
       const openid = (JSON.parse(raw) as { openid: string }).openid;
       url.pathname = "/mcp";
       h.set(HDR_BLABLAID, openid);
