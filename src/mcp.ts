@@ -207,9 +207,13 @@ export function fitJson(body: string, max = MAX_CHARS): { text: string; isError?
   return { text: render(lo) };
 }
 
-// one structured line per tool call — Vercel logs otherwise only show POST /mcp
-const logCall = (tool: string, status: number, started: number, chars: number) =>
+// one structured line per tool call — Vercel logs otherwise only show POST /mcp.
+// off by default: in the worker this would log a line per request
+const CALL_LOG = typeof process !== "undefined" && process.env?.NIKKE_MCP_LOG === "1";
+const logCall = (tool: string, status: number, started: number, chars: number) => {
+  if (!CALL_LOG) return;
   console.log(JSON.stringify({ mcp: tool, status, ms: Date.now() - started, chars }));
+};
 
 // JSON results also go out as structuredContent so clients that read typed
 // output (ChatGPT apps, newer Claude clients) don't have to re-parse the text
@@ -321,7 +325,7 @@ export function buildServer(api: Fetcher, version: string, origin = "", boundBla
   const userTool = <T>(name: string, run: (a: T) => Promise<ReturnType<typeof text>>) => async (a: T) => {
     const wait = userRateLimited();
     if (wait) {
-      console.log(JSON.stringify({ mcp: name, status: 429 }));
+      if (CALL_LOG) console.log(JSON.stringify({ mcp: name, status: 429 }));
       return text(JSON.stringify({ error: `rate limited — retry in ${wait}s` }), true);
     }
     return run(a);

@@ -26078,7 +26078,11 @@ function fitJson(body, max = MAX_CHARS) {
   }
   return { text: render(lo) };
 }
-var logCall = (tool, status, started, chars) => console.log(JSON.stringify({ mcp: tool, status, ms: Date.now() - started, chars }));
+var CALL_LOG = typeof process !== "undefined" && process.env?.NIKKE_MCP_LOG === "1";
+var logCall = (tool, status, started, chars) => {
+  if (!CALL_LOG) return;
+  console.log(JSON.stringify({ mcp: tool, status, ms: Date.now() - started, chars }));
+};
 var result = (t, isError = false) => {
   if (!isError) {
     try {
@@ -26163,7 +26167,7 @@ function buildServer(api, version2, origin = "", boundBlablaid) {
   const userTool = (name, run) => async (a) => {
     const wait = userRateLimited();
     if (wait) {
-      console.log(JSON.stringify({ mcp: name, status: 429 }));
+      if (CALL_LOG) console.log(JSON.stringify({ mcp: name, status: 429 }));
       return text(JSON.stringify({ error: `rate limited \u2014 retry in ${wait}s` }), true);
     }
     return run(a);
@@ -29568,7 +29572,7 @@ var CREDS_KEY = "bla:creds";
 var HDR_CREDS = "x-bla-creds";
 var HDR_BLABLAID = "x-registered-blablaid";
 var edgeCache = caches.default;
-var BUILD_ID = false ? void 0 : "1c7b116a9bf3";
+var BUILD_ID = false ? void 0 : "06b2a8f0b03b";
 var DATA_HOST = "https://nikke-api-data.pages.dev";
 var REVALIDATE_MS = 3e5;
 var BUILD_TIMEOUT_MS = 3e4;
@@ -29656,8 +29660,22 @@ var validateCreds = async (c) => {
   const j = await res.json().catch(() => ({}));
   return { ok: j.code === 0, msg: j.msg };
 };
+var safeEqual = (a, b) => {
+  const ab = new TextEncoder().encode(a);
+  const bb = new TextEncoder().encode(b);
+  let d = ab.length ^ bb.length;
+  for (let i = 0; i < ab.length; i++) d |= ab[i] ^ (bb[i] ?? 0);
+  return d === 0;
+};
 var adminToken = async (request, env) => {
-  if (!env.ADMIN_TOKEN || request.headers.get("x-admin-token") !== env.ADMIN_TOKEN)
+  const ip = request.headers.get("cf-connecting-ip") ?? "unknown";
+  const limited = env.RATE_LIMITER ? !(await env.RATE_LIMITER.limit({ key: `admin:${ip}` })).success : inMemoryLimited(`admin:${ip}`, 10);
+  if (limited)
+    return new Response(JSON.stringify({ error: "rate limited \u2014 retry shortly" }), {
+      status: 429,
+      headers: { "content-type": "application/json", "retry-after": "60" }
+    });
+  if (!env.ADMIN_TOKEN || !safeEqual(request.headers.get("x-admin-token") ?? "", env.ADMIN_TOKEN))
     return json({ error: "unauthorized" }, 401);
   if (!env.AREA_KV) return json({ error: "KV not configured" }, 500);
   if (request.method === "GET") {
