@@ -299,6 +299,33 @@ GET /api/nikkes/101801?fields=details.attractiveScenarios
 
 돌파(grade)와 코어 강화 보너스 — roledata `stat_enhance_detail`. 값은 **원시 게임 유닛**입니다 (÷100 → 표시값). `limitBreak`는 돌파 1단계당 보너스, `core`는 코어 강화 1단계당 보너스. id는 레어도 대역으로 공유됩니다 (1xxx=R, 3xxx=SR, 5xxx=SSR — 같은 대역 내 값 동일).
 
+### `skillCosts` 필드
+
+스킬 강화 비용 — roledata `skill1_cost_detail`·`skill2_cost_detail`·`ulti_skill_cost_detail`. `skill1`·`skill2`·`burst`는 레벨 2~10 순서이고, 각 항목은 **그 레벨로 올리는 한 단계의 비용**입니다(누적 아님 — 7→10은 level 8·9·10 항목의 합). `costs[].id`는 `materials`의 키로, 재료 이름(4개 언어)과 등급을 담습니다. 코드 매뉴얼은 기업마다 종류가 다릅니다. 빈 재료 슬롯은 생략됩니다. 구 dist 데이터에는 필드가 없습니다.
+
+```
+GET /api/nikkes/201001?fields=details.skillCosts
+```
+
+```json
+{
+  "details": {
+    "skillCosts": {
+      "materials": {
+        "7091001": { "name": { "ko": "스킬 매뉴얼 I", "en": "Skill Manual I", "...": "..." }, "rare": "R" },
+        "7093001": { "name": { "ko": "...코드 매뉴얼", "...": "..." }, "rare": "SSR" }
+      },
+      "skill1": [
+        { "level": 2, "costs": [{ "id": 7091001, "count": 8 }] },
+        { "level": 5, "costs": [{ "id": 7091001, "count": 42 }, { "id": 7091002, "count": 60 }, { "id": 7093001, "count": 10 }] }
+      ],
+      "skill2": ["..."],
+      "burst": ["..."]
+    }
+  }
+}
+```
+
 ### 복수 매칭 시
 
 이름으로 조회 시 여러 캐릭터가 매칭되면 상세 없이 목록으로 반환됩니다:

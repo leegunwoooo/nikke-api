@@ -149,6 +149,16 @@ export interface RawSquadDetail {
   resource_id?: string;
 }
 
+export interface RawSkillCost {
+  id: number;
+  costs?: {
+    item_id?: number | null;
+    item_value?: number;
+    item_rare?: string | null;
+    name_localkey?: string | null;
+  }[];
+}
+
 export interface RawRoleData {
   id: number;
   resource_id: number;
@@ -206,6 +216,11 @@ export interface RawRoleData {
     costume_index?: number;
   }[];
   shot_detail?: RawShotDetail;
+  // per-level skill upgrade costs; entry i is the cost to reach level i+2,
+  // trailing null for the max level
+  skill1_cost_detail?: (RawSkillCost | null)[];
+  skill2_cost_detail?: (RawSkillCost | null)[];
+  ulti_skill_cost_detail?: (RawSkillCost | null)[];
   stat_enhance_id?: number;
   stat_enhance_detail?: RawStatEnhance;
   character_level_attack_list?: number[];
@@ -372,6 +387,23 @@ export interface NikkeDetail {
   shot?: NikkeShot;
   /** limit-break (돌파) and core-enhance (코어) bonus values — raw units */
   statEnhance?: NikkeStatEnhance;
+  /** skill upgrade materials per level — roledata *_cost_detail */
+  skillCosts?: NikkeSkillCosts;
+}
+
+export interface SkillLevelCost {
+  /** the level this upgrade reaches (2–10); costs are per step, not cumulative */
+  level: number;
+  /** material item id (key of skillCosts.materials) and amount */
+  costs: { id: number; count: number }[];
+}
+
+export interface NikkeSkillCosts {
+  /** every material the levels below use, keyed by item id */
+  materials: Record<string, { name: Localized<string>; rare?: string }>;
+  skill1: SkillLevelCost[];
+  skill2: SkillLevelCost[];
+  burst: SkillLevelCost[];
 }
 
 export interface NikkeStatEnhance {
