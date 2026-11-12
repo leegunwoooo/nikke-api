@@ -1,8 +1,8 @@
 {
   "name": "nikke-data-api",
   "version": "0.7.0",
-  "description": "",
-  "main": "index.js",
+  "description": "NIKKE game data API — REST + MCP server over synced game data, runs on Node and Cloudflare Workers",
+  "main": "src/index.ts",
   "scripts": {
     "test": "node --import tsx --test test/*.test.ts",
     "dev": "tsx watch src/index.ts",
@@ -16,8 +16,21 @@
     "fetch:data": "node scripts/fetch-dist.mjs",
     "emit:pages-worker": "tsx scripts/emit-pages-worker.ts"
   },
-  "keywords": [],
+  "keywords": [
+    "nikke",
+    "nikke-api",
+    "mcp",
+    "model-context-protocol",
+    "hono",
+    "cloudflare-workers",
+    "cloudflare-pages",
+    "game-data",
+    "typescript"
+  ],
   "type": "module",
+  "engines": {
+    "node": ">=20.11"
+  },
   "dependencies": {
     "@hono/node-server": "^2.1.1",
     "@modelcontextprotocol/server": "^2.4.0",
