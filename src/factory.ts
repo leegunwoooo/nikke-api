@@ -1685,7 +1685,9 @@ app.get("/api/tables", async (c) => {
     const files = await storage.list("tables");
     return c.json({ files });
   } catch {
-    return c.json({ files: [] });
+    // a failed manifest read is not "no tables" — a 200 with an empty list
+    // would be edge-cached for a day. 503 skips the cache middleware.
+    return c.json({ error: "table list unavailable — retry shortly" }, 503);
   }
 });
 
