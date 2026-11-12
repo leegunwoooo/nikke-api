@@ -41,9 +41,17 @@ const BUILD_ID = typeof __BUILD_ID__ === "undefined" ? undefined : __BUILD_ID__;
 type App = Awaited<ReturnType<typeof createApp>>;
 const DATA_HOST = "https://nikke-api-data.pages.dev";
 const REVALIDATE_MS = 300_000;
+// a build that never settles (fetch hanging on the data host) would leave every
+// request in this isolate waiting forever — bound it and evict on timeout
+const BUILD_TIMEOUT_MS = 30_000;
 let appPromise: Promise<App> | undefined;
 let appBuiltAt = 0;
 let dataStamp = "";
+const bounded = <T>(p: Promise<T>, ms = BUILD_TIMEOUT_MS): Promise<T> =>
+  Promise.race([
+    p,
+    new Promise<never>((_, rej) => setTimeout(() => rej(new Error("app build timeout")), ms)),
+  ]);
 const stampOf = (host: string) =>
   fetch(`${host}/characters.json`)
     .then((r) => r.json() as Promise<{ syncedAt?: string; version?: string }>)
@@ -75,11 +83,18 @@ const getApp = async (env: Env, ctx?: ExecutionContext): Promise<App> => {
     const check = stampOf(host).then(async (stamp) => {
       appBuiltAt = Date.now();
       if (stamp !== null && stamp !== dataStamp) {
-        dataStamp = stamp;
-        appPromise = createApp(httpStorage(host), { buildId: BUILD_ID });
+        const rebuilt = bounded(createApp(httpStorage(host), { buildId: BUILD_ID }));
         // keep the rebuild inside waitUntil — ending the request earlier
-        // would let the isolate die mid-rebuild and leave a pending appPromise
-        await appPromise.catch(() => {});
+        // would let the isolate die mid-rebuild and leave a pending appPromise.
+        // A failed rebuild must not drop the working app: swap only on success
+        // and retry on the next revalidation window (appBuiltAt was just reset).
+        await rebuilt.then(
+          () => {
+            appPromise = rebuilt;
+            dataStamp = stamp;
+          },
+          () => {},
+        );
       }
     });
     if (ctx) ctx.waitUntil(check);
@@ -89,7 +104,14 @@ const getApp = async (env: Env, ctx?: ExecutionContext): Promise<App> => {
   // cold isolate — build now; learn the current stamp in the background so
   // revalidation has a baseline without a second request-path fetch
   appBuiltAt = now;
-  appPromise = createApp(httpStorage(host), { buildId: BUILD_ID });
+  const built = bounded(createApp(httpStorage(host), { buildId: BUILD_ID }));
+  appPromise = built;
+  // a failed (or hung) build must not stay cached — a rejected appPromise
+  // would 500 every request in this isolate until it's evicted; retry on the
+  // next one
+  built.catch(() => {
+    if (appPromise === built) appPromise = undefined;
+  });
   const learn = dataVersionOf(env).catch(() => {});
   if (ctx) ctx.waitUntil(learn);
   return appPromise;
@@ -140,7 +162,15 @@ const adminToken = async (request: Request, env: Env) => {
   if (!env.AREA_KV) return json({ error: "KV not configured" }, 500);
   if (request.method === "GET") {
     const raw = await env.AREA_KV.get(CREDS_KEY);
-    const c = raw ? credsOf(JSON.parse(raw)) : null;
+    let c: ReturnType<typeof credsOf> = null;
+    if (raw) {
+      // a corrupted KV value must read as "not configured", not a 500
+      try {
+        c = credsOf(JSON.parse(raw));
+      } catch {
+        c = null;
+      }
+    }
     return json({ configured: !!c, open_id: c?.open_id ?? null, expires: c?.expires ?? null });
   }
   const c = credsOf(await request.json().catch(() => null));
@@ -213,10 +243,34 @@ let credsMemo: { v: string | null; at: number } | undefined;
 const keyMemo = new Map<string, { v: string; at: number }>();
 const areaMemo = new Map<string, { v: string; at: number }>();
 
+// isolate memos outlive a single request by design — tests need them cleared
+// to exercise a different KV state in the same process
+export const resetWorkerMemos = () => {
+  credsMemo = undefined;
+  keyMemo.clear();
+  areaMemo.clear();
+};
+
+// the KV value is re-serialized from canonical fields so downstream btoa()
+// can't throw on a non-Latin1 byte. A value that isn't valid JSON, lacks
+// open_id/token, or carries non-Latin1 text reads as "not configured" — same
+// contract as GET /admin/token — instead of 500-ing every request.
+const LATIN1 = /^[\x00-\xff]*$/;
+const credsOfRaw = (raw: string | null) => {
+  if (!raw) return null;
+  try {
+    const c = credsOf(JSON.parse(raw));
+    const v = c ? JSON.stringify(c) : null;
+    return v && LATIN1.test(v) ? v : null;
+  } catch {
+    return null;
+  }
+};
+
 const getCreds = async (env: Env) => {
   const now = Date.now();
   if (credsMemo && now - credsMemo.at < CREDS_MEMO_MS) return credsMemo.v;
-  const v = (await env.AREA_KV?.get(CREDS_KEY)) ?? null;
+  const v = credsOfRaw((await env.AREA_KV?.get(CREDS_KEY)) ?? null);
   credsMemo = { v, at: now };
   return v;
 };
@@ -318,13 +372,28 @@ export default {
     // rewrite to plain /mcp. MCP is stateless POST; skip the GET cache path.
     const um = url.pathname.match(/^\/mcp\/u\/([A-Za-z0-9_-]+)$/);
     if (um) {
+      // limit before the KV read — a throttled caller must not spend the
+      // scarcest quota (KV reads) on a key that gets rejected anyway. The
+      // key is the caller's IP, not the URL key: rotating keys in the URL
+      // must not hand out a fresh bucket each time.
+      const ip = request.headers.get("cf-connecting-ip") ?? "unknown";
+      const limited = env.RATE_LIMITER
+        ? !(await env.RATE_LIMITER.limit({ key: `u:${ip}` })).success
+        : inMemoryLimited(`u:${ip}`);
+      if (limited) return json({ error: "rate limited — retry shortly" }, 429);
       const raw = await getConnector(env, um[1]);
       if (!raw) return json({ error: "unknown connector key" }, 404);
-      const limited = env.RATE_LIMITER
-        ? !(await env.RATE_LIMITER.limit({ key: `u:${um[1]}` })).success
-        : inMemoryLimited(`u:${um[1]}`);
-      if (limited) return json({ error: "rate limited — retry shortly" }, 429);
-      const openid = (JSON.parse(raw) as { openid: string }).openid;
+      let openid: string;
+      try {
+        const stored = JSON.parse(raw) as { openid?: unknown };
+        if (typeof stored.openid !== "string" || !/^\d+$/.test(stored.openid)) throw new Error("bad");
+        openid = stored.openid;
+      } catch {
+        // a corrupted KV value would otherwise 500 (or NaN the lookup) until
+        // the memo entry expires — drop it and answer a clean error
+        keyMemo.delete(um[1]);
+        return json({ error: "connector key unreadable — register again" }, 500);
+      }
       url.pathname = "/mcp";
       h.set(HDR_BLABLAID, openid);
       const creds = await getCreds(env);
