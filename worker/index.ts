@@ -140,7 +140,15 @@ const adminToken = async (request: Request, env: Env) => {
   if (!env.AREA_KV) return json({ error: "KV not configured" }, 500);
   if (request.method === "GET") {
     const raw = await env.AREA_KV.get(CREDS_KEY);
-    const c = raw ? credsOf(JSON.parse(raw)) : null;
+    let c: ReturnType<typeof credsOf> = null;
+    if (raw) {
+      // a corrupted KV value must read as "not configured", not a 500
+      try {
+        c = credsOf(JSON.parse(raw));
+      } catch {
+        c = null;
+      }
+    }
     return json({ configured: !!c, open_id: c?.open_id ?? null, expires: c?.expires ?? null });
   }
   const c = credsOf(await request.json().catch(() => null));

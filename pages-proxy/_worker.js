@@ -29564,7 +29564,7 @@ var CREDS_KEY = "bla:creds";
 var HDR_CREDS = "x-bla-creds";
 var HDR_BLABLAID = "x-registered-blablaid";
 var edgeCache = caches.default;
-var BUILD_ID = false ? void 0 : "fef170eedcd9";
+var BUILD_ID = false ? void 0 : "d4a210472297";
 var DATA_HOST = "https://nikke-api-data.pages.dev";
 var REVALIDATE_MS = 3e5;
 var appPromise;
@@ -29644,7 +29644,14 @@ var adminToken = async (request, env) => {
   if (!env.AREA_KV) return json({ error: "KV not configured" }, 500);
   if (request.method === "GET") {
     const raw2 = await env.AREA_KV.get(CREDS_KEY);
-    const c2 = raw2 ? credsOf(JSON.parse(raw2)) : null;
+    let c2 = null;
+    if (raw2) {
+      try {
+        c2 = credsOf(JSON.parse(raw2));
+      } catch {
+        c2 = null;
+      }
+    }
     return json({ configured: !!c2, open_id: c2?.open_id ?? null, expires: c2?.expires ?? null });
   }
   const c = credsOf(await request.json().catch(() => null));
