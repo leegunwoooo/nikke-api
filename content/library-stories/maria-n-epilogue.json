@@ -1,0 +1,241 @@
+{
+  "collection": "MARIA-n",
+  "libraryCategory": "event_stories",
+  "sourceVideo": "https://youtu.be/Dg6Xm9isBIU",
+  "scenes": [
+    {
+      "groupId": "lib_maria_n_ep_00",
+      "name": "검은 달 안에서",
+      "lines": [
+        {
+          "id": "lib_maria_n_ep_00_1",
+          "text": "검은 달 내부의 공간.",
+          "window": "Narration",
+          "voice": null
+        },
+        {
+          "id": "lib_maria_n_ep_00_2",
+          "text": "마리안은 그곳에서 홀로, 다크 매터에 잠겨있다.",
+          "window": "Narration",
+          "voice": null
+        },
+        {
+          "id": "lib_maria_n_ep_00_3",
+          "text": "아무것도 없다.",
+          "window": "Narration",
+          "voice": null
+        },
+        {
+          "id": "lib_maria_n_ep_00_4",
+          "text": "아무런 소리도 들리지 않는다.",
+          "window": "Narration",
+          "voice": null
+        },
+        {
+          "id": "lib_maria_n_ep_00_5",
+          "text": "아무것도 느껴지지 않는다.",
+          "window": "Narration",
+          "voice": null
+        },
+        {
+          "id": "lib_maria_n_ep_00_6",
+          "text": "검은 달 안은, 마리안과 응축된 다크 매터 이외에는 아무것도 없다.",
+          "window": "Narration",
+          "voice": null
+        },
+        {
+          "id": "lib_maria_n_ep_00_7",
+          "speakerName": "마리안",
+          "text": "…….",
+          "window": "Speech",
+          "voice": null
+        },
+        {
+          "id": "lib_maria_n_ep_00_8",
+          "text": "마리안은 다크 매터 안에서 몸을 웅크린 채 잠에 든 듯 눈을 감고 있다.",
+          "window": "Narration",
+          "voice": null
+        },
+        {
+          "id": "lib_maria_n_ep_00_9",
+          "text": "잠들수는 없다. 다크 매터를 계속 붙잡아두어야 하기 때문에.",
+          "window": "Narration",
+          "voice": null
+        },
+        {
+          "id": "lib_maria_n_ep_00_10",
+          "text": "어둡고 고요한 곳에서.",
+          "window": "Narration",
+          "voice": null
+        },
+        {
+          "id": "lib_maria_n_ep_00_11",
+          "text": "마리안은 얼마나 걸릴지 모를 긴 시간을 홀로 버텨내야한다.",
+          "window": "Narration",
+          "voice": null
+        },
+        {
+          "id": "lib_maria_n_ep_00_12",
+          "speakerName": "마리안",
+          "text": "…하지만 괜찮아.",
+          "window": "Speech",
+          "voice": null
+        },
+        {
+          "id": "lib_maria_n_ep_00_13",
+          "speakerName": "마리안",
+          "text": "나에겐 수많은 기억이 있으니까.",
+          "window": "Speech",
+          "voice": null
+        },
+        {
+          "id": "lib_maria_n_ep_00_14",
+          "speakerName": "마리안",
+          "text": "외롭지 않아.",
+          "window": "Speech",
+          "voice": null
+        },
+        {
+          "id": "lib_maria_n_ep_00_15",
+          "speakerName": "마리안",
+          "text": "지휘관과의 추억은 무한히 있어.",
+          "window": "Speech",
+          "voice": null
+        },
+        {
+          "id": "lib_maria_n_ep_00_16",
+          "speakerName": "마리안",
+          "text": "그러니 외롭지 않아.",
+          "window": "Speech",
+          "voice": null
+        },
+        {
+          "id": "lib_maria_n_ep_00_17",
+          "speakerName": "마리안",
+          "text": "행복해.",
+          "window": "Speech",
+          "voice": null
+        },
+        {
+          "id": "lib_maria_n_ep_00_18",
+          "speakerName": "마리안",
+          "text": "그렇게나 많은 기억을 떠올려도,",
+          "window": "Speech",
+          "voice": null
+        },
+        {
+          "id": "lib_maria_n_ep_00_19",
+          "speakerName": "마리안",
+          "text": "그보다 더 많은 기억이 다시 떠올라.",
+          "window": "Speech",
+          "voice": null
+        },
+        {
+          "id": "lib_maria_n_ep_00_20",
+          "speakerName": "마리안",
+          "text": "뭐든 행복한 기억들 뿐이야.",
+          "window": "Speech",
+          "voice": null
+        },
+        {
+          "id": "lib_maria_n_ep_00_21",
+          "speakerName": "마리안",
+          "text": "이 기억들이 있다면, 나는 얼마든지 기다릴 수 있어.",
+          "window": "Speech",
+          "voice": null
+        },
+        {
+          "id": "lib_maria_n_ep_00_22",
+          "speakerName": "마리안",
+          "text": "응. 영원까지도 이겨낼 수 있어.",
+          "window": "Speech",
+          "voice": null
+        },
+        {
+          "id": "lib_maria_n_ep_00_23",
+          "speakerName": "마리안",
+          "text": "그러니까",
+          "window": "Speech",
+          "voice": null
+        },
+        {
+          "id": "lib_maria_n_ep_00_24",
+          "speakerName": "마리안",
+          "text": "제 걱정은 하지 말아요. 지휘관.",
+          "window": "Speech",
+          "voice": null
+        },
+        {
+          "id": "lib_maria_n_ep_00_25",
+          "speakerName": "마리안",
+          "text": "기다릴게요.",
+          "window": "Speech",
+          "voice": null
+        },
+        {
+          "id": "lib_maria_n_ep_00_26",
+          "speakerName": "마리안",
+          "text": "여기에서.",
+          "window": "Speech",
+          "voice": null
+        },
+        {
+          "id": "lib_maria_n_ep_00_27",
+          "speakerName": "마리안",
+          "text": "그러니 언젠가, 언젠가 그 모든 것을 끝내고.",
+          "window": "Speech",
+          "voice": null
+        },
+        {
+          "id": "lib_maria_n_ep_00_28",
+          "speakerName": "마리안",
+          "text": "여기로 돌아와 제 이름을 불러주세요.",
+          "window": "Speech",
+          "voice": null
+        },
+        {
+          "id": "lib_maria_n_ep_00_29",
+          "speakerName": "마리안",
+          "text": "상냥한 목소리로, 따뜻하게 불러주세요.",
+          "window": "Speech",
+          "voice": null
+        },
+        {
+          "id": "lib_maria_n_ep_00_30",
+          "speakerName": "마리안",
+          "text": "제 손을 잡아주세요.",
+          "window": "Speech",
+          "voice": null
+        },
+        {
+          "id": "lib_maria_n_ep_00_31",
+          "speakerName": "마리안",
+          "text": "사랑한다고 속삭여주세요.",
+          "window": "Speech",
+          "voice": null
+        },
+        {
+          "id": "lib_maria_n_ep_00_32",
+          "speakerName": "마리안",
+          "text": "그리고 꼭, 우리 꼭",
+          "window": "Speech",
+          "voice": null
+        },
+        {
+          "id": "lib_maria_n_ep_00_33",
+          "speakerName": "마리안",
+          "text": "같이 소풍가요.",
+          "window": "Speech",
+          "voice": null
+        },
+        {
+          "id": "lib_maria_n_ep_00_34",
+          "speakerName": "마리안",
+          "text": "약속이에요.",
+          "window": "Speech",
+          "voice": null
+        }
+      ]
+    }
+  ]
+}
