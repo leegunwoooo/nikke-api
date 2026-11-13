@@ -192,17 +192,22 @@ export const TRANSCRIPT_DUP_CUTOFF = 0.9;
 // Whole stories in the archive sit under 10% or above 50%, so half a file means a copy.
 export const TRANSCRIPT_FILE_DUP_CUTOFF = 0.5;
 
+// lib_maria-n_26 '안녕 : B' replays main-story lines (59% overlap) but is the
+// archive's own scene — its transcript copy also drops out at the file cutoff,
+// so without this the scene is missing from the data entirely (#69).
+export const LIBRARY_KEEP_IDS = new Set(["lib_maria-n_26"]);
+
 /**
  * Keep only scenes we don't already have. `known` holds the game data's lines
  * and grows with what's kept, so copies inside the archive drop out too. Most
  * archive scenes sit near 0% or 100% overlap, so the default cutoff is not sensitive.
  */
-export function selectNewScripts<T extends { lines: { text?: string }[] }>(scripts: T[], known: Set<string>, cutoff = 0.5) {
+export function selectNewScripts<T extends { lines: { text?: string }[] }>(scripts: T[], known: Set<string>, cutoff = 0.5, keep?: (s: T) => boolean) {
   const kept: T[] = [];
   for (const s of scripts) {
     const keys = dedupKeys(s.lines);
     const hits = keys.filter((k) => known.has(k)).length;
-    if (keys.length && hits / keys.length >= cutoff) continue;
+    if (keys.length && hits / keys.length >= cutoff && !keep?.(s)) continue;
     kept.push(s);
     for (const k of keys) known.add(k);
   }
@@ -210,8 +215,8 @@ export function selectNewScripts<T extends { lines: { text?: string }[] }>(scrip
 }
 
 /** Archive scenes first, so a transcript gives way to the same story published there. */
-export function selectLibraryScenes<T extends { lines: { text?: string }[]; sourceVideo?: string }>(archive: T[], transcripts: T[], known: Set<string>) {
-  const kept = selectNewScripts(archive, known);
+export function selectLibraryScenes<T extends { groupId: string; lines: { text?: string }[]; sourceVideo?: string }>(archive: T[], transcripts: T[], known: Set<string>) {
+  const kept = selectNewScripts(archive, known, 0.5, (s) => LIBRARY_KEEP_IDS.has(s.groupId));
   // each transcript file has its own source video
   const files = new Map<string | undefined, T[]>();
   for (const s of transcripts) files.set(s.sourceVideo, [...(files.get(s.sourceVideo) ?? []), s]);
@@ -318,7 +323,10 @@ export async function syncLibrary(fetchFn: typeof fetch = fetch, root = path.res
   await mkdir(tmp, { recursive: true });
   const archive = `${tmp}.tar.gz`;
   await writeFile(archive, Buffer.from(await res.arrayBuffer()));
-  await promisify(execFile)("tar", ["-xzf", archive, "--strip-components=1", "-C", tmp]);
+  // Windows GNU tar needs --force-local ("C:" is a remote host otherwise) and
+  // forward slashes — it can't chdir into a backslashed -C path
+  const local = (p: string) => p.replace(/\\/g, "/");
+  await promisify(execFile)("tar", ["--force-local", "-xzf", local(archive), "--strip-components=1", "-C", local(tmp)]);
   await rm(root, { recursive: true, force: true });
   await mkdir(root, { recursive: true });
   await rename(path.join(tmp, "public/scripts"), path.join(root, "scripts"));
