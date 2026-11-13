@@ -10,7 +10,7 @@ import { promisify } from "node:util";
 // The commit is pinned so an upstream edit can't change the API by itself —
 // bump it deliberately; fingerprint.ts then triggers a redeploy.
 export const LIBRARY_REPO = "VoMiRin/Nikke-Forbidden-Library";
-export const LIBRARY_COMMIT = "ee51d4e97fdf39579ac1726d914de989f4bdec70";
+export const LIBRARY_COMMIT = "c19a22540838bff3552dbf71b99ff8cb35549411";
 // beside data/raw, not in it: build.ts copies whatever else is in raw into dist
 export const LIBRARY_DIR = "data/library";
 // stories neither the CDN nor the archive has yet, transcribed from public videos
