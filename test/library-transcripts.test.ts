@@ -4,11 +4,11 @@ import { dedupKeys, libraryEventId, readTranscribedStories, selectLibraryScenes,
 
 const scenes = await readTranscribedStories();
 
-test("MARIA-n parts 1 and 2 have their 27 scenes, ready for the API", () => {
-  assert.equal(scenes.length, 27);
+test("MARIA-n parts 1 and 2 and the epilogue have their 28 scenes, ready for the API", () => {
+  assert.equal(scenes.length, 28);
   assert.equal(libraryEventId(scenes[0].collection), "lib_maria_n");
   for (const s of scenes) {
-    assert.match(s.groupId, /^lib_maria_n_[12]_\d\d$/);
+    assert.match(s.groupId, /^lib_maria_n_([12]|ep)_\d\d$/);
     assert.ok(s.name && s.lines.length);
     assert.equal(s.libraryCategory, "event_stories");
     assert.match(s.sourceVideo ?? "", /^https:\/\/youtu\.be\//);
@@ -29,6 +29,14 @@ test("silent lines and one-button replies stay in the script", () => {
   const flee = seven.findIndex((l) => l.text === "튀자고요?");
   assert.equal(seven[flee - 1].text, "튀자.");
   assert.equal(seven[flee - 1].window, "Self");
+});
+
+test("the epilogue cutscene keeps its silent line and ends on the promise", () => {
+  const ep = scenes.find((s) => s.groupId === "lib_maria_n_ep_00")!;
+  assert.equal(ep.name, "검은 달 안에서");
+  assert.equal(ep.lines.length, 34);
+  assert.deepEqual([ep.lines[6].text, ep.lines[6].speakerName], ["…….", "마리안"]);
+  assert.equal(ep.lines.at(-1)!.text, "약속이에요.");
 });
 
 test("short lines OCR can't read stay in the script", () => {
@@ -69,7 +77,7 @@ test("a published copy removes the whole transcript file, even where its lines d
   const keys = dedupKeys(part(1).flatMap((s) => s.lines));
   // every scene falls under the per-scene cutoff: only 3 in 4 lines match
   const copy = new Set(keys.filter((_, i) => i % 4));
-  assert.deepEqual(selectLibraryScenes([], scenes, copy), part(2));
+  assert.deepEqual(selectLibraryScenes([], scenes, copy), scenes.filter((s) => !part(1).includes(s)));
 });
 
 test("archive scenes win over a transcript of the same story", () => {
