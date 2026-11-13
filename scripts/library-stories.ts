@@ -318,7 +318,10 @@ export async function syncLibrary(fetchFn: typeof fetch = fetch, root = path.res
   await mkdir(tmp, { recursive: true });
   const archive = `${tmp}.tar.gz`;
   await writeFile(archive, Buffer.from(await res.arrayBuffer()));
-  await promisify(execFile)("tar", ["-xzf", archive, "--strip-components=1", "-C", tmp]);
+  // Windows GNU tar needs --force-local ("C:" is a remote host otherwise) and
+  // forward slashes — it can't chdir into a backslashed -C path
+  const local = (p: string) => p.replace(/\\/g, "/");
+  await promisify(execFile)("tar", ["--force-local", "-xzf", local(archive), "--strip-components=1", "-C", local(tmp)]);
   await rm(root, { recursive: true, force: true });
   await mkdir(root, { recursive: true });
   await rename(path.join(tmp, "public/scripts"), path.join(root, "scripts"));
