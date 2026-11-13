@@ -654,6 +654,7 @@ app.get("/", (c) =>
       "GET /api/cubes/:id": "큐브 detail — per-level stats, skills",
       "GET /api/archives": "in-game record-room (archive) album hierarchy — events, dates, scenes",
       "GET /api/archives/:id": "one archive entry by id",
+      "GET /api/relics": "유실물(lost relic) scenes with per-collection rollups; filters: q, category(lost_relics|event_lost_relics), collection",
       "GET /api/tables": "list raw table files",
       "GET /api/tables/:file": "raw synced table JSON",
       "GET /api/cdn?path=": "resolve a Blablalink CDN resource path to its URL",
@@ -1835,6 +1836,48 @@ app.get("/api/archives/:id", async (c) => {
   const a = (await getArchives(lang)).find((x: any) => x.id === Number(id));
   if (!a) return c.json({ error: "not found" }, 404);
   return c.json(pickFields(a, fieldsOf(c)));
+});
+
+// 유실물 — library lost_relics/event_lost_relics scenes. The game files them
+// as named collectible sets (어느 남자의 수기, OLD TALES 유실물 …), so the
+// list rolls scenes up per collection too.
+const RELIC_CATEGORIES = new Set(["lost_relics", "event_lost_relics"]);
+
+app.get("/api/relics", async (c) => {
+  const { q, category, collection } = c.req.query();
+  let list = (await getScenes()).filter((s) => RELIC_CATEGORIES.has(s.libraryCategory ?? ""));
+  if (category) {
+    if (!RELIC_CATEGORIES.has(category)) {
+      return c.json({ error: `category must be one of: ${[...RELIC_CATEGORIES].join(", ")}` }, 400);
+    }
+    list = list.filter((s) => s.libraryCategory === category);
+  }
+  if (collection) {
+    const nq = norm(collection);
+    list = list.filter((s) => norm(s.collection ?? "").includes(nq));
+  }
+  if (q) {
+    const nq = norm(q);
+    list = list.filter((s) => [s.groupId, s.name, s.collection].some((v) => norm(v ?? "").includes(nq)));
+  }
+  const collections = new Map<string, { name: string; libraryCategory?: string; scenes: number; lines: number }>();
+  for (const s of list) {
+    const key = s.collection ?? "";
+    const e = collections.get(key) ?? { name: key, libraryCategory: s.libraryCategory, scenes: 0, lines: 0 };
+    e.scenes++;
+    e.lines += s.lines ?? 0;
+    collections.set(key, e);
+  }
+  const total = list.length;
+  const pg = pageQuery(c, total);
+  if ("error" in pg) return c.json({ error: pg.error }, 400);
+  return c.json({
+    count: total,
+    offset: pg.off,
+    ...(pg.page ? { page: pg.page, totalPages: Math.ceil(total / pg.lim) } : {}),
+    collections: [...collections.values()],
+    relics: pickFields(list.slice(pg.off, pg.off + pg.lim), fieldsOf(c)),
+  });
 });
 
 // static /api/user/nikke must be registered before /api/user/:blablaid — the

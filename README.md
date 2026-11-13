@@ -143,6 +143,7 @@ GET /api/user/<blablaid>/nikke/아니스               # 부분 일치 → 매�
 | `GET /api/user/<blablaid>/nikke/<nameOrId>` | 보유 니케 상세 — `<nameOrId>`는 이름(부분 일치) 또는 id·resourceId·nameCode. 단일 매칭 시 상세, 복수 매칭 시 목록 |
 | `GET /api/user/<blablaid>/roster` | 보유 니케 전원 일괄 — 업스트림 원시 형태(characters·details·stateEffects·outpost), 5개 서버 순회·`?area=`로 지정. 비공개 시 404 `reason=private` |
 | `GET /api/archives` / `GET /api/archives/:id` | 기록실(아카이브) 앨범 계층 — 이벤트·기간·씬 목록, `?type=`·`?fields=`·`?lang=` |
+| `GET /api/relics` | 유실물(lost relic) 씬 목록 + 컬렉션별 롤업 — `?category=lost_relics\|event_lost_relics`·`?collection=`·`?q=` |
 | `GET /api/tables` / `GET /api/tables/:file` | 원본 테이블 목록/조회 — 배열 테이블은 `?offset=&limit=` 페이지네이션·`?fields=` 지원 |
 | `GET /api/meta/filters` | 사용 가능한 필터 값 목록 (니케·스테이지·코스튬·장비 전부) |
 | `GET /api/cdn?path=` | CDN 리소스 경로 → URL 변환 |

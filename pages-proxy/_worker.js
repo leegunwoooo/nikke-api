@@ -26008,7 +26008,7 @@ var NIKKE_EXTRA = {
   // icon/descriptionTemplate/values that the default response strips
   skillLevels: ""
 };
-var API_GET_ALLOWED = /^\/api\/(stages|costumes|equips|avatars|cubes|meta|cdn|tables|archives|nikkes\/[^/?]+\/(spine|spine\.gif|burst|burst\.gif))(\/|\?|$)/;
+var API_GET_ALLOWED = /^\/api\/(stages|costumes|equips|avatars|cubes|meta|cdn|tables|archives|relics|nikkes\/[^/?]+\/(spine|spine\.gif|burst|burst\.gif))(\/|\?|$)/;
 var READ_ONLY = { readOnlyHint: true, idempotentHint: true, openWorldHint: false };
 var LIVE = { readOnlyHint: true, idempotentHint: true, openWorldHint: true };
 var USER_CALLS_PER_MINUTE = 30;
@@ -26494,7 +26494,7 @@ function buildServer(api, version2, origin = "", boundBlablaid) {
     "api_get",
     {
       title: "Call another read endpoint",
-      description: "GET the endpoints without a dedicated tool: /api/stages (?chapter=&mode=), /api/stages/:id, /api/costumes (?nikke=&grade=), /api/costumes/:id, /api/equips, /api/equips/options, /api/cubes, /api/avatars, /api/meta/filters, /api/archives (?type=, in-game record-room hierarchy), /api/tables and /api/tables/:file (raw synced tables \u2014 tower_list, stage_list, CharacterLevelTable etc.; page big ones with ?limit=&offset=), /api/nikkes/:id/spine (asset urls; stand.gif = pre-rendered lobby idle gif) and /api/nikkes/:id/spine.gif?skin=&anim= (idle=\uB85C\uBE44 \uB300\uAE30, action=\uD130\uCE58 \uB9AC\uC561\uC158) and /api/nikkes/:id/burst.gif?skin= (pre-rendered burst cutscene; both come back as a {redirect} to the jsDelivr file). Add lang=ko to flatten names. See /openapi.json for parameters.",
+      description: "GET the endpoints without a dedicated tool: /api/stages (?chapter=&mode=), /api/stages/:id, /api/costumes (?nikke=&grade=), /api/costumes/:id, /api/equips, /api/equips/options, /api/cubes, /api/avatars, /api/meta/filters, /api/archives (?type=, in-game record-room hierarchy), /api/relics (?q=&category=lost_relics|event_lost_relics&collection=, \uC720\uC2E4\uBB3C \uC52C + \uCEEC\uB809\uC158 \uB864\uC5C5), /api/tables and /api/tables/:file (raw synced tables \u2014 tower_list, stage_list, CharacterLevelTable etc.; page big ones with ?limit=&offset=), /api/nikkes/:id/spine (asset urls; stand.gif = pre-rendered lobby idle gif) and /api/nikkes/:id/spine.gif?skin=&anim= (idle=\uB85C\uBE44 \uB300\uAE30, action=\uD130\uCE58 \uB9AC\uC561\uC158) and /api/nikkes/:id/burst.gif?skin= (pre-rendered burst cutscene; both come back as a {redirect} to the jsDelivr file). Add lang=ko to flatten names. See /openapi.json for parameters.",
       inputSchema: object({
         path: string2().startsWith("/api/").describe("Path with query string, e.g. /api/stages?chapter=1&lang=ko")
       }),
@@ -26505,7 +26505,7 @@ function buildServer(api, version2, origin = "", boundBlablaid) {
       if (a.path.includes("..") || !API_GET_ALLOWED.test(u.pathname)) {
         return text(
           JSON.stringify({
-            error: "path not allowed \u2014 api_get serves stages, costumes, equips, cubes, avatars, meta, cdn, tables, archives and nikke spine/burst asset paths; use the dedicated tools for the rest"
+            error: "path not allowed \u2014 api_get serves stages, costumes, equips, cubes, avatars, meta, cdn, tables, archives, relics and nikke spine/burst asset paths; use the dedicated tools for the rest"
           }),
           true
         );
@@ -27604,6 +27604,21 @@ function buildOpenapi(pkgVersion) {
           responses: { "200": { description: "\uC544\uCE74\uC774\uBE0C \uC0C1\uC138" }, "404": { description: "\uC5C6\uC74C" } }
         }
       },
+      "/api/relics": {
+        get: {
+          tags: ["scenes"],
+          summary: "\uC720\uC2E4\uBB3C(lost relic) \uC52C \uBAA9\uB85D \u2014 \uCEEC\uB809\uC158\uBCC4 \uB864\uC5C5 \uD3EC\uD568",
+          parameters: [
+            { name: "q", in: "query", schema: { type: "string" }, description: "groupId\xB7\uC774\uB984\xB7\uCEEC\uB809\uC158 \uBD80\uBD84 \uC77C\uCE58" },
+            { name: "category", in: "query", schema: { type: "string", enum: ["lost_relics", "event_lost_relics"] } },
+            { name: "collection", in: "query", schema: { type: "string" }, description: "\uCEEC\uB809\uC158\uBA85 \uBD80\uBD84 \uC77C\uCE58 (\uC5B4\uB290 \uB0A8\uC790\uC758 \uC218\uAE30 \uB4F1)" },
+            { name: "page", in: "query", schema: { type: "integer", minimum: 1 }, description: "\uD398\uC774\uC9C0 \uBC88\uD638 (1\uBD80\uD130 \u2014 offset \uB300\uC2E0 \uC0AC\uC6A9, \uBBF8\uC9C0\uC815 limit \uC2DC \uD398\uC774\uC9C0 \uD06C\uAE30 50)" },
+            { name: "limit", in: "query", schema: { type: "integer", minimum: 1, maximum: 500 }, description: "\uCD5C\uB300 500, \uBBF8\uC9C0\uC815 \uC2DC \uC804\uCCB4" },
+            { name: "offset", in: "query", schema: { type: "integer", default: 0 } }
+          ],
+          responses: { "200": { description: "\uC720\uC2E4\uBB3C \uC52C \uBAA9\uB85D + collections \uB864\uC5C5" }, "400": { description: "\uC798\uBABB\uB41C category" } }
+        }
+      },
       "/api/tables/{file}": {
         get: {
           tags: ["misc"],
@@ -27668,6 +27683,7 @@ function buildOpenapi(pkgVersion) {
     "/api/favorites/{id}",
     "/api/cubes",
     "/api/cubes/{id}",
+    "/api/relics",
     "/api/user/{blablaid}/nikke",
     "/api/user/{blablaid}/nikke/{nameOrId}",
     "/api/user/{blablaid}/nikke-builds",
@@ -28156,6 +28172,7 @@ async function createApp(storage, options = {}) {
         "GET /api/cubes/:id": "\uD050\uBE0C detail \u2014 per-level stats, skills",
         "GET /api/archives": "in-game record-room (archive) album hierarchy \u2014 events, dates, scenes",
         "GET /api/archives/:id": "one archive entry by id",
+        "GET /api/relics": "\uC720\uC2E4\uBB3C(lost relic) scenes with per-collection rollups; filters: q, category(lost_relics|event_lost_relics), collection",
         "GET /api/tables": "list raw table files",
         "GET /api/tables/:file": "raw synced table JSON",
         "GET /api/cdn?path=": "resolve a Blablalink CDN resource path to its URL",
@@ -29139,6 +29156,43 @@ async function createApp(storage, options = {}) {
     if (!a) return c.json({ error: "not found" }, 404);
     return c.json(pickFields(a, fieldsOf(c)));
   });
+  const RELIC_CATEGORIES = /* @__PURE__ */ new Set(["lost_relics", "event_lost_relics"]);
+  app.get("/api/relics", async (c) => {
+    const { q, category, collection } = c.req.query();
+    let list = (await getScenes()).filter((s) => RELIC_CATEGORIES.has(s.libraryCategory ?? ""));
+    if (category) {
+      if (!RELIC_CATEGORIES.has(category)) {
+        return c.json({ error: `category must be one of: ${[...RELIC_CATEGORIES].join(", ")}` }, 400);
+      }
+      list = list.filter((s) => s.libraryCategory === category);
+    }
+    if (collection) {
+      const nq = norm(collection);
+      list = list.filter((s) => norm(s.collection ?? "").includes(nq));
+    }
+    if (q) {
+      const nq = norm(q);
+      list = list.filter((s) => [s.groupId, s.name, s.collection].some((v) => norm(v ?? "").includes(nq)));
+    }
+    const collections = /* @__PURE__ */ new Map();
+    for (const s of list) {
+      const key2 = s.collection ?? "";
+      const e = collections.get(key2) ?? { name: key2, libraryCategory: s.libraryCategory, scenes: 0, lines: 0 };
+      e.scenes++;
+      e.lines += s.lines ?? 0;
+      collections.set(key2, e);
+    }
+    const total = list.length;
+    const pg = pageQuery(c, total);
+    if ("error" in pg) return c.json({ error: pg.error }, 400);
+    return c.json({
+      count: total,
+      offset: pg.off,
+      ...pg.page ? { page: pg.page, totalPages: Math.ceil(total / pg.lim) } : {},
+      collections: [...collections.values()],
+      relics: pickFields(list.slice(pg.off, pg.off + pg.lim), fieldsOf(c))
+    });
+  });
   app.get("/api/user", userProfile);
   app.get("/api/user/nikke", userNikkeList);
   app.get("/api/user/nikke/:nameOrId", userNikkeDetail);
@@ -29576,7 +29630,7 @@ var CREDS_KEY = "bla:creds";
 var HDR_CREDS = "x-bla-creds";
 var HDR_BLABLAID = "x-registered-blablaid";
 var edgeCache = caches.default;
-var BUILD_ID = false ? void 0 : "0d1cb9cb6688";
+var BUILD_ID = false ? void 0 : "fef38601dd49";
 var DATA_HOST = "https://nikke-api-data.pages.dev";
 var REVALIDATE_MS = 3e5;
 var BUILD_TIMEOUT_MS = 3e4;
