@@ -7,7 +7,8 @@
 ## 변경 시 함께 갱신
 - API 수정 시 `src/mcp.ts`도 같은 범위로 작업. 새 필드/엔드포인트는 `NIKKE_EXTRA`, 전용 tool,
   `api_get` 허용 목록 중 맞는 곳에 매핑하고 `docs/mcp.md` 도구 표도 갱신. MCP만 뒤처진 상태 금지.
-- 동작이 바뀌면 `README.md`, `API.md`도 갱신.
+- 동작이 바뀌면 `README.md`, `API.md`, `nikke-api.postman_collection.json`도 갱신.
+  `src/factory.ts`·`src/mcp.ts`·`src/openapi.ts`가 바뀌었는데 문서 3개가 그대로면 `Stop` 훅(`scripts/check-docs-sync.mjs`)이 차단함.
 - `worker/`나 `src/` 변경 시 `npm run emit:pages-worker` 실행. 번들에 `src/`도 포함되고, 생성물이지만 git 추적.
 
 ## 작업 순서

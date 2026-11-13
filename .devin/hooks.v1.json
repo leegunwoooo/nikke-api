@@ -1,0 +1,13 @@
+{
+  "Stop": [
+    {
+      "hooks": [
+        {
+          "type": "command",
+          "command": "node scripts/check-docs-sync.mjs",
+          "timeout": 15
+        }
+      ]
+    }
+  ]
+}
