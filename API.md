@@ -20,6 +20,7 @@
 - [GET /api/meta/filters](#get-apimetafilters) — 필터 값 목록
 - [GET /api/archives](#get-apiarchives) — 기록실(아카이브) 앨범 계층
 - [GET /api/archives/:id](#get-apiarchivesid) — 아카이브 단건
+- [GET /api/relics](#get-apirelics) — 유실물(lost relic) 씬 + 컬렉션 롤업
 - [GET /api/tables](#get-apitables) — 원본 테이블 목록
 - [GET /api/tables/:file](#get-apitablesfile) — 원본 테이블 조회
 - [GET /api/scenes](#get-apiscenes) — 스토리 씬 목록 (한국어)
@@ -496,6 +497,37 @@ GET /api/nikkes/라피/spine.gif?skin=1&anim=action
 ## GET /api/archives/:id
 
 아카이브 한 건을 반환합니다. `GET /api/archives/100`
+
+## GET /api/relics
+
+금서고 유실물 씬(`libraryCategory` `lost_relics`/`event_lost_relics`) 목록을 반환합니다. 게임이 수기·통화기록·데이터 세트로 묶는 **컬렉션별 롤업**(`collections`)도 함께 줍니다.
+
+| 파라미터 | 설명 |
+|---|---|
+| `q` | groupId·이름·컬렉션 부분 일치 |
+| `category` | `lost_relics` 또는 `event_lost_relics` (그 외 값은 400) |
+| `collection` | 컬렉션명 부분 일치 |
+| `limit` / `offset` / `page` | 페이지네이션 |
+| `fields` | dot 경로 필드 추리기 |
+
+```json
+{
+  "count": 831,
+  "collections": [{
+    "name": "어느 남자의 수기",
+    "libraryCategory": "lost_relics",
+    "scenes": 3,
+    "lines": 42
+  }],
+  "relics": [{
+    "groupId": "lib_…",
+    "name": "XX 년 2월 7일.",
+    "collection": "어느 남자의 수기",
+    "libraryCategory": "lost_relics",
+    "lines": 5
+  }]
+}
+```
 
 ## GET /api/tables
 

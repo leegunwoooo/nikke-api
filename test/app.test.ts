@@ -167,8 +167,8 @@ test("event source records which scene list the group came from", async () => {
 });
 
 test("scenes index, nikke filter is case/space-insensitive", async () => {
-  assert.equal((await json("/api/scenes")).count, 6);
-  assert.equal((await json("/api/scenes?category=library")).count, 1);
+  assert.equal((await json("/api/scenes")).count, 9);
+  assert.equal((await json("/api/scenes?category=library")).count, 4);
   assert.equal((await json("/api/scenes?q=ARK RANGER")).scenes[0].groupId, "lib_test_00"); // q matches the collection
   assert.equal((await json("/api/scenes?q=event_stories")).count, 1);
   assert.equal((await json("/api/scenes?category=library&nikke=금서고")).count, 1);
@@ -357,6 +357,20 @@ test("archives expose the record-room hierarchy with event links", async () => {
   assert.equal(b.children[0].event, "event_firstaffection");
   assert.equal((await app.request("/api/archives?lang=fr")).status, 400);
   assert.equal((await app.request("/api/archives/nope")).status, 400);
+});
+
+test("/api/relics lists lost relic scenes rolled up by collection", async () => {
+  const all = await json("/api/relics");
+  assert.equal(all.count, 3);
+  const col = all.collections.find((x: any) => x.name === "어느 남자의 수기");
+  assert.deepEqual(col, { name: "어느 남자의 수기", libraryCategory: "lost_relics", scenes: 2, lines: 12 });
+  assert.equal(all.relics[2].groupId, "lib_ev_relic_00");
+
+  assert.equal((await json("/api/relics?category=lost_relics")).count, 2);
+  assert.equal((await json("/api/relics?category=event_lost_relics")).count, 1);
+  assert.equal((await get("/api/relics?category=event_stories")).status, 400);
+  assert.equal((await json("/api/relics?collection=OLD TALES")).count, 1);
+  assert.equal((await json("/api/relics?q=침식")).count, 1);
 });
 
 test("favorites + tables", async () => {

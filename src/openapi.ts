@@ -793,6 +793,21 @@ const openapi = {
         responses: { "200": { description: "아카이브 상세" }, "404": { description: "없음" } },
       },
     },
+    "/api/relics": {
+      get: {
+        tags: ["scenes"],
+        summary: "유실물(lost relic) 씬 목록 — 컬렉션별 롤업 포함",
+        parameters: [
+          { name: "q", in: "query", schema: { type: "string" }, description: "groupId·이름·컬렉션 부분 일치" },
+          { name: "category", in: "query", schema: { type: "string", enum: ["lost_relics", "event_lost_relics"] } },
+          { name: "collection", in: "query", schema: { type: "string" }, description: "컬렉션명 부분 일치 (어느 남자의 수기 등)" },
+          { name: "page", in: "query", schema: { type: "integer", minimum: 1 }, description: "페이지 번호 (1부터 — offset 대신 사용, 미지정 limit 시 페이지 크기 50)" },
+          { name: "limit", in: "query", schema: { type: "integer", minimum: 1, maximum: 500 }, description: "최대 500, 미지정 시 전체" },
+          { name: "offset", in: "query", schema: { type: "integer", default: 0 } },
+        ],
+        responses: { "200": { description: "유실물 씬 목록 + collections 롤업" }, "400": { description: "잘못된 category" } },
+      },
+    },
     "/api/tables/{file}": {
       get: {
         tags: ["misc"],
@@ -861,6 +876,7 @@ for (const p of [
   "/api/favorites/{id}",
   "/api/cubes",
   "/api/cubes/{id}",
+  "/api/relics",
   "/api/user/{blablaid}/nikke",
   "/api/user/{blablaid}/nikke/{nameOrId}",
   "/api/user/{blablaid}/nikke-builds",

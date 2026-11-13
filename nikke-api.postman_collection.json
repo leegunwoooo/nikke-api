@@ -571,6 +571,57 @@
           }
         },
         {
+          "name": "유실물 목록",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{baseUrl}}/api/relics?limit=20",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "relics"
+              ],
+              "query": [
+                {
+                  "key": "q",
+                  "value": "",
+                  "description": "groupId·이름·컬렉션 부분 일치",
+                  "disabled": true
+                },
+                {
+                  "key": "category",
+                  "value": "",
+                  "description": "lost_relics|event_lost_relics",
+                  "disabled": true
+                },
+                {
+                  "key": "collection",
+                  "value": "",
+                  "description": "컬렉션명 부분 일치 (어느 남자의 수기 등)",
+                  "disabled": true
+                },
+                {
+                  "key": "limit",
+                  "value": "20"
+                },
+                {
+                  "key": "offset",
+                  "value": "0",
+                  "disabled": true
+                },
+                {
+                  "key": "page",
+                  "value": "1",
+                  "description": "1부터 — offset 대신 사용",
+                  "disabled": true
+                }
+              ]
+            }
+          }
+        },
+        {
           "name": "이벤트 전체 대본",
           "request": {
             "method": "GET",
