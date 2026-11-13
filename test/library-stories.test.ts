@@ -3,10 +3,12 @@ import { test } from "node:test";
 import {
   assertDistinctIds,
   dedupKeys,
+  LIBRARY_KEEP_IDS,
   libraryEventId,
   libraryGroupId,
   parseLibraryCatalog,
   parseLibraryScript,
+  selectLibraryScenes,
   selectNewScripts,
 } from "../scripts/library-stories.js";
 
@@ -179,4 +181,13 @@ test("dedup drops scenes we already have and copies inside the archive", () => {
   const short = { id: "short", lines: [line("응.")] };
   const known = new Set(dedupKeys(inGame.lines));
   assert.deepEqual(selectNewScripts([inGame, fresh, copy, short], known).map((s) => s.id), ["new", "short"]);
+});
+
+test("a keep-listed archive scene survives a dedup cutoff it would fail", () => {
+  const line = (text: string) => ({ text });
+  const inGame = { groupId: "game", lines: [line("이미 게임에 있는 긴 대사"), line("이것도 게임에 있는 대사")] };
+  const kept = { groupId: [...LIBRARY_KEEP_IDS][0], lines: inGame.lines };
+  const dropped = { groupId: "lib_other_00", lines: inGame.lines };
+  const known = new Set(dedupKeys(inGame.lines));
+  assert.deepEqual(selectLibraryScenes([kept, dropped], [], known).map((s) => s.groupId), [kept.groupId]);
 });
