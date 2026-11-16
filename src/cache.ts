@@ -3,8 +3,9 @@ import type { MiddlewareHandler } from "hono";
 
 const CACHE_CONTROL = "public, max-age=3600, s-maxage=86400, stale-while-revalidate=86400";
 
-// live-upstream paths outside the /api/user prefix — shared with worker/index.ts
-export const LINEUP_PATH = /^\/api\/stages\/\d+\/lineups$/;
+// live-upstream paths outside the /api/user prefix — shared with worker/index.ts.
+// the segment may be a numeric id or a "44-36" style stage number
+export const LINEUP_PATH = /^\/api\/stages\/[^/]+\/lineups$/;
 
 /**
  * Responses only change on a data or code deploy, so a weak ETag derived from

@@ -2158,7 +2158,7 @@ import path from "node:path";
 // src/cache.ts
 import crypto2 from "node:crypto";
 var CACHE_CONTROL = "public, max-age=3600, s-maxage=86400, stale-while-revalidate=86400";
-var LINEUP_PATH = /^\/api\/stages\/\d+\/lineups$/;
+var LINEUP_PATH = /^\/api\/stages\/[^/]+\/lineups$/;
 function cacheHeaders(version2) {
   return async (c, next) => {
     if (c.req.method !== "GET" && c.req.method !== "HEAD") return next();
@@ -29765,7 +29765,7 @@ var CREDS_KEY = "bla:creds";
 var HDR_CREDS = "x-bla-creds";
 var HDR_BLABLAID = "x-registered-blablaid";
 var edgeCache = caches.default;
-var BUILD_ID = false ? void 0 : "30be74065120";
+var BUILD_ID = false ? void 0 : "3c5d8904bed7";
 var DATA_HOST = "https://nikke-api-data.pages.dev";
 var REVALIDATE_MS = 3e5;
 var BUILD_TIMEOUT_MS = 3e4;

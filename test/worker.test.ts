@@ -291,6 +291,11 @@ test("stage lineups get creds injected and a short edge cache", async () => {
     assert.equal(second.status, 200);
     assert.equal(stub.lineupCalls.length, 1);
     assert.equal(second.headers.get("x-edge-cache"), "HIT");
+
+    // a "0-1" style name path is a live path too — creds must be injected
+    const named = await send(env, "/api/stages/0-1/lineups");
+    assert.equal(named.status, 200);
+    assert.equal(stub.lineupCalls.length, 2);
   } finally {
     stub.restore();
   }
