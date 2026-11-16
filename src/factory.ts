@@ -11,7 +11,7 @@ import { buildFamilies } from "./family.js";
 import { favoriteRouteEntries, ROUTE_COVERAGE_CHAPTER, ROUTE_SOURCES, STORY_ROUTE } from "./story-route.js";
 import { SCENE_CATEGORIES } from "./scene-categories.js";
 import { fieldsOf, LOCALES, localize, pickFields } from "./fields.js";
-import { accountCreds, blaCredsContext, credsFromHeader, decodeOpenid, gameApi, playerInfo } from "./blabla.js";
+import { accountCreds, blaCredsContext, credsFromHeader, decodeOpenid, gameApi, gameApiDirect, playerInfo } from "./blabla.js";
 import { createNikkeMcp, requestOrigin } from "./mcp.js";
 import { llmsTxt, mcpGuide, type ToolInfo } from "./llms.js";
 import { buildOpenapi } from "./openapi.js";
@@ -652,6 +652,7 @@ app.get("/", (c) =>
       "GET /api/stages": "campaign stage list; filters: q, chapter, mode; limit/offset",
       "GET /api/stages/:id": "stage detail (id)",
       "GET /api/stages/:id/lineups": "community clear-ranking lineups for a stage (BlablaLink opt-in leaderboard; live) — ?sort=low|high ?nikke= ?area=",
+      "GET /api/codes": "active CDK redemption codes (BlablaLink public feed, no auth)",
       "GET /api/costumes": "costume list; filters: q, grade, nikke; limit/offset",
       "GET /api/costumes/:id": "costume detail (costume tid)",
       "GET /api/equips": "equipment item list; filters: q, class, rare, slot; limit/offset",
@@ -1441,6 +1442,34 @@ app.get("/api/stages/:id/lineups", async (c) => {
     const status = msg.includes("not configured") ? 503 : 502;
     return c.json({ error: msg }, status);
   }
+});
+
+// BlablaLink's public CDK redemption list — the /api/game/direct path needs
+// no session or credentials. `active` = currently inside the validity window.
+app.get("/api/codes", async (c) => {
+  const res = await gameApiDirect("GetCdkRedemption");
+  if (res.code !== 0)
+    return c.json({ error: res.msg ?? "upstream error", code: res.code }, 502);
+  const now = Math.floor(Date.now() / 1000);
+  const codes = (((res.data as any)?.cdk_redemption_list ?? []) as any[]).map(
+    (e) => {
+      const validStart = Number(e.valid_time_start) || null;
+      const validEnd = Number(e.valid_time_end) || null;
+      return {
+        code: e.cdk,
+        regions: String(e.intl_game_id ?? "")
+          .split(",")
+          .filter(Boolean),
+        status: e.status,
+        validStart,
+        validEnd,
+        displayUntil: e.display_time ? Number(e.display_time) : null,
+        active:
+          validStart != null && validEnd != null && validStart <= now && now <= validEnd,
+      };
+    },
+  );
+  return c.json({ count: codes.length, codes: pickFields(codes, fieldsOf(c)) });
 });
 
 app.get("/api/costumes", async (c) => {

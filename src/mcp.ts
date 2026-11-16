@@ -915,6 +915,23 @@ export function buildServer(api: Fetcher, version: string, origin = "", boundBla
     }),
   );
 
+  server.registerTool(
+    "get_redeem_codes",
+    {
+      title: "Get active redeem codes",
+      description:
+        "CDK redemption codes (BlablaLink public feed) — code text, target server regions, validity window, and whether each is currently redeemable. Live and rate limited.",
+      inputSchema: z.object({}),
+      annotations: LIVE,
+    },
+    userTool("get_redeem_codes", () =>
+      call(api, "get_redeem_codes", "/api/codes", (d: any) => ({
+        count: d.count,
+        codes: d.codes,
+      })),
+    ),
+  );
+
   // ChatGPT's connector/deep-research contract: search(query) -> results with
   // id/title/url, fetch(id) -> one document. Ids are "<kind>:<key>".
   server.registerTool(

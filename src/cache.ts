@@ -7,6 +7,11 @@ const CACHE_CONTROL = "public, max-age=3600, s-maxage=86400, stale-while-revalid
 // the segment may be a numeric id or a "44-36" style stage number
 export const LINEUP_PATH = /^\/api\/stages\/[^/]+\/lineups$/;
 
+// every live-upstream GET that should take the short edge TTL — lineups and
+// /api/codes (public live feed, no session) plus /api/user/* handled inline
+export const LIVE_PATH = (pathname: string) =>
+  LINEUP_PATH.test(pathname) || pathname === "/api/codes";
+
 /**
  * Responses only change on a data or code deploy, so a weak ETag derived from
  * the version (syncedAt, plus the build id when bundled) + request URL is
@@ -21,7 +26,7 @@ export function cacheHeaders(version: string): MiddlewareHandler {
     // return stale 304s. /mcp's plain GET is a setup guide while an MCP
     // client's GET to the same URL needs the transport's answer — an URL-keyed
     // edge cache must not mix them
-    if (url.pathname.startsWith("/api/user") || url.pathname === "/mcp" || LINEUP_PATH.test(url.pathname)) {
+    if (url.pathname.startsWith("/api/user") || url.pathname === "/mcp" || LIVE_PATH(url.pathname)) {
       await next();
       c.header("Cache-Control", "no-store");
       return;

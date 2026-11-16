@@ -426,6 +426,16 @@ const openapi = {
         },
       },
     },
+    "/api/codes": {
+      get: {
+        tags: ["misc"],
+        summary: "CDK 리딤 코드 목록 — BlablaLink 공개 피드(무인증), 유효기간·대상 서버·active 플래그",
+        responses: {
+          "200": { description: "코드 목록 — code·regions·status·validStart·validEnd·displayUntil·active" },
+          "502": { description: "업스트림 오류" },
+        },
+      },
+    },
     "/api/costumes": {
       get: {
         tags: ["costumes"],
@@ -884,6 +894,7 @@ for (const p of [
   "/api/stages",
   "/api/stages/{id}",
   "/api/stages/{id}/lineups",
+  "/api/codes",
   "/api/costumes",
   "/api/costumes/{id}",
   "/api/equips",

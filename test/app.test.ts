@@ -545,6 +545,7 @@ function stubBlabla(opts: {
   details?: unknown[];
   basicInfo?: Record<string, unknown>;
   lineup?: { code?: number; list?: unknown[]; msg?: string };
+  codes?: { code?: number; list?: unknown[]; msg?: string };
   playerInfoCode?: number;
 } = {}) {
   const orig = globalThis.fetch;
@@ -570,6 +571,14 @@ function stubBlabla(opts: {
       lineupBodies.push(body);
       const l = opts.lineup ?? {};
       return Response.json({ code: l.code ?? 0, msg: l.msg ?? "", data: { list: l.list ?? [] } });
+    }
+    if (url.includes("GetCdkRedemption")) {
+      const cd = opts.codes ?? {};
+      return Response.json({
+        code: cd.code ?? 0,
+        msg: cd.msg ?? "",
+        data: { cdk_redemption_list: cd.list ?? [] },
+      });
     }
     if (url.includes("GetUserCharacters")) {
       const r = (
@@ -1134,6 +1143,62 @@ test("stage lineups accept a '44-36' style stage number", async () => {
     assert.equal(stub.lineupBodies.at(-1).stage_id, 7000001);
     const res = await get("/api/stages/no-such-stage/lineups");
     assert.equal(res.status, 404);
+  } finally {
+    stub.restore();
+  }
+});
+
+test("/api/codes maps the CDK feed and flags actives", async () => {
+  const now = Math.floor(Date.now() / 1000);
+  const stub = stubBlabla({
+    codes: {
+      list: [
+        {
+          cdk: "TESTCODE",
+          intl_game_id: "GLOBAL,HMT",
+          status: 0,
+          valid_time_start: String(now - 100),
+          valid_time_end: String(now + 100),
+          display_time: String(now + 100),
+        },
+        {
+          cdk: "OLDCODE",
+          intl_game_id: "GLOBAL",
+          status: 0,
+          valid_time_start: String(now - 200),
+          valid_time_end: String(now - 100),
+          display_time: String(now - 100),
+        },
+      ],
+    },
+  });
+  try {
+    const d = await json("/api/codes");
+    assert.equal(d.count, 2);
+    const [a, b] = d.codes;
+    assert.deepEqual(a, {
+      code: "TESTCODE",
+      regions: ["GLOBAL", "HMT"],
+      status: 0,
+      validStart: now - 100,
+      validEnd: now + 100,
+      displayUntil: now + 100,
+      active: true,
+    });
+    assert.equal(b.active, false);
+    // public live feed — short edge TTL, no version-pinned cache
+    const res = await get("/api/codes");
+    assert.match(res.headers.get("cache-control") ?? "", /no-store/);
+  } finally {
+    stub.restore();
+  }
+});
+
+test("/api/codes upstream error -> 502", async () => {
+  const stub = stubBlabla({ codes: { code: 500, msg: "boom" } });
+  try {
+    const res = await get("/api/codes");
+    assert.equal(res.status, 502);
   } finally {
     stub.restore();
   }

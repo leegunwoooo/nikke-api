@@ -26,6 +26,7 @@ function stubFetch(perArea: (area: number) => { code: number; characters?: unkno
   const areaCalls: number[] = [];
   const paths: string[] = [];
   const lineupCalls: number[] = [];
+  let cdkCalls = 0;
   globalThis.fetch = (async (input: any, init?: any) => {
     const url = String(input?.url ?? input);
     if (url.startsWith(DIST_HOST)) {
@@ -54,12 +55,19 @@ function stubFetch(perArea: (area: number) => { code: number; characters?: unkno
       lineupCalls.push(body.stage_id);
       return Response.json({ code: 0, data: { list: [] } });
     }
+    if (url.includes("GetCdkRedemption")) {
+      cdkCalls++;
+      return Response.json({ code: 0, data: { cdk_redemption_list: [] } });
+    }
     return Response.json({ code: -1, msg: "unmocked" });
   }) as typeof fetch;
   return {
     areaCalls,
     paths,
     lineupCalls,
+    get cdkCalls() {
+      return cdkCalls;
+    },
     restore: () => {
       globalThis.fetch = orig;
     },
@@ -296,6 +304,26 @@ test("stage lineups get creds injected and a short edge cache", async () => {
     const named = await send(env, "/api/stages/0-1/lineups");
     assert.equal(named.status, 200);
     assert.equal(stub.lineupCalls.length, 2);
+  } finally {
+    stub.restore();
+  }
+});
+
+test("/api/codes takes the short edge cache without spending creds", async () => {
+  const stub = stubFetch();
+  try {
+    const { env } = envOf();
+    const first = await send(env, "/api/codes");
+    assert.equal(first.status, 200);
+    assert.equal(stub.cdkCalls, 1);
+
+    const second = await send(env, "/api/codes");
+    assert.equal(second.status, 200);
+    assert.equal(second.headers.get("x-edge-cache"), "HIT");
+    assert.equal(stub.cdkCalls, 1);
+
+    // public feed — no session login, so no creds/KV spend at all
+    assert.ok(!stub.paths.some((u) => u.endsWith("/api/user/Login")));
   } finally {
     stub.restore();
   }

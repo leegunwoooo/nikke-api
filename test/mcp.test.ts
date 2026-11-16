@@ -49,6 +49,7 @@ test("mcp initialize + tools/list", async () => {
   // it's exposed as a live tool like the other get_user_* tools
   assert.ok(names.includes("get_user_roster"));
   assert.ok(names.includes("get_stage_lineups"));
+  assert.ok(names.includes("get_redeem_codes"));
   const search = tools.find((t: any) => t.name === "search_nikkes");
   assert.deepEqual(search.inputSchema.properties.element.enum, ["Fire", "Water", "Wind", "Electronic", "Iron"]);
 });
@@ -649,6 +650,33 @@ test("get_stage_lineups hits the rank-list route and trims the payload", async (
   } finally {
     globalThis.fetch = orig;
     process.env = env;
+    resetUserRateLimit();
+  }
+});
+
+test("get_redeem_codes wraps /api/codes without a session", async () => {
+  resetUserRateLimit();
+  const orig = globalThis.fetch;
+  globalThis.fetch = (async (input: any) => {
+    const url = String(input?.url ?? input);
+    if (url.includes("GetCdkRedemption"))
+      return Response.json({
+        code: 0,
+        data: {
+          cdk_redemption_list: [
+            { cdk: "TESTCODE", intl_game_id: "GLOBAL,HMT", status: 0, valid_time_start: "1", valid_time_end: "9999999999", display_time: "9999999999" },
+          ],
+        },
+      });
+    return Response.json({ code: -1, msg: "unmocked" });
+  }) as typeof fetch;
+  try {
+    const d = (await tool("get_redeem_codes", {})).json;
+    assert.equal(d.count, 1);
+    assert.equal(d.codes[0].code, "TESTCODE");
+    assert.equal(d.codes[0].active, true);
+  } finally {
+    globalThis.fetch = orig;
     resetUserRateLimit();
   }
 });

@@ -159,6 +159,20 @@ export const gameApi = <T = unknown>(
   body: Record<string, unknown>,
 ) => post<T>(`/api/game/proxy/${service}/${method}`, body);
 
+// /api/game/direct/* is the unauthenticated public variant (redeem codes,
+// guild cards, ...) — no session, no credentials, safe to call freely.
+export async function gameApiDirect<T = unknown>(
+  method: string,
+  body: Record<string, unknown> = {},
+): Promise<GameResponse<T>> {
+  const r = await fetch(`${BASE}/api/game/direct/Game/${method}`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(body),
+  });
+  return (await r.json()) as GameResponse<T>;
+}
+
 export const playerInfo = <T = unknown>(intlOpenId: string) =>
   post<T>("/api/ugc/direct/standalonesite/User/GetUserGamePlayerInfo", {
     intl_open_id: intlOpenId,

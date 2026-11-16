@@ -2159,11 +2159,12 @@ import path from "node:path";
 import crypto2 from "node:crypto";
 var CACHE_CONTROL = "public, max-age=3600, s-maxage=86400, stale-while-revalidate=86400";
 var LINEUP_PATH = /^\/api\/stages\/[^/]+\/lineups$/;
+var LIVE_PATH = (pathname) => LINEUP_PATH.test(pathname) || pathname === "/api/codes";
 function cacheHeaders(version2) {
   return async (c, next) => {
     if (c.req.method !== "GET" && c.req.method !== "HEAD") return next();
     const url2 = new URL(c.req.url);
-    if (url2.pathname.startsWith("/api/user") || url2.pathname === "/mcp" || LINEUP_PATH.test(url2.pathname)) {
+    if (url2.pathname.startsWith("/api/user") || url2.pathname === "/mcp" || LIVE_PATH(url2.pathname)) {
       await next();
       c.header("Cache-Control", "no-store");
       return;
@@ -8969,6 +8970,14 @@ async function post(path2, body) {
   throw new Error("blabla auth failed");
 }
 var gameApi = (service, method, body) => post(`/api/game/proxy/${service}/${method}`, body);
+async function gameApiDirect(method, body = {}) {
+  const r = await fetch(`${BASE}/api/game/direct/Game/${method}`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(body)
+  });
+  return await r.json();
+}
 var playerInfo = (intlOpenId) => post("/api/ugc/direct/standalonesite/User/GetUserGamePlayerInfo", {
   intl_open_id: intlOpenId
 });
@@ -26670,6 +26679,22 @@ function buildServer(api, version2, origin = "", boundBlablaid) {
     })
   );
   server.registerTool(
+    "get_redeem_codes",
+    {
+      title: "Get active redeem codes",
+      description: "CDK redemption codes (BlablaLink public feed) \u2014 code text, target server regions, validity window, and whether each is currently redeemable. Live and rate limited.",
+      inputSchema: object({}),
+      annotations: LIVE
+    },
+    userTool(
+      "get_redeem_codes",
+      () => call(api, "get_redeem_codes", "/api/codes", (d) => ({
+        count: d.count,
+        codes: d.codes
+      }))
+    )
+  );
+  server.registerTool(
     "search",
     {
       title: "Search everything",
@@ -27286,6 +27311,16 @@ function buildOpenapi(pkgVersion) {
           }
         }
       },
+      "/api/codes": {
+        get: {
+          tags: ["misc"],
+          summary: "CDK \uB9AC\uB524 \uCF54\uB4DC \uBAA9\uB85D \u2014 BlablaLink \uACF5\uAC1C \uD53C\uB4DC(\uBB34\uC778\uC99D), \uC720\uD6A8\uAE30\uAC04\xB7\uB300\uC0C1 \uC11C\uBC84\xB7active \uD50C\uB798\uADF8",
+          responses: {
+            "200": { description: "\uCF54\uB4DC \uBAA9\uB85D \u2014 code\xB7regions\xB7status\xB7validStart\xB7validEnd\xB7displayUntil\xB7active" },
+            "502": { description: "\uC5C5\uC2A4\uD2B8\uB9BC \uC624\uB958" }
+          }
+        }
+      },
       "/api/costumes": {
         get: {
           tags: ["costumes"],
@@ -27727,6 +27762,7 @@ function buildOpenapi(pkgVersion) {
     "/api/stages",
     "/api/stages/{id}",
     "/api/stages/{id}/lineups",
+    "/api/codes",
     "/api/costumes",
     "/api/costumes/{id}",
     "/api/equips",
@@ -28223,6 +28259,7 @@ async function createApp(storage, options = {}) {
         "GET /api/stages": "campaign stage list; filters: q, chapter, mode; limit/offset",
         "GET /api/stages/:id": "stage detail (id)",
         "GET /api/stages/:id/lineups": "community clear-ranking lineups for a stage (BlablaLink opt-in leaderboard; live) \u2014 ?sort=low|high ?nikke= ?area=",
+        "GET /api/codes": "active CDK redemption codes (BlablaLink public feed, no auth)",
         "GET /api/costumes": "costume list; filters: q, grade, nikke; limit/offset",
         "GET /api/costumes/:id": "costume detail (costume tid)",
         "GET /api/equips": "equipment item list; filters: q, class, rare, slot; limit/offset",
@@ -28881,6 +28918,28 @@ async function createApp(storage, options = {}) {
       const status = msg.includes("not configured") ? 503 : 502;
       return c.json({ error: msg }, status);
     }
+  });
+  app.get("/api/codes", async (c) => {
+    const res = await gameApiDirect("GetCdkRedemption");
+    if (res.code !== 0)
+      return c.json({ error: res.msg ?? "upstream error", code: res.code }, 502);
+    const now = Math.floor(Date.now() / 1e3);
+    const codes = (res.data?.cdk_redemption_list ?? []).map(
+      (e) => {
+        const validStart = Number(e.valid_time_start) || null;
+        const validEnd = Number(e.valid_time_end) || null;
+        return {
+          code: e.cdk,
+          regions: String(e.intl_game_id ?? "").split(",").filter(Boolean),
+          status: e.status,
+          validStart,
+          validEnd,
+          displayUntil: e.display_time ? Number(e.display_time) : null,
+          active: validStart != null && validEnd != null && validStart <= now && now <= validEnd
+        };
+      }
+    );
+    return c.json({ count: codes.length, codes: pickFields(codes, fieldsOf(c)) });
   });
   app.get("/api/costumes", async (c) => {
     const { q, grade, nikke, limit, offset } = c.req.query();
@@ -29765,7 +29824,7 @@ var CREDS_KEY = "bla:creds";
 var HDR_CREDS = "x-bla-creds";
 var HDR_BLABLAID = "x-registered-blablaid";
 var edgeCache = caches.default;
-var BUILD_ID = false ? void 0 : "3c5d8904bed7";
+var BUILD_ID = false ? void 0 : "c294f06bbeb9";
 var DATA_HOST = "https://nikke-api-data.pages.dev";
 var REVALIDATE_MS = 3e5;
 var BUILD_TIMEOUT_MS = 3e4;
@@ -30049,7 +30108,7 @@ var index_default = {
       track("PASS");
       return new Response(res2.body, res2);
     }
-    const userPath = url2.pathname.startsWith("/api/user") || LINEUP_PATH.test(url2.pathname);
+    const userPath = url2.pathname.startsWith("/api/user") || LIVE_PATH(url2.pathname);
     const target = userPath ? userTargetOf(url2) : null;
     const isGet = request.method === "GET" || request.method === "HEAD";
     let key2;
@@ -30088,7 +30147,7 @@ var index_default = {
         }
       }
     }
-    if (userPath || url2.pathname.startsWith("/mcp")) {
+    if (url2.pathname.startsWith("/api/user") || LINEUP_PATH.test(url2.pathname) || url2.pathname.startsWith("/mcp")) {
       const creds = await getCreds(env);
       if (creds) h.set(HDR_CREDS, btoa(creds));
     }

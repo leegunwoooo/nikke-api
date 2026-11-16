@@ -7,7 +7,7 @@
 // ANALYTICS records one point per request (path group + HIT/MISS/PASS).
 
 import { createApp } from "../src/factory.js";
-import { LINEUP_PATH } from "../src/cache.js";
+import { LINEUP_PATH, LIVE_PATH } from "../src/cache.js";
 import { httpStorage } from "../src/storage.js";
 
 const USER_TTL = 300;
@@ -426,10 +426,11 @@ export default {
       return new Response(res.body, res);
     }
 
-    // live-upstream paths: creds get injected and responses take USER_TTL edge
-    // cache instead of the long static TTL — covers /api/user/* and stage
-    // lineups (community leaderboard on the shared account session)
-    const userPath = url.pathname.startsWith("/api/user") || LINEUP_PATH.test(url.pathname);
+    // live-upstream paths take the USER_TTL edge cache instead of the long
+    // static TTL — /api/user/*, stage lineups (community leaderboard) and
+    // /api/codes (public redeem-code feed). Only the session-backed ones get
+    // creds injected below.
+    const userPath = url.pathname.startsWith("/api/user") || LIVE_PATH(url.pathname);
     const target = userPath ? userTargetOf(url) : null;
     const isGet = request.method === "GET" || request.method === "HEAD";
     let key: Request | undefined;
@@ -490,8 +491,10 @@ export default {
       }
     }
 
-    // MISS/pass-through from here on — now the app and creds are needed
-    if (userPath || url.pathname.startsWith("/mcp")) {
+    // MISS/pass-through from here on — now the app and creds are needed.
+    // Creds only go to session-backed paths — public live feeds (/api/codes)
+    // must not spend a KV read per cold request
+    if (url.pathname.startsWith("/api/user") || LINEUP_PATH.test(url.pathname) || url.pathname.startsWith("/mcp")) {
       const creds = await getCreds(env);
       if (creds) h.set(HDR_CREDS, btoa(creds));
     }

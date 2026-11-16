@@ -35,6 +35,7 @@
 - [GET /api/stages](#get-apistages) — 캠페인 스테이지 목록
 - [GET /api/stages/:id](#get-apistagesid) — 스테이지 상세
 - [GET /api/stages/:id/lineups](#get-apistagesidlineups) — 클리어 라인업 랭킹 (라이브)
+- [GET /api/codes](#get-apicodes) — CDK 리딤 코드 (공개 라이브)
 - [GET /api/costumes](#get-apicostumes) — 코스튬 목록
 - [GET /api/costumes/:id](#get-apicostumesid) — 코스튬 상세
 - [GET /api/equips](#get-apiequips) — 장비 아이템 목록
@@ -955,6 +956,48 @@ GET /api/stages/6044044/lineups?nikke=신데렐라&sort=high
 | 스테이지·이름 없음 또는 업스트림이 못 찾음 | 404 `{"error": "not found"}` / `{"error": "unknown stage"}` |
 | 업스트림 오류·레이트리밋 | 502 `{"error": ..., "code": <upstream code>}` |
 | 조회 계정 미설정 | 503 `{"error": "blabla credentials not configured"}` |
+
+## GET /api/codes
+
+**CDK 리딤 코드 목록**입니다 — BlablaLink의 공개 피드(`/api/game/direct`)라 **인증·공유 계정 없이** 조회됩니다. 라이브 업스트림 데이터라 `no-store`이고 엣지에서는 300초간만 캐시됩니다.
+
+```
+GET /api/codes
+```
+
+```json
+{
+  "count": 1,
+  "codes": [
+    {
+      "code": "nikke4ever",
+      "regions": ["GLOBAL", "HMT"],
+      "status": 0,
+      "validStart": 1792844514,
+      "validEnd": 1795532399,
+      "displayUntil": 1795532399,
+      "active": true
+    }
+  ]
+}
+```
+
+| 필드 | 설명 |
+|------|------|
+| `code` | 리딤 코드 문자열 |
+| `regions` | 대상 서버 그룹 — `intl_game_id` 그대로 분리 (`GLOBAL`, `HMT` 등) |
+| `status` | 업스트림 상태 코드 (0 = 게시됨) |
+| `validStart` / `validEnd` | 사용 가능 기간 (unix 초) |
+| `displayUntil` | 사이트 노출 종료 시각 (unix 초) |
+| `active` | 지금 유효기간 안인지 (`validStart ≤ now ≤ validEnd`) |
+
+`?fields=`로 `codes[]` 항목의 필드를 선택할 수 있습니다.
+
+**에러**
+
+| 상황 | 상태 |
+|------|------|
+| 업스트림 오류 | 502 `{"error": ..., "code": <upstream code>}` |
 
 ## GET /api/costumes
 

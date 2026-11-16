@@ -1637,6 +1637,23 @@
       "name": "Misc",
       "item": [
         {
+          "name": "리딤 코드 (공개 라이브)",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{baseUrl}}/api/codes",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "codes"
+              ],
+              "description": "CDK 리딤 코드 목록 — BlablaLink 공개 피드(무인증). 코드·대상 서버(regions)·유효기간·active 플래그. 응답 no-store, 엣지 300초 캐시"
+            }
+          }
+        },
+        {
           "name": "CDN 경로 → URL",
           "request": {
             "method": "GET",
