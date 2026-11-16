@@ -794,7 +794,8 @@
                   "value": "id,name,battlePower",
                   "disabled": true
                 }
-              ]
+              ],
+              "description": "id 대신 '44-36' 같은 번호도 가능 (이름 앞부분 일치, 같은 번호면 Normal 우선)"
             }
           }
         },
@@ -803,14 +804,14 @@
           "request": {
             "method": "GET",
             "url": {
-              "raw": "{{baseUrl}}/api/stages/6044044/lineups",
+              "raw": "{{baseUrl}}/api/stages/44-36/lineups",
               "host": [
                 "{{baseUrl}}"
               ],
               "path": [
                 "api",
                 "stages",
-                "6044044",
+                "44-36",
                 "lineups"
               ],
               "query": [
