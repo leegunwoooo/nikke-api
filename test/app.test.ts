@@ -1072,3 +1072,46 @@ test("stage lineups are no-store like /api/user", async () => {
     stub.restore();
   }
 });
+
+test("stage lineups: ?sort=high orders by combat desc, invalid sort is 400", async () => {
+  const stub = stubBlabla({
+    lineup: {
+      list: [
+        { rank: 1, nickname: "a", total_combat: 100, squad: [{ slot: 1, tid: 1 }] },
+        { rank: 2, nickname: "b", total_combat: 200, squad: [{ slot: 1, tid: 1 }] },
+      ],
+    },
+  });
+  try {
+    const low = await json("/api/stages/6000001/lineups?area=83");
+    assert.deepEqual(low.lineups.map((e: any) => e.totalCombat), [100, 200]);
+    const high = await json("/api/stages/6000001/lineups?area=83&sort=high");
+    assert.deepEqual(high.lineups.map((e: any) => e.totalCombat), [200, 100]);
+    const bad = await get("/api/stages/6000001/lineups?area=83&sort=weird");
+    assert.equal(bad.status, 400);
+  } finally {
+    stub.restore();
+  }
+});
+
+test("stage lineups: ?nikke= filters by name or id", async () => {
+  const stub = stubBlabla({
+    lineup: {
+      list: [
+        { rank: 1, nickname: "a", total_combat: 100, squad: [{ slot: 1, tid: 1 }, { slot: 2, tid: 2 }] },
+        { rank: 2, nickname: "b", total_combat: 200, squad: [{ slot: 1, tid: 2 }] },
+      ],
+    },
+  });
+  try {
+    const byName = await json("/api/stages/6000001/lineups?area=83&nikke=" + encodeURIComponent("라피"));
+    assert.equal(byName.count, 1);
+    assert.equal(byName.lineups[0].nickname, "a");
+    const byId = await json("/api/stages/6000001/lineups?area=83&nikke=2");
+    assert.equal(byId.count, 2); // 앵커 is in both squads
+    const miss = await json("/api/stages/6000001/lineups?area=83&nikke=" + encodeURIComponent("없는캐릭터"));
+    assert.equal(miss.count, 0);
+  } finally {
+    stub.restore();
+  }
+});

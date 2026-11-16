@@ -640,7 +640,7 @@ app.get("/", (c) =>
       "GET /api/story/next": "next stories on the route; chapter|after, done, required",
       "GET /api/stages": "campaign stage list; filters: q, chapter, mode; limit/offset",
       "GET /api/stages/:id": "stage detail (id)",
-      "GET /api/stages/:id/lineups": "community clear-ranking lineups for a stage — lowest-combat squads first (BlablaLink opt-in leaderboard; live, ?area=)",
+      "GET /api/stages/:id/lineups": "community clear-ranking lineups for a stage (BlablaLink opt-in leaderboard; live) — ?sort=low|high ?nikke= ?area=",
       "GET /api/costumes": "costume list; filters: q, grade, nikke; limit/offset",
       "GET /api/costumes/:id": "costume detail (costume tid)",
       "GET /api/equips": "equipment item list; filters: q, class, rare, slot; limit/offset",
@@ -1395,11 +1395,28 @@ app.get("/api/stages/:id/lineups", async (c) => {
         .sort((a: any, b: any) => a.slot - b.slot),
       uuid: e.uuid,
     }));
+    let list = lineups;
+    const nikke = c.req.query("nikke");
+    if (nikke) {
+      const numeric = /^\d+$/.test(nikke) ? Number(nikke) : null;
+      const nq = norm(nikke);
+      list = list.filter((e) =>
+        e.squad.some((s: any) =>
+          numeric !== null
+            ? s.character.id === numeric || s.character.resourceId === numeric
+            : Object.values(s.character.name ?? {}).some((n) => norm(String(n)).includes(nq)),
+        ),
+      );
+    }
+    const sort = c.req.query("sort") ?? "low";
+    if (sort !== "low" && sort !== "high")
+      return c.json({ error: "invalid sort — low|high" }, 400);
+    if (sort === "high") list = [...list].sort((a, b) => b.totalCombat - a.totalCombat);
     return c.json({
       stage: stageRef(stageId) ?? { stageId },
       areaId: resolved.areaId,
-      count: lineups.length,
-      lineups: pickFields(lineups, fieldsOf(c)),
+      count: list.length,
+      lineups: pickFields(list, fieldsOf(c)),
     });
   } catch (e) {
     const msg = e instanceof Error ? e.message : String(e);

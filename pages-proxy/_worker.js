@@ -26642,7 +26642,9 @@ function buildServer(api, version2, origin = "", boundBlablaid) {
       description: "Community clear rankings for a campaign stage \u2014 the squads players cleared it with, lowest total combat first (BlablaLink opt-in leaderboard, cross-server). Stage ids come from api_get /api/stages or the stage field in story/search results. Live and rate limited.",
       inputSchema: object({
         stageId: number2().int().describe("Stage id, e.g. 6044044 for 44-36 BOSS"),
-        area: number2().int().optional().describe("Server area: 83 KR \xB7 81 JP \xB7 84 Global \xB7 82 NA \xB7 85 SEA. Omit for the lookup account's server")
+        area: number2().int().optional().describe("Server area: 83 KR \xB7 81 JP \xB7 84 Global \xB7 82 NA \xB7 85 SEA. Omit for the lookup account's server"),
+        sort: _enum(["low", "high"]).optional().describe("Order by total combat \u2014 'low' (default, lowest first) or 'high'"),
+        nikke: string2().optional().describe("Only lineups containing this character \u2014 name (any language, partial) or id")
       }),
       annotations: LIVE
     },
@@ -26664,7 +26666,7 @@ function buildServer(api, version2, origin = "", boundBlablaid) {
           }))
         }))
       });
-      return call(api, "get_stage_lineups", `/api/stages/${a.stageId}/lineups${qs({ area: a.area })}`, shape);
+      return call(api, "get_stage_lineups", `/api/stages/${a.stageId}/lineups${qs({ area: a.area, sort: a.sort, nikke: a.nikke })}`, shape);
     })
   );
   server.registerTool(
@@ -27271,7 +27273,9 @@ function buildOpenapi(pkgVersion) {
           summary: "\uC2A4\uD14C\uC774\uC9C0 \uD074\uB9AC\uC5B4 \uB77C\uC778\uC5C5 \uB7AD\uD0B9 \u2014 BlablaLink \uACF5\uC720(opt-in) \uB9AC\uB354\uBCF4\uB4DC, \uCD5C\uC800 \uC804\uD22C\uB825 \uD074\uB9AC\uC5B4 \uC21C \xB7 \uACF5\uC720 \uACC4\uC815 \uB77C\uC774\uBE0C \uC870\uD68C",
           parameters: [
             { name: "id", in: "path", required: true, schema: { type: "integer" }, example: 6044044 },
-            { name: "area", in: "query", schema: { type: "integer" }, description: "\uC11C\uBC84 \uC601\uC5ED id \u2014 \uBBF8\uC9C0\uC815 \uC2DC \uC870\uD68C \uACC4\uC815\uC758 \uC11C\uBC84 (83 KR \xB7 81 JP \xB7 84 Global \xB7 82 NA \xB7 85 SEA)" }
+            { name: "area", in: "query", schema: { type: "integer" }, description: "\uC11C\uBC84 \uC601\uC5ED id \u2014 \uBBF8\uC9C0\uC815 \uC2DC \uC870\uD68C \uACC4\uC815\uC758 \uC11C\uBC84 (83 KR \xB7 81 JP \xB7 84 Global \xB7 82 NA \xB7 85 SEA)" },
+            { name: "sort", in: "query", schema: { type: "string", enum: ["low", "high"] }, description: "\uCD1D \uC804\uD22C\uB825 \uC815\uB82C \u2014 low(\uAE30\uBCF8, \uB0AE\uC740 \uC21C) / high(\uB192\uC740 \uC21C)" },
+            { name: "nikke", in: "query", schema: { type: "string" }, description: "\uD574\uB2F9 \uCE90\uB9AD\uD130\uAC00 \uD3EC\uD568\uB41C \uB77C\uC778\uC5C5\uB9CC \u2014 \uC774\uB984(\uC804 \uC5B8\uC5B4 \uBD80\uBD84 \uC77C\uCE58) \uB610\uB294 id\xB7resourceId" }
           ],
           responses: {
             "200": { description: "\uD074\uB9AC\uC5B4 \uB7AD\uD0B9 \u2014 rank\xB7nickname\xB7areaId\xB7totalCombat\xB7squad(\uCE90\uB9AD\uD130\xB7\uC2A4\uD0A8\xB7\uB808\uBCA8\xB7\uC804\uD22C\uB825)\xB7clearedAt" },
@@ -28210,7 +28214,7 @@ async function createApp(storage, options = {}) {
         "GET /api/story/next": "next stories on the route; chapter|after, done, required",
         "GET /api/stages": "campaign stage list; filters: q, chapter, mode; limit/offset",
         "GET /api/stages/:id": "stage detail (id)",
-        "GET /api/stages/:id/lineups": "community clear-ranking lineups for a stage \u2014 lowest-combat squads first (BlablaLink opt-in leaderboard; live, ?area=)",
+        "GET /api/stages/:id/lineups": "community clear-ranking lineups for a stage (BlablaLink opt-in leaderboard; live) \u2014 ?sort=low|high ?nikke= ?area=",
         "GET /api/costumes": "costume list; filters: q, grade, nikke; limit/offset",
         "GET /api/costumes/:id": "costume detail (costume tid)",
         "GET /api/equips": "equipment item list; filters: q, class, rare, slot; limit/offset",
@@ -28840,11 +28844,26 @@ async function createApp(storage, options = {}) {
         }).sort((a, b) => a.slot - b.slot),
         uuid: e.uuid
       }));
+      let list = lineups;
+      const nikke = c.req.query("nikke");
+      if (nikke) {
+        const numeric = /^\d+$/.test(nikke) ? Number(nikke) : null;
+        const nq = norm(nikke);
+        list = list.filter(
+          (e) => e.squad.some(
+            (s) => numeric !== null ? s.character.id === numeric || s.character.resourceId === numeric : Object.values(s.character.name ?? {}).some((n) => norm(String(n)).includes(nq))
+          )
+        );
+      }
+      const sort = c.req.query("sort") ?? "low";
+      if (sort !== "low" && sort !== "high")
+        return c.json({ error: "invalid sort \u2014 low|high" }, 400);
+      if (sort === "high") list = [...list].sort((a, b) => b.totalCombat - a.totalCombat);
       return c.json({
         stage: stageRef(stageId) ?? { stageId },
         areaId: resolved.areaId,
-        count: lineups.length,
-        lineups: pickFields(lineups, fieldsOf(c))
+        count: list.length,
+        lineups: pickFields(list, fieldsOf(c))
       });
     } catch (e) {
       const msg = e instanceof Error ? e.message : String(e);
@@ -29735,7 +29754,7 @@ var CREDS_KEY = "bla:creds";
 var HDR_CREDS = "x-bla-creds";
 var HDR_BLABLAID = "x-registered-blablaid";
 var edgeCache = caches.default;
-var BUILD_ID = false ? void 0 : "4d60628eee69";
+var BUILD_ID = false ? void 0 : "8cb51e990837";
 var DATA_HOST = "https://nikke-api-data.pages.dev";
 var REVALIDATE_MS = 3e5;
 var BUILD_TIMEOUT_MS = 3e4;

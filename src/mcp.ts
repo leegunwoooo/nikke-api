@@ -880,10 +880,18 @@ export function buildServer(api: Fetcher, version: string, origin = "", boundBla
           .int()
           .optional()
           .describe("Server area: 83 KR · 81 JP · 84 Global · 82 NA · 85 SEA. Omit for the lookup account's server"),
+        sort: z
+          .enum(["low", "high"])
+          .optional()
+          .describe("Order by total combat — 'low' (default, lowest first) or 'high'"),
+        nikke: z
+          .string()
+          .optional()
+          .describe("Only lineups containing this character — name (any language, partial) or id"),
       }),
       annotations: LIVE,
     },
-    userTool("get_stage_lineups", (a: { stageId: number; area?: number }) => {
+    userTool("get_stage_lineups", (a: { stageId: number; area?: number; sort?: string; nikke?: string }) => {
       const shape = (d: any) => ({
         stage: d.stage,
         count: d.count,
@@ -901,7 +909,7 @@ export function buildServer(api: Fetcher, version: string, origin = "", boundBla
           })),
         })),
       });
-      return call(api, "get_stage_lineups", `/api/stages/${a.stageId}/lineups${qs({ area: a.area })}`, shape);
+      return call(api, "get_stage_lineups", `/api/stages/${a.stageId}/lineups${qs({ area: a.area, sort: a.sort, nikke: a.nikke })}`, shape);
     }),
   );
 

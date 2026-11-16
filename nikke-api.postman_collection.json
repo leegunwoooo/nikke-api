@@ -821,6 +821,18 @@
                   "description": "서버 영역 (83 KR · 81 JP · 84 Global · 82 NA · 85 SEA) — 생략 시 조회 계정 서버"
                 },
                 {
+                  "key": "sort",
+                  "value": "high",
+                  "disabled": true,
+                  "description": "총 전투력 정렬 — low(기본, 낮은 순) / high(높은 순)"
+                },
+                {
+                  "key": "nikke",
+                  "value": "신데렐라",
+                  "disabled": true,
+                  "description": "해당 캐릭터 포함 라인업만 — 이름(전 언어 부분 일치) 또는 id·resourceId"
+                },
+                {
                   "key": "fields",
                   "value": "rank,totalCombat,squad",
                   "disabled": true

@@ -897,11 +897,14 @@ GET /api/stages/6000001?fields=id,name,battlePower
 | 파라미터 | 설명 | 예시 |
 |----------|------|------|
 | `area` | 조회에 쓸 서버 영역 id — 미지정 시 **조회 계정의 서버** (83 KR · 81 JP · 84 Global · 82 NA · 85 SEA). 어떤 값이든 크로스서버 리스트가 내려옴 | `?area=83` |
+| `sort` | 총 전투력 정렬 — `low`(기본, 낮은 순) / `high`(높은 순). `rank`는 업스트림 순위 그대로 유지 | `?sort=high` |
+| `nikke` | 해당 캐릭터가 포함된 라인업만 — 이름(전 언어 부분 일치) 또는 id·resourceId | `?nikke=신데렐라`, `?nikke=451501` |
 | `fields` | `lineups[]` 각 항목에 적용할 필드 선택 | `?fields=rank,totalCombat,squad` |
 
 ```
 GET /api/stages/6044044/lineups
 GET /api/stages/6044044/lineups?area=81
+GET /api/stages/6044044/lineups?nikke=신데렐라&sort=high
 ```
 
 ```json
@@ -950,6 +953,7 @@ GET /api/stages/6044044/lineups?area=81
 | 상황 | 상태 |
 |------|------|
 | `id`가 숫자가 아님 | 400 `{"error": "invalid id"}` |
+| `sort`가 `low`/`high`가 아님 | 400 `{"error": "invalid sort — low\|high"}` |
 | 업스트림이 스테이지를 못 찾음 | 404 `{"error": "unknown stage"}` |
 | 업스트림 오류·레이트리밋 | 502 `{"error": ..., "code": <upstream code>}` |
 | 조회 계정 미설정 | 503 `{"error": "blabla credentials not configured"}` |

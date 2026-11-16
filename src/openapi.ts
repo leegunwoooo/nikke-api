@@ -414,6 +414,8 @@ const openapi = {
         parameters: [
           { name: "id", in: "path", required: true, schema: { type: "integer" }, example: 6044044 },
           { name: "area", in: "query", schema: { type: "integer" }, description: "서버 영역 id — 미지정 시 조회 계정의 서버 (83 KR · 81 JP · 84 Global · 82 NA · 85 SEA)" },
+          { name: "sort", in: "query", schema: { type: "string", enum: ["low", "high"] }, description: "총 전투력 정렬 — low(기본, 낮은 순) / high(높은 순)" },
+          { name: "nikke", in: "query", schema: { type: "string" }, description: "해당 캐릭터가 포함된 라인업만 — 이름(전 언어 부분 일치) 또는 id·resourceId" },
         ],
         responses: {
           "200": { description: "클리어 랭킹 — rank·nickname·areaId·totalCombat·squad(캐릭터·스킨·레벨·전투력)·clearedAt" },
