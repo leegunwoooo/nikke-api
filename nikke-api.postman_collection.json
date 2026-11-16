@@ -842,6 +842,37 @@
               "description": "BlablaLink 공개(opt-in) 클리어 랭킹 — 총 전투력 낮은 순. id 대신 '44-36' 번호 가능. 공유 계정 라이브 조회 (응답 no-store, 엣지 300초 캐시)"
             }
           }
+        },
+        {
+          "name": "라인업 — 니케 필터 (라이브)",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{baseUrl}}/api/stages/44-36/lineups?nikke=신데렐라&sort=high",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "stages",
+                "44-36",
+                "lineups"
+              ],
+              "query": [
+                {
+                  "key": "nikke",
+                  "value": "신데렐라",
+                  "description": "해당 캐릭터 포함 라인업만 — 이름(전 언어 부분 일치) 또는 id·resourceId"
+                },
+                {
+                  "key": "sort",
+                  "value": "high",
+                  "description": "총 전투력 정렬 — low(기본, 낮은 순) / high(높은 순)"
+                }
+              ],
+              "description": "신데렐라(크리스탈 웨이브 포함)가 들어간 클리어 라인업만, 전투력 높은 순으로"
+            }
+          }
         }
       ]
     },
