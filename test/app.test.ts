@@ -193,7 +193,10 @@ test("/api/stages list + filters + detail", async () => {
   assert.equal(d.mode, "Hard");
   assert.equal(d.scenarios.exit, null);
   assert.equal((await get("/api/stages/999")).status, 404);
-  assert.equal((await get("/api/stages/abc")).status, 400);
+  // name params are allowed ("0-1", "0-1h") — an unmatched name is a 404
+  assert.equal((await json("/api/stages/0-1")).id, 6000001); // Normal beats "0-1H STAGE"
+  assert.equal((await json("/api/stages/0-1h")).id, 7000001);
+  assert.equal((await get("/api/stages/abc")).status, 404);
   assert.equal((await get("/api/stages?chapter=x")).status, 400);
 });
 
@@ -1008,12 +1011,15 @@ test("stage lineups: rank list resolves tid->character and skin slot", async () 
     assert.equal(stub.lineupBodies.at(-1).area_id, 83);
     const [hi, lo] = d.lineups; // upstream order preserved (rank 2 first)
     // tid 2 is itself a character id -> kept; tid 103 -> base 101 -> unresolved {id}
-    assert.equal(lo.squad[0].character.name.ko, "라피");
+    assert.equal(lo.squad[0].character.name, "라피");
     assert.equal(lo.squad[0].skin, 0);
     assert.equal(hi.squad[0].character.id, 101); // 103 normalized, unknown
     assert.equal(hi.squad[0].skin, 2); // 103 - 101
-    assert.equal(hi.squad[1].character.name.ko, "앵커"); // raw tid 2 kept
+    assert.equal(hi.squad[1].character.name, "앵커"); // raw tid 2 kept
     assert.equal(hi.squad[1].skin, 0);
+    // personal fields stay out — nickname is the only identity
+    assert.equal(lo.intlOpenId, undefined);
+    assert.equal(lo.icon, undefined);
   } finally {
     stub.restore();
   }
@@ -1111,6 +1117,23 @@ test("stage lineups: ?nikke= filters by name or id", async () => {
     assert.equal(byId.count, 2); // 앵커 is in both squads
     const miss = await json("/api/stages/6000001/lineups?area=83&nikke=" + encodeURIComponent("없는캐릭터"));
     assert.equal(miss.count, 0);
+  } finally {
+    stub.restore();
+  }
+});
+
+test("stage lineups accept a '44-36' style stage number", async () => {
+  const stub = stubBlabla({ lineup: { list: [] } });
+  try {
+    // "0-1 STAGE" (Normal 6000001) and "0-1H STAGE" (Hard 7000001) both start
+    // with 0-1 — Normal wins
+    const d = await json("/api/stages/0-1/lineups");
+    assert.equal(stub.lineupBodies.at(-1).stage_id, 6000001);
+    assert.equal(d.stage.stageId, 6000001);
+    await json("/api/stages/0-1h/lineups");
+    assert.equal(stub.lineupBodies.at(-1).stage_id, 7000001);
+    const res = await get("/api/stages/no-such-stage/lineups");
+    assert.equal(res.status, 404);
   } finally {
     stub.restore();
   }

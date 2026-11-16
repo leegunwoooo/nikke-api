@@ -379,6 +379,17 @@ async function getStageRows() {
   return stageRowsNorm;
 }
 
+// a stage can be addressed by numeric id or by its display number — "44-36"
+// finds "44-36 BOSS" (Normal wins when Hard shares the same number)
+const stageIdFromParam = async (param: string): Promise<number | null> => {
+  if (/^\d+$/.test(param)) return Number(param);
+  const nq = norm(param);
+  if (!nq) return null;
+  const hits = (await getStageRows()).filter((s) => norm(s.name).startsWith(nq));
+  if (!hits.length) return null;
+  return (hits.find((s) => s.mode === "Normal") ?? hits[0]).id;
+};
+
 const loadStageMap = memo(async () => {
   if (!stageMap) {
     stageMap = new Map();
@@ -1337,9 +1348,8 @@ app.get("/api/stages", async (c) => {
 });
 
 app.get("/api/stages/:id", async (c) => {
-  const id = c.req.param("id");
-  if (!/^\d+$/.test(id)) return c.json({ error: "invalid id" }, 400);
-  const s = (await getStageRows()).find((x) => x.id === Number(id));
+  const stageId = await stageIdFromParam(c.req.param("id"));
+  const s = stageId == null ? null : (await getStageRows()).find((x) => x.id === stageId);
   if (!s) return c.json({ error: "not found" }, 404);
   return c.json(pickFields(s, fieldsOf(c)));
 });
@@ -1349,10 +1359,10 @@ app.get("/api/stages/:id", async (c) => {
 // area_id is the lookup account's home server unless ?area= overrides it
 // (same convention as the site's own rank panel). squad[].tid's last two
 // digits are a skin slot, so character resolution normalizes to the base id.
+// Personal fields stay out — the response only carries the public nickname.
 app.get("/api/stages/:id/lineups", async (c) => {
-  const id = c.req.param("id");
-  if (!/^\d+$/.test(id)) return c.json({ error: "invalid id" }, 400);
-  const stageId = Number(id);
+  const stageId = await stageIdFromParam(c.req.param("id"));
+  if (stageId == null) return c.json({ error: "not found" }, 404);
   try {
     const creds = accountCreds();
     if (!creds) return c.json({ error: "blabla credentials not configured" }, 503);
@@ -1366,14 +1376,11 @@ app.get("/api/stages/:id/lineups", async (c) => {
     if (res.code === 1303001) return c.json({ error: "unknown stage" }, 404);
     if (res.code !== 0)
       return c.json({ error: res.msg ?? "upstream error", code: res.code }, 502);
-    const { stageRef, avatarRef } = await loadProfileLookups();
+    const { stageRef } = await loadProfileLookups();
     const lineups = (((res.data as any)?.list ?? []) as any[]).map((e) => ({
       rank: e.rank,
       nickname: e.nickname,
       areaId: e.area_id,
-      intlOpenId: e.intl_open_id,
-      icon: avatarRef(e.icon_id),
-      iconIsPrism: !!e.is_icon_prism,
       clearedAt: e.cleared_at ? Number(e.cleared_at) : null,
       totalCombat: e.total_combat,
       squad: (e.squad ?? [])
@@ -1385,7 +1392,12 @@ app.get("/api/stages/:id/lineups", async (c) => {
           return {
             slot: s.slot,
             character: n
-              ? { id: n.id, resourceId: n.resourceId, name: n.name, image: n.images.icon }
+              ? {
+                  id: n.id,
+                  resourceId: n.resourceId,
+                  name: n.name.ko ?? n.name.en,
+                  image: n.images.icon,
+                }
               : { id: charId },
             skin: s.tid - charId,
             level: s.lv,
@@ -1400,11 +1412,17 @@ app.get("/api/stages/:id/lineups", async (c) => {
     if (nikke) {
       const numeric = /^\d+$/.test(nikke) ? Number(nikke) : null;
       const nq = norm(nikke);
+      const ids =
+        numeric !== null
+          ? null
+          : new Set(
+              characters
+                .filter((ch) => Object.values(ch.name ?? {}).some((nm) => norm(String(nm)).includes(nq)))
+                .map((ch) => ch.id),
+            );
       list = list.filter((e) =>
         e.squad.some((s: any) =>
-          numeric !== null
-            ? s.character.id === numeric || s.character.resourceId === numeric
-            : Object.values(s.character.name ?? {}).some((n) => norm(String(n)).includes(nq)),
+          ids ? ids.has(s.character.id) : s.character.id === numeric || s.character.resourceId === numeric,
         ),
       );
     }

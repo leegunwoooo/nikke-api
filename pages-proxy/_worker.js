@@ -26639,9 +26639,9 @@ function buildServer(api, version2, origin = "", boundBlablaid) {
     "get_stage_lineups",
     {
       title: "Get stage clear lineups",
-      description: "Community clear rankings for a campaign stage \u2014 the squads players cleared it with, lowest total combat first (BlablaLink opt-in leaderboard, cross-server). Stage ids come from api_get /api/stages or the stage field in story/search results. Live and rate limited.",
+      description: "Community clear rankings for a campaign stage \u2014 the squads players cleared it with, lowest total combat first (BlablaLink opt-in leaderboard, cross-server). Accepts a stage id or a '44-36' style stage number. Live and rate limited.",
       inputSchema: object({
-        stageId: number2().int().describe("Stage id, e.g. 6044044 for 44-36 BOSS"),
+        stageId: union([number2().int(), string2()]).describe("Stage id (6044044) or stage number ('44-36')"),
         area: number2().int().optional().describe("Server area: 83 KR \xB7 81 JP \xB7 84 Global \xB7 82 NA \xB7 85 SEA. Omit for the lookup account's server"),
         sort: _enum(["low", "high"]).optional().describe("Order by total combat \u2014 'low' (default, lowest first) or 'high'"),
         nikke: string2().optional().describe("Only lineups containing this character \u2014 name (any language, partial) or id")
@@ -26660,13 +26660,13 @@ function buildServer(api, version2, origin = "", boundBlablaid) {
           clearedAt: e.clearedAt,
           squad: (e.squad ?? []).map((s) => ({
             slot: s.slot,
-            name: s.character?.name?.ko ?? s.character?.name?.en ?? s.character?.name,
+            name: s.character?.name,
             level: s.level,
             combat: s.combat
           }))
         }))
       });
-      return call(api, "get_stage_lineups", `/api/stages/${a.stageId}/lineups${qs({ area: a.area, sort: a.sort, nikke: a.nikke })}`, shape);
+      return call(api, "get_stage_lineups", `/api/stages/${encodeURIComponent(a.stageId)}/lineups${qs({ area: a.area, sort: a.sort, nikke: a.nikke })}`, shape);
     })
   );
   server.registerTool(
@@ -27263,8 +27263,8 @@ function buildOpenapi(pkgVersion) {
         get: {
           tags: ["stages"],
           summary: "\uC2A4\uD14C\uC774\uC9C0 \uC0C1\uC138 \u2014 \uAD8C\uC7A5 \uC804\uD22C\uB825\xB7\uC2DC\uB098\uB9AC\uC624 \uD0A4",
-          parameters: [{ name: "id", in: "path", required: true, schema: { type: "integer" }, example: 6000001 }],
-          responses: { "200": { description: "\uC2A4\uD14C\uC774\uC9C0 \uC0C1\uC138" }, "400": { description: "id \uD615\uC2DD \uC624\uB958" }, "404": { description: "\uC5C6\uC74C" } }
+          parameters: [{ name: "id", in: "path", required: true, schema: { type: "string" }, example: "6000001", description: "\uC2A4\uD14C\uC774\uC9C0 id \uB610\uB294 '44-36' \uAC19\uC740 \uBC88\uD638 (\uC774\uB984 \uC55E\uBD80\uBD84 \uC77C\uCE58, \uAC19\uC740 \uBC88\uD638\uBA74 Normal \uC6B0\uC120)" }],
+          responses: { "200": { description: "\uC2A4\uD14C\uC774\uC9C0 \uC0C1\uC138" }, "404": { description: "\uC5C6\uC74C" } }
         }
       },
       "/api/stages/{id}/lineups": {
@@ -27272,14 +27272,14 @@ function buildOpenapi(pkgVersion) {
           tags: ["stages"],
           summary: "\uC2A4\uD14C\uC774\uC9C0 \uD074\uB9AC\uC5B4 \uB77C\uC778\uC5C5 \uB7AD\uD0B9 \u2014 BlablaLink \uACF5\uC720(opt-in) \uB9AC\uB354\uBCF4\uB4DC, \uCD5C\uC800 \uC804\uD22C\uB825 \uD074\uB9AC\uC5B4 \uC21C \xB7 \uACF5\uC720 \uACC4\uC815 \uB77C\uC774\uBE0C \uC870\uD68C",
           parameters: [
-            { name: "id", in: "path", required: true, schema: { type: "integer" }, example: 6044044 },
+            { name: "id", in: "path", required: true, schema: { type: "string" }, example: "6044044", description: "\uC2A4\uD14C\uC774\uC9C0 id \uB610\uB294 '44-36' \uAC19\uC740 \uBC88\uD638 (\uC774\uB984 \uC55E\uBD80\uBD84 \uC77C\uCE58, \uAC19\uC740 \uBC88\uD638\uBA74 Normal \uC6B0\uC120)" },
             { name: "area", in: "query", schema: { type: "integer" }, description: "\uC11C\uBC84 \uC601\uC5ED id \u2014 \uBBF8\uC9C0\uC815 \uC2DC \uC870\uD68C \uACC4\uC815\uC758 \uC11C\uBC84 (83 KR \xB7 81 JP \xB7 84 Global \xB7 82 NA \xB7 85 SEA)" },
             { name: "sort", in: "query", schema: { type: "string", enum: ["low", "high"] }, description: "\uCD1D \uC804\uD22C\uB825 \uC815\uB82C \u2014 low(\uAE30\uBCF8, \uB0AE\uC740 \uC21C) / high(\uB192\uC740 \uC21C)" },
             { name: "nikke", in: "query", schema: { type: "string" }, description: "\uD574\uB2F9 \uCE90\uB9AD\uD130\uAC00 \uD3EC\uD568\uB41C \uB77C\uC778\uC5C5\uB9CC \u2014 \uC774\uB984(\uC804 \uC5B8\uC5B4 \uBD80\uBD84 \uC77C\uCE58) \uB610\uB294 id\xB7resourceId" }
           ],
           responses: {
             "200": { description: "\uD074\uB9AC\uC5B4 \uB7AD\uD0B9 \u2014 rank\xB7nickname\xB7areaId\xB7totalCombat\xB7squad(\uCE90\uB9AD\uD130\xB7\uC2A4\uD0A8\xB7\uB808\uBCA8\xB7\uC804\uD22C\uB825)\xB7clearedAt" },
-            "400": { description: "id \uD615\uC2DD \uC624\uB958" },
+            "400": { description: "sort \uAC12 \uC624\uB958" },
             "404": { description: "\uC2A4\uD14C\uC774\uC9C0 \uC5C6\uC74C" },
             "502": { description: "\uC5C5\uC2A4\uD2B8\uB9BC \uC624\uB958" },
             "503": { description: "\uC870\uD68C \uACC4\uC815 \uBBF8\uC124\uC815" }
@@ -27985,6 +27985,14 @@ async function createApp(storage, options = {}) {
     stageRowsNorm ??= (await getStages()).map(stageRow);
     return stageRowsNorm;
   }
+  const stageIdFromParam = async (param) => {
+    if (/^\d+$/.test(param)) return Number(param);
+    const nq = norm(param);
+    if (!nq) return null;
+    const hits = (await getStageRows()).filter((s) => norm(s.name).startsWith(nq));
+    if (!hits.length) return null;
+    return (hits.find((s) => s.mode === "Normal") ?? hits[0]).id;
+  };
   const loadStageMap = memo3(async () => {
     if (!stageMap) {
       stageMap = /* @__PURE__ */ new Map();
@@ -28798,16 +28806,14 @@ async function createApp(storage, options = {}) {
     });
   });
   app.get("/api/stages/:id", async (c) => {
-    const id = c.req.param("id");
-    if (!/^\d+$/.test(id)) return c.json({ error: "invalid id" }, 400);
-    const s = (await getStageRows()).find((x) => x.id === Number(id));
+    const stageId = await stageIdFromParam(c.req.param("id"));
+    const s = stageId == null ? null : (await getStageRows()).find((x) => x.id === stageId);
     if (!s) return c.json({ error: "not found" }, 404);
     return c.json(pickFields(s, fieldsOf(c)));
   });
   app.get("/api/stages/:id/lineups", async (c) => {
-    const id = c.req.param("id");
-    if (!/^\d+$/.test(id)) return c.json({ error: "invalid id" }, 400);
-    const stageId = Number(id);
+    const stageId = await stageIdFromParam(c.req.param("id"));
+    if (stageId == null) return c.json({ error: "not found" }, 404);
     try {
       const creds = accountCreds();
       if (!creds) return c.json({ error: "blabla credentials not configured" }, 503);
@@ -28821,14 +28827,11 @@ async function createApp(storage, options = {}) {
       if (res.code === 1303001) return c.json({ error: "unknown stage" }, 404);
       if (res.code !== 0)
         return c.json({ error: res.msg ?? "upstream error", code: res.code }, 502);
-      const { stageRef, avatarRef } = await loadProfileLookups();
+      const { stageRef } = await loadProfileLookups();
       const lineups = (res.data?.list ?? []).map((e) => ({
         rank: e.rank,
         nickname: e.nickname,
         areaId: e.area_id,
-        intlOpenId: e.intl_open_id,
-        icon: avatarRef(e.icon_id),
-        iconIsPrism: !!e.is_icon_prism,
         clearedAt: e.cleared_at ? Number(e.cleared_at) : null,
         totalCombat: e.total_combat,
         squad: (e.squad ?? []).map((s) => {
@@ -28836,7 +28839,12 @@ async function createApp(storage, options = {}) {
           const n = byId.get(charId);
           return {
             slot: s.slot,
-            character: n ? { id: n.id, resourceId: n.resourceId, name: n.name, image: n.images.icon } : { id: charId },
+            character: n ? {
+              id: n.id,
+              resourceId: n.resourceId,
+              name: n.name.ko ?? n.name.en,
+              image: n.images.icon
+            } : { id: charId },
             skin: s.tid - charId,
             level: s.lv,
             combat: s.combat
@@ -28849,9 +28857,12 @@ async function createApp(storage, options = {}) {
       if (nikke) {
         const numeric = /^\d+$/.test(nikke) ? Number(nikke) : null;
         const nq = norm(nikke);
+        const ids = numeric !== null ? null : new Set(
+          characters.filter((ch2) => Object.values(ch2.name ?? {}).some((nm) => norm(String(nm)).includes(nq))).map((ch2) => ch2.id)
+        );
         list = list.filter(
           (e) => e.squad.some(
-            (s) => numeric !== null ? s.character.id === numeric || s.character.resourceId === numeric : Object.values(s.character.name ?? {}).some((n) => norm(String(n)).includes(nq))
+            (s) => ids ? ids.has(s.character.id) : s.character.id === numeric || s.character.resourceId === numeric
           )
         );
       }
@@ -29754,7 +29765,7 @@ var CREDS_KEY = "bla:creds";
 var HDR_CREDS = "x-bla-creds";
 var HDR_BLABLAID = "x-registered-blablaid";
 var edgeCache = caches.default;
-var BUILD_ID = false ? void 0 : "8cb51e990837";
+var BUILD_ID = false ? void 0 : "30be74065120";
 var DATA_HOST = "https://nikke-api-data.pages.dev";
 var REVALIDATE_MS = 3e5;
 var BUILD_TIMEOUT_MS = 3e4;

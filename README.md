@@ -125,8 +125,8 @@ GET /api/user/<blablaid>/nikke/아니스               # 부분 일치 → 매�
 | `GET /api/story/route` | 스토리 감상 순서 — 메인 챕터 사이에 이벤트·호감도를 끼워 넣은 커뮤니티 가이드 순서 |
 | `GET /api/story/next` | 다음 볼 스토리 추천 — `?chapter=` `?after=` `?done=` `?required=` `?limit=`(기본 5, 최대 20, 양의 정수만) |
 | `GET /api/stages` | 캠페인 스테이지 목록 — `?chapter=` `?mode=` `?q=` `?limit=`/`?offset=`/`?page=` |
-| `GET /api/stages/:id` | 스테이지 상세 — 권장 전투력·시나리오 키 |
-| `GET /api/stages/:id/lineups` | 스테이지 클리어 라인업 랭킹 — BlablaLink 공유 리더보드(크로스서버), 공유 계정 라이브 조회. `?sort=`(`low` 기본·최저 전투력 순 / `high`) `?nikke=`(해당 캐릭터 포함 라인업만 — 이름·id) `?area=` `?fields=` |
+| `GET /api/stages/:id` | 스테이지 상세 — 권장 전투력·시나리오 키. id 대신 `44-36` 같은 번호도 가능(이름 앞부분 일치, Normal 우선) |
+| `GET /api/stages/:id/lineups` | 스테이지 클리어 라인업 랭킹 — BlablaLink 공유 리더보드(크로스서버), 공유 계정 라이브 조회. id 대신 `44-36` 형태 가능. `?sort=`(`low` 기본·최저 전투력 순 / `high`) `?nikke=`(해당 캐릭터 포함 라인업만 — 이름·id) `?area=` `?fields=` |
 | `GET /api/costumes` | 코스튬 목록 — `?q=` `?grade=` `?nikke=` `?limit=`/`?offset=`/`?page=` |
 | `GET /api/costumes/:id` | 코스튬 상세 — tid 또는 이름(부분 일치), 소유 니케·이미지·`storyScenes`·`voices`(그 코스튬 전용 대사+음성) 포함 |
 | `GET /api/equips` | 장비 목록 — `?q=` `?class=` `?rare=` `?slot=` `?limit=`/`?offset=`/`?page=`. 기본 스탯·옵션슬롯 확률·재련비용·설명 포함 |

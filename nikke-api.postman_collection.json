@@ -838,7 +838,7 @@
                   "disabled": true
                 }
               ],
-              "description": "BlablaLink 공개(opt-in) 클리어 랭킹 — 총 전투력 낮은 순. 공유 계정 라이브 조회 (응답 no-store, 엣지 300초 캐시)"
+              "description": "BlablaLink 공개(opt-in) 클리어 랭킹 — 총 전투력 낮은 순. id 대신 '44-36' 번호 가능. 공유 계정 라이브 조회 (응답 no-store, 엣지 300초 캐시)"
             }
           }
         }

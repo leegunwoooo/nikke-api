@@ -872,10 +872,11 @@ GET /api/stages?mode=Hard&limit=50
 
 ## GET /api/stages/:id
 
-스테이지 ID로 단건 조회합니다. 응답 형태는 목록의 `stages[]` 항목과 동일합니다.
+스테이지 단건 조회입니다. `id` 자리에는 숫자 id 또는 `"44-36"` 같은 스테이지 번호(이름 앞부분 일치 — 같은 번호가 Normal/Hard로 겹치면 **Normal 우선**, `"44-36h"`처럼 쓰면 Hard도 지정 가능)를 씁니다. 응답 형태는 목록의 `stages[]` 항목과 동일합니다.
 
 ```
 GET /api/stages/6000001
+GET /api/stages/44-36
 GET /api/stages/6000001?fields=id,name,battlePower
 ```
 
@@ -883,14 +884,15 @@ GET /api/stages/6000001?fields=id,name,battlePower
 
 | 상황 | 상태 |
 |------|------|
-| `id`가 숫자가 아님 | 400 `{"error": "invalid id"}` |
-| 해당 스테이지 없음 | 404 `{"error": "not found"}` |
+| 해당 스테이지·이름 없음 | 404 `{"error": "not found"}` |
 
 ## GET /api/stages/:id/lineups
 
 해당 스테이지의 **클리어 라인업 랭킹**입니다 — BlablaLink에서 공개(opt-in)된 플레이어들의 클리어 스쿼드를 **총 전투력이 낮은 순**으로 반환합니다. 크로스서버 리더보드라 여러 서버의 항목이 섞여 나옵니다.
 
-`/api/user/*`처럼 **라이브 업스트림 데이터**입니다 — 공유 조회 계정 세션으로 BlablaLink에 실시간 요청하며, 응답은 `no-store`이고 엣지에서는 300초간만 캐시됩니다.
+`/api/user/*`처럼 **라이브 업스트림 데이터**입니다 — 공유 조회 계정 세션으로 BlablaLink에 실시간 요청하며, 응답은 `no-store`이고 엣지에서는 300초간만 캐시됩니다. `id` 자리에는 `"44-36"` 같은 스테이지 번호도 쓸 수 있습니다.
+
+개인 식별 필드(`intl_open_id`, 프로필 아이콘)는 제외하고 **공개 닉네임만** 반환합니다. 캐릭터 이름은 한국어 단일 문자열입니다.
 
 ### 쿼리 파라미터
 
@@ -903,6 +905,7 @@ GET /api/stages/6000001?fields=id,name,battlePower
 
 ```
 GET /api/stages/6044044/lineups
+GET /api/stages/44-36/lineups
 GET /api/stages/6044044/lineups?area=81
 GET /api/stages/6044044/lineups?nikke=신데렐라&sort=high
 ```
@@ -917,15 +920,12 @@ GET /api/stages/6044044/lineups?nikke=신데렐라&sort=high
       "rank": 1,
       "nickname": "LZGOVL",
       "areaId": 83,
-      "intlOpenId": "18249025339012467939",
-      "icon": { "iconId": 516901, "...": "..." },
-      "iconIsPrism": true,
       "clearedAt": 1785883576,
       "totalCombat": 443418,
       "squad": [
         {
           "slot": 1,
-          "character": { "id": 433001, "resourceId": 433, "name": { "ko": "크라운", "...": "..." }, "image": "..." },
+          "character": { "id": 433001, "resourceId": 330, "name": "크라운", "image": "..." },
           "skin": 4,
           "level": 295,
           "combat": 78350
@@ -942,19 +942,17 @@ GET /api/stages/6044044/lineups?nikke=신데렐라&sort=high
 | `stage` | 스테이지 참조 — `stageId`·`chapter`·`mode`·`stage`(표시 이름). 테이블에 없는 id도 `stageId`만 담아 반환 |
 | `areaId` | 실제 요청에 쓰인 서버 id (`?area=` 또는 조회 계정의 서버) |
 | `lineups[].rank` | 순위 — 총 전투력이 낮을수록 상위 |
-| `lineups[].nickname` / `intlOpenId` | 랭커의 공개 닉네임·공유 ID (사이트에 공개 표시되는 opt-in 데이터) |
-| `lineups[].icon` | 프로필 아이콘 — `/api/avatars` 참조와 동일, `iconIsPrism`은 프리즘 아이콘 여부 |
+| `lineups[].nickname` | 랭커의 공개 닉네임 (사이트에 공개 표시되는 opt-in 데이터) |
 | `lineups[].clearedAt` | 클리어 시각 (unix 초) |
-| `lineups[].squad[].character` | 캐릭터 참조 — `id`·`resourceId`·`name`·`image` (미해결 시 `{id}`만) |
+| `lineups[].squad[].character` | 캐릭터 참조 — `id`·`resourceId`·`name`(한국어)·`image` (미해결 시 `{id}`만) |
 | `lineups[].squad[].skin` | 스킨 슬롯 — 업스트림 `tid` 끝 2자리 변형 (0 = 기본, n = n번째 코스튬 슬롯) |
 
 **에러**
 
 | 상황 | 상태 |
 |------|------|
-| `id`가 숫자가 아님 | 400 `{"error": "invalid id"}` |
 | `sort`가 `low`/`high`가 아님 | 400 `{"error": "invalid sort — low\|high"}` |
-| 업스트림이 스테이지를 못 찾음 | 404 `{"error": "unknown stage"}` |
+| 스테이지·이름 없음 또는 업스트림이 못 찾음 | 404 `{"error": "not found"}` / `{"error": "unknown stage"}` |
 | 업스트림 오류·레이트리밋 | 502 `{"error": ..., "code": <upstream code>}` |
 | 조회 계정 미설정 | 503 `{"error": "blabla credentials not configured"}` |
 

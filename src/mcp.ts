@@ -872,9 +872,11 @@ export function buildServer(api: Fetcher, version: string, origin = "", boundBla
     {
       title: "Get stage clear lineups",
       description:
-        "Community clear rankings for a campaign stage — the squads players cleared it with, lowest total combat first (BlablaLink opt-in leaderboard, cross-server). Stage ids come from api_get /api/stages or the stage field in story/search results. Live and rate limited.",
+        "Community clear rankings for a campaign stage — the squads players cleared it with, lowest total combat first (BlablaLink opt-in leaderboard, cross-server). Accepts a stage id or a '44-36' style stage number. Live and rate limited.",
       inputSchema: z.object({
-        stageId: z.number().int().describe("Stage id, e.g. 6044044 for 44-36 BOSS"),
+        stageId: z
+          .union([z.number().int(), z.string()])
+          .describe("Stage id (6044044) or stage number ('44-36')"),
         area: z
           .number()
           .int()
@@ -891,7 +893,7 @@ export function buildServer(api: Fetcher, version: string, origin = "", boundBla
       }),
       annotations: LIVE,
     },
-    userTool("get_stage_lineups", (a: { stageId: number; area?: number; sort?: string; nikke?: string }) => {
+    userTool("get_stage_lineups", (a: { stageId: number | string; area?: number; sort?: string; nikke?: string }) => {
       const shape = (d: any) => ({
         stage: d.stage,
         count: d.count,
@@ -903,13 +905,13 @@ export function buildServer(api: Fetcher, version: string, origin = "", boundBla
           clearedAt: e.clearedAt,
           squad: (e.squad ?? []).map((s: any) => ({
             slot: s.slot,
-            name: s.character?.name?.ko ?? s.character?.name?.en ?? s.character?.name,
+            name: s.character?.name,
             level: s.level,
             combat: s.combat,
           })),
         })),
       });
-      return call(api, "get_stage_lineups", `/api/stages/${a.stageId}/lineups${qs({ area: a.area, sort: a.sort, nikke: a.nikke })}`, shape);
+      return call(api, "get_stage_lineups", `/api/stages/${encodeURIComponent(a.stageId)}/lineups${qs({ area: a.area, sort: a.sort, nikke: a.nikke })}`, shape);
     }),
   );
 
