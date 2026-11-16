@@ -867,6 +867,44 @@ export function buildServer(api: Fetcher, version: string, origin = "", boundBla
     }),
   );
 
+  server.registerTool(
+    "get_stage_lineups",
+    {
+      title: "Get stage clear lineups",
+      description:
+        "Community clear rankings for a campaign stage — the squads players cleared it with, lowest total combat first (BlablaLink opt-in leaderboard, cross-server). Stage ids come from api_get /api/stages or the stage field in story/search results. Live and rate limited.",
+      inputSchema: z.object({
+        stageId: z.number().int().describe("Stage id, e.g. 6044044 for 44-36 BOSS"),
+        area: z
+          .number()
+          .int()
+          .optional()
+          .describe("Server area: 83 KR · 81 JP · 84 Global · 82 NA · 85 SEA. Omit for the lookup account's server"),
+      }),
+      annotations: LIVE,
+    },
+    userTool("get_stage_lineups", (a: { stageId: number; area?: number }) => {
+      const shape = (d: any) => ({
+        stage: d.stage,
+        count: d.count,
+        lineups: (d.lineups ?? []).map((e: any) => ({
+          rank: e.rank,
+          nickname: e.nickname,
+          areaId: e.areaId,
+          totalCombat: e.totalCombat,
+          clearedAt: e.clearedAt,
+          squad: (e.squad ?? []).map((s: any) => ({
+            slot: s.slot,
+            name: s.character?.name?.ko ?? s.character?.name?.en ?? s.character?.name,
+            level: s.level,
+            combat: s.combat,
+          })),
+        })),
+      });
+      return call(api, "get_stage_lineups", `/api/stages/${a.stageId}/lineups${qs({ area: a.area })}`, shape);
+    }),
+  );
+
   // ChatGPT's connector/deep-research contract: search(query) -> results with
   // id/title/url, fetch(id) -> one document. Ids are "<kind>:<key>".
   server.registerTool(

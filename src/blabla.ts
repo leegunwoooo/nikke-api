@@ -64,6 +64,10 @@ const envCreds = (): BlaCreds | null =>
       }
     : null;
 
+// the lookup account's own credentials — for calls that need "the viewer's"
+// identity (e.g. its home server area), not a target player's
+export const accountCreds = () => blaCredsContext.getStore() ?? envCreds();
+
 async function doLogin(): Promise<string> {
   const c = blaCredsContext.getStore() ?? envCreds();
   if (!c) throw new Error("blabla credentials not configured");

@@ -48,6 +48,7 @@ test("mcp initialize + tools/list", async () => {
   // the roster sweep is bounded (~7 upstream calls) and edge-cached, so
   // it's exposed as a live tool like the other get_user_* tools
   assert.ok(names.includes("get_user_roster"));
+  assert.ok(names.includes("get_stage_lineups"));
   const search = tools.find((t: any) => t.name === "search_nikkes");
   assert.deepEqual(search.inputSchema.properties.element.enum, ["Fire", "Water", "Wind", "Electronic", "Iron"]);
 });
@@ -608,4 +609,46 @@ test("x-registered-blablaid binds the profile (no link arg needed)", async () =>
   // the bound id flowed through
   const { result } = await boundRpc("tools/call", { name: "get_user_profile", arguments: {} }, "some-blablaid");
   assert.ok(!/share link is required/.test(result.content[0].text));
+});
+
+test("get_stage_lineups hits the rank-list route and trims the payload", async () => {
+  resetUserRateLimit();
+  resetBlaSession();
+  const orig = globalThis.fetch;
+  const env = { ...process.env };
+  process.env.BLA_OPEN_ID ??= "test-openid";
+  process.env.BLA_TOKEN ??= "test-token";
+  globalThis.fetch = (async (input: any, init?: any) => {
+    const url = String(input?.url ?? input);
+    if (url.endsWith("/api/user/Login"))
+      return new Response(JSON.stringify({ code: 0 }), { headers: { "set-cookie": "game_token=t; Path=/" } });
+    if (url.includes("GetUserGamePlayerInfo")) return Response.json({ code: 0, data: { area_id: 83 } });
+    if (url.includes("GetMainQuestClearRankList"))
+      return Response.json({
+        code: 0,
+        data: {
+          list: [
+            {
+              rank: 1,
+              nickname: "n1",
+              area_id: 83,
+              cleared_at: "1700000000",
+              total_combat: 8000,
+              squad: [{ slot: 1, tid: 1, lv: 200, combat: 8000 }],
+            },
+          ],
+        },
+      });
+    return Response.json({ code: -1, msg: "unmocked" });
+  }) as typeof fetch;
+  try {
+    const d = (await tool("get_stage_lineups", { stageId: 6000001 })).json;
+    assert.equal(d.count, 1);
+    assert.equal(d.lineups[0].squad[0].name, "라피"); // resolved from the tid
+    assert.equal(d.lineups[0].squad[0].character, undefined); // shape() trims it
+  } finally {
+    globalThis.fetch = orig;
+    process.env = env;
+    resetUserRateLimit();
+  }
 });

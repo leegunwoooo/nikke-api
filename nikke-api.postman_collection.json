@@ -797,6 +797,38 @@
               ]
             }
           }
+        },
+        {
+          "name": "스테이지 클리어 라인업 (라이브)",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{baseUrl}}/api/stages/6044044/lineups",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "stages",
+                "6044044",
+                "lineups"
+              ],
+              "query": [
+                {
+                  "key": "area",
+                  "value": "83",
+                  "disabled": true,
+                  "description": "서버 영역 (83 KR · 81 JP · 84 Global · 82 NA · 85 SEA) — 생략 시 조회 계정 서버"
+                },
+                {
+                  "key": "fields",
+                  "value": "rank,totalCombat,squad",
+                  "disabled": true
+                }
+              ],
+              "description": "BlablaLink 공개(opt-in) 클리어 랭킹 — 총 전투력 낮은 순. 공유 계정 라이브 조회 (응답 no-store, 엣지 300초 캐시)"
+            }
+          }
         }
       ]
     },

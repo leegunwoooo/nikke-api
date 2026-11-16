@@ -25,6 +25,7 @@ function stubFetch(perArea: (area: number) => { code: number; characters?: unkno
   resetBlaSession();
   const areaCalls: number[] = [];
   const paths: string[] = [];
+  const lineupCalls: number[] = [];
   globalThis.fetch = (async (input: any, init?: any) => {
     const url = String(input?.url ?? input);
     if (url.startsWith(DIST_HOST)) {
@@ -49,11 +50,16 @@ function stubFetch(perArea: (area: number) => { code: number; characters?: unkno
     if (url.includes("GetUserCharacterDetails"))
       return Response.json({ code: 0, data: { character_details: [], state_effects: [] } });
     if (url.includes("GetUserProfileOutpostInfo")) return Response.json({ code: 0, data: { outpost_info: null } });
+    if (url.includes("GetMainQuestClearRankList")) {
+      lineupCalls.push(body.stage_id);
+      return Response.json({ code: 0, data: { list: [] } });
+    }
     return Response.json({ code: -1, msg: "unmocked" });
   }) as typeof fetch;
   return {
     areaCalls,
     paths,
+    lineupCalls,
     restore: () => {
       globalThis.fetch = orig;
     },
@@ -265,6 +271,26 @@ test("/api/tables answers a non-cacheable 503 when the manifest read fails", asy
     const res = await send(env, "/api/tables");
     assert.equal(res.status, 503);
     assert.equal(res.headers.get("cache-control"), null);
+  } finally {
+    stub.restore();
+  }
+});
+
+test("stage lineups get creds injected and a short edge cache", async () => {
+  const stub = stubFetch();
+  try {
+    const { env } = envOf();
+    const first = await send(env, "/api/stages/6000001/lineups");
+    assert.equal(first.status, 200);
+    // KV creds -> app -> upstream rank list; the app resolved the account area
+    assert.equal(stub.lineupCalls.length, 1);
+    assert.deepEqual(stub.lineupCalls, [6000001]);
+
+    // repeat GET absorbs at the edge instead of re-hitting BlablaLink
+    const second = await send(env, "/api/stages/6000001/lineups");
+    assert.equal(second.status, 200);
+    assert.equal(stub.lineupCalls.length, 1);
+    assert.equal(second.headers.get("x-edge-cache"), "HIT");
   } finally {
     stub.restore();
   }

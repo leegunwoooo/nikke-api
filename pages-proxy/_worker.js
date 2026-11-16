@@ -2158,11 +2158,12 @@ import path from "node:path";
 // src/cache.ts
 import crypto2 from "node:crypto";
 var CACHE_CONTROL = "public, max-age=3600, s-maxage=86400, stale-while-revalidate=86400";
+var LINEUP_PATH = /^\/api\/stages\/\d+\/lineups$/;
 function cacheHeaders(version2) {
   return async (c, next) => {
     if (c.req.method !== "GET" && c.req.method !== "HEAD") return next();
     const url2 = new URL(c.req.url);
-    if (url2.pathname.startsWith("/api/user") || url2.pathname === "/mcp") {
+    if (url2.pathname.startsWith("/api/user") || url2.pathname === "/mcp" || LINEUP_PATH.test(url2.pathname)) {
       await next();
       c.header("Cache-Control", "no-store");
       return;
@@ -8903,6 +8904,7 @@ var envCreds = () => process.env.BLA_OPEN_ID && process.env.BLA_TOKEN ? {
   channel_id: Number(process.env.BLA_CHANNEL_ID ?? 6),
   expires: process.env.BLA_EXPIRES ?? ""
 } : null;
+var accountCreds = () => blaCredsContext.getStore() ?? envCreds();
 async function doLogin() {
   const c = blaCredsContext.getStore() ?? envCreds();
   if (!c) throw new Error("blabla credentials not configured");
@@ -26634,6 +26636,38 @@ function buildServer(api, version2, origin = "", boundBlablaid) {
     })
   );
   server.registerTool(
+    "get_stage_lineups",
+    {
+      title: "Get stage clear lineups",
+      description: "Community clear rankings for a campaign stage \u2014 the squads players cleared it with, lowest total combat first (BlablaLink opt-in leaderboard, cross-server). Stage ids come from api_get /api/stages or the stage field in story/search results. Live and rate limited.",
+      inputSchema: object({
+        stageId: number2().int().describe("Stage id, e.g. 6044044 for 44-36 BOSS"),
+        area: number2().int().optional().describe("Server area: 83 KR \xB7 81 JP \xB7 84 Global \xB7 82 NA \xB7 85 SEA. Omit for the lookup account's server")
+      }),
+      annotations: LIVE
+    },
+    userTool("get_stage_lineups", (a) => {
+      const shape = (d) => ({
+        stage: d.stage,
+        count: d.count,
+        lineups: (d.lineups ?? []).map((e) => ({
+          rank: e.rank,
+          nickname: e.nickname,
+          areaId: e.areaId,
+          totalCombat: e.totalCombat,
+          clearedAt: e.clearedAt,
+          squad: (e.squad ?? []).map((s) => ({
+            slot: s.slot,
+            name: s.character?.name?.ko ?? s.character?.name?.en ?? s.character?.name,
+            level: s.level,
+            combat: s.combat
+          }))
+        }))
+      });
+      return call(api, "get_stage_lineups", `/api/stages/${a.stageId}/lineups${qs({ area: a.area })}`, shape);
+    })
+  );
+  server.registerTool(
     "search",
     {
       title: "Search everything",
@@ -27231,6 +27265,23 @@ function buildOpenapi(pkgVersion) {
           responses: { "200": { description: "\uC2A4\uD14C\uC774\uC9C0 \uC0C1\uC138" }, "400": { description: "id \uD615\uC2DD \uC624\uB958" }, "404": { description: "\uC5C6\uC74C" } }
         }
       },
+      "/api/stages/{id}/lineups": {
+        get: {
+          tags: ["stages"],
+          summary: "\uC2A4\uD14C\uC774\uC9C0 \uD074\uB9AC\uC5B4 \uB77C\uC778\uC5C5 \uB7AD\uD0B9 \u2014 BlablaLink \uACF5\uC720(opt-in) \uB9AC\uB354\uBCF4\uB4DC, \uCD5C\uC800 \uC804\uD22C\uB825 \uD074\uB9AC\uC5B4 \uC21C \xB7 \uACF5\uC720 \uACC4\uC815 \uB77C\uC774\uBE0C \uC870\uD68C",
+          parameters: [
+            { name: "id", in: "path", required: true, schema: { type: "integer" }, example: 6044044 },
+            { name: "area", in: "query", schema: { type: "integer" }, description: "\uC11C\uBC84 \uC601\uC5ED id \u2014 \uBBF8\uC9C0\uC815 \uC2DC \uC870\uD68C \uACC4\uC815\uC758 \uC11C\uBC84 (83 KR \xB7 81 JP \xB7 84 Global \xB7 82 NA \xB7 85 SEA)" }
+          ],
+          responses: {
+            "200": { description: "\uD074\uB9AC\uC5B4 \uB7AD\uD0B9 \u2014 rank\xB7nickname\xB7areaId\xB7totalCombat\xB7squad(\uCE90\uB9AD\uD130\xB7\uC2A4\uD0A8\xB7\uB808\uBCA8\xB7\uC804\uD22C\uB825)\xB7clearedAt" },
+            "400": { description: "id \uD615\uC2DD \uC624\uB958" },
+            "404": { description: "\uC2A4\uD14C\uC774\uC9C0 \uC5C6\uC74C" },
+            "502": { description: "\uC5C5\uC2A4\uD2B8\uB9BC \uC624\uB958" },
+            "503": { description: "\uC870\uD68C \uACC4\uC815 \uBBF8\uC124\uC815" }
+          }
+        }
+      },
       "/api/costumes": {
         get: {
           tags: ["costumes"],
@@ -27671,6 +27722,7 @@ function buildOpenapi(pkgVersion) {
     "/api/events/{id}",
     "/api/stages",
     "/api/stages/{id}",
+    "/api/stages/{id}/lineups",
     "/api/costumes",
     "/api/costumes/{id}",
     "/api/equips",
@@ -28158,6 +28210,7 @@ async function createApp(storage, options = {}) {
         "GET /api/story/next": "next stories on the route; chapter|after, done, required",
         "GET /api/stages": "campaign stage list; filters: q, chapter, mode; limit/offset",
         "GET /api/stages/:id": "stage detail (id)",
+        "GET /api/stages/:id/lineups": "community clear-ranking lineups for a stage \u2014 lowest-combat squads first (BlablaLink opt-in leaderboard; live, ?area=)",
         "GET /api/costumes": "costume list; filters: q, grade, nikke; limit/offset",
         "GET /api/costumes/:id": "costume detail (costume tid)",
         "GET /api/equips": "equipment item list; filters: q, class, rare, slot; limit/offset",
@@ -28746,6 +28799,58 @@ async function createApp(storage, options = {}) {
     const s = (await getStageRows()).find((x) => x.id === Number(id));
     if (!s) return c.json({ error: "not found" }, 404);
     return c.json(pickFields(s, fieldsOf(c)));
+  });
+  app.get("/api/stages/:id/lineups", async (c) => {
+    const id = c.req.param("id");
+    if (!/^\d+$/.test(id)) return c.json({ error: "invalid id" }, 400);
+    const stageId = Number(id);
+    try {
+      const creds = accountCreds();
+      if (!creds) return c.json({ error: "blabla credentials not configured" }, 503);
+      const resolved = await resolveAreaId(c, creds.open_id);
+      if ("error" in resolved)
+        return c.json({ error: resolved.error, code: resolved.code }, 502);
+      const res = await gameApi("Game", "GetMainQuestClearRankList", {
+        stage_id: stageId,
+        area_id: resolved.areaId
+      });
+      if (res.code === 1303001) return c.json({ error: "unknown stage" }, 404);
+      if (res.code !== 0)
+        return c.json({ error: res.msg ?? "upstream error", code: res.code }, 502);
+      const { stageRef, avatarRef } = await loadProfileLookups();
+      const lineups = (res.data?.list ?? []).map((e) => ({
+        rank: e.rank,
+        nickname: e.nickname,
+        areaId: e.area_id,
+        intlOpenId: e.intl_open_id,
+        icon: avatarRef(e.icon_id),
+        iconIsPrism: !!e.is_icon_prism,
+        clearedAt: e.cleared_at ? Number(e.cleared_at) : null,
+        totalCombat: e.total_combat,
+        squad: (e.squad ?? []).map((s) => {
+          const charId = byId.has(s.tid) ? s.tid : s.tid - s.tid % 100 + 1;
+          const n = byId.get(charId);
+          return {
+            slot: s.slot,
+            character: n ? { id: n.id, resourceId: n.resourceId, name: n.name, image: n.images.icon } : { id: charId },
+            skin: s.tid - charId,
+            level: s.lv,
+            combat: s.combat
+          };
+        }).sort((a, b) => a.slot - b.slot),
+        uuid: e.uuid
+      }));
+      return c.json({
+        stage: stageRef(stageId) ?? { stageId },
+        areaId: resolved.areaId,
+        count: lineups.length,
+        lineups: pickFields(lineups, fieldsOf(c))
+      });
+    } catch (e) {
+      const msg = e instanceof Error ? e.message : String(e);
+      const status = msg.includes("not configured") ? 503 : 502;
+      return c.json({ error: msg }, status);
+    }
   });
   app.get("/api/costumes", async (c) => {
     const { q, grade, nikke, limit, offset } = c.req.query();
@@ -29630,7 +29735,7 @@ var CREDS_KEY = "bla:creds";
 var HDR_CREDS = "x-bla-creds";
 var HDR_BLABLAID = "x-registered-blablaid";
 var edgeCache = caches.default;
-var BUILD_ID = false ? void 0 : "fef38601dd49";
+var BUILD_ID = false ? void 0 : "4d60628eee69";
 var DATA_HOST = "https://nikke-api-data.pages.dev";
 var REVALIDATE_MS = 3e5;
 var BUILD_TIMEOUT_MS = 3e4;
@@ -29914,7 +30019,7 @@ var index_default = {
       track("PASS");
       return new Response(res2.body, res2);
     }
-    const userPath = url2.pathname.startsWith("/api/user");
+    const userPath = url2.pathname.startsWith("/api/user") || LINEUP_PATH.test(url2.pathname);
     const target = userPath ? userTargetOf(url2) : null;
     const isGet = request.method === "GET" || request.method === "HEAD";
     let key2;

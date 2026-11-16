@@ -11,7 +11,7 @@ import { buildFamilies } from "./family.js";
 import { favoriteRouteEntries, ROUTE_COVERAGE_CHAPTER, ROUTE_SOURCES, STORY_ROUTE } from "./story-route.js";
 import { SCENE_CATEGORIES } from "./scene-categories.js";
 import { fieldsOf, LOCALES, localize, pickFields } from "./fields.js";
-import { blaCredsContext, credsFromHeader, decodeOpenid, gameApi, playerInfo } from "./blabla.js";
+import { accountCreds, blaCredsContext, credsFromHeader, decodeOpenid, gameApi, playerInfo } from "./blabla.js";
 import { createNikkeMcp, requestOrigin } from "./mcp.js";
 import { llmsTxt, mcpGuide, type ToolInfo } from "./llms.js";
 import { buildOpenapi } from "./openapi.js";
@@ -640,6 +640,7 @@ app.get("/", (c) =>
       "GET /api/story/next": "next stories on the route; chapter|after, done, required",
       "GET /api/stages": "campaign stage list; filters: q, chapter, mode; limit/offset",
       "GET /api/stages/:id": "stage detail (id)",
+      "GET /api/stages/:id/lineups": "community clear-ranking lineups for a stage — lowest-combat squads first (BlablaLink opt-in leaderboard; live, ?area=)",
       "GET /api/costumes": "costume list; filters: q, grade, nikke; limit/offset",
       "GET /api/costumes/:id": "costume detail (costume tid)",
       "GET /api/equips": "equipment item list; filters: q, class, rare, slot; limit/offset",
@@ -1341,6 +1342,70 @@ app.get("/api/stages/:id", async (c) => {
   const s = (await getStageRows()).find((x) => x.id === Number(id));
   if (!s) return c.json({ error: "not found" }, 404);
   return c.json(pickFields(s, fieldsOf(c)));
+});
+
+// BlablaLink's opt-in clear leaderboard — the lowest-combat squads that cleared
+// this stage, across all servers. Live upstream data on the shared account:
+// area_id is the lookup account's home server unless ?area= overrides it
+// (same convention as the site's own rank panel). squad[].tid's last two
+// digits are a skin slot, so character resolution normalizes to the base id.
+app.get("/api/stages/:id/lineups", async (c) => {
+  const id = c.req.param("id");
+  if (!/^\d+$/.test(id)) return c.json({ error: "invalid id" }, 400);
+  const stageId = Number(id);
+  try {
+    const creds = accountCreds();
+    if (!creds) return c.json({ error: "blabla credentials not configured" }, 503);
+    const resolved = await resolveAreaId(c, creds.open_id);
+    if ("error" in resolved)
+      return c.json({ error: resolved.error, code: resolved.code }, 502);
+    const res = await gameApi("Game", "GetMainQuestClearRankList", {
+      stage_id: stageId,
+      area_id: resolved.areaId,
+    });
+    if (res.code === 1303001) return c.json({ error: "unknown stage" }, 404);
+    if (res.code !== 0)
+      return c.json({ error: res.msg ?? "upstream error", code: res.code }, 502);
+    const { stageRef, avatarRef } = await loadProfileLookups();
+    const lineups = (((res.data as any)?.list ?? []) as any[]).map((e) => ({
+      rank: e.rank,
+      nickname: e.nickname,
+      areaId: e.area_id,
+      intlOpenId: e.intl_open_id,
+      icon: avatarRef(e.icon_id),
+      iconIsPrism: !!e.is_icon_prism,
+      clearedAt: e.cleared_at ? Number(e.cleared_at) : null,
+      totalCombat: e.total_combat,
+      squad: (e.squad ?? [])
+        .map((s: any) => {
+          // skin-suffixed tid (xxNN, NN>1) → base character id (xx01); an id
+          // already in the map is kept as-is so nonstandard ids pass through
+          const charId = byId.has(s.tid) ? s.tid : s.tid - (s.tid % 100) + 1;
+          const n = byId.get(charId);
+          return {
+            slot: s.slot,
+            character: n
+              ? { id: n.id, resourceId: n.resourceId, name: n.name, image: n.images.icon }
+              : { id: charId },
+            skin: s.tid - charId,
+            level: s.lv,
+            combat: s.combat,
+          };
+        })
+        .sort((a: any, b: any) => a.slot - b.slot),
+      uuid: e.uuid,
+    }));
+    return c.json({
+      stage: stageRef(stageId) ?? { stageId },
+      areaId: resolved.areaId,
+      count: lineups.length,
+      lineups: pickFields(lineups, fieldsOf(c)),
+    });
+  } catch (e) {
+    const msg = e instanceof Error ? e.message : String(e);
+    const status = msg.includes("not configured") ? 503 : 502;
+    return c.json({ error: msg }, status);
+  }
 });
 
 app.get("/api/costumes", async (c) => {

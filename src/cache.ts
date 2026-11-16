@@ -3,6 +3,9 @@ import type { MiddlewareHandler } from "hono";
 
 const CACHE_CONTROL = "public, max-age=3600, s-maxage=86400, stale-while-revalidate=86400";
 
+// live-upstream paths outside the /api/user prefix — shared with worker/index.ts
+export const LINEUP_PATH = /^\/api\/stages\/\d+\/lineups$/;
+
 /**
  * Responses only change on a data or code deploy, so a weak ETag derived from
  * the version (syncedAt, plus the build id when bundled) + request URL is
@@ -12,11 +15,12 @@ export function cacheHeaders(version: string): MiddlewareHandler {
   return async (c, next) => {
     if (c.req.method !== "GET" && c.req.method !== "HEAD") return next();
     const url = new URL(c.req.url);
-    // /api/user/* serves live upstream data — never edge-cache it against
-    // the build version or a changed profile would return stale 304s
-    // /mcp's plain GET is a setup guide while an MCP client's GET to the same
-    // URL needs the transport's answer — an URL-keyed edge cache must not mix them
-    if (url.pathname.startsWith("/api/user") || url.pathname === "/mcp") {
+    // /api/user/* and stage lineups serve live upstream data — never edge-cache
+    // them against the build version or a changed profile/leaderboard would
+    // return stale 304s. /mcp's plain GET is a setup guide while an MCP
+    // client's GET to the same URL needs the transport's answer — an URL-keyed
+    // edge cache must not mix them
+    if (url.pathname.startsWith("/api/user") || url.pathname === "/mcp" || LINEUP_PATH.test(url.pathname)) {
       await next();
       c.header("Cache-Control", "no-store");
       return;

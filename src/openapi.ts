@@ -407,6 +407,23 @@ const openapi = {
         responses: { "200": { description: "스테이지 상세" }, "400": { description: "id 형식 오류" }, "404": { description: "없음" } },
       },
     },
+    "/api/stages/{id}/lineups": {
+      get: {
+        tags: ["stages"],
+        summary: "스테이지 클리어 라인업 랭킹 — BlablaLink 공유(opt-in) 리더보드, 최저 전투력 클리어 순 · 공유 계정 라이브 조회",
+        parameters: [
+          { name: "id", in: "path", required: true, schema: { type: "integer" }, example: 6044044 },
+          { name: "area", in: "query", schema: { type: "integer" }, description: "서버 영역 id — 미지정 시 조회 계정의 서버 (83 KR · 81 JP · 84 Global · 82 NA · 85 SEA)" },
+        ],
+        responses: {
+          "200": { description: "클리어 랭킹 — rank·nickname·areaId·totalCombat·squad(캐릭터·스킨·레벨·전투력)·clearedAt" },
+          "400": { description: "id 형식 오류" },
+          "404": { description: "스테이지 없음" },
+          "502": { description: "업스트림 오류" },
+          "503": { description: "조회 계정 미설정" },
+        },
+      },
+    },
     "/api/costumes": {
       get: {
         tags: ["costumes"],
@@ -864,6 +881,7 @@ for (const p of [
   "/api/events/{id}",
   "/api/stages",
   "/api/stages/{id}",
+  "/api/stages/{id}/lineups",
   "/api/costumes",
   "/api/costumes/{id}",
   "/api/equips",

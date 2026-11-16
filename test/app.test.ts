@@ -541,6 +541,8 @@ function stubBlabla(opts: {
   detailCode?: number;
   details?: unknown[];
   basicInfo?: Record<string, unknown>;
+  lineup?: { code?: number; list?: unknown[]; msg?: string };
+  playerInfoCode?: number;
 } = {}) {
   const orig = globalThis.fetch;
   const envBackup = { ...process.env };
@@ -549,6 +551,7 @@ function stubBlabla(opts: {
   process.env.BLA_TOKEN ??= "test-token";
   const detailCalls: number[] = [];
   const loginBodies: any[] = [];
+  const lineupBodies: any[] = [];
   globalThis.fetch = (async (input: any, init?: any) => {
     const url = String(input?.url ?? input);
     const body = init?.body ? JSON.parse(init.body) : {};
@@ -559,7 +562,12 @@ function stubBlabla(opts: {
       });
     }
     if (url.includes("GetUserGamePlayerInfo"))
-      return Response.json({ code: 0, data: { area_id: 83 } });
+      return Response.json({ code: opts.playerInfoCode ?? 0, data: { area_id: 83 } });
+    if (url.includes("GetMainQuestClearRankList")) {
+      lineupBodies.push(body);
+      const l = opts.lineup ?? {};
+      return Response.json({ code: l.code ?? 0, msg: l.msg ?? "", data: { list: l.list ?? [] } });
+    }
     if (url.includes("GetUserCharacters")) {
       const r = (
         opts.perArea ??
@@ -594,6 +602,7 @@ function stubBlabla(opts: {
     },
     detailCalls,
     loginBodies,
+    lineupBodies,
   };
 }
 
@@ -952,6 +961,113 @@ test("a malformed x-bla-creds header falls back to env creds", async () => {
     await get("/api/user/12345", { "x-bla-creds": "not-base64!!" });
     // env creds (set by stubBlabla) were used, not garbage
     assert.equal(stub.loginBodies.at(-1).game_openid, "test-openid");
+  } finally {
+    stub.restore();
+  }
+});
+
+test("stage lineups: rank list resolves tid->character and skin slot", async () => {
+  const stub = stubBlabla({
+    lineup: {
+      list: [
+        {
+          rank: 2,
+          nickname: "hi",
+          area_id: 81,
+          intl_open_id: "99",
+          icon_id: 0,
+          is_icon_prism: 0,
+          cleared_at: "1700000000",
+          total_combat: 9000,
+          uuid: "u2",
+          squad: [
+            { slot: 2, tid: 2, lv: 200, combat: 5000 },
+            { slot: 1, tid: 103, lv: 200, combat: 4000 },
+          ],
+        },
+        {
+          rank: 1,
+          nickname: "lo",
+          area_id: 83,
+          intl_open_id: "88",
+          icon_id: 0,
+          is_icon_prism: 1,
+          cleared_at: "1700000001",
+          total_combat: 8000,
+          uuid: "u1",
+          squad: [{ slot: 1, tid: 1, lv: 201, combat: 8000 }],
+        },
+      ],
+    },
+  });
+  try {
+    const d = await json("/api/stages/6000001/lineups");
+    assert.equal(d.count, 2);
+    assert.equal(d.areaId, 83); // account area resolved via playerInfo
+    assert.equal(stub.lineupBodies.at(-1).stage_id, 6000001);
+    assert.equal(stub.lineupBodies.at(-1).area_id, 83);
+    const [hi, lo] = d.lineups; // upstream order preserved (rank 2 first)
+    // tid 2 is itself a character id -> kept; tid 103 -> base 101 -> unresolved {id}
+    assert.equal(lo.squad[0].character.name.ko, "라피");
+    assert.equal(lo.squad[0].skin, 0);
+    assert.equal(hi.squad[0].character.id, 101); // 103 normalized, unknown
+    assert.equal(hi.squad[0].skin, 2); // 103 - 101
+    assert.equal(hi.squad[1].character.name.ko, "앵커"); // raw tid 2 kept
+    assert.equal(hi.squad[1].skin, 0);
+  } finally {
+    stub.restore();
+  }
+});
+
+test("stage lineups: ?area= overrides the account area", async () => {
+  const stub = stubBlabla({ lineup: { list: [] } });
+  try {
+    const d = await json("/api/stages/6000001/lineups?area=81");
+    assert.equal(d.areaId, 81);
+    assert.equal(stub.lineupBodies.at(-1).area_id, 81);
+  } finally {
+    stub.restore();
+  }
+});
+
+test("stage lineups: upstream 1303001 -> 404, other codes -> 502", async () => {
+  let stub = stubBlabla({ lineup: { code: 1303001 } });
+  try {
+    const res = await get("/api/stages/9999999/lineups?area=83");
+    assert.equal(res.status, 404);
+  } finally {
+    stub.restore();
+  }
+  stub = stubBlabla({ lineup: { code: 999, msg: "weird" } });
+  try {
+    const res = await get("/api/stages/6000001/lineups?area=83");
+    assert.equal(res.status, 502);
+    assert.equal((await res.json()).code, 999);
+  } finally {
+    stub.restore();
+  }
+});
+
+test("stage lineups: no creds -> 503", async () => {
+  const orig = globalThis.fetch;
+  const envBackup = { ...process.env };
+  resetBlaSession();
+  delete process.env.BLA_OPEN_ID;
+  delete process.env.BLA_TOKEN;
+  try {
+    const res = await get("/api/stages/6000001/lineups");
+    assert.equal(res.status, 503);
+  } finally {
+    globalThis.fetch = orig;
+    process.env = envBackup;
+  }
+});
+
+test("stage lineups are no-store like /api/user", async () => {
+  const stub = stubBlabla({ lineup: { list: [] } });
+  try {
+    const res = await get("/api/stages/6000001/lineups?area=83");
+    assert.equal(res.headers.get("cache-control"), "no-store");
   } finally {
     stub.restore();
   }

@@ -1,12 +1,13 @@
 // Cloudflare Worker — serves the whole API app directly. GET responses are
 // edge-cached (data endpoints mark s-maxage=86400) so repeat reads never
-// touch the app or the data host. /api/user/* is live upstream data on a
-// shared BlablaLink account, so it gets a short USER_TTL edge cache instead —
-// repeat reads absorb at the edge instead of burning the shared account's
-// rate limit. ?refresh on any GET bypasses once.
+// touch the app or the data host. /api/user/* and /api/stages/*/lineups are
+// live upstream data on a shared BlablaLink account, so they get a short
+// USER_TTL edge cache instead — repeat reads absorb at the edge instead of
+// burning the shared account's rate limit. ?refresh on any GET bypasses once.
 // ANALYTICS records one point per request (path group + HIT/MISS/PASS).
 
 import { createApp } from "../src/factory.js";
+import { LINEUP_PATH } from "../src/cache.js";
 import { httpStorage } from "../src/storage.js";
 
 const USER_TTL = 300;
@@ -425,7 +426,10 @@ export default {
       return new Response(res.body, res);
     }
 
-    const userPath = url.pathname.startsWith("/api/user");
+    // live-upstream paths: creds get injected and responses take USER_TTL edge
+    // cache instead of the long static TTL — covers /api/user/* and stage
+    // lineups (community leaderboard on the shared account session)
+    const userPath = url.pathname.startsWith("/api/user") || LINEUP_PATH.test(url.pathname);
     const target = userPath ? userTargetOf(url) : null;
     const isGet = request.method === "GET" || request.method === "HEAD";
     let key: Request | undefined;

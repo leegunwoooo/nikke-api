@@ -126,6 +126,7 @@ GET /api/user/<blablaid>/nikke/아니스               # 부분 일치 → 매�
 | `GET /api/story/next` | 다음 볼 스토리 추천 — `?chapter=` `?after=` `?done=` `?required=` `?limit=`(기본 5, 최대 20, 양의 정수만) |
 | `GET /api/stages` | 캠페인 스테이지 목록 — `?chapter=` `?mode=` `?q=` `?limit=`/`?offset=`/`?page=` |
 | `GET /api/stages/:id` | 스테이지 상세 — 권장 전투력·시나리오 키 |
+| `GET /api/stages/:id/lineups` | 스테이지 클리어 라인업 랭킹 — BlablaLink 공유 리더보드(최저 전투력 순·크로스서버), 공유 계정 라이브 조회. `?area=`(기본: 조회 계정 서버) `?fields=` |
 | `GET /api/costumes` | 코스튬 목록 — `?q=` `?grade=` `?nikke=` `?limit=`/`?offset=`/`?page=` |
 | `GET /api/costumes/:id` | 코스튬 상세 — tid 또는 이름(부분 일치), 소유 니케·이미지·`storyScenes`·`voices`(그 코스튬 전용 대사+음성) 포함 |
 | `GET /api/equips` | 장비 목록 — `?q=` `?class=` `?rare=` `?slot=` `?limit=`/`?offset=`/`?page=`. 기본 스탯·옵션슬롯 확률·재련비용·설명 포함 |
@@ -154,7 +155,7 @@ GET /api/user/<blablaid>/nikke/아니스               # 부분 일치 → 매�
 
 응답이 큰 엔드포인트에서 필요한 필드만 골라 받을 수 있습니다. 콤마로 여러 개 지정하고, 점(`.`)으로 중첩 필드를 파고듭니다.
 
-**지원 엔드포인트**: `/api/nikkes`, `/api/nikkes/:id`, `/api/favorites`, `/api/favorites/:id`, `/api/scenes`, `/api/scenes/:groupId`, `/api/events`, `/api/events/:id`, `/api/stages`, `/api/stages/:id`, `/api/costumes`, `/api/costumes/:id`, `/api/equips`, `/api/equips/options`, `/api/equips/options/:id`, `/api/equips/:id`, `/api/avatars`, `/api/avatars/:iconId`, `/api/cubes`, `/api/cubes/:id`, `/api/user/:blablaid/nikke`, `/api/user/:blablaid/nikke/:nameOrId`, `/api/user/:blablaid/roster` (구형 `?blablaid=`·`?openid=` 쿼리 경로도 동일하게 적용)
+**지원 엔드포인트**: `/api/nikkes`, `/api/nikkes/:id`, `/api/favorites`, `/api/favorites/:id`, `/api/scenes`, `/api/scenes/:groupId`, `/api/events`, `/api/events/:id`, `/api/stages`, `/api/stages/:id`, `/api/stages/:id/lineups`, `/api/costumes`, `/api/costumes/:id`, `/api/equips`, `/api/equips/options`, `/api/equips/options/:id`, `/api/equips/:id`, `/api/avatars`, `/api/avatars/:iconId`, `/api/cubes`, `/api/cubes/:id`, `/api/user/:blablaid/nikke`, `/api/user/:blablaid/nikke/:nameOrId`, `/api/user/:blablaid/roster` (구형 `?blablaid=`·`?openid=` 쿼리 경로도 동일하게 적용)
 
 ```
 GET /api/nikkes?fields=id,name.ko,images.icon
