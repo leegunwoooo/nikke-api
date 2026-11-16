@@ -390,7 +390,7 @@ const openapi = {
         summary: "캠페인 스테이지 목록",
         parameters: [
           { name: "q", in: "query", schema: { type: "string" }, description: "스테이지 이름 검색" },
-          { name: "chapter", in: "query", schema: { type: "integer" }, description: "챕터 번호" },
+          { name: "chapter", in: "query", schema: { type: "integer" }, description: "챕터 번호 — 게임 표기 기준 (프롤로그 0-x = 0, 44-x = 44)" },
           { name: "mode", in: "query", schema: { type: "string", enum: ["Normal", "Hard", "Story"] } },
           { name: "page", in: "query", schema: { type: "integer", minimum: 1 }, description: "페이지 번호 (1부터 — offset 대신 사용, 미지정 limit 시 페이지 크기 50)" },
           { name: "limit", in: "query", schema: { type: "integer", minimum: 1, maximum: 500 }, description: "최대 500, 미지정 시 전체" },

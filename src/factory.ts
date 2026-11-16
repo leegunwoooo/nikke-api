@@ -362,10 +362,12 @@ const getStages = memo(async () => {
   return stageRows;
 });
 
-// normalized shape served by /api/stages
+// normalized shape served by /api/stages.
+// chapter_id counts the prologue as 1 ("0-1" -> 1, "44-36" -> 45) while the
+// game's own display and scene chapters are 0-based — subtract to match.
 const stageRow = (s: any) => ({
   id: s.id,
-  chapter: s.chapter_id,
+  chapter: s.chapter_id - 1,
   mode: s.chapter_mod,
   battlePower: s.standard_battle_power ?? 0,
   name: s.name_localkey?.name ?? "",
@@ -395,7 +397,7 @@ const loadStageMap = memo(async () => {
     stageMap = new Map();
     for (const s of await getStages()) {
       stageMap.set(s.id, {
-        chapter: s.chapter_id,
+        chapter: s.chapter_id - 1,
         mode: s.chapter_mod,
         name: s.name_localkey?.name ?? "",
       });
@@ -764,7 +766,7 @@ app.get("/api/meta/filters", async (c) => {
     weapons: uniq(characters.map((x) => x.weapon.type)),
     rarities: uniq(characters.map((x) => x.rarity)),
     stageModes: uniq(stages.map((s: any) => s.chapter_mod)),
-    stageChapters: uniq(stages.map((s: any) => s.chapter_id as number)).sort((a, b) => a - b),
+    stageChapters: uniq(stages.map((s: any) => (s.chapter_id as number) - 1)).sort((a, b) => a - b),
     costumeGrades: uniq(Object.values(costumes).map((x: any) => x.grade)),
     equipClasses: uniq(Object.values(items ?? {}).map((x: any) => x.class)),
     equipRares: uniq(Object.values(items ?? {}).map((x: any) => x.rare)),

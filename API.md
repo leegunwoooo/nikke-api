@@ -827,7 +827,7 @@ GET /api/events/event_BunnyX777/script?limit=1
 | 파라미터 | 설명 | 예시 |
 |----------|------|------|
 | `q` | 스테이지 이름 부분 일치 | `?q=0-1` |
-| `chapter` | 챕터 번호 필터 | `?chapter=12` |
+| `chapter` | 챕터 번호 필터 — 게임 표기 기준 (프롤로그 `0-x` = 0, `44-x` = 44) | `?chapter=12` |
 | `mode` | 난이도 필터 | `Normal` / `Hard` / `Story` |
 | `limit` | 반환 개수 제한 (최대 500) | `?limit=100` |
 | `page` | 페이지 번호 (1부터) | `?page=3` |
@@ -846,7 +846,7 @@ GET /api/stages?mode=Hard&limit=50
   "stages": [
     {
       "id": 6000001,
-      "chapter": 1,
+      "chapter": 0,
       "mode": "Normal",
       "battlePower": 110,
       "name": "0-1 STAGE",
@@ -859,7 +859,7 @@ GET /api/stages?mode=Hard&limit=50
 | 필드 | 설명 |
 |------|------|
 | `id` | 스테이지 ID |
-| `chapter` | 챕터 번호 |
+| `chapter` | 챕터 번호 — 게임 표기 기준 (프롤로그 = 0). 업스트림 `chapter_id`(1-base)보다 1 작음 |
 | `mode` | `Normal` / `Hard` / `Story` |
 | `battlePower` | 권장 전투력 |
 | `name` | 스테이지 표시 이름 (`"0-1 STAGE"` 등) |
@@ -913,7 +913,7 @@ GET /api/stages/6044044/lineups?nikke=신데렐라&sort=high
 
 ```json
 {
-  "stage": { "stageId": 6044044, "chapter": 45, "mode": "Normal", "stage": "44-36 BOSS" },
+  "stage": { "stageId": 6044044, "chapter": 44, "mode": "Normal", "stage": "44-36 BOSS" },
   "areaId": 83,
   "count": 10,
   "lineups": [

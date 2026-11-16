@@ -27275,7 +27275,7 @@ function buildOpenapi(pkgVersion) {
           summary: "\uCEA0\uD398\uC778 \uC2A4\uD14C\uC774\uC9C0 \uBAA9\uB85D",
           parameters: [
             { name: "q", in: "query", schema: { type: "string" }, description: "\uC2A4\uD14C\uC774\uC9C0 \uC774\uB984 \uAC80\uC0C9" },
-            { name: "chapter", in: "query", schema: { type: "integer" }, description: "\uCC55\uD130 \uBC88\uD638" },
+            { name: "chapter", in: "query", schema: { type: "integer" }, description: "\uCC55\uD130 \uBC88\uD638 \u2014 \uAC8C\uC784 \uD45C\uAE30 \uAE30\uC900 (\uD504\uB864\uB85C\uADF8 0-x = 0, 44-x = 44)" },
             { name: "mode", in: "query", schema: { type: "string", enum: ["Normal", "Hard", "Story"] } },
             { name: "page", in: "query", schema: { type: "integer", minimum: 1 }, description: "\uD398\uC774\uC9C0 \uBC88\uD638 (1\uBD80\uD130 \u2014 offset \uB300\uC2E0 \uC0AC\uC6A9, \uBBF8\uC9C0\uC815 limit \uC2DC \uD398\uC774\uC9C0 \uD06C\uAE30 50)" },
             { name: "limit", in: "query", schema: { type: "integer", minimum: 1, maximum: 500 }, description: "\uCD5C\uB300 500, \uBBF8\uC9C0\uC815 \uC2DC \uC804\uCCB4" },
@@ -28010,7 +28010,7 @@ async function createApp(storage, options = {}) {
   });
   const stageRow = (s) => ({
     id: s.id,
-    chapter: s.chapter_id,
+    chapter: s.chapter_id - 1,
     mode: s.chapter_mod,
     battlePower: s.standard_battle_power ?? 0,
     name: s.name_localkey?.name ?? "",
@@ -28034,7 +28034,7 @@ async function createApp(storage, options = {}) {
       stageMap = /* @__PURE__ */ new Map();
       for (const s of await getStages()) {
         stageMap.set(s.id, {
-          chapter: s.chapter_id,
+          chapter: s.chapter_id - 1,
           mode: s.chapter_mod,
           name: s.name_localkey?.name ?? ""
         });
@@ -28359,7 +28359,7 @@ async function createApp(storage, options = {}) {
       weapons: uniq(characters.map((x) => x.weapon.type)),
       rarities: uniq(characters.map((x) => x.rarity)),
       stageModes: uniq(stages.map((s) => s.chapter_mod)),
-      stageChapters: uniq(stages.map((s) => s.chapter_id)).sort((a, b) => a - b),
+      stageChapters: uniq(stages.map((s) => s.chapter_id - 1)).sort((a, b) => a - b),
       costumeGrades: uniq(Object.values(costumes).map((x) => x.grade)),
       equipClasses: uniq(Object.values(items ?? {}).map((x) => x.class)),
       equipRares: uniq(Object.values(items ?? {}).map((x) => x.rare)),
@@ -29824,7 +29824,7 @@ var CREDS_KEY = "bla:creds";
 var HDR_CREDS = "x-bla-creds";
 var HDR_BLABLAID = "x-registered-blablaid";
 var edgeCache = caches.default;
-var BUILD_ID = false ? void 0 : "c294f06bbeb9";
+var BUILD_ID = false ? void 0 : "0cd1a614ed9c";
 var DATA_HOST = "https://nikke-api-data.pages.dev";
 var REVALIDATE_MS = 3e5;
 var BUILD_TIMEOUT_MS = 3e4;

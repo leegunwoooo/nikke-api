@@ -185,7 +185,11 @@ test("/api/stages list + filters + detail", async () => {
   assert.equal(all.stages[0].id, 6000001);
   assert.equal(all.stages[0].battlePower, 110);
   assert.equal(all.stages[0].scenarios.enter, "d_main_01_01_s");
-  assert.equal((await json("/api/stages?chapter=2")).count, 1);
+  // chapter_id is 1-based (prologue = 1) — the API reports the game's
+  // display chapter: "0-1" -> 0, "1-1 STORY" -> 1
+  assert.equal(all.stages[0].chapter, 0);
+  assert.equal((await json("/api/stages?chapter=0")).count, 3);
+  assert.equal((await json("/api/stages?chapter=1")).count, 1);
   assert.equal((await json("/api/stages?mode=hard")).count, 1);
   assert.equal((await json("/api/stages?q=0-2")).count, 1);
   assert.equal((await json("/api/stages?limit=1&offset=1")).stages[0].id, 6000002);
