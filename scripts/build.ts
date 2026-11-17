@@ -228,10 +228,14 @@ async function main() {
       ? { id: n.id, resourceId: n.resourceId, name: n.name, rarity: n.rarity, image: n.images.icon }
       : null;
   };
+  const syncedAt = new Date().toISOString();
   await writeFile(
     path.join(OUT, "characters.json"),
-    JSON.stringify({ count: characters.length, syncedAt: new Date().toISOString(), version: PKG_VERSION, characters }),
+    JSON.stringify({ count: characters.length, syncedAt, version: PKG_VERSION, characters }),
   );
+  // the worker's version stamp is just these two fields — a tiny file keeps it
+  // from downloading all of characters.json on every cold isolate + revalidate
+  await writeFile(path.join(OUT, "_stamp.json"), JSON.stringify({ syncedAt, version: PKG_VERSION }));
   console.log(`characters.json: ${characters.length} nikkes`);
 
   // --- per-character detail files from roledata ---

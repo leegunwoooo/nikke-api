@@ -76,6 +76,9 @@ globalThis.fetch = (async (input: any) => {
       const body = readFileSync(path.join(FIXTURES, url.slice(DATA_HOST.length)), "utf8");
       if (refreshedSyncedAt && url.endsWith("/characters.json"))
         return Response.json({ ...JSON.parse(body), syncedAt: refreshedSyncedAt });
+      // the stamp file is derived from the same syncedAt — a refresh must move it too
+      if (refreshedSyncedAt && url.endsWith("/_stamp.json"))
+        return Response.json({ ...JSON.parse(body), syncedAt: refreshedSyncedAt });
       return new Response(body);
     } catch {
       return new Response("missing", { status: 404 });

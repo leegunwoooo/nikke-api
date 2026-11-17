@@ -53,11 +53,22 @@ const bounded = <T>(p: Promise<T>, ms = BUILD_TIMEOUT_MS): Promise<T> =>
     p,
     new Promise<never>((_, rej) => setTimeout(() => rej(new Error("app build timeout")), ms)),
   ]);
+// the stamp is two fields — read the tiny _stamp.json instead of downloading
+// and parsing the ~800KB characters.json on every cold isolate + revalidation.
+// Data deploys from before the file existed 404: fall back to characters.json.
 const stampOf = (host: string) =>
-  fetch(`${host}/characters.json`)
-    .then((r) => r.json() as Promise<{ syncedAt?: string; version?: string }>)
+  fetch(`${host}/_stamp.json`)
+    .then((r) => {
+      if (!r.ok) throw new Error(`_stamp.json ${r.status}`);
+      return r.json() as Promise<{ syncedAt?: string; version?: string }>;
+    })
     .then((j) => `${j.syncedAt}|${j.version}`)
-    .catch(() => null);
+    .catch(() =>
+      fetch(`${host}/characters.json`)
+        .then((r) => r.json() as Promise<{ syncedAt?: string; version?: string }>)
+        .then((j) => `${j.syncedAt}|${j.version}`)
+        .catch(() => null),
+    );
 // the stamp namespaces edge-cache keys — without it a cold isolate can serve
 // a pre-deploy cached body for up to the TTL. Learned once per isolate (shared
 // in-flight promise, failures retry next request); after that it's free.
@@ -208,13 +219,14 @@ const adminToken = async (request: Request, env: Env) => {
 // the origin, then issue a personal connector key stored in KV
 const registerUser = async (request: Request, env: Env, ctx?: ExecutionContext) => {
   if (!env.AREA_KV) return json({ error: "KV not configured" }, 500);
-  const app = await getApp(env, ctx);
   const body = (await request.json().catch(() => null)) as { url?: string; blablaid?: string } | null;
   const raw = body?.url ?? body?.blablaid;
   const openid = typeof raw === "string" ? intlOpenIdOf(raw) : null;
   if (!openid) return json({ error: "a BlablaLink share URL or openid is required" }, 400);
+  // throttle before the app build — a rejected registration must not pay it
   const denied = await throttled(env, request);
   if (denied) return denied;
+  const app = await getApp(env, ctx);
   const creds = await getCreds(env);
   const probe = await app.fetch(
     new Request(`https://internal/api/user/${openid}?fields=intlOpenId`, {
@@ -266,11 +278,14 @@ const keyMemo = new Map<string, { v: string; at: number }>();
 const areaMemo = new Map<string, { v: string; at: number }>();
 
 // isolate memos outlive a single request by design — tests need them cleared
-// to exercise a different KV state in the same process
+// to exercise a different KV state in the same process. The learned data stamp
+// must reset too, or only the first test in a process ever exercises stampOf.
 export const resetWorkerMemos = () => {
   credsMemo = undefined;
   keyMemo.clear();
   areaMemo.clear();
+  dataStamp = "";
+  stampPromise = undefined;
 };
 
 // the KV value is re-serialized from canonical fields so downstream btoa()
@@ -491,7 +506,11 @@ export default {
       }
     }
 
-    // MISS/pass-through from here on — now the app and creds are needed.
+    // cache miss/pass — rate-limit before paying for creds (a KV read) or the
+    // app build; a rejected request must not spend either
+    const denied = await throttled(env, request);
+    if (denied) return denied;
+
     // Creds only go to session-backed paths — public live feeds (/api/codes)
     // must not spend a KV read per cold request
     if (url.pathname.startsWith("/api/user") || LINEUP_PATH.test(url.pathname) || url.pathname.startsWith("/mcp")) {
@@ -502,8 +521,6 @@ export default {
     const app = await getApp(env, ctx);
 
     if (!isGet) {
-      const denied = await throttled(env, request);
-      if (denied) return denied;
       const res = await app.fetch(request);
       track("PASS");
       const out = new Response(res.body, res);
@@ -512,8 +529,6 @@ export default {
     }
 
     // a stale If-None-Match can't match the origin's version-derived ETag
-    const denied = await throttled(env, request);
-    if (denied) return denied;
     const oh = new Headers(h);
     oh.set("if-none-match", "");
     const res = await app.fetch(new Request(url.toString(), { headers: oh, method: "GET" }));

@@ -20,17 +20,23 @@ const CREDS = JSON.stringify({ open_id: "test-openid", token: "test-token", uid:
 
 // DIST_HOST reads come from the fixtures, BlablaLink is scripted per area.
 // areaCalls records which servers GetUserCharacters was asked for.
-function stubFetch(perArea: (area: number) => { code: number; characters?: unknown[]; msg?: string } = () => ({ code: 0 })) {
+function stubFetch(
+  perArea: (area: number) => { code: number; characters?: unknown[]; msg?: string } = () => ({ code: 0 }),
+  opts: { missing?: string[] } = {},
+) {
   const orig = globalThis.fetch;
   resetBlaSession();
   const areaCalls: number[] = [];
   const paths: string[] = [];
+  const distPaths: string[] = [];
   const lineupCalls: number[] = [];
   let cdkCalls = 0;
   globalThis.fetch = (async (input: any, init?: any) => {
     const url = String(input?.url ?? input);
     if (url.startsWith(DIST_HOST)) {
       const rel = url.slice(DIST_HOST.length + 1);
+      distPaths.push(rel);
+      if (opts.missing?.includes(rel)) return new Response("not found", { status: 404 });
       return readFile(path.join(DIST, rel)).then(
         (b) => new Response(b),
         () => new Response("not found", { status: 404 }),
@@ -64,6 +70,7 @@ function stubFetch(perArea: (area: number) => { code: number; characters?: unkno
   return {
     areaCalls,
     paths,
+    distPaths,
     lineupCalls,
     get cdkCalls() {
       return cdkCalls;
@@ -324,6 +331,33 @@ test("/api/codes takes the short edge cache without spending creds", async () =>
 
     // public feed — no session login, so no creds/KV spend at all
     assert.ok(!stub.paths.some((u) => u.endsWith("/api/user/Login")));
+  } finally {
+    stub.restore();
+  }
+});
+
+test("version stamp reads _stamp.json instead of the full characters.json", async () => {
+  const stub = stubFetch();
+  try {
+    resetWorkerMemos();
+    const { env } = envOf();
+    const res = await send(env, "/api/nikkes");
+    assert.equal(res.status, 200);
+    const stampAt = stub.distPaths.indexOf("_stamp.json");
+    assert.ok(stampAt >= 0, "expected a _stamp.json fetch, got " + JSON.stringify(stub.distPaths));
+  } finally {
+    stub.restore();
+  }
+});
+
+test("version stamp falls back to characters.json when _stamp.json is missing", async () => {
+  const stub = stubFetch(() => ({ code: 0 }), { missing: ["_stamp.json"] });
+  try {
+    resetWorkerMemos();
+    const { env } = envOf();
+    const res = await send(env, "/api/nikkes");
+    assert.equal(res.status, 200);
+    assert.ok(stub.distPaths.includes("characters.json"));
   } finally {
     stub.restore();
   }

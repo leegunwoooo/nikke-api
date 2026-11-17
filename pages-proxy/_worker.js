@@ -29824,7 +29824,7 @@ var CREDS_KEY = "bla:creds";
 var HDR_CREDS = "x-bla-creds";
 var HDR_BLABLAID = "x-registered-blablaid";
 var edgeCache = caches.default;
-var BUILD_ID = false ? void 0 : "0cd1a614ed9c";
+var BUILD_ID = false ? void 0 : "02747cf69a96";
 var DATA_HOST = "https://nikke-api-data.pages.dev";
 var REVALIDATE_MS = 3e5;
 var BUILD_TIMEOUT_MS = 3e4;
@@ -29835,7 +29835,12 @@ var bounded = (p, ms = BUILD_TIMEOUT_MS) => Promise.race([
   p,
   new Promise((_, rej) => setTimeout(() => rej(new Error("app build timeout")), ms))
 ]);
-var stampOf = (host) => fetch(`${host}/characters.json`).then((r) => r.json()).then((j) => `${j.syncedAt}|${j.version}`).catch(() => null);
+var stampOf = (host) => fetch(`${host}/_stamp.json`).then((r) => {
+  if (!r.ok) throw new Error(`_stamp.json ${r.status}`);
+  return r.json();
+}).then((j) => `${j.syncedAt}|${j.version}`).catch(
+  () => fetch(`${host}/characters.json`).then((r) => r.json()).then((j) => `${j.syncedAt}|${j.version}`).catch(() => null)
+);
 var stampPromise;
 var dataVersionOf = (env) => {
   if (dataStamp) return Promise.resolve(dataStamp);
@@ -29952,13 +29957,13 @@ var adminToken = async (request, env) => {
 };
 var registerUser = async (request, env, ctx) => {
   if (!env.AREA_KV) return json({ error: "KV not configured" }, 500);
-  const app = await getApp(env, ctx);
   const body = await request.json().catch(() => null);
   const raw2 = body?.url ?? body?.blablaid;
   const openid = typeof raw2 === "string" ? intlOpenIdOf(raw2) : null;
   if (!openid) return json({ error: "a BlablaLink share URL or openid is required" }, 400);
   const denied = await throttled(env, request);
   if (denied) return denied;
+  const app = await getApp(env, ctx);
   const creds = await getCreds(env);
   const probe = await app.fetch(
     new Request(`https://internal/api/user/${openid}?fields=intlOpenId`, {
@@ -30000,6 +30005,8 @@ var resetWorkerMemos = () => {
   credsMemo = void 0;
   keyMemo.clear();
   areaMemo.clear();
+  dataStamp = "";
+  stampPromise = void 0;
 };
 var LATIN1 = /^[\x00-\xff]*$/;
 var credsOfRaw = (raw2) => {
@@ -30147,6 +30154,8 @@ var index_default = {
         }
       }
     }
+    const denied = await throttled(env, request);
+    if (denied) return denied;
     if (url2.pathname.startsWith("/api/user") || LINEUP_PATH.test(url2.pathname) || url2.pathname.startsWith("/mcp")) {
       const creds = await getCreds(env);
       if (creds) h.set(HDR_CREDS, btoa(creds));
@@ -30154,16 +30163,12 @@ var index_default = {
     request = new Request(request, { headers: h });
     const app = await getApp(env, ctx);
     if (!isGet) {
-      const denied2 = await throttled(env, request);
-      if (denied2) return denied2;
       const res2 = await app.fetch(request);
       track("PASS");
       const out = new Response(res2.body, res2);
       out.headers.set("Cache-Control", "no-store");
       return out;
     }
-    const denied = await throttled(env, request);
-    if (denied) return denied;
     const oh = new Headers(h);
     oh.set("if-none-match", "");
     const res = await app.fetch(new Request(url2.toString(), { headers: oh, method: "GET" }));
