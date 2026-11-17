@@ -1,6 +1,6 @@
 {
   "name": "nikke-data-api",
-  "version": "0.7.0",
+  "version": "0.8.0",
   "description": "NIKKE game data API — REST + MCP server over synced game data, runs on Node and Cloudflare Workers",
   "main": "src/index.ts",
   "scripts": {
