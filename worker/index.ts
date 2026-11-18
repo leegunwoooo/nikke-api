@@ -4,7 +4,8 @@
 // live upstream data on a shared BlablaLink account, so they get a short
 // USER_TTL edge cache instead — repeat reads absorb at the edge instead of
 // burning the shared account's rate limit. ?refresh on any GET bypasses once.
-// ANALYTICS records one point per request (path group + HIT/MISS/PASS).
+// ANALYTICS records one point per request (path group + HIT/MISS/PASS +
+// country + ASN — coarse traffic attribution, no IPs).
 
 import { createApp } from "../src/factory.js";
 import { LINEUP_PATH, LIVE_PATH } from "../src/cache.js";
@@ -384,9 +385,11 @@ export default {
     const url = new URL(request.url);
 
     const group = pathGroup(url.pathname);
+    // Request.cf isn't in the DOM types — country/ASN only, never the IP
+    const cf = (request as { cf?: { country?: string; asn?: number } }).cf;
     const track = (edge: string) =>
       env.ANALYTICS?.writeDataPoint({
-        blobs: [group, edge],
+        blobs: [group, edge, cf?.country ?? "", String(cf?.asn ?? "")],
         doubles: [1],
         indexes: [group],
       });

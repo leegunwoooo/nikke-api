@@ -29824,7 +29824,7 @@ var CREDS_KEY = "bla:creds";
 var HDR_CREDS = "x-bla-creds";
 var HDR_BLABLAID = "x-registered-blablaid";
 var edgeCache = caches.default;
-var BUILD_ID = false ? void 0 : "02747cf69a96";
+var BUILD_ID = false ? void 0 : "7470fc0139de";
 var DATA_HOST = "https://nikke-api-data.pages.dev";
 var REVALIDATE_MS = 3e5;
 var BUILD_TIMEOUT_MS = 3e4;
@@ -30074,8 +30074,9 @@ var index_default = {
   async fetch(request, env, ctx) {
     const url2 = new URL(request.url);
     const group = pathGroup(url2.pathname);
+    const cf = request.cf;
     const track = (edge) => env.ANALYTICS?.writeDataPoint({
-      blobs: [group, edge],
+      blobs: [group, edge, cf?.country ?? "", String(cf?.asn ?? "")],
       doubles: [1],
       indexes: [group]
     });
