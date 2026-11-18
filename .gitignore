@@ -31,3 +31,4 @@ scripts/_probe*
 scripts/_p*.ts
 .wrangler/
 probe_*.json
+.tmp-*

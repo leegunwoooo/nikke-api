@@ -34,6 +34,15 @@
 - `library` 씬은 `scripts/library-stories.ts`의 `LIBRARY_COMMIT`에 고정.
   원본이 바뀌면 `Watch story archive`가 이슈로 알림. 값을 올린 PR을 머지하면 다음 데이터 갱신 때 배포.
 
+## 릴리즈
+1. `package.json`의 `version` 범프(신규 엔드포인트/기능 = minor) → 커밋 `release: vX.Y.Z` → push.
+2. `git tag vX.Y.Z && git push origin vX.Y.Z`.
+3. `gh release create vX.Y.Z` — 노트는 한국어로 `## 추가`·`## 수정`·`## 운영`(또는 운영·성능) 섹션 구분.
+   직전 릴리즈 노트와 겹치지 않게 실제 신규분만 씀.
+- `version`은 다음 데이터 빌드 때 `characters.json`/`_stamp.json`에 반영됨.
+  바로 반영이 필요하면 `gh workflow run refresh-data.yml -f force=true`.
+- `data-latest` 릴리즈는 데이터 배포용 태그라 손대지 않음.
+
 ## 이슈와 PR
 - 이슈를 닫는 변경에는 `Closes #N` 사용. `(#N)`만으로는 안 닫힘.
 - AI 작업자의 보고는 그대로 믿지 말고 결과를 직접 확인.
