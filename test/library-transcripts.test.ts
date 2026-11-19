@@ -2,7 +2,9 @@ import assert from "node:assert/strict";
 import { test } from "node:test";
 import { dedupKeys, libraryEventId, readTranscribedStories, selectLibraryScenes, selectNewScripts } from "../scripts/library-stories.js";
 
-const scenes = await readTranscribedStories();
+const all = await readTranscribedStories();
+const scenes = all.filter((s) => s.collection === "MARIA-n");
+const sky = all.filter((s) => s.collection === "SKY ON THE ROCK");
 
 test("MARIA-n parts 1 and 2 and the epilogue have their 28 scenes, ready for the API", () => {
   assert.equal(scenes.length, 28);
@@ -64,6 +66,40 @@ test("part 2's one real choice keeps both options", () => {
   assert.equal(lines[lines.indexOf(options[1]) + 1].text, "…!!");
 });
 
+test("SKY ON THE ROCK has its 14 album scenes in order, ready for the API", () => {
+  assert.equal(sky.length, 14);
+  assert.equal(libraryEventId(sky[0].collection), "lib_sky_on_the_rock");
+  assert.deepEqual(sky.map((s) => s.groupId), sky.map((_, i) => `lib_sky_on_the_rock_${String(i).padStart(2, "0")}`));
+  assert.deepEqual([sky[0].name, sky[7].name, sky[13].name], ["액자 속 추억", "하루만 빌릴 수 있다면", "하늘과 산들바람의 여행 : B"]);
+  for (const s of sky) {
+    assert.equal(s.libraryCategory, "event_stories");
+    assert.equal(s.sourceVideo, "https://youtu.be/GnHGyrMNGoc");
+    s.lines.forEach((l, i) => {
+      assert.equal(l.id, `${s.groupId}_${i + 1}`);
+      assert.ok(l.text);
+      assert.ok(["Speech", "Self", "Narration"].includes(l.window));
+      assert.equal(Boolean(l.speakerName), l.window === "Speech");
+    });
+  }
+  assert.equal(sky[0].lines[0].text, "아아, 캡틴.");
+  assert.equal(sky.at(-1)!.lines.at(-1)!.text, "SKY ON THE ROCK : END");
+});
+
+test("SKY ON THE ROCK keeps the short lines OCR missed and both voices of the duet", () => {
+  const lines = sky.flatMap((s) => s.lines);
+  const last = sky[12].lines; // the flight ends on the duet
+  const inLast = (text: string, speaker: string) => last.findIndex((l) => l.text === text && l.speakerName === speaker);
+  const at = (text: string, speaker: string) => lines.findIndex((l) => l.text === text && l.speakerName === speaker);
+  // read from the frames: one- or two-frame lines with no letters
+  assert.ok(lines.filter((l) => l.text === "……." && l.window === "Speech").length >= 30);
+  assert.equal(lines[at("비행과 관련된 모든 것들은 제 손으로 해결할 수 있어요.", "스카이") + 1].text, "비행이든, 정비든.");
+  const scream = "내가 하고 싶으면 해! 누가 뭐라 떠들어도 이 발은 멈추지 않아!";
+  assert.equal(inLast(scream, "세피"), inLast(scream, "스카이") + 1);
+  assert.equal(inLast("I DO WHAT I WANT!", "세피"), inLast("I DO WHAT I WANT!", "스카이") + 1);
+  // two shouts in the dark, the second one closer
+  assert.deepEqual(sky[6].lines.filter((l) => l.speakerName === "???").map((l) => l.text), ["…틴!", "…ㅋ틴!"]);
+});
+
 test("a transcript replaying main-story lines stays until nearly all of it is published", () => {
   const scene = scenes.find((s) => s.groupId === "lib_maria_n_2_12")!;
   const keys = dedupKeys(scene.lines);
@@ -90,6 +126,6 @@ test("archive scenes win over a transcript of the same story", () => {
 
 test("a transcript drops out once the same story is published elsewhere", () => {
   const published = new Set<string>();
-  selectNewScripts(scenes, published);
-  assert.deepEqual(selectNewScripts(scenes, published), []);
+  selectNewScripts(all, published);
+  assert.deepEqual(selectNewScripts(all, published), []);
 });

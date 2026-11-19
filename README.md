@@ -51,7 +51,7 @@ BlablaLink(공식 위키 도구)의 CDN 데이터를 매일 동기화합니다. 
 
 ### 스토리 씬 — 5,342개 (한국어)
 
-메인/이벤트/돌발 스토리 + 호감도(Attractive) 시나리오의 전체 대본. 애장품 스토리 21편도 영상에서 옮긴 대본으로 함께 제공합니다. 게임 데이터에 없는 메신저·유실물·사이드 스토리·서브 퀘스트·이벤트 약 2000편은 `library` 카테고리에 있습니다. 출처는 [Nikke Forbidden Library](https://github.com/VoMiRin/Nikke-Forbidden-Library)입니다.
+메인/이벤트/돌발 스토리 + 호감도(Attractive) 시나리오의 전체 대본. 애장품 스토리 21편도 영상에서 옮긴 대본으로 함께 제공합니다. 게임 데이터에 없는 메신저·유실물·사이드 스토리·서브 퀘스트·이벤트 약 2000편은 `library` 카테고리에 있습니다. 출처는 [Nikke Forbidden Library](https://github.com/VoMiRin/Nikke-Forbidden-Library)입니다. 기록에도 없는 MARIA-n과 SKY ON THE ROCK은 영상에서 옮긴 대본으로 넣었습니다.
 
 | 항목 | 내용 |
 |------|------|
