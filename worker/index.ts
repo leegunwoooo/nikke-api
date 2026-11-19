@@ -12,6 +12,9 @@ import { LINEUP_PATH, LIVE_PATH } from "../src/cache.js";
 import { httpStorage } from "../src/storage.js";
 
 const USER_TTL = 300;
+// expired live-path bodies still beat an error — the shadow copy under
+// "<key>#stale" answers when the shared upstream account rate-limits or 5xxs
+const STALE_TTL = 7 * 86400;
 const AREA_KV_TTL = 30 * 86400;
 
 const CREDS_KEY = "bla:creds";
@@ -365,12 +368,27 @@ const throttled = async (env: Env, request: Request) => {
       });
 };
 
+// only documented params may reach the origin or fork the cache key — junk
+// params (?x=1, ?x=2…) each mint a unique key and turn every request into a
+// paid origin MISS. Keep in sync with c.req.query() params in src/factory.ts
+const ALLOWED_PARAMS = new Set([
+  "q", "page", "limit", "offset", "fields", "lang", "family", "category", "nikke", "speaker",
+  "chapter", "after", "mode", "element", "class", "burst", "corporation", "weapon", "rarity",
+  "grade", "rare", "groupId", "rank", "slot", "resourceId", "orphans", "collection", "id",
+  "name", "skin", "anim", "done", "required", "sort", "type", "all", "blablaid", "openid",
+  "url", "area", "exact", "names", "path",
+]);
+
+// dedupe concurrent misses on the same key — a cold-cache burst (deploy,
+// burst-asset storm) otherwise pays one origin trip per concurrent request
+const inflight = new Map<string, Promise<Response>>();
+
 // group by route family — /api/user/<openid>/nikke -> /api/user
 const pathGroup = (pathname: string) => pathname.split("/").slice(0, 3).join("/") || "/";
 
 const outgoing = (
   res: Response,
-  edge: "HIT" | "MISS" | "PASS",
+  edge: "HIT" | "MISS" | "PASS" | "STALE",
   userPath: boolean,
 ) => {
   const out = new Response(res.body, res);
@@ -452,6 +470,8 @@ export default {
     const target = userPath ? userTargetOf(url) : null;
     const isGet = request.method === "GET" || request.method === "HEAD";
     let key: Request | undefined;
+    let staleReq: Request | undefined; // serve-stale shadow key, live paths only
+    let settle: { res: (r: Response) => void; rej: (e: unknown) => void } | undefined;
     let callerArea = false; // ?area= came from the request, not the remembered value
 
     // GET: serve from edge cache BEFORE touching the app or KV — a hit
@@ -464,6 +484,7 @@ export default {
       request.headers.get("x-admin-token") === env.ADMIN_TOKEN;
     if (isGet) {
       url.searchParams.delete("refresh");
+      for (const p of [...url.searchParams.keys()]) if (!ALLOWED_PARAMS.has(p)) url.searchParams.delete(p);
       callerArea = url.searchParams.has("area");
       // a remembered nikke_area_id lets the origin skip one upstream call —
       // not on /roster, where ?area= narrows the five-server sweep to one
@@ -493,6 +514,16 @@ export default {
       const keyUrl = new URL(url);
       if (v) keyUrl.searchParams.set("__v", v);
       key = new Request(keyUrl.toString());
+      // query marker, not a fragment — Request URLs may drop "#" parts
+      if (userPath) {
+        const su = new URL(key.url);
+        // an auto-injected ?area= must not fork the shadow — the fallback
+        // should survive the learn-area transition. A caller-chosen ?area=
+        // genuinely changes the response, so it stays in the key
+        if (!callerArea) su.searchParams.delete("area");
+        su.searchParams.set("__stale", "1");
+        staleReq = new Request(su.toString());
+      }
       if (!refresh) {
         const hit = await edgeCache.match(key);
         if (hit) {
@@ -506,6 +537,18 @@ export default {
           }
           return outgoing(hit, "HIT", userPath);
         }
+        // followers share the leader's origin fetch rather than each paying
+        // for one — the shared response behaves like a hit for them
+        const pending = inflight.get(key.url);
+        if (pending) {
+          try {
+            track("HIT");
+            return outgoing((await pending).clone(), "HIT", userPath);
+          } catch {
+            return json({ error: "origin unavailable" }, 502);
+          }
+        }
+        inflight.set(key.url, new Promise<Response>((res, rej) => (settle = { res, rej })));
       }
     }
 
@@ -534,7 +577,30 @@ export default {
     // a stale If-None-Match can't match the origin's version-derived ETag
     const oh = new Headers(h);
     oh.set("if-none-match", "");
-    const res = await app.fetch(new Request(url.toString(), { headers: oh, method: "GET" }));
+    let res: Response;
+    try {
+      res = await app.fetch(new Request(url.toString(), { headers: oh, method: "GET" }));
+    } catch (e) {
+      settle?.rej(e);
+      if (settle && key) inflight.delete(key.url);
+      const stale = staleReq ? await edgeCache.match(staleReq) : undefined;
+      if (stale) {
+        track("STALE");
+        return outgoing(stale, "STALE", userPath);
+      }
+      throw e;
+    }
+    // live paths sit on a shared upstream account — when it rate-limits or
+    // 5xxs, answer the last good copy rather than the error
+    if (userPath && !res.ok && staleReq) {
+      const stale = await edgeCache.match(staleReq);
+      if (stale) {
+        settle?.res(stale.clone());
+        if (settle && key) inflight.delete(key.url);
+        track("STALE");
+        return outgoing(stale, "STALE", userPath);
+      }
+    }
     // userPath responses are rewritten to edge-cacheable below; other
     // no-store responses (mcp guide etc.) must not be stored at all
     const cacheable = res.ok && (userPath || !res.headers.get("cache-control")?.includes("no-store"));
@@ -544,7 +610,17 @@ export default {
       // the Cache API has no stale-while-revalidate, so past USER_TTL the next
       // lookup is a plain miss that goes upstream
       if (userPath) stored.headers.set("Cache-Control", `public, max-age=${USER_TTL}, s-maxage=${USER_TTL}`);
+      // a clone for coalesced followers — `stored` itself is consumed by put
+      const shared = stored.clone();
       ctx.waitUntil(edgeCache.put(key!, stored));
+      // serve-stale shadow: the Cache API drops entries past TTL, so the
+      // fallback copy lives under a separate key with a long lifetime
+      if (staleReq) {
+        const shadow = shared.clone();
+        shadow.headers.set("Cache-Control", `public, max-age=${STALE_TTL}, s-maxage=${STALE_TTL}`);
+        ctx.waitUntil(edgeCache.put(staleReq, shadow));
+      }
+      settle?.res(shared);
       // profile responses carry intlOpenId + areaId — remember the mapping,
       // but never one the caller chose: anyone could pin someone else's server
       if (target && env.AREA_KV && !callerArea) {
@@ -568,7 +644,8 @@ export default {
           })(),
         );
       }
-    }
+    } else settle?.res(res.clone()); // followers share even an error body
+    if (settle && key) inflight.delete(key.url);
     track("MISS");
     return outgoing(res, "MISS", userPath);
   },

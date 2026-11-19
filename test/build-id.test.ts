@@ -104,8 +104,11 @@ const call = async (worker: { fetch: Function }, url: string) => {
   await Promise.all(pending);
   return res;
 };
-const storedFor = (pathname: string) => {
-  const hits = [...store.entries()].filter(([k]) => new URL(k).pathname === pathname);
+const storedFor = (pathname: string, stale = false) => {
+  const hits = [...store.entries()].filter(([k]) => {
+    const u = new URL(k);
+    return u.pathname === pathname && u.searchParams.has("__stale") === stale;
+  });
   assert.equal(hits.length, 1, pathname);
   const [k, res] = hits[0];
   return { v: new URL(k).searchParams.get("__v"), res };
@@ -143,7 +146,7 @@ test("burst asset relays are keyed on their revision path, not the data/build ve
   assert.equal((await call(worker, asset)).headers.get("x-edge-cache"), "HIT");
 });
 
-test("user responses are stored for USER_TTL with no stale-while-revalidate", async () => {
+test("user responses are stored for USER_TTL plus a long-TTL stale shadow", async () => {
   bundled();
   store.clear();
   const { default: worker } = await import(pathToFileURL(bundlePath).href);
@@ -152,6 +155,7 @@ test("user responses are stored for USER_TTL with no stale-while-revalidate", as
   assert.equal(res.status, 200);
   assert.equal(res.headers.get("Cache-Control"), "no-store");
   assert.equal(storedFor("/api/user/12345").res.headers.get("Cache-Control"), "public, max-age=300, s-maxage=300");
+  assert.equal(storedFor("/api/user/12345", true).res.headers.get("Cache-Control"), "public, max-age=604800, s-maxage=604800");
 });
 
 test("the app rebuilt after a data refresh keeps the build id in its ETag", async () => {

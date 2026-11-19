@@ -25760,7 +25760,7 @@ function createMcpHandler(factory, options = {}) {
   const { legacy, onerror, responseMode } = options;
   const maxRequestBodySize = resolveMaxRequestBodySize(options.maxRequestBodySize);
   if (typeof legacy === "function") throw new TypeError("The 'legacy' option only accepts 'stateless' or 'reject', not a handler function. To serve 2025-era traffic with your own handler, route in user land with the exported isLegacyRequest(request) predicate in front of a strict (legacy: 'reject') handler.");
-  const inflight = /* @__PURE__ */ new Set();
+  const inflight2 = /* @__PURE__ */ new Set();
   let closed = false;
   const reportError = (error2) => {
     try {
@@ -25857,9 +25857,9 @@ function createMcpHandler(factory, options = {}) {
       clientCapabilities: declaredClientCapabilities
     });
     const previousOnClose = server.onclose;
-    inflight.add(server);
+    inflight2.add(server);
     const onExchangeClose = () => {
-      inflight.delete(server);
+      inflight2.delete(server);
       if (server.onclose === onExchangeClose) server.onclose = previousOnClose;
       previousOnClose?.();
     };
@@ -25879,7 +25879,7 @@ function createMcpHandler(factory, options = {}) {
       if (error2 instanceof SdkError && error2.code === SdkErrorCode.ConnectionClosed) return new Response(null, { status: 499 });
       await server.close().catch(() => {
       });
-      inflight.delete(server);
+      inflight2.delete(server);
       reportError(toError(error2));
       return internalServerErrorResponse(echoableRequestId(route.message));
     }
@@ -25939,9 +25939,9 @@ function createMcpHandler(factory, options = {}) {
     close: async () => {
       closed = true;
       listenRouter.closeAll();
-      const closing = [...inflight].map((server) => server.close().catch(() => {
+      const closing = [...inflight2].map((server) => server.close().catch(() => {
       }));
-      inflight.clear();
+      inflight2.clear();
       await Promise.all(closing);
     }
   };
@@ -29819,12 +29819,13 @@ function httpStorage(base) {
 
 // worker/index.ts
 var USER_TTL = 300;
+var STALE_TTL = 7 * 86400;
 var AREA_KV_TTL = 30 * 86400;
 var CREDS_KEY = "bla:creds";
 var HDR_CREDS = "x-bla-creds";
 var HDR_BLABLAID = "x-registered-blablaid";
 var edgeCache = caches.default;
-var BUILD_ID = false ? void 0 : "7470fc0139de";
+var BUILD_ID = false ? void 0 : "795bbdede328";
 var DATA_HOST = "https://nikke-api-data.pages.dev";
 var REVALIDATE_MS = 3e5;
 var BUILD_TIMEOUT_MS = 3e4;
@@ -30063,6 +30064,52 @@ var throttled = async (env, request) => {
     headers: { "content-type": "application/json", "retry-after": "60" }
   });
 };
+var ALLOWED_PARAMS = /* @__PURE__ */ new Set([
+  "q",
+  "page",
+  "limit",
+  "offset",
+  "fields",
+  "lang",
+  "family",
+  "category",
+  "nikke",
+  "speaker",
+  "chapter",
+  "after",
+  "mode",
+  "element",
+  "class",
+  "burst",
+  "corporation",
+  "weapon",
+  "rarity",
+  "grade",
+  "rare",
+  "groupId",
+  "rank",
+  "slot",
+  "resourceId",
+  "orphans",
+  "collection",
+  "id",
+  "name",
+  "skin",
+  "anim",
+  "done",
+  "required",
+  "sort",
+  "type",
+  "all",
+  "blablaid",
+  "openid",
+  "url",
+  "area",
+  "exact",
+  "names",
+  "path"
+]);
+var inflight = /* @__PURE__ */ new Map();
 var pathGroup = (pathname) => pathname.split("/").slice(0, 3).join("/") || "/";
 var outgoing = (res, edge, userPath) => {
   const out = new Response(res.body, res);
@@ -30120,10 +30167,13 @@ var index_default = {
     const target = userPath ? userTargetOf(url2) : null;
     const isGet = request.method === "GET" || request.method === "HEAD";
     let key2;
+    let staleReq;
+    let settle2;
     let callerArea = false;
     const refresh = url2.searchParams.has("refresh") && !!env.ADMIN_TOKEN && request.headers.get("x-admin-token") === env.ADMIN_TOKEN;
     if (isGet) {
       url2.searchParams.delete("refresh");
+      for (const p of [...url2.searchParams.keys()]) if (!ALLOWED_PARAMS.has(p)) url2.searchParams.delete(p);
       callerArea = url2.searchParams.has("area");
       if (target && !url2.searchParams.has("area") && !/^\/api\/user\/[^/]+\/roster$/.test(url2.pathname)) {
         const area = await getArea(env, target);
@@ -30142,6 +30192,12 @@ var index_default = {
       const keyUrl = new URL(url2);
       if (v) keyUrl.searchParams.set("__v", v);
       key2 = new Request(keyUrl.toString());
+      if (userPath) {
+        const su = new URL(key2.url);
+        if (!callerArea) su.searchParams.delete("area");
+        su.searchParams.set("__stale", "1");
+        staleReq = new Request(su.toString());
+      }
       if (!refresh) {
         const hit = await edgeCache.match(key2);
         if (hit) {
@@ -30153,6 +30209,16 @@ var index_default = {
           }
           return outgoing(hit, "HIT", userPath);
         }
+        const pending = inflight.get(key2.url);
+        if (pending) {
+          try {
+            track("HIT");
+            return outgoing((await pending).clone(), "HIT", userPath);
+          } catch {
+            return json({ error: "origin unavailable" }, 502);
+          }
+        }
+        inflight.set(key2.url, new Promise((res2, rej) => settle2 = { res: res2, rej }));
       }
     }
     const denied = await throttled(env, request);
@@ -30172,12 +30238,40 @@ var index_default = {
     }
     const oh = new Headers(h);
     oh.set("if-none-match", "");
-    const res = await app.fetch(new Request(url2.toString(), { headers: oh, method: "GET" }));
+    let res;
+    try {
+      res = await app.fetch(new Request(url2.toString(), { headers: oh, method: "GET" }));
+    } catch (e) {
+      settle2?.rej(e);
+      if (settle2 && key2) inflight.delete(key2.url);
+      const stale = staleReq ? await edgeCache.match(staleReq) : void 0;
+      if (stale) {
+        track("STALE");
+        return outgoing(stale, "STALE", userPath);
+      }
+      throw e;
+    }
+    if (userPath && !res.ok && staleReq) {
+      const stale = await edgeCache.match(staleReq);
+      if (stale) {
+        settle2?.res(stale.clone());
+        if (settle2 && key2) inflight.delete(key2.url);
+        track("STALE");
+        return outgoing(stale, "STALE", userPath);
+      }
+    }
     const cacheable = res.ok && (userPath || !res.headers.get("cache-control")?.includes("no-store"));
     if (cacheable) {
       const stored = new Response(res.clone().body, res);
       if (userPath) stored.headers.set("Cache-Control", `public, max-age=${USER_TTL}, s-maxage=${USER_TTL}`);
+      const shared = stored.clone();
       ctx.waitUntil(edgeCache.put(key2, stored));
+      if (staleReq) {
+        const shadow = shared.clone();
+        shadow.headers.set("Cache-Control", `public, max-age=${STALE_TTL}, s-maxage=${STALE_TTL}`);
+        ctx.waitUntil(edgeCache.put(staleReq, shadow));
+      }
+      settle2?.res(shared);
       if (target && env.AREA_KV && !callerArea) {
         ctx.waitUntil(
           (async () => {
@@ -30197,7 +30291,8 @@ var index_default = {
           })()
         );
       }
-    }
+    } else settle2?.res(res.clone());
+    if (settle2 && key2) inflight.delete(key2.url);
     track("MISS");
     return outgoing(res, "MISS", userPath);
   }

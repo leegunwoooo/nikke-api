@@ -362,3 +362,73 @@ test("version stamp falls back to characters.json when _stamp.json is missing", 
     stub.restore();
   }
 });
+
+// junk query params must not mint unique cache keys — ?x=1 and ?x=2 are the
+// same resource, so the second request has to be a HIT
+test("unknown query params are stripped before cache keying", async () => {
+  const stub = stubFetch();
+  try {
+    resetWorkerMemos();
+    edge.clear();
+    const { env } = envOf();
+    const first = await send(env, "/api/codes?junk=1");
+    assert.equal(first.status, 200);
+    assert.equal(stub.cdkCalls, 1);
+
+    const second = await send(env, "/api/codes?junk=2&another=3");
+    assert.equal(second.status, 200);
+    assert.equal(second.headers.get("x-edge-cache"), "HIT");
+    assert.equal(stub.cdkCalls, 1); // no second upstream trip
+  } finally {
+    stub.restore();
+  }
+});
+
+// concurrent misses on the same key share one origin fetch
+test("concurrent misses coalesce into a single origin fetch", async () => {
+  const stub = stubFetch();
+  try {
+    resetWorkerMemos();
+    const { env } = envOf();
+    edge.clear();
+    const [a, b] = await Promise.all([send(env, "/api/codes"), send(env, "/api/codes")]);
+    assert.equal(a.status, 200);
+    assert.equal(b.status, 200);
+    assert.equal(stub.cdkCalls, 1); // follower shared the leader's fetch
+    assert.equal(b.headers.get("x-edge-cache"), "HIT");
+  } finally {
+    stub.restore();
+  }
+});
+
+// an upstream failure on a live path answers the last good copy, not the error
+test("a failed live refresh serves the stale shadow copy", async () => {
+  const id = "1000000000000000010";
+  let fail = false;
+  const stub = stubFetch();
+  const inner = globalThis.fetch;
+  globalThis.fetch = (async (input: any, init?: any) => {
+    const url = String(input?.url ?? input);
+    if (fail && url.includes("GetUserProfileBasicInfo")) return new Response("down", { status: 500 });
+    return inner(input, init);
+  }) as typeof fetch;
+  try {
+    const { env } = envOf();
+    const ok = await send(env, `/api/user/${id}`);
+    assert.equal(ok.status, 200);
+
+    // expire the fresh copy — only the __stale shadow remains
+    for (const k of [...edge.keys()])
+      if (k.includes(`/api/user/${id}`) && !k.includes("__stale")) edge.delete(k);
+
+    fail = true;
+    const res = await send(env, `/api/user/${id}`);
+    assert.equal(res.status, 200);
+    assert.equal(res.headers.get("x-edge-cache"), "STALE");
+    const body = (await res.json()) as any;
+    assert.equal(body.profile?.nickname ?? body.nickname, "t");
+  } finally {
+    fail = false;
+    stub.restore();
+  }
+});
