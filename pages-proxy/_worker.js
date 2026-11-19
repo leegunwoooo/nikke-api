@@ -25967,7 +25967,7 @@ var noteMoreBuilds = (d) => {
 var INSTRUCTIONS = `Unofficial NIKKE (GODDESS OF VICTORY: NIKKE) game data. Data \xA9 SHIFT UP / Level Infinite.
 - Character names exist in ko/en/ja/zh-TW and searches match any of them; responses default to Korean (lang=ko).
 - Story scene scripts are Korean only. Favorite-item (\uC560\uC7A5\uD488, category "favorite") scripts are transcribed from videos, not game data: they may have typos and follow only the choice taken in the video (chosen: true).
-- category "library" scenes are stories the game data doesn't serve (messenger chats, lost relics, side stories, sub quests, older events), from a community archive. MARIA-n (lib_maria_n_*) is transcribed from a video instead, so it may have typos; Parts 1 and 2 plus the epilogue cutscene (lib_maria_n_ep_00), without its field chatter. Its one real choice, in lib_maria_n_2_01, lists both options; the lines after it are the same either way. They have speaker names but no voice or icons. Lines inside a choice carry branch ("<block>.<option>", nested pairs for nested choices): read one branch, not all of them. next says which scene follows. Story collections are also events (source "library", ids lib_*): read_event marks those lines "[1.1] ..." and options "[\uC120\uD0DD\uC9C0 1.1] ...".
+- category "library" scenes are stories the game data doesn't serve (messenger chats, lost relics, side stories, sub quests, older events), from a community archive. MARIA-n (lib_maria_n_*) and SKY ON THE ROCK (lib_sky_on_the_rock_*) are transcribed from videos instead, so they may have typos; MARIA-n has Parts 1 and 2 plus the epilogue cutscene (lib_maria_n_ep_00), without its field chatter. Its one real choice, in lib_maria_n_2_01, lists both options; the lines after it are the same either way. They have speaker names but no voice or icons. Lines inside a choice carry branch ("<block>.<option>", nested pairs for nested choices): read one branch, not all of them. next says which scene follows. Story collections are also events (source "library", ids lib_*): read_event marks those lines "[1.1] ..." and options "[\uC120\uD0DD\uC9C0 1.1] ...".
 - Alternate versions (\uC774\uACA9, e.g. "\uB77C\uD53C : \uB808\uB4DC \uD6C4\uB4DC") are linked to their original: name searches and character story lookups cover every version unless a tool says otherwise.
 - Filters take English enum values; Korean terms map as noted in each parameter (e.g. \uCCA0\uAC11 = Iron).
 - Lists are paged with limit/offset. Oversized responses come back with a "truncated" object telling you how to fetch the rest.
@@ -29825,7 +29825,7 @@ var CREDS_KEY = "bla:creds";
 var HDR_CREDS = "x-bla-creds";
 var HDR_BLABLAID = "x-registered-blablaid";
 var edgeCache = caches.default;
-var BUILD_ID = false ? void 0 : "795bbdede328";
+var BUILD_ID = false ? void 0 : "8fee8b15253c";
 var DATA_HOST = "https://nikke-api-data.pages.dev";
 var REVALIDATE_MS = 3e5;
 var BUILD_TIMEOUT_MS = 3e4;
